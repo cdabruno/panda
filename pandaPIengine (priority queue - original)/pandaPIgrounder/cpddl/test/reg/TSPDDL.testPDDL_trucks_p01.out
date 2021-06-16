@@ -1,0 +1,109 @@
+---- Domain: pddl-data/ipc-2006/trucks/domain.pddl | pddl-data/ipc-2006/trucks/p01.pddl ----
+Domain: trucks
+Problem: truck-1
+Require: ff
+Type[7]:
+    [0]: object, parent: -1
+    [1]: truckarea, parent: 0
+    [2]: time, parent: 0
+    [3]: location, parent: 0
+    [4]: locatable, parent: 0
+    [5]: truck, parent: 4
+    [6]: package, parent: 4
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+    [1]: 14 15
+    [2]: 7 8 9 10 11 12 13
+    [3]: 4 5 6
+    [4]: 0 1 2 3
+    [5]: 0
+    [6]: 1 2 3
+Obj[16]:
+    [0]: truck1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: package1, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: package2, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: package3, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: l1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: l2, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: l3, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: t0, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: t1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: t2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: t3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: t4, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: t5, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: t6, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: a1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: a2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[11]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    at: 4 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    in: 6 5 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    connected: 3 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    free: 1 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    time-now: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    next: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    le: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    delivered: 6 3 2 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    at-destination: 6 3 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    closer: 1 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+Function[0]:
+Action[4]:
+    load: ?p:6 ?t:5 ?a1:1 ?l:3
+        pre: (and (RW:at ?t ?l) (RW:at ?p ?l) (RW:free ?a1 ?t) (forall (?a2:1 I[0]:?p:6 I[1]:?t:5 I[2]:?a1:1 I[3]:?l:3) (imply (R:closer ?a2 ?a1) (RW:free ?a2 ?t))))
+        eff: (and (N:RW:at ?p ?l) (N:RW:free ?a1 ?t) (RW:in ?p ?t ?a1))
+    unload: ?p:6 ?t:5 ?a1:1 ?l:3
+        pre: (and (RW:at ?t ?l) (RW:in ?p ?t ?a1) (forall (?a2:1 I[0]:?p:6 I[1]:?t:5 I[2]:?a1:1 I[3]:?l:3) (imply (R:closer ?a2 ?a1) (RW:free ?a2 ?t))))
+        eff: (and (N:RW:in ?p ?t ?a1) (RW:free ?a1 ?t) (RW:at ?p ?l))
+    drive: ?t:5 ?from:3 ?to:3 ?t1:2 ?t2:2
+        pre: (and (RW:at ?t ?from) (R:connected ?from ?to) (RW:time-now ?t1) (R:next ?t1 ?t2))
+        eff: (and (N:RW:at ?t ?from) (N:RW:time-now ?t1) (RW:time-now ?t2) (RW:at ?t ?to))
+    deliver: ?p:6 ?l:3 ?t1:2 ?t2:2
+        pre: (and (RW:at ?p ?l) (RW:time-now ?t1) (R:le ?t1 ?t2))
+        eff: (and (N:RW:at ?p ?l) (W:delivered ?p ?l ?t2) (W:at-destination ?p ?l))
+Init[41]:
+  (at truck1 l3)
+  (free a1 truck1)
+  (free a2 truck1)
+  S:(closer a1 a2)
+  (at package1 l2)
+  (at package2 l2)
+  (at package3 l2)
+  S:(connected l1 l2)
+  S:(connected l1 l3)
+  S:(connected l2 l1)
+  S:(connected l2 l3)
+  S:(connected l3 l1)
+  S:(connected l3 l2)
+  (time-now t0)
+  S:(le t1 t1)
+  S:(le t1 t2)
+  S:(le t1 t3)
+  S:(le t1 t4)
+  S:(le t1 t5)
+  S:(le t1 t6)
+  S:(le t2 t2)
+  S:(le t2 t3)
+  S:(le t2 t4)
+  S:(le t2 t5)
+  S:(le t2 t6)
+  S:(le t3 t3)
+  S:(le t3 t4)
+  S:(le t3 t5)
+  S:(le t3 t6)
+  S:(le t4 t4)
+  S:(le t4 t5)
+  S:(le t4 t6)
+  S:(le t5 t5)
+  S:(le t5 t6)
+  S:(le t6 t6)
+  S:(next t0 t1)
+  S:(next t1 t2)
+  S:(next t2 t3)
+  S:(next t3 t4)
+  S:(next t4 t5)
+  S:(next t5 t6)
+Init[0]:
+Goal: (and (W:delivered package1 l3 t3) (W:at-destination package2 l1) (W:delivered package3 l1 t6))
+Metric: 0
+---- Domain: pddl-data/ipc-2006/trucks/domain.pddl | pddl-data/ipc-2006/trucks/p01.pddl END ----

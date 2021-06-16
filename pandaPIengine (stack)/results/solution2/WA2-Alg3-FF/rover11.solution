@@ -1,0 +1,57 @@
+Random seed: 42
+Time limit: 2 seconds
+Reading input from results/grounded/rover11.sas.
+- State has 118 bits divided into 118 mutex groups.
+- Domain contains 386 actions.
+- Domain contains 494 tasks.
+- Domain contains 513 methods.
+- The initial state contains 52 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 494
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 0
+No heuristics given, setting default ... 
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(ff;distance;correct count)
+Search config:
+ - type: cost optimal
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+   1s visitime    0.15s generated nodes     95118 nodes/sec   93804 cur h   69 mod.depth   82 inserts     25816 dups     10745 size     15071 hash fail  10753 hash buckets  15063
+   2s visitime    0.30s generated nodes    175192 nodes/sec   86685 cur h   68 mod.depth   78 inserts     46129 dups     18949 size     27180 hash fail  18970 hash buckets  27159
+Reached time limit - stopping search.
+Search Results
+- Search time3.01 seconds
+- Visited list time 0.45 seconds
+- Visited list inserts 65040
+- Visited list pruned 28655
+- Visited list contains 36385
+- Visited list hash collisions 28694
+- Visited list used hash buckets 36346
+- Generated 225250 search nodes
+  Calculated heuristic for 114364 nodes
+  One modifications 59911
+  Effectless actions 50975
+- including 59911 one modification actions
+- including 0 one modification methods
+- and       50975 progressions of effectless actions
+- Generated 38045 nodes per second
+- Final fringe contains 157 nodes
+- Status: Timeout

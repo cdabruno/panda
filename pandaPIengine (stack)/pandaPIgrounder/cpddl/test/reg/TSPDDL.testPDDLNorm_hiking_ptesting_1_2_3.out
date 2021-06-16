@@ -1,0 +1,76 @@
+---- Domain: pddl-data/ipc-2014/seq-opt/hiking/domain.pddl | pddl-data/ipc-2014/seq-opt/hiking/ptesting-1-2-3.pddl ----
+Domain: hiking
+Problem: hiking-1-2
+Require: ff
+Type[6]:
+    [0]: object, parent: -1
+    [1]: car, parent: 0
+    [2]: tent, parent: 0
+    [3]: person, parent: 0
+    [4]: couple, parent: 0
+    [5]: place, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8
+    [1]: 0 1
+    [2]: 2
+    [3]: 7 8
+    [4]: 3
+    [5]: 4 5 6
+Obj[9]:
+    [0]: car0, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: car1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: tent0, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: couple0, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: place0, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: place1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: place2, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: guy0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: girl0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[9]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    at_tent: 2 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at_person: 3 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at_car: 1 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    partners: 4 3 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    up: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    down: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    walked: 4 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    next: 5 5 :: is-private: 0, owner-param: -1, read: 1, write: 0
+Function[0]:
+Action[7]:
+    put_down: ?x1:3 ?x2:5 ?x3:2
+        pre: (and (RW:at_person ?x1 ?x2) (RW:at_tent ?x3 ?x2) (RW:up ?x3))
+        eff: (and (RW:down ?x3) (N:RW:up ?x3))
+    put_up: ?x1:3 ?x2:5 ?x3:2
+        pre: (and (RW:at_person ?x1 ?x2) (RW:at_tent ?x3 ?x2) (RW:down ?x3))
+        eff: (and (RW:up ?x3) (N:RW:down ?x3))
+    drive_passenger: ?x1:3 ?x2:5 ?x3:5 ?x4:1 ?x5:3
+        pre: (and (RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x2) (RW:at_person ?x5 ?x2) (N:R:= ?x1 ?x5))
+        eff: (and (RW:at_person ?x1 ?x3) (N:RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x3) (N:RW:at_car ?x4 ?x2) (RW:at_person ?x5 ?x3) (N:RW:at_person ?x5 ?x2))
+    drive: ?x1:3 ?x2:5 ?x3:5 ?x4:1
+        pre: (and (RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x2))
+        eff: (and (RW:at_person ?x1 ?x3) (N:RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x3) (N:RW:at_car ?x4 ?x2))
+    drive_tent: ?x1:3 ?x2:5 ?x3:5 ?x4:1 ?x5:2
+        pre: (and (RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x2) (RW:at_tent ?x5 ?x2) (RW:down ?x5))
+        eff: (and (RW:at_person ?x1 ?x3) (N:RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x3) (N:RW:at_car ?x4 ?x2) (RW:at_tent ?x5 ?x3) (N:RW:at_tent ?x5 ?x2))
+    drive_tent_passenger: ?x1:3 ?x2:5 ?x3:5 ?x4:1 ?x5:2 ?x6:3
+        pre: (and (RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x2) (RW:at_tent ?x5 ?x2) (RW:down ?x5) (RW:at_person ?x6 ?x2) (N:R:= ?x1 ?x6))
+        eff: (and (RW:at_person ?x1 ?x3) (N:RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x3) (N:RW:at_car ?x4 ?x2) (RW:at_tent ?x5 ?x3) (N:RW:at_tent ?x5 ?x2) (RW:at_person ?x6 ?x3) (N:RW:at_person ?x6 ?x2))
+    walk_together: ?x1:2 ?x2:5 ?x3:3 ?x4:5 ?x5:3 ?x6:4
+        pre: (and (RW:at_tent ?x1 ?x2) (RW:up ?x1) (RW:at_person ?x3 ?x4) (R:next ?x4 ?x2) (RW:at_person ?x5 ?x4) (N:R:= ?x3 ?x5) (RW:walked ?x6 ?x4) (R:partners ?x6 ?x3 ?x5))
+        eff: (and (RW:at_person ?x3 ?x2) (N:RW:at_person ?x3 ?x4) (RW:at_person ?x5 ?x2) (N:RW:at_person ?x5 ?x4) (RW:walked ?x6 ?x2) (N:RW:walked ?x6 ?x4))
+Init[10]:
+  S:(partners couple0 guy0 girl0)
+  (at_person guy0 place0)
+  (at_person girl0 place0)
+  (walked couple0 place0)
+  (at_tent tent0 place0)
+  (up tent0)
+  (at_car car0 place0)
+  (at_car car1 place0)
+  S:(next place0 place1)
+  S:(next place1 place2)
+Init[0]:
+Goal: (RW:walked couple0 place2)
+Metric: 0
+---- Domain: pddl-data/ipc-2014/seq-opt/hiking/domain.pddl | pddl-data/ipc-2014/seq-opt/hiking/ptesting-1-2-3.pddl END ----

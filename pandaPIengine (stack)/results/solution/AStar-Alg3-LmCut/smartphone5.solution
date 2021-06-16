@@ -1,0 +1,63 @@
+Random seed: 42
+Time limit: 15 seconds
+Reading input from results/grounded/smartphone5.sas.
+- State has 23 bits divided into 23 mutex groups.
+- Domain contains 21 actions.
+- Domain contains 26 tasks.
+- Domain contains 12 methods.
+- The initial state contains 8 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 1 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 26
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- A* Search
+- Distance G is "modification depth"
+Search Results
+- Search time 0.002 seconds
+- Visited list time 3.6e-05 seconds
+- Visited list inserts 5
+- Visited list pruned 0
+- Visited list contains 5
+- Visited list hash collisions 0
+- Generated 17 search nodes
+  Calculated heuristic for 10 nodes
+  One modifications 7
+  Effectless actions 0
+- including 7 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 5000 nodes per second
+- Final fringe contains 5 nodes
+- Status: Solved
+- Found solution of length 7
+- Total costs of actions: 5
+==>
+5 attachRegularInformationToCall[call1,dateForMeeting]
+6 press_Home_Telephone[]
+7 enter_Number_ForCall_Office[Biundo,BiundoOfficeNumber]
+8 press_Telephone_Call_Office[Biundo,call1]
+9 extractsInformation_Regular[Biundo,call1,dateForMeeting]
+root 0
+3 enterMode_Telephone[] -> do_enterMode_Telephone_FromHome 6
+0 __top[] -> <<<<<<<__top_method;extractsInformation[Biundo,call1,dateForMeeting];do_extractsInformation_Regular;2;0,1,-1>;contact[Biundo,call1];do_call;1;0,-1,2>;call[Biundo,call1];do_Call_EnterNumber;1;0,-1,-2,-3,2>;press_Telephone_Call[Biundo,call1];do_Press_Call_Office;3;0,1,2,-1,4>;enter_Number_ForCall[];do_enter_Number_ForCall_Office;2;0,1,-1,3,4>;attachInformation[call1,dateForMeeting];do_attachInformation_ToCall;0;-1,1,2,3,4>;attachInformationToCall[call1,dateForMeeting];do_attachInformationToCall_Regular;0;-1,1,2,3,4> 5 3 7 8 9
+<==

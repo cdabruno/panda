@@ -1,0 +1,79 @@
+---- Domain: pddl-data/ipc-2008/seq-opt/openstacks/p01-domain.pddl | pddl-data/ipc-2008/seq-opt/openstacks/p01.pddl ----
+Domain: openstacks-sequencedstrips-adl
+Problem: os-sequencedstrips-p5_1
+Require: 200ff
+Type[4]:
+    [0]: object, parent: -1
+    [1]: order, parent: 0
+    [2]: product, parent: 0
+    [3]: count, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+    [1]: 6 7 8 9 10
+    [2]: 11 12 13 14 15
+    [3]: 0 1 2 3 4 5
+Obj[16]:
+    [0]: n0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: n1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: n2, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: n3, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: n4, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: n5, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: o1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: o2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: o3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: o4, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: o5, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: p1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: p2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: p3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: p4, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: p5, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[8]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    includes: 1 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    waiting: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    started: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    shipped: 1 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    made: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    stacks-avail: 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    next-count: 3 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+Function[1]:
+    total-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+Action[4]:
+    make-product: ?p:2
+        pre: (and (N:RW:made ?p) (forall (?o:1 I[0]:?p:2) (imply (R:includes ?o ?p) (RW:started ?o))))
+        eff: (RW:made ?p)
+    start-order: ?o:1 ?avail:3 ?new-avail:3
+        pre: (and (RW:waiting ?o) (RW:stacks-avail ?avail) (R:next-count ?new-avail ?avail))
+        eff: (and (N:RW:waiting ?o) (RW:started ?o) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order: ?o:1 ?avail:3 ?new-avail:3
+        pre: (and (RW:started ?o) (forall (?p:2 I[0]:?o:1 I[1]:?avail:3 I[2]:?new-avail:3) (imply (R:includes ?o ?p) (RW:made ?p))) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started ?o) (W:shipped ?o) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    open-new-stack: ?open:3 ?new-open:3
+        pre: (and (RW:stacks-avail ?open) (R:next-count ?open ?new-open))
+        eff: (and (N:RW:stacks-avail ?open) (RW:stacks-avail ?new-open) (increase (total-cost) 1))
+Init[18]:
+  S:(next-count n0 n1)
+  S:(next-count n1 n2)
+  S:(next-count n2 n3)
+  S:(next-count n3 n4)
+  S:(next-count n4 n5)
+  (stacks-avail n0)
+  (waiting o1)
+  S:(includes o1 p2)
+  (waiting o2)
+  S:(includes o2 p1)
+  S:(includes o2 p2)
+  (waiting o3)
+  S:(includes o3 p3)
+  (waiting o4)
+  S:(includes o4 p3)
+  S:(includes o4 p4)
+  (waiting o5)
+  S:(includes o5 p5)
+Init[1]:
+  (= (total-cost) 0)
+Goal: (and (W:shipped o1) (W:shipped o2) (W:shipped o3) (W:shipped o4) (W:shipped o5))
+Metric: 1
+---- Domain: pddl-data/ipc-2008/seq-opt/openstacks/p01-domain.pddl | pddl-data/ipc-2008/seq-opt/openstacks/p01.pddl END ----

@@ -1,0 +1,19 @@
+Invariants:
+< {NOT-objscheduled}
+, {busy V0:machine, NOT-busy V0:machine}
+, {scheduled V0:part, NOT-scheduled V0:part}
+, {objscheduled, NOT-objscheduled}
+, {has-hole V0:part V1:width V2:anorient, NOT-has-hole V0:part V1:width V2:anorient}
+, {has-hole C2:part V0:width V1:anorient, NOT-has-hole C3:part V0:width V1:anorient}
+, {busy V0:machine, NOT-busy V0:machine, NOT-objscheduled}
+, {scheduled V0:part, NOT-scheduled V0:part, NOT-objscheduled}
+, {has-hole V0:part V1:width V2:anorient, NOT-objscheduled, NOT-has-hole V0:part V1:width V2:anorient}
+, {has-hole C2:part V0:width V1:anorient, NOT-objscheduled, NOT-has-hole C3:part V0:width V1:anorient}
+>
+Mutex Groups:
+< {NOT-objscheduled}
+, {busy V0:machine, NOT-busy V0:machine}
+, {scheduled V0:part, NOT-scheduled V0:part}
+, {objscheduled, NOT-objscheduled}
+, {has-hole V0:part V1:width V2:anorient, NOT-has-hole V0:part V1:width V2:anorient}
+>

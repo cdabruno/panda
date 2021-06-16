@@ -1,0 +1,41 @@
+Invariants:
+< {at V0:truck C1:place}
+, {on-sale V0:goods V1:market}
+, {on-sale V0:goods C1:market}
+, {on-sale C1:goods V0:market}
+, {money C0:moneylevel}
+, {on-sale V0:goods V1:market, available V0:goods V1:market}
+, {on-sale V0:goods C1:market, available V0:goods C2:market}
+, {on-sale V0:goods C2:market, available V0:goods V1:market}
+, {on-sale C1:goods V0:market, available C2:goods V0:market}
+, {on-sale C2:goods V0:market, available V1:goods V0:market}
+, {on-sale V0:goods C1:market, available V0:goods C2:market, loaded V0:goods C3:truck}
+, {on-sale V0:goods C2:market, available V0:goods C3:market, loaded V0:goods V1:truck}
+, {on-sale V0:goods C1:market, available V0:goods C2:market, loaded V0:goods C3:truck, stored V0:goods}
+>
+Mutex Groups:
+< {at truck0 C0:place}
+, {on-sale goods1 C0:market}
+, {on-sale C0:goods market1}
+, {on-sale C0:goods market3}
+, {on-sale C0:goods market4}
+, {on-sale C0:goods market5}
+, {on-sale V0:goods V1:market}
+, {money C0:moneylevel}
+, {on-sale goods1 C0:market, available goods1 C1:market}
+, {on-sale goods1 C1:market, available goods1 V0:market}
+, {on-sale C0:goods market1, available C1:goods market1}
+, {on-sale C0:goods market3, available C1:goods market3}
+, {on-sale C0:goods market4, available C1:goods market4}
+, {on-sale C0:goods market5, available C1:goods market5}
+, {on-sale V0:goods V1:market, available V0:goods V1:market}
+, {on-sale C1:goods market1, available V0:goods market1}
+, {on-sale C1:goods market3, available V0:goods market3}
+, {on-sale C1:goods market4, available V0:goods market4}
+, {on-sale C1:goods market5, available V0:goods market5}
+, {on-sale goods1 C0:market, available goods1 C1:market, loaded goods1 truck0}
+, {on-sale goods1 C0:market, available goods1 C1:market, loaded goods1 truck0, stored goods1}
+>
+Goal aware:
+< {on-sale goods1 C0:market, available goods1 C1:market, loaded goods1 truck0, stored goods1}
+>

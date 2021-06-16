@@ -1,0 +1,15 @@
+< {starting V0:car C1:garage}
+, {road_connect V0:road C1:junction C2:junction, NOT-in_place V0:road}:=1
+, {in_place V0:road, NOT-in_place V0:road}:=1
+, {at_car_jun V0:car C1:junction, at_car_road V0:car C2:road, starting V0:car C3:garage}
+, {at_car_jun V0:car C1:junction, at_car_road V0:car C2:road, starting V0:car C3:garage, arrived V0:car C4:junction}:=1
+, {at_car_jun V0:car C2:junction, at_car_road V0:car C3:road, starting V0:car C4:garage, arrived V0:car V1:junction}
+>
+Goal aware:
+< {at_car_jun car0 C0:junction, at_car_road car0 C1:road, starting car0 C2:garage, arrived car0 junction2-1}
+, {at_car_jun car0 C0:junction, at_car_road car0 C1:road, starting car0 C2:garage, arrived car0 C3:junction}:=1
+, {at_car_jun car1 C0:junction, at_car_road car1 C1:road, starting car1 C2:garage, arrived car1 junction2-0}
+, {at_car_jun car1 C0:junction, at_car_road car1 C1:road, starting car1 C2:garage, arrived car1 C3:junction}:=1
+, {at_car_jun car2 C0:junction, at_car_road car2 C1:road, starting car2 C2:garage, arrived car2 junction2-0}
+, {at_car_jun car2 C0:junction, at_car_road car2 C1:road, starting car2 C2:garage, arrived car2 C3:junction}:=1
+>

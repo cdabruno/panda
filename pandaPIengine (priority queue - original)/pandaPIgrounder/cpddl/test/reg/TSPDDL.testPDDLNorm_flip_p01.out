@@ -1,0 +1,45 @@
+---- Domain: pddl-data/various/flip/domain.pddl | pddl-data/various/flip/p01.pddl ----
+Domain: flip
+Problem: flip1
+Require: ff
+Type[3]:
+    [0]: object, parent: -1
+    [1]: row, parent: 0
+    [2]: column, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5
+    [1]: 0 1 2
+    [2]: 3 4 5
+Obj[6]:
+    [0]: r1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: r2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: r3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: c1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: c2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: c3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[3]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    white: 1 2 :: is-private: 0, owner-param: -1, read: 1, write: 1, neg-of: 2
+    NOT-white: 1 2 :: is-private: 0, owner-param: -1, read: 1, write: 1, neg-of: 1
+Function[0]:
+Action[2]:
+    flip_row: ?r:1
+        pre: (and)
+        eff: (and (when (RW:white ?r c1) (and (N:RW:white ?r c1) (RW:NOT-white ?r c1))) (when (RW:NOT-white ?r c1) (and (RW:white ?r c1) (N:RW:NOT-white ?r c1))) (when (RW:white ?r c2) (and (N:RW:white ?r c2) (RW:NOT-white ?r c2))) (when (RW:NOT-white ?r c2) (and (RW:white ?r c2) (N:RW:NOT-white ?r c2))) (when (RW:white ?r c3) (and (N:RW:white ?r c3) (RW:NOT-white ?r c3))) (when (RW:NOT-white ?r c3) (and (RW:white ?r c3) (N:RW:NOT-white ?r c3))))
+    flip_column: ?c:2
+        pre: (and)
+        eff: (and (when (RW:white r1 ?c) (and (N:RW:white r1 ?c) (RW:NOT-white r1 ?c))) (when (RW:NOT-white r1 ?c) (and (RW:white r1 ?c) (N:RW:NOT-white r1 ?c))) (when (RW:white r2 ?c) (and (N:RW:white r2 ?c) (RW:NOT-white r2 ?c))) (when (RW:NOT-white r2 ?c) (and (RW:white r2 ?c) (N:RW:NOT-white r2 ?c))) (when (RW:white r3 ?c) (and (N:RW:white r3 ?c) (RW:NOT-white r3 ?c))) (when (RW:NOT-white r3 ?c) (and (RW:white r3 ?c) (N:RW:NOT-white r3 ?c))))
+Init[9]:
+  (white r2 c1)
+  (NOT-white r1 c1)
+  (NOT-white r1 c2)
+  (NOT-white r1 c3)
+  (NOT-white r2 c2)
+  (NOT-white r2 c3)
+  (NOT-white r3 c1)
+  (NOT-white r3 c2)
+  (NOT-white r3 c3)
+Init[0]:
+Goal: (and (RW:white r1 c1) (RW:white r2 c1) (RW:white r3 c1) (RW:white r1 c2) (RW:white r2 c2) (RW:white r3 c2) (RW:white r1 c3) (RW:white r2 c3) (RW:white r3 c3))
+Metric: 0
+---- Domain: pddl-data/various/flip/domain.pddl | pddl-data/various/flip/p01.pddl END ----

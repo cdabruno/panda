@@ -1,0 +1,137 @@
+---- Domain: pddl-data/various/trains/domain.pddl | pddl-data/various/trains/p01.pddl ----
+Domain: trains
+Problem: trains1
+Require: ff
+Type[1]:
+    [0]: object, parent: -1
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+Obj[21]:
+    [0]: avon, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: bath, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: corning, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: dansville, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: elmira, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: tr1, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: tr2, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: tr3, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: tr4, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: tr5, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: e1, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: e2, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: e3, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: bc1, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: bc2, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: bc3, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: bc4, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: tc1, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: ors1, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: bas1, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: oj-fac1, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[18]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    engine: 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    at: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    coupled: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    oranges: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    boxcar: 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    empty: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    bananas: 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    tanker-car: 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    oj-fac: 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    oj: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    loose: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    connects: 0 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    in: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    city: 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    track: 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    car: 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    comm: 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+Function[0]:
+Action[8]:
+    mv-engine: ?eng:0 ?cityone:0 ?citytwo:0 ?track:0 ?car:0
+        pre: (and (R:engine ?eng) (RW:at ?eng ?cityone) (R:connects ?track ?cityone ?citytwo))
+        eff: (and (RW:at ?eng ?citytwo) (N:RW:at ?eng ?cityone) (when (RW:coupled ?eng ?car) (and (RW:at ?car ?citytwo) (N:RW:at ?car ?cityone))))
+    ld-oranges: ?ors:0 ?car:0 ?city:0
+        pre: (and (RW:oranges ?ors) (R:boxcar ?car) (RW:empty ?car) (RW:at ?ors ?city) (RW:at ?car ?city))
+        eff: (and (N:RW:empty ?car) (RW:in ?ors ?car) (N:RW:at ?ors ?city))
+    ld-bananas: ?bas:0 ?car:0 ?city:0
+        pre: (and (R:bananas ?bas) (R:boxcar ?car) (RW:empty ?car) (RW:at ?bas ?city) (RW:at ?car ?city))
+        eff: (and (N:RW:empty ?car) (RW:in ?bas ?car) (N:RW:at ?bas ?city))
+    ld-oj: ?oj:0 ?car:0 ?city:0
+        pre: (and (RW:oj ?oj) (R:tanker-car ?car) (RW:empty ?car) (RW:at ?oj ?city) (RW:at ?car ?city))
+        eff: (and (N:RW:empty ?car) (RW:in ?oj ?car) (N:RW:at ?oj ?city))
+    make-oj: ?o:0 ?fac:0 ?city:0
+        pre: (and (RW:oranges ?o) (R:oj-fac ?fac) (RW:at ?o ?city) (RW:at ?fac ?city))
+        eff: (and (RW:oj ?o) (N:RW:oranges ?o))
+    unload: ?comm:0 ?car:0 ?city:0
+        pre: (and (RW:in ?comm ?car) (RW:at ?car ?city))
+        eff: (and (N:RW:in ?comm ?car) (RW:empty ?car) (RW:at ?comm ?city))
+    couple: ?eng:0 ?car:0 ?city:0
+        pre: (and (R:engine ?eng) (R:car ?car) (RW:loose ?car) (RW:at ?eng ?city) (RW:at ?car ?city))
+        eff: (and (RW:coupled ?eng ?car) (N:RW:loose ?car))
+    uncouple: ?eng:0 ?car:0
+        pre: (and (RW:coupled ?eng ?car))
+        eff: (and (RW:loose ?car) (N:RW:coupled ?eng ?car))
+Init[57]:
+  S:(city avon)
+  S:(city bath)
+  S:(city corning)
+  S:(city dansville)
+  S:(city elmira)
+  S:(track tr1)
+  S:(track tr2)
+  S:(track tr3)
+  S:(track tr4)
+  S:(track tr5)
+  S:(connects tr1 avon bath)
+  S:(connects tr1 bath avon)
+  S:(connects tr2 bath corning)
+  S:(connects tr2 corning bath)
+  S:(connects tr3 avon dansville)
+  S:(connects tr3 dansville avon)
+  S:(connects tr4 dansville corning)
+  S:(connects tr4 corning dansville)
+  S:(connects tr5 corning elmira)
+  S:(connects tr5 elmira corning)
+  S:(engine e1)
+  S:(engine e2)
+  S:(engine e3)
+  S:(car bc1)
+  S:(car bc2)
+  S:(car bc3)
+  S:(car bc4)
+  S:(car tc1)
+  S:(boxcar bc1)
+  S:(boxcar bc2)
+  S:(boxcar bc3)
+  S:(boxcar bc4)
+  S:(tanker-car tc1)
+  (oranges ors1)
+  S:(bananas bas1)
+  S:(oj-fac oj-fac1)
+  (empty bc1)
+  (empty bc2)
+  (empty bc3)
+  (empty bc4)
+  (empty tc1)
+  (loose bc1)
+  (loose bc2)
+  (loose bc3)
+  (loose bc4)
+  (loose tc1)
+  (at e1 avon)
+  (at bas1 avon)
+  (at bc1 bath)
+  (at bc2 bath)
+  (at bc3 dansville)
+  (at tc1 corning)
+  (at ors1 corning)
+  (at e2 elmira)
+  (at e3 elmira)
+  (at bc4 elmira)
+  (at oj-fac1 elmira)
+Init[0]:
+Goal: (or (and (RW:oranges avon) (RW:at avon bath)) (and (RW:oranges bath) (RW:at bath bath)) (and (RW:oranges corning) (RW:at corning bath)) (and (RW:oranges dansville) (RW:at dansville bath)) (and (RW:oranges elmira) (RW:at elmira bath)) (and (RW:oranges tr1) (RW:at tr1 bath)) (and (RW:oranges tr2) (RW:at tr2 bath)) (and (RW:oranges tr3) (RW:at tr3 bath)) (and (RW:oranges tr4) (RW:at tr4 bath)) (and (RW:oranges tr5) (RW:at tr5 bath)) (and (RW:oranges e1) (RW:at e1 bath)) (and (RW:oranges e2) (RW:at e2 bath)) (and (RW:oranges e3) (RW:at e3 bath)) (and (RW:oranges bc1) (RW:at bc1 bath)) (and (RW:oranges bc2) (RW:at bc2 bath)) (and (RW:oranges bc3) (RW:at bc3 bath)) (and (RW:oranges bc4) (RW:at bc4 bath)) (and (RW:oranges tc1) (RW:at tc1 bath)) (and (RW:oranges ors1) (RW:at ors1 bath)) (and (RW:oranges bas1) (RW:at bas1 bath)) (and (RW:oranges oj-fac1) (RW:at oj-fac1 bath)))
+Metric: 0
+---- Domain: pddl-data/various/trains/domain.pddl | pddl-data/various/trains/p01.pddl END ----

@@ -1,0 +1,757 @@
+Fact[109]:
+  (NOT-created id_barat)
+  (NOT-created id_bbrat)
+  (NOT-created id_befile)
+  (NOT-created id_bffile)
+  (NOT-created id_bgshare)
+  (NOT-created id_bhshare)
+  (NOT-created id_yrat)
+  (NOT-prop_elevated id_barat yes)
+  (NOT-prop_elevated id_bbrat yes)
+  (created id_barat)
+  (created id_bbrat)
+  (created id_befile)
+  (created id_bffile)
+  (created id_bgshare)
+  (created id_bhshare)
+  (created id_yrat)
+  (knows id_adomain)
+  (knows id_barat)
+  (knows id_bbrat)
+  (knows id_befile)
+  (knows id_bffile)
+  (knows id_bgshare)
+  (knows id_bhshare)
+  (knows id_cdomainuser)
+  (knows id_ddomaincredential)
+  (knows id_gdomainuser)
+  (knows id_hdomaincredential)
+  (knows id_ltimedelta)
+  (knows id_rhost)
+  (knows id_stimedelta)
+  (knows_property id_adomain pdns_domain)
+  (knows_property id_adomain phosts)
+  (knows_property id_adomain pwindows_domain)
+  (knows_property id_barat pelevated)
+  (knows_property id_barat pexecutable)
+  (knows_property id_barat phost)
+  (knows_property id_bbrat pelevated)
+  (knows_property id_bbrat pexecutable)
+  (knows_property id_bbrat phost)
+  (knows_property id_befile phost)
+  (knows_property id_befile ppath)
+  (knows_property id_bffile phost)
+  (knows_property id_bffile ppath)
+  (knows_property id_bgshare pdest_host)
+  (knows_property id_bgshare pshare_name)
+  (knows_property id_bgshare pshare_path)
+  (knows_property id_bgshare psrc_host)
+  (knows_property id_bhshare pdest_host)
+  (knows_property id_bhshare pshare_name)
+  (knows_property id_bhshare pshare_path)
+  (knows_property id_bhshare psrc_host)
+  (knows_property id_cdomainuser pcred)
+  (knows_property id_cdomainuser pdomain)
+  (knows_property id_cdomainuser pis_group)
+  (knows_property id_cdomainuser psid)
+  (knows_property id_cdomainuser pusername)
+  (knows_property id_ddomaincredential ppassword)
+  (knows_property id_ddomaincredential puser)
+  (knows_property id_gdomainuser pcred)
+  (knows_property id_gdomainuser pdomain)
+  (knows_property id_gdomainuser pis_group)
+  (knows_property id_gdomainuser psid)
+  (knows_property id_gdomainuser pusername)
+  (knows_property id_hdomaincredential ppassword)
+  (knows_property id_hdomaincredential puser)
+  (knows_property id_khost pdomain)
+  (knows_property id_khost pdomain_user_admins)
+  (knows_property id_khost ptimedelta)
+  (knows_property id_ltimedelta phost)
+  (knows_property id_ltimedelta pmicroseconds)
+  (knows_property id_ltimedelta pseconds)
+  (knows_property id_rhost pdomain)
+  (knows_property id_rhost pdomain_user_admins)
+  (knows_property id_rhost pfqdn)
+  (knows_property id_rhost ptimedelta)
+  (knows_property id_stimedelta phost)
+  (knows_property id_stimedelta pmicroseconds)
+  (knows_property id_stimedelta pseconds)
+  (knows_property id_yrat pelevated)
+  (prop_dest_host id_bgshare id_khost)
+  (prop_dest_host id_bgshare id_rhost)
+  (prop_dest_host id_bhshare id_khost)
+  (prop_dest_host id_bhshare id_rhost)
+  (prop_elevated id_barat yes)
+  (prop_elevated id_bbrat yes)
+  (prop_executable id_barat somepath)
+  (prop_executable id_bbrat somepath)
+  (prop_executable id_yrat somepath)
+  (prop_host id_barat id_khost)
+  (prop_host id_barat id_rhost)
+  (prop_host id_bbrat id_khost)
+  (prop_host id_bbrat id_rhost)
+  (prop_host id_befile id_khost)
+  (prop_host id_befile id_rhost)
+  (prop_host id_bffile id_khost)
+  (prop_host id_bffile id_rhost)
+  (prop_host id_ltimedelta id_rhost)
+  (prop_host id_stimedelta id_khost)
+  (prop_host id_yrat id_rhost)
+  (prop_path id_befile somepath)
+  (prop_path id_bffile somepath)
+  (prop_share_name id_bgshare c__dollar__)
+  (prop_share_name id_bhshare c__dollar__)
+  (prop_share_path id_bgshare whatever)
+  (prop_share_path id_bhshare whatever)
+  (prop_src_host id_bgshare id_khost)
+  (prop_src_host id_bgshare id_rhost)
+  (prop_src_host id_bhshare id_khost)
+  (prop_src_host id_bhshare id_rhost)
+Op[161]:
+  (creds id_barat id_khost id_adomain), cost: 1
+    pre: (knows id_adomain) (knows id_barat) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_host id_barat id_khost)
+    add: (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_gdomainuser) (knows id_hdomaincredential) (knows_property id_adomain pwindows_domain) (knows_property id_cdomainuser pcred) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pis_group) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_gdomainuser pcred) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pis_group) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser)
+    del:
+  (creds id_barat id_rhost id_adomain), cost: 1
+    pre: (knows id_adomain) (knows id_barat) (knows id_rhost) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_host id_barat id_rhost)
+    add: (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_gdomainuser) (knows id_hdomaincredential) (knows_property id_adomain pwindows_domain) (knows_property id_cdomainuser pcred) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pis_group) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_gdomainuser pcred) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pis_group) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser)
+    del:
+  (creds id_bbrat id_khost id_adomain), cost: 1
+    pre: (knows id_adomain) (knows id_bbrat) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_host id_bbrat id_khost)
+    add: (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_gdomainuser) (knows id_hdomaincredential) (knows_property id_adomain pwindows_domain) (knows_property id_cdomainuser pcred) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pis_group) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_gdomainuser pcred) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pis_group) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser)
+    del:
+  (creds id_bbrat id_rhost id_adomain), cost: 1
+    pre: (knows id_adomain) (knows id_bbrat) (knows id_rhost) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_host id_bbrat id_rhost)
+    add: (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_gdomainuser) (knows id_hdomaincredential) (knows_property id_adomain pwindows_domain) (knows_property id_cdomainuser pcred) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pis_group) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_gdomainuser pcred) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pis_group) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser)
+    del:
+  (creds id_yrat id_khost id_adomain), cost: 1
+    pre: (knows id_adomain)
+    add: (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_gdomainuser) (knows id_hdomaincredential) (knows_property id_adomain pwindows_domain) (knows_property id_cdomainuser pcred) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pis_group) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_gdomainuser pcred) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pis_group) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser)
+    del:
+  (creds id_yrat id_rhost id_adomain), cost: 1
+    pre: (knows id_adomain) (knows id_rhost) (prop_host id_yrat id_rhost)
+    add: (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_gdomainuser) (knows id_hdomaincredential) (knows_property id_adomain pwindows_domain) (knows_property id_cdomainuser pcred) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pis_group) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_gdomainuser pcred) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pis_group) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser)
+    del:
+  (get_admin id_barat id_khost id_adomain), cost: 1
+    pre: (knows id_adomain) (knows id_barat)
+    add: (knows id_cdomainuser) (knows id_gdomainuser) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pis_group) (knows_property id_cdomainuser psid) (knows_property id_cdomainuser pusername) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pis_group) (knows_property id_gdomainuser psid) (knows_property id_gdomainuser pusername) (knows_property id_khost pdomain_user_admins)
+    del:
+  (get_admin id_barat id_rhost id_adomain), cost: 1
+    pre: (knows id_adomain) (knows id_barat) (knows id_rhost)
+    add: (knows id_cdomainuser) (knows id_gdomainuser) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pis_group) (knows_property id_cdomainuser psid) (knows_property id_cdomainuser pusername) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pis_group) (knows_property id_gdomainuser psid) (knows_property id_gdomainuser pusername) (knows_property id_rhost pdomain_user_admins)
+    del:
+  (get_admin id_bbrat id_khost id_adomain), cost: 1
+    pre: (knows id_adomain) (knows id_bbrat)
+    add: (knows id_cdomainuser) (knows id_gdomainuser) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pis_group) (knows_property id_cdomainuser psid) (knows_property id_cdomainuser pusername) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pis_group) (knows_property id_gdomainuser psid) (knows_property id_gdomainuser pusername) (knows_property id_khost pdomain_user_admins)
+    del:
+  (get_admin id_bbrat id_rhost id_adomain), cost: 1
+    pre: (knows id_adomain) (knows id_bbrat) (knows id_rhost)
+    add: (knows id_cdomainuser) (knows id_gdomainuser) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pis_group) (knows_property id_cdomainuser psid) (knows_property id_cdomainuser pusername) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pis_group) (knows_property id_gdomainuser psid) (knows_property id_gdomainuser pusername) (knows_property id_rhost pdomain_user_admins)
+    del:
+  (get_admin id_yrat id_khost id_adomain), cost: 1
+    pre: (knows id_adomain)
+    add: (knows id_cdomainuser) (knows id_gdomainuser) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pis_group) (knows_property id_cdomainuser psid) (knows_property id_cdomainuser pusername) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pis_group) (knows_property id_gdomainuser psid) (knows_property id_gdomainuser pusername) (knows_property id_khost pdomain_user_admins)
+    del:
+  (get_admin id_yrat id_rhost id_adomain), cost: 1
+    pre: (knows id_adomain) (knows id_rhost)
+    add: (knows id_cdomainuser) (knows id_gdomainuser) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pis_group) (knows_property id_cdomainuser psid) (knows_property id_cdomainuser pusername) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pis_group) (knows_property id_gdomainuser psid) (knows_property id_gdomainuser pusername) (knows_property id_rhost pdomain_user_admins)
+    del:
+  (get_computers id_barat id_adomain), cost: 1
+    pre: (knows id_adomain) (knows id_barat)
+    add: (knows id_rhost) (knows_property id_adomain phosts) (knows_property id_khost pdomain) (knows_property id_rhost pdomain) (knows_property id_rhost pfqdn)
+    del:
+  (get_computers id_bbrat id_adomain), cost: 1
+    pre: (knows id_adomain) (knows id_bbrat)
+    add: (knows id_rhost) (knows_property id_adomain phosts) (knows_property id_khost pdomain) (knows_property id_rhost pdomain) (knows_property id_rhost pfqdn)
+    del:
+  (get_computers id_yrat id_adomain), cost: 1
+    pre: (knows id_adomain)
+    add: (knows id_rhost) (knows_property id_adomain phosts) (knows_property id_khost pdomain) (knows_property id_rhost pdomain) (knows_property id_rhost pfqdn)
+    del:
+  (get_domain id_barat id_khost str__o), cost: 1
+    pre: (knows id_barat) (knows_property id_barat phost) (prop_host id_barat id_khost)
+    add: (knows id_adomain) (knows_property id_adomain pdns_domain) (knows_property id_adomain phosts) (knows_property id_adomain pwindows_domain) (knows_property id_khost pdomain)
+    del:
+  (get_domain id_barat id_rhost str__v), cost: 1
+    pre: (knows id_barat) (knows id_rhost) (knows_property id_barat phost) (knows_property id_rhost pfqdn) (prop_host id_barat id_rhost)
+    add: (knows id_adomain) (knows_property id_adomain pdns_domain) (knows_property id_adomain phosts) (knows_property id_adomain pwindows_domain) (knows_property id_rhost pdomain)
+    del:
+  (get_domain id_bbrat id_khost str__o), cost: 1
+    pre: (knows id_bbrat) (knows_property id_bbrat phost) (prop_host id_bbrat id_khost)
+    add: (knows id_adomain) (knows_property id_adomain pdns_domain) (knows_property id_adomain phosts) (knows_property id_adomain pwindows_domain) (knows_property id_khost pdomain)
+    del:
+  (get_domain id_bbrat id_rhost str__v), cost: 1
+    pre: (knows id_bbrat) (knows id_rhost) (knows_property id_bbrat phost) (knows_property id_rhost pfqdn) (prop_host id_bbrat id_rhost)
+    add: (knows id_adomain) (knows_property id_adomain pdns_domain) (knows_property id_adomain phosts) (knows_property id_adomain pwindows_domain) (knows_property id_rhost pdomain)
+    del:
+  (get_domain id_yrat id_khost str__o), cost: 1
+    pre:
+    add: (knows id_adomain) (knows_property id_adomain pdns_domain) (knows_property id_adomain phosts) (knows_property id_adomain pwindows_domain) (knows_property id_khost pdomain)
+    del:
+  (get_domain id_yrat id_rhost str__v), cost: 1
+    pre: (knows id_rhost) (knows_property id_rhost pfqdn) (prop_host id_yrat id_rhost)
+    add: (knows id_adomain) (knows_property id_adomain pdns_domain) (knows_property id_adomain phosts) (knows_property id_adomain pwindows_domain) (knows_property id_rhost pdomain)
+    del:
+  (net_time id_barat id_khost id_ltimedelta), cost: 1
+    pre: (knows id_barat)
+    add: (knows id_ltimedelta) (knows_property id_khost ptimedelta) (knows_property id_ltimedelta phost) (knows_property id_ltimedelta pmicroseconds) (knows_property id_ltimedelta pseconds)
+    del:
+  (net_time id_barat id_khost id_stimedelta), cost: 1
+    pre: (knows id_barat)
+    add: (knows id_stimedelta) (knows_property id_khost ptimedelta) (knows_property id_stimedelta phost) (knows_property id_stimedelta pmicroseconds) (knows_property id_stimedelta pseconds) (prop_host id_stimedelta id_khost)
+    del:
+  (net_time id_barat id_rhost id_ltimedelta), cost: 1
+    pre: (knows id_barat) (knows id_rhost)
+    add: (knows id_ltimedelta) (knows_property id_ltimedelta phost) (knows_property id_ltimedelta pmicroseconds) (knows_property id_ltimedelta pseconds) (knows_property id_rhost ptimedelta) (prop_host id_ltimedelta id_rhost)
+    del:
+  (net_time id_barat id_rhost id_stimedelta), cost: 1
+    pre: (knows id_barat) (knows id_rhost)
+    add: (knows id_stimedelta) (knows_property id_rhost ptimedelta) (knows_property id_stimedelta phost) (knows_property id_stimedelta pmicroseconds) (knows_property id_stimedelta pseconds)
+    del:
+  (net_time id_bbrat id_khost id_ltimedelta), cost: 1
+    pre: (knows id_bbrat)
+    add: (knows id_ltimedelta) (knows_property id_khost ptimedelta) (knows_property id_ltimedelta phost) (knows_property id_ltimedelta pmicroseconds) (knows_property id_ltimedelta pseconds)
+    del:
+  (net_time id_bbrat id_khost id_stimedelta), cost: 1
+    pre: (knows id_bbrat)
+    add: (knows id_stimedelta) (knows_property id_khost ptimedelta) (knows_property id_stimedelta phost) (knows_property id_stimedelta pmicroseconds) (knows_property id_stimedelta pseconds) (prop_host id_stimedelta id_khost)
+    del:
+  (net_time id_bbrat id_rhost id_ltimedelta), cost: 1
+    pre: (knows id_bbrat) (knows id_rhost)
+    add: (knows id_ltimedelta) (knows_property id_ltimedelta phost) (knows_property id_ltimedelta pmicroseconds) (knows_property id_ltimedelta pseconds) (knows_property id_rhost ptimedelta) (prop_host id_ltimedelta id_rhost)
+    del:
+  (net_time id_bbrat id_rhost id_stimedelta), cost: 1
+    pre: (knows id_bbrat) (knows id_rhost)
+    add: (knows id_stimedelta) (knows_property id_rhost ptimedelta) (knows_property id_stimedelta phost) (knows_property id_stimedelta pmicroseconds) (knows_property id_stimedelta pseconds)
+    del:
+  (net_time id_yrat id_khost id_ltimedelta), cost: 1
+    pre:
+    add: (knows id_ltimedelta) (knows_property id_khost ptimedelta) (knows_property id_ltimedelta phost) (knows_property id_ltimedelta pmicroseconds) (knows_property id_ltimedelta pseconds)
+    del:
+  (net_time id_yrat id_khost id_stimedelta), cost: 1
+    pre:
+    add: (knows id_stimedelta) (knows_property id_khost ptimedelta) (knows_property id_stimedelta phost) (knows_property id_stimedelta pmicroseconds) (knows_property id_stimedelta pseconds) (prop_host id_stimedelta id_khost)
+    del:
+  (net_time id_yrat id_rhost id_ltimedelta), cost: 1
+    pre: (knows id_rhost)
+    add: (knows id_ltimedelta) (knows_property id_ltimedelta phost) (knows_property id_ltimedelta pmicroseconds) (knows_property id_ltimedelta pseconds) (knows_property id_rhost ptimedelta) (prop_host id_ltimedelta id_rhost)
+    del:
+  (net_time id_yrat id_rhost id_stimedelta), cost: 1
+    pre: (knows id_rhost)
+    add: (knows id_stimedelta) (knows_property id_rhost ptimedelta) (knows_property id_stimedelta phost) (knows_property id_stimedelta pmicroseconds) (knows_property id_stimedelta pseconds)
+    del:
+  (net_use id_barat id_khost id_rhost str__v id_ddomaincredential str__e id_cdomainuser str__james id_adomain str__alpha id_bgshare), cost: 1
+    pre: (NOT-created id_bgshare) (knows id_adomain) (knows id_barat) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pfqdn) (prop_host id_barat id_khost)
+    add: (created id_bgshare) (knows id_bgshare) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_name) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_share_name id_bgshare c__dollar__) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    del: (NOT-created id_bgshare)
+  (net_use id_barat id_khost id_rhost str__v id_ddomaincredential str__e id_cdomainuser str__james id_adomain str__alpha id_bhshare), cost: 1
+    pre: (NOT-created id_bhshare) (knows id_adomain) (knows id_barat) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pfqdn) (prop_host id_barat id_khost)
+    add: (created id_bhshare) (knows id_bhshare) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_name) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_share_name id_bhshare c__dollar__) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    del: (NOT-created id_bhshare)
+  (net_use id_barat id_khost id_rhost str__v id_hdomaincredential str__i id_gdomainuser str__mary id_adomain str__alpha id_bgshare), cost: 1
+    pre: (NOT-created id_bgshare) (knows id_adomain) (knows id_barat) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pfqdn) (prop_host id_barat id_khost)
+    add: (created id_bgshare) (knows id_bgshare) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_name) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_share_name id_bgshare c__dollar__) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    del: (NOT-created id_bgshare)
+  (net_use id_barat id_khost id_rhost str__v id_hdomaincredential str__i id_gdomainuser str__mary id_adomain str__alpha id_bhshare), cost: 1
+    pre: (NOT-created id_bhshare) (knows id_adomain) (knows id_barat) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pfqdn) (prop_host id_barat id_khost)
+    add: (created id_bhshare) (knows id_bhshare) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_name) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_share_name id_bhshare c__dollar__) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    del: (NOT-created id_bhshare)
+  (net_use id_barat id_rhost id_khost str__o id_ddomaincredential str__e id_cdomainuser str__james id_adomain str__alpha id_bgshare), cost: 1
+    pre: (NOT-created id_bgshare) (knows id_adomain) (knows id_barat) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (prop_host id_barat id_rhost)
+    add: (created id_bgshare) (knows id_bgshare) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_name) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_share_name id_bgshare c__dollar__) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    del: (NOT-created id_bgshare)
+  (net_use id_barat id_rhost id_khost str__o id_ddomaincredential str__e id_cdomainuser str__james id_adomain str__alpha id_bhshare), cost: 1
+    pre: (NOT-created id_bhshare) (knows id_adomain) (knows id_barat) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (prop_host id_barat id_rhost)
+    add: (created id_bhshare) (knows id_bhshare) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_name) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_share_name id_bhshare c__dollar__) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    del: (NOT-created id_bhshare)
+  (net_use id_barat id_rhost id_khost str__o id_hdomaincredential str__i id_gdomainuser str__mary id_adomain str__alpha id_bgshare), cost: 1
+    pre: (NOT-created id_bgshare) (knows id_adomain) (knows id_barat) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (prop_host id_barat id_rhost)
+    add: (created id_bgshare) (knows id_bgshare) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_name) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_share_name id_bgshare c__dollar__) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    del: (NOT-created id_bgshare)
+  (net_use id_barat id_rhost id_khost str__o id_hdomaincredential str__i id_gdomainuser str__mary id_adomain str__alpha id_bhshare), cost: 1
+    pre: (NOT-created id_bhshare) (knows id_adomain) (knows id_barat) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (prop_host id_barat id_rhost)
+    add: (created id_bhshare) (knows id_bhshare) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_name) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_share_name id_bhshare c__dollar__) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    del: (NOT-created id_bhshare)
+  (net_use id_bbrat id_khost id_rhost str__v id_ddomaincredential str__e id_cdomainuser str__james id_adomain str__alpha id_bgshare), cost: 1
+    pre: (NOT-created id_bgshare) (knows id_adomain) (knows id_bbrat) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pfqdn) (prop_host id_bbrat id_khost)
+    add: (created id_bgshare) (knows id_bgshare) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_name) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_share_name id_bgshare c__dollar__) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    del: (NOT-created id_bgshare)
+  (net_use id_bbrat id_khost id_rhost str__v id_ddomaincredential str__e id_cdomainuser str__james id_adomain str__alpha id_bhshare), cost: 1
+    pre: (NOT-created id_bhshare) (knows id_adomain) (knows id_bbrat) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pfqdn) (prop_host id_bbrat id_khost)
+    add: (created id_bhshare) (knows id_bhshare) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_name) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_share_name id_bhshare c__dollar__) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    del: (NOT-created id_bhshare)
+  (net_use id_bbrat id_khost id_rhost str__v id_hdomaincredential str__i id_gdomainuser str__mary id_adomain str__alpha id_bgshare), cost: 1
+    pre: (NOT-created id_bgshare) (knows id_adomain) (knows id_bbrat) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pfqdn) (prop_host id_bbrat id_khost)
+    add: (created id_bgshare) (knows id_bgshare) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_name) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_share_name id_bgshare c__dollar__) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    del: (NOT-created id_bgshare)
+  (net_use id_bbrat id_khost id_rhost str__v id_hdomaincredential str__i id_gdomainuser str__mary id_adomain str__alpha id_bhshare), cost: 1
+    pre: (NOT-created id_bhshare) (knows id_adomain) (knows id_bbrat) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pfqdn) (prop_host id_bbrat id_khost)
+    add: (created id_bhshare) (knows id_bhshare) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_name) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_share_name id_bhshare c__dollar__) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    del: (NOT-created id_bhshare)
+  (net_use id_bbrat id_rhost id_khost str__o id_ddomaincredential str__e id_cdomainuser str__james id_adomain str__alpha id_bgshare), cost: 1
+    pre: (NOT-created id_bgshare) (knows id_adomain) (knows id_bbrat) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (prop_host id_bbrat id_rhost)
+    add: (created id_bgshare) (knows id_bgshare) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_name) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_share_name id_bgshare c__dollar__) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    del: (NOT-created id_bgshare)
+  (net_use id_bbrat id_rhost id_khost str__o id_ddomaincredential str__e id_cdomainuser str__james id_adomain str__alpha id_bhshare), cost: 1
+    pre: (NOT-created id_bhshare) (knows id_adomain) (knows id_bbrat) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (prop_host id_bbrat id_rhost)
+    add: (created id_bhshare) (knows id_bhshare) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_name) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_share_name id_bhshare c__dollar__) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    del: (NOT-created id_bhshare)
+  (net_use id_bbrat id_rhost id_khost str__o id_hdomaincredential str__i id_gdomainuser str__mary id_adomain str__alpha id_bgshare), cost: 1
+    pre: (NOT-created id_bgshare) (knows id_adomain) (knows id_bbrat) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (prop_host id_bbrat id_rhost)
+    add: (created id_bgshare) (knows id_bgshare) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_name) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_share_name id_bgshare c__dollar__) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    del: (NOT-created id_bgshare)
+  (net_use id_bbrat id_rhost id_khost str__o id_hdomaincredential str__i id_gdomainuser str__mary id_adomain str__alpha id_bhshare), cost: 1
+    pre: (NOT-created id_bhshare) (knows id_adomain) (knows id_bbrat) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (prop_host id_bbrat id_rhost)
+    add: (created id_bhshare) (knows id_bhshare) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_name) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_share_name id_bhshare c__dollar__) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    del: (NOT-created id_bhshare)
+  (net_use id_yrat id_khost id_rhost str__v id_ddomaincredential str__e id_cdomainuser str__james id_adomain str__alpha id_bgshare), cost: 1
+    pre: (NOT-created id_bgshare) (knows id_adomain) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pfqdn)
+    add: (created id_bgshare) (knows id_bgshare) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_name) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_share_name id_bgshare c__dollar__) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    del: (NOT-created id_bgshare)
+  (net_use id_yrat id_khost id_rhost str__v id_ddomaincredential str__e id_cdomainuser str__james id_adomain str__alpha id_bhshare), cost: 1
+    pre: (NOT-created id_bhshare) (knows id_adomain) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pfqdn)
+    add: (created id_bhshare) (knows id_bhshare) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_name) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_share_name id_bhshare c__dollar__) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    del: (NOT-created id_bhshare)
+  (net_use id_yrat id_khost id_rhost str__v id_hdomaincredential str__i id_gdomainuser str__mary id_adomain str__alpha id_bgshare), cost: 1
+    pre: (NOT-created id_bgshare) (knows id_adomain) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pfqdn)
+    add: (created id_bgshare) (knows id_bgshare) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_name) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_share_name id_bgshare c__dollar__) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    del: (NOT-created id_bgshare)
+  (net_use id_yrat id_khost id_rhost str__v id_hdomaincredential str__i id_gdomainuser str__mary id_adomain str__alpha id_bhshare), cost: 1
+    pre: (NOT-created id_bhshare) (knows id_adomain) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pfqdn)
+    add: (created id_bhshare) (knows id_bhshare) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_name) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_share_name id_bhshare c__dollar__) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    del: (NOT-created id_bhshare)
+  (net_use id_yrat id_rhost id_khost str__o id_ddomaincredential str__e id_cdomainuser str__james id_adomain str__alpha id_bgshare), cost: 1
+    pre: (NOT-created id_bgshare) (knows id_adomain) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (prop_host id_yrat id_rhost)
+    add: (created id_bgshare) (knows id_bgshare) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_name) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_share_name id_bgshare c__dollar__) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    del: (NOT-created id_bgshare)
+  (net_use id_yrat id_rhost id_khost str__o id_ddomaincredential str__e id_cdomainuser str__james id_adomain str__alpha id_bhshare), cost: 1
+    pre: (NOT-created id_bhshare) (knows id_adomain) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_cdomainuser pdomain) (knows_property id_cdomainuser pusername) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (prop_host id_yrat id_rhost)
+    add: (created id_bhshare) (knows id_bhshare) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_name) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_share_name id_bhshare c__dollar__) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    del: (NOT-created id_bhshare)
+  (net_use id_yrat id_rhost id_khost str__o id_hdomaincredential str__i id_gdomainuser str__mary id_adomain str__alpha id_bgshare), cost: 1
+    pre: (NOT-created id_bgshare) (knows id_adomain) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (prop_host id_yrat id_rhost)
+    add: (created id_bgshare) (knows id_bgshare) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_name) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_share_name id_bgshare c__dollar__) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    del: (NOT-created id_bgshare)
+  (net_use id_yrat id_rhost id_khost str__o id_hdomaincredential str__i id_gdomainuser str__mary id_adomain str__alpha id_bhshare), cost: 1
+    pre: (NOT-created id_bhshare) (knows id_adomain) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_gdomainuser pdomain) (knows_property id_gdomainuser pusername) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (prop_host id_yrat id_rhost)
+    add: (created id_bhshare) (knows id_bhshare) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_name) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_share_name id_bhshare c__dollar__) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    del: (NOT-created id_bhshare)
+  (smb_copy id_barat id_khost somepath id_bgshare id_khost id_rhost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_barat) (knows id_bgshare) (knows id_rhost) (knows_property id_barat pexecutable) (knows_property id_barat phost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_barat id_khost somepath id_bgshare id_khost id_rhost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_barat) (knows id_bgshare) (knows id_rhost) (knows_property id_barat pexecutable) (knows_property id_barat phost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_barat id_khost somepath id_bhshare id_khost id_rhost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_barat) (knows id_bhshare) (knows id_rhost) (knows_property id_barat pexecutable) (knows_property id_barat phost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_barat id_khost somepath id_bhshare id_khost id_rhost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_barat) (knows id_bhshare) (knows id_rhost) (knows_property id_barat pexecutable) (knows_property id_barat phost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_barat id_rhost somepath id_bgshare id_rhost id_khost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_barat) (knows id_bgshare) (knows id_rhost) (knows_property id_barat pexecutable) (knows_property id_barat phost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_barat id_rhost somepath id_bgshare id_rhost id_khost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_barat) (knows id_bgshare) (knows id_rhost) (knows_property id_barat pexecutable) (knows_property id_barat phost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_barat id_rhost somepath id_bhshare id_rhost id_khost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_barat) (knows id_bhshare) (knows id_rhost) (knows_property id_barat pexecutable) (knows_property id_barat phost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_barat id_rhost somepath id_bhshare id_rhost id_khost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_barat) (knows id_bhshare) (knows id_rhost) (knows_property id_barat pexecutable) (knows_property id_barat phost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_bbrat id_khost somepath id_bgshare id_khost id_rhost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_bbrat) (knows id_bgshare) (knows id_rhost) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_bbrat id_khost somepath id_bgshare id_khost id_rhost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_bbrat) (knows id_bgshare) (knows id_rhost) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_bbrat id_khost somepath id_bhshare id_khost id_rhost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_bbrat) (knows id_bhshare) (knows id_rhost) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_bbrat id_khost somepath id_bhshare id_khost id_rhost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_bbrat) (knows id_bhshare) (knows id_rhost) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_bbrat id_rhost somepath id_bgshare id_rhost id_khost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_bbrat) (knows id_bgshare) (knows id_rhost) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_bbrat id_rhost somepath id_bgshare id_rhost id_khost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_bbrat) (knows id_bgshare) (knows id_rhost) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_bbrat id_rhost somepath id_bhshare id_rhost id_khost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_bbrat) (knows id_bhshare) (knows id_rhost) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_bbrat id_rhost somepath id_bhshare id_rhost id_khost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_bbrat) (knows id_bhshare) (knows id_rhost) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_yrat id_khost somepath id_bgshare id_khost id_rhost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_bgshare) (knows id_rhost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_executable id_yrat somepath) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_yrat id_khost somepath id_bgshare id_khost id_rhost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_bgshare) (knows id_rhost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_executable id_yrat somepath) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_yrat id_khost somepath id_bhshare id_khost id_rhost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_bhshare) (knows id_rhost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_executable id_yrat somepath) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_yrat id_khost somepath id_bhshare id_khost id_rhost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_bhshare) (knows id_rhost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_executable id_yrat somepath) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_yrat id_khost str__z id_bgshare id_khost id_rhost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_bgshare) (knows id_rhost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_yrat id_khost str__z id_bgshare id_khost id_rhost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_bgshare) (knows id_rhost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_rhost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_khost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_yrat id_khost str__z id_bhshare id_khost id_rhost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_bhshare) (knows id_rhost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_yrat id_khost str__z id_bhshare id_khost id_rhost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_bhshare) (knows id_rhost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_rhost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_khost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_yrat id_rhost somepath id_bgshare id_rhost id_khost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_bgshare) (knows id_rhost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_yrat id_rhost somepath id_bgshare id_rhost id_khost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_bgshare) (knows id_rhost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_yrat id_rhost somepath id_bhshare id_rhost id_khost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_bhshare) (knows id_rhost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_yrat id_rhost somepath id_bhshare id_rhost id_khost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_bhshare) (knows id_rhost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_yrat id_rhost str__z id_bgshare id_rhost id_khost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_bgshare) (knows id_rhost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_host id_yrat id_rhost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_yrat id_rhost str__z id_bgshare id_rhost id_khost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_bgshare) (knows id_rhost) (knows_property id_bgshare pdest_host) (knows_property id_bgshare pshare_path) (knows_property id_bgshare psrc_host) (prop_dest_host id_bgshare id_khost) (prop_host id_yrat id_rhost) (prop_share_path id_bgshare whatever) (prop_src_host id_bgshare id_rhost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (smb_copy id_yrat id_rhost str__z id_bhshare id_rhost id_khost whatever id_befile), cost: 1
+    pre: (NOT-created id_befile) (knows id_bhshare) (knows id_rhost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_host id_yrat id_rhost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    add: (created id_befile) (knows id_befile) (knows_property id_befile phost) (knows_property id_befile ppath) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    del: (NOT-created id_befile)
+  (smb_copy id_yrat id_rhost str__z id_bhshare id_rhost id_khost whatever id_bffile), cost: 1
+    pre: (NOT-created id_bffile) (knows id_bhshare) (knows id_rhost) (knows_property id_bhshare pdest_host) (knows_property id_bhshare pshare_path) (knows_property id_bhshare psrc_host) (prop_dest_host id_bhshare id_khost) (prop_host id_yrat id_rhost) (prop_share_path id_bhshare whatever) (prop_src_host id_bhshare id_rhost)
+    add: (created id_bffile) (knows id_bffile) (knows_property id_bffile phost) (knows_property id_bffile ppath) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    del: (NOT-created id_bffile)
+  (wmic id_barat id_khost id_rhost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_barat) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_barat id_khost) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_barat id_khost id_rhost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_barat) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_barat id_khost) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_barat id_khost id_rhost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_barat) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_barat id_khost) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost)
+    del: (NOT-created id_yrat)
+  (wmic id_barat id_khost id_rhost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_barat) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_barat id_khost) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_barat id_khost id_rhost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_barat) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_barat id_khost) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_barat id_khost id_rhost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_barat) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_barat id_khost) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost)
+    del: (NOT-created id_yrat)
+  (wmic id_barat id_khost id_rhost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_barat) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_barat id_khost) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_barat id_khost id_rhost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_barat) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_barat id_khost) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_barat id_khost id_rhost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_barat) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_barat id_khost) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost)
+    del: (NOT-created id_yrat)
+  (wmic id_barat id_khost id_rhost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_barat) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_barat id_khost) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_barat id_khost id_rhost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_barat) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_barat id_khost) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_barat id_khost id_rhost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_barat) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_barat id_khost) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost)
+    del: (NOT-created id_yrat)
+  (wmic id_barat id_rhost id_khost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_barat) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_barat id_rhost) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    add: (created id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_barat id_rhost id_khost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_barat) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_barat id_rhost) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_barat id_rhost id_khost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_barat) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_barat id_rhost) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath)
+    del: (NOT-created id_yrat)
+  (wmic id_barat id_rhost id_khost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_barat) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_barat id_rhost) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    add: (created id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_barat id_rhost id_khost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_barat) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_barat id_rhost) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_barat id_rhost id_khost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_barat) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_barat id_rhost) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath)
+    del: (NOT-created id_yrat)
+  (wmic id_barat id_rhost id_khost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_barat) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_barat id_rhost) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    add: (created id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_barat id_rhost id_khost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_barat) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_barat id_rhost) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_barat id_rhost id_khost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_barat) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_barat id_rhost) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath)
+    del: (NOT-created id_yrat)
+  (wmic id_barat id_rhost id_khost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_barat) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_barat id_rhost) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    add: (created id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_barat id_rhost id_khost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_barat) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_barat id_rhost) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_barat id_rhost id_khost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_barat) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_barat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_barat id_rhost) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath)
+    del: (NOT-created id_yrat)
+  (wmic id_bbrat id_khost id_rhost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_bbrat) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bbrat id_khost) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_bbrat id_khost id_rhost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_bbrat) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bbrat id_khost) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_bbrat id_khost id_rhost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_bbrat) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bbrat id_khost) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost)
+    del: (NOT-created id_yrat)
+  (wmic id_bbrat id_khost id_rhost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_bbrat) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bbrat id_khost) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_bbrat id_khost id_rhost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_bbrat) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bbrat id_khost) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_bbrat id_khost id_rhost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_bbrat) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bbrat id_khost) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost)
+    del: (NOT-created id_yrat)
+  (wmic id_bbrat id_khost id_rhost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_bbrat) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bbrat id_khost) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_bbrat id_khost id_rhost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_bbrat) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bbrat id_khost) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_bbrat id_khost id_rhost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_bbrat) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bbrat id_khost) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost)
+    del: (NOT-created id_yrat)
+  (wmic id_bbrat id_khost id_rhost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_bbrat) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bbrat id_khost) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_bbrat id_khost id_rhost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_bbrat) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bbrat id_khost) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_bbrat id_khost id_rhost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_bbrat) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bbrat id_khost) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost)
+    del: (NOT-created id_yrat)
+  (wmic id_bbrat id_rhost id_khost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_bbrat) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bbrat id_rhost) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_bbrat id_rhost id_khost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_bbrat) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bbrat id_rhost) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    add: (created id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_bbrat id_rhost id_khost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_bbrat) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bbrat id_rhost) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath)
+    del: (NOT-created id_yrat)
+  (wmic id_bbrat id_rhost id_khost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_bbrat) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bbrat id_rhost) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_bbrat id_rhost id_khost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_bbrat) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bbrat id_rhost) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    add: (created id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_bbrat id_rhost id_khost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_bbrat) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bbrat id_rhost) (prop_host id_befile id_khost) (prop_path id_befile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath)
+    del: (NOT-created id_yrat)
+  (wmic id_bbrat id_rhost id_khost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_bbrat) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bbrat id_rhost) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_bbrat id_rhost id_khost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_bbrat) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bbrat id_rhost) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    add: (created id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_bbrat id_rhost id_khost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_bbrat) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bbrat id_rhost) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath)
+    del: (NOT-created id_yrat)
+  (wmic id_bbrat id_rhost id_khost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_bbrat) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bbrat id_rhost) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_bbrat id_rhost id_khost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_bbrat) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bbrat id_rhost) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    add: (created id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_bbrat id_rhost id_khost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_bbrat) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bbrat phost) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bbrat id_rhost) (prop_host id_bffile id_khost) (prop_path id_bffile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath)
+    del: (NOT-created id_yrat)
+  (wmic id_yrat id_khost id_rhost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_yrat id_khost id_rhost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_yrat id_khost id_rhost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost)
+    del: (NOT-created id_yrat)
+  (wmic id_yrat id_khost id_rhost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_yrat id_khost id_rhost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_yrat id_khost id_rhost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_befile id_rhost) (prop_path id_befile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost)
+    del: (NOT-created id_yrat)
+  (wmic id_yrat id_khost id_rhost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_yrat id_khost id_rhost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_yrat id_khost id_rhost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost)
+    del: (NOT-created id_yrat)
+  (wmic id_yrat id_khost id_rhost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_rhost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_yrat id_khost id_rhost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_rhost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_yrat id_khost id_rhost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_rhost pdomain_user_admins) (prop_host id_bffile id_rhost) (prop_path id_bffile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath) (prop_host id_yrat id_rhost)
+    del: (NOT-created id_yrat)
+  (wmic id_yrat id_rhost id_khost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_befile id_khost) (prop_host id_yrat id_rhost) (prop_path id_befile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_yrat id_rhost id_khost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_befile id_khost) (prop_host id_yrat id_rhost) (prop_path id_befile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_yrat id_rhost id_khost id_befile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_befile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_befile id_khost) (prop_host id_yrat id_rhost) (prop_path id_befile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath)
+    del: (NOT-created id_yrat)
+  (wmic id_yrat id_rhost id_khost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_befile id_khost) (prop_host id_yrat id_rhost) (prop_path id_befile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_yrat id_rhost id_khost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_befile id_khost) (prop_host id_yrat id_rhost) (prop_path id_befile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_yrat id_rhost id_khost id_befile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_befile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_befile phost) (knows_property id_befile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_befile id_khost) (prop_host id_yrat id_rhost) (prop_path id_befile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath)
+    del: (NOT-created id_yrat)
+  (wmic id_yrat id_rhost id_khost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bffile id_khost) (prop_host id_yrat id_rhost) (prop_path id_bffile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_yrat id_rhost id_khost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bffile id_khost) (prop_host id_yrat id_rhost) (prop_path id_bffile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_yrat id_rhost id_khost id_bffile somepath id_ddomaincredential id_cdomainuser id_adomain str__alpha str__e id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_bffile) (knows id_cdomainuser) (knows id_ddomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_cdomainuser pdomain) (knows_property id_ddomaincredential ppassword) (knows_property id_ddomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bffile id_khost) (prop_host id_yrat id_rhost) (prop_path id_bffile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath)
+    del: (NOT-created id_yrat)
+  (wmic id_yrat id_rhost id_khost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_barat), cost: 1
+    pre: (NOT-created id_barat) (knows id_adomain) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bffile id_khost) (prop_host id_yrat id_rhost) (prop_path id_bffile somepath)
+    add: (created id_barat) (knows id_barat) (knows_property id_barat pelevated) (knows_property id_barat pexecutable) (knows_property id_barat phost) (prop_elevated id_barat yes) (prop_executable id_barat somepath) (prop_host id_barat id_khost)
+    del: (NOT-created id_barat) (NOT-prop_elevated id_barat yes)
+  (wmic id_yrat id_rhost id_khost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_bbrat), cost: 1
+    pre: (NOT-created id_bbrat) (knows id_adomain) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bffile id_khost) (prop_host id_yrat id_rhost) (prop_path id_bffile somepath)
+    add: (created id_bbrat) (knows id_bbrat) (knows_property id_bbrat pelevated) (knows_property id_bbrat pexecutable) (knows_property id_bbrat phost) (prop_elevated id_bbrat yes) (prop_executable id_bbrat somepath) (prop_host id_bbrat id_khost)
+    del: (NOT-created id_bbrat) (NOT-prop_elevated id_bbrat yes)
+  (wmic id_yrat id_rhost id_khost id_bffile somepath id_hdomaincredential id_gdomainuser id_adomain str__alpha str__i id_yrat), cost: 1
+    pre: (NOT-created id_yrat) (knows id_adomain) (knows id_bffile) (knows id_gdomainuser) (knows id_hdomaincredential) (knows id_rhost) (knows_property id_adomain pwindows_domain) (knows_property id_bffile phost) (knows_property id_bffile ppath) (knows_property id_gdomainuser pdomain) (knows_property id_hdomaincredential ppassword) (knows_property id_hdomaincredential puser) (knows_property id_khost pdomain_user_admins) (prop_host id_bffile id_khost) (prop_host id_yrat id_rhost) (prop_path id_bffile somepath)
+    add: (created id_yrat) (knows_property id_yrat pelevated) (prop_executable id_yrat somepath)
+    del: (NOT-created id_yrat)
+Init State: (NOT-created id_barat) (NOT-created id_bbrat) (NOT-created id_befile) (NOT-created id_bffile) (NOT-created id_bgshare) (NOT-created id_bhshare) (NOT-created id_yrat) (NOT-prop_elevated id_barat yes) (NOT-prop_elevated id_bbrat yes)
+Goal: (prop_host id_bbrat id_rhost)

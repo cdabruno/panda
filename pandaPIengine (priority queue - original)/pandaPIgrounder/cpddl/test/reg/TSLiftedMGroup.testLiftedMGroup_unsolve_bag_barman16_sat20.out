@@ -1,0 +1,20 @@
+< {shaker-level shaker1 C0:level}:=1
+, {count-hand hand-bag1 handempty-true C0:hnum}:=1
+, {count-hand hand-bag1 shot-bag1 C0:hnum}:=1
+, {count-hand hand-bag1 shaker1 C0:hnum}:=1
+, {count-hand hand-bag1 V0:object C1:hnum}:=1
+, {count-hand hand-bag1 V0:container C1:hnum}:=1
+, {count-shot-goal shot-bag1 empty-shot-true V0:snum}:=1:S
+, {count-shot-goal shot-bag1 empty-shot-true C0:snum}:=1:S
+, {count-shot-goal shot-bag1 V0:object C1:snum}:=1
+, {count-shot-goal shot-bag1 V0:beverage C1:snum}:=1
+, {count-shot-goal shot-bag1 V0:ingredient V1:snum}:=1:S
+, {count-shot-goal shot-bag1 V0:ingredient C1:snum}:=1:S
+, {ontable shot-bag1, count-hand hand-bag1 handempty-true C0:hnum}:=1
+, {ontable shot-bag1, count-hand hand-bag1 shot-bag1 C0:hnum}:=1
+, {ontable shot-bag1, count-hand hand-bag1 shaker1 C0:hnum}:=1
+, {ontable shot-bag1, count-hand hand-bag1 V0:object C1:hnum}:=1
+, {ontable shot-bag1, count-hand hand-bag1 V0:container C1:hnum}:=1
+, {unshaked shaker1, shaked shaker1, empty-shaker shaker1}:=1
+, {unshaked shaker1, empty-shaker shaker1, contains-shaker shaker1 C0:cocktail}:=1
+>

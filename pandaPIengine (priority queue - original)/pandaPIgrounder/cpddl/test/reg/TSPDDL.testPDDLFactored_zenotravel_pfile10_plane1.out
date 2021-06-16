@@ -1,0 +1,84 @@
+---- Domain: pddl-data/codmap-2015/factored/zenotravel/pfile10/domain-plane1.pddl | pddl-data/codmap-2015/factored/zenotravel/pfile10/problem-plane1.pddl ----
+Domain: zeno-travel
+Problem: ztravel-3-8
+Require: 1000ff
+Type[6]:
+    [0]: object, parent: -1
+    [1]: locatable, parent: 0
+    [2]: city, parent: 0
+    [3]: flevel, parent: 0
+    [4]: aircraft, parent: 1
+    [5]: person, parent: 1
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+    [1]: 0 1 2 3 4 5 6 11 20
+    [2]: 7 8 9 10 12
+    [3]: 13 14 15 16 17 18 19
+    [4]: 20
+    [5]: 0 1 2 3 4 5 6 11
+Obj[21]:
+    [0]: person2, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: person3, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: person1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: person6, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: person7, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: person4, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: person5, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: city2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: city3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: city0, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: city1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: person8, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: city4, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: fl1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: fl0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: fl3, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: fl2, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: fl5, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: fl4, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: fl6, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: plane1, type: 4, is-constant: 0, is-private: 1, owner: -1, is-agent: 0
+Predicate[5]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    at: 1 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    next: 3 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    fuel-level: 4 3 :: is-private: 1, owner-param: -1, read: 1, write: 1
+    in: 5 4 :: is-private: 1, owner-param: -1, read: 1, write: 1
+Function[0]:
+Action[5]:
+    board: ?a:4 ?p:5 ?c:2
+        pre: (and (RW:at ?p ?c) (RW:at ?a ?c))
+        eff: (and (RW:in ?p ?a) (N:RW:at ?p ?c))
+    debark: ?a:4 ?p:5 ?c:2
+        pre: (and (RW:in ?p ?a) (RW:at ?a ?c))
+        eff: (and (RW:at ?p ?c) (N:RW:in ?p ?a))
+    fly: ?a:4 ?c1:2 ?c2:2 ?l1:3 ?l2:3
+        pre: (and (RW:at ?a ?c1) (RW:fuel-level ?a ?l1) (R:next ?l2 ?l1))
+        eff: (and (RW:at ?a ?c2) (RW:fuel-level ?a ?l2) (N:RW:at ?a ?c1) (N:RW:fuel-level ?a ?l1))
+    zoom: ?a:4 ?c1:2 ?c2:2 ?l1:3 ?l2:3 ?l3:3
+        pre: (and (RW:at ?a ?c1) (RW:fuel-level ?a ?l1) (R:next ?l2 ?l1) (R:next ?l3 ?l2))
+        eff: (and (RW:at ?a ?c2) (RW:fuel-level ?a ?l3) (N:RW:at ?a ?c1) (N:RW:fuel-level ?a ?l1))
+    refuel: ?a:4 ?c:2 ?l:3 ?l1:3
+        pre: (and (RW:fuel-level ?a ?l) (R:next ?l ?l1) (RW:at ?a ?c))
+        eff: (and (RW:fuel-level ?a ?l1) (N:RW:fuel-level ?a ?l))
+Init[16]:
+  (at plane1 city0)
+  (fuel-level plane1 fl2)
+  (at person1 city3)
+  (at person2 city3)
+  (at person3 city4)
+  (at person4 city4)
+  (at person5 city1)
+  (at person6 city0)
+  (at person7 city1)
+  (at person8 city0)
+  S:(next fl0 fl1)
+  S:(next fl1 fl2)
+  S:(next fl2 fl3)
+  S:(next fl3 fl4)
+  S:(next fl4 fl5)
+  S:(next fl5 fl6)
+Init[0]:
+Goal: (and (RW:at person1 city1) (RW:at person2 city2) (RW:at person3 city3) (RW:at person4 city1) (RW:at person5 city0) (RW:at person6 city3) (RW:at person7 city4) (RW:at person8 city3))
+Metric: 0
+---- Domain: pddl-data/codmap-2015/factored/zenotravel/pfile10/domain-plane1.pddl | pddl-data/codmap-2015/factored/zenotravel/pfile10/problem-plane1.pddl END ----

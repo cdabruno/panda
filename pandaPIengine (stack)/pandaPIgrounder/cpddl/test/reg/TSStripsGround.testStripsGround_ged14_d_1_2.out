@@ -1,0 +1,612 @@
+Fact[56]:
+  (cut-point-1 sub1)
+  (cut-point-1 sub2)
+  (cut-point-1 sub3)
+  (cut-point-2 sub1)
+  (cut-point-2 sub2)
+  (cut-point-2 sub3)
+  (cutting)
+  (cw sub1 sub1)
+  (cw sub1 sub2)
+  (cw sub1 sub3)
+  (cw sub2 sub1)
+  (cw sub2 sub2)
+  (cw sub2 sub3)
+  (cw sub3 sub1)
+  (cw sub3 sub2)
+  (cw sub3 sub3)
+  (finished)
+  (have-cut)
+  (idle)
+  (inverse-splice-next sub1)
+  (inverse-splice-next sub2)
+  (inverse-splice-next sub3)
+  (inverse-splicing)
+  (inverse-splicing-last)
+  (inverted sub1)
+  (inverted sub2)
+  (inverted sub3)
+  (last-cut-point sub1)
+  (last-cut-point sub2)
+  (last-cut-point sub3)
+  (normal sub1)
+  (normal sub2)
+  (normal sub3)
+  (s-first sub1)
+  (s-first sub2)
+  (s-first sub3)
+  (s-last sub1)
+  (s-last sub2)
+  (s-last sub3)
+  (s-next sub1 sub2)
+  (s-next sub1 sub3)
+  (s-next sub2 sub1)
+  (s-next sub2 sub3)
+  (s-next sub3 sub1)
+  (s-next sub3 sub2)
+  (splice-next sub1)
+  (splice-next sub2)
+  (splice-next sub3)
+  (splice-point-1 sub1)
+  (splice-point-1 sub2)
+  (splice-point-1 sub3)
+  (splice-point-2 sub1)
+  (splice-point-2 sub2)
+  (splice-point-2 sub3)
+  (splicing)
+  (splicing-last)
+Op[138]:
+  (begin-cut sub1 sub2), cost: 0
+    pre: (cw sub1 sub2) (idle)
+    add: (cut-point-1 sub1) (cutting) (last-cut-point sub1) (s-first sub2) (s-last sub2)
+    del: (cw sub1 sub2) (idle)
+  (begin-cut sub1 sub3), cost: 0
+    pre: (cw sub1 sub3) (idle)
+    add: (cut-point-1 sub1) (cutting) (last-cut-point sub1) (s-first sub3) (s-last sub3)
+    del: (cw sub1 sub3) (idle)
+  (begin-cut sub2 sub1), cost: 0
+    pre: (cw sub2 sub1) (idle)
+    add: (cut-point-1 sub2) (cutting) (last-cut-point sub2) (s-first sub1) (s-last sub1)
+    del: (cw sub2 sub1) (idle)
+  (begin-cut sub2 sub3), cost: 0
+    pre: (cw sub2 sub3) (idle)
+    add: (cut-point-1 sub2) (cutting) (last-cut-point sub2) (s-first sub3) (s-last sub3)
+    del: (cw sub2 sub3) (idle)
+  (begin-cut sub3 sub1), cost: 0
+    pre: (cw sub3 sub1) (idle)
+    add: (cut-point-1 sub3) (cutting) (last-cut-point sub3) (s-first sub1) (s-last sub1)
+    del: (cw sub3 sub1) (idle)
+  (begin-cut sub3 sub2), cost: 0
+    pre: (cw sub3 sub2) (idle)
+    add: (cut-point-1 sub3) (cutting) (last-cut-point sub3) (s-first sub2) (s-last sub2)
+    del: (cw sub3 sub2) (idle)
+  (begin-inverse-splice sub1 sub2), cost: 1
+    pre: (cw sub1 sub2) (have-cut) (last-cut-point sub1)
+    add: (inverse-splicing) (splice-point-1 sub1) (splice-point-2 sub2)
+    del: (cw sub1 sub2) (have-cut)
+  (begin-inverse-splice sub1 sub3), cost: 1
+    pre: (cw sub1 sub3) (have-cut) (last-cut-point sub1)
+    add: (inverse-splicing) (splice-point-1 sub1) (splice-point-2 sub3)
+    del: (cw sub1 sub3) (have-cut)
+  (begin-inverse-splice sub2 sub1), cost: 1
+    pre: (cw sub2 sub1) (have-cut) (last-cut-point sub2)
+    add: (inverse-splicing) (splice-point-1 sub2) (splice-point-2 sub1)
+    del: (cw sub2 sub1) (have-cut)
+  (begin-inverse-splice sub2 sub3), cost: 1
+    pre: (cw sub2 sub3) (have-cut) (last-cut-point sub2)
+    add: (inverse-splicing) (splice-point-1 sub2) (splice-point-2 sub3)
+    del: (cw sub2 sub3) (have-cut)
+  (begin-inverse-splice sub3 sub1), cost: 1
+    pre: (cw sub3 sub1) (have-cut) (last-cut-point sub3)
+    add: (inverse-splicing) (splice-point-1 sub3) (splice-point-2 sub1)
+    del: (cw sub3 sub1) (have-cut)
+  (begin-inverse-splice sub3 sub2), cost: 1
+    pre: (cw sub3 sub2) (have-cut) (last-cut-point sub3)
+    add: (inverse-splicing) (splice-point-1 sub3) (splice-point-2 sub2)
+    del: (cw sub3 sub2) (have-cut)
+  (begin-inverse-splice-special-case sub1), cost: 1
+    pre: (cw sub1 sub1) (have-cut) (last-cut-point sub1)
+    add: (inverse-splicing) (splice-point-1 sub1) (splice-point-2 sub1)
+    del: (cw sub1 sub1) (have-cut)
+  (begin-inverse-splice-special-case sub2), cost: 1
+    pre: (cw sub2 sub2) (have-cut) (last-cut-point sub2)
+    add: (inverse-splicing) (splice-point-1 sub2) (splice-point-2 sub2)
+    del: (cw sub2 sub2) (have-cut)
+  (begin-inverse-splice-special-case sub3), cost: 1
+    pre: (cw sub3 sub3) (have-cut) (last-cut-point sub3)
+    add: (inverse-splicing) (splice-point-1 sub3) (splice-point-2 sub3)
+    del: (cw sub3 sub3) (have-cut)
+  (begin-transpose-splice sub1 sub2), cost: 2
+    pre: (cw sub1 sub2) (have-cut)
+    add: (splice-point-1 sub1) (splice-point-2 sub2) (splicing)
+    del: (cw sub1 sub2) (have-cut)
+  (begin-transpose-splice sub1 sub3), cost: 2
+    pre: (cw sub1 sub3) (have-cut)
+    add: (splice-point-1 sub1) (splice-point-2 sub3) (splicing)
+    del: (cw sub1 sub3) (have-cut)
+  (begin-transpose-splice sub2 sub1), cost: 2
+    pre: (cw sub2 sub1) (have-cut)
+    add: (splice-point-1 sub2) (splice-point-2 sub1) (splicing)
+    del: (cw sub2 sub1) (have-cut)
+  (begin-transpose-splice sub2 sub3), cost: 2
+    pre: (cw sub2 sub3) (have-cut)
+    add: (splice-point-1 sub2) (splice-point-2 sub3) (splicing)
+    del: (cw sub2 sub3) (have-cut)
+  (begin-transpose-splice sub3 sub1), cost: 2
+    pre: (cw sub3 sub1) (have-cut)
+    add: (splice-point-1 sub3) (splice-point-2 sub1) (splicing)
+    del: (cw sub3 sub1) (have-cut)
+  (begin-transpose-splice sub3 sub2), cost: 2
+    pre: (cw sub3 sub2) (have-cut)
+    add: (splice-point-1 sub3) (splice-point-2 sub2) (splicing)
+    del: (cw sub3 sub2) (have-cut)
+  (begin-transverse-splice sub1 sub2), cost: 2
+    pre: (cw sub1 sub2) (have-cut)
+    add: (inverse-splicing) (splice-point-1 sub1) (splice-point-2 sub2)
+    del: (cw sub1 sub2) (have-cut)
+  (begin-transverse-splice sub1 sub3), cost: 2
+    pre: (cw sub1 sub3) (have-cut)
+    add: (inverse-splicing) (splice-point-1 sub1) (splice-point-2 sub3)
+    del: (cw sub1 sub3) (have-cut)
+  (begin-transverse-splice sub2 sub1), cost: 2
+    pre: (cw sub2 sub1) (have-cut)
+    add: (inverse-splicing) (splice-point-1 sub2) (splice-point-2 sub1)
+    del: (cw sub2 sub1) (have-cut)
+  (begin-transverse-splice sub2 sub3), cost: 2
+    pre: (cw sub2 sub3) (have-cut)
+    add: (inverse-splicing) (splice-point-1 sub2) (splice-point-2 sub3)
+    del: (cw sub2 sub3) (have-cut)
+  (begin-transverse-splice sub3 sub1), cost: 2
+    pre: (cw sub3 sub1) (have-cut)
+    add: (inverse-splicing) (splice-point-1 sub3) (splice-point-2 sub1)
+    del: (cw sub3 sub1) (have-cut)
+  (begin-transverse-splice sub3 sub2), cost: 2
+    pre: (cw sub3 sub2) (have-cut)
+    add: (inverse-splicing) (splice-point-1 sub3) (splice-point-2 sub2)
+    del: (cw sub3 sub2) (have-cut)
+  (continue-cut sub1 sub2), cost: 0
+    pre: (cutting) (cw sub1 sub2) (s-last sub1)
+    add: (s-last sub2) (s-next sub1 sub2)
+    del: (cw sub1 sub2) (s-last sub1)
+  (continue-cut sub1 sub3), cost: 0
+    pre: (cutting) (cw sub1 sub3) (s-last sub1)
+    add: (s-last sub3) (s-next sub1 sub3)
+    del: (cw sub1 sub3) (s-last sub1)
+  (continue-cut sub2 sub1), cost: 0
+    pre: (cutting) (cw sub2 sub1) (s-last sub2)
+    add: (s-last sub1) (s-next sub2 sub1)
+    del: (cw sub2 sub1) (s-last sub2)
+  (continue-cut sub2 sub3), cost: 0
+    pre: (cutting) (cw sub2 sub3) (s-last sub2)
+    add: (s-last sub3) (s-next sub2 sub3)
+    del: (cw sub2 sub3) (s-last sub2)
+  (continue-cut sub3 sub1), cost: 0
+    pre: (cutting) (cw sub3 sub1) (s-last sub3)
+    add: (s-last sub1) (s-next sub3 sub1)
+    del: (cw sub3 sub1) (s-last sub3)
+  (continue-cut sub3 sub2), cost: 0
+    pre: (cutting) (cw sub3 sub2) (s-last sub3)
+    add: (s-last sub2) (s-next sub3 sub2)
+    del: (cw sub3 sub2) (s-last sub3)
+  (continue-inverse-splice-1a sub1 sub2), cost: 0
+    pre: (inverse-splicing) (normal sub1) (s-last sub1) (s-next sub2 sub1)
+    add: (inverse-splice-next sub1) (inverted sub1) (s-last sub2)
+    del: (inverse-splicing) (normal sub1) (s-last sub1) (s-next sub2 sub1)
+  (continue-inverse-splice-1a sub1 sub3), cost: 0
+    pre: (inverse-splicing) (normal sub1) (s-last sub1) (s-next sub3 sub1)
+    add: (inverse-splice-next sub1) (inverted sub1) (s-last sub3)
+    del: (inverse-splicing) (normal sub1) (s-last sub1) (s-next sub3 sub1)
+  (continue-inverse-splice-1a sub2 sub1), cost: 0
+    pre: (inverse-splicing) (normal sub2) (s-last sub2) (s-next sub1 sub2)
+    add: (inverse-splice-next sub2) (inverted sub2) (s-last sub1)
+    del: (inverse-splicing) (normal sub2) (s-last sub2) (s-next sub1 sub2)
+  (continue-inverse-splice-1a sub2 sub3), cost: 0
+    pre: (inverse-splicing) (normal sub2) (s-last sub2) (s-next sub3 sub2)
+    add: (inverse-splice-next sub2) (inverted sub2) (s-last sub3)
+    del: (inverse-splicing) (normal sub2) (s-last sub2) (s-next sub3 sub2)
+  (continue-inverse-splice-1a sub3 sub1), cost: 0
+    pre: (inverse-splicing) (normal sub3) (s-last sub3) (s-next sub1 sub3)
+    add: (inverse-splice-next sub3) (inverted sub3) (s-last sub1)
+    del: (inverse-splicing) (normal sub3) (s-last sub3) (s-next sub1 sub3)
+  (continue-inverse-splice-1a sub3 sub2), cost: 0
+    pre: (inverse-splicing) (normal sub3) (s-last sub3) (s-next sub2 sub3)
+    add: (inverse-splice-next sub3) (inverted sub3) (s-last sub2)
+    del: (inverse-splicing) (normal sub3) (s-last sub3) (s-next sub2 sub3)
+  (continue-inverse-splice-1b sub1 sub2), cost: 0
+    pre: (inverse-splicing) (inverted sub1) (s-last sub1) (s-next sub2 sub1)
+    add: (inverse-splice-next sub1) (normal sub1) (s-last sub2)
+    del: (inverse-splicing) (inverted sub1) (s-last sub1) (s-next sub2 sub1)
+  (continue-inverse-splice-1b sub1 sub3), cost: 0
+    pre: (inverse-splicing) (inverted sub1) (s-last sub1) (s-next sub3 sub1)
+    add: (inverse-splice-next sub1) (normal sub1) (s-last sub3)
+    del: (inverse-splicing) (inverted sub1) (s-last sub1) (s-next sub3 sub1)
+  (continue-inverse-splice-1b sub2 sub1), cost: 0
+    pre: (inverse-splicing) (inverted sub2) (s-last sub2) (s-next sub1 sub2)
+    add: (inverse-splice-next sub2) (normal sub2) (s-last sub1)
+    del: (inverse-splicing) (inverted sub2) (s-last sub2) (s-next sub1 sub2)
+  (continue-inverse-splice-1b sub2 sub3), cost: 0
+    pre: (inverse-splicing) (inverted sub2) (s-last sub2) (s-next sub3 sub2)
+    add: (inverse-splice-next sub2) (normal sub2) (s-last sub3)
+    del: (inverse-splicing) (inverted sub2) (s-last sub2) (s-next sub3 sub2)
+  (continue-inverse-splice-1b sub3 sub1), cost: 0
+    pre: (inverse-splicing) (inverted sub3) (s-last sub3) (s-next sub1 sub3)
+    add: (inverse-splice-next sub3) (normal sub3) (s-last sub1)
+    del: (inverse-splicing) (inverted sub3) (s-last sub3) (s-next sub1 sub3)
+  (continue-inverse-splice-1b sub3 sub2), cost: 0
+    pre: (inverse-splicing) (inverted sub3) (s-last sub3) (s-next sub2 sub3)
+    add: (inverse-splice-next sub3) (normal sub3) (s-last sub2)
+    del: (inverse-splicing) (inverted sub3) (s-last sub3) (s-next sub2 sub3)
+  (continue-inverse-splice-2 sub1 sub1), cost: 0
+    pre: (inverse-splice-next sub1) (splice-point-1 sub1)
+    add: (cw sub1 sub1) (inverse-splicing)
+    del: (inverse-splice-next sub1)
+  (continue-inverse-splice-2 sub1 sub2), cost: 0
+    pre: (inverse-splice-next sub1) (splice-point-1 sub2)
+    add: (cw sub2 sub1) (inverse-splicing) (splice-point-1 sub1)
+    del: (inverse-splice-next sub1) (splice-point-1 sub2)
+  (continue-inverse-splice-2 sub1 sub3), cost: 0
+    pre: (inverse-splice-next sub1) (splice-point-1 sub3)
+    add: (cw sub3 sub1) (inverse-splicing) (splice-point-1 sub1)
+    del: (inverse-splice-next sub1) (splice-point-1 sub3)
+  (continue-inverse-splice-2 sub2 sub1), cost: 0
+    pre: (inverse-splice-next sub2) (splice-point-1 sub1)
+    add: (cw sub1 sub2) (inverse-splicing) (splice-point-1 sub2)
+    del: (inverse-splice-next sub2) (splice-point-1 sub1)
+  (continue-inverse-splice-2 sub2 sub2), cost: 0
+    pre: (inverse-splice-next sub2) (splice-point-1 sub2)
+    add: (cw sub2 sub2) (inverse-splicing)
+    del: (inverse-splice-next sub2)
+  (continue-inverse-splice-2 sub2 sub3), cost: 0
+    pre: (inverse-splice-next sub2) (splice-point-1 sub3)
+    add: (cw sub3 sub2) (inverse-splicing) (splice-point-1 sub2)
+    del: (inverse-splice-next sub2) (splice-point-1 sub3)
+  (continue-inverse-splice-2 sub3 sub1), cost: 0
+    pre: (inverse-splice-next sub3) (splice-point-1 sub1)
+    add: (cw sub1 sub3) (inverse-splicing) (splice-point-1 sub3)
+    del: (inverse-splice-next sub3) (splice-point-1 sub1)
+  (continue-inverse-splice-2 sub3 sub2), cost: 0
+    pre: (inverse-splice-next sub3) (splice-point-1 sub2)
+    add: (cw sub2 sub3) (inverse-splicing) (splice-point-1 sub3)
+    del: (inverse-splice-next sub3) (splice-point-1 sub2)
+  (continue-inverse-splice-2 sub3 sub3), cost: 0
+    pre: (inverse-splice-next sub3) (splice-point-1 sub3)
+    add: (cw sub3 sub3) (inverse-splicing)
+    del: (inverse-splice-next sub3)
+  (continue-splice-1 sub1 sub2), cost: 0
+    pre: (s-first sub1) (s-next sub1 sub2) (splicing)
+    add: (s-first sub2) (splice-next sub1)
+    del: (s-first sub1) (s-next sub1 sub2) (splicing)
+  (continue-splice-1 sub1 sub3), cost: 0
+    pre: (s-first sub1) (s-next sub1 sub3) (splicing)
+    add: (s-first sub3) (splice-next sub1)
+    del: (s-first sub1) (s-next sub1 sub3) (splicing)
+  (continue-splice-1 sub2 sub1), cost: 0
+    pre: (s-first sub2) (s-next sub2 sub1) (splicing)
+    add: (s-first sub1) (splice-next sub2)
+    del: (s-first sub2) (s-next sub2 sub1) (splicing)
+  (continue-splice-1 sub2 sub3), cost: 0
+    pre: (s-first sub2) (s-next sub2 sub3) (splicing)
+    add: (s-first sub3) (splice-next sub2)
+    del: (s-first sub2) (s-next sub2 sub3) (splicing)
+  (continue-splice-1 sub3 sub1), cost: 0
+    pre: (s-first sub3) (s-next sub3 sub1) (splicing)
+    add: (s-first sub1) (splice-next sub3)
+    del: (s-first sub3) (s-next sub3 sub1) (splicing)
+  (continue-splice-1 sub3 sub2), cost: 0
+    pre: (s-first sub3) (s-next sub3 sub2) (splicing)
+    add: (s-first sub2) (splice-next sub3)
+    del: (s-first sub3) (s-next sub3 sub2) (splicing)
+  (continue-splice-2 sub1 sub1), cost: 0
+    pre: (splice-next sub1) (splice-point-1 sub1)
+    add: (cw sub1 sub1) (splicing)
+    del: (splice-next sub1)
+  (continue-splice-2 sub1 sub2), cost: 0
+    pre: (splice-next sub1) (splice-point-1 sub2)
+    add: (cw sub2 sub1) (splice-point-1 sub1) (splicing)
+    del: (splice-next sub1) (splice-point-1 sub2)
+  (continue-splice-2 sub1 sub3), cost: 0
+    pre: (splice-next sub1) (splice-point-1 sub3)
+    add: (cw sub3 sub1) (splice-point-1 sub1) (splicing)
+    del: (splice-next sub1) (splice-point-1 sub3)
+  (continue-splice-2 sub2 sub1), cost: 0
+    pre: (splice-next sub2) (splice-point-1 sub1)
+    add: (cw sub1 sub2) (splice-point-1 sub2) (splicing)
+    del: (splice-next sub2) (splice-point-1 sub1)
+  (continue-splice-2 sub2 sub2), cost: 0
+    pre: (splice-next sub2) (splice-point-1 sub2)
+    add: (cw sub2 sub2) (splicing)
+    del: (splice-next sub2)
+  (continue-splice-2 sub2 sub3), cost: 0
+    pre: (splice-next sub2) (splice-point-1 sub3)
+    add: (cw sub3 sub2) (splice-point-1 sub2) (splicing)
+    del: (splice-next sub2) (splice-point-1 sub3)
+  (continue-splice-2 sub3 sub1), cost: 0
+    pre: (splice-next sub3) (splice-point-1 sub1)
+    add: (cw sub1 sub3) (splice-point-1 sub3) (splicing)
+    del: (splice-next sub3) (splice-point-1 sub1)
+  (continue-splice-2 sub3 sub2), cost: 0
+    pre: (splice-next sub3) (splice-point-1 sub2)
+    add: (cw sub2 sub3) (splice-point-1 sub3) (splicing)
+    del: (splice-next sub3) (splice-point-1 sub2)
+  (continue-splice-2 sub3 sub3), cost: 0
+    pre: (splice-next sub3) (splice-point-1 sub3)
+    add: (cw sub3 sub3) (splicing)
+    del: (splice-next sub3)
+  (end-cut-1 sub1 sub2), cost: 0
+    pre: (cutting) (cw sub1 sub2) (s-last sub1)
+    add: (cut-point-2 sub2)
+    del: (cw sub1 sub2)
+  (end-cut-1 sub1 sub3), cost: 0
+    pre: (cutting) (cw sub1 sub3) (s-last sub1)
+    add: (cut-point-2 sub3)
+    del: (cw sub1 sub3)
+  (end-cut-1 sub2 sub1), cost: 0
+    pre: (cutting) (cw sub2 sub1) (s-last sub2)
+    add: (cut-point-2 sub1)
+    del: (cw sub2 sub1)
+  (end-cut-1 sub2 sub3), cost: 0
+    pre: (cutting) (cw sub2 sub3) (s-last sub2)
+    add: (cut-point-2 sub3)
+    del: (cw sub2 sub3)
+  (end-cut-1 sub3 sub1), cost: 0
+    pre: (cutting) (cw sub3 sub1) (s-last sub3)
+    add: (cut-point-2 sub1)
+    del: (cw sub3 sub1)
+  (end-cut-1 sub3 sub2), cost: 0
+    pre: (cutting) (cw sub3 sub2) (s-last sub3)
+    add: (cut-point-2 sub2)
+    del: (cw sub3 sub2)
+  (end-cut-2 sub1 sub1), cost: 0
+    pre: (cut-point-1 sub1) (cut-point-2 sub1) (cutting)
+    add: (cw sub1 sub1) (have-cut)
+    del: (cut-point-1 sub1) (cut-point-2 sub1) (cutting)
+  (end-cut-2 sub1 sub2), cost: 0
+    pre: (cut-point-1 sub1) (cut-point-2 sub2) (cutting)
+    add: (cw sub1 sub2) (have-cut)
+    del: (cut-point-1 sub1) (cut-point-2 sub2) (cutting)
+  (end-cut-2 sub1 sub3), cost: 0
+    pre: (cut-point-1 sub1) (cut-point-2 sub3) (cutting)
+    add: (cw sub1 sub3) (have-cut)
+    del: (cut-point-1 sub1) (cut-point-2 sub3) (cutting)
+  (end-cut-2 sub2 sub1), cost: 0
+    pre: (cut-point-1 sub2) (cut-point-2 sub1) (cutting)
+    add: (cw sub2 sub1) (have-cut)
+    del: (cut-point-1 sub2) (cut-point-2 sub1) (cutting)
+  (end-cut-2 sub2 sub2), cost: 0
+    pre: (cut-point-1 sub2) (cut-point-2 sub2) (cutting)
+    add: (cw sub2 sub2) (have-cut)
+    del: (cut-point-1 sub2) (cut-point-2 sub2) (cutting)
+  (end-cut-2 sub2 sub3), cost: 0
+    pre: (cut-point-1 sub2) (cut-point-2 sub3) (cutting)
+    add: (cw sub2 sub3) (have-cut)
+    del: (cut-point-1 sub2) (cut-point-2 sub3) (cutting)
+  (end-cut-2 sub3 sub1), cost: 0
+    pre: (cut-point-1 sub3) (cut-point-2 sub1) (cutting)
+    add: (cw sub3 sub1) (have-cut)
+    del: (cut-point-1 sub3) (cut-point-2 sub1) (cutting)
+  (end-cut-2 sub3 sub2), cost: 0
+    pre: (cut-point-1 sub3) (cut-point-2 sub2) (cutting)
+    add: (cw sub3 sub2) (have-cut)
+    del: (cut-point-1 sub3) (cut-point-2 sub2) (cutting)
+  (end-cut-2 sub3 sub3), cost: 0
+    pre: (cut-point-1 sub3) (cut-point-2 sub3) (cutting)
+    add: (cw sub3 sub3) (have-cut)
+    del: (cut-point-1 sub3) (cut-point-2 sub3) (cutting)
+  (end-inverse-splice-1a sub1 sub1), cost: 0
+    pre: (inverse-splicing) (normal sub1) (s-first sub1) (s-last sub1) (splice-point-1 sub1)
+    add: (cw sub1 sub1) (inverse-splicing-last) (inverted sub1)
+    del: (inverse-splicing) (normal sub1) (s-first sub1) (s-last sub1)
+  (end-inverse-splice-1a sub1 sub2), cost: 0
+    pre: (inverse-splicing) (normal sub1) (s-first sub1) (s-last sub1) (splice-point-1 sub2)
+    add: (cw sub2 sub1) (inverse-splicing-last) (inverted sub1) (splice-point-1 sub1)
+    del: (inverse-splicing) (normal sub1) (s-first sub1) (s-last sub1) (splice-point-1 sub2)
+  (end-inverse-splice-1a sub1 sub3), cost: 0
+    pre: (inverse-splicing) (normal sub1) (s-first sub1) (s-last sub1) (splice-point-1 sub3)
+    add: (cw sub3 sub1) (inverse-splicing-last) (inverted sub1) (splice-point-1 sub1)
+    del: (inverse-splicing) (normal sub1) (s-first sub1) (s-last sub1) (splice-point-1 sub3)
+  (end-inverse-splice-1a sub2 sub1), cost: 0
+    pre: (inverse-splicing) (normal sub2) (s-first sub2) (s-last sub2) (splice-point-1 sub1)
+    add: (cw sub1 sub2) (inverse-splicing-last) (inverted sub2) (splice-point-1 sub2)
+    del: (inverse-splicing) (normal sub2) (s-first sub2) (s-last sub2) (splice-point-1 sub1)
+  (end-inverse-splice-1a sub2 sub2), cost: 0
+    pre: (inverse-splicing) (normal sub2) (s-first sub2) (s-last sub2) (splice-point-1 sub2)
+    add: (cw sub2 sub2) (inverse-splicing-last) (inverted sub2)
+    del: (inverse-splicing) (normal sub2) (s-first sub2) (s-last sub2)
+  (end-inverse-splice-1a sub2 sub3), cost: 0
+    pre: (inverse-splicing) (normal sub2) (s-first sub2) (s-last sub2) (splice-point-1 sub3)
+    add: (cw sub3 sub2) (inverse-splicing-last) (inverted sub2) (splice-point-1 sub2)
+    del: (inverse-splicing) (normal sub2) (s-first sub2) (s-last sub2) (splice-point-1 sub3)
+  (end-inverse-splice-1a sub3 sub1), cost: 0
+    pre: (inverse-splicing) (normal sub3) (s-first sub3) (s-last sub3) (splice-point-1 sub1)
+    add: (cw sub1 sub3) (inverse-splicing-last) (inverted sub3) (splice-point-1 sub3)
+    del: (inverse-splicing) (normal sub3) (s-first sub3) (s-last sub3) (splice-point-1 sub1)
+  (end-inverse-splice-1a sub3 sub2), cost: 0
+    pre: (inverse-splicing) (normal sub3) (s-first sub3) (s-last sub3) (splice-point-1 sub2)
+    add: (cw sub2 sub3) (inverse-splicing-last) (inverted sub3) (splice-point-1 sub3)
+    del: (inverse-splicing) (normal sub3) (s-first sub3) (s-last sub3) (splice-point-1 sub2)
+  (end-inverse-splice-1a sub3 sub3), cost: 0
+    pre: (inverse-splicing) (normal sub3) (s-first sub3) (s-last sub3) (splice-point-1 sub3)
+    add: (cw sub3 sub3) (inverse-splicing-last) (inverted sub3)
+    del: (inverse-splicing) (normal sub3) (s-first sub3) (s-last sub3)
+  (end-inverse-splice-1b sub1 sub1), cost: 0
+    pre: (inverse-splicing) (inverted sub1) (s-first sub1) (s-last sub1) (splice-point-1 sub1)
+    add: (cw sub1 sub1) (inverse-splicing-last) (normal sub1)
+    del: (inverse-splicing) (inverted sub1) (s-first sub1) (s-last sub1)
+  (end-inverse-splice-1b sub1 sub2), cost: 0
+    pre: (inverse-splicing) (inverted sub1) (s-first sub1) (s-last sub1) (splice-point-1 sub2)
+    add: (cw sub2 sub1) (inverse-splicing-last) (normal sub1) (splice-point-1 sub1)
+    del: (inverse-splicing) (inverted sub1) (s-first sub1) (s-last sub1) (splice-point-1 sub2)
+  (end-inverse-splice-1b sub1 sub3), cost: 0
+    pre: (inverse-splicing) (inverted sub1) (s-first sub1) (s-last sub1) (splice-point-1 sub3)
+    add: (cw sub3 sub1) (inverse-splicing-last) (normal sub1) (splice-point-1 sub1)
+    del: (inverse-splicing) (inverted sub1) (s-first sub1) (s-last sub1) (splice-point-1 sub3)
+  (end-inverse-splice-1b sub2 sub1), cost: 0
+    pre: (inverse-splicing) (inverted sub2) (s-first sub2) (s-last sub2) (splice-point-1 sub1)
+    add: (cw sub1 sub2) (inverse-splicing-last) (normal sub2) (splice-point-1 sub2)
+    del: (inverse-splicing) (inverted sub2) (s-first sub2) (s-last sub2) (splice-point-1 sub1)
+  (end-inverse-splice-1b sub2 sub2), cost: 0
+    pre: (inverse-splicing) (inverted sub2) (s-first sub2) (s-last sub2) (splice-point-1 sub2)
+    add: (cw sub2 sub2) (inverse-splicing-last) (normal sub2)
+    del: (inverse-splicing) (inverted sub2) (s-first sub2) (s-last sub2)
+  (end-inverse-splice-1b sub2 sub3), cost: 0
+    pre: (inverse-splicing) (inverted sub2) (s-first sub2) (s-last sub2) (splice-point-1 sub3)
+    add: (cw sub3 sub2) (inverse-splicing-last) (normal sub2) (splice-point-1 sub2)
+    del: (inverse-splicing) (inverted sub2) (s-first sub2) (s-last sub2) (splice-point-1 sub3)
+  (end-inverse-splice-1b sub3 sub1), cost: 0
+    pre: (inverse-splicing) (inverted sub3) (s-first sub3) (s-last sub3) (splice-point-1 sub1)
+    add: (cw sub1 sub3) (inverse-splicing-last) (normal sub3) (splice-point-1 sub3)
+    del: (inverse-splicing) (inverted sub3) (s-first sub3) (s-last sub3) (splice-point-1 sub1)
+  (end-inverse-splice-1b sub3 sub2), cost: 0
+    pre: (inverse-splicing) (inverted sub3) (s-first sub3) (s-last sub3) (splice-point-1 sub2)
+    add: (cw sub2 sub3) (inverse-splicing-last) (normal sub3) (splice-point-1 sub3)
+    del: (inverse-splicing) (inverted sub3) (s-first sub3) (s-last sub3) (splice-point-1 sub2)
+  (end-inverse-splice-1b sub3 sub3), cost: 0
+    pre: (inverse-splicing) (inverted sub3) (s-first sub3) (s-last sub3) (splice-point-1 sub3)
+    add: (cw sub3 sub3) (inverse-splicing-last) (normal sub3)
+    del: (inverse-splicing) (inverted sub3) (s-first sub3) (s-last sub3)
+  (end-inverse-splice-2 sub1 sub1), cost: 0
+    pre: (inverse-splicing-last) (splice-point-1 sub1) (splice-point-2 sub1)
+    add: (cw sub1 sub1) (finished)
+    del: (inverse-splicing-last) (splice-point-1 sub1) (splice-point-2 sub1)
+  (end-inverse-splice-2 sub1 sub2), cost: 0
+    pre: (inverse-splicing-last) (splice-point-1 sub1) (splice-point-2 sub2)
+    add: (cw sub1 sub2) (finished)
+    del: (inverse-splicing-last) (splice-point-1 sub1) (splice-point-2 sub2)
+  (end-inverse-splice-2 sub1 sub3), cost: 0
+    pre: (inverse-splicing-last) (splice-point-1 sub1) (splice-point-2 sub3)
+    add: (cw sub1 sub3) (finished)
+    del: (inverse-splicing-last) (splice-point-1 sub1) (splice-point-2 sub3)
+  (end-inverse-splice-2 sub2 sub1), cost: 0
+    pre: (inverse-splicing-last) (splice-point-1 sub2) (splice-point-2 sub1)
+    add: (cw sub2 sub1) (finished)
+    del: (inverse-splicing-last) (splice-point-1 sub2) (splice-point-2 sub1)
+  (end-inverse-splice-2 sub2 sub2), cost: 0
+    pre: (inverse-splicing-last) (splice-point-1 sub2) (splice-point-2 sub2)
+    add: (cw sub2 sub2) (finished)
+    del: (inverse-splicing-last) (splice-point-1 sub2) (splice-point-2 sub2)
+  (end-inverse-splice-2 sub2 sub3), cost: 0
+    pre: (inverse-splicing-last) (splice-point-1 sub2) (splice-point-2 sub3)
+    add: (cw sub2 sub3) (finished)
+    del: (inverse-splicing-last) (splice-point-1 sub2) (splice-point-2 sub3)
+  (end-inverse-splice-2 sub3 sub1), cost: 0
+    pre: (inverse-splicing-last) (splice-point-1 sub3) (splice-point-2 sub1)
+    add: (cw sub3 sub1) (finished)
+    del: (inverse-splicing-last) (splice-point-1 sub3) (splice-point-2 sub1)
+  (end-inverse-splice-2 sub3 sub2), cost: 0
+    pre: (inverse-splicing-last) (splice-point-1 sub3) (splice-point-2 sub2)
+    add: (cw sub3 sub2) (finished)
+    del: (inverse-splicing-last) (splice-point-1 sub3) (splice-point-2 sub2)
+  (end-inverse-splice-2 sub3 sub3), cost: 0
+    pre: (inverse-splicing-last) (splice-point-1 sub3) (splice-point-2 sub3)
+    add: (cw sub3 sub3) (finished)
+    del: (inverse-splicing-last) (splice-point-1 sub3) (splice-point-2 sub3)
+  (end-splice-1 sub1 sub1), cost: 0
+    pre: (s-first sub1) (s-last sub1) (splice-point-1 sub1) (splicing)
+    add: (cw sub1 sub1) (splicing-last)
+    del: (s-first sub1) (s-last sub1) (splicing)
+  (end-splice-1 sub1 sub2), cost: 0
+    pre: (s-first sub1) (s-last sub1) (splice-point-1 sub2) (splicing)
+    add: (cw sub2 sub1) (splice-point-1 sub1) (splicing-last)
+    del: (s-first sub1) (s-last sub1) (splice-point-1 sub2) (splicing)
+  (end-splice-1 sub1 sub3), cost: 0
+    pre: (s-first sub1) (s-last sub1) (splice-point-1 sub3) (splicing)
+    add: (cw sub3 sub1) (splice-point-1 sub1) (splicing-last)
+    del: (s-first sub1) (s-last sub1) (splice-point-1 sub3) (splicing)
+  (end-splice-1 sub2 sub1), cost: 0
+    pre: (s-first sub2) (s-last sub2) (splice-point-1 sub1) (splicing)
+    add: (cw sub1 sub2) (splice-point-1 sub2) (splicing-last)
+    del: (s-first sub2) (s-last sub2) (splice-point-1 sub1) (splicing)
+  (end-splice-1 sub2 sub2), cost: 0
+    pre: (s-first sub2) (s-last sub2) (splice-point-1 sub2) (splicing)
+    add: (cw sub2 sub2) (splicing-last)
+    del: (s-first sub2) (s-last sub2) (splicing)
+  (end-splice-1 sub2 sub3), cost: 0
+    pre: (s-first sub2) (s-last sub2) (splice-point-1 sub3) (splicing)
+    add: (cw sub3 sub2) (splice-point-1 sub2) (splicing-last)
+    del: (s-first sub2) (s-last sub2) (splice-point-1 sub3) (splicing)
+  (end-splice-1 sub3 sub1), cost: 0
+    pre: (s-first sub3) (s-last sub3) (splice-point-1 sub1) (splicing)
+    add: (cw sub1 sub3) (splice-point-1 sub3) (splicing-last)
+    del: (s-first sub3) (s-last sub3) (splice-point-1 sub1) (splicing)
+  (end-splice-1 sub3 sub2), cost: 0
+    pre: (s-first sub3) (s-last sub3) (splice-point-1 sub2) (splicing)
+    add: (cw sub2 sub3) (splice-point-1 sub3) (splicing-last)
+    del: (s-first sub3) (s-last sub3) (splice-point-1 sub2) (splicing)
+  (end-splice-1 sub3 sub3), cost: 0
+    pre: (s-first sub3) (s-last sub3) (splice-point-1 sub3) (splicing)
+    add: (cw sub3 sub3) (splicing-last)
+    del: (s-first sub3) (s-last sub3) (splicing)
+  (end-splice-2 sub1 sub1), cost: 0
+    pre: (splice-point-1 sub1) (splice-point-2 sub1) (splicing-last)
+    add: (cw sub1 sub1) (finished)
+    del: (splice-point-1 sub1) (splice-point-2 sub1) (splicing-last)
+  (end-splice-2 sub1 sub2), cost: 0
+    pre: (splice-point-1 sub1) (splice-point-2 sub2) (splicing-last)
+    add: (cw sub1 sub2) (finished)
+    del: (splice-point-1 sub1) (splice-point-2 sub2) (splicing-last)
+  (end-splice-2 sub1 sub3), cost: 0
+    pre: (splice-point-1 sub1) (splice-point-2 sub3) (splicing-last)
+    add: (cw sub1 sub3) (finished)
+    del: (splice-point-1 sub1) (splice-point-2 sub3) (splicing-last)
+  (end-splice-2 sub2 sub1), cost: 0
+    pre: (splice-point-1 sub2) (splice-point-2 sub1) (splicing-last)
+    add: (cw sub2 sub1) (finished)
+    del: (splice-point-1 sub2) (splice-point-2 sub1) (splicing-last)
+  (end-splice-2 sub2 sub2), cost: 0
+    pre: (splice-point-1 sub2) (splice-point-2 sub2) (splicing-last)
+    add: (cw sub2 sub2) (finished)
+    del: (splice-point-1 sub2) (splice-point-2 sub2) (splicing-last)
+  (end-splice-2 sub2 sub3), cost: 0
+    pre: (splice-point-1 sub2) (splice-point-2 sub3) (splicing-last)
+    add: (cw sub2 sub3) (finished)
+    del: (splice-point-1 sub2) (splice-point-2 sub3) (splicing-last)
+  (end-splice-2 sub3 sub1), cost: 0
+    pre: (splice-point-1 sub3) (splice-point-2 sub1) (splicing-last)
+    add: (cw sub3 sub1) (finished)
+    del: (splice-point-1 sub3) (splice-point-2 sub1) (splicing-last)
+  (end-splice-2 sub3 sub2), cost: 0
+    pre: (splice-point-1 sub3) (splice-point-2 sub2) (splicing-last)
+    add: (cw sub3 sub2) (finished)
+    del: (splice-point-1 sub3) (splice-point-2 sub2) (splicing-last)
+  (end-splice-2 sub3 sub3), cost: 0
+    pre: (splice-point-1 sub3) (splice-point-2 sub3) (splicing-last)
+    add: (cw sub3 sub3) (finished)
+    del: (splice-point-1 sub3) (splice-point-2 sub3) (splicing-last)
+  (invert-single-gene-a sub1), cost: 1
+    pre: (idle) (normal sub1)
+    add: (inverted sub1)
+    del: (normal sub1)
+  (invert-single-gene-a sub2), cost: 1
+    pre: (idle) (normal sub2)
+    add: (inverted sub2)
+    del: (normal sub2)
+  (invert-single-gene-a sub3), cost: 1
+    pre: (idle) (normal sub3)
+    add: (inverted sub3)
+    del: (normal sub3)
+  (invert-single-gene-b sub1), cost: 1
+    pre: (idle) (inverted sub1)
+    add: (normal sub1)
+    del: (inverted sub1)
+  (invert-single-gene-b sub2), cost: 1
+    pre: (idle) (inverted sub2)
+    add: (normal sub2)
+    del: (inverted sub2)
+  (invert-single-gene-b sub3), cost: 1
+    pre: (idle) (inverted sub3)
+    add: (normal sub3)
+    del: (inverted sub3)
+  (reset-1 sub1), cost: 0
+    pre: (finished) (last-cut-point sub1)
+    add: (idle)
+    del: (finished) (last-cut-point sub1)
+  (reset-1 sub2), cost: 0
+    pre: (finished) (last-cut-point sub2)
+    add: (idle)
+    del: (finished) (last-cut-point sub2)
+  (reset-1 sub3), cost: 0
+    pre: (finished) (last-cut-point sub3)
+    add: (idle)
+    del: (finished) (last-cut-point sub3)
+Init State: (cw sub1 sub2) (cw sub2 sub3) (cw sub3 sub1) (idle) (normal sub1) (normal sub2) (normal sub3)
+Goal: (cw sub1 sub2) (cw sub2 sub3) (cw sub3 sub1) (inverted sub3) (normal sub1) (normal sub2)

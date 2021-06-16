@@ -1,0 +1,61 @@
+---- Domain: pddl-data/codmap-2015/factored/logistics00/probLOGISTICS-4-0/domain-tru1.pddl | pddl-data/codmap-2015/factored/logistics00/probLOGISTICS-4-0/problem-tru1.pddl ----
+Domain: logistics
+Problem: logistics-4-0
+Require: 1000ff
+Type[8]:
+    [0]: object, parent: -1
+    [1]: location, parent: 0
+    [2]: vehicle, parent: 0
+    [3]: package, parent: 0
+    [4]: city, parent: 0
+    [5]: airport, parent: 1
+    [6]: truck, parent: 2
+    [7]: airplane, parent: 2
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10
+    [1]: 3 4 8
+    [2]: 9
+    [3]: 0 1 2 5 6 7
+    [4]: 10
+    [5]: 3 4
+    [6]: 9
+    [7]:
+Obj[11]:
+    [0]: obj21, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: obj22, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: obj23, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: apt2, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: apt1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: obj11, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: obj13, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: obj12, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: pos1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: tru1, type: 6, is-constant: 0, is-private: 1, owner: -1, is-agent: 0
+    [10]: cit1, type: 4, is-constant: 0, is-private: 1, owner: -1, is-agent: 0
+Predicate[4]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    at: 0 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    in: 3 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    in-city: 6 1 4 :: is-private: 1, owner-param: -1, read: 1, write: 0
+Function[0]:
+Action[3]:
+    load-truck: ?truck:6 ?obj:3 ?loc:1
+        pre: (and (RW:at ?truck ?loc) (RW:at ?obj ?loc))
+        eff: (and (N:RW:at ?obj ?loc) (RW:in ?obj ?truck))
+    unload-truck: ?truck:6 ?obj:3 ?loc:1
+        pre: (and (RW:at ?truck ?loc) (RW:in ?obj ?truck))
+        eff: (and (N:RW:in ?obj ?truck) (RW:at ?obj ?loc))
+    drive-truck: ?truck:6 ?loc-from:1 ?loc-to:1 ?city:4
+        pre: (and (RW:at ?truck ?loc-from) (R:in-city ?truck ?loc-from ?city) (R:in-city ?truck ?loc-to ?city))
+        eff: (and (N:RW:at ?truck ?loc-from) (RW:at ?truck ?loc-to))
+Init[6]:
+  (at tru1 pos1)
+  (at obj11 pos1)
+  (at obj12 pos1)
+  (at obj13 pos1)
+  S:(in-city tru1 pos1 cit1)
+  S:(in-city tru1 apt1 cit1)
+Init[0]:
+Goal: (and (RW:at obj11 apt1) (RW:at obj23 pos1) (RW:at obj13 apt1) (RW:at obj21 pos1))
+Metric: 0
+---- Domain: pddl-data/codmap-2015/factored/logistics00/probLOGISTICS-4-0/domain-tru1.pddl | pddl-data/codmap-2015/factored/logistics00/probLOGISTICS-4-0/problem-tru1.pddl END ----

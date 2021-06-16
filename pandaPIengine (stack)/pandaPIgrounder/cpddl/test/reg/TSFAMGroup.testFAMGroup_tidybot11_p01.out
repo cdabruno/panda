@@ -1,0 +1,29 @@
+Maximal 20:
+ (NOT-base-obstacle x0 y0) (base-pos pr2 x0 y0):=1:fam
+ (NOT-base-obstacle x1 y0) (base-pos pr2 x1 y0):=1:fam
+ (NOT-base-obstacle x2 y0) (base-pos pr2 x2 y0):=1:fam
+ (NOT-base-obstacle x3 y0) (base-pos pr2 x3 y0):=1:fam
+ (NOT-base-obstacle x4 y0) (base-pos pr2 x4 y0):=1:fam
+ (NOT-object-done object0) (object-done object0):=1:fam
+ (NOT-object-done object1) (object-done object1):=1:fam
+ (NOT-object-done object2) (object-done object2):=1:fam
+ (NOT-object-done object3) (object-done object3):=1:fam
+ (NOT-parked pr2) (parked pr2):=1:fam
+ (not-pushed cart) (pushing pr2 cart):=1:fam
+ (not-pushing pr2) (pushing pr2 cart):=1:fam
+ (NOT-gripper-obstacle x2 y2) (object-pos object0 x2 y2) (object-pos object2 x2 y2):=1:fam
+ (NOT-gripper-obstacle x3 y2) (object-pos object0 x3 y2) (object-pos object2 x3 y2):=1:fam
+ (gripper-empty pr2) (holding pr2 object0) (holding pr2 object2):=1:fam
+ (holding pr2 object0) (object-pos object0 x2 y2) (object-pos object0 x3 y2) (on-cart object0 cart):=1:fam
+ (holding pr2 object2) (object-pos object2 x2 y2) (object-pos object2 x3 y2) (on-cart object2 cart):=1:fam
+ (base-pos pr2 x0 y0) (base-pos pr2 x1 y0) (base-pos pr2 x2 y0) (base-pos pr2 x3 y0) (base-pos pr2 x4 y0):=1:fam
+ (gripper-rel pr2 xrel-1 yrel0) (gripper-rel pr2 xrel-1 yrel1) (gripper-rel pr2 xrel0 yrel0) (gripper-rel pr2 xrel0 yrel1) (gripper-rel pr2 xrel1 yrel0) (gripper-rel pr2 xrel1 yrel1):=1:fam
+ (NOT-gripper-obstacle x0 y1) (NOT-gripper-obstacle x1 y1) (NOT-gripper-obstacle x2 y1) (NOT-gripper-obstacle x3 y1) (NOT-gripper-obstacle x4 y1) (gripper-rel pr2 xrel-1 yrel1) (gripper-rel pr2 xrel0 yrel1) (gripper-rel pr2 xrel1 yrel1):=1:fam
+
+
+Mutex Group Cover Number: 41
+Non-Maximal 4:
+(NOT-object-done object0)
+(NOT-object-done object1)
+(NOT-object-done object2)
+(NOT-object-done object3)

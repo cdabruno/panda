@@ -1,0 +1,26 @@
+Invariants:
+< {current_stage C0:stage}
+, {current_worker C0:worker}
+, {max_worker C0:worker}
+, {num_food C0:num}
+, {space_rooms V0:room}
+, {space_rooms C0:room}
+, {NOT-plowed_fields}
+, {plowed_fields, NOT-plowed_fields}
+, {space_rooms V0:room, built_rooms V0:room V1:worker}
+, {space_rooms V0:room, built_rooms V0:room C1:worker}
+, {space_rooms C1:room, built_rooms V0:room C2:worker}
+, {space_rooms C1:room, built_rooms C2:room V0:worker}
+, {space_rooms C2:room, built_rooms V0:room V1:worker}
+>
+Mutex Groups:
+< {current_stage C0:stage}
+, {current_worker C0:worker}
+, {max_worker C0:worker}
+, {num_food C0:num}
+, {space_rooms V0:room}
+, {NOT-plowed_fields}
+, {plowed_fields, NOT-plowed_fields}
+, {space_rooms V0:room, built_rooms V0:room V1:worker}
+, {space_rooms V0:room, built_rooms V0:room C1:worker}
+>

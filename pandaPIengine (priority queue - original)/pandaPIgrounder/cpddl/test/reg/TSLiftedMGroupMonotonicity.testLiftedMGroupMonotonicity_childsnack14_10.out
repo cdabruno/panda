@@ -1,0 +1,50 @@
+Invariants:
+< {at_kitchen_bread V0:bread-portion}
+, {at_kitchen_bread C0:bread-portion}
+, {at_kitchen_content V0:content-portion}
+, {at_kitchen_content C0:content-portion}
+, {at V0:tray C1:place}
+, {notexist V0:sandwich}
+, {notexist C0:sandwich}
+, {at_kitchen_bread C0:bread-portion, at_kitchen_sandwich C1:sandwich}
+, {at_kitchen_bread C0:bread-portion, no_gluten_sandwich C1:sandwich}
+, {at_kitchen_bread C1:bread-portion, at_kitchen_sandwich V0:sandwich}
+, {at_kitchen_bread C1:bread-portion, no_gluten_sandwich V0:sandwich}
+, {at_kitchen_content C0:content-portion, at_kitchen_sandwich C1:sandwich}
+, {at_kitchen_content C0:content-portion, no_gluten_sandwich C1:sandwich}
+, {at_kitchen_content C1:content-portion, at_kitchen_sandwich V0:sandwich}
+, {at_kitchen_content C1:content-portion, no_gluten_sandwich V0:sandwich}
+, {at_kitchen_sandwich V0:sandwich, notexist V0:sandwich}
+, {at_kitchen_sandwich V0:sandwich, notexist C1:sandwich}
+, {at_kitchen_sandwich C0:sandwich, notexist C1:sandwich}
+, {no_gluten_sandwich V0:sandwich, notexist V0:sandwich}
+, {no_gluten_sandwich V0:sandwich, notexist C1:sandwich}
+, {no_gluten_sandwich C0:sandwich, notexist C1:sandwich}
+, {at_kitchen_bread C1:bread-portion, at_kitchen_sandwich V0:sandwich, ontray V0:sandwich C2:tray}
+, {at_kitchen_bread C1:bread-portion, at_kitchen_sandwich C2:sandwich, ontray V0:sandwich C3:tray}
+, {at_kitchen_bread C1:bread-portion, at_kitchen_sandwich C2:sandwich, ontray C3:sandwich V0:tray}
+, {at_kitchen_bread C2:bread-portion, at_kitchen_sandwich V0:sandwich, ontray V0:sandwich V1:tray}
+, {at_kitchen_bread C2:bread-portion, at_kitchen_sandwich C3:sandwich, ontray V0:sandwich V1:tray}
+, {at_kitchen_content C1:content-portion, at_kitchen_sandwich V0:sandwich, ontray V0:sandwich C2:tray}
+, {at_kitchen_content C1:content-portion, at_kitchen_sandwich C2:sandwich, ontray V0:sandwich C3:tray}
+, {at_kitchen_content C1:content-portion, at_kitchen_sandwich C2:sandwich, ontray C3:sandwich V0:tray}
+, {at_kitchen_content C2:content-portion, at_kitchen_sandwich V0:sandwich, ontray V0:sandwich V1:tray}
+, {at_kitchen_content C2:content-portion, at_kitchen_sandwich C3:sandwich, ontray V0:sandwich V1:tray}
+, {at_kitchen_sandwich V0:sandwich, ontray V0:sandwich V1:tray, notexist V0:sandwich}
+, {at_kitchen_sandwich V0:sandwich, ontray V0:sandwich C1:tray, notexist V0:sandwich}
+, {at_kitchen_sandwich V0:sandwich, ontray V0:sandwich V1:tray, notexist C2:sandwich}
+, {at_kitchen_sandwich V0:sandwich, ontray V0:sandwich C1:tray, notexist C2:sandwich}
+, {at_kitchen_sandwich C1:sandwich, ontray V0:sandwich C2:tray, notexist C3:sandwich}
+, {at_kitchen_sandwich C1:sandwich, ontray C2:sandwich V0:tray, notexist C3:sandwich}
+, {at_kitchen_sandwich C2:sandwich, ontray V0:sandwich V1:tray, notexist C3:sandwich}
+>
+Mutex Groups:
+< {at_kitchen_bread V0:bread-portion}
+, {at_kitchen_content V0:content-portion}
+, {at V0:tray C1:place}
+, {notexist V0:sandwich}
+, {at_kitchen_sandwich V0:sandwich, notexist V0:sandwich}
+, {no_gluten_sandwich V0:sandwich, notexist V0:sandwich}
+, {at_kitchen_sandwich V0:sandwich, ontray V0:sandwich V1:tray, notexist V0:sandwich}
+, {at_kitchen_sandwich V0:sandwich, ontray V0:sandwich C1:tray, notexist V0:sandwich}
+>

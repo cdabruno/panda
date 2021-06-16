@@ -1,0 +1,68 @@
+< {at-segment V0:airplane C1:segment}
+, {facing V0:airplane C1:direction}:=1
+, {is-pushing V0:airplane}
+, {at-segment V0:airplane C1:segment, airborne V0:airplane C2:segment}:=1
+, {at-segment V0:airplane C2:segment, airborne V0:airplane V1:segment}
+, {at-segment C1:airplane V0:segment, not_occupied V0:segment}:=1
+, {is-moving V0:airplane, is-pushing V0:airplane}
+, {airborne V0:airplane V1:segment, is-moving V0:airplane, is-pushing V0:airplane}
+, {airborne V0:airplane C1:segment, is-moving V0:airplane, is-pushing V0:airplane}
+, {is-moving V0:airplane, is-pushing V0:airplane, is-parked V0:airplane V1:segment}
+, {is-moving V0:airplane, is-pushing V0:airplane, is-parked V0:airplane C1:segment}
+, {airborne V0:airplane V1:segment, is-moving V0:airplane, is-pushing V0:airplane, is-parked V0:airplane V2:segment}
+, {airborne V0:airplane V1:segment, is-moving V0:airplane, is-pushing V0:airplane, is-parked V0:airplane C2:segment}
+, {airborne V0:airplane C1:segment, is-moving V0:airplane, is-pushing V0:airplane, is-parked V0:airplane C2:segment}:=1
+, {airborne V0:airplane C2:segment, is-moving V0:airplane, is-pushing V0:airplane, is-parked V0:airplane V1:segment}
+>
+Goal aware:
+< {at-segment airplane_daewh C0:segment, airborne airplane_daewh seg_09_0_150}
+, {at-segment airplane_daewh C0:segment, airborne airplane_daewh C1:segment}:=1
+, {at-segment airplane_dfboy C0:segment, airborne airplane_dfboy seg_09_0_150}
+, {at-segment airplane_dfboy C0:segment, airborne airplane_dfboy C1:segment}:=1
+, {at-segment airplane_wurst C0:segment, airborne airplane_wurst seg_09_0_150}
+, {at-segment airplane_wurst C0:segment, airborne airplane_wurst C1:segment}:=1
+, {at-segment airplane_horst C0:segment, airborne airplane_horst seg_09_0_150}
+, {at-segment airplane_horst C0:segment, airborne airplane_horst C1:segment}:=1
+, {airborne airplane_daewh seg_09_0_150, is-moving airplane_daewh, is-pushing airplane_daewh}
+, {airborne airplane_daewh C0:segment, is-moving airplane_daewh, is-pushing airplane_daewh}
+, {airborne airplane_dfboy seg_09_0_150, is-moving airplane_dfboy, is-pushing airplane_dfboy}
+, {airborne airplane_dfboy C0:segment, is-moving airplane_dfboy, is-pushing airplane_dfboy}
+, {airborne airplane_wurst seg_09_0_150, is-moving airplane_wurst, is-pushing airplane_wurst}
+, {airborne airplane_wurst C0:segment, is-moving airplane_wurst, is-pushing airplane_wurst}
+, {airborne airplane_horst seg_09_0_150, is-moving airplane_horst, is-pushing airplane_horst}
+, {airborne airplane_horst C0:segment, is-moving airplane_horst, is-pushing airplane_horst}
+, {is-moving airplane_cfbeg, is-pushing airplane_cfbeg, is-parked airplane_cfbeg seg_a01_0_100}
+, {is-moving airplane_cfbeg, is-pushing airplane_cfbeg, is-parked airplane_cfbeg C0:segment}
+, {is-moving airplane_holgi, is-pushing airplane_holgi, is-parked airplane_holgi seg_b02_0_100}
+, {is-moving airplane_holgi, is-pushing airplane_holgi, is-parked airplane_holgi C0:segment}
+, {is-moving airplane_4xekd, is-pushing airplane_4xekd, is-parked airplane_4xekd seg_b01_0_100}
+, {is-moving airplane_4xekd, is-pushing airplane_4xekd, is-parked airplane_4xekd C0:segment}
+, {airborne airplane_cfbeg V0:segment, is-moving airplane_cfbeg, is-pushing airplane_cfbeg, is-parked airplane_cfbeg seg_a01_0_100}
+, {airborne airplane_cfbeg C0:segment, is-moving airplane_cfbeg, is-pushing airplane_cfbeg, is-parked airplane_cfbeg seg_a01_0_100}
+, {airborne airplane_cfbeg V0:segment, is-moving airplane_cfbeg, is-pushing airplane_cfbeg, is-parked airplane_cfbeg C1:segment}
+, {airborne airplane_cfbeg C0:segment, is-moving airplane_cfbeg, is-pushing airplane_cfbeg, is-parked airplane_cfbeg C1:segment}:=1
+, {airborne airplane_daewh seg_09_0_150, is-moving airplane_daewh, is-pushing airplane_daewh, is-parked airplane_daewh V0:segment}
+, {airborne airplane_daewh seg_09_0_150, is-moving airplane_daewh, is-pushing airplane_daewh, is-parked airplane_daewh C0:segment}
+, {airborne airplane_daewh C0:segment, is-moving airplane_daewh, is-pushing airplane_daewh, is-parked airplane_daewh C1:segment}:=1
+, {airborne airplane_daewh C1:segment, is-moving airplane_daewh, is-pushing airplane_daewh, is-parked airplane_daewh V0:segment}
+, {airborne airplane_dfboy seg_09_0_150, is-moving airplane_dfboy, is-pushing airplane_dfboy, is-parked airplane_dfboy V0:segment}
+, {airborne airplane_dfboy seg_09_0_150, is-moving airplane_dfboy, is-pushing airplane_dfboy, is-parked airplane_dfboy C0:segment}
+, {airborne airplane_dfboy C0:segment, is-moving airplane_dfboy, is-pushing airplane_dfboy, is-parked airplane_dfboy C1:segment}:=1
+, {airborne airplane_dfboy C1:segment, is-moving airplane_dfboy, is-pushing airplane_dfboy, is-parked airplane_dfboy V0:segment}
+, {airborne airplane_wurst seg_09_0_150, is-moving airplane_wurst, is-pushing airplane_wurst, is-parked airplane_wurst V0:segment}
+, {airborne airplane_wurst seg_09_0_150, is-moving airplane_wurst, is-pushing airplane_wurst, is-parked airplane_wurst C0:segment}
+, {airborne airplane_wurst C0:segment, is-moving airplane_wurst, is-pushing airplane_wurst, is-parked airplane_wurst C1:segment}:=1
+, {airborne airplane_wurst C1:segment, is-moving airplane_wurst, is-pushing airplane_wurst, is-parked airplane_wurst V0:segment}
+, {airborne airplane_horst seg_09_0_150, is-moving airplane_horst, is-pushing airplane_horst, is-parked airplane_horst V0:segment}
+, {airborne airplane_horst seg_09_0_150, is-moving airplane_horst, is-pushing airplane_horst, is-parked airplane_horst C0:segment}
+, {airborne airplane_horst C0:segment, is-moving airplane_horst, is-pushing airplane_horst, is-parked airplane_horst C1:segment}:=1
+, {airborne airplane_horst C1:segment, is-moving airplane_horst, is-pushing airplane_horst, is-parked airplane_horst V0:segment}
+, {airborne airplane_holgi V0:segment, is-moving airplane_holgi, is-pushing airplane_holgi, is-parked airplane_holgi seg_b02_0_100}
+, {airborne airplane_holgi C0:segment, is-moving airplane_holgi, is-pushing airplane_holgi, is-parked airplane_holgi seg_b02_0_100}
+, {airborne airplane_holgi V0:segment, is-moving airplane_holgi, is-pushing airplane_holgi, is-parked airplane_holgi C1:segment}
+, {airborne airplane_holgi C0:segment, is-moving airplane_holgi, is-pushing airplane_holgi, is-parked airplane_holgi C1:segment}:=1
+, {airborne airplane_4xekd V0:segment, is-moving airplane_4xekd, is-pushing airplane_4xekd, is-parked airplane_4xekd seg_b01_0_100}
+, {airborne airplane_4xekd C0:segment, is-moving airplane_4xekd, is-pushing airplane_4xekd, is-parked airplane_4xekd seg_b01_0_100}
+, {airborne airplane_4xekd V0:segment, is-moving airplane_4xekd, is-pushing airplane_4xekd, is-parked airplane_4xekd C1:segment}
+, {airborne airplane_4xekd C0:segment, is-moving airplane_4xekd, is-pushing airplane_4xekd, is-parked airplane_4xekd C1:segment}:=1
+>

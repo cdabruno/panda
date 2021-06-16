@@ -1,0 +1,729 @@
+---- Domain: pddl-data/codmap-2015/factored/satellites/p05-pfile5/domain-satellite0.pddl | pddl-data/codmap-2015/factored/satellites/p05-pfile5/problem-satellite0.pddl ----
+Fact[47]:
+  P:(calibrated instrument0)
+  P:(calibrated instrument1)
+  P:(calibrated instrument2)
+  (have_image groundstation0 image2)
+  (have_image groundstation0 spectrograph1)
+  (have_image groundstation0 thermograph0)
+  (have_image groundstation1 image2)
+  (have_image groundstation1 spectrograph1)
+  (have_image groundstation1 thermograph0)
+  (have_image groundstation2 image2)
+  (have_image groundstation2 spectrograph1)
+  (have_image groundstation2 thermograph0)
+  (have_image phenomenon5 image2)
+  (have_image phenomenon5 spectrograph1)
+  (have_image phenomenon5 thermograph0)
+  (have_image phenomenon6 image2)
+  (have_image phenomenon6 spectrograph1)
+  (have_image phenomenon6 thermograph0)
+  (have_image phenomenon8 image2)
+  (have_image phenomenon8 spectrograph1)
+  (have_image phenomenon8 thermograph0)
+  (have_image planet9 image2)
+  (have_image planet9 spectrograph1)
+  (have_image planet9 thermograph0)
+  (have_image star3 image2)
+  (have_image star3 spectrograph1)
+  (have_image star3 thermograph0)
+  (have_image star4 image2)
+  (have_image star4 spectrograph1)
+  (have_image star4 thermograph0)
+  (have_image star7 image2)
+  (have_image star7 spectrograph1)
+  (have_image star7 thermograph0)
+  P:(pointing satellite0 groundstation0)
+  P:(pointing satellite0 groundstation1)
+  P:(pointing satellite0 groundstation2)
+  P:(pointing satellite0 phenomenon5)
+  P:(pointing satellite0 phenomenon6)
+  P:(pointing satellite0 phenomenon8)
+  P:(pointing satellite0 planet9)
+  P:(pointing satellite0 star3)
+  P:(pointing satellite0 star4)
+  P:(pointing satellite0 star7)
+  P:(power_avail satellite0)
+  P:(power_on instrument0)
+  P:(power_on instrument1)
+  P:(power_on instrument2)
+Op[169]:
+  (calibrate satellite0 instrument0 groundstation2), cost: 1
+    pre: P:(pointing satellite0 groundstation2) P:(power_on instrument0)
+    add: P:(calibrated instrument0)
+    del:
+  (calibrate satellite0 instrument1 groundstation1), cost: 1
+    pre: P:(pointing satellite0 groundstation1) P:(power_on instrument1)
+    add: P:(calibrated instrument1)
+    del:
+  (calibrate satellite0 instrument2 groundstation0), cost: 1
+    pre: P:(pointing satellite0 groundstation0) P:(power_on instrument2)
+    add: P:(calibrated instrument2)
+    del:
+  (switch_off satellite0 instrument0), cost: 1
+    pre: P:(power_on instrument0)
+    add: P:(power_avail satellite0)
+    del: P:(power_on instrument0)
+  (switch_off satellite0 instrument1), cost: 1
+    pre: P:(power_on instrument1)
+    add: P:(power_avail satellite0)
+    del: P:(power_on instrument1)
+  (switch_off satellite0 instrument2), cost: 1
+    pre: P:(power_on instrument2)
+    add: P:(power_avail satellite0)
+    del: P:(power_on instrument2)
+  (switch_on satellite0 instrument0), cost: 1
+    pre: P:(power_avail satellite0)
+    add: P:(power_on instrument0)
+    del: P:(calibrated instrument0) P:(power_avail satellite0)
+  (switch_on satellite0 instrument1), cost: 1
+    pre: P:(power_avail satellite0)
+    add: P:(power_on instrument1)
+    del: P:(calibrated instrument1) P:(power_avail satellite0)
+  (switch_on satellite0 instrument2), cost: 1
+    pre: P:(power_avail satellite0)
+    add: P:(power_on instrument2)
+    del: P:(calibrated instrument2) P:(power_avail satellite0)
+  (take_image satellite0 instrument0 groundstation0 image2), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 groundstation0) P:(power_on instrument0)
+    add: (have_image groundstation0 image2)
+    del:
+  (take_image satellite0 instrument0 groundstation0 spectrograph1), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 groundstation0) P:(power_on instrument0)
+    add: (have_image groundstation0 spectrograph1)
+    del:
+  (take_image satellite0 instrument0 groundstation0 thermograph0), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 groundstation0) P:(power_on instrument0)
+    add: (have_image groundstation0 thermograph0)
+    del:
+  (take_image satellite0 instrument0 groundstation1 image2), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 groundstation1) P:(power_on instrument0)
+    add: (have_image groundstation1 image2)
+    del:
+  (take_image satellite0 instrument0 groundstation1 spectrograph1), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 groundstation1) P:(power_on instrument0)
+    add: (have_image groundstation1 spectrograph1)
+    del:
+  (take_image satellite0 instrument0 groundstation1 thermograph0), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 groundstation1) P:(power_on instrument0)
+    add: (have_image groundstation1 thermograph0)
+    del:
+  (take_image satellite0 instrument0 groundstation2 image2), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 groundstation2) P:(power_on instrument0)
+    add: (have_image groundstation2 image2)
+    del:
+  (take_image satellite0 instrument0 groundstation2 spectrograph1), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 groundstation2) P:(power_on instrument0)
+    add: (have_image groundstation2 spectrograph1)
+    del:
+  (take_image satellite0 instrument0 groundstation2 thermograph0), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 groundstation2) P:(power_on instrument0)
+    add: (have_image groundstation2 thermograph0)
+    del:
+  (take_image satellite0 instrument0 phenomenon5 image2), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 phenomenon5) P:(power_on instrument0)
+    add: (have_image phenomenon5 image2)
+    del:
+  (take_image satellite0 instrument0 phenomenon5 spectrograph1), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 phenomenon5) P:(power_on instrument0)
+    add: (have_image phenomenon5 spectrograph1)
+    del:
+  (take_image satellite0 instrument0 phenomenon5 thermograph0), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 phenomenon5) P:(power_on instrument0)
+    add: (have_image phenomenon5 thermograph0)
+    del:
+  (take_image satellite0 instrument0 phenomenon6 image2), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 phenomenon6) P:(power_on instrument0)
+    add: (have_image phenomenon6 image2)
+    del:
+  (take_image satellite0 instrument0 phenomenon6 spectrograph1), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 phenomenon6) P:(power_on instrument0)
+    add: (have_image phenomenon6 spectrograph1)
+    del:
+  (take_image satellite0 instrument0 phenomenon6 thermograph0), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 phenomenon6) P:(power_on instrument0)
+    add: (have_image phenomenon6 thermograph0)
+    del:
+  (take_image satellite0 instrument0 phenomenon8 image2), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 phenomenon8) P:(power_on instrument0)
+    add: (have_image phenomenon8 image2)
+    del:
+  (take_image satellite0 instrument0 phenomenon8 spectrograph1), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 phenomenon8) P:(power_on instrument0)
+    add: (have_image phenomenon8 spectrograph1)
+    del:
+  (take_image satellite0 instrument0 phenomenon8 thermograph0), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 phenomenon8) P:(power_on instrument0)
+    add: (have_image phenomenon8 thermograph0)
+    del:
+  (take_image satellite0 instrument0 planet9 image2), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 planet9) P:(power_on instrument0)
+    add: (have_image planet9 image2)
+    del:
+  (take_image satellite0 instrument0 planet9 spectrograph1), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 planet9) P:(power_on instrument0)
+    add: (have_image planet9 spectrograph1)
+    del:
+  (take_image satellite0 instrument0 planet9 thermograph0), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 planet9) P:(power_on instrument0)
+    add: (have_image planet9 thermograph0)
+    del:
+  (take_image satellite0 instrument0 star3 image2), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 star3) P:(power_on instrument0)
+    add: (have_image star3 image2)
+    del:
+  (take_image satellite0 instrument0 star3 spectrograph1), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 star3) P:(power_on instrument0)
+    add: (have_image star3 spectrograph1)
+    del:
+  (take_image satellite0 instrument0 star3 thermograph0), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 star3) P:(power_on instrument0)
+    add: (have_image star3 thermograph0)
+    del:
+  (take_image satellite0 instrument0 star4 image2), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 star4) P:(power_on instrument0)
+    add: (have_image star4 image2)
+    del:
+  (take_image satellite0 instrument0 star4 spectrograph1), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 star4) P:(power_on instrument0)
+    add: (have_image star4 spectrograph1)
+    del:
+  (take_image satellite0 instrument0 star4 thermograph0), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 star4) P:(power_on instrument0)
+    add: (have_image star4 thermograph0)
+    del:
+  (take_image satellite0 instrument0 star7 image2), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 star7) P:(power_on instrument0)
+    add: (have_image star7 image2)
+    del:
+  (take_image satellite0 instrument0 star7 spectrograph1), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 star7) P:(power_on instrument0)
+    add: (have_image star7 spectrograph1)
+    del:
+  (take_image satellite0 instrument0 star7 thermograph0), cost: 1
+    pre: P:(calibrated instrument0) P:(pointing satellite0 star7) P:(power_on instrument0)
+    add: (have_image star7 thermograph0)
+    del:
+  (take_image satellite0 instrument1 groundstation0 image2), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 groundstation0) P:(power_on instrument1)
+    add: (have_image groundstation0 image2)
+    del:
+  (take_image satellite0 instrument1 groundstation0 spectrograph1), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 groundstation0) P:(power_on instrument1)
+    add: (have_image groundstation0 spectrograph1)
+    del:
+  (take_image satellite0 instrument1 groundstation0 thermograph0), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 groundstation0) P:(power_on instrument1)
+    add: (have_image groundstation0 thermograph0)
+    del:
+  (take_image satellite0 instrument1 groundstation1 image2), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 groundstation1) P:(power_on instrument1)
+    add: (have_image groundstation1 image2)
+    del:
+  (take_image satellite0 instrument1 groundstation1 spectrograph1), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 groundstation1) P:(power_on instrument1)
+    add: (have_image groundstation1 spectrograph1)
+    del:
+  (take_image satellite0 instrument1 groundstation1 thermograph0), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 groundstation1) P:(power_on instrument1)
+    add: (have_image groundstation1 thermograph0)
+    del:
+  (take_image satellite0 instrument1 groundstation2 image2), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 groundstation2) P:(power_on instrument1)
+    add: (have_image groundstation2 image2)
+    del:
+  (take_image satellite0 instrument1 groundstation2 spectrograph1), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 groundstation2) P:(power_on instrument1)
+    add: (have_image groundstation2 spectrograph1)
+    del:
+  (take_image satellite0 instrument1 groundstation2 thermograph0), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 groundstation2) P:(power_on instrument1)
+    add: (have_image groundstation2 thermograph0)
+    del:
+  (take_image satellite0 instrument1 phenomenon5 image2), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 phenomenon5) P:(power_on instrument1)
+    add: (have_image phenomenon5 image2)
+    del:
+  (take_image satellite0 instrument1 phenomenon5 spectrograph1), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 phenomenon5) P:(power_on instrument1)
+    add: (have_image phenomenon5 spectrograph1)
+    del:
+  (take_image satellite0 instrument1 phenomenon5 thermograph0), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 phenomenon5) P:(power_on instrument1)
+    add: (have_image phenomenon5 thermograph0)
+    del:
+  (take_image satellite0 instrument1 phenomenon6 image2), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 phenomenon6) P:(power_on instrument1)
+    add: (have_image phenomenon6 image2)
+    del:
+  (take_image satellite0 instrument1 phenomenon6 spectrograph1), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 phenomenon6) P:(power_on instrument1)
+    add: (have_image phenomenon6 spectrograph1)
+    del:
+  (take_image satellite0 instrument1 phenomenon6 thermograph0), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 phenomenon6) P:(power_on instrument1)
+    add: (have_image phenomenon6 thermograph0)
+    del:
+  (take_image satellite0 instrument1 phenomenon8 image2), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 phenomenon8) P:(power_on instrument1)
+    add: (have_image phenomenon8 image2)
+    del:
+  (take_image satellite0 instrument1 phenomenon8 spectrograph1), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 phenomenon8) P:(power_on instrument1)
+    add: (have_image phenomenon8 spectrograph1)
+    del:
+  (take_image satellite0 instrument1 phenomenon8 thermograph0), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 phenomenon8) P:(power_on instrument1)
+    add: (have_image phenomenon8 thermograph0)
+    del:
+  (take_image satellite0 instrument1 planet9 image2), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 planet9) P:(power_on instrument1)
+    add: (have_image planet9 image2)
+    del:
+  (take_image satellite0 instrument1 planet9 spectrograph1), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 planet9) P:(power_on instrument1)
+    add: (have_image planet9 spectrograph1)
+    del:
+  (take_image satellite0 instrument1 planet9 thermograph0), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 planet9) P:(power_on instrument1)
+    add: (have_image planet9 thermograph0)
+    del:
+  (take_image satellite0 instrument1 star3 image2), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 star3) P:(power_on instrument1)
+    add: (have_image star3 image2)
+    del:
+  (take_image satellite0 instrument1 star3 spectrograph1), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 star3) P:(power_on instrument1)
+    add: (have_image star3 spectrograph1)
+    del:
+  (take_image satellite0 instrument1 star3 thermograph0), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 star3) P:(power_on instrument1)
+    add: (have_image star3 thermograph0)
+    del:
+  (take_image satellite0 instrument1 star4 image2), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 star4) P:(power_on instrument1)
+    add: (have_image star4 image2)
+    del:
+  (take_image satellite0 instrument1 star4 spectrograph1), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 star4) P:(power_on instrument1)
+    add: (have_image star4 spectrograph1)
+    del:
+  (take_image satellite0 instrument1 star4 thermograph0), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 star4) P:(power_on instrument1)
+    add: (have_image star4 thermograph0)
+    del:
+  (take_image satellite0 instrument1 star7 image2), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 star7) P:(power_on instrument1)
+    add: (have_image star7 image2)
+    del:
+  (take_image satellite0 instrument1 star7 spectrograph1), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 star7) P:(power_on instrument1)
+    add: (have_image star7 spectrograph1)
+    del:
+  (take_image satellite0 instrument1 star7 thermograph0), cost: 1
+    pre: P:(calibrated instrument1) P:(pointing satellite0 star7) P:(power_on instrument1)
+    add: (have_image star7 thermograph0)
+    del:
+  (take_image satellite0 instrument2 groundstation0 image2), cost: 1
+    pre: P:(calibrated instrument2) P:(pointing satellite0 groundstation0) P:(power_on instrument2)
+    add: (have_image groundstation0 image2)
+    del:
+  (take_image satellite0 instrument2 groundstation1 image2), cost: 1
+    pre: P:(calibrated instrument2) P:(pointing satellite0 groundstation1) P:(power_on instrument2)
+    add: (have_image groundstation1 image2)
+    del:
+  (take_image satellite0 instrument2 groundstation2 image2), cost: 1
+    pre: P:(calibrated instrument2) P:(pointing satellite0 groundstation2) P:(power_on instrument2)
+    add: (have_image groundstation2 image2)
+    del:
+  (take_image satellite0 instrument2 phenomenon5 image2), cost: 1
+    pre: P:(calibrated instrument2) P:(pointing satellite0 phenomenon5) P:(power_on instrument2)
+    add: (have_image phenomenon5 image2)
+    del:
+  (take_image satellite0 instrument2 phenomenon6 image2), cost: 1
+    pre: P:(calibrated instrument2) P:(pointing satellite0 phenomenon6) P:(power_on instrument2)
+    add: (have_image phenomenon6 image2)
+    del:
+  (take_image satellite0 instrument2 phenomenon8 image2), cost: 1
+    pre: P:(calibrated instrument2) P:(pointing satellite0 phenomenon8) P:(power_on instrument2)
+    add: (have_image phenomenon8 image2)
+    del:
+  (take_image satellite0 instrument2 planet9 image2), cost: 1
+    pre: P:(calibrated instrument2) P:(pointing satellite0 planet9) P:(power_on instrument2)
+    add: (have_image planet9 image2)
+    del:
+  (take_image satellite0 instrument2 star3 image2), cost: 1
+    pre: P:(calibrated instrument2) P:(pointing satellite0 star3) P:(power_on instrument2)
+    add: (have_image star3 image2)
+    del:
+  (take_image satellite0 instrument2 star4 image2), cost: 1
+    pre: P:(calibrated instrument2) P:(pointing satellite0 star4) P:(power_on instrument2)
+    add: (have_image star4 image2)
+    del:
+  (take_image satellite0 instrument2 star7 image2), cost: 1
+    pre: P:(calibrated instrument2) P:(pointing satellite0 star7) P:(power_on instrument2)
+    add: (have_image star7 image2)
+    del:
+  (turn_to satellite0 groundstation0 groundstation1), cost: 1
+    pre: P:(pointing satellite0 groundstation1)
+    add: P:(pointing satellite0 groundstation0)
+    del: P:(pointing satellite0 groundstation1)
+  (turn_to satellite0 groundstation0 groundstation2), cost: 1
+    pre: P:(pointing satellite0 groundstation2)
+    add: P:(pointing satellite0 groundstation0)
+    del: P:(pointing satellite0 groundstation2)
+  (turn_to satellite0 groundstation0 phenomenon5), cost: 1
+    pre: P:(pointing satellite0 phenomenon5)
+    add: P:(pointing satellite0 groundstation0)
+    del: P:(pointing satellite0 phenomenon5)
+  (turn_to satellite0 groundstation0 phenomenon6), cost: 1
+    pre: P:(pointing satellite0 phenomenon6)
+    add: P:(pointing satellite0 groundstation0)
+    del: P:(pointing satellite0 phenomenon6)
+  (turn_to satellite0 groundstation0 phenomenon8), cost: 1
+    pre: P:(pointing satellite0 phenomenon8)
+    add: P:(pointing satellite0 groundstation0)
+    del: P:(pointing satellite0 phenomenon8)
+  (turn_to satellite0 groundstation0 planet9), cost: 1
+    pre: P:(pointing satellite0 planet9)
+    add: P:(pointing satellite0 groundstation0)
+    del: P:(pointing satellite0 planet9)
+  (turn_to satellite0 groundstation0 star3), cost: 1
+    pre: P:(pointing satellite0 star3)
+    add: P:(pointing satellite0 groundstation0)
+    del: P:(pointing satellite0 star3)
+  (turn_to satellite0 groundstation0 star4), cost: 1
+    pre: P:(pointing satellite0 star4)
+    add: P:(pointing satellite0 groundstation0)
+    del: P:(pointing satellite0 star4)
+  (turn_to satellite0 groundstation0 star7), cost: 1
+    pre: P:(pointing satellite0 star7)
+    add: P:(pointing satellite0 groundstation0)
+    del: P:(pointing satellite0 star7)
+  (turn_to satellite0 groundstation1 groundstation0), cost: 1
+    pre: P:(pointing satellite0 groundstation0)
+    add: P:(pointing satellite0 groundstation1)
+    del: P:(pointing satellite0 groundstation0)
+  (turn_to satellite0 groundstation1 groundstation2), cost: 1
+    pre: P:(pointing satellite0 groundstation2)
+    add: P:(pointing satellite0 groundstation1)
+    del: P:(pointing satellite0 groundstation2)
+  (turn_to satellite0 groundstation1 phenomenon5), cost: 1
+    pre: P:(pointing satellite0 phenomenon5)
+    add: P:(pointing satellite0 groundstation1)
+    del: P:(pointing satellite0 phenomenon5)
+  (turn_to satellite0 groundstation1 phenomenon6), cost: 1
+    pre: P:(pointing satellite0 phenomenon6)
+    add: P:(pointing satellite0 groundstation1)
+    del: P:(pointing satellite0 phenomenon6)
+  (turn_to satellite0 groundstation1 phenomenon8), cost: 1
+    pre: P:(pointing satellite0 phenomenon8)
+    add: P:(pointing satellite0 groundstation1)
+    del: P:(pointing satellite0 phenomenon8)
+  (turn_to satellite0 groundstation1 planet9), cost: 1
+    pre: P:(pointing satellite0 planet9)
+    add: P:(pointing satellite0 groundstation1)
+    del: P:(pointing satellite0 planet9)
+  (turn_to satellite0 groundstation1 star3), cost: 1
+    pre: P:(pointing satellite0 star3)
+    add: P:(pointing satellite0 groundstation1)
+    del: P:(pointing satellite0 star3)
+  (turn_to satellite0 groundstation1 star4), cost: 1
+    pre: P:(pointing satellite0 star4)
+    add: P:(pointing satellite0 groundstation1)
+    del: P:(pointing satellite0 star4)
+  (turn_to satellite0 groundstation1 star7), cost: 1
+    pre: P:(pointing satellite0 star7)
+    add: P:(pointing satellite0 groundstation1)
+    del: P:(pointing satellite0 star7)
+  (turn_to satellite0 groundstation2 groundstation0), cost: 1
+    pre: P:(pointing satellite0 groundstation0)
+    add: P:(pointing satellite0 groundstation2)
+    del: P:(pointing satellite0 groundstation0)
+  (turn_to satellite0 groundstation2 groundstation1), cost: 1
+    pre: P:(pointing satellite0 groundstation1)
+    add: P:(pointing satellite0 groundstation2)
+    del: P:(pointing satellite0 groundstation1)
+  (turn_to satellite0 groundstation2 phenomenon5), cost: 1
+    pre: P:(pointing satellite0 phenomenon5)
+    add: P:(pointing satellite0 groundstation2)
+    del: P:(pointing satellite0 phenomenon5)
+  (turn_to satellite0 groundstation2 phenomenon6), cost: 1
+    pre: P:(pointing satellite0 phenomenon6)
+    add: P:(pointing satellite0 groundstation2)
+    del: P:(pointing satellite0 phenomenon6)
+  (turn_to satellite0 groundstation2 phenomenon8), cost: 1
+    pre: P:(pointing satellite0 phenomenon8)
+    add: P:(pointing satellite0 groundstation2)
+    del: P:(pointing satellite0 phenomenon8)
+  (turn_to satellite0 groundstation2 planet9), cost: 1
+    pre: P:(pointing satellite0 planet9)
+    add: P:(pointing satellite0 groundstation2)
+    del: P:(pointing satellite0 planet9)
+  (turn_to satellite0 groundstation2 star3), cost: 1
+    pre: P:(pointing satellite0 star3)
+    add: P:(pointing satellite0 groundstation2)
+    del: P:(pointing satellite0 star3)
+  (turn_to satellite0 groundstation2 star4), cost: 1
+    pre: P:(pointing satellite0 star4)
+    add: P:(pointing satellite0 groundstation2)
+    del: P:(pointing satellite0 star4)
+  (turn_to satellite0 groundstation2 star7), cost: 1
+    pre: P:(pointing satellite0 star7)
+    add: P:(pointing satellite0 groundstation2)
+    del: P:(pointing satellite0 star7)
+  (turn_to satellite0 phenomenon5 groundstation0), cost: 1
+    pre: P:(pointing satellite0 groundstation0)
+    add: P:(pointing satellite0 phenomenon5)
+    del: P:(pointing satellite0 groundstation0)
+  (turn_to satellite0 phenomenon5 groundstation1), cost: 1
+    pre: P:(pointing satellite0 groundstation1)
+    add: P:(pointing satellite0 phenomenon5)
+    del: P:(pointing satellite0 groundstation1)
+  (turn_to satellite0 phenomenon5 groundstation2), cost: 1
+    pre: P:(pointing satellite0 groundstation2)
+    add: P:(pointing satellite0 phenomenon5)
+    del: P:(pointing satellite0 groundstation2)
+  (turn_to satellite0 phenomenon5 phenomenon6), cost: 1
+    pre: P:(pointing satellite0 phenomenon6)
+    add: P:(pointing satellite0 phenomenon5)
+    del: P:(pointing satellite0 phenomenon6)
+  (turn_to satellite0 phenomenon5 phenomenon8), cost: 1
+    pre: P:(pointing satellite0 phenomenon8)
+    add: P:(pointing satellite0 phenomenon5)
+    del: P:(pointing satellite0 phenomenon8)
+  (turn_to satellite0 phenomenon5 planet9), cost: 1
+    pre: P:(pointing satellite0 planet9)
+    add: P:(pointing satellite0 phenomenon5)
+    del: P:(pointing satellite0 planet9)
+  (turn_to satellite0 phenomenon5 star3), cost: 1
+    pre: P:(pointing satellite0 star3)
+    add: P:(pointing satellite0 phenomenon5)
+    del: P:(pointing satellite0 star3)
+  (turn_to satellite0 phenomenon5 star4), cost: 1
+    pre: P:(pointing satellite0 star4)
+    add: P:(pointing satellite0 phenomenon5)
+    del: P:(pointing satellite0 star4)
+  (turn_to satellite0 phenomenon5 star7), cost: 1
+    pre: P:(pointing satellite0 star7)
+    add: P:(pointing satellite0 phenomenon5)
+    del: P:(pointing satellite0 star7)
+  (turn_to satellite0 phenomenon6 groundstation0), cost: 1
+    pre: P:(pointing satellite0 groundstation0)
+    add: P:(pointing satellite0 phenomenon6)
+    del: P:(pointing satellite0 groundstation0)
+  (turn_to satellite0 phenomenon6 groundstation1), cost: 1
+    pre: P:(pointing satellite0 groundstation1)
+    add: P:(pointing satellite0 phenomenon6)
+    del: P:(pointing satellite0 groundstation1)
+  (turn_to satellite0 phenomenon6 groundstation2), cost: 1
+    pre: P:(pointing satellite0 groundstation2)
+    add: P:(pointing satellite0 phenomenon6)
+    del: P:(pointing satellite0 groundstation2)
+  (turn_to satellite0 phenomenon6 phenomenon5), cost: 1
+    pre: P:(pointing satellite0 phenomenon5)
+    add: P:(pointing satellite0 phenomenon6)
+    del: P:(pointing satellite0 phenomenon5)
+  (turn_to satellite0 phenomenon6 phenomenon8), cost: 1
+    pre: P:(pointing satellite0 phenomenon8)
+    add: P:(pointing satellite0 phenomenon6)
+    del: P:(pointing satellite0 phenomenon8)
+  (turn_to satellite0 phenomenon6 planet9), cost: 1
+    pre: P:(pointing satellite0 planet9)
+    add: P:(pointing satellite0 phenomenon6)
+    del: P:(pointing satellite0 planet9)
+  (turn_to satellite0 phenomenon6 star3), cost: 1
+    pre: P:(pointing satellite0 star3)
+    add: P:(pointing satellite0 phenomenon6)
+    del: P:(pointing satellite0 star3)
+  (turn_to satellite0 phenomenon6 star4), cost: 1
+    pre: P:(pointing satellite0 star4)
+    add: P:(pointing satellite0 phenomenon6)
+    del: P:(pointing satellite0 star4)
+  (turn_to satellite0 phenomenon6 star7), cost: 1
+    pre: P:(pointing satellite0 star7)
+    add: P:(pointing satellite0 phenomenon6)
+    del: P:(pointing satellite0 star7)
+  (turn_to satellite0 phenomenon8 groundstation0), cost: 1
+    pre: P:(pointing satellite0 groundstation0)
+    add: P:(pointing satellite0 phenomenon8)
+    del: P:(pointing satellite0 groundstation0)
+  (turn_to satellite0 phenomenon8 groundstation1), cost: 1
+    pre: P:(pointing satellite0 groundstation1)
+    add: P:(pointing satellite0 phenomenon8)
+    del: P:(pointing satellite0 groundstation1)
+  (turn_to satellite0 phenomenon8 groundstation2), cost: 1
+    pre: P:(pointing satellite0 groundstation2)
+    add: P:(pointing satellite0 phenomenon8)
+    del: P:(pointing satellite0 groundstation2)
+  (turn_to satellite0 phenomenon8 phenomenon5), cost: 1
+    pre: P:(pointing satellite0 phenomenon5)
+    add: P:(pointing satellite0 phenomenon8)
+    del: P:(pointing satellite0 phenomenon5)
+  (turn_to satellite0 phenomenon8 phenomenon6), cost: 1
+    pre: P:(pointing satellite0 phenomenon6)
+    add: P:(pointing satellite0 phenomenon8)
+    del: P:(pointing satellite0 phenomenon6)
+  (turn_to satellite0 phenomenon8 planet9), cost: 1
+    pre: P:(pointing satellite0 planet9)
+    add: P:(pointing satellite0 phenomenon8)
+    del: P:(pointing satellite0 planet9)
+  (turn_to satellite0 phenomenon8 star3), cost: 1
+    pre: P:(pointing satellite0 star3)
+    add: P:(pointing satellite0 phenomenon8)
+    del: P:(pointing satellite0 star3)
+  (turn_to satellite0 phenomenon8 star4), cost: 1
+    pre: P:(pointing satellite0 star4)
+    add: P:(pointing satellite0 phenomenon8)
+    del: P:(pointing satellite0 star4)
+  (turn_to satellite0 phenomenon8 star7), cost: 1
+    pre: P:(pointing satellite0 star7)
+    add: P:(pointing satellite0 phenomenon8)
+    del: P:(pointing satellite0 star7)
+  (turn_to satellite0 planet9 groundstation0), cost: 1
+    pre: P:(pointing satellite0 groundstation0)
+    add: P:(pointing satellite0 planet9)
+    del: P:(pointing satellite0 groundstation0)
+  (turn_to satellite0 planet9 groundstation1), cost: 1
+    pre: P:(pointing satellite0 groundstation1)
+    add: P:(pointing satellite0 planet9)
+    del: P:(pointing satellite0 groundstation1)
+  (turn_to satellite0 planet9 groundstation2), cost: 1
+    pre: P:(pointing satellite0 groundstation2)
+    add: P:(pointing satellite0 planet9)
+    del: P:(pointing satellite0 groundstation2)
+  (turn_to satellite0 planet9 phenomenon5), cost: 1
+    pre: P:(pointing satellite0 phenomenon5)
+    add: P:(pointing satellite0 planet9)
+    del: P:(pointing satellite0 phenomenon5)
+  (turn_to satellite0 planet9 phenomenon6), cost: 1
+    pre: P:(pointing satellite0 phenomenon6)
+    add: P:(pointing satellite0 planet9)
+    del: P:(pointing satellite0 phenomenon6)
+  (turn_to satellite0 planet9 phenomenon8), cost: 1
+    pre: P:(pointing satellite0 phenomenon8)
+    add: P:(pointing satellite0 planet9)
+    del: P:(pointing satellite0 phenomenon8)
+  (turn_to satellite0 planet9 star3), cost: 1
+    pre: P:(pointing satellite0 star3)
+    add: P:(pointing satellite0 planet9)
+    del: P:(pointing satellite0 star3)
+  (turn_to satellite0 planet9 star4), cost: 1
+    pre: P:(pointing satellite0 star4)
+    add: P:(pointing satellite0 planet9)
+    del: P:(pointing satellite0 star4)
+  (turn_to satellite0 planet9 star7), cost: 1
+    pre: P:(pointing satellite0 star7)
+    add: P:(pointing satellite0 planet9)
+    del: P:(pointing satellite0 star7)
+  (turn_to satellite0 star3 groundstation0), cost: 1
+    pre: P:(pointing satellite0 groundstation0)
+    add: P:(pointing satellite0 star3)
+    del: P:(pointing satellite0 groundstation0)
+  (turn_to satellite0 star3 groundstation1), cost: 1
+    pre: P:(pointing satellite0 groundstation1)
+    add: P:(pointing satellite0 star3)
+    del: P:(pointing satellite0 groundstation1)
+  (turn_to satellite0 star3 groundstation2), cost: 1
+    pre: P:(pointing satellite0 groundstation2)
+    add: P:(pointing satellite0 star3)
+    del: P:(pointing satellite0 groundstation2)
+  (turn_to satellite0 star3 phenomenon5), cost: 1
+    pre: P:(pointing satellite0 phenomenon5)
+    add: P:(pointing satellite0 star3)
+    del: P:(pointing satellite0 phenomenon5)
+  (turn_to satellite0 star3 phenomenon6), cost: 1
+    pre: P:(pointing satellite0 phenomenon6)
+    add: P:(pointing satellite0 star3)
+    del: P:(pointing satellite0 phenomenon6)
+  (turn_to satellite0 star3 phenomenon8), cost: 1
+    pre: P:(pointing satellite0 phenomenon8)
+    add: P:(pointing satellite0 star3)
+    del: P:(pointing satellite0 phenomenon8)
+  (turn_to satellite0 star3 planet9), cost: 1
+    pre: P:(pointing satellite0 planet9)
+    add: P:(pointing satellite0 star3)
+    del: P:(pointing satellite0 planet9)
+  (turn_to satellite0 star3 star4), cost: 1
+    pre: P:(pointing satellite0 star4)
+    add: P:(pointing satellite0 star3)
+    del: P:(pointing satellite0 star4)
+  (turn_to satellite0 star3 star7), cost: 1
+    pre: P:(pointing satellite0 star7)
+    add: P:(pointing satellite0 star3)
+    del: P:(pointing satellite0 star7)
+  (turn_to satellite0 star4 groundstation0), cost: 1
+    pre: P:(pointing satellite0 groundstation0)
+    add: P:(pointing satellite0 star4)
+    del: P:(pointing satellite0 groundstation0)
+  (turn_to satellite0 star4 groundstation1), cost: 1
+    pre: P:(pointing satellite0 groundstation1)
+    add: P:(pointing satellite0 star4)
+    del: P:(pointing satellite0 groundstation1)
+  (turn_to satellite0 star4 groundstation2), cost: 1
+    pre: P:(pointing satellite0 groundstation2)
+    add: P:(pointing satellite0 star4)
+    del: P:(pointing satellite0 groundstation2)
+  (turn_to satellite0 star4 phenomenon5), cost: 1
+    pre: P:(pointing satellite0 phenomenon5)
+    add: P:(pointing satellite0 star4)
+    del: P:(pointing satellite0 phenomenon5)
+  (turn_to satellite0 star4 phenomenon6), cost: 1
+    pre: P:(pointing satellite0 phenomenon6)
+    add: P:(pointing satellite0 star4)
+    del: P:(pointing satellite0 phenomenon6)
+  (turn_to satellite0 star4 phenomenon8), cost: 1
+    pre: P:(pointing satellite0 phenomenon8)
+    add: P:(pointing satellite0 star4)
+    del: P:(pointing satellite0 phenomenon8)
+  (turn_to satellite0 star4 planet9), cost: 1
+    pre: P:(pointing satellite0 planet9)
+    add: P:(pointing satellite0 star4)
+    del: P:(pointing satellite0 planet9)
+  (turn_to satellite0 star4 star3), cost: 1
+    pre: P:(pointing satellite0 star3)
+    add: P:(pointing satellite0 star4)
+    del: P:(pointing satellite0 star3)
+  (turn_to satellite0 star4 star7), cost: 1
+    pre: P:(pointing satellite0 star7)
+    add: P:(pointing satellite0 star4)
+    del: P:(pointing satellite0 star7)
+  (turn_to satellite0 star7 groundstation0), cost: 1
+    pre: P:(pointing satellite0 groundstation0)
+    add: P:(pointing satellite0 star7)
+    del: P:(pointing satellite0 groundstation0)
+  (turn_to satellite0 star7 groundstation1), cost: 1
+    pre: P:(pointing satellite0 groundstation1)
+    add: P:(pointing satellite0 star7)
+    del: P:(pointing satellite0 groundstation1)
+  (turn_to satellite0 star7 groundstation2), cost: 1
+    pre: P:(pointing satellite0 groundstation2)
+    add: P:(pointing satellite0 star7)
+    del: P:(pointing satellite0 groundstation2)
+  (turn_to satellite0 star7 phenomenon5), cost: 1
+    pre: P:(pointing satellite0 phenomenon5)
+    add: P:(pointing satellite0 star7)
+    del: P:(pointing satellite0 phenomenon5)
+  (turn_to satellite0 star7 phenomenon6), cost: 1
+    pre: P:(pointing satellite0 phenomenon6)
+    add: P:(pointing satellite0 star7)
+    del: P:(pointing satellite0 phenomenon6)
+  (turn_to satellite0 star7 phenomenon8), cost: 1
+    pre: P:(pointing satellite0 phenomenon8)
+    add: P:(pointing satellite0 star7)
+    del: P:(pointing satellite0 phenomenon8)
+  (turn_to satellite0 star7 planet9), cost: 1
+    pre: P:(pointing satellite0 planet9)
+    add: P:(pointing satellite0 star7)
+    del: P:(pointing satellite0 planet9)
+  (turn_to satellite0 star7 star3), cost: 1
+    pre: P:(pointing satellite0 star3)
+    add: P:(pointing satellite0 star7)
+    del: P:(pointing satellite0 star3)
+  (turn_to satellite0 star7 star4), cost: 1
+    pre: P:(pointing satellite0 star4)
+    add: P:(pointing satellite0 star7)
+    del: P:(pointing satellite0 star4)
+Init State: P:(pointing satellite0 phenomenon8) P:(power_avail satellite0)
+Goal: (have_image phenomenon5 image2) (have_image phenomenon6 image2) (have_image phenomenon8 image2) (have_image planet9 spectrograph1) (have_image star3 thermograph0) (have_image star7 thermograph0)
+---- Domain: pddl-data/codmap-2015/factored/satellites/p05-pfile5/domain-satellite0.pddl | pddl-data/codmap-2015/factored/satellites/p05-pfile5/problem-satellite0.pddl END ----

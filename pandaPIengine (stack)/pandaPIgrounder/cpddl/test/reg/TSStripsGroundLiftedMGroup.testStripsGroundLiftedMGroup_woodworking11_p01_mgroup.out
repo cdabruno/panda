@@ -1,0 +1,43 @@
+{unused V0:part}
+ (unused p0):fam
+ (unused p1):fam
+ (unused p3):fam
+ (unused p4):fam
+
+{unused V0:part, available V0:part}:=1
+ (available p0) (unused p0):=1:fam:G
+ (available p1) (unused p1):=1:fam:G
+ (available p3) (unused p3):=1:fam:G
+ (available p4) (unused p4):=1:fam:G
+
+{unused V0:part, surface-condition V0:part C1:surface}:=1
+ (surface-condition p2 rough) (surface-condition p2 smooth) (surface-condition p2 verysmooth):=1:fam:G
+ (surface-condition p0 rough) (surface-condition p0 smooth) (surface-condition p0 verysmooth) (unused p0):=1:fam:G
+ (surface-condition p1 rough) (surface-condition p1 smooth) (surface-condition p1 verysmooth) (unused p1):=1:fam:G
+ (surface-condition p3 rough) (surface-condition p3 smooth) (surface-condition p3 verysmooth) (unused p3):=1:fam:G
+ (surface-condition p4 rough) (surface-condition p4 smooth) (surface-condition p4 verysmooth) (unused p4):=1:fam
+
+{unused V0:part, treatment V0:part C1:treatmentstatus}:=1
+ (treatment p2 colourfragments) (treatment p2 glazed) (treatment p2 untreated) (treatment p2 varnished):=1:fam
+ (treatment p0 colourfragments) (treatment p0 glazed) (treatment p0 untreated) (treatment p0 varnished) (unused p0):=1:fam:G
+ (treatment p1 colourfragments) (treatment p1 glazed) (treatment p1 untreated) (treatment p1 varnished) (unused p1):=1:fam:G
+ (treatment p3 colourfragments) (treatment p3 glazed) (treatment p3 untreated) (treatment p3 varnished) (unused p3):=1:fam
+ (treatment p4 colourfragments) (treatment p4 glazed) (treatment p4 untreated) (treatment p4 varnished) (unused p4):=1:fam:G
+
+{unused V0:part, wood V0:part V1:awood}
+ (unused p0) (wood p0 mahogany):fam
+ (unused p0) (wood p0 teak):fam
+ (unused p1) (wood p1 teak):=1:fam:G
+ (unused p3) (wood p3 mahogany):=1:fam:G
+ (unused p4) (wood p4 teak):=1:fam:G
+
+{unused V0:part, wood V0:part C1:awood}:=1
+ (unused p0) (wood p0 mahogany) (wood p0 teak):=1:fam
+
+{available V0:board, in-highspeed-saw V0:board highspeed-saw0}:=1
+ (available b0) (in-highspeed-saw b0 highspeed-saw0):=1:fam
+ (available b1) (in-highspeed-saw b1 highspeed-saw0):=1:fam
+
+{in-highspeed-saw C0:board highspeed-saw0, empty highspeed-saw0}:=1
+ (empty highspeed-saw0) (in-highspeed-saw b0 highspeed-saw0) (in-highspeed-saw b1 highspeed-saw0):=1:fam
+

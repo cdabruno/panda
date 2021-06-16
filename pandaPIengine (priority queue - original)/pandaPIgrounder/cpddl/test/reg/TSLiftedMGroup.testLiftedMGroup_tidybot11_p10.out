@@ -1,0 +1,29 @@
+< {base-pos pr2 C0:xc C1:yc}:=1
+, {gripper-rel pr2 C0:xrel C1:yrel}:=1
+, {cart-pos cart C0:xc C1:yc}:=1
+, {NOT-object-done pr2}
+, {NOT-object-done cart}
+, {NOT-object-done V0:object}
+, {NOT-object-done V0:xc}
+, {NOT-object-done V0:yc}
+, {NOT-object-done V0:xrel}
+, {NOT-object-done V0:yrel}
+, {parked pr2, NOT-parked pr2}:=1
+, {object-done pr2, NOT-object-done pr2}:=1
+, {object-done cart, NOT-object-done cart}:=1
+, {object-done V0:object, NOT-object-done V0:object}:=1
+, {object-done V0:xc, NOT-object-done V0:xc}:=1
+, {object-done V0:yc, NOT-object-done V0:yc}:=1
+, {object-done V0:xrel, NOT-object-done V0:xrel}:=1
+, {object-done V0:yrel, NOT-object-done V0:yrel}:=1
+, {holding pr2 C0:object, gripper-empty pr2}:=1
+, {pushing pr2 cart, not-pushing pr2}:=1
+, {pushing pr2 cart, not-pushed cart}:=1
+, {object-pos V0:object C1:xc C2:yc, holding pr2 V0:object, on-cart V0:object cart}:=1
+>
+Goal aware:
+< {object-done object0, NOT-object-done object0}:=1
+, {object-done object1, NOT-object-done object1}:=1
+, {object-done object2, NOT-object-done object2}:=1
+, {object-done object3, NOT-object-done object3}:=1
+>

@@ -1,0 +1,63 @@
+---- Domain: pddl-data/codmap-2015/factored/blocksworld/probBLOCKS-10-0/domain-a1.pddl | pddl-data/codmap-2015/factored/blocksworld/probBLOCKS-10-0/problem-a1.pddl ----
+Domain: blocks
+Problem: blocks-4-0
+Require: 1000ff
+Type[3]:
+    [0]: object, parent: -1
+    [1]: agent, parent: 0
+    [2]: block, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10
+    [1]: 10
+    [2]: 0 1 2 3 4 5 6 7 8 9
+Obj[11]:
+    [0]: a, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: c, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: b, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: e, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: d, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: g, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: f, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: i, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: h, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: j, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: a1, type: 1, is-constant: 0, is-private: 1, owner: -1, is-agent: 0
+Predicate[6]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    on: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    ontable: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    clear: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    holding: 1 2 :: is-private: 1, owner-param: -1, read: 1, write: 1
+    handempty: 1 :: is-private: 1, owner-param: -1, read: 1, write: 1
+Function[0]:
+Action[4]:
+    pick-up: ?a:1 ?x:2
+        pre: (and (RW:clear ?x) (RW:ontable ?x) (RW:handempty ?a))
+        eff: (and (N:RW:ontable ?x) (N:RW:clear ?x) (N:RW:handempty ?a) (RW:holding ?a ?x))
+    put-down: ?a:1 ?x:2
+        pre: (RW:holding ?a ?x)
+        eff: (and (N:RW:holding ?a ?x) (RW:clear ?x) (RW:handempty ?a) (RW:ontable ?x))
+    stack: ?a:1 ?x:2 ?y:2
+        pre: (and (RW:holding ?a ?x) (RW:clear ?y))
+        eff: (and (N:RW:holding ?a ?x) (N:RW:clear ?y) (RW:clear ?x) (RW:handempty ?a) (RW:on ?x ?y))
+    unstack: ?a:1 ?x:2 ?y:2
+        pre: (and (RW:on ?x ?y) (RW:clear ?x) (RW:handempty ?a))
+        eff: (and (RW:holding ?a ?x) (RW:clear ?y) (N:RW:clear ?x) (N:RW:handempty ?a) (N:RW:on ?x ?y))
+Init[13]:
+  (handempty a1)
+  (clear c)
+  (clear f)
+  (ontable i)
+  (ontable f)
+  (on c e)
+  (on e j)
+  (on j b)
+  (on b g)
+  (on g h)
+  (on h a)
+  (on a d)
+  (on d i)
+Init[0]:
+Goal: (and (RW:on d c) (RW:on c f) (RW:on f j) (RW:on j e) (RW:on e h) (RW:on h b) (RW:on b a) (RW:on a g) (RW:on g i))
+Metric: 0
+---- Domain: pddl-data/codmap-2015/factored/blocksworld/probBLOCKS-10-0/domain-a1.pddl | pddl-data/codmap-2015/factored/blocksworld/probBLOCKS-10-0/problem-a1.pddl END ----

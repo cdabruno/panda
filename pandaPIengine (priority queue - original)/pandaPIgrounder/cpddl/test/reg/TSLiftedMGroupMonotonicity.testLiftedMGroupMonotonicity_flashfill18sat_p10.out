@@ -1,0 +1,456 @@
+Invariants:
+< {top-stack C0:stackrow}
+, {test-0}
+, {empty-0}
+, {empty-1}
+, {empty-2}
+, {empty-3}
+, {empty-4}
+, {empty-5}
+, {empty-6}
+, {test-0, test-1}
+, {empty-0, call-0-0-0 V0:input-variable}
+, {empty-0, call-0-0-0 C0:input-variable}
+, {empty-0, ins-append-char-0 V0:output V1:limiter}
+, {empty-0, ins-append-char-0 V0:output C1:limiter}
+, {empty-0, ins-append-char-0 C1:output V0:limiter}
+, {empty-0, ins-append-str-0 V0:output V1:input-variable}
+, {empty-0, ins-append-str-0 V0:output C1:input-variable}
+, {empty-0, ins-append-str-0 C1:output V0:input-variable}
+, {empty-0, ins-inc-loindex-0 V0:input-variable}
+, {empty-0, ins-inc-loindex-0 C0:input-variable}
+, {empty-0, ins-get-prefix-0 V0:input-variable V1:limiter}
+, {empty-0, ins-get-prefix-0 V0:input-variable C1:limiter}
+, {empty-0, ins-get-prefix-0 C1:input-variable V0:limiter}
+, {empty-0, ins-get-suffix-0 V0:input-variable V1:limiter}
+, {empty-0, ins-get-suffix-0 V0:input-variable C1:limiter}
+, {empty-0, ins-get-suffix-0 C1:input-variable V0:limiter}
+, {empty-0, ins-get-substr-0 V0:input-variable V1:limiter V2:limiter}
+, {empty-0, ins-get-substr-0 V0:input-variable V1:limiter C2:limiter}
+, {empty-0, ins-get-substr-0 V0:input-variable C2:limiter V1:limiter}
+, {empty-0, ins-get-substr-0 C2:input-variable V0:limiter V1:limiter}
+, {empty-0, goto-0-0-2}
+, {empty-0, goto-0-0-3}
+, {empty-0, goto-0-0-4}
+, {empty-0, goto-0-0-5}
+, {empty-0, goto-0-0-6}
+, {empty-0, cond-assignment-0-0 V0:string V1:index V2:char}
+, {empty-0, cond-assignment-0-0 V0:string V1:index C2:char}
+, {empty-0, cond-assignment-0-0 V0:string C2:index V1:char}
+, {empty-0, cond-assignment-0-0 C2:string V0:index V1:char}
+, {empty-0, cond-loindex-0-0 V0:input V1:index}
+, {empty-0, cond-loindex-0-0 V0:input C1:index}
+, {empty-0, cond-loindex-0-0 C1:input V0:index}
+, {empty-0, cond-hiindex-0-0 V0:input V1:index}
+, {empty-0, cond-hiindex-0-0 V0:input C1:index}
+, {empty-0, cond-hiindex-0-0 C1:input V0:index}
+, {empty-0, cond-size-0-0 V0:string V1:index}
+, {empty-0, cond-size-0-0 V0:string C1:index}
+, {empty-0, cond-size-0-0 C1:string V0:index}
+, {empty-0, cond-empty-0-0 V0:input-variable}
+, {empty-0, cond-empty-0-0 C0:input-variable}
+, {empty-1, ins-end-1}
+, {empty-1, call-0-0-1 V0:input-variable}
+, {empty-1, call-0-0-1 C0:input-variable}
+, {empty-1, ins-append-char-1 V0:output V1:limiter}
+, {empty-1, ins-append-char-1 V0:output C1:limiter}
+, {empty-1, ins-append-char-1 C1:output V0:limiter}
+, {empty-1, ins-append-str-1 V0:output V1:input-variable}
+, {empty-1, ins-append-str-1 V0:output C1:input-variable}
+, {empty-1, ins-append-str-1 C1:output V0:input-variable}
+, {empty-1, ins-inc-loindex-1 V0:input-variable}
+, {empty-1, ins-inc-loindex-1 C0:input-variable}
+, {empty-1, ins-get-prefix-1 V0:input-variable V1:limiter}
+, {empty-1, ins-get-prefix-1 V0:input-variable C1:limiter}
+, {empty-1, ins-get-prefix-1 C1:input-variable V0:limiter}
+, {empty-1, ins-get-suffix-1 V0:input-variable V1:limiter}
+, {empty-1, ins-get-suffix-1 V0:input-variable C1:limiter}
+, {empty-1, ins-get-suffix-1 C1:input-variable V0:limiter}
+, {empty-1, ins-get-substr-1 V0:input-variable V1:limiter V2:limiter}
+, {empty-1, ins-get-substr-1 V0:input-variable V1:limiter C2:limiter}
+, {empty-1, ins-get-substr-1 V0:input-variable C2:limiter V1:limiter}
+, {empty-1, ins-get-substr-1 C2:input-variable V0:limiter V1:limiter}
+, {empty-1, goto-0-1-0}
+, {empty-1, goto-0-1-3}
+, {empty-1, goto-0-1-4}
+, {empty-1, goto-0-1-5}
+, {empty-1, goto-0-1-6}
+, {empty-1, cond-assignment-0-1 V0:string V1:index V2:char}
+, {empty-1, cond-assignment-0-1 V0:string V1:index C2:char}
+, {empty-1, cond-assignment-0-1 V0:string C2:index V1:char}
+, {empty-1, cond-assignment-0-1 C2:string V0:index V1:char}
+, {empty-1, cond-loindex-0-1 V0:input V1:index}
+, {empty-1, cond-loindex-0-1 V0:input C1:index}
+, {empty-1, cond-loindex-0-1 C1:input V0:index}
+, {empty-1, cond-hiindex-0-1 V0:input V1:index}
+, {empty-1, cond-hiindex-0-1 V0:input C1:index}
+, {empty-1, cond-hiindex-0-1 C1:input V0:index}
+, {empty-1, cond-size-0-1 V0:string V1:index}
+, {empty-1, cond-size-0-1 V0:string C1:index}
+, {empty-1, cond-size-0-1 C1:string V0:index}
+, {empty-1, cond-empty-0-1 V0:input-variable}
+, {empty-1, cond-empty-0-1 C0:input-variable}
+, {empty-2, ins-end-2}
+, {empty-2, call-0-0-2 V0:input-variable}
+, {empty-2, call-0-0-2 C0:input-variable}
+, {empty-2, ins-append-char-2 V0:output V1:limiter}
+, {empty-2, ins-append-char-2 V0:output C1:limiter}
+, {empty-2, ins-append-char-2 C1:output V0:limiter}
+, {empty-2, ins-append-str-2 V0:output V1:input-variable}
+, {empty-2, ins-append-str-2 V0:output C1:input-variable}
+, {empty-2, ins-append-str-2 C1:output V0:input-variable}
+, {empty-2, ins-inc-loindex-2 V0:input-variable}
+, {empty-2, ins-inc-loindex-2 C0:input-variable}
+, {empty-2, ins-get-prefix-2 V0:input-variable V1:limiter}
+, {empty-2, ins-get-prefix-2 V0:input-variable C1:limiter}
+, {empty-2, ins-get-prefix-2 C1:input-variable V0:limiter}
+, {empty-2, ins-get-suffix-2 V0:input-variable V1:limiter}
+, {empty-2, ins-get-suffix-2 V0:input-variable C1:limiter}
+, {empty-2, ins-get-suffix-2 C1:input-variable V0:limiter}
+, {empty-2, ins-get-substr-2 V0:input-variable V1:limiter V2:limiter}
+, {empty-2, ins-get-substr-2 V0:input-variable V1:limiter C2:limiter}
+, {empty-2, ins-get-substr-2 V0:input-variable C2:limiter V1:limiter}
+, {empty-2, ins-get-substr-2 C2:input-variable V0:limiter V1:limiter}
+, {empty-2, goto-0-2-0}
+, {empty-2, goto-0-2-1}
+, {empty-2, goto-0-2-4}
+, {empty-2, goto-0-2-5}
+, {empty-2, goto-0-2-6}
+, {empty-2, cond-assignment-0-2 V0:string V1:index V2:char}
+, {empty-2, cond-assignment-0-2 V0:string V1:index C2:char}
+, {empty-2, cond-assignment-0-2 V0:string C2:index V1:char}
+, {empty-2, cond-assignment-0-2 C2:string V0:index V1:char}
+, {empty-2, cond-loindex-0-2 V0:input V1:index}
+, {empty-2, cond-loindex-0-2 V0:input C1:index}
+, {empty-2, cond-loindex-0-2 C1:input V0:index}
+, {empty-2, cond-hiindex-0-2 V0:input V1:index}
+, {empty-2, cond-hiindex-0-2 V0:input C1:index}
+, {empty-2, cond-hiindex-0-2 C1:input V0:index}
+, {empty-2, cond-size-0-2 V0:string V1:index}
+, {empty-2, cond-size-0-2 V0:string C1:index}
+, {empty-2, cond-size-0-2 C1:string V0:index}
+, {empty-2, cond-empty-0-2 V0:input-variable}
+, {empty-2, cond-empty-0-2 C0:input-variable}
+, {empty-3, ins-end-3}
+, {empty-3, call-0-0-3 V0:input-variable}
+, {empty-3, call-0-0-3 C0:input-variable}
+, {empty-3, ins-append-char-3 V0:output V1:limiter}
+, {empty-3, ins-append-char-3 V0:output C1:limiter}
+, {empty-3, ins-append-char-3 C1:output V0:limiter}
+, {empty-3, ins-append-str-3 V0:output V1:input-variable}
+, {empty-3, ins-append-str-3 V0:output C1:input-variable}
+, {empty-3, ins-append-str-3 C1:output V0:input-variable}
+, {empty-3, ins-inc-loindex-3 V0:input-variable}
+, {empty-3, ins-inc-loindex-3 C0:input-variable}
+, {empty-3, ins-get-prefix-3 V0:input-variable V1:limiter}
+, {empty-3, ins-get-prefix-3 V0:input-variable C1:limiter}
+, {empty-3, ins-get-prefix-3 C1:input-variable V0:limiter}
+, {empty-3, ins-get-suffix-3 V0:input-variable V1:limiter}
+, {empty-3, ins-get-suffix-3 V0:input-variable C1:limiter}
+, {empty-3, ins-get-suffix-3 C1:input-variable V0:limiter}
+, {empty-3, ins-get-substr-3 V0:input-variable V1:limiter V2:limiter}
+, {empty-3, ins-get-substr-3 V0:input-variable V1:limiter C2:limiter}
+, {empty-3, ins-get-substr-3 V0:input-variable C2:limiter V1:limiter}
+, {empty-3, ins-get-substr-3 C2:input-variable V0:limiter V1:limiter}
+, {empty-3, goto-0-3-0}
+, {empty-3, goto-0-3-1}
+, {empty-3, goto-0-3-2}
+, {empty-3, goto-0-3-5}
+, {empty-3, goto-0-3-6}
+, {empty-3, cond-assignment-0-3 V0:string V1:index V2:char}
+, {empty-3, cond-assignment-0-3 V0:string V1:index C2:char}
+, {empty-3, cond-assignment-0-3 V0:string C2:index V1:char}
+, {empty-3, cond-assignment-0-3 C2:string V0:index V1:char}
+, {empty-3, cond-loindex-0-3 V0:input V1:index}
+, {empty-3, cond-loindex-0-3 V0:input C1:index}
+, {empty-3, cond-loindex-0-3 C1:input V0:index}
+, {empty-3, cond-hiindex-0-3 V0:input V1:index}
+, {empty-3, cond-hiindex-0-3 V0:input C1:index}
+, {empty-3, cond-hiindex-0-3 C1:input V0:index}
+, {empty-3, cond-size-0-3 V0:string V1:index}
+, {empty-3, cond-size-0-3 V0:string C1:index}
+, {empty-3, cond-size-0-3 C1:string V0:index}
+, {empty-3, cond-empty-0-3 V0:input-variable}
+, {empty-3, cond-empty-0-3 C0:input-variable}
+, {empty-4, ins-end-4}
+, {empty-4, call-0-0-4 V0:input-variable}
+, {empty-4, call-0-0-4 C0:input-variable}
+, {empty-4, ins-append-char-4 V0:output V1:limiter}
+, {empty-4, ins-append-char-4 V0:output C1:limiter}
+, {empty-4, ins-append-char-4 C1:output V0:limiter}
+, {empty-4, ins-append-str-4 V0:output V1:input-variable}
+, {empty-4, ins-append-str-4 V0:output C1:input-variable}
+, {empty-4, ins-append-str-4 C1:output V0:input-variable}
+, {empty-4, ins-inc-loindex-4 V0:input-variable}
+, {empty-4, ins-inc-loindex-4 C0:input-variable}
+, {empty-4, ins-get-prefix-4 V0:input-variable V1:limiter}
+, {empty-4, ins-get-prefix-4 V0:input-variable C1:limiter}
+, {empty-4, ins-get-prefix-4 C1:input-variable V0:limiter}
+, {empty-4, ins-get-suffix-4 V0:input-variable V1:limiter}
+, {empty-4, ins-get-suffix-4 V0:input-variable C1:limiter}
+, {empty-4, ins-get-suffix-4 C1:input-variable V0:limiter}
+, {empty-4, ins-get-substr-4 V0:input-variable V1:limiter V2:limiter}
+, {empty-4, ins-get-substr-4 V0:input-variable V1:limiter C2:limiter}
+, {empty-4, ins-get-substr-4 V0:input-variable C2:limiter V1:limiter}
+, {empty-4, ins-get-substr-4 C2:input-variable V0:limiter V1:limiter}
+, {empty-4, goto-0-4-0}
+, {empty-4, goto-0-4-1}
+, {empty-4, goto-0-4-2}
+, {empty-4, goto-0-4-3}
+, {empty-4, goto-0-4-6}
+, {empty-4, cond-assignment-0-4 V0:string V1:index V2:char}
+, {empty-4, cond-assignment-0-4 V0:string V1:index C2:char}
+, {empty-4, cond-assignment-0-4 V0:string C2:index V1:char}
+, {empty-4, cond-assignment-0-4 C2:string V0:index V1:char}
+, {empty-4, cond-loindex-0-4 V0:input V1:index}
+, {empty-4, cond-loindex-0-4 V0:input C1:index}
+, {empty-4, cond-loindex-0-4 C1:input V0:index}
+, {empty-4, cond-hiindex-0-4 V0:input V1:index}
+, {empty-4, cond-hiindex-0-4 V0:input C1:index}
+, {empty-4, cond-hiindex-0-4 C1:input V0:index}
+, {empty-4, cond-size-0-4 V0:string V1:index}
+, {empty-4, cond-size-0-4 V0:string C1:index}
+, {empty-4, cond-size-0-4 C1:string V0:index}
+, {empty-4, cond-empty-0-4 V0:input-variable}
+, {empty-4, cond-empty-0-4 C0:input-variable}
+, {empty-5, ins-end-5}
+, {empty-5, call-0-0-5 V0:input-variable}
+, {empty-5, call-0-0-5 C0:input-variable}
+, {empty-5, ins-append-char-5 V0:output V1:limiter}
+, {empty-5, ins-append-char-5 V0:output C1:limiter}
+, {empty-5, ins-append-char-5 C1:output V0:limiter}
+, {empty-5, ins-append-str-5 V0:output V1:input-variable}
+, {empty-5, ins-append-str-5 V0:output C1:input-variable}
+, {empty-5, ins-append-str-5 C1:output V0:input-variable}
+, {empty-5, ins-inc-loindex-5 V0:input-variable}
+, {empty-5, ins-inc-loindex-5 C0:input-variable}
+, {empty-5, ins-get-prefix-5 V0:input-variable V1:limiter}
+, {empty-5, ins-get-prefix-5 V0:input-variable C1:limiter}
+, {empty-5, ins-get-prefix-5 C1:input-variable V0:limiter}
+, {empty-5, ins-get-suffix-5 V0:input-variable V1:limiter}
+, {empty-5, ins-get-suffix-5 V0:input-variable C1:limiter}
+, {empty-5, ins-get-suffix-5 C1:input-variable V0:limiter}
+, {empty-5, ins-get-substr-5 V0:input-variable V1:limiter V2:limiter}
+, {empty-5, ins-get-substr-5 V0:input-variable V1:limiter C2:limiter}
+, {empty-5, ins-get-substr-5 V0:input-variable C2:limiter V1:limiter}
+, {empty-5, ins-get-substr-5 C2:input-variable V0:limiter V1:limiter}
+, {empty-5, goto-0-5-0}
+, {empty-5, goto-0-5-1}
+, {empty-5, goto-0-5-2}
+, {empty-5, goto-0-5-3}
+, {empty-5, goto-0-5-4}
+, {empty-5, cond-assignment-0-5 V0:string V1:index V2:char}
+, {empty-5, cond-assignment-0-5 V0:string V1:index C2:char}
+, {empty-5, cond-assignment-0-5 V0:string C2:index V1:char}
+, {empty-5, cond-assignment-0-5 C2:string V0:index V1:char}
+, {empty-5, cond-loindex-0-5 V0:input V1:index}
+, {empty-5, cond-loindex-0-5 V0:input C1:index}
+, {empty-5, cond-loindex-0-5 C1:input V0:index}
+, {empty-5, cond-hiindex-0-5 V0:input V1:index}
+, {empty-5, cond-hiindex-0-5 V0:input C1:index}
+, {empty-5, cond-hiindex-0-5 C1:input V0:index}
+, {empty-5, cond-size-0-5 V0:string V1:index}
+, {empty-5, cond-size-0-5 V0:string C1:index}
+, {empty-5, cond-size-0-5 C1:string V0:index}
+, {empty-5, cond-empty-0-5 V0:input-variable}
+, {empty-5, cond-empty-0-5 C0:input-variable}
+, {empty-6, ins-end-6}
+, {test-0, test-1, test-2}
+, {test-0, test-1, test-2, test-3}
+, {test-0, test-1, test-2, test-3, test-4}
+>
+Mutex Groups:
+< {top-stack C0:stackrow}
+, {test-0}
+, {empty-0}
+, {empty-1}
+, {empty-2}
+, {empty-3}
+, {empty-4}
+, {empty-5}
+, {empty-6}
+, {test-0, test-1}
+, {empty-0, call-0-0-0 str-var}
+, {empty-0, ins-append-char-0 res V0:limiter}
+, {empty-0, ins-append-char-0 res C0:limiter}
+, {empty-0, ins-append-str-0 res str-var}
+, {empty-0, ins-inc-loindex-0 str-var}
+, {empty-0, ins-get-prefix-0 str-var V0:limiter}
+, {empty-0, ins-get-prefix-0 str-var C0:limiter}
+, {empty-0, ins-get-suffix-0 str-var V0:limiter}
+, {empty-0, ins-get-suffix-0 str-var C0:limiter}
+, {empty-0, ins-get-substr-0 str-var V0:limiter V1:limiter}
+, {empty-0, ins-get-substr-0 str-var V0:limiter C1:limiter}
+, {empty-0, ins-get-substr-0 str-var C1:limiter V0:limiter}
+, {empty-0, goto-0-0-2}
+, {empty-0, goto-0-0-3}
+, {empty-0, goto-0-0-4}
+, {empty-0, goto-0-0-5}
+, {empty-0, goto-0-0-6}
+, {empty-0, cond-assignment-0-0 V0:string V1:index V2:char}
+, {empty-0, cond-assignment-0-0 V0:string V1:index C2:char}
+, {empty-0, cond-assignment-0-0 V0:string C2:index V1:char}
+, {empty-0, cond-assignment-0-0 C2:string V0:index V1:char}
+, {empty-0, cond-loindex-0-0 str V0:index}
+, {empty-0, cond-loindex-0-0 str C0:index}
+, {empty-0, cond-hiindex-0-0 str V0:index}
+, {empty-0, cond-hiindex-0-0 str C0:index}
+, {empty-0, cond-size-0-0 V0:string V1:index}
+, {empty-0, cond-size-0-0 V0:string C1:index}
+, {empty-0, cond-size-0-0 C1:string V0:index}
+, {empty-0, cond-empty-0-0 str-var}
+, {empty-1, ins-end-1}
+, {empty-1, call-0-0-1 str-var}
+, {empty-1, ins-append-char-1 res V0:limiter}
+, {empty-1, ins-append-char-1 res C0:limiter}
+, {empty-1, ins-append-str-1 res str-var}
+, {empty-1, ins-inc-loindex-1 str-var}
+, {empty-1, ins-get-prefix-1 str-var V0:limiter}
+, {empty-1, ins-get-prefix-1 str-var C0:limiter}
+, {empty-1, ins-get-suffix-1 str-var V0:limiter}
+, {empty-1, ins-get-suffix-1 str-var C0:limiter}
+, {empty-1, ins-get-substr-1 str-var V0:limiter V1:limiter}
+, {empty-1, ins-get-substr-1 str-var V0:limiter C1:limiter}
+, {empty-1, ins-get-substr-1 str-var C1:limiter V0:limiter}
+, {empty-1, goto-0-1-0}
+, {empty-1, goto-0-1-3}
+, {empty-1, goto-0-1-4}
+, {empty-1, goto-0-1-5}
+, {empty-1, goto-0-1-6}
+, {empty-1, cond-assignment-0-1 V0:string V1:index V2:char}
+, {empty-1, cond-assignment-0-1 V0:string V1:index C2:char}
+, {empty-1, cond-assignment-0-1 V0:string C2:index V1:char}
+, {empty-1, cond-assignment-0-1 C2:string V0:index V1:char}
+, {empty-1, cond-loindex-0-1 str V0:index}
+, {empty-1, cond-loindex-0-1 str C0:index}
+, {empty-1, cond-hiindex-0-1 str V0:index}
+, {empty-1, cond-hiindex-0-1 str C0:index}
+, {empty-1, cond-size-0-1 V0:string V1:index}
+, {empty-1, cond-size-0-1 V0:string C1:index}
+, {empty-1, cond-size-0-1 C1:string V0:index}
+, {empty-1, cond-empty-0-1 str-var}
+, {empty-2, ins-end-2}
+, {empty-2, call-0-0-2 str-var}
+, {empty-2, ins-append-char-2 res V0:limiter}
+, {empty-2, ins-append-char-2 res C0:limiter}
+, {empty-2, ins-append-str-2 res str-var}
+, {empty-2, ins-inc-loindex-2 str-var}
+, {empty-2, ins-get-prefix-2 str-var V0:limiter}
+, {empty-2, ins-get-prefix-2 str-var C0:limiter}
+, {empty-2, ins-get-suffix-2 str-var V0:limiter}
+, {empty-2, ins-get-suffix-2 str-var C0:limiter}
+, {empty-2, ins-get-substr-2 str-var V0:limiter V1:limiter}
+, {empty-2, ins-get-substr-2 str-var V0:limiter C1:limiter}
+, {empty-2, ins-get-substr-2 str-var C1:limiter V0:limiter}
+, {empty-2, goto-0-2-0}
+, {empty-2, goto-0-2-1}
+, {empty-2, goto-0-2-4}
+, {empty-2, goto-0-2-5}
+, {empty-2, goto-0-2-6}
+, {empty-2, cond-assignment-0-2 V0:string V1:index V2:char}
+, {empty-2, cond-assignment-0-2 V0:string V1:index C2:char}
+, {empty-2, cond-assignment-0-2 V0:string C2:index V1:char}
+, {empty-2, cond-assignment-0-2 C2:string V0:index V1:char}
+, {empty-2, cond-loindex-0-2 str V0:index}
+, {empty-2, cond-loindex-0-2 str C0:index}
+, {empty-2, cond-hiindex-0-2 str V0:index}
+, {empty-2, cond-hiindex-0-2 str C0:index}
+, {empty-2, cond-size-0-2 V0:string V1:index}
+, {empty-2, cond-size-0-2 V0:string C1:index}
+, {empty-2, cond-size-0-2 C1:string V0:index}
+, {empty-2, cond-empty-0-2 str-var}
+, {empty-3, ins-end-3}
+, {empty-3, call-0-0-3 str-var}
+, {empty-3, ins-append-char-3 res V0:limiter}
+, {empty-3, ins-append-char-3 res C0:limiter}
+, {empty-3, ins-append-str-3 res str-var}
+, {empty-3, ins-inc-loindex-3 str-var}
+, {empty-3, ins-get-prefix-3 str-var V0:limiter}
+, {empty-3, ins-get-prefix-3 str-var C0:limiter}
+, {empty-3, ins-get-suffix-3 str-var V0:limiter}
+, {empty-3, ins-get-suffix-3 str-var C0:limiter}
+, {empty-3, ins-get-substr-3 str-var V0:limiter V1:limiter}
+, {empty-3, ins-get-substr-3 str-var V0:limiter C1:limiter}
+, {empty-3, ins-get-substr-3 str-var C1:limiter V0:limiter}
+, {empty-3, goto-0-3-0}
+, {empty-3, goto-0-3-1}
+, {empty-3, goto-0-3-2}
+, {empty-3, goto-0-3-5}
+, {empty-3, goto-0-3-6}
+, {empty-3, cond-assignment-0-3 V0:string V1:index V2:char}
+, {empty-3, cond-assignment-0-3 V0:string V1:index C2:char}
+, {empty-3, cond-assignment-0-3 V0:string C2:index V1:char}
+, {empty-3, cond-assignment-0-3 C2:string V0:index V1:char}
+, {empty-3, cond-loindex-0-3 str V0:index}
+, {empty-3, cond-loindex-0-3 str C0:index}
+, {empty-3, cond-hiindex-0-3 str V0:index}
+, {empty-3, cond-hiindex-0-3 str C0:index}
+, {empty-3, cond-size-0-3 V0:string V1:index}
+, {empty-3, cond-size-0-3 V0:string C1:index}
+, {empty-3, cond-size-0-3 C1:string V0:index}
+, {empty-3, cond-empty-0-3 str-var}
+, {empty-4, ins-end-4}
+, {empty-4, call-0-0-4 str-var}
+, {empty-4, ins-append-char-4 res V0:limiter}
+, {empty-4, ins-append-char-4 res C0:limiter}
+, {empty-4, ins-append-str-4 res str-var}
+, {empty-4, ins-inc-loindex-4 str-var}
+, {empty-4, ins-get-prefix-4 str-var V0:limiter}
+, {empty-4, ins-get-prefix-4 str-var C0:limiter}
+, {empty-4, ins-get-suffix-4 str-var V0:limiter}
+, {empty-4, ins-get-suffix-4 str-var C0:limiter}
+, {empty-4, ins-get-substr-4 str-var V0:limiter V1:limiter}
+, {empty-4, ins-get-substr-4 str-var V0:limiter C1:limiter}
+, {empty-4, ins-get-substr-4 str-var C1:limiter V0:limiter}
+, {empty-4, goto-0-4-0}
+, {empty-4, goto-0-4-1}
+, {empty-4, goto-0-4-2}
+, {empty-4, goto-0-4-3}
+, {empty-4, goto-0-4-6}
+, {empty-4, cond-assignment-0-4 V0:string V1:index V2:char}
+, {empty-4, cond-assignment-0-4 V0:string V1:index C2:char}
+, {empty-4, cond-assignment-0-4 V0:string C2:index V1:char}
+, {empty-4, cond-assignment-0-4 C2:string V0:index V1:char}
+, {empty-4, cond-loindex-0-4 str V0:index}
+, {empty-4, cond-loindex-0-4 str C0:index}
+, {empty-4, cond-hiindex-0-4 str V0:index}
+, {empty-4, cond-hiindex-0-4 str C0:index}
+, {empty-4, cond-size-0-4 V0:string V1:index}
+, {empty-4, cond-size-0-4 V0:string C1:index}
+, {empty-4, cond-size-0-4 C1:string V0:index}
+, {empty-4, cond-empty-0-4 str-var}
+, {empty-5, ins-end-5}
+, {empty-5, call-0-0-5 str-var}
+, {empty-5, ins-append-char-5 res V0:limiter}
+, {empty-5, ins-append-char-5 res C0:limiter}
+, {empty-5, ins-append-str-5 res str-var}
+, {empty-5, ins-inc-loindex-5 str-var}
+, {empty-5, ins-get-prefix-5 str-var V0:limiter}
+, {empty-5, ins-get-prefix-5 str-var C0:limiter}
+, {empty-5, ins-get-suffix-5 str-var V0:limiter}
+, {empty-5, ins-get-suffix-5 str-var C0:limiter}
+, {empty-5, ins-get-substr-5 str-var V0:limiter V1:limiter}
+, {empty-5, ins-get-substr-5 str-var V0:limiter C1:limiter}
+, {empty-5, ins-get-substr-5 str-var C1:limiter V0:limiter}
+, {empty-5, goto-0-5-0}
+, {empty-5, goto-0-5-1}
+, {empty-5, goto-0-5-2}
+, {empty-5, goto-0-5-3}
+, {empty-5, goto-0-5-4}
+, {empty-5, cond-assignment-0-5 V0:string V1:index V2:char}
+, {empty-5, cond-assignment-0-5 V0:string V1:index C2:char}
+, {empty-5, cond-assignment-0-5 V0:string C2:index V1:char}
+, {empty-5, cond-assignment-0-5 C2:string V0:index V1:char}
+, {empty-5, cond-loindex-0-5 str V0:index}
+, {empty-5, cond-loindex-0-5 str C0:index}
+, {empty-5, cond-hiindex-0-5 str V0:index}
+, {empty-5, cond-hiindex-0-5 str C0:index}
+, {empty-5, cond-size-0-5 V0:string V1:index}
+, {empty-5, cond-size-0-5 V0:string C1:index}
+, {empty-5, cond-size-0-5 C1:string V0:index}
+, {empty-5, cond-empty-0-5 str-var}
+, {empty-6, ins-end-6}
+, {test-0, test-1, test-2}
+, {test-0, test-1, test-2, test-3}
+, {test-0, test-1, test-2, test-3, test-4}
+>

@@ -1,0 +1,77 @@
+Random seed: 42
+Time limit: 15 seconds
+Reading input from results/grounded/woodworking1.sas.
+- State has 24 bits divided into 24 mutex groups.
+- Domain contains 89 actions.
+- Domain contains 142 tasks.
+- Domain contains 197 methods.
+- The initial state contains 7 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 4 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 142
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 0
+No heuristics given, setting default ... 
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(ff;distance;correct count)
+Search config:
+ - type: cost optimal
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+Search Results
+- Search time 0.509 seconds
+- Visited list time 0.159233 seconds
+- Visited list inserts 59406
+- Visited list pruned 9362
+- Visited list contains 50044
+- Visited list hash collisions 0
+- Generated 173879 search nodes
+  Calculated heuristic for 140205 nodes
+  One modifications 33674
+  Effectless actions 0
+- including 33674 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 275451 nodes per second
+- Final fringe contains 15 nodes
+- Status: Solved
+- Found solution of length 19
+- Total costs of actions: 7
+==>
+173467 do_saw_medium[b0,p1,pine,rough,s3,s2,s1]
+173862 do_plane[p1,rough,natural,untreated]
+173867 do_spray_varnish[p1,spray_varnisher0,red,smooth]
+173869 do_plane[p2,verysmooth,natural,varnished]
+173873 do_glaze[p2,glazer0,red]
+173874 do_plane[p0,smooth,red,varnished]
+173877 do_glaze[p0,glazer0,red]
+root 0
+173876 method12_splitted_3[p0,red] -> <_splitting_method_method12_splitted_3;do_colour[p0,red,glazer0];method2;0;-1> 173877
+173871 method12_splitted_3[p2,red] -> <_splitting_method_method12_splitted_3;do_colour[p2,red,glazer0];method2;0;-1> 173873
+173863 method14_splitted_4[p1,red] -> <_splitting_method_method14_splitted_4;do_colour[p1,red,spray_varnisher0];method1;0;-1> 173867
+173858 grindNplane[p1,rough,natural,untreated,smooth,natural,untreated] -> method7 173862
+173472 method14_splitted_9[p1,rough,smooth,untreated] -> _splitting_method_method14_splitted_9 173858
+172686 process[p1,red,rough,smooth] -> <<<method14;method14_splitted_12[b0,p1,rough];_splitting_method_method14_splitted_12;0;-1,1,2>;cut_and_saw[b0,p1,pine,rough];method10;0;-1,1,2>;do_saw[b0,p1,pine,rough];method8;0;-1,1,2> 173467 173472 173863
+171906 __top_method_splitted_6[p1,red,smooth] -> _splitting_method___top_method_splitted_6 172686
+169397 method12_splitted_8[p2,verysmooth,smooth,untreated] -> <_splitting_method_method12_splitted_8;grindNplane[p2,verysmooth,natural,varnished,smooth,natural,untreated];method7;0;-1> 173869
+157932 __top_method_splitted_11[p2,red] -> <_splitting_method___top_method_splitted_11;process[p2,red,verysmooth,smooth];method12;0;-1,-2> 169397 173871
+129688 method12_splitted_8[p0,smooth,smooth,untreated] -> <_splitting_method_method12_splitted_8;grindNplane[p0,smooth,red,varnished,smooth,natural,untreated];method7;0;-1> 173874
+3 __top_method_splitted_1[p0,red] -> <_splitting_method___top_method_splitted_1;process[p0,red,smooth,smooth];method12;0;-1,-2> 129688 173876
+0 __top[] -> __top_method 3 157932 171906
+<==

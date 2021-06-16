@@ -1,0 +1,54 @@
+Random seed: 42
+Time limit: 2 seconds
+Reading input from results/grounded/satellite16.sas.
+- State has 11 bits divided into 11 mutex groups.
+- Domain contains 43 actions.
+- Domain contains 55 tasks.
+- Domain contains 92 methods.
+- The initial state contains 2 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 55
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Greedy Search
+   1s visitime    0.31s generated nodes    350234 nodes/sec  348145 cur h 2147483647 mod.depth   12 inserts     74573 dups     16416 size     58157 hash fail  16498 hash buckets  58075
+   2s visitime    0.64s generated nodes    700547 nodes/sec  348877 cur h 2147483647 mod.depth   21 inserts    154169 dups     39089 size    115080 hash fail  39469 hash buckets 114700
+Reached time limit - stopping search.
+Search Results
+- Search time3.00 seconds
+- Visited list time 0.97 seconds
+- Visited list inserts 233845
+- Visited list pruned 66764
+- Visited list contains 167081
+- Visited list hash collisions 67580
+- Visited list used hash buckets 166265
+- Generated 1030862 search nodes
+  Calculated heuristic for 692922 nodes
+  One modifications 328359
+  Effectless actions 9581
+- including 328359 one modification actions
+- including 0 one modification methods
+- and       9581 progressions of effectless actions
+- Generated 230743 nodes per second
+- Final fringe contains 62 nodes
+- Status: Timeout

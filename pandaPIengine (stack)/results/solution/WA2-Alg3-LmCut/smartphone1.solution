@@ -1,0 +1,65 @@
+Random seed: 42
+Time limit: 15 seconds
+Reading input from results/grounded/smartphone1.sas.
+- State has 10 bits divided into 10 mutex groups.
+- Domain contains 8 actions.
+- Domain contains 10 tasks.
+- Domain contains 3 methods.
+- The initial state contains 4 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 1 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 10
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: cost optimal
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+Search Results
+- Search time 0.002 seconds
+- Visited list time 2e-05 seconds
+- Visited list inserts 4
+- Visited list pruned 0
+- Visited list contains 4
+- Visited list hash collisions 0
+- Generated 13 search nodes
+  Calculated heuristic for 6 nodes
+  One modifications 5
+  Effectless actions 2
+- including 5 one modification actions
+- including 0 one modification methods
+- and       2 progressions of effectless actions
+- Generated 3000 nodes per second
+- Final fringe contains 2 nodes
+- Status: Solved
+- Found solution of length 9
+- Total costs of actions: 7
+==>
+3 attachRegularInformationToEMail[email1,dateForMeeting]
+4 press_Home_EMail[]
+5 select_EMail_EMailAccount_NoOp[account1]
+6 press_EMail_NewEMail[account1]
+7 enter_EMailAddress[headOfDepartment,headOfDepartmentEMailAddress]
+8 press_EMail_NewEMail_Send[headOfDepartment,email1]
+9 extractsInformation_Regular[headOfDepartment,email1,dateForMeeting]
+root 0
+1 enterMode_EMail[] -> do_enterMode_EMail_FromHome 4
+0 __top[] -> <<<<__top_method;extractsInformation[headOfDepartment,email1,dateForMeeting];do_extractsInformation_Regular;2;0,1,-1>;send_EMail[headOfDepartment,email1];do_send_EMail_ViaEMail;1;0,-1,-2,-3,-4,-5,2>;select_EMail_EMailAccount[account1];do_select_EMail_EMailAccount_NoOp;2;0,1,-1,3,4,5,6>;attachInformationToEMail[email1,dateForMeeting];do_attachInformationToEMail_Regular;0;-1,1,2,3,4,5,6> 3 1 5 6 7 8 9
+<==

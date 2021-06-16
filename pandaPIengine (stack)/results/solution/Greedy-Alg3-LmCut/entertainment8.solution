@@ -1,0 +1,112 @@
+Random seed: 42
+Time limit: 15 seconds
+Reading input from results/grounded/entertainment8.sas.
+- State has 89 bits divided into 89 mutex groups.
+- Domain contains 141 actions.
+- Domain contains 298 tasks.
+- Domain contains 457 methods.
+- The initial state contains 33 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 270
+- The problem is cyclic
+- Number of cyclic SCCs: 15
+- Number of cyclic SCCs of size 1: 8
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Greedy Search
+Search Results
+- Search time 0.067 seconds
+- Visited list time 0.000332 seconds
+- Visited list inserts 92
+- Visited list pruned 1
+- Visited list contains 91
+- Visited list hash collisions 0
+- Generated 434 search nodes
+  Calculated heuristic for 369 nodes
+  One modifications 60
+  Effectless actions 5
+- including 60 one modification actions
+- including 0 one modification methods
+- and       5 progressions of effectless actions
+- Generated 5507 nodes per second
+- Final fringe contains 218 nodes
+- Status: Solved
+- Found solution of length 55
+- Total costs of actions: 14
+==>
+3 plug|instance_4[tv1-1,tv1-1-cinch-2,cinch-cable-1,cinch-cable-1-cinch-1]
+12 plug|instance_7[cinch-cable-1,cinch-cable-1-cinch-2,amplifier-1,amplifier-1-cinch-4]
+28 plug|instance_7[amplifier-1,amplifier-1-speakerWire-5,speaker-wire-1,speaker-wire-1-speakerWire-1]
+34 plug|instance_7[speaker-wire-1,speaker-wire-1-speakerWire-2,box-1,box-1-speakerWire-1]
+45 plug|instance_7[amplifier-1,amplifier-1-speakerWire-6,speaker-wire-2,speaker-wire-2-speakerWire-1]
+49 plug|instance_4[speaker-wire-2,speaker-wire-2-speakerWire-2,box-2,box-2-speakerWire-1]
+73 plug|instance_1[blu-ray-1,blu-ray-1-scart-1,scart-cable-2,scart-cable-2-scart-1]
+108 plug|instance_1[scart-cable-2,scart-cable-2-scart-2,multi-scart-1,multi-scart-1-scart-3]
+134 plug|instance_1[multi-scart-1,multi-scart-1-scart-1,scart-cable-3,scart-cable-3-scart-1]
+213 plug|instance_1[scart-cable-3,scart-cable-3-scart-2,tv1-1,tv1-1-scart-1]
+338 plug|instance_1[dvd-1,dvd-1-scart-1,scart-cable-4,scart-cable-4-scart-1]
+348 plug|instance_1[scart-cable-4,scart-cable-4-scart-2,multi-scart-1,multi-scart-1-scart-2]
+371 __method_precondition_m-dconnect-av-empty[multi-scart-1,scart-cable-3]
+381 __method_precondition_m-dconnect-av-empty[scart-cable-3,tv1-1]
+398 plug|instance_1[game-console-1,game-console-1-scart-1,scart-cable-1,scart-cable-1-scart-1]
+408 plug|instance_1[scart-cable-1,scart-cable-1-scart-2,multi-scart-1,multi-scart-1-scart-4]
+421 __method_precondition_m-dconnect-av-empty[multi-scart-1,scart-cable-3]
+431 __method_precondition_m-dconnect-av-empty[scart-cable-3,tv1-1]
+root 0
+430 direct_av_connect[scart-cable-3,tv1-1] -> m-dconnect-av-empty 431
+423 av_connect[scart-cable-3,tv1-1] -> m-connect-direct-av 430
+420 direct_av_connect[multi-scart-1,scart-cable-3] -> m-dconnect-av-empty 421
+414 av_connect[multi-scart-1,tv1-1] -> m-connect-rec-av-1 420 423
+407 direct_av_connect[scart-cable-1,multi-scart-1] -> <m-dconnect-av;plug[scart-cable-1,scart-cable-1-scart-2,multi-scart-1,multi-scart-1-scart-4];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 408
+401 av_connect[scart-cable-1,tv1-1] -> m-connect-rec-av-1 407 414
+397 direct_av_connect[game-console-1,scart-cable-1] -> <m-dconnect-av;plug[game-console-1,game-console-1-scart-1,scart-cable-1,scart-cable-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 398
+388 av_connect[game-console-1,tv1-1] -> m-connect-rec-av-1 397 401
+380 direct_av_connect[scart-cable-3,tv1-1] -> m-dconnect-av-empty 381
+373 av_connect[scart-cable-3,tv1-1] -> m-connect-direct-av 380
+370 direct_av_connect[multi-scart-1,scart-cable-3] -> m-dconnect-av-empty 371
+364 av_connect[multi-scart-1,tv1-1] -> m-connect-rec-av-1 370 373
+347 direct_av_connect[scart-cable-4,multi-scart-1] -> <m-dconnect-av;plug[scart-cable-4,scart-cable-4-scart-2,multi-scart-1,multi-scart-1-scart-2];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 348
+341 av_connect[scart-cable-4,tv1-1] -> m-connect-rec-av-1 347 364
+337 direct_av_connect[dvd-1,scart-cable-4] -> <m-dconnect-av;plug[dvd-1,dvd-1-scart-1,scart-cable-4,scart-cable-4-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 338
+215 av_connect[dvd-1,tv1-1] -> m-connect-rec-av-1 337 341
+212 direct_av_connect[scart-cable-3,tv1-1] -> <m-dconnect-av;plug[scart-cable-3,scart-cable-3-scart-2,tv1-1,tv1-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 213
+204 av_connect[scart-cable-3,tv1-1] -> m-connect-direct-av 212
+133 direct_av_connect[multi-scart-1,scart-cable-3] -> <m-dconnect-av;plug[multi-scart-1,multi-scart-1-scart-1,scart-cable-3,scart-cable-3-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 134
+126 av_connect[multi-scart-1,tv1-1] -> m-connect-rec-av-1 133 204
+107 direct_av_connect[scart-cable-2,multi-scart-1] -> <m-dconnect-av;plug[scart-cable-2,scart-cable-2-scart-2,multi-scart-1,multi-scart-1-scart-3];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 108
+86 av_connect[scart-cable-2,tv1-1] -> m-connect-rec-av-1 107 126
+72 direct_av_connect[blu-ray-1,scart-cable-2] -> <m-dconnect-av;plug[blu-ray-1,blu-ray-1-scart-1,scart-cable-2,scart-cable-2-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 73
+52 av_connect[blu-ray-1,tv1-1] -> m-connect-rec-av-1 72 86
+48 plug[speaker-wire-2,speaker-wire-2-speakerWire-2,box-2,box-2-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_4 49
+47 direct_a_connect[speaker-wire-2,box-2] -> m-dconnect-a 48
+44 plug[amplifier-1,amplifier-1-speakerWire-6,speaker-wire-2,speaker-wire-2-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 45
+38 direct_a_connect[amplifier-1,speaker-wire-2] -> m-dconnect-a 44
+35 a_connect[amplifier-1,box-2] -> <m-connect-rec-a;a_connect[amplifier-1,speaker-wire-2];m-connect-direct-a;0;-1,1> 38 47
+33 plug[speaker-wire-1,speaker-wire-1-speakerWire-2,box-1,box-1-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 34
+30 direct_a_connect[speaker-wire-1,box-1] -> m-dconnect-a 33
+27 plug[amplifier-1,amplifier-1-speakerWire-5,speaker-wire-1,speaker-wire-1-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 28
+18 direct_a_connect[amplifier-1,speaker-wire-1] -> m-dconnect-a 27
+14 a_connect[amplifier-1,box-1] -> <m-connect-rec-a;a_connect[amplifier-1,speaker-wire-1];m-connect-direct-a;0;-1,1> 18 30
+11 direct_a_connect[cinch-cable-1,amplifier-1] -> <m-dconnect-a;plug[cinch-cable-1,cinch-cable-1-cinch-2,amplifier-1,amplifier-1-cinch-4];_method_for_multiple_expansions_of_plug|instance_7;0;-1> 12
+2 direct_a_connect[tv1-1,cinch-cable-1] -> <m-dconnect-a;plug[tv1-1,tv1-1-cinch-2,cinch-cable-1,cinch-cable-1-cinch-1];_method_for_multiple_expansions_of_plug|instance_4;0;-1> 3
+0 __top[] -> <<__top_method;a_connect[tv1-1,amplifier-1];m-connect-rec-a;0;-1,-2,1,2,3,4,5>;a_connect[tv1-1,cinch-cable-1];m-connect-direct-a;0;-1,1,2,3,4,5,6> 2 11 14 35 52 215 388
+<==

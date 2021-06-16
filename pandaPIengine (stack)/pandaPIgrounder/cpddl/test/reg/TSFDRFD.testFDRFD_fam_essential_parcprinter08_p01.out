@@ -1,0 +1,488 @@
+begin_version
+3
+end_version
+begin_metric
+1
+end_metric
+23
+begin_variable
+var0
+-1
+18
+location sheet1 blackcontainer_entry-blackfeeder_exit
+location sheet1 blackcontainer_exittoime-blackprinter_entry
+location sheet1 blackprinter_exit-blackcontainer_entryfromime
+location sheet1 colorcontainer_entry-down_bottomexit
+location sheet1 colorcontainer_exit-up_bottomentry
+location sheet1 colorcontainer_exittoime-colorprinter_entry
+location sheet1 colorprinter_exit-colorcontainer_entryfromime
+location sheet1 down_bottomentry-colorfeeder_exit
+location sheet1 down_topexit-htmovercolor_entry
+location sheet1 endcap_entry-blackcontainer_exit
+location sheet1 finisher1_entry-up_topexit
+location sheet1 finisher2_entry-finisher1_exit
+location sheet1 finisher2_exit
+location sheet1 htmoverblack_entry-endcap_exit
+location sheet1 htmoverblack_exit-down_topentry
+location sheet1 htmovercolor_exit-up_topentry
+location sheet1 some_feeder_tray
+location sheet1 some_finisher_tray
+end_variable
+begin_variable
+var1
+-1
+2
+notprintedwith sheet1 back black
+none-of-those
+end_variable
+begin_variable
+var2
+-1
+2
+notprintedwith sheet1 front black
+none-of-those
+end_variable
+begin_variable
+var3
+-1
+2
+uninitialized
+none-of-those
+end_variable
+begin_variable
+var4
+-1
+2
+available blackcontainer-rsrc
+none-of-those
+end_variable
+begin_variable
+var5
+-1
+2
+available blackfeeder-rsrc
+none-of-those
+end_variable
+begin_variable
+var6
+-1
+2
+available blackprinter-rsrc
+none-of-those
+end_variable
+begin_variable
+var7
+-1
+2
+available colorcontainer-rsrc
+none-of-those
+end_variable
+begin_variable
+var8
+-1
+2
+available colorfeeder-rsrc
+none-of-those
+end_variable
+begin_variable
+var9
+-1
+2
+available colorprinter-rsrc
+none-of-those
+end_variable
+begin_variable
+var10
+-1
+2
+available down-rsrc
+none-of-those
+end_variable
+begin_variable
+var11
+-1
+2
+available endcap-rsrc
+none-of-those
+end_variable
+begin_variable
+var12
+-1
+2
+available finisher1-rsrc
+none-of-those
+end_variable
+begin_variable
+var13
+-1
+2
+available finisher2-rsrc
+none-of-those
+end_variable
+begin_variable
+var14
+-1
+2
+available htmoverblack-rsrc
+none-of-those
+end_variable
+begin_variable
+var15
+-1
+2
+available htmovercolor-rsrc
+none-of-those
+end_variable
+begin_variable
+var16
+-1
+2
+available up-rsrc
+none-of-those
+end_variable
+begin_variable
+var17
+-1
+2
+hasimage sheet1 back image-1
+none-of-those
+end_variable
+begin_variable
+var18
+-1
+2
+hasimage sheet1 front image-1
+none-of-those
+end_variable
+begin_variable
+var19
+-1
+2
+sideup sheet1 back
+none-of-those
+end_variable
+begin_variable
+var20
+-1
+2
+sideup sheet1 front
+none-of-those
+end_variable
+begin_variable
+var21
+-1
+2
+stackedin sheet1 finisher1_tray
+none-of-those
+end_variable
+begin_variable
+var22
+-1
+2
+stackedin sheet1 finisher2_tray
+none-of-those
+end_variable
+4
+begin_mutex_group
+1
+1 0
+end_mutex_group
+begin_mutex_group
+1
+2 0
+end_mutex_group
+begin_mutex_group
+1
+3 0
+end_mutex_group
+begin_mutex_group
+18
+0 0
+0 1
+0 2
+0 3
+0 4
+0 5
+0 6
+0 7
+0 8
+0 9
+0 10
+0 11
+0 12
+0 13
+0 14
+0 15
+0 16
+0 17
+end_mutex_group
+begin_state
+16
+0
+0
+0
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+end_state
+begin_goal
+4
+18 0
+1 0
+20 0
+21 0
+end_goal
+25
+begin_operator
+blackcontainer-fromime-letter sheet1
+1
+4 0
+1
+0 0 2 9
+2000
+end_operator
+begin_operator
+blackcontainer-toime-letter sheet1
+1
+4 0
+1
+0 0 0 1
+2000
+end_operator
+begin_operator
+blackfeeder-feed-letter sheet1
+1
+5 0
+2
+0 0 16 0
+0 20 -1 0
+8000
+end_operator
+begin_operator
+blackprinter-simplex-letter sheet1 back image-1
+2
+6 0
+19 0
+3
+0 0 1 2
+0 1 0 1
+0 17 -1 0
+113013
+end_operator
+begin_operator
+blackprinter-simplex-letter sheet1 front image-1
+2
+6 0
+20 0
+3
+0 0 1 2
+0 2 0 1
+0 18 -1 0
+113013
+end_operator
+begin_operator
+blackprinter-simplexandinvert-letter sheet1 back front image-1
+1
+6 0
+5
+0 0 1 2
+0 1 0 1
+0 17 -1 0
+0 19 0 1
+0 20 -1 0
+123013
+end_operator
+begin_operator
+blackprinter-simplexandinvert-letter sheet1 front back image-1
+1
+6 0
+5
+0 0 1 2
+0 2 0 1
+0 18 -1 0
+0 19 -1 0
+0 20 0 1
+123013
+end_operator
+begin_operator
+colorcontainer-fromime-letter sheet1
+1
+7 0
+1
+0 0 6 4
+8000
+end_operator
+begin_operator
+colorcontainer-toime-letter sheet1
+1
+7 0
+1
+0 0 3 5
+8000
+end_operator
+begin_operator
+colorfeeder-feed-letter sheet1
+1
+8 0
+2
+0 0 16 7
+0 20 -1 0
+8000
+end_operator
+begin_operator
+colorprinter-simplexmono-letter sheet1 back image-1
+2
+9 0
+19 0
+3
+0 0 5 6
+0 1 0 1
+0 17 -1 0
+224040
+end_operator
+begin_operator
+colorprinter-simplexmono-letter sheet1 front image-1
+2
+9 0
+20 0
+3
+0 0 5 6
+0 2 0 1
+0 18 -1 0
+224040
+end_operator
+begin_operator
+down-movebottom-letter sheet1
+1
+10 0
+1
+0 0 7 3
+2999
+end_operator
+begin_operator
+down-movedown-letter sheet1
+1
+10 0
+1
+0 0 14 3
+9999
+end_operator
+begin_operator
+down-movetop-letter sheet1
+1
+10 0
+1
+0 0 14 8
+2999
+end_operator
+begin_operator
+endcap-move-letter sheet1
+1
+11 0
+1
+0 0 9 13
+2000
+end_operator
+begin_operator
+finisher1-passthrough-letter sheet1
+1
+12 0
+1
+0 0 10 11
+8000
+end_operator
+begin_operator
+finisher1-stack-letter sheet1 dummy-sheet
+1
+12 0
+2
+0 0 10 17
+0 21 -1 0
+8000
+end_operator
+begin_operator
+finisher2-passthrough-letter sheet1
+1
+13 0
+1
+0 0 11 12
+8000
+end_operator
+begin_operator
+finisher2-stack-letter sheet1 dummy-sheet
+1
+13 0
+2
+0 0 11 17
+0 22 -1 0
+8000
+end_operator
+begin_operator
+htmoverblack-move-letter sheet1
+1
+14 0
+1
+0 0 13 14
+17999
+end_operator
+begin_operator
+htmovercolor-move-letter sheet1
+1
+15 0
+1
+0 0 8 15
+9999
+end_operator
+begin_operator
+initialize
+0
+14
+0 3 0 1
+0 4 -1 0
+0 5 -1 0
+0 6 -1 0
+0 7 -1 0
+0 8 -1 0
+0 9 -1 0
+0 10 -1 0
+0 11 -1 0
+0 12 -1 0
+0 13 -1 0
+0 14 -1 0
+0 15 -1 0
+0 16 -1 0
+0
+end_operator
+begin_operator
+up-movetop-letter sheet1
+1
+16 0
+1
+0 0 15 10
+2999
+end_operator
+begin_operator
+up-moveup-letter sheet1
+1
+16 0
+1
+0 0 4 10
+9999
+end_operator
+0

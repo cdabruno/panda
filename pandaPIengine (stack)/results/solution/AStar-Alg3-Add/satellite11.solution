@@ -1,0 +1,80 @@
+Random seed: 42
+Time limit: 15 seconds
+Reading input from results/grounded/satellite11.sas.
+- State has 19 bits divided into 19 mutex groups.
+- Domain contains 46 actions.
+- Domain contains 58 tasks.
+- Domain contains 81 methods.
+- The initial state contains 4 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 58
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(add;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- A* Search
+- Distance G is "modification depth"
+   1s visitime    0.28s generated nodes    350224 nodes/sec  349524 cur h 2147483647 mod.depth   12 inserts     77358 duplicates     12199 size     65159 hash fail      0
+   2s visitime    0.62s generated nodes    700467 nodes/sec  349883 cur h 2147483647 mod.depth   13 inserts    172711 duplicates     47856 size    124855 hash fail      0
+   3s visitime    0.94s generated nodes   1040651 nodes/sec  346537 cur h 2147483647 mod.depth   10 inserts    261011 duplicates     75782 size    185229 hash fail      0
+Search Results
+- Search time 3.90 seconds
+- Visited list time 1.21 seconds
+- Visited list inserts 347836
+- Visited list pruned 101635
+- Visited list contains 246201
+- Visited list hash collisions 0
+- Generated 1389790 search nodes
+  Calculated heuristic for 827001 nodes
+  One modifications 514097
+  Effectless actions 48692
+- including 514097 one modification actions
+- including 0 one modification methods
+- and       48692 progressions of effectless actions
+- Generated 212214 nodes per second
+- Final fringe contains 465 nodes
+- Status: Solved
+- Found solution of length 20
+- Total costs of actions: 12
+==>
+1389709 switch_on[instrument02,satellite0]
+1389735 switch_on[instrument11,satellite1]
+1389771 turn_to[satellite1,GroundStation1,Phenomenon7]
+1389772 turn_to[satellite0,GroundStation0,Phenomenon6]
+1389779 calibrate[satellite0,instrument02,GroundStation0]
+1389780 turn_to[satellite0,Phenomenon6,GroundStation0]
+1389781 take_image[satellite0,Phenomenon6,instrument02,x_ray]
+1389784 turn_to[satellite0,Star5,Phenomenon6]
+1389785 take_image[satellite0,Star5,instrument02,x_ray]
+1389786 calibrate[satellite1,instrument11,GroundStation1]
+1389787 turn_to[satellite1,Phenomenon4,GroundStation1]
+1389788 take_image[satellite1,Phenomenon4,instrument11,thermograph]
+root 0
+1389741 auto_calibrate[satellite1,instrument11] -> method6 1389771 1389786
+1389714 auto_calibrate[satellite0,instrument02] -> method6 1389772 1389779
+1277541 do_observation[Phenomenon6,x_ray] -> <method1;method1_splitted_1[satellite0,Phenomenon6,x_ray];_splitting_method_method1_splitted_1;1;0,-1> 1389780 1389781
+1275911 activate_instrument[satellite0,instrument02] -> method5 1389709 1389714
+723515 do_observation[Star5,x_ray] -> method0 1275911 1389784 1389785
+722033 activate_instrument[satellite1,instrument11] -> method5 1389735 1389741
+10 do_observation[Phenomenon4,thermograph] -> method0 722033 1389787 1389788
+0 __top[] -> __top_method 10 723515 1277541
+<==

@@ -1,0 +1,94 @@
+---- Domain: pddl-data/codmap-2015/factored/depot/pfile10/domain-driver0.pddl | pddl-data/codmap-2015/factored/depot/pfile10/problem-driver0.pddl ----
+Domain: depot
+Problem: depotprob7654
+Require: 1000ff
+Type[11]:
+    [0]: object, parent: -1
+    [1]: place, parent: 0
+    [2]: locatable, parent: 0
+    [3]: driver, parent: 0
+    [4]: depot, parent: 1
+    [5]: distributor, parent: 1
+    [6]: truck, parent: 2
+    [7]: hoist, parent: 2
+    [8]: surface, parent: 2
+    [9]: pallet, parent: 8
+    [10]: crate, parent: 8
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+    [1]: 0 1 2 3 4 5
+    [2]: 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+    [3]: 20
+    [4]: 3 4 5
+    [5]: 0 1 2
+    [6]: 12 13
+    [7]:
+    [8]: 6 7 8 9 10 11 14 15 16 17 18 19
+    [9]: 6 7 8 9 10 11
+    [10]: 14 15 16 17 18 19
+Obj[21]:
+    [0]: distributor1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: distributor0, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: distributor2, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: depot0, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: depot1, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: depot2, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: pallet5, type: 9, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: pallet4, type: 9, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: pallet1, type: 9, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: pallet0, type: 9, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: pallet3, type: 9, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: pallet2, type: 9, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: truck1, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: truck0, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: crate5, type: 10, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: crate4, type: 10, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: crate1, type: 10, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: crate0, type: 10, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: crate3, type: 10, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: crate2, type: 10, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: driver0, type: 3, is-constant: 0, is-private: 1, owner: -1, is-agent: 0
+Predicate[6]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    at: 2 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    on: 10 8 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    in: 10 6 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    clear: 8 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    driving: 3 6 :: is-private: 1, owner-param: -1, read: 1, write: 0
+Function[0]:
+Action[1]:
+    drive: ?a:3 ?x:6 ?y:1 ?z:1
+        pre: (and (RW:at ?x ?y) (R:driving ?a ?x))
+        eff: (and (RW:at ?x ?z) (N:RW:at ?x ?y))
+Init[27]:
+  S:(driving driver0 truck0)
+  (at pallet0 depot0)
+  S:(clear crate1)
+  (at pallet1 depot1)
+  S:(clear crate0)
+  (at pallet2 depot2)
+  S:(clear crate4)
+  (at pallet3 distributor0)
+  S:(clear crate5)
+  (at pallet4 distributor1)
+  S:(clear pallet4)
+  (at pallet5 distributor2)
+  S:(clear crate3)
+  (at truck0 depot1)
+  (at truck1 depot2)
+  (at crate0 depot1)
+  S:(on crate0 pallet1)
+  (at crate1 depot0)
+  S:(on crate1 pallet0)
+  (at crate2 distributor2)
+  S:(on crate2 pallet5)
+  (at crate3 distributor2)
+  S:(on crate3 crate2)
+  (at crate4 depot2)
+  S:(on crate4 pallet2)
+  (at crate5 distributor0)
+  S:(on crate5 pallet3)
+Init[0]:
+Goal: (and (:on crate0 crate4) (:on crate2 pallet3) (:on crate3 pallet0) (:on crate4 pallet5))
+Metric: 0
+---- Domain: pddl-data/codmap-2015/factored/depot/pfile10/domain-driver0.pddl | pddl-data/codmap-2015/factored/depot/pfile10/problem-driver0.pddl END ----

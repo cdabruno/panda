@@ -1,0 +1,22 @@
+{lifting V0:object C1:object, available V0:object}:=1
+ (available hoist0) (lifting hoist0 crate0) (lifting hoist0 crate1):=1:fam
+ (available hoist1) (lifting hoist1 crate0) (lifting hoist1 crate1):=1:fam
+ (available hoist2) (lifting hoist2 crate0) (lifting hoist2 crate1):=1:fam
+
+{at V0:object C1:object, in V0:object C2:object, lifting C3:object V0:object}:=1
+ (at truck0 depot0) (at truck0 distributor0) (at truck0 distributor1):=1:fam
+ (at truck1 depot0) (at truck1 distributor0) (at truck1 distributor1):=1:fam
+ (at crate0 depot0) (at crate0 distributor0) (at crate0 distributor1) (in crate0 truck0) (in crate0 truck1) (lifting hoist0 crate0) (lifting hoist1 crate0) (lifting hoist2 crate0):=1:fam
+ (at crate1 depot0) (at crate1 distributor0) (at crate1 distributor1) (in crate1 truck0) (in crate1 truck1) (lifting hoist0 crate1) (lifting hoist1 crate1) (lifting hoist2 crate1):=1:fam
+
+{on V0:object C1:object, in V0:object C2:object, lifting C3:object V0:object}:=1
+ (in crate0 truck0) (in crate0 truck1) (lifting hoist0 crate0) (lifting hoist1 crate0) (lifting hoist2 crate0) (on crate0 crate1) (on crate0 pallet0) (on crate0 pallet1) (on crate0 pallet2):=1:fam:G
+ (in crate1 truck0) (in crate1 truck1) (lifting hoist0 crate1) (lifting hoist1 crate1) (lifting hoist2 crate1) (on crate1 crate0) (on crate1 pallet0) (on crate1 pallet1) (on crate1 pallet2):=1:fam:G
+
+{on C1:object V0:object, in V0:object C2:object, lifting C3:object V0:object, clear V0:object}:=1
+ (clear pallet0) (on crate0 pallet0) (on crate1 pallet0):=1:fam
+ (clear pallet1) (on crate0 pallet1) (on crate1 pallet1):=1:fam:G
+ (clear pallet2) (on crate0 pallet2) (on crate1 pallet2):=1:fam:G
+ (clear crate0) (in crate0 truck0) (in crate0 truck1) (lifting hoist0 crate0) (lifting hoist1 crate0) (lifting hoist2 crate0) (on crate1 crate0):=1:fam
+ (clear crate1) (in crate1 truck0) (in crate1 truck1) (lifting hoist0 crate1) (lifting hoist1 crate1) (lifting hoist2 crate1) (on crate0 crate1):=1:fam
+

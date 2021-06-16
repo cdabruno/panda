@@ -1,0 +1,139 @@
+---- Domain: pddl-data/ipc-2014/seq-opt/floortile/domain.pddl | pddl-data/ipc-2014/seq-opt/floortile/p01-4-3-2.pddl ----
+Domain: floor-tile
+Problem: p01-432
+Require: 200ff
+Type[4]:
+    [0]: object, parent: -1
+    [1]: robot, parent: 0
+    [2]: tile, parent: 0
+    [3]: color, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+    [1]: 15 16
+    [2]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+    [3]: 17 18
+Obj[19]:
+    [0]: tile_0-1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: tile_0-2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: tile_0-3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: tile_1-1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: tile_1-2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: tile_1-3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: tile_2-1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: tile_2-2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: tile_2-3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: tile_3-1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: tile_3-2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: tile_3-3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: tile_4-1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: tile_4-2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: tile_4-3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: robot1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: robot2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: white, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: black, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[11]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    robot-at: 1 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    up: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    down: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    right: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    left: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    clear: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    painted: 2 3 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    robot-has: 1 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    available-color: 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    free-color: 1 :: is-private: 0, owner-param: -1, read: 0, write: 0
+Function[1]:
+    total-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+Action[7]:
+    change-color: ?r:1 ?c:3 ?c2:3
+        pre: (and (RW:robot-has ?r ?c) (R:available-color ?c2))
+        eff: (and (N:RW:robot-has ?r ?c) (RW:robot-has ?r ?c2) (increase (total-cost) 5))
+    paint-up: ?r:1 ?y:2 ?x:2 ?c:3
+        pre: (and (RW:robot-has ?r ?c) (RW:robot-at ?r ?x) (R:up ?y ?x) (RW:clear ?y))
+        eff: (and (N:RW:clear ?y) (W:painted ?y ?c) (increase (total-cost) 2))
+    paint-down: ?r:1 ?y:2 ?x:2 ?c:3
+        pre: (and (RW:robot-has ?r ?c) (RW:robot-at ?r ?x) (R:down ?y ?x) (RW:clear ?y))
+        eff: (and (N:RW:clear ?y) (W:painted ?y ?c) (increase (total-cost) 2))
+    up: ?r:1 ?x:2 ?y:2
+        pre: (and (RW:robot-at ?r ?x) (R:up ?y ?x) (RW:clear ?y))
+        eff: (and (RW:robot-at ?r ?y) (N:RW:robot-at ?r ?x) (RW:clear ?x) (N:RW:clear ?y) (increase (total-cost) 3))
+    down: ?r:1 ?x:2 ?y:2
+        pre: (and (RW:robot-at ?r ?x) (R:down ?y ?x) (RW:clear ?y))
+        eff: (and (RW:robot-at ?r ?y) (N:RW:robot-at ?r ?x) (RW:clear ?x) (N:RW:clear ?y) (increase (total-cost) 1))
+    right: ?r:1 ?x:2 ?y:2
+        pre: (and (RW:robot-at ?r ?x) (R:right ?y ?x) (RW:clear ?y))
+        eff: (and (RW:robot-at ?r ?y) (N:RW:robot-at ?r ?x) (RW:clear ?x) (N:RW:clear ?y) (increase (total-cost) 1))
+    left: ?r:1 ?x:2 ?y:2
+        pre: (and (RW:robot-at ?r ?x) (R:left ?y ?x) (RW:clear ?y))
+        eff: (and (RW:robot-at ?r ?y) (N:RW:robot-at ?r ?x) (RW:clear ?x) (N:RW:clear ?y) (increase (total-cost) 1))
+Init[63]:
+  (robot-at robot1 tile_0-1)
+  (robot-has robot1 white)
+  (robot-at robot2 tile_2-2)
+  (robot-has robot2 black)
+  S:(available-color white)
+  S:(available-color black)
+  (clear tile_0-2)
+  (clear tile_0-3)
+  (clear tile_1-1)
+  (clear tile_1-2)
+  (clear tile_1-3)
+  (clear tile_2-1)
+  (clear tile_2-3)
+  (clear tile_3-1)
+  (clear tile_3-2)
+  (clear tile_3-3)
+  (clear tile_4-1)
+  (clear tile_4-2)
+  (clear tile_4-3)
+  S:(up tile_1-1 tile_0-1)
+  S:(up tile_1-2 tile_0-2)
+  S:(up tile_1-3 tile_0-3)
+  S:(up tile_2-1 tile_1-1)
+  S:(up tile_2-2 tile_1-2)
+  S:(up tile_2-3 tile_1-3)
+  S:(up tile_3-1 tile_2-1)
+  S:(up tile_3-2 tile_2-2)
+  S:(up tile_3-3 tile_2-3)
+  S:(up tile_4-1 tile_3-1)
+  S:(up tile_4-2 tile_3-2)
+  S:(up tile_4-3 tile_3-3)
+  S:(down tile_0-1 tile_1-1)
+  S:(down tile_0-2 tile_1-2)
+  S:(down tile_0-3 tile_1-3)
+  S:(down tile_1-1 tile_2-1)
+  S:(down tile_1-2 tile_2-2)
+  S:(down tile_1-3 tile_2-3)
+  S:(down tile_2-1 tile_3-1)
+  S:(down tile_2-2 tile_3-2)
+  S:(down tile_2-3 tile_3-3)
+  S:(down tile_3-1 tile_4-1)
+  S:(down tile_3-2 tile_4-2)
+  S:(down tile_3-3 tile_4-3)
+  S:(right tile_0-2 tile_0-1)
+  S:(right tile_0-3 tile_0-2)
+  S:(right tile_1-2 tile_1-1)
+  S:(right tile_1-3 tile_1-2)
+  S:(right tile_2-2 tile_2-1)
+  S:(right tile_2-3 tile_2-2)
+  S:(right tile_3-2 tile_3-1)
+  S:(right tile_3-3 tile_3-2)
+  S:(right tile_4-2 tile_4-1)
+  S:(right tile_4-3 tile_4-2)
+  S:(left tile_0-1 tile_0-2)
+  S:(left tile_0-2 tile_0-3)
+  S:(left tile_1-1 tile_1-2)
+  S:(left tile_1-2 tile_1-3)
+  S:(left tile_2-1 tile_2-2)
+  S:(left tile_2-2 tile_2-3)
+  S:(left tile_3-1 tile_3-2)
+  S:(left tile_3-2 tile_3-3)
+  S:(left tile_4-1 tile_4-2)
+  S:(left tile_4-2 tile_4-3)
+Init[1]:
+  (= (total-cost) 0)
+Goal: (and (W:painted tile_1-1 white) (W:painted tile_1-2 black) (W:painted tile_1-3 white) (W:painted tile_2-1 black) (W:painted tile_2-2 white) (W:painted tile_2-3 black) (W:painted tile_3-1 white) (W:painted tile_3-2 black) (W:painted tile_3-3 white) (W:painted tile_4-1 black) (W:painted tile_4-2 white) (W:painted tile_4-3 black))
+Metric: 1
+---- Domain: pddl-data/ipc-2014/seq-opt/floortile/domain.pddl | pddl-data/ipc-2014/seq-opt/floortile/p01-4-3-2.pddl END ----

@@ -1,0 +1,2728 @@
+---- Domain: pddl-data/ipc-2006/trucks/domain.pddl | pddl-data/ipc-2006/trucks/p01.pddl ----
+Domain: trucks
+Problem: truck-1
+Require: ff
+Type[7]:
+    [0]: object, parent: -1
+    [1]: truckarea, parent: 0
+    [2]: time, parent: 0
+    [3]: location, parent: 0
+    [4]: locatable, parent: 0
+    [5]: truck, parent: 4
+    [6]: package, parent: 4
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+    [1]: 14 15
+    [2]: 7 8 9 10 11 12 13
+    [3]: 4 5 6
+    [4]: 0 1 2 3
+    [5]: 0
+    [6]: 1 2 3
+Obj[16]:
+    [0]: truck1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: package1, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: package2, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: package3, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: l1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: l2, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: l3, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: t0, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: t1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: t2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: t3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: t4, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: t5, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: t6, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: a1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: a2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[11]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    at: 4 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    in: 6 5 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    connected: 3 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    free: 1 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    time-now: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    next: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    le: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    delivered: 6 3 2 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    at-destination: 6 3 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    closer: 1 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+Function[0]:
+Action[4]:
+    load: ?p:6 ?t:5 ?a1:1 ?l:3
+        pre: (and (RW:at ?t ?l) (RW:at ?p ?l) (RW:free ?a1 ?t) (forall (?a2:1 I[0]:?p:6 I[1]:?t:5 I[2]:?a1:1 I[3]:?l:3) (imply (R:closer ?a2 ?a1) (RW:free ?a2 ?t))))
+        eff: (and (N:RW:at ?p ?l) (N:RW:free ?a1 ?t) (RW:in ?p ?t ?a1))
+    unload: ?p:6 ?t:5 ?a1:1 ?l:3
+        pre: (and (RW:at ?t ?l) (RW:in ?p ?t ?a1) (forall (?a2:1 I[0]:?p:6 I[1]:?t:5 I[2]:?a1:1 I[3]:?l:3) (imply (R:closer ?a2 ?a1) (RW:free ?a2 ?t))))
+        eff: (and (N:RW:in ?p ?t ?a1) (RW:free ?a1 ?t) (RW:at ?p ?l))
+    drive: ?t:5 ?from:3 ?to:3 ?t1:2 ?t2:2
+        pre: (and (RW:at ?t ?from) (R:connected ?from ?to) (RW:time-now ?t1) (R:next ?t1 ?t2))
+        eff: (and (N:RW:at ?t ?from) (N:RW:time-now ?t1) (RW:time-now ?t2) (RW:at ?t ?to))
+    deliver: ?p:6 ?l:3 ?t1:2 ?t2:2
+        pre: (and (RW:at ?p ?l) (RW:time-now ?t1) (R:le ?t1 ?t2))
+        eff: (and (N:RW:at ?p ?l) (W:delivered ?p ?l ?t2) (W:at-destination ?p ?l))
+Init[41]:
+  (at truck1 l3)
+  (free a1 truck1)
+  (free a2 truck1)
+  S:(closer a1 a2)
+  (at package1 l2)
+  (at package2 l2)
+  (at package3 l2)
+  S:(connected l1 l2)
+  S:(connected l1 l3)
+  S:(connected l2 l1)
+  S:(connected l2 l3)
+  S:(connected l3 l1)
+  S:(connected l3 l2)
+  (time-now t0)
+  S:(le t1 t1)
+  S:(le t1 t2)
+  S:(le t1 t3)
+  S:(le t1 t4)
+  S:(le t1 t5)
+  S:(le t1 t6)
+  S:(le t2 t2)
+  S:(le t2 t3)
+  S:(le t2 t4)
+  S:(le t2 t5)
+  S:(le t2 t6)
+  S:(le t3 t3)
+  S:(le t3 t4)
+  S:(le t3 t5)
+  S:(le t3 t6)
+  S:(le t4 t4)
+  S:(le t4 t5)
+  S:(le t4 t6)
+  S:(le t5 t5)
+  S:(le t5 t6)
+  S:(le t6 t6)
+  S:(next t0 t1)
+  S:(next t1 t2)
+  S:(next t2 t3)
+  S:(next t3 t4)
+  S:(next t4 t5)
+  S:(next t5 t6)
+Init[0]:
+Goal: (and (W:delivered package1 l3 t3) (W:at-destination package2 l1) (W:delivered package3 l1 t6))
+Metric: 0
+---- Domain: pddl-data/ipc-2006/trucks/domain.pddl | pddl-data/ipc-2006/trucks/p01.pddl END ----
+---- Domain: pddl-data/various/wumpus/domain.pddl | pddl-data/various/wumpus/p01.pddl ----
+Domain: wumpus-adl
+Problem: wumpus-adl-1
+Require: ff
+Type[6]:
+    [0]: object, parent: -1
+    [1]: agent, parent: 0
+    [2]: wumpus, parent: 0
+    [3]: gold, parent: 0
+    [4]: arrow, parent: 0
+    [5]: square, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9
+    [1]: 8
+    [2]: 9
+    [3]: 6
+    [4]: 7
+    [5]: 0 1 2 3 4 5
+Obj[10]:
+    [0]: s-1-1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: s-1-2, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: s-1-3, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: s-2-1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: s-2-2, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: s-2-3, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: gold-1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: arrow-1, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: agent-1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: wumpus-1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[6]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    at: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    adj: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    pit: 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    have: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    alive: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+Function[0]:
+Action[3]:
+    move: ?who:1 ?from:5 ?to:5
+        pre: (and (RW:alive ?who) (RW:at ?who ?from) (R:adj ?from ?to))
+        eff: (and (N:RW:at ?who ?from) (RW:at ?who ?to) (when (R:pit ?to) (and (N:RW:alive ?who))) (when (exists (?w:2 I[0]:?who:1 I[1]:?from:5 I[2]:?to:5) (and (RW:at ?w ?to) (RW:alive ?w))) (and (N:RW:alive ?who))))
+    take: ?who:1 ?where:5 ?what:0
+        pre: (and (RW:alive ?who) (RW:at ?who ?where) (RW:at ?what ?where))
+        eff: (and (RW:have ?who ?what) (N:RW:at ?what ?where))
+    shoot: ?who:1 ?where:5 ?with-arrow:4 ?victim:2 ?where-victim:5
+        pre: (and (RW:alive ?who) (RW:have ?who ?with-arrow) (RW:at ?who ?where) (RW:alive ?victim) (RW:at ?victim ?where-victim) (R:adj ?where ?where-victim))
+        eff: (and (N:RW:alive ?victim) (N:RW:at ?victim ?where-victim) (N:RW:have ?who ?with-arrow))
+Init[21]:
+  S:(adj s-1-1 s-1-2)
+  S:(adj s-1-2 s-1-1)
+  S:(adj s-1-2 s-1-3)
+  S:(adj s-1-3 s-1-2)
+  S:(adj s-2-1 s-2-2)
+  S:(adj s-2-2 s-2-1)
+  S:(adj s-2-2 s-2-3)
+  S:(adj s-2-3 s-2-2)
+  S:(adj s-1-1 s-2-1)
+  S:(adj s-2-1 s-1-1)
+  S:(adj s-1-2 s-2-2)
+  S:(adj s-2-2 s-1-2)
+  S:(adj s-1-3 s-2-3)
+  S:(adj s-2-3 s-1-3)
+  S:(pit s-1-2)
+  (at gold-1 s-1-3)
+  (at agent-1 s-1-1)
+  (alive agent-1)
+  (have agent-1 arrow-1)
+  (at wumpus-1 s-2-3)
+  (alive wumpus-1)
+Init[0]:
+Goal: (and (RW:have agent-1 gold-1) (RW:at agent-1 s-1-1) (RW:alive agent-1))
+Metric: 0
+---- Domain: pddl-data/various/wumpus/domain.pddl | pddl-data/various/wumpus/p01.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/barman/domain.pddl | pddl-data/ipc-2014/seq-opt/barman/p435.1.pddl ----
+Domain: barman
+Problem: prob
+Require: ff
+Type[10]:
+    [0]: object, parent: -1
+    [1]: hand, parent: 0
+    [2]: level, parent: 0
+    [3]: beverage, parent: 0
+    [4]: dispenser, parent: 0
+    [5]: container, parent: 0
+    [6]: ingredient, parent: 3
+    [7]: cocktail, parent: 3
+    [8]: shot, parent: 5
+    [9]: shaker, parent: 5
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+    [1]: 1 2
+    [2]: 18 19 20
+    [3]: 8 9 10 11 12 13 14
+    [4]: 15 16 17
+    [5]: 0 3 4 5 6 7
+    [6]: 8 9 10
+    [7]: 11 12 13 14
+    [8]: 3 4 5 6 7
+    [9]: 0
+Obj[21]:
+    [0]: shaker1, type: 9, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: left, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: right, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: shot1, type: 8, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: shot2, type: 8, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: shot3, type: 8, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: shot4, type: 8, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: shot5, type: 8, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: ingredient1, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: ingredient2, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: ingredient3, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: cocktail1, type: 7, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: cocktail2, type: 7, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: cocktail3, type: 7, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: cocktail4, type: 7, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: dispenser1, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: dispenser2, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: dispenser3, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: l0, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: l1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: l2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[16]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    ontable: 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    holding: 1 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    handempty: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    empty: 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    contains: 5 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    clean: 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    used: 5 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    dispenses: 4 6 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    shaker-empty-level: 9 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    shaker-level: 9 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    next: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    unshaked: 9 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    shaked: 9 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    cocktail-part1: 7 6 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    cocktail-part2: 7 6 :: is-private: 0, owner-param: -1, read: 1, write: 0
+Function[0]:
+Action[12]:
+    grasp: ?h:1 ?c:5
+        pre: (and (RW:ontable ?c) (RW:handempty ?h))
+        eff: (and (N:RW:ontable ?c) (N:RW:handempty ?h) (RW:holding ?h ?c))
+    leave: ?h:1 ?c:5
+        pre: (RW:holding ?h ?c)
+        eff: (and (N:RW:holding ?h ?c) (RW:handempty ?h) (RW:ontable ?c))
+    fill-shot: ?s:8 ?i:6 ?h1:1 ?h2:1 ?d:4
+        pre: (and (RW:holding ?h1 ?s) (RW:handempty ?h2) (R:dispenses ?d ?i) (RW:empty ?s) (RW:clean ?s))
+        eff: (and (N:RW:empty ?s) (RW:contains ?s ?i) (N:RW:clean ?s) (RW:used ?s ?i))
+    refill-shot: ?s:8 ?i:6 ?h1:1 ?h2:1 ?d:4
+        pre: (and (RW:holding ?h1 ?s) (RW:handempty ?h2) (R:dispenses ?d ?i) (RW:empty ?s) (RW:used ?s ?i))
+        eff: (and (N:RW:empty ?s) (RW:contains ?s ?i))
+    empty-shot: ?h:1 ?p:8 ?b:3
+        pre: (and (RW:holding ?h ?p) (RW:contains ?p ?b))
+        eff: (and (N:RW:contains ?p ?b) (RW:empty ?p))
+    clean-shot: ?s:8 ?b:3 ?h1:1 ?h2:1
+        pre: (and (RW:holding ?h1 ?s) (RW:handempty ?h2) (RW:empty ?s) (RW:used ?s ?b))
+        eff: (and (N:RW:used ?s ?b) (RW:clean ?s))
+    pour-shot-to-clean-shaker: ?s:8 ?i:6 ?d:9 ?h1:1 ?l:2 ?l1:2
+        pre: (and (RW:holding ?h1 ?s) (RW:contains ?s ?i) (RW:empty ?d) (RW:clean ?d) (RW:shaker-level ?d ?l) (R:next ?l ?l1))
+        eff: (and (N:RW:contains ?s ?i) (RW:empty ?s) (RW:contains ?d ?i) (N:RW:empty ?d) (N:RW:clean ?d) (RW:unshaked ?d) (N:RW:shaker-level ?d ?l) (RW:shaker-level ?d ?l1))
+    pour-shot-to-used-shaker: ?s:8 ?i:6 ?d:9 ?h1:1 ?l:2 ?l1:2
+        pre: (and (RW:holding ?h1 ?s) (RW:contains ?s ?i) (RW:unshaked ?d) (RW:shaker-level ?d ?l) (R:next ?l ?l1))
+        eff: (and (N:RW:contains ?s ?i) (RW:contains ?d ?i) (RW:empty ?s) (N:RW:shaker-level ?d ?l) (RW:shaker-level ?d ?l1))
+    empty-shaker: ?h:1 ?s:9 ?b:7 ?l:2 ?l1:2
+        pre: (and (RW:holding ?h ?s) (RW:contains ?s ?b) (RW:shaked ?s) (RW:shaker-level ?s ?l) (R:shaker-empty-level ?s ?l1))
+        eff: (and (N:RW:shaked ?s) (N:RW:shaker-level ?s ?l) (RW:shaker-level ?s ?l1) (N:RW:contains ?s ?b) (RW:empty ?s))
+    clean-shaker: ?h1:1 ?h2:1 ?s:9
+        pre: (and (RW:holding ?h1 ?s) (RW:handempty ?h2) (RW:empty ?s))
+        eff: (and (RW:clean ?s))
+    shake: ?b:7 ?d1:6 ?d2:6 ?s:9 ?h1:1 ?h2:1
+        pre: (and (RW:holding ?h1 ?s) (RW:handempty ?h2) (RW:contains ?s ?d1) (RW:contains ?s ?d2) (R:cocktail-part1 ?b ?d1) (R:cocktail-part2 ?b ?d2) (RW:unshaked ?s))
+        eff: (and (N:RW:unshaked ?s) (N:RW:contains ?s ?d1) (N:RW:contains ?s ?d2) (RW:shaked ?s) (RW:contains ?s ?b))
+    pour-shaker-to-shot: ?b:3 ?d:8 ?h:1 ?s:9 ?l:2 ?l1:2
+        pre: (and (RW:holding ?h ?s) (RW:shaked ?s) (RW:empty ?d) (RW:clean ?d) (RW:contains ?s ?b) (RW:shaker-level ?s ?l) (R:next ?l1 ?l))
+        eff: (and (N:RW:clean ?d) (N:RW:empty ?d) (RW:contains ?d ?b) (RW:shaker-level ?s ?l1) (N:RW:shaker-level ?s ?l))
+Init[35]:
+  (ontable shaker1)
+  (ontable shot1)
+  (ontable shot2)
+  (ontable shot3)
+  (ontable shot4)
+  (ontable shot5)
+  S:(dispenses dispenser1 ingredient1)
+  S:(dispenses dispenser2 ingredient2)
+  S:(dispenses dispenser3 ingredient3)
+  (clean shaker1)
+  (clean shot1)
+  (clean shot2)
+  (clean shot3)
+  (clean shot4)
+  (clean shot5)
+  (empty shaker1)
+  (empty shot1)
+  (empty shot2)
+  (empty shot3)
+  (empty shot4)
+  (empty shot5)
+  (handempty left)
+  (handempty right)
+  S:(shaker-empty-level shaker1 l0)
+  (shaker-level shaker1 l0)
+  S:(next l0 l1)
+  S:(next l1 l2)
+  S:(cocktail-part1 cocktail1 ingredient3)
+  S:(cocktail-part2 cocktail1 ingredient1)
+  S:(cocktail-part1 cocktail2 ingredient2)
+  S:(cocktail-part2 cocktail2 ingredient3)
+  S:(cocktail-part1 cocktail3 ingredient3)
+  S:(cocktail-part2 cocktail3 ingredient2)
+  S:(cocktail-part1 cocktail4 ingredient3)
+  S:(cocktail-part2 cocktail4 ingredient1)
+Init[0]:
+Goal: (and (RW:contains shot1 cocktail4) (RW:contains shot2 cocktail2) (RW:contains shot3 cocktail3) (RW:contains shot4 cocktail1))
+Metric: 0
+---- Domain: pddl-data/ipc-2014/seq-opt/barman/domain.pddl | pddl-data/ipc-2014/seq-opt/barman/p435.1.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/cavediving/domain.pddl | pddl-data/ipc-2014/seq-opt/cavediving/testing01.pddl ----
+Domain: cave-diving-adl
+Problem: cave-diving-adl-p01
+Require: 200ff
+Type[5]:
+    [0]: object, parent: -1
+    [1]: location, parent: 0
+    [2]: diver, parent: 0
+    [3]: tank, parent: 0
+    [4]: quantity, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+    [1]: 0 1 2 3 4 5
+    [2]: 6 7 8 9
+    [3]: 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+    [4]: 26 27 28 29 30
+Obj[31]:
+    [0]: l0, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: l1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: l2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: l3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: l4, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: l5, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: d0, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: d1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: d2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: d3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: t0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: t1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: t2, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: t3, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: t4, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: t5, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: t6, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: t7, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: t8, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: t9, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: t10, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [21]: t11, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [22]: t12, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [23]: t13, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [24]: t14, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [25]: dummy, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [26]: zero, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [27]: one, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [28]: two, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [29]: three, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [30]: four, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[17]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    at-tank: 3 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    in-storage: 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    full: 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    next-tank: 3 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    at-diver: 2 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    available: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at-surface: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    decompressing: 2 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    precludes: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    cave-entrance: 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    connected: 1 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    next-quantity: 4 4 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    holding: 2 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    capacity: 2 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    have-photo: 1 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    in-water: :: is-private: 0, owner-param: -1, read: 1, write: 1
+Function[3]:
+    hiring-cost: 2 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    other-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+    total-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+Action[8]:
+    hire-diver: ?d1:2
+        pre: (and (RW:available ?d1) (N:RW:in-water))
+        eff: (and (RW:at-surface ?d1) (N:RW:available ?d1) (forall (?d2:2 I[0]:?d1:2) (when (R:precludes ?d1 ?d2) (N:RW:available ?d2))) (RW:in-water) (increase (total-cost) (hiring-cost ?d1)))
+    prepare-tank: ?d:2 ?t1:3 ?t2:3 ?q1:4 ?q2:4
+        pre: (and (RW:at-surface ?d) (RW:in-storage ?t1) (R:next-quantity ?q1 ?q2) (RW:capacity ?d ?q2) (R:next-tank ?t1 ?t2))
+        eff: (and (N:RW:in-storage ?t1) (N:RW:capacity ?d ?q2) (RW:in-storage ?t2) (RW:full ?t1) (RW:capacity ?d ?q1) (RW:holding ?d ?t1) (increase (total-cost) (other-cost)))
+    enter-water: ?d:2 ?l:1
+        pre: (and (RW:at-surface ?d) (R:cave-entrance ?l))
+        eff: (and (N:RW:at-surface ?d) (RW:at-diver ?d ?l) (increase (total-cost) (other-cost)))
+    pickup-tank: ?d:2 ?t:3 ?l:1 ?q1:4 ?q2:4
+        pre: (and (RW:at-diver ?d ?l) (RW:at-tank ?t ?l) (R:next-quantity ?q1 ?q2) (RW:capacity ?d ?q2))
+        eff: (and (N:RW:at-tank ?t ?l) (N:RW:capacity ?d ?q2) (RW:holding ?d ?t) (RW:capacity ?d ?q1) (increase (total-cost) (other-cost)))
+    drop-tank: ?d:2 ?t:3 ?l:1 ?q1:4 ?q2:4
+        pre: (and (RW:at-diver ?d ?l) (RW:holding ?d ?t) (R:next-quantity ?q1 ?q2) (RW:capacity ?d ?q1))
+        eff: (and (N:RW:holding ?d ?t) (N:RW:capacity ?d ?q1) (RW:at-tank ?t ?l) (RW:capacity ?d ?q2) (increase (total-cost) (other-cost)))
+    swim: ?d:2 ?t:3 ?l1:1 ?l2:1
+        pre: (and (RW:at-diver ?d ?l1) (RW:holding ?d ?t) (RW:full ?t) (R:connected ?l1 ?l2))
+        eff: (and (N:RW:at-diver ?d ?l1) (N:RW:full ?t) (RW:at-diver ?d ?l2) (increase (total-cost) (other-cost)))
+    photograph: ?d:2 ?l:1 ?t:3
+        pre: (and (RW:at-diver ?d ?l) (RW:holding ?d ?t) (RW:full ?t))
+        eff: (and (N:RW:full ?t) (W:have-photo ?l) (increase (total-cost) (other-cost)))
+    decompress: ?d:2 ?l:1
+        pre: (and (RW:at-diver ?d ?l) (R:cave-entrance ?l))
+        eff: (and (N:RW:at-diver ?d ?l) (W:decompressing ?d) (N:RW:in-water) (increase (total-cost) (other-cost)))
+Init[41]:
+  (available d0)
+  (available d1)
+  (available d2)
+  (available d3)
+  (capacity d0 four)
+  (capacity d1 four)
+  (capacity d2 four)
+  (capacity d3 four)
+  (in-storage t0)
+  S:(next-tank t0 t1)
+  S:(next-tank t1 t2)
+  S:(next-tank t2 t3)
+  S:(next-tank t3 t4)
+  S:(next-tank t4 t5)
+  S:(next-tank t5 t6)
+  S:(next-tank t6 t7)
+  S:(next-tank t7 t8)
+  S:(next-tank t8 t9)
+  S:(next-tank t9 t10)
+  S:(next-tank t10 t11)
+  S:(next-tank t11 t12)
+  S:(next-tank t12 t13)
+  S:(next-tank t13 t14)
+  S:(next-tank t14 dummy)
+  S:(cave-entrance l0)
+  S:(connected l0 l1)
+  S:(connected l1 l0)
+  S:(connected l1 l2)
+  S:(connected l2 l1)
+  S:(connected l2 l3)
+  S:(connected l3 l2)
+  S:(connected l1 l4)
+  S:(connected l4 l1)
+  S:(connected l1 l5)
+  S:(connected l5 l1)
+  S:(next-quantity zero one)
+  S:(next-quantity one two)
+  S:(next-quantity two three)
+  S:(next-quantity three four)
+  S:(precludes d1 d3)
+  S:(precludes d2 d3)
+Init[6]:
+  (= (hiring-cost d0) 60)
+  (= (hiring-cost d1) 10)
+  (= (hiring-cost d2) 10)
+  (= (hiring-cost d3) 58)
+  (= (other-cost) 1)
+  (= (total-cost) 0)
+Goal: (and (W:have-photo l4) (W:have-photo l5) (W:decompressing d0) (W:decompressing d1) (W:decompressing d2) (W:decompressing d3))
+Metric: 1
+---- Domain: pddl-data/ipc-2014/seq-opt/cavediving/domain.pddl | pddl-data/ipc-2014/seq-opt/cavediving/testing01.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/childsnack/domain.pddl | pddl-data/ipc-2014/seq-opt/childsnack/child-snack_pfile01.pddl ----
+Domain: child-snack
+Problem: prob-snack
+Require: ff
+Type[7]:
+    [0]: object, parent: -1
+    [1]: child, parent: 0
+    [2]: bread-portion, parent: 0
+    [3]: content-portion, parent: 0
+    [4]: sandwich, parent: 0
+    [5]: tray, parent: 0
+    [6]: place, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+    [1]: 1 2 3 4 5 6
+    [2]: 7 8 9 10 11 12
+    [3]: 13 14 15 16 17 18
+    [4]: 24 25 26 27 28 29 30 31
+    [5]: 19 20
+    [6]: 0 21 22 23
+Obj[32]:
+    [0]: kitchen, type: 6, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [1]: child1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: child2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: child3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: child4, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: child5, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: child6, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: bread1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: bread2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: bread3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: bread4, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: bread5, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: bread6, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: content1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: content2, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: content3, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: content4, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: content5, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: content6, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: tray1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: tray2, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [21]: table1, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [22]: table2, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [23]: table3, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [24]: sandw1, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [25]: sandw2, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [26]: sandw3, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [27]: sandw4, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [28]: sandw5, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [29]: sandw6, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [30]: sandw7, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [31]: sandw8, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[14]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    at_kitchen_bread: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at_kitchen_content: 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at_kitchen_sandwich: 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    no_gluten_bread: 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    no_gluten_content: 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    ontray: 4 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    no_gluten_sandwich: 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    allergic_gluten: 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    not_allergic_gluten: 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    served: 1 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    waiting: 1 6 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    at: 5 6 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    notexist: 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+Function[0]:
+Action[6]:
+    make_sandwich_no_gluten: ?s:4 ?b:2 ?c:3
+        pre: (and (RW:at_kitchen_bread ?b) (RW:at_kitchen_content ?c) (R:no_gluten_bread ?b) (R:no_gluten_content ?c) (RW:notexist ?s))
+        eff: (and (N:RW:at_kitchen_bread ?b) (N:RW:at_kitchen_content ?c) (RW:at_kitchen_sandwich ?s) (RW:no_gluten_sandwich ?s) (N:RW:notexist ?s))
+    make_sandwich: ?s:4 ?b:2 ?c:3
+        pre: (and (RW:at_kitchen_bread ?b) (RW:at_kitchen_content ?c) (RW:notexist ?s))
+        eff: (and (N:RW:at_kitchen_bread ?b) (N:RW:at_kitchen_content ?c) (RW:at_kitchen_sandwich ?s) (N:RW:notexist ?s))
+    put_on_tray: ?s:4 ?t:5
+        pre: (and (RW:at_kitchen_sandwich ?s) (RW:at ?t kitchen))
+        eff: (and (N:RW:at_kitchen_sandwich ?s) (RW:ontray ?s ?t))
+    serve_sandwich_no_gluten: ?s:4 ?c:1 ?t:5 ?p:6
+        pre: (and (R:allergic_gluten ?c) (RW:ontray ?s ?t) (R:waiting ?c ?p) (RW:no_gluten_sandwich ?s) (RW:at ?t ?p))
+        eff: (and (N:RW:ontray ?s ?t) (W:served ?c))
+    serve_sandwich: ?s:4 ?c:1 ?t:5 ?p:6
+        pre: (and (R:not_allergic_gluten ?c) (R:waiting ?c ?p) (RW:ontray ?s ?t) (RW:at ?t ?p))
+        eff: (and (N:RW:ontray ?s ?t) (W:served ?c))
+    move_tray: ?t:5 ?p1:6 ?p2:6
+        pre: (and (RW:at ?t ?p1))
+        eff: (and (N:RW:at ?t ?p1) (RW:at ?t ?p2))
+Init[38]:
+  (at tray1 kitchen)
+  (at tray2 kitchen)
+  (at_kitchen_bread bread1)
+  (at_kitchen_bread bread2)
+  (at_kitchen_bread bread3)
+  (at_kitchen_bread bread4)
+  (at_kitchen_bread bread5)
+  (at_kitchen_bread bread6)
+  (at_kitchen_content content1)
+  (at_kitchen_content content2)
+  (at_kitchen_content content3)
+  (at_kitchen_content content4)
+  (at_kitchen_content content5)
+  (at_kitchen_content content6)
+  S:(no_gluten_bread bread4)
+  S:(no_gluten_bread bread1)
+  S:(no_gluten_content content6)
+  S:(no_gluten_content content5)
+  S:(allergic_gluten child3)
+  S:(allergic_gluten child4)
+  S:(not_allergic_gluten child1)
+  S:(not_allergic_gluten child2)
+  S:(not_allergic_gluten child5)
+  S:(not_allergic_gluten child6)
+  S:(waiting child1 table1)
+  S:(waiting child2 table1)
+  S:(waiting child3 table1)
+  S:(waiting child4 table3)
+  S:(waiting child5 table1)
+  S:(waiting child6 table3)
+  (notexist sandw1)
+  (notexist sandw2)
+  (notexist sandw3)
+  (notexist sandw4)
+  (notexist sandw5)
+  (notexist sandw6)
+  (notexist sandw7)
+  (notexist sandw8)
+Init[0]:
+Goal: (and (W:served child1) (W:served child2) (W:served child3) (W:served child4) (W:served child5) (W:served child6))
+Metric: 0
+---- Domain: pddl-data/ipc-2014/seq-opt/childsnack/domain.pddl | pddl-data/ipc-2014/seq-opt/childsnack/child-snack_pfile01.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/citycar/domain.pddl | pddl-data/ipc-2014/seq-opt/citycar/p2-2-2-1-2.pddl ----
+Domain: citycar
+Problem: citycar-2-2-2
+Require: 200ff
+Type[5]:
+    [0]: object, parent: -1
+    [1]: car, parent: 0
+    [2]: junction, parent: 0
+    [3]: garage, parent: 0
+    [4]: road, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10
+    [1]: 4 5
+    [2]: 0 1 2 3
+    [3]: 6
+    [4]: 7 8 9 10
+Obj[11]:
+    [0]: junction0-0, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: junction0-1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: junction1-0, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: junction1-1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: car0, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: car1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: garage0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: road0, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: road1, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: road2, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: road3, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[11]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    same_line: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    diagonal: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    at_car_jun: 1 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at_car_road: 1 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    starting: 1 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    arrived: 1 2 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    road_connect: 4 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    clear: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    in_place: 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at_garage: 3 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+Function[1]:
+    total-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+Action[7]:
+    move_car_in_road: ?xy_initial:2 ?xy_final:2 ?machine:1 ?r1:4
+        pre: (and (RW:at_car_jun ?machine ?xy_initial) (RW:road_connect ?r1 ?xy_initial ?xy_final) (RW:in_place ?r1))
+        eff: (and (RW:clear ?xy_initial) (RW:at_car_road ?machine ?r1) (N:RW:at_car_jun ?machine ?xy_initial) (increase (total-cost) 1))
+    move_car_out_road: ?xy_initial:2 ?xy_final:2 ?machine:1 ?r1:4
+        pre: (and (RW:at_car_road ?machine ?r1) (RW:clear ?xy_final) (RW:road_connect ?r1 ?xy_initial ?xy_final) (RW:in_place ?r1))
+        eff: (and (RW:at_car_jun ?machine ?xy_final) (N:RW:clear ?xy_final) (N:RW:at_car_road ?machine ?r1) (increase (total-cost) 1))
+    car_arrived: ?xy_final:2 ?machine:1
+        pre: (and (RW:at_car_jun ?machine ?xy_final))
+        eff: (and (RW:clear ?xy_final) (W:arrived ?machine ?xy_final) (N:RW:at_car_jun ?machine ?xy_final))
+    car_start: ?xy_final:2 ?machine:1 ?g:3
+        pre: (and (R:at_garage ?g ?xy_final) (RW:starting ?machine ?g) (RW:clear ?xy_final))
+        eff: (and (N:RW:clear ?xy_final) (RW:at_car_jun ?machine ?xy_final) (N:RW:starting ?machine ?g))
+    build_diagonal_oneway: ?xy_initial:2 ?xy_final:2 ?r1:4
+        pre: (and (RW:clear ?xy_final) (N:RW:in_place ?r1) (R:diagonal ?xy_initial ?xy_final))
+        eff: (and (RW:road_connect ?r1 ?xy_initial ?xy_final) (RW:in_place ?r1) (increase (total-cost) 30))
+    build_straight_oneway: ?xy_initial:2 ?xy_final:2 ?r1:4
+        pre: (and (RW:clear ?xy_final) (R:same_line ?xy_initial ?xy_final) (N:RW:in_place ?r1))
+        eff: (and (RW:road_connect ?r1 ?xy_initial ?xy_final) (RW:in_place ?r1) (increase (total-cost) 20))
+    destroy_road: ?xy_initial:2 ?xy_final:2 ?r1:4
+        pre: (and (RW:road_connect ?r1 ?xy_initial ?xy_final) (RW:in_place ?r1))
+        eff: (and (N:RW:in_place ?r1) (N:RW:road_connect ?r1 ?xy_initial ?xy_final) (increase (total-cost) 10) (forall (?c1:1 I[0]:?xy_initial:2 I[1]:?xy_final:2 I[2]:?r1:4) (when (RW:at_car_road ?c1 ?r1) (and (N:RW:at_car_road ?c1 ?r1) (RW:at_car_jun ?c1 ?xy_initial)))))
+Init[19]:
+  S:(same_line junction0-0 junction0-1)
+  S:(same_line junction0-1 junction0-0)
+  S:(same_line junction1-0 junction1-1)
+  S:(same_line junction1-1 junction1-0)
+  S:(same_line junction0-0 junction1-0)
+  S:(same_line junction1-0 junction0-0)
+  S:(same_line junction0-1 junction1-1)
+  S:(same_line junction1-1 junction0-1)
+  S:(diagonal junction0-0 junction1-1)
+  S:(diagonal junction1-1 junction0-0)
+  S:(diagonal junction0-1 junction1-0)
+  S:(diagonal junction1-0 junction0-1)
+  (clear junction0-0)
+  (clear junction0-1)
+  (clear junction1-0)
+  (clear junction1-1)
+  S:(at_garage garage0 junction0-1)
+  (starting car0 garage0)
+  (starting car1 garage0)
+Init[1]:
+  (= (total-cost) 0)
+Goal: (and (W:arrived car0 junction1-1) (W:arrived car1 junction1-0))
+Metric: 1
+---- Domain: pddl-data/ipc-2014/seq-opt/citycar/domain.pddl | pddl-data/ipc-2014/seq-opt/citycar/p2-2-2-1-2.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/floortile/domain.pddl | pddl-data/ipc-2014/seq-opt/floortile/p01-4-3-2.pddl ----
+Domain: floor-tile
+Problem: p01-432
+Require: 200ff
+Type[4]:
+    [0]: object, parent: -1
+    [1]: robot, parent: 0
+    [2]: tile, parent: 0
+    [3]: color, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+    [1]: 15 16
+    [2]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+    [3]: 17 18
+Obj[19]:
+    [0]: tile_0-1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: tile_0-2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: tile_0-3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: tile_1-1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: tile_1-2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: tile_1-3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: tile_2-1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: tile_2-2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: tile_2-3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: tile_3-1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: tile_3-2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: tile_3-3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: tile_4-1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: tile_4-2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: tile_4-3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: robot1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: robot2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: white, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: black, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[11]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    robot-at: 1 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    up: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    down: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    right: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    left: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    clear: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    painted: 2 3 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    robot-has: 1 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    available-color: 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    free-color: 1 :: is-private: 0, owner-param: -1, read: 0, write: 0
+Function[1]:
+    total-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+Action[7]:
+    change-color: ?r:1 ?c:3 ?c2:3
+        pre: (and (RW:robot-has ?r ?c) (R:available-color ?c2))
+        eff: (and (N:RW:robot-has ?r ?c) (RW:robot-has ?r ?c2) (increase (total-cost) 5))
+    paint-up: ?r:1 ?y:2 ?x:2 ?c:3
+        pre: (and (RW:robot-has ?r ?c) (RW:robot-at ?r ?x) (R:up ?y ?x) (RW:clear ?y))
+        eff: (and (N:RW:clear ?y) (W:painted ?y ?c) (increase (total-cost) 2))
+    paint-down: ?r:1 ?y:2 ?x:2 ?c:3
+        pre: (and (RW:robot-has ?r ?c) (RW:robot-at ?r ?x) (R:down ?y ?x) (RW:clear ?y))
+        eff: (and (N:RW:clear ?y) (W:painted ?y ?c) (increase (total-cost) 2))
+    up: ?r:1 ?x:2 ?y:2
+        pre: (and (RW:robot-at ?r ?x) (R:up ?y ?x) (RW:clear ?y))
+        eff: (and (RW:robot-at ?r ?y) (N:RW:robot-at ?r ?x) (RW:clear ?x) (N:RW:clear ?y) (increase (total-cost) 3))
+    down: ?r:1 ?x:2 ?y:2
+        pre: (and (RW:robot-at ?r ?x) (R:down ?y ?x) (RW:clear ?y))
+        eff: (and (RW:robot-at ?r ?y) (N:RW:robot-at ?r ?x) (RW:clear ?x) (N:RW:clear ?y) (increase (total-cost) 1))
+    right: ?r:1 ?x:2 ?y:2
+        pre: (and (RW:robot-at ?r ?x) (R:right ?y ?x) (RW:clear ?y))
+        eff: (and (RW:robot-at ?r ?y) (N:RW:robot-at ?r ?x) (RW:clear ?x) (N:RW:clear ?y) (increase (total-cost) 1))
+    left: ?r:1 ?x:2 ?y:2
+        pre: (and (RW:robot-at ?r ?x) (R:left ?y ?x) (RW:clear ?y))
+        eff: (and (RW:robot-at ?r ?y) (N:RW:robot-at ?r ?x) (RW:clear ?x) (N:RW:clear ?y) (increase (total-cost) 1))
+Init[63]:
+  (robot-at robot1 tile_0-1)
+  (robot-has robot1 white)
+  (robot-at robot2 tile_2-2)
+  (robot-has robot2 black)
+  S:(available-color white)
+  S:(available-color black)
+  (clear tile_0-2)
+  (clear tile_0-3)
+  (clear tile_1-1)
+  (clear tile_1-2)
+  (clear tile_1-3)
+  (clear tile_2-1)
+  (clear tile_2-3)
+  (clear tile_3-1)
+  (clear tile_3-2)
+  (clear tile_3-3)
+  (clear tile_4-1)
+  (clear tile_4-2)
+  (clear tile_4-3)
+  S:(up tile_1-1 tile_0-1)
+  S:(up tile_1-2 tile_0-2)
+  S:(up tile_1-3 tile_0-3)
+  S:(up tile_2-1 tile_1-1)
+  S:(up tile_2-2 tile_1-2)
+  S:(up tile_2-3 tile_1-3)
+  S:(up tile_3-1 tile_2-1)
+  S:(up tile_3-2 tile_2-2)
+  S:(up tile_3-3 tile_2-3)
+  S:(up tile_4-1 tile_3-1)
+  S:(up tile_4-2 tile_3-2)
+  S:(up tile_4-3 tile_3-3)
+  S:(down tile_0-1 tile_1-1)
+  S:(down tile_0-2 tile_1-2)
+  S:(down tile_0-3 tile_1-3)
+  S:(down tile_1-1 tile_2-1)
+  S:(down tile_1-2 tile_2-2)
+  S:(down tile_1-3 tile_2-3)
+  S:(down tile_2-1 tile_3-1)
+  S:(down tile_2-2 tile_3-2)
+  S:(down tile_2-3 tile_3-3)
+  S:(down tile_3-1 tile_4-1)
+  S:(down tile_3-2 tile_4-2)
+  S:(down tile_3-3 tile_4-3)
+  S:(right tile_0-2 tile_0-1)
+  S:(right tile_0-3 tile_0-2)
+  S:(right tile_1-2 tile_1-1)
+  S:(right tile_1-3 tile_1-2)
+  S:(right tile_2-2 tile_2-1)
+  S:(right tile_2-3 tile_2-2)
+  S:(right tile_3-2 tile_3-1)
+  S:(right tile_3-3 tile_3-2)
+  S:(right tile_4-2 tile_4-1)
+  S:(right tile_4-3 tile_4-2)
+  S:(left tile_0-1 tile_0-2)
+  S:(left tile_0-2 tile_0-3)
+  S:(left tile_1-1 tile_1-2)
+  S:(left tile_1-2 tile_1-3)
+  S:(left tile_2-1 tile_2-2)
+  S:(left tile_2-2 tile_2-3)
+  S:(left tile_3-1 tile_3-2)
+  S:(left tile_3-2 tile_3-3)
+  S:(left tile_4-1 tile_4-2)
+  S:(left tile_4-2 tile_4-3)
+Init[1]:
+  (= (total-cost) 0)
+Goal: (and (W:painted tile_1-1 white) (W:painted tile_1-2 black) (W:painted tile_1-3 white) (W:painted tile_2-1 black) (W:painted tile_2-2 white) (W:painted tile_2-3 black) (W:painted tile_3-1 white) (W:painted tile_3-2 black) (W:painted tile_3-3 white) (W:painted tile_4-1 black) (W:painted tile_4-2 white) (W:painted tile_4-3 black))
+Metric: 1
+---- Domain: pddl-data/ipc-2014/seq-opt/floortile/domain.pddl | pddl-data/ipc-2014/seq-opt/floortile/p01-4-3-2.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/ged/domain.pddl | pddl-data/ipc-2014/seq-opt/ged/d-1-2.pddl ----
+Domain: genome-edit-distance
+Problem: trachelium-to-campanula
+Require: 200ff
+Type[1]:
+    [0]: object, parent: -1
+Obj-by-Type:
+    [0]: 0 1 2
+Obj[3]:
+    [0]: sub3, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: sub2, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: sub1, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[27]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    duplicate: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    swappable: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    cw: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    free: 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    gone: 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    present: 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    normal: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    inverted: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    idle: :: is-private: 0, owner-param: -1, read: 1, write: 1
+    cutting: :: is-private: 0, owner-param: -1, read: 1, write: 1
+    have-cut: :: is-private: 0, owner-param: -1, read: 1, write: 1
+    splicing: :: is-private: 0, owner-param: -1, read: 1, write: 1
+    splice-next: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    splicing-last: :: is-private: 0, owner-param: -1, read: 1, write: 1
+    inverse-splicing: :: is-private: 0, owner-param: -1, read: 1, write: 1
+    inverse-splice-next: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    inverse-splicing-last: :: is-private: 0, owner-param: -1, read: 1, write: 1
+    finished: :: is-private: 0, owner-param: -1, read: 1, write: 1
+    cut-point-1: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    cut-point-2: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    last-cut-point: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    splice-point-1: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    splice-point-2: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    s-first: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    s-next: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    s-last: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+Function[1]:
+    total-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+Action[21]:
+    begin-cut: ?x:0 ?y:0
+        pre: (and (N:R:= ?x ?y) (RW:idle) (RW:cw ?x ?y))
+        eff: (and (N:RW:idle) (RW:cutting) (N:RW:cw ?x ?y) (RW:cut-point-1 ?x) (RW:last-cut-point ?x) (RW:s-first ?y) (RW:s-last ?y))
+    continue-cut: ?x:0 ?y:0
+        pre: (and (N:R:= ?x ?y) (RW:cutting) (RW:s-last ?x) (RW:cw ?x ?y))
+        eff: (and (N:RW:cw ?x ?y) (N:RW:s-last ?x) (RW:s-next ?x ?y) (RW:s-last ?y))
+    end-cut-1: ?x:0 ?y:0
+        pre: (and (N:R:= ?x ?y) (RW:cutting) (RW:s-last ?x) (RW:cw ?x ?y))
+        eff: (and (N:RW:cw ?x ?y) (RW:cut-point-2 ?y))
+    end-cut-2: ?x:0 ?y:0
+        pre: (and (RW:cutting) (RW:cut-point-1 ?x) (RW:cut-point-2 ?y))
+        eff: (and (N:RW:cutting) (N:RW:cut-point-1 ?x) (N:RW:cut-point-2 ?y) (RW:have-cut) (RW:cw ?x ?y))
+    begin-transpose-splice: ?x:0 ?y:0
+        pre: (and (N:R:= ?x ?y) (RW:have-cut) (RW:cw ?x ?y))
+        eff: (and (N:RW:have-cut) (N:RW:cw ?x ?y) (RW:splicing) (RW:splice-point-1 ?x) (RW:splice-point-2 ?y) (increase (total-cost) 2))
+    continue-splice-1: ?x:0 ?y:0
+        pre: (and (RW:splicing) (RW:s-first ?x) (RW:s-next ?x ?y))
+        eff: (and (N:RW:s-first ?x) (N:RW:s-next ?x ?y) (N:RW:splicing) (RW:s-first ?y) (RW:splice-next ?x))
+    continue-splice-2: ?x:0 ?y:0
+        pre: (and (RW:splice-next ?x) (RW:splice-point-1 ?y))
+        eff: (and (N:RW:splice-point-1 ?y) (N:RW:splice-next ?x) (RW:cw ?y ?x) (RW:splice-point-1 ?x) (RW:splicing))
+    end-splice-1: ?x:0 ?y:0
+        pre: (and (RW:splicing) (RW:splice-point-1 ?y) (RW:s-first ?x) (RW:s-last ?x))
+        eff: (and (N:RW:splicing) (N:RW:s-first ?x) (N:RW:s-last ?x) (N:RW:splice-point-1 ?y) (RW:splicing-last) (RW:cw ?y ?x) (RW:splice-point-1 ?x))
+    end-splice-2: ?x:0 ?y:0
+        pre: (and (RW:splicing-last) (RW:splice-point-1 ?x) (RW:splice-point-2 ?y))
+        eff: (and (N:RW:splicing-last) (N:RW:splice-point-1 ?x) (N:RW:splice-point-2 ?y) (RW:finished) (RW:cw ?x ?y))
+    begin-transverse-splice: ?x:0 ?y:0
+        pre: (and (N:R:= ?x ?y) (RW:have-cut) (RW:cw ?x ?y))
+        eff: (and (N:RW:have-cut) (N:RW:cw ?x ?y) (RW:inverse-splicing) (RW:splice-point-1 ?x) (RW:splice-point-2 ?y) (increase (total-cost) 2))
+    begin-inverse-splice: ?x:0 ?y:0
+        pre: (and (N:R:= ?x ?y) (RW:have-cut) (RW:cw ?x ?y) (RW:last-cut-point ?x))
+        eff: (and (N:RW:have-cut) (N:RW:cw ?x ?y) (RW:inverse-splicing) (RW:splice-point-1 ?x) (RW:splice-point-2 ?y) (increase (total-cost) 1))
+    begin-inverse-splice-special-case: ?x:0
+        pre: (and (RW:have-cut) (RW:cw ?x ?x) (RW:last-cut-point ?x))
+        eff: (and (N:RW:have-cut) (N:RW:cw ?x ?x) (RW:inverse-splicing) (RW:splice-point-1 ?x) (RW:splice-point-2 ?x) (increase (total-cost) 1))
+    continue-inverse-splice-1a: ?x:0 ?y:0
+        pre: (and (RW:inverse-splicing) (RW:normal ?x) (RW:s-last ?x) (RW:s-next ?y ?x))
+        eff: (and (N:RW:s-last ?x) (N:RW:s-next ?y ?x) (N:RW:normal ?x) (RW:s-last ?y) (N:RW:inverse-splicing) (RW:inverse-splice-next ?x) (RW:inverted ?x))
+    continue-inverse-splice-1b: ?x:0 ?y:0
+        pre: (and (RW:inverse-splicing) (RW:inverted ?x) (RW:s-last ?x) (RW:s-next ?y ?x))
+        eff: (and (N:RW:s-last ?x) (N:RW:s-next ?y ?x) (N:RW:inverted ?x) (RW:s-last ?y) (N:RW:inverse-splicing) (RW:inverse-splice-next ?x) (RW:normal ?x))
+    continue-inverse-splice-2: ?x:0 ?y:0
+        pre: (and (RW:inverse-splice-next ?x) (RW:splice-point-1 ?y))
+        eff: (and (N:RW:inverse-splice-next ?x) (N:RW:splice-point-1 ?y) (RW:inverse-splicing) (RW:cw ?y ?x) (RW:splice-point-1 ?x))
+    end-inverse-splice-1a: ?x:0 ?y:0
+        pre: (and (RW:inverse-splicing) (RW:normal ?x) (RW:splice-point-1 ?y) (RW:s-first ?x) (RW:s-last ?x))
+        eff: (and (N:RW:inverse-splicing) (RW:inverse-splicing-last) (N:RW:splice-point-1 ?y) (N:RW:s-first ?x) (N:RW:s-last ?x) (N:RW:normal ?x) (RW:cw ?y ?x) (RW:splice-point-1 ?x) (RW:inverted ?x))
+    end-inverse-splice-1b: ?x:0 ?y:0
+        pre: (and (RW:inverse-splicing) (RW:inverted ?x) (RW:splice-point-1 ?y) (RW:s-first ?x) (RW:s-last ?x))
+        eff: (and (N:RW:inverse-splicing) (RW:inverse-splicing-last) (N:RW:splice-point-1 ?y) (N:RW:s-first ?x) (N:RW:s-last ?x) (N:RW:inverted ?x) (RW:cw ?y ?x) (RW:splice-point-1 ?x) (RW:normal ?x))
+    end-inverse-splice-2: ?x:0 ?y:0
+        pre: (and (RW:inverse-splicing-last) (RW:splice-point-1 ?x) (RW:splice-point-2 ?y))
+        eff: (and (N:RW:inverse-splicing-last) (N:RW:splice-point-1 ?x) (N:RW:splice-point-2 ?y) (RW:finished) (RW:cw ?x ?y))
+    invert-single-gene-a: ?x:0
+        pre: (and (RW:idle) (RW:normal ?x))
+        eff: (and (N:RW:normal ?x) (RW:inverted ?x) (increase (total-cost) 1))
+    invert-single-gene-b: ?x:0
+        pre: (and (RW:idle) (RW:inverted ?x))
+        eff: (and (N:RW:inverted ?x) (RW:normal ?x) (increase (total-cost) 1))
+    reset-1: ?x:0
+        pre: (and (RW:finished) (RW:last-cut-point ?x))
+        eff: (and (N:RW:last-cut-point ?x) (N:RW:finished) (RW:idle))
+Init[10]:
+  (normal sub2)
+  (normal sub3)
+  (normal sub1)
+  (present sub2)
+  (present sub3)
+  (present sub1)
+  (cw sub1 sub2)
+  (cw sub3 sub1)
+  (cw sub2 sub3)
+  (idle)
+Init[1]:
+  (= (total-cost) 0)
+Goal: (and (RW:normal sub2) (RW:inverted sub3) (RW:normal sub1) (RW:cw sub1 sub2) (RW:cw sub3 sub1) (RW:cw sub2 sub3))
+Metric: 1
+---- Domain: pddl-data/ipc-2014/seq-opt/ged/domain.pddl | pddl-data/ipc-2014/seq-opt/ged/d-1-2.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/hiking/domain.pddl | pddl-data/ipc-2014/seq-opt/hiking/ptesting-1-2-3.pddl ----
+Domain: hiking
+Problem: hiking-1-2
+Require: ff
+Type[6]:
+    [0]: object, parent: -1
+    [1]: car, parent: 0
+    [2]: tent, parent: 0
+    [3]: person, parent: 0
+    [4]: couple, parent: 0
+    [5]: place, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8
+    [1]: 0 1
+    [2]: 2
+    [3]: 7 8
+    [4]: 3
+    [5]: 4 5 6
+Obj[9]:
+    [0]: car0, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: car1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: tent0, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: couple0, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: place0, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: place1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: place2, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: guy0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: girl0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[9]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    at_tent: 2 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at_person: 3 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at_car: 1 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    partners: 4 3 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    up: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    down: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    walked: 4 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    next: 5 5 :: is-private: 0, owner-param: -1, read: 1, write: 0
+Function[0]:
+Action[7]:
+    put_down: ?x1:3 ?x2:5 ?x3:2
+        pre: (and (RW:at_person ?x1 ?x2) (RW:at_tent ?x3 ?x2) (RW:up ?x3))
+        eff: (and (RW:down ?x3) (N:RW:up ?x3))
+    put_up: ?x1:3 ?x2:5 ?x3:2
+        pre: (and (RW:at_person ?x1 ?x2) (RW:at_tent ?x3 ?x2) (RW:down ?x3))
+        eff: (and (RW:up ?x3) (N:RW:down ?x3))
+    drive_passenger: ?x1:3 ?x2:5 ?x3:5 ?x4:1 ?x5:3
+        pre: (and (RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x2) (RW:at_person ?x5 ?x2) (N:R:= ?x1 ?x5))
+        eff: (and (RW:at_person ?x1 ?x3) (N:RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x3) (N:RW:at_car ?x4 ?x2) (RW:at_person ?x5 ?x3) (N:RW:at_person ?x5 ?x2))
+    drive: ?x1:3 ?x2:5 ?x3:5 ?x4:1
+        pre: (and (RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x2))
+        eff: (and (RW:at_person ?x1 ?x3) (N:RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x3) (N:RW:at_car ?x4 ?x2))
+    drive_tent: ?x1:3 ?x2:5 ?x3:5 ?x4:1 ?x5:2
+        pre: (and (RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x2) (RW:at_tent ?x5 ?x2) (RW:down ?x5))
+        eff: (and (RW:at_person ?x1 ?x3) (N:RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x3) (N:RW:at_car ?x4 ?x2) (RW:at_tent ?x5 ?x3) (N:RW:at_tent ?x5 ?x2))
+    drive_tent_passenger: ?x1:3 ?x2:5 ?x3:5 ?x4:1 ?x5:2 ?x6:3
+        pre: (and (RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x2) (RW:at_tent ?x5 ?x2) (RW:down ?x5) (RW:at_person ?x6 ?x2) (N:R:= ?x1 ?x6))
+        eff: (and (RW:at_person ?x1 ?x3) (N:RW:at_person ?x1 ?x2) (RW:at_car ?x4 ?x3) (N:RW:at_car ?x4 ?x2) (RW:at_tent ?x5 ?x3) (N:RW:at_tent ?x5 ?x2) (RW:at_person ?x6 ?x3) (N:RW:at_person ?x6 ?x2))
+    walk_together: ?x1:2 ?x2:5 ?x3:3 ?x4:5 ?x5:3 ?x6:4
+        pre: (and (RW:at_tent ?x1 ?x2) (RW:up ?x1) (RW:at_person ?x3 ?x4) (R:next ?x4 ?x2) (RW:at_person ?x5 ?x4) (N:R:= ?x3 ?x5) (RW:walked ?x6 ?x4) (R:partners ?x6 ?x3 ?x5))
+        eff: (and (RW:at_person ?x3 ?x2) (N:RW:at_person ?x3 ?x4) (RW:at_person ?x5 ?x2) (N:RW:at_person ?x5 ?x4) (RW:walked ?x6 ?x2) (N:RW:walked ?x6 ?x4))
+Init[10]:
+  S:(partners couple0 guy0 girl0)
+  (at_person guy0 place0)
+  (at_person girl0 place0)
+  (walked couple0 place0)
+  (at_tent tent0 place0)
+  (up tent0)
+  (at_car car0 place0)
+  (at_car car1 place0)
+  S:(next place0 place1)
+  S:(next place1 place2)
+Init[0]:
+Goal: (and (RW:walked couple0 place2))
+Metric: 0
+---- Domain: pddl-data/ipc-2014/seq-opt/hiking/domain.pddl | pddl-data/ipc-2014/seq-opt/hiking/ptesting-1-2-3.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/maintenance/domain.pddl | pddl-data/ipc-2014/seq-opt/maintenance/maintenance.1.3.010.010.2-000.pddl ----
+Domain: maintenance-scheduling-domain
+Problem: maintenance-scheduling-1-3-10-10-2-0
+Require: ff
+Type[4]:
+    [0]: object, parent: -1
+    [1]: plane, parent: 0
+    [2]: day, parent: 0
+    [3]: airport, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+    [1]: 14 15 16 17 18 19 20 21 22 23
+    [2]: 0 1 2 3 4 5 6 7 8 9 10
+    [3]: 11 12 13
+Obj[24]:
+    [0]: d1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: d2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: d3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: d4, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: d5, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: d6, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: d7, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: d8, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: d9, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: d10, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: d11, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: fra, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: ber, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: ham, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: ap1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: ap2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: ap3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: ap4, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: ap5, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: ap6, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: ap7, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [21]: ap8, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [22]: ap9, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [23]: ap10, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[5]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    done: 1 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    today: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at: 1 2 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    next: 2 2 :: is-private: 0, owner-param: -1, read: 0, write: 0
+Function[0]:
+Action[1]:
+    workat: ?day:2 ?airport:3
+        pre: (RW:today ?day)
+        eff: (and (N:RW:today ?day) (forall (?plane:1 I[0]:?day:2 I[1]:?airport:3) (when (R:at ?plane ?day ?airport) (W:done ?plane))))
+Init[30]:
+  (today d1)
+  (today d2)
+  (today d3)
+  (today d4)
+  (today d5)
+  (today d6)
+  (today d7)
+  (today d8)
+  (today d9)
+  (today d10)
+  S:(at ap1 d4 ber)
+  S:(at ap1 d8 ber)
+  S:(at ap2 d7 fra)
+  S:(at ap2 d4 ber)
+  S:(at ap3 d3 ber)
+  S:(at ap3 d10 ber)
+  S:(at ap4 d1 ber)
+  S:(at ap4 d4 ber)
+  S:(at ap5 d1 fra)
+  S:(at ap5 d3 ber)
+  S:(at ap6 d8 fra)
+  S:(at ap6 d2 ham)
+  S:(at ap7 d3 ber)
+  S:(at ap7 d3 ham)
+  S:(at ap8 d10 fra)
+  S:(at ap8 d8 ber)
+  S:(at ap9 d3 fra)
+  S:(at ap9 d10 fra)
+  S:(at ap10 d2 ber)
+  S:(at ap10 d4 ber)
+Init[0]:
+Goal: (and (W:done ap1) (W:done ap2) (W:done ap3) (W:done ap4) (W:done ap5) (W:done ap6) (W:done ap7) (W:done ap8) (W:done ap9) (W:done ap10))
+Metric: 0
+---- Domain: pddl-data/ipc-2014/seq-opt/maintenance/domain.pddl | pddl-data/ipc-2014/seq-opt/maintenance/maintenance.1.3.010.010.2-000.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/openstacks/domain_p20_1.pddl | pddl-data/ipc-2014/seq-opt/openstacks/p20_1.pddl ----
+Domain: openstacks-sequencedstrips-nonadl
+Problem: os-sequencedstrips-p20_1
+Require: 200ff
+Type[4]:
+    [0]: object, parent: -1
+    [1]: order, parent: 0
+    [2]: product, parent: 0
+    [3]: count, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60
+    [1]: 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39
+    [2]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+    [3]: 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60
+Obj[61]:
+    [0]: p1, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [1]: p2, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [2]: p3, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [3]: p4, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [4]: p5, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [5]: p6, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [6]: p7, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [7]: p8, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [8]: p9, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [9]: p10, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [10]: p11, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [11]: p12, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [12]: p13, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [13]: p14, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [14]: p15, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [15]: p16, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [16]: p17, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [17]: p18, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [18]: p19, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [19]: p20, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [20]: o1, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [21]: o2, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [22]: o3, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [23]: o4, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [24]: o5, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [25]: o6, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [26]: o7, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [27]: o8, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [28]: o9, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [29]: o10, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [30]: o11, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [31]: o12, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [32]: o13, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [33]: o14, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [34]: o15, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [35]: o16, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [36]: o17, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [37]: o18, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [38]: o19, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [39]: o20, type: 1, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [40]: n0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [41]: n1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [42]: n2, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [43]: n3, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [44]: n4, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [45]: n5, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [46]: n6, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [47]: n7, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [48]: n8, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [49]: n9, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [50]: n10, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [51]: n11, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [52]: n12, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [53]: n13, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [54]: n14, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [55]: n15, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [56]: n16, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [57]: n17, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [58]: n18, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [59]: n19, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [60]: n20, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[8]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    includes: 1 2 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    waiting: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    started: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    shipped: 1 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    made: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    stacks-avail: 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    next-count: 3 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+Function[1]:
+    total-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+Action[42]:
+    open-new-stack: ?open:3 ?new-open:3
+        pre: (and (RW:stacks-avail ?open) (R:next-count ?open ?new-open))
+        eff: (and (N:RW:stacks-avail ?open) (RW:stacks-avail ?new-open) (increase (total-cost) 1))
+    start-order: ?o:1 ?avail:3 ?new-avail:3
+        pre: (and (RW:waiting ?o) (RW:stacks-avail ?avail) (R:next-count ?new-avail ?avail))
+        eff: (and (N:RW:waiting ?o) (RW:started ?o) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    make-product-p1: 
+        pre: (and (N:RW:made p1) (RW:started o12))
+        eff: (and (RW:made p1))
+    make-product-p2: 
+        pre: (and (N:RW:made p2) (RW:started o14) (RW:started o16))
+        eff: (and (RW:made p2))
+    make-product-p3: 
+        pre: (and (N:RW:made p3) (RW:started o3) (RW:started o9))
+        eff: (and (RW:made p3))
+    make-product-p4: 
+        pre: (and (N:RW:made p4) (RW:started o6))
+        eff: (and (RW:made p4))
+    make-product-p5: 
+        pre: (and (N:RW:made p5) (RW:started o2) (RW:started o4))
+        eff: (and (RW:made p5))
+    make-product-p6: 
+        pre: (and (N:RW:made p6) (RW:started o20))
+        eff: (and (RW:made p6))
+    make-product-p7: 
+        pre: (and (N:RW:made p7) (RW:started o7))
+        eff: (and (RW:made p7))
+    make-product-p8: 
+        pre: (and (N:RW:made p8) (RW:started o4))
+        eff: (and (RW:made p8))
+    make-product-p9: 
+        pre: (and (N:RW:made p9) (RW:started o5))
+        eff: (and (RW:made p9))
+    make-product-p10: 
+        pre: (and (N:RW:made p10) (RW:started o5))
+        eff: (and (RW:made p10))
+    make-product-p11: 
+        pre: (and (N:RW:made p11) (RW:started o15) (RW:started o19))
+        eff: (and (RW:made p11))
+    make-product-p12: 
+        pre: (and (N:RW:made p12) (RW:started o6) (RW:started o10))
+        eff: (and (RW:made p12))
+    make-product-p13: 
+        pre: (and (N:RW:made p13) (RW:started o8) (RW:started o18))
+        eff: (and (RW:made p13))
+    make-product-p14: 
+        pre: (and (N:RW:made p14) (RW:started o17))
+        eff: (and (RW:made p14))
+    make-product-p15: 
+        pre: (and (N:RW:made p15) (RW:started o1) (RW:started o2) (RW:started o17))
+        eff: (and (RW:made p15))
+    make-product-p16: 
+        pre: (and (N:RW:made p16) (RW:started o15))
+        eff: (and (RW:made p16))
+    make-product-p17: 
+        pre: (and (N:RW:made p17) (RW:started o16))
+        eff: (and (RW:made p17))
+    make-product-p18: 
+        pre: (and (N:RW:made p18) (RW:started o11))
+        eff: (and (RW:made p18))
+    make-product-p19: 
+        pre: (and (N:RW:made p19) (RW:started o11))
+        eff: (and (RW:made p19))
+    make-product-p20: 
+        pre: (and (N:RW:made p20) (RW:started o13))
+        eff: (and (RW:made p20))
+    ship-order-o1: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o1) (RW:made p15) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o1) (W:shipped o1) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o2: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o2) (RW:made p5) (RW:made p15) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o2) (W:shipped o2) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o3: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o3) (RW:made p3) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o3) (W:shipped o3) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o4: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o4) (RW:made p5) (RW:made p8) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o4) (W:shipped o4) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o5: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o5) (RW:made p9) (RW:made p10) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o5) (W:shipped o5) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o6: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o6) (RW:made p4) (RW:made p12) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o6) (W:shipped o6) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o7: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o7) (RW:made p7) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o7) (W:shipped o7) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o8: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o8) (RW:made p13) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o8) (W:shipped o8) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o9: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o9) (RW:made p3) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o9) (W:shipped o9) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o10: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o10) (RW:made p12) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o10) (W:shipped o10) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o11: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o11) (RW:made p18) (RW:made p19) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o11) (W:shipped o11) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o12: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o12) (RW:made p1) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o12) (W:shipped o12) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o13: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o13) (RW:made p20) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o13) (W:shipped o13) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o14: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o14) (RW:made p2) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o14) (W:shipped o14) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o15: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o15) (RW:made p11) (RW:made p16) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o15) (W:shipped o15) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o16: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o16) (RW:made p2) (RW:made p17) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o16) (W:shipped o16) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o17: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o17) (RW:made p14) (RW:made p15) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o17) (W:shipped o17) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o18: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o18) (RW:made p13) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o18) (W:shipped o18) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o19: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o19) (RW:made p11) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o19) (W:shipped o19) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order-o20: ?avail:3 ?new-avail:3
+        pre: (and (RW:started o20) (RW:made p6) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started o20) (W:shipped o20) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+Init[69]:
+  S:(next-count n0 n1)
+  S:(next-count n1 n2)
+  S:(next-count n2 n3)
+  S:(next-count n3 n4)
+  S:(next-count n4 n5)
+  S:(next-count n5 n6)
+  S:(next-count n6 n7)
+  S:(next-count n7 n8)
+  S:(next-count n8 n9)
+  S:(next-count n9 n10)
+  S:(next-count n10 n11)
+  S:(next-count n11 n12)
+  S:(next-count n12 n13)
+  S:(next-count n13 n14)
+  S:(next-count n14 n15)
+  S:(next-count n15 n16)
+  S:(next-count n16 n17)
+  S:(next-count n17 n18)
+  S:(next-count n18 n19)
+  S:(next-count n19 n20)
+  (stacks-avail n0)
+  (waiting o1)
+  (includes o1 p15)
+  (waiting o2)
+  (includes o2 p5)
+  (includes o2 p15)
+  (waiting o3)
+  (includes o3 p3)
+  (waiting o4)
+  (includes o4 p5)
+  (includes o4 p8)
+  (waiting o5)
+  (includes o5 p9)
+  (includes o5 p10)
+  (waiting o6)
+  (includes o6 p4)
+  (includes o6 p12)
+  (waiting o7)
+  (includes o7 p7)
+  (waiting o8)
+  (includes o8 p13)
+  (waiting o9)
+  (includes o9 p3)
+  (waiting o10)
+  (includes o10 p12)
+  (waiting o11)
+  (includes o11 p18)
+  (includes o11 p19)
+  (waiting o12)
+  (includes o12 p1)
+  (waiting o13)
+  (includes o13 p20)
+  (waiting o14)
+  (includes o14 p2)
+  (waiting o15)
+  (includes o15 p11)
+  (includes o15 p16)
+  (waiting o16)
+  (includes o16 p2)
+  (includes o16 p17)
+  (waiting o17)
+  (includes o17 p14)
+  (includes o17 p15)
+  (waiting o18)
+  (includes o18 p13)
+  (waiting o19)
+  (includes o19 p11)
+  (waiting o20)
+  (includes o20 p6)
+Init[1]:
+  (= (total-cost) 0)
+Goal: (and (W:shipped o1) (W:shipped o2) (W:shipped o3) (W:shipped o4) (W:shipped o5) (W:shipped o6) (W:shipped o7) (W:shipped o8) (W:shipped o9) (W:shipped o10) (W:shipped o11) (W:shipped o12) (W:shipped o13) (W:shipped o14) (W:shipped o15) (W:shipped o16) (W:shipped o17) (W:shipped o18) (W:shipped o19) (W:shipped o20))
+Metric: 1
+---- Domain: pddl-data/ipc-2014/seq-opt/openstacks/domain_p20_1.pddl | pddl-data/ipc-2014/seq-opt/openstacks/p20_1.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/parking/domain.pddl | pddl-data/ipc-2014/seq-opt/parking/p_12_7-01.pddl ----
+Domain: parking
+Problem: parking
+Require: 200ff
+Type[3]:
+    [0]: object, parent: -1
+    [1]: car, parent: 0
+    [2]: curb, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+    [1]: 0 1 2 3 4 5 6 7 8 9 10 11
+    [2]: 12 13 14 15 16 17 18
+Obj[19]:
+    [0]: car_00, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: car_01, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: car_02, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: car_03, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: car_04, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: car_05, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: car_06, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: car_07, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: car_08, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: car_09, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: car_10, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: car_11, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: curb_0, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: curb_1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: curb_2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: curb_3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: curb_4, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: curb_5, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: curb_6, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[6]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    at-curb: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at-curb-num: 1 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    behind-car: 1 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    car-clear: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    curb-clear: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+Function[1]:
+    total-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+Action[4]:
+    move-curb-to-curb: ?car:1 ?curbsrc:2 ?curbdest:2
+        pre: (and (RW:car-clear ?car) (RW:curb-clear ?curbdest) (RW:at-curb-num ?car ?curbsrc))
+        eff: (and (N:RW:curb-clear ?curbdest) (RW:curb-clear ?curbsrc) (RW:at-curb-num ?car ?curbdest) (N:RW:at-curb-num ?car ?curbsrc) (increase (total-cost) 1))
+    move-curb-to-car: ?car:1 ?curbsrc:2 ?cardest:1
+        pre: (and (RW:car-clear ?car) (RW:car-clear ?cardest) (RW:at-curb-num ?car ?curbsrc) (RW:at-curb ?cardest))
+        eff: (and (N:RW:car-clear ?cardest) (RW:curb-clear ?curbsrc) (RW:behind-car ?car ?cardest) (N:RW:at-curb-num ?car ?curbsrc) (N:RW:at-curb ?car) (increase (total-cost) 1))
+    move-car-to-curb: ?car:1 ?carsrc:1 ?curbdest:2
+        pre: (and (RW:car-clear ?car) (RW:curb-clear ?curbdest) (RW:behind-car ?car ?carsrc))
+        eff: (and (N:RW:curb-clear ?curbdest) (RW:car-clear ?carsrc) (RW:at-curb-num ?car ?curbdest) (N:RW:behind-car ?car ?carsrc) (RW:at-curb ?car) (increase (total-cost) 1))
+    move-car-to-car: ?car:1 ?carsrc:1 ?cardest:1
+        pre: (and (RW:car-clear ?car) (RW:car-clear ?cardest) (RW:behind-car ?car ?carsrc) (RW:at-curb ?cardest))
+        eff: (and (N:RW:car-clear ?cardest) (RW:car-clear ?carsrc) (RW:behind-car ?car ?cardest) (N:RW:behind-car ?car ?carsrc) (increase (total-cost) 1))
+Init[25]:
+  (at-curb car_03)
+  (at-curb-num car_03 curb_0)
+  (behind-car car_02 car_03)
+  (car-clear car_02)
+  (at-curb car_04)
+  (at-curb-num car_04 curb_1)
+  (behind-car car_10 car_04)
+  (car-clear car_10)
+  (at-curb car_00)
+  (at-curb-num car_00 curb_2)
+  (behind-car car_05 car_00)
+  (car-clear car_05)
+  (at-curb car_01)
+  (at-curb-num car_01 curb_3)
+  (behind-car car_09 car_01)
+  (car-clear car_09)
+  (at-curb car_07)
+  (at-curb-num car_07 curb_4)
+  (behind-car car_08 car_07)
+  (car-clear car_08)
+  (at-curb car_11)
+  (at-curb-num car_11 curb_5)
+  (behind-car car_06 car_11)
+  (car-clear car_06)
+  (curb-clear curb_6)
+Init[1]:
+  (= (total-cost) 0)
+Goal: (and (RW:at-curb-num car_00 curb_0) (RW:behind-car car_07 car_00) (RW:at-curb-num car_01 curb_1) (RW:behind-car car_08 car_01) (RW:at-curb-num car_02 curb_2) (RW:behind-car car_09 car_02) (RW:at-curb-num car_03 curb_3) (RW:behind-car car_10 car_03) (RW:at-curb-num car_04 curb_4) (RW:behind-car car_11 car_04) (RW:at-curb-num car_05 curb_5) (RW:at-curb-num car_06 curb_6))
+Metric: 1
+---- Domain: pddl-data/ipc-2014/seq-opt/parking/domain.pddl | pddl-data/ipc-2014/seq-opt/parking/p_12_7-01.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/tetris/domain.pddl | pddl-data/ipc-2014/seq-opt/tetris/p01-10.pddl ----
+Domain: tetris
+Problem: tetris-10-4-8162755
+Require: 200ff
+Type[6]:
+    [0]: object, parent: -1
+    [1]: pieces, parent: 0
+    [2]: one_square, parent: 1
+    [3]: two_straight, parent: 1
+    [4]: right_l, parent: 1
+    [5]: position, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+    [1]: 40 41 42 43 44 45 46 47
+    [2]: 40 41 42 43 44
+    [3]: 45 46
+    [4]: 47
+    [5]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39
+Obj[48]:
+    [0]: f0-0f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: f0-1f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: f0-2f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: f0-3f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: f1-0f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: f1-1f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: f1-2f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: f1-3f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: f2-0f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: f2-1f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: f2-2f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: f2-3f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: f3-0f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: f3-1f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: f3-2f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: f3-3f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: f4-0f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: f4-1f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: f4-2f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: f4-3f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: f5-0f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [21]: f5-1f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [22]: f5-2f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [23]: f5-3f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [24]: f6-0f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [25]: f6-1f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [26]: f6-2f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [27]: f6-3f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [28]: f7-0f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [29]: f7-1f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [30]: f7-2f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [31]: f7-3f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [32]: f8-0f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [33]: f8-1f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [34]: f8-2f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [35]: f8-3f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [36]: f9-0f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [37]: f9-1f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [38]: f9-2f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [39]: f9-3f, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [40]: square0, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [41]: square1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [42]: square2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [43]: square3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [44]: square4, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [45]: straight0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [46]: straight1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [47]: rightl0, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[6]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    clear: 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    connected: 5 5 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    at_square: 2 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at_two: 3 5 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at_right_l: 4 5 5 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+Function[1]:
+    total-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+Action[6]:
+    move_square: ?xy_initial:5 ?xy_final:5 ?element:2
+        pre: (and (RW:clear ?xy_final) (RW:at_square ?element ?xy_initial) (R:connected ?xy_initial ?xy_final) (R:connected ?xy_final ?xy_initial))
+        eff: (and (RW:clear ?xy_initial) (RW:at_square ?element ?xy_final) (N:RW:clear ?xy_final) (N:RW:at_square ?element ?xy_initial) (increase (total-cost) 1))
+    move_two: ?xy_initial1:5 ?xy_initial2:5 ?xy_final:5 ?element:3
+        pre: (and (RW:clear ?xy_final) (RW:at_two ?element ?xy_initial1 ?xy_initial2) (R:connected ?xy_initial2 ?xy_final))
+        eff: (and (RW:clear ?xy_initial1) (RW:at_two ?element ?xy_initial2 ?xy_final) (N:RW:clear ?xy_final) (N:RW:at_two ?element ?xy_initial1 ?xy_initial2) (increase (total-cost) 2))
+    move_l_right: ?xy_initial1:5 ?xy_initial2:5 ?xy_initial3:5 ?xy_final:5 ?xy_final2:5 ?xy_between_final:5 ?element:4
+        pre: (and (RW:clear ?xy_final) (RW:clear ?xy_final2) (RW:at_right_l ?element ?xy_initial1 ?xy_initial2 ?xy_initial3) (R:connected ?xy_initial1 ?xy_final) (R:connected ?xy_initial3 ?xy_final2) (R:connected ?xy_initial3 ?xy_final) (R:connected ?xy_final ?xy_between_final) (R:connected ?xy_final2 ?xy_between_final) (N:R:= ?xy_final ?xy_final2) (N:R:= ?xy_between_final ?xy_initial3) (N:R:connected ?xy_initial1 ?xy_final2))
+        eff: (and (RW:clear ?xy_initial2) (RW:clear ?xy_initial1) (RW:at_right_l ?element ?xy_final ?xy_initial3 ?xy_final2) (N:RW:clear ?xy_final) (N:RW:clear ?xy_final2) (N:RW:at_right_l ?element ?xy_initial1 ?xy_initial2 ?xy_initial3) (increase (total-cost) 3))
+    move_l_left: ?xy_initial1:5 ?xy_initial2:5 ?xy_initial3:5 ?xy_final:5 ?xy_final2:5 ?element:4
+        pre: (and (RW:clear ?xy_final) (RW:clear ?xy_final2) (RW:at_right_l ?element ?xy_initial1 ?xy_initial2 ?xy_initial3) (R:connected ?xy_initial1 ?xy_final) (R:connected ?xy_initial2 ?xy_final2) (R:connected ?xy_final2 ?xy_final) (N:R:= ?xy_final ?xy_final2))
+        eff: (and (RW:clear ?xy_initial3) (RW:clear ?xy_initial1) (RW:at_right_l ?element ?xy_final ?xy_final2 ?xy_initial2) (N:RW:clear ?xy_final) (N:RW:clear ?xy_final2) (N:RW:at_right_l ?element ?xy_initial1 ?xy_initial2 ?xy_initial3) (increase (total-cost) 3))
+    move_l_up: ?xy_initial1:5 ?xy_initial2:5 ?xy_initial3:5 ?xy_final:5 ?xy_final2:5 ?xy_between_final:5 ?element:4
+        pre: (and (RW:clear ?xy_final) (RW:clear ?xy_final2) (RW:at_right_l ?element ?xy_initial1 ?xy_initial2 ?xy_initial3) (R:connected ?xy_initial1 ?xy_final) (R:connected ?xy_initial3 ?xy_final2) (R:connected ?xy_initial1 ?xy_final2) (R:connected ?xy_final ?xy_between_final) (R:connected ?xy_final2 ?xy_between_final) (N:R:= ?xy_final ?xy_final2) (N:R:= ?xy_between_final ?xy_initial1) (N:R:connected ?xy_initial3 ?xy_final))
+        eff: (and (RW:clear ?xy_initial2) (RW:clear ?xy_initial3) (RW:at_right_l ?element ?xy_final ?xy_initial1 ?xy_final2) (N:RW:clear ?xy_final) (N:RW:clear ?xy_final2) (N:RW:at_right_l ?element ?xy_initial1 ?xy_initial2 ?xy_initial3) (increase (total-cost) 3))
+    move_l_down: ?xy_initial1:5 ?xy_initial2:5 ?xy_initial3:5 ?xy_final:5 ?xy_final2:5 ?element:4
+        pre: (and (RW:clear ?xy_final) (RW:clear ?xy_final2) (RW:at_right_l ?element ?xy_initial1 ?xy_initial2 ?xy_initial3) (R:connected ?xy_initial2 ?xy_final) (R:connected ?xy_initial3 ?xy_final2) (R:connected ?xy_final2 ?xy_final) (N:R:= ?xy_final ?xy_final2))
+        eff: (and (RW:clear ?xy_initial3) (RW:clear ?xy_initial1) (RW:at_right_l ?element ?xy_initial2 ?xy_final ?xy_final2) (N:RW:clear ?xy_final) (N:RW:clear ?xy_final2) (N:RW:at_right_l ?element ?xy_initial1 ?xy_initial2 ?xy_initial3) (increase (total-cost) 3))
+Init[168]:
+  S:(connected f0-0f f0-1f)
+  S:(connected f0-1f f0-0f)
+  S:(connected f0-1f f0-2f)
+  S:(connected f0-2f f0-1f)
+  S:(connected f0-2f f0-3f)
+  S:(connected f0-3f f0-2f)
+  S:(connected f1-0f f1-1f)
+  S:(connected f1-1f f1-0f)
+  S:(connected f1-1f f1-2f)
+  S:(connected f1-2f f1-1f)
+  S:(connected f1-2f f1-3f)
+  S:(connected f1-3f f1-2f)
+  S:(connected f2-0f f2-1f)
+  S:(connected f2-1f f2-0f)
+  S:(connected f2-1f f2-2f)
+  S:(connected f2-2f f2-1f)
+  S:(connected f2-2f f2-3f)
+  S:(connected f2-3f f2-2f)
+  S:(connected f3-0f f3-1f)
+  S:(connected f3-1f f3-0f)
+  S:(connected f3-1f f3-2f)
+  S:(connected f3-2f f3-1f)
+  S:(connected f3-2f f3-3f)
+  S:(connected f3-3f f3-2f)
+  S:(connected f4-0f f4-1f)
+  S:(connected f4-1f f4-0f)
+  S:(connected f4-1f f4-2f)
+  S:(connected f4-2f f4-1f)
+  S:(connected f4-2f f4-3f)
+  S:(connected f4-3f f4-2f)
+  S:(connected f5-0f f5-1f)
+  S:(connected f5-1f f5-0f)
+  S:(connected f5-1f f5-2f)
+  S:(connected f5-2f f5-1f)
+  S:(connected f5-2f f5-3f)
+  S:(connected f5-3f f5-2f)
+  S:(connected f6-0f f6-1f)
+  S:(connected f6-1f f6-0f)
+  S:(connected f6-1f f6-2f)
+  S:(connected f6-2f f6-1f)
+  S:(connected f6-2f f6-3f)
+  S:(connected f6-3f f6-2f)
+  S:(connected f7-0f f7-1f)
+  S:(connected f7-1f f7-0f)
+  S:(connected f7-1f f7-2f)
+  S:(connected f7-2f f7-1f)
+  S:(connected f7-2f f7-3f)
+  S:(connected f7-3f f7-2f)
+  S:(connected f8-0f f8-1f)
+  S:(connected f8-1f f8-0f)
+  S:(connected f8-1f f8-2f)
+  S:(connected f8-2f f8-1f)
+  S:(connected f8-2f f8-3f)
+  S:(connected f8-3f f8-2f)
+  S:(connected f9-0f f9-1f)
+  S:(connected f9-1f f9-0f)
+  S:(connected f9-1f f9-2f)
+  S:(connected f9-2f f9-1f)
+  S:(connected f9-2f f9-3f)
+  S:(connected f9-3f f9-2f)
+  S:(connected f0-0f f1-0f)
+  S:(connected f1-0f f0-0f)
+  S:(connected f0-1f f1-1f)
+  S:(connected f1-1f f0-1f)
+  S:(connected f0-2f f1-2f)
+  S:(connected f1-2f f0-2f)
+  S:(connected f0-3f f1-3f)
+  S:(connected f1-3f f0-3f)
+  S:(connected f1-0f f2-0f)
+  S:(connected f2-0f f1-0f)
+  S:(connected f1-1f f2-1f)
+  S:(connected f2-1f f1-1f)
+  S:(connected f1-2f f2-2f)
+  S:(connected f2-2f f1-2f)
+  S:(connected f1-3f f2-3f)
+  S:(connected f2-3f f1-3f)
+  S:(connected f2-0f f3-0f)
+  S:(connected f3-0f f2-0f)
+  S:(connected f2-1f f3-1f)
+  S:(connected f3-1f f2-1f)
+  S:(connected f2-2f f3-2f)
+  S:(connected f3-2f f2-2f)
+  S:(connected f2-3f f3-3f)
+  S:(connected f3-3f f2-3f)
+  S:(connected f3-0f f4-0f)
+  S:(connected f4-0f f3-0f)
+  S:(connected f3-1f f4-1f)
+  S:(connected f4-1f f3-1f)
+  S:(connected f3-2f f4-2f)
+  S:(connected f4-2f f3-2f)
+  S:(connected f3-3f f4-3f)
+  S:(connected f4-3f f3-3f)
+  S:(connected f4-0f f5-0f)
+  S:(connected f5-0f f4-0f)
+  S:(connected f4-1f f5-1f)
+  S:(connected f5-1f f4-1f)
+  S:(connected f4-2f f5-2f)
+  S:(connected f5-2f f4-2f)
+  S:(connected f4-3f f5-3f)
+  S:(connected f5-3f f4-3f)
+  S:(connected f5-0f f6-0f)
+  S:(connected f6-0f f5-0f)
+  S:(connected f5-1f f6-1f)
+  S:(connected f6-1f f5-1f)
+  S:(connected f5-2f f6-2f)
+  S:(connected f6-2f f5-2f)
+  S:(connected f5-3f f6-3f)
+  S:(connected f6-3f f5-3f)
+  S:(connected f6-0f f7-0f)
+  S:(connected f7-0f f6-0f)
+  S:(connected f6-1f f7-1f)
+  S:(connected f7-1f f6-1f)
+  S:(connected f6-2f f7-2f)
+  S:(connected f7-2f f6-2f)
+  S:(connected f6-3f f7-3f)
+  S:(connected f7-3f f6-3f)
+  S:(connected f7-0f f8-0f)
+  S:(connected f8-0f f7-0f)
+  S:(connected f7-1f f8-1f)
+  S:(connected f8-1f f7-1f)
+  S:(connected f7-2f f8-2f)
+  S:(connected f8-2f f7-2f)
+  S:(connected f7-3f f8-3f)
+  S:(connected f8-3f f7-3f)
+  S:(connected f8-0f f9-0f)
+  S:(connected f9-0f f8-0f)
+  S:(connected f8-1f f9-1f)
+  S:(connected f9-1f f8-1f)
+  S:(connected f8-2f f9-2f)
+  S:(connected f9-2f f8-2f)
+  S:(connected f8-3f f9-3f)
+  S:(connected f9-3f f8-3f)
+  (clear f0-1f)
+  (clear f0-2f)
+  (clear f0-3f)
+  (clear f1-2f)
+  (clear f1-3f)
+  (clear f2-3f)
+  (clear f3-0f)
+  (clear f3-3f)
+  (clear f4-2f)
+  (clear f4-3f)
+  (clear f5-2f)
+  (clear f5-3f)
+  (clear f6-0f)
+  (clear f6-1f)
+  (clear f6-2f)
+  (clear f6-3f)
+  (clear f7-0f)
+  (clear f7-1f)
+  (clear f7-2f)
+  (clear f7-3f)
+  (clear f8-0f)
+  (clear f8-1f)
+  (clear f8-2f)
+  (clear f8-3f)
+  (clear f9-0f)
+  (clear f9-1f)
+  (clear f9-2f)
+  (clear f9-3f)
+  (at_right_l rightl0 f4-0f f5-0f f5-1f)
+  (at_two straight0 f2-1f f3-1f)
+  (at_two straight1 f2-2f f3-2f)
+  (at_square square0 f0-0f)
+  (at_square square1 f1-0f)
+  (at_square square2 f1-1f)
+  (at_square square3 f2-0f)
+  (at_square square4 f4-1f)
+Init[0]:
+Goal: (and (RW:clear f0-0f) (RW:clear f0-1f) (RW:clear f0-2f) (RW:clear f0-3f) (RW:clear f1-0f) (RW:clear f1-1f) (RW:clear f1-2f) (RW:clear f1-3f) (RW:clear f2-0f) (RW:clear f2-1f) (RW:clear f2-2f) (RW:clear f2-3f) (RW:clear f3-0f) (RW:clear f3-1f) (RW:clear f3-2f) (RW:clear f3-3f) (RW:clear f4-0f) (RW:clear f4-1f) (RW:clear f4-2f) (RW:clear f4-3f))
+Metric: 1
+---- Domain: pddl-data/ipc-2014/seq-opt/tetris/domain.pddl | pddl-data/ipc-2014/seq-opt/tetris/p01-10.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/tidybot/domain.pddl | pddl-data/ipc-2014/seq-opt/tidybot/p01.pddl ----
+Domain: tidybot
+Problem: test
+Require: ff
+Type[7]:
+    [0]: object, parent: -1
+    [1]: robot, parent: 0
+    [2]: cart, parent: 0
+    [3]: xc, parent: 0
+    [4]: yc, parent: 0
+    [5]: xrel, parent: 0
+    [6]: yrel, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+    [1]: 0
+    [2]: 1
+    [3]: 6 7 8 9 10 11 12 13 14
+    [4]: 15 16 17 18 19 20 21 22 23
+    [5]: 24 25 26
+    [6]: 27 28 29
+Obj[30]:
+    [0]: pr2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: cart, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: object0, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: object1, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: object2, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: object3, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: x0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: x1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: x2, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: x3, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: x4, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: x5, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: x6, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: x7, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: x8, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: y0, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: y1, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: y2, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: y3, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: y4, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: y5, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [21]: y6, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [22]: y7, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [23]: y8, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [24]: xrel-1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [25]: xrel0, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [26]: xrel1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [27]: yrel-1, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [28]: yrel0, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [29]: yrel1, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[25]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    leftof: 3 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    above: 4 4 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    leftof-rel: 5 5 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    above-rel: 6 6 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    sum-x: 3 5 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    sum-y: 4 6 4 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    zerox-rel: 5 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    zeroy-rel: 6 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    object-goal: 0 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    parked: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    base-pos: 1 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    base-obstacle: 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    object-pos: 0 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    object-done: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    surface: 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    holding: 1 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    gripper-empty: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    gripper-rel: 1 5 6 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    gripper-obstacle: 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    pushing: 1 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    not-pushing: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    not-pushed: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    cart-pos: 2 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    on-cart: 0 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+Function[0]:
+Action[30]:
+    unpark: ?r:1 ?x:5 ?y:6
+        pre: (and (RW:parked ?r) (RW:gripper-rel ?r ?x ?y) (R:zerox-rel ?x) (R:zeroy-rel ?y))
+        eff: (N:RW:parked ?r)
+    park: ?r:1
+        pre: (and (N:RW:parked ?r) (RW:not-pushing ?r))
+        eff: (RW:parked ?r)
+    base-left: ?r:1 ?cx:3 ?dx:3 ?y:4
+        pre: (and (N:RW:parked ?r) (RW:not-pushing ?r) (R:leftof ?dx ?cx) (RW:base-pos ?r ?cx ?y) (N:RW:base-obstacle ?dx ?y))
+        eff: (and (N:RW:base-pos ?r ?cx ?y) (RW:base-pos ?r ?dx ?y) (N:RW:base-obstacle ?cx ?y) (RW:base-obstacle ?dx ?y))
+    base-right: ?r:1 ?cx:3 ?dx:3 ?y:4
+        pre: (and (N:RW:parked ?r) (RW:not-pushing ?r) (R:leftof ?cx ?dx) (RW:base-pos ?r ?cx ?y) (N:RW:base-obstacle ?dx ?y))
+        eff: (and (N:RW:base-pos ?r ?cx ?y) (RW:base-pos ?r ?dx ?y) (N:RW:base-obstacle ?cx ?y) (RW:base-obstacle ?dx ?y))
+    base-up: ?r:1 ?x:3 ?cy:4 ?dy:4
+        pre: (and (N:RW:parked ?r) (RW:not-pushing ?r) (R:above ?dy ?cy) (RW:base-pos ?r ?x ?cy) (N:RW:base-obstacle ?x ?dy))
+        eff: (and (N:RW:base-pos ?r ?x ?cy) (RW:base-pos ?r ?x ?dy) (N:RW:base-obstacle ?x ?cy) (RW:base-obstacle ?x ?dy))
+    base-down: ?r:1 ?x:3 ?cy:4 ?dy:4
+        pre: (and (N:RW:parked ?r) (RW:not-pushing ?r) (R:above ?cy ?dy) (RW:base-pos ?r ?x ?cy) (N:RW:base-obstacle ?x ?dy))
+        eff: (and (N:RW:base-pos ?r ?x ?cy) (RW:base-pos ?r ?x ?dy) (N:RW:base-obstacle ?x ?cy) (RW:base-obstacle ?x ?dy))
+    base-cart-left: ?r:1 ?c:2 ?x1:3 ?x2:3 ?y:4 ?cx1:3 ?cx2:3 ?cy:4
+        pre: (and (RW:pushing ?r ?c) (R:leftof ?x2 ?x1) (R:leftof ?cx2 ?cx1) (RW:base-pos ?r ?x1 ?y) (RW:cart-pos ?c ?cx1 ?cy) (N:RW:base-obstacle ?x2 ?y) (N:RW:base-obstacle ?cx2 ?cy))
+        eff: (and (N:RW:base-pos ?r ?x1 ?y) (RW:base-pos ?r ?x2 ?y) (N:RW:cart-pos ?c ?cx1 ?cy) (RW:cart-pos ?c ?cx2 ?cy) (N:RW:base-obstacle ?x1 ?y) (RW:base-obstacle ?x2 ?y) (N:RW:base-obstacle ?cx1 ?cy) (RW:base-obstacle ?cx2 ?cy))
+    base-cart-right: ?r:1 ?c:2 ?x1:3 ?x2:3 ?y:4 ?cx1:3 ?cx2:3 ?cy:4
+        pre: (and (RW:pushing ?r ?c) (R:leftof ?x1 ?x2) (R:leftof ?cx1 ?cx2) (RW:base-pos ?r ?x1 ?y) (RW:cart-pos ?c ?cx1 ?cy) (N:RW:base-obstacle ?x2 ?y) (N:RW:base-obstacle ?cx2 ?cy))
+        eff: (and (N:RW:base-pos ?r ?x1 ?y) (RW:base-pos ?r ?x2 ?y) (N:RW:cart-pos ?c ?cx1 ?cy) (RW:cart-pos ?c ?cx2 ?cy) (N:RW:base-obstacle ?x1 ?y) (RW:base-obstacle ?x2 ?y) (N:RW:base-obstacle ?cx1 ?cy) (RW:base-obstacle ?cx2 ?cy))
+    base-cart-up: ?r:1 ?c:2 ?x:3 ?y1:4 ?y2:4 ?cx:3 ?cy1:4 ?cy2:4
+        pre: (and (RW:pushing ?r ?c) (R:above ?y2 ?y1) (R:above ?cy2 ?cy1) (RW:base-pos ?r ?x ?y1) (RW:cart-pos ?c ?cx ?cy1) (N:RW:base-obstacle ?x ?y2) (N:RW:base-obstacle ?cx ?cy2))
+        eff: (and (N:RW:base-pos ?r ?x ?y1) (RW:base-pos ?r ?x ?y2) (N:RW:cart-pos ?c ?cx ?cy1) (RW:cart-pos ?c ?cx ?cy2) (N:RW:base-obstacle ?x ?y1) (RW:base-obstacle ?x ?y2) (N:RW:base-obstacle ?cx ?cy2) (RW:base-obstacle ?cx ?cy2))
+    base-cart-down: ?r:1 ?c:2 ?x:3 ?y1:4 ?y2:4 ?cx:3 ?cy1:4 ?cy2:4
+        pre: (and (RW:pushing ?r ?c) (R:above ?y1 ?y2) (R:above ?cy1 ?cy2) (RW:base-pos ?r ?x ?y1) (RW:cart-pos ?c ?cx ?cy1) (N:RW:base-obstacle ?x ?y2) (N:RW:base-obstacle ?cx ?cy2))
+        eff: (and (N:RW:base-pos ?r ?x ?y1) (RW:base-pos ?r ?x ?y2) (N:RW:cart-pos ?c ?cx ?cy1) (RW:cart-pos ?c ?cx ?cy2) (N:RW:base-obstacle ?x ?y1) (RW:base-obstacle ?x ?y2) (N:RW:base-obstacle ?cx ?cy2) (RW:base-obstacle ?cx ?cy2))
+    gripper-left: ?r:1 ?basex:3 ?basey:4 ?cgxrel:5 ?dgxrel:5 ?cgxabs:3 ?dgxabs:3 ?gyrel:6 ?gyabs:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?cgxrel ?gyrel) (R:leftof-rel ?dgxrel ?cgxrel) (R:sum-x ?basex ?cgxrel ?cgxabs) (R:sum-x ?basex ?dgxrel ?dgxabs) (R:sum-y ?basey ?gyrel ?gyabs) (N:RW:gripper-obstacle ?dgxabs ?gyabs))
+        eff: (and (N:RW:gripper-rel ?r ?cgxrel ?gyrel) (RW:gripper-rel ?r ?dgxrel ?gyrel) (N:RW:gripper-obstacle ?cgxabs ?gyabs) (RW:gripper-obstacle ?dgxabs ?gyabs))
+    gripper-right: ?r:1 ?basex:3 ?basey:4 ?cgxrel:5 ?dgxrel:5 ?cgxabs:3 ?dgxabs:3 ?gyrel:6 ?gyabs:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?cgxrel ?gyrel) (R:leftof-rel ?cgxrel ?dgxrel) (R:sum-x ?basex ?cgxrel ?cgxabs) (R:sum-x ?basex ?dgxrel ?dgxabs) (R:sum-y ?basey ?gyrel ?gyabs) (N:RW:gripper-obstacle ?dgxabs ?gyabs))
+        eff: (and (N:RW:gripper-rel ?r ?cgxrel ?gyrel) (RW:gripper-rel ?r ?dgxrel ?gyrel) (N:RW:gripper-obstacle ?cgxabs ?gyabs) (RW:gripper-obstacle ?dgxabs ?gyabs))
+    gripper-up: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?cgyrel:6 ?dgyrel:6 ?cgyabs:4 ?dgyabs:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?cgyrel) (R:above-rel ?dgyrel ?cgyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?cgyrel ?cgyabs) (R:sum-y ?basey ?dgyrel ?dgyabs) (N:RW:gripper-obstacle ?gxabs ?dgyabs))
+        eff: (and (N:RW:gripper-rel ?r ?gxrel ?cgyrel) (RW:gripper-rel ?r ?gxrel ?dgyrel) (N:RW:gripper-obstacle ?gxabs ?cgyabs) (RW:gripper-obstacle ?gxabs ?dgyabs))
+    gripper-down: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?cgyrel:6 ?dgyrel:6 ?cgyabs:4 ?dgyabs:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?cgyrel) (R:above-rel ?cgyrel ?dgyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?cgyrel ?cgyabs) (R:sum-y ?basey ?dgyrel ?dgyabs) (N:RW:gripper-obstacle ?gxabs ?dgyabs))
+        eff: (and (N:RW:gripper-rel ?r ?gxrel ?cgyrel) (RW:gripper-rel ?r ?gxrel ?dgyrel) (N:RW:gripper-obstacle ?gxabs ?cgyabs) (RW:gripper-obstacle ?gxabs ?dgyabs))
+    grasp-cart-left: ?r:1 ?c:2 ?x:3 ?y:4 ?cx:3
+        pre: (and (N:RW:parked ?r) (RW:not-pushed ?c) (RW:base-pos ?r ?x ?y) (RW:cart-pos ?c ?cx ?y) (R:leftof ?cx ?x) (RW:not-pushing ?r))
+        eff: (and (RW:pushing ?r ?c) (N:RW:not-pushing ?r) (N:RW:not-pushed ?c))
+    grasp-cart-right: ?r:1 ?c:2 ?x:3 ?y:4 ?cx:3
+        pre: (and (N:RW:parked ?r) (RW:not-pushed ?c) (RW:base-pos ?r ?x ?y) (RW:cart-pos ?c ?cx ?y) (R:leftof ?x ?cx) (RW:not-pushing ?r))
+        eff: (and (RW:pushing ?r ?c) (N:RW:not-pushing ?r) (N:RW:not-pushed ?c))
+    grasp-cart-above: ?r:1 ?c:2 ?x:3 ?y:4 ?cy:4
+        pre: (and (N:RW:parked ?r) (RW:not-pushed ?c) (RW:base-pos ?r ?x ?y) (RW:cart-pos ?c ?x ?cy) (R:above ?cy ?y) (RW:not-pushing ?r))
+        eff: (and (RW:pushing ?r ?c) (N:RW:not-pushing ?r) (N:RW:not-pushed ?c))
+    grasp-cart-below: ?r:1 ?c:2 ?x:3 ?y:4 ?cy:4
+        pre: (and (N:RW:parked ?r) (RW:not-pushed ?c) (RW:base-pos ?r ?x ?y) (RW:cart-pos ?c ?x ?cy) (R:above ?y ?cy) (RW:not-pushing ?r))
+        eff: (and (RW:pushing ?r ?c) (N:RW:not-pushing ?r) (N:RW:not-pushed ?c))
+    ungrasp-cart: ?r:1 ?c:2
+        pre: (and (RW:pushing ?r ?c))
+        eff: (and (N:RW:pushing ?r ?c) (RW:not-pushing ?r) (RW:not-pushed ?c))
+    get-left: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?ox:3
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:gripper-empty ?r) (R:leftof ?ox ?gxabs) (N:RW:object-done ?o) (RW:object-pos ?o ?ox ?gyabs))
+        eff: (and (N:RW:object-pos ?o ?ox ?gyabs) (N:RW:gripper-obstacle ?ox ?gyabs) (N:RW:gripper-empty ?r) (RW:holding ?r ?o))
+    get-right: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?ox:3
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:gripper-empty ?r) (R:leftof ?gxabs ?ox) (N:RW:object-done ?o) (RW:object-pos ?o ?ox ?gyabs))
+        eff: (and (N:RW:object-pos ?o ?ox ?gyabs) (N:RW:gripper-obstacle ?ox ?gyabs) (N:RW:gripper-empty ?r) (RW:holding ?r ?o))
+    get-up: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?oy:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:gripper-empty ?r) (R:above ?oy ?gyabs) (N:RW:object-done ?o) (RW:object-pos ?o ?gxabs ?oy))
+        eff: (and (N:RW:object-pos ?o ?gxabs ?oy) (N:RW:gripper-obstacle ?gxabs ?oy) (N:RW:gripper-empty ?r) (RW:holding ?r ?o))
+    get-down: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?oy:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:gripper-empty ?r) (R:above ?gyabs ?oy) (N:RW:object-done ?o) (RW:object-pos ?o ?gxabs ?oy))
+        eff: (and (N:RW:object-pos ?o ?gxabs ?oy) (N:RW:gripper-obstacle ?gxabs ?oy) (N:RW:gripper-empty ?r) (RW:holding ?r ?o))
+    get-from-cart: ?r:1 ?x:3 ?y:4 ?gxrel:5 ?gyrel:6 ?o:0 ?c:2 ?cx:3 ?cy:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?x ?y) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?x ?gxrel ?cx) (R:sum-y ?y ?gyrel ?cy) (RW:gripper-empty ?r) (RW:cart-pos ?c ?cx ?cy) (RW:on-cart ?o ?c))
+        eff: (and (RW:holding ?r ?o) (N:RW:gripper-empty ?r) (N:RW:on-cart ?o ?c))
+    put-left: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?ox:3
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:holding ?r ?o) (R:leftof ?ox ?gxabs) (N:RW:gripper-obstacle ?ox ?gyabs) (R:surface ?ox ?gyabs))
+        eff: (and (N:RW:holding ?r ?o) (RW:object-pos ?o ?ox ?gyabs) (RW:gripper-obstacle ?ox ?gyabs) (RW:gripper-empty ?r))
+    put-right: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?ox:3
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:holding ?r ?o) (R:leftof ?gxabs ?ox) (N:RW:gripper-obstacle ?ox ?gyabs) (R:surface ?ox ?gyabs))
+        eff: (and (N:RW:holding ?r ?o) (RW:object-pos ?o ?ox ?gyabs) (RW:gripper-obstacle ?ox ?gyabs) (RW:gripper-empty ?r))
+    put-up: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?oy:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:holding ?r ?o) (R:above ?oy ?gyabs) (N:RW:gripper-obstacle ?gxabs ?oy) (R:surface ?gxabs ?oy))
+        eff: (and (N:RW:holding ?r ?o) (RW:object-pos ?o ?gxabs ?oy) (RW:gripper-obstacle ?gxabs ?oy) (RW:gripper-empty ?r))
+    put-down: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?oy:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:holding ?r ?o) (R:above ?gyabs ?oy) (N:RW:gripper-obstacle ?gxabs ?oy) (R:surface ?gxabs ?oy))
+        eff: (and (N:RW:holding ?r ?o) (RW:object-pos ?o ?gxabs ?oy) (RW:gripper-obstacle ?gxabs ?oy) (RW:gripper-empty ?r))
+    put-on-cart: ?r:1 ?x:3 ?y:4 ?gxrel:5 ?gyrel:6 ?o:0 ?c:2 ?cx:3 ?cy:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?x ?y) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?x ?gxrel ?cx) (R:sum-y ?y ?gyrel ?cy) (RW:cart-pos ?c ?cx ?cy) (RW:holding ?r ?o))
+        eff: (and (N:RW:holding ?r ?o) (RW:on-cart ?o ?c) (RW:gripper-empty ?r))
+    finish-object: ?o:0 ?x:3 ?y:4
+        pre: (and (N:RW:object-done ?o) (RW:object-pos ?o ?x ?y) (R:object-goal ?o ?x ?y))
+        eff: (and (RW:object-done ?o))
+Init[129]:
+  S:(leftof x0 x1)
+  S:(leftof x1 x2)
+  S:(leftof x2 x3)
+  S:(leftof x3 x4)
+  S:(leftof x4 x5)
+  S:(leftof x5 x6)
+  S:(leftof x6 x7)
+  S:(leftof x7 x8)
+  S:(above y0 y1)
+  S:(above y1 y2)
+  S:(above y2 y3)
+  S:(above y3 y4)
+  S:(above y4 y5)
+  S:(above y5 y6)
+  S:(above y6 y7)
+  S:(above y7 y8)
+  S:(leftof-rel xrel-1 xrel0)
+  S:(leftof-rel xrel0 xrel1)
+  S:(above-rel yrel-1 yrel0)
+  S:(above-rel yrel0 yrel1)
+  S:(sum-x x0 xrel0 x0)
+  S:(sum-x x0 xrel1 x1)
+  S:(sum-x x1 xrel-1 x0)
+  S:(sum-x x1 xrel0 x1)
+  S:(sum-x x1 xrel1 x2)
+  S:(sum-x x2 xrel-1 x1)
+  S:(sum-x x2 xrel0 x2)
+  S:(sum-x x2 xrel1 x3)
+  S:(sum-x x3 xrel-1 x2)
+  S:(sum-x x3 xrel0 x3)
+  S:(sum-x x3 xrel1 x4)
+  S:(sum-x x4 xrel-1 x3)
+  S:(sum-x x4 xrel0 x4)
+  S:(sum-x x4 xrel1 x5)
+  S:(sum-x x5 xrel-1 x4)
+  S:(sum-x x5 xrel0 x5)
+  S:(sum-x x5 xrel1 x6)
+  S:(sum-x x6 xrel-1 x5)
+  S:(sum-x x6 xrel0 x6)
+  S:(sum-x x6 xrel1 x7)
+  S:(sum-x x7 xrel-1 x6)
+  S:(sum-x x7 xrel0 x7)
+  S:(sum-x x7 xrel1 x8)
+  S:(sum-x x8 xrel-1 x7)
+  S:(sum-x x8 xrel0 x8)
+  S:(sum-y y0 yrel0 y0)
+  S:(sum-y y0 yrel1 y1)
+  S:(sum-y y1 yrel-1 y0)
+  S:(sum-y y1 yrel0 y1)
+  S:(sum-y y1 yrel1 y2)
+  S:(sum-y y2 yrel-1 y1)
+  S:(sum-y y2 yrel0 y2)
+  S:(sum-y y2 yrel1 y3)
+  S:(sum-y y3 yrel-1 y2)
+  S:(sum-y y3 yrel0 y3)
+  S:(sum-y y3 yrel1 y4)
+  S:(sum-y y4 yrel-1 y3)
+  S:(sum-y y4 yrel0 y4)
+  S:(sum-y y4 yrel1 y5)
+  S:(sum-y y5 yrel-1 y4)
+  S:(sum-y y5 yrel0 y5)
+  S:(sum-y y5 yrel1 y6)
+  S:(sum-y y6 yrel-1 y5)
+  S:(sum-y y6 yrel0 y6)
+  S:(sum-y y6 yrel1 y7)
+  S:(sum-y y7 yrel-1 y6)
+  S:(sum-y y7 yrel0 y7)
+  S:(sum-y y7 yrel1 y8)
+  S:(sum-y y8 yrel-1 y7)
+  S:(sum-y y8 yrel0 y8)
+  S:(zerox-rel xrel0)
+  S:(zeroy-rel yrel0)
+  S:(object-goal object0 x4 y4)
+  S:(object-goal object1 x4 y5)
+  S:(object-goal object1 x1 y3)
+  S:(object-goal object2 x5 y4)
+  S:(object-goal object2 x1 y5)
+  S:(object-goal object3 x5 y5)
+  (parked pr2)
+  (not-pushing pr2)
+  (base-pos pr2 x0 y0)
+  (base-obstacle x0 y0)
+  (base-obstacle x1 y3)
+  S:(surface x1 y3)
+  (base-obstacle x3 y1)
+  S:(surface x3 y1)
+  (base-obstacle x5 y1)
+  S:(surface x5 y1)
+  (base-obstacle x6 y1)
+  S:(surface x6 y1)
+  (base-obstacle x1 y5)
+  S:(surface x1 y5)
+  (base-obstacle x3 y3)
+  (gripper-obstacle x3 y3)
+  (base-obstacle x3 y4)
+  (gripper-obstacle x3 y4)
+  (base-obstacle x3 y5)
+  (gripper-obstacle x3 y5)
+  (base-obstacle x3 y6)
+  (gripper-obstacle x3 y6)
+  (base-obstacle x4 y3)
+  (gripper-obstacle x4 y3)
+  (base-obstacle x5 y3)
+  (gripper-obstacle x5 y3)
+  (base-obstacle x6 y3)
+  (gripper-obstacle x6 y3)
+  (base-obstacle x6 y4)
+  (gripper-obstacle x6 y4)
+  (base-obstacle x6 y5)
+  (gripper-obstacle x6 y5)
+  (base-obstacle x6 y6)
+  (gripper-obstacle x6 y6)
+  S:(surface x4 y4)
+  S:(surface x4 y5)
+  S:(surface x5 y4)
+  S:(surface x5 y5)
+  (cart-pos cart x0 y1)
+  (not-pushed cart)
+  (base-obstacle x0 y1)
+  (object-pos object0 x5 y5)
+  (object-pos object1 x5 y1)
+  (object-pos object2 x3 y1)
+  (object-pos object3 x1 y3)
+  (gripper-empty pr2)
+  (gripper-rel pr2 xrel0 yrel0)
+  (gripper-obstacle x5 y5)
+  (gripper-obstacle x5 y1)
+  (gripper-obstacle x3 y1)
+  (gripper-obstacle x1 y3)
+Init[0]:
+Goal: (and (RW:object-done object0) (RW:object-done object1) (RW:object-done object2) (RW:object-done object3))
+Metric: 0
+---- Domain: pddl-data/ipc-2014/seq-opt/tidybot/domain.pddl | pddl-data/ipc-2014/seq-opt/tidybot/p01.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/transport/domain.pddl | pddl-data/ipc-2014/seq-opt/transport/p01.pddl ----
+Domain: transport
+Problem: transport-city-sequential-5nodes-1000size-2degree-100mindistance-2trucks-4packages-2014seed
+Require: 200ff
+Type[7]:
+    [0]: object, parent: -1
+    [1]: location, parent: 0
+    [2]: target, parent: 0
+    [3]: locatable, parent: 0
+    [4]: vehicle, parent: 3
+    [5]: package, parent: 3
+    [6]: capacity-number, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+    [1]: 0 1 2 3 4
+    [2]:
+    [3]: 5 6 7 8 9 10
+    [4]: 5 6
+    [5]: 7 8 9 10
+    [6]: 11 12 13 14 15
+Obj[16]:
+    [0]: city-loc-1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: city-loc-2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: city-loc-3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: city-loc-4, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: city-loc-5, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: truck-1, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: truck-2, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: package-1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: package-2, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: package-3, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: package-4, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: capacity-0, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: capacity-1, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: capacity-2, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: capacity-3, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: capacity-4, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[6]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    road: 1 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    at: 3 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    in: 5 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    capacity: 4 6 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    capacity-predecessor: 6 6 :: is-private: 0, owner-param: -1, read: 1, write: 0
+Function[2]:
+    road-length: 1 1 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    total-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+Action[3]:
+    drive: ?v:4 ?l1:1 ?l2:1
+        pre: (and (RW:at ?v ?l1) (R:road ?l1 ?l2))
+        eff: (and (N:RW:at ?v ?l1) (RW:at ?v ?l2) (increase (total-cost) (road-length ?l1 ?l2)))
+    pick-up: ?v:4 ?l:1 ?p:5 ?s1:6 ?s2:6
+        pre: (and (RW:at ?v ?l) (RW:at ?p ?l) (R:capacity-predecessor ?s1 ?s2) (RW:capacity ?v ?s2))
+        eff: (and (N:RW:at ?p ?l) (RW:in ?p ?v) (RW:capacity ?v ?s1) (N:RW:capacity ?v ?s2) (increase (total-cost) 1))
+    drop: ?v:4 ?l:1 ?p:5 ?s1:6 ?s2:6
+        pre: (and (RW:at ?v ?l) (RW:in ?p ?v) (R:capacity-predecessor ?s1 ?s2) (RW:capacity ?v ?s1))
+        eff: (and (N:RW:in ?p ?v) (RW:at ?p ?l) (RW:capacity ?v ?s2) (N:RW:capacity ?v ?s1) (increase (total-cost) 1))
+Init[24]:
+  S:(capacity-predecessor capacity-0 capacity-1)
+  S:(capacity-predecessor capacity-1 capacity-2)
+  S:(capacity-predecessor capacity-2 capacity-3)
+  S:(capacity-predecessor capacity-3 capacity-4)
+  S:(road city-loc-3 city-loc-1)
+  S:(road city-loc-1 city-loc-3)
+  S:(road city-loc-3 city-loc-2)
+  S:(road city-loc-2 city-loc-3)
+  S:(road city-loc-4 city-loc-1)
+  S:(road city-loc-1 city-loc-4)
+  S:(road city-loc-4 city-loc-3)
+  S:(road city-loc-3 city-loc-4)
+  S:(road city-loc-5 city-loc-2)
+  S:(road city-loc-2 city-loc-5)
+  S:(road city-loc-5 city-loc-3)
+  S:(road city-loc-3 city-loc-5)
+  (at package-1 city-loc-1)
+  (at package-2 city-loc-1)
+  (at package-3 city-loc-3)
+  (at package-4 city-loc-2)
+  (at truck-1 city-loc-2)
+  (capacity truck-1 capacity-3)
+  (at truck-2 city-loc-1)
+  (capacity truck-2 capacity-2)
+Init[13]:
+  (= (total-cost) 0)
+  (= (road-length city-loc-3 city-loc-1) 40)
+  (= (road-length city-loc-1 city-loc-3) 40)
+  (= (road-length city-loc-3 city-loc-2) 18)
+  (= (road-length city-loc-2 city-loc-3) 18)
+  (= (road-length city-loc-4 city-loc-1) 36)
+  (= (road-length city-loc-1 city-loc-4) 36)
+  (= (road-length city-loc-4 city-loc-3) 37)
+  (= (road-length city-loc-3 city-loc-4) 37)
+  (= (road-length city-loc-5 city-loc-2) 24)
+  (= (road-length city-loc-2 city-loc-5) 24)
+  (= (road-length city-loc-5 city-loc-3) 26)
+  (= (road-length city-loc-3 city-loc-5) 26)
+Goal: (and (RW:at package-1 city-loc-2) (RW:at package-2 city-loc-2) (RW:at package-3 city-loc-1) (RW:at package-4 city-loc-5))
+Metric: 1
+---- Domain: pddl-data/ipc-2014/seq-opt/transport/domain.pddl | pddl-data/ipc-2014/seq-opt/transport/p01.pddl END ----
+---- Domain: pddl-data/ipc-2014/seq-opt/visitall/domain.pddl | pddl-data/ipc-2014/seq-opt/visitall/p-1-5.pddl ----
+Domain: grid-visit-all
+Problem: grid-5
+Require: ff
+Type[2]:
+    [0]: object, parent: -1
+    [1]: place, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+    [1]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+Obj[25]:
+    [0]: loc-x0-y0, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: loc-x0-y1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: loc-x0-y2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: loc-x0-y3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: loc-x0-y4, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: loc-x1-y0, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: loc-x1-y1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: loc-x1-y2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: loc-x1-y3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: loc-x1-y4, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: loc-x2-y0, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: loc-x2-y1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: loc-x2-y2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: loc-x2-y3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: loc-x2-y4, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: loc-x3-y0, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: loc-x3-y1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: loc-x3-y2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: loc-x3-y3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: loc-x3-y4, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: loc-x4-y0, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [21]: loc-x4-y1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [22]: loc-x4-y2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [23]: loc-x4-y3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [24]: loc-x4-y4, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[4]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    connected: 1 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    at-robot: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    visited: 1 :: is-private: 0, owner-param: -1, read: 0, write: 1
+Function[0]:
+Action[1]:
+    move: ?curpos:1 ?nextpos:1
+        pre: (and (RW:at-robot ?curpos) (R:connected ?curpos ?nextpos))
+        eff: (and (RW:at-robot ?nextpos) (N:RW:at-robot ?curpos) (W:visited ?nextpos))
+Init[82]:
+  (at-robot loc-x2-y2)
+  (visited loc-x2-y2)
+  S:(connected loc-x0-y0 loc-x1-y0)
+  S:(connected loc-x0-y0 loc-x0-y1)
+  S:(connected loc-x0-y1 loc-x1-y1)
+  S:(connected loc-x0-y1 loc-x0-y0)
+  S:(connected loc-x0-y1 loc-x0-y2)
+  S:(connected loc-x0-y2 loc-x1-y2)
+  S:(connected loc-x0-y2 loc-x0-y1)
+  S:(connected loc-x0-y2 loc-x0-y3)
+  S:(connected loc-x0-y3 loc-x1-y3)
+  S:(connected loc-x0-y3 loc-x0-y2)
+  S:(connected loc-x0-y3 loc-x0-y4)
+  S:(connected loc-x0-y4 loc-x1-y4)
+  S:(connected loc-x0-y4 loc-x0-y3)
+  S:(connected loc-x1-y0 loc-x0-y0)
+  S:(connected loc-x1-y0 loc-x2-y0)
+  S:(connected loc-x1-y0 loc-x1-y1)
+  S:(connected loc-x1-y1 loc-x0-y1)
+  S:(connected loc-x1-y1 loc-x2-y1)
+  S:(connected loc-x1-y1 loc-x1-y0)
+  S:(connected loc-x1-y1 loc-x1-y2)
+  S:(connected loc-x1-y2 loc-x0-y2)
+  S:(connected loc-x1-y2 loc-x2-y2)
+  S:(connected loc-x1-y2 loc-x1-y1)
+  S:(connected loc-x1-y2 loc-x1-y3)
+  S:(connected loc-x1-y3 loc-x0-y3)
+  S:(connected loc-x1-y3 loc-x2-y3)
+  S:(connected loc-x1-y3 loc-x1-y2)
+  S:(connected loc-x1-y3 loc-x1-y4)
+  S:(connected loc-x1-y4 loc-x0-y4)
+  S:(connected loc-x1-y4 loc-x2-y4)
+  S:(connected loc-x1-y4 loc-x1-y3)
+  S:(connected loc-x2-y0 loc-x1-y0)
+  S:(connected loc-x2-y0 loc-x3-y0)
+  S:(connected loc-x2-y0 loc-x2-y1)
+  S:(connected loc-x2-y1 loc-x1-y1)
+  S:(connected loc-x2-y1 loc-x3-y1)
+  S:(connected loc-x2-y1 loc-x2-y0)
+  S:(connected loc-x2-y1 loc-x2-y2)
+  S:(connected loc-x2-y2 loc-x1-y2)
+  S:(connected loc-x2-y2 loc-x3-y2)
+  S:(connected loc-x2-y2 loc-x2-y1)
+  S:(connected loc-x2-y2 loc-x2-y3)
+  S:(connected loc-x2-y3 loc-x1-y3)
+  S:(connected loc-x2-y3 loc-x3-y3)
+  S:(connected loc-x2-y3 loc-x2-y2)
+  S:(connected loc-x2-y3 loc-x2-y4)
+  S:(connected loc-x2-y4 loc-x1-y4)
+  S:(connected loc-x2-y4 loc-x3-y4)
+  S:(connected loc-x2-y4 loc-x2-y3)
+  S:(connected loc-x3-y0 loc-x2-y0)
+  S:(connected loc-x3-y0 loc-x4-y0)
+  S:(connected loc-x3-y0 loc-x3-y1)
+  S:(connected loc-x3-y1 loc-x2-y1)
+  S:(connected loc-x3-y1 loc-x4-y1)
+  S:(connected loc-x3-y1 loc-x3-y0)
+  S:(connected loc-x3-y1 loc-x3-y2)
+  S:(connected loc-x3-y2 loc-x2-y2)
+  S:(connected loc-x3-y2 loc-x4-y2)
+  S:(connected loc-x3-y2 loc-x3-y1)
+  S:(connected loc-x3-y2 loc-x3-y3)
+  S:(connected loc-x3-y3 loc-x2-y3)
+  S:(connected loc-x3-y3 loc-x4-y3)
+  S:(connected loc-x3-y3 loc-x3-y2)
+  S:(connected loc-x3-y3 loc-x3-y4)
+  S:(connected loc-x3-y4 loc-x2-y4)
+  S:(connected loc-x3-y4 loc-x4-y4)
+  S:(connected loc-x3-y4 loc-x3-y3)
+  S:(connected loc-x4-y0 loc-x3-y0)
+  S:(connected loc-x4-y0 loc-x4-y1)
+  S:(connected loc-x4-y1 loc-x3-y1)
+  S:(connected loc-x4-y1 loc-x4-y0)
+  S:(connected loc-x4-y1 loc-x4-y2)
+  S:(connected loc-x4-y2 loc-x3-y2)
+  S:(connected loc-x4-y2 loc-x4-y1)
+  S:(connected loc-x4-y2 loc-x4-y3)
+  S:(connected loc-x4-y3 loc-x3-y3)
+  S:(connected loc-x4-y3 loc-x4-y2)
+  S:(connected loc-x4-y3 loc-x4-y4)
+  S:(connected loc-x4-y4 loc-x3-y4)
+  S:(connected loc-x4-y4 loc-x4-y3)
+Init[0]:
+Goal: (and (W:visited loc-x0-y0) (W:visited loc-x0-y1) (W:visited loc-x0-y2) (W:visited loc-x0-y3) (W:visited loc-x0-y4) (W:visited loc-x1-y0) (W:visited loc-x1-y1) (W:visited loc-x1-y2) (W:visited loc-x1-y3) (W:visited loc-x1-y4) (W:visited loc-x2-y0) (W:visited loc-x2-y1) (W:visited loc-x2-y2) (W:visited loc-x2-y3) (W:visited loc-x2-y4) (W:visited loc-x3-y0) (W:visited loc-x3-y1) (W:visited loc-x3-y2) (W:visited loc-x3-y3) (W:visited loc-x3-y4) (W:visited loc-x4-y0) (W:visited loc-x4-y1) (W:visited loc-x4-y2) (W:visited loc-x4-y3) (W:visited loc-x4-y4))
+Metric: 0
+---- Domain: pddl-data/ipc-2014/seq-opt/visitall/domain.pddl | pddl-data/ipc-2014/seq-opt/visitall/p-1-5.pddl END ----
+---- Domain: pddl-data/ipc-2011/seq-opt/tidybot/domain.pddl | pddl-data/ipc-2011/seq-opt/tidybot/p10.pddl ----
+Domain: tidybot
+Problem: test
+Require: ff
+Type[7]:
+    [0]: object, parent: -1
+    [1]: robot, parent: 0
+    [2]: cart, parent: 0
+    [3]: xc, parent: 0
+    [4]: yc, parent: 0
+    [5]: xrel, parent: 0
+    [6]: yrel, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
+    [1]: 0
+    [2]: 1
+    [3]: 6 7 8 9 10 11 12 13
+    [4]: 14 15 16 17 18 19 20 21
+    [5]: 22 23 24
+    [6]: 25 26 27
+Obj[28]:
+    [0]: pr2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: cart, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: object0, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: object1, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: object2, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: object3, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: x0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: x1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: x2, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: x3, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: x4, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: x5, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: x6, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: x7, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: y0, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: y1, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: y2, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: y3, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: y4, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: y5, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: y6, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [21]: y7, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [22]: xrel-1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [23]: xrel0, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [24]: xrel1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [25]: yrel-1, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [26]: yrel0, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [27]: yrel1, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[25]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    leftof: 3 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    above: 4 4 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    leftof-rel: 5 5 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    above-rel: 6 6 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    sum-x: 3 5 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    sum-y: 4 6 4 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    zerox-rel: 5 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    zeroy-rel: 6 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    object-goal: 0 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    parked: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    base-pos: 1 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    base-obstacle: 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    object-pos: 0 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    object-done: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    surface: 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    holding: 1 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    gripper-empty: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    gripper-rel: 1 5 6 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    gripper-obstacle: 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    pushing: 1 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    not-pushing: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    not-pushed: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    cart-pos: 2 3 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    on-cart: 0 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+Function[0]:
+Action[30]:
+    unpark: ?r:1 ?x:5 ?y:6
+        pre: (and (RW:parked ?r) (RW:gripper-rel ?r ?x ?y) (R:zerox-rel ?x) (R:zeroy-rel ?y))
+        eff: (N:RW:parked ?r)
+    park: ?r:1
+        pre: (and (N:RW:parked ?r) (RW:not-pushing ?r))
+        eff: (RW:parked ?r)
+    base-left: ?r:1 ?cx:3 ?dx:3 ?y:4
+        pre: (and (N:RW:parked ?r) (RW:not-pushing ?r) (R:leftof ?dx ?cx) (RW:base-pos ?r ?cx ?y) (N:RW:base-obstacle ?dx ?y))
+        eff: (and (N:RW:base-pos ?r ?cx ?y) (RW:base-pos ?r ?dx ?y) (N:RW:base-obstacle ?cx ?y) (RW:base-obstacle ?dx ?y))
+    base-right: ?r:1 ?cx:3 ?dx:3 ?y:4
+        pre: (and (N:RW:parked ?r) (RW:not-pushing ?r) (R:leftof ?cx ?dx) (RW:base-pos ?r ?cx ?y) (N:RW:base-obstacle ?dx ?y))
+        eff: (and (N:RW:base-pos ?r ?cx ?y) (RW:base-pos ?r ?dx ?y) (N:RW:base-obstacle ?cx ?y) (RW:base-obstacle ?dx ?y))
+    base-up: ?r:1 ?x:3 ?cy:4 ?dy:4
+        pre: (and (N:RW:parked ?r) (RW:not-pushing ?r) (R:above ?dy ?cy) (RW:base-pos ?r ?x ?cy) (N:RW:base-obstacle ?x ?dy))
+        eff: (and (N:RW:base-pos ?r ?x ?cy) (RW:base-pos ?r ?x ?dy) (N:RW:base-obstacle ?x ?cy) (RW:base-obstacle ?x ?dy))
+    base-down: ?r:1 ?x:3 ?cy:4 ?dy:4
+        pre: (and (N:RW:parked ?r) (RW:not-pushing ?r) (R:above ?cy ?dy) (RW:base-pos ?r ?x ?cy) (N:RW:base-obstacle ?x ?dy))
+        eff: (and (N:RW:base-pos ?r ?x ?cy) (RW:base-pos ?r ?x ?dy) (N:RW:base-obstacle ?x ?cy) (RW:base-obstacle ?x ?dy))
+    base-cart-left: ?r:1 ?c:2 ?x1:3 ?x2:3 ?y:4 ?cx1:3 ?cx2:3 ?cy:4
+        pre: (and (RW:pushing ?r ?c) (R:leftof ?x2 ?x1) (R:leftof ?cx2 ?cx1) (RW:base-pos ?r ?x1 ?y) (RW:cart-pos ?c ?cx1 ?cy) (N:RW:base-obstacle ?x2 ?y) (N:RW:base-obstacle ?cx2 ?cy))
+        eff: (and (N:RW:base-pos ?r ?x1 ?y) (RW:base-pos ?r ?x2 ?y) (N:RW:cart-pos ?c ?cx1 ?cy) (RW:cart-pos ?c ?cx2 ?cy) (N:RW:base-obstacle ?x1 ?y) (RW:base-obstacle ?x2 ?y) (N:RW:base-obstacle ?cx1 ?cy) (RW:base-obstacle ?cx2 ?cy))
+    base-cart-right: ?r:1 ?c:2 ?x1:3 ?x2:3 ?y:4 ?cx1:3 ?cx2:3 ?cy:4
+        pre: (and (RW:pushing ?r ?c) (R:leftof ?x1 ?x2) (R:leftof ?cx1 ?cx2) (RW:base-pos ?r ?x1 ?y) (RW:cart-pos ?c ?cx1 ?cy) (N:RW:base-obstacle ?x2 ?y) (N:RW:base-obstacle ?cx2 ?cy))
+        eff: (and (N:RW:base-pos ?r ?x1 ?y) (RW:base-pos ?r ?x2 ?y) (N:RW:cart-pos ?c ?cx1 ?cy) (RW:cart-pos ?c ?cx2 ?cy) (N:RW:base-obstacle ?x1 ?y) (RW:base-obstacle ?x2 ?y) (N:RW:base-obstacle ?cx1 ?cy) (RW:base-obstacle ?cx2 ?cy))
+    base-cart-up: ?r:1 ?c:2 ?x:3 ?y1:4 ?y2:4 ?cx:3 ?cy1:4 ?cy2:4
+        pre: (and (RW:pushing ?r ?c) (R:above ?y2 ?y1) (R:above ?cy2 ?cy1) (RW:base-pos ?r ?x ?y1) (RW:cart-pos ?c ?cx ?cy1) (N:RW:base-obstacle ?x ?y2) (N:RW:base-obstacle ?cx ?cy2))
+        eff: (and (N:RW:base-pos ?r ?x ?y1) (RW:base-pos ?r ?x ?y2) (N:RW:cart-pos ?c ?cx ?cy1) (RW:cart-pos ?c ?cx ?cy2) (N:RW:base-obstacle ?x ?y1) (RW:base-obstacle ?x ?y2) (N:RW:base-obstacle ?cx ?cy2) (RW:base-obstacle ?cx ?cy2))
+    base-cart-down: ?r:1 ?c:2 ?x:3 ?y1:4 ?y2:4 ?cx:3 ?cy1:4 ?cy2:4
+        pre: (and (RW:pushing ?r ?c) (R:above ?y1 ?y2) (R:above ?cy1 ?cy2) (RW:base-pos ?r ?x ?y1) (RW:cart-pos ?c ?cx ?cy1) (N:RW:base-obstacle ?x ?y2) (N:RW:base-obstacle ?cx ?cy2))
+        eff: (and (N:RW:base-pos ?r ?x ?y1) (RW:base-pos ?r ?x ?y2) (N:RW:cart-pos ?c ?cx ?cy1) (RW:cart-pos ?c ?cx ?cy2) (N:RW:base-obstacle ?x ?y1) (RW:base-obstacle ?x ?y2) (N:RW:base-obstacle ?cx ?cy2) (RW:base-obstacle ?cx ?cy2))
+    gripper-left: ?r:1 ?basex:3 ?basey:4 ?cgxrel:5 ?dgxrel:5 ?cgxabs:3 ?dgxabs:3 ?gyrel:6 ?gyabs:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?cgxrel ?gyrel) (R:leftof-rel ?dgxrel ?cgxrel) (R:sum-x ?basex ?cgxrel ?cgxabs) (R:sum-x ?basex ?dgxrel ?dgxabs) (R:sum-y ?basey ?gyrel ?gyabs) (N:RW:gripper-obstacle ?dgxabs ?gyabs))
+        eff: (and (N:RW:gripper-rel ?r ?cgxrel ?gyrel) (RW:gripper-rel ?r ?dgxrel ?gyrel) (N:RW:gripper-obstacle ?cgxabs ?gyabs) (RW:gripper-obstacle ?dgxabs ?gyabs))
+    gripper-right: ?r:1 ?basex:3 ?basey:4 ?cgxrel:5 ?dgxrel:5 ?cgxabs:3 ?dgxabs:3 ?gyrel:6 ?gyabs:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?cgxrel ?gyrel) (R:leftof-rel ?cgxrel ?dgxrel) (R:sum-x ?basex ?cgxrel ?cgxabs) (R:sum-x ?basex ?dgxrel ?dgxabs) (R:sum-y ?basey ?gyrel ?gyabs) (N:RW:gripper-obstacle ?dgxabs ?gyabs))
+        eff: (and (N:RW:gripper-rel ?r ?cgxrel ?gyrel) (RW:gripper-rel ?r ?dgxrel ?gyrel) (N:RW:gripper-obstacle ?cgxabs ?gyabs) (RW:gripper-obstacle ?dgxabs ?gyabs))
+    gripper-up: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?cgyrel:6 ?dgyrel:6 ?cgyabs:4 ?dgyabs:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?cgyrel) (R:above-rel ?dgyrel ?cgyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?cgyrel ?cgyabs) (R:sum-y ?basey ?dgyrel ?dgyabs) (N:RW:gripper-obstacle ?gxabs ?dgyabs))
+        eff: (and (N:RW:gripper-rel ?r ?gxrel ?cgyrel) (RW:gripper-rel ?r ?gxrel ?dgyrel) (N:RW:gripper-obstacle ?gxabs ?cgyabs) (RW:gripper-obstacle ?gxabs ?dgyabs))
+    gripper-down: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?cgyrel:6 ?dgyrel:6 ?cgyabs:4 ?dgyabs:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?cgyrel) (R:above-rel ?cgyrel ?dgyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?cgyrel ?cgyabs) (R:sum-y ?basey ?dgyrel ?dgyabs) (N:RW:gripper-obstacle ?gxabs ?dgyabs))
+        eff: (and (N:RW:gripper-rel ?r ?gxrel ?cgyrel) (RW:gripper-rel ?r ?gxrel ?dgyrel) (N:RW:gripper-obstacle ?gxabs ?cgyabs) (RW:gripper-obstacle ?gxabs ?dgyabs))
+    grasp-cart-left: ?r:1 ?c:2 ?x:3 ?y:4 ?cx:3
+        pre: (and (N:RW:parked ?r) (RW:not-pushed ?c) (RW:base-pos ?r ?x ?y) (RW:cart-pos ?c ?cx ?y) (R:leftof ?cx ?x) (RW:not-pushing ?r))
+        eff: (and (RW:pushing ?r ?c) (N:RW:not-pushing ?r) (N:RW:not-pushed ?c))
+    grasp-cart-right: ?r:1 ?c:2 ?x:3 ?y:4 ?cx:3
+        pre: (and (N:RW:parked ?r) (RW:not-pushed ?c) (RW:base-pos ?r ?x ?y) (RW:cart-pos ?c ?cx ?y) (R:leftof ?x ?cx) (RW:not-pushing ?r))
+        eff: (and (RW:pushing ?r ?c) (N:RW:not-pushing ?r) (N:RW:not-pushed ?c))
+    grasp-cart-above: ?r:1 ?c:2 ?x:3 ?y:4 ?cy:4
+        pre: (and (N:RW:parked ?r) (RW:not-pushed ?c) (RW:base-pos ?r ?x ?y) (RW:cart-pos ?c ?x ?cy) (R:above ?cy ?y) (RW:not-pushing ?r))
+        eff: (and (RW:pushing ?r ?c) (N:RW:not-pushing ?r) (N:RW:not-pushed ?c))
+    grasp-cart-below: ?r:1 ?c:2 ?x:3 ?y:4 ?cy:4
+        pre: (and (N:RW:parked ?r) (RW:not-pushed ?c) (RW:base-pos ?r ?x ?y) (RW:cart-pos ?c ?x ?cy) (R:above ?y ?cy) (RW:not-pushing ?r))
+        eff: (and (RW:pushing ?r ?c) (N:RW:not-pushing ?r) (N:RW:not-pushed ?c))
+    ungrasp-cart: ?r:1 ?c:2
+        pre: (and (RW:pushing ?r ?c))
+        eff: (and (N:RW:pushing ?r ?c) (RW:not-pushing ?r) (RW:not-pushed ?c))
+    get-left: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?ox:3
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:gripper-empty ?r) (R:leftof ?ox ?gxabs) (N:RW:object-done ?o) (RW:object-pos ?o ?ox ?gyabs))
+        eff: (and (N:RW:object-pos ?o ?ox ?gyabs) (N:RW:gripper-obstacle ?ox ?gyabs) (N:RW:gripper-empty ?r) (RW:holding ?r ?o))
+    get-right: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?ox:3
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:gripper-empty ?r) (R:leftof ?gxabs ?ox) (N:RW:object-done ?o) (RW:object-pos ?o ?ox ?gyabs))
+        eff: (and (N:RW:object-pos ?o ?ox ?gyabs) (N:RW:gripper-obstacle ?ox ?gyabs) (N:RW:gripper-empty ?r) (RW:holding ?r ?o))
+    get-up: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?oy:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:gripper-empty ?r) (R:above ?oy ?gyabs) (N:RW:object-done ?o) (RW:object-pos ?o ?gxabs ?oy))
+        eff: (and (N:RW:object-pos ?o ?gxabs ?oy) (N:RW:gripper-obstacle ?gxabs ?oy) (N:RW:gripper-empty ?r) (RW:holding ?r ?o))
+    get-down: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?oy:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:gripper-empty ?r) (R:above ?gyabs ?oy) (N:RW:object-done ?o) (RW:object-pos ?o ?gxabs ?oy))
+        eff: (and (N:RW:object-pos ?o ?gxabs ?oy) (N:RW:gripper-obstacle ?gxabs ?oy) (N:RW:gripper-empty ?r) (RW:holding ?r ?o))
+    get-from-cart: ?r:1 ?x:3 ?y:4 ?gxrel:5 ?gyrel:6 ?o:0 ?c:2 ?cx:3 ?cy:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?x ?y) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?x ?gxrel ?cx) (R:sum-y ?y ?gyrel ?cy) (RW:gripper-empty ?r) (RW:cart-pos ?c ?cx ?cy) (RW:on-cart ?o ?c))
+        eff: (and (RW:holding ?r ?o) (N:RW:gripper-empty ?r) (N:RW:on-cart ?o ?c))
+    put-left: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?ox:3
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:holding ?r ?o) (R:leftof ?ox ?gxabs) (N:RW:gripper-obstacle ?ox ?gyabs) (R:surface ?ox ?gyabs))
+        eff: (and (N:RW:holding ?r ?o) (RW:object-pos ?o ?ox ?gyabs) (RW:gripper-obstacle ?ox ?gyabs) (RW:gripper-empty ?r))
+    put-right: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?ox:3
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:holding ?r ?o) (R:leftof ?gxabs ?ox) (N:RW:gripper-obstacle ?ox ?gyabs) (R:surface ?ox ?gyabs))
+        eff: (and (N:RW:holding ?r ?o) (RW:object-pos ?o ?ox ?gyabs) (RW:gripper-obstacle ?ox ?gyabs) (RW:gripper-empty ?r))
+    put-up: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?oy:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:holding ?r ?o) (R:above ?oy ?gyabs) (N:RW:gripper-obstacle ?gxabs ?oy) (R:surface ?gxabs ?oy))
+        eff: (and (N:RW:holding ?r ?o) (RW:object-pos ?o ?gxabs ?oy) (RW:gripper-obstacle ?gxabs ?oy) (RW:gripper-empty ?r))
+    put-down: ?r:1 ?basex:3 ?basey:4 ?gxrel:5 ?gxabs:3 ?gyrel:6 ?gyabs:4 ?o:0 ?oy:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?basex ?basey) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?basex ?gxrel ?gxabs) (R:sum-y ?basey ?gyrel ?gyabs) (RW:holding ?r ?o) (R:above ?gyabs ?oy) (N:RW:gripper-obstacle ?gxabs ?oy) (R:surface ?gxabs ?oy))
+        eff: (and (N:RW:holding ?r ?o) (RW:object-pos ?o ?gxabs ?oy) (RW:gripper-obstacle ?gxabs ?oy) (RW:gripper-empty ?r))
+    put-on-cart: ?r:1 ?x:3 ?y:4 ?gxrel:5 ?gyrel:6 ?o:0 ?c:2 ?cx:3 ?cy:4
+        pre: (and (RW:parked ?r) (RW:base-pos ?r ?x ?y) (RW:gripper-rel ?r ?gxrel ?gyrel) (R:sum-x ?x ?gxrel ?cx) (R:sum-y ?y ?gyrel ?cy) (RW:cart-pos ?c ?cx ?cy) (RW:holding ?r ?o))
+        eff: (and (N:RW:holding ?r ?o) (RW:on-cart ?o ?c) (RW:gripper-empty ?r))
+    finish-object: ?o:0 ?x:3 ?y:4
+        pre: (and (N:RW:object-done ?o) (RW:object-pos ?o ?x ?y) (R:object-goal ?o ?x ?y))
+        eff: (and (RW:object-done ?o))
+Init[109]:
+  S:(leftof x0 x1)
+  S:(leftof x1 x2)
+  S:(leftof x2 x3)
+  S:(leftof x3 x4)
+  S:(leftof x4 x5)
+  S:(leftof x5 x6)
+  S:(leftof x6 x7)
+  S:(above y0 y1)
+  S:(above y1 y2)
+  S:(above y2 y3)
+  S:(above y3 y4)
+  S:(above y4 y5)
+  S:(above y5 y6)
+  S:(above y6 y7)
+  S:(leftof-rel xrel-1 xrel0)
+  S:(leftof-rel xrel0 xrel1)
+  S:(above-rel yrel-1 yrel0)
+  S:(above-rel yrel0 yrel1)
+  S:(sum-x x0 xrel0 x0)
+  S:(sum-x x0 xrel1 x1)
+  S:(sum-x x1 xrel-1 x0)
+  S:(sum-x x1 xrel0 x1)
+  S:(sum-x x1 xrel1 x2)
+  S:(sum-x x2 xrel-1 x1)
+  S:(sum-x x2 xrel0 x2)
+  S:(sum-x x2 xrel1 x3)
+  S:(sum-x x3 xrel-1 x2)
+  S:(sum-x x3 xrel0 x3)
+  S:(sum-x x3 xrel1 x4)
+  S:(sum-x x4 xrel-1 x3)
+  S:(sum-x x4 xrel0 x4)
+  S:(sum-x x4 xrel1 x5)
+  S:(sum-x x5 xrel-1 x4)
+  S:(sum-x x5 xrel0 x5)
+  S:(sum-x x5 xrel1 x6)
+  S:(sum-x x6 xrel-1 x5)
+  S:(sum-x x6 xrel0 x6)
+  S:(sum-x x6 xrel1 x7)
+  S:(sum-x x7 xrel-1 x6)
+  S:(sum-x x7 xrel0 x7)
+  S:(sum-y y0 yrel0 y0)
+  S:(sum-y y0 yrel1 y1)
+  S:(sum-y y1 yrel-1 y0)
+  S:(sum-y y1 yrel0 y1)
+  S:(sum-y y1 yrel1 y2)
+  S:(sum-y y2 yrel-1 y1)
+  S:(sum-y y2 yrel0 y2)
+  S:(sum-y y2 yrel1 y3)
+  S:(sum-y y3 yrel-1 y2)
+  S:(sum-y y3 yrel0 y3)
+  S:(sum-y y3 yrel1 y4)
+  S:(sum-y y4 yrel-1 y3)
+  S:(sum-y y4 yrel0 y4)
+  S:(sum-y y4 yrel1 y5)
+  S:(sum-y y5 yrel-1 y4)
+  S:(sum-y y5 yrel0 y5)
+  S:(sum-y y5 yrel1 y6)
+  S:(sum-y y6 yrel-1 y5)
+  S:(sum-y y6 yrel0 y6)
+  S:(sum-y y6 yrel1 y7)
+  S:(sum-y y7 yrel-1 y6)
+  S:(sum-y y7 yrel0 y7)
+  S:(zerox-rel xrel0)
+  S:(zeroy-rel yrel0)
+  S:(object-goal object0 x3 y3)
+  S:(object-goal object1 x3 y4)
+  S:(object-goal object2 x4 y3)
+  S:(object-goal object3 x4 y4)
+  (parked pr2)
+  (not-pushing pr2)
+  (base-pos pr2 x0 y0)
+  (base-obstacle x0 y0)
+  (base-obstacle x2 y2)
+  (gripper-obstacle x2 y2)
+  (base-obstacle x2 y3)
+  (gripper-obstacle x2 y3)
+  (base-obstacle x2 y4)
+  (gripper-obstacle x2 y4)
+  (base-obstacle x2 y5)
+  (gripper-obstacle x2 y5)
+  (base-obstacle x3 y2)
+  (gripper-obstacle x3 y2)
+  (base-obstacle x4 y2)
+  (gripper-obstacle x4 y2)
+  (base-obstacle x5 y2)
+  (gripper-obstacle x5 y2)
+  (base-obstacle x5 y3)
+  (gripper-obstacle x5 y3)
+  (base-obstacle x5 y4)
+  (gripper-obstacle x5 y4)
+  (base-obstacle x5 y5)
+  (gripper-obstacle x5 y5)
+  S:(surface x3 y3)
+  S:(surface x3 y4)
+  S:(surface x4 y3)
+  S:(surface x4 y4)
+  (cart-pos cart x0 y1)
+  (not-pushed cart)
+  (base-obstacle x0 y1)
+  (object-pos object0 x3 y4)
+  (object-pos object1 x4 y4)
+  (object-pos object2 x3 y3)
+  (object-pos object3 x4 y3)
+  (gripper-empty pr2)
+  (gripper-rel pr2 xrel0 yrel0)
+  (gripper-obstacle x3 y4)
+  (gripper-obstacle x4 y4)
+  (gripper-obstacle x3 y3)
+  (gripper-obstacle x4 y3)
+Init[0]:
+Goal: (and (RW:object-done object0) (RW:object-done object1) (RW:object-done object2) (RW:object-done object3))
+Metric: 0
+---- Domain: pddl-data/ipc-2011/seq-opt/tidybot/domain.pddl | pddl-data/ipc-2011/seq-opt/tidybot/p10.pddl END ----
+---- Domain: pddl-data/test-seq/test/domain.pddl | pddl-data/test-seq/test/pfile.pddl ----
+Domain: logistics
+Problem: logistics-a3
+Require: ff
+Type[10]:
+    [0]: object, parent: -1
+    [1]: package, parent: 0
+    [2]: location, parent: 0
+    [3]: vehicle, parent: 0
+    [4]: city, parent: 0
+    [5]: truck, parent: 3
+    [6]: airplane, parent: 3
+    [7]: airport, parent: 2
+    [8]: (either package vehicle), parent: -1
+    [9]: (either location truck), parent: -1
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9
+    [1]: 0
+    [2]: 6 7 8 9
+    [3]: 1 4 5
+    [4]: 2 3
+    [5]: 4 5
+    [6]: 1
+    [7]: 8 9
+    [8]: 0 1 4 5
+    [9]: 6 7 8 9 4 5
+Obj[10]:
+    [0]: package1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: airplane1, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: pgh, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: ny, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: pgh-truck, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: ny-truck, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: pgh-po, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: ny-po, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: pgh-airport, type: 7, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: ny-airport, type: 7, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[4]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    at: 8 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    in: 1 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    in-city: 9 4 :: is-private: 0, owner-param: -1, read: 1, write: 0
+Function[0]:
+Action[6]:
+    load-truck: ?obj:1 ?truck:5 ?loc:2
+        pre: (and (RW:at ?truck ?loc) (RW:at ?obj ?loc))
+        eff: (and (N:RW:at ?obj ?loc) (RW:in ?obj ?truck))
+    load-airplane: ?obj:1 ?airplane:6 ?loc:7
+        pre: (and (RW:at ?obj ?loc) (RW:at ?airplane ?loc))
+        eff: (and (N:RW:at ?obj ?loc) (RW:in ?obj ?airplane))
+    unload-truck: ?obj:1 ?truck:5 ?loc:2
+        pre: (and (RW:at ?truck ?loc) (RW:in ?obj ?truck))
+        eff: (and (N:RW:in ?obj ?truck) (RW:at ?obj ?loc))
+    unload-airplane: ?obj:1 ?airplane:6 ?loc:7
+        pre: (and (RW:in ?obj ?airplane) (RW:at ?airplane ?loc))
+        eff: (and (N:RW:in ?obj ?airplane) (RW:at ?obj ?loc))
+    drive-truck: ?truck:5 ?loc-from:2 ?loc-to:2 ?city:4
+        pre: (and (RW:at ?truck ?loc-from) (R:in-city ?truck ?city) (R:in-city ?loc-from ?city) (R:in-city ?loc-to ?city))
+        eff: (and (N:RW:at ?truck ?loc-from) (RW:at ?truck ?loc-to))
+    fly-airplane: ?airplane:6 ?loc-from:7 ?loc-to:7
+        pre: (RW:at ?airplane ?loc-from)
+        eff: (and (N:RW:at ?airplane ?loc-from) (RW:at ?airplane ?loc-to))
+Init[10]:
+  S:(in-city pgh-po pgh)
+  S:(in-city pgh-airport pgh)
+  S:(in-city ny-po ny)
+  S:(in-city ny-airport ny)
+  (at package1 pgh-po)
+  (at airplane1 pgh-airport)
+  (at pgh-truck pgh-po)
+  S:(in-city pgh-truck pgh)
+  (at ny-truck ny-po)
+  S:(in-city ny-truck ny)
+Init[0]:
+Goal: (and (RW:at package1 ny-po))
+Metric: 0
+---- Domain: pddl-data/test-seq/test/domain.pddl | pddl-data/test-seq/test/pfile.pddl END ----
+---- Domain: pddl-data/ipc-2008/seq-opt/openstacks/p01-domain.pddl | pddl-data/ipc-2008/seq-opt/openstacks/p01.pddl ----
+Domain: openstacks-sequencedstrips-adl
+Problem: os-sequencedstrips-p5_1
+Require: 200ff
+Type[4]:
+    [0]: object, parent: -1
+    [1]: order, parent: 0
+    [2]: product, parent: 0
+    [3]: count, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+    [1]: 6 7 8 9 10
+    [2]: 11 12 13 14 15
+    [3]: 0 1 2 3 4 5
+Obj[16]:
+    [0]: n0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: n1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: n2, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: n3, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: n4, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: n5, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: o1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: o2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: o3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: o4, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: o5, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: p1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: p2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: p3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: p4, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: p5, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[8]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    includes: 1 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    waiting: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    started: 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    shipped: 1 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    made: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    stacks-avail: 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    next-count: 3 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+Function[1]:
+    total-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+Action[4]:
+    make-product: ?p:2
+        pre: (and (N:RW:made ?p) (forall (?o:1 I[0]:?p:2) (imply (R:includes ?o ?p) (RW:started ?o))))
+        eff: (RW:made ?p)
+    start-order: ?o:1 ?avail:3 ?new-avail:3
+        pre: (and (RW:waiting ?o) (RW:stacks-avail ?avail) (R:next-count ?new-avail ?avail))
+        eff: (and (N:RW:waiting ?o) (RW:started ?o) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    ship-order: ?o:1 ?avail:3 ?new-avail:3
+        pre: (and (RW:started ?o) (forall (?p:2 I[0]:?o:1 I[1]:?avail:3 I[2]:?new-avail:3) (imply (R:includes ?o ?p) (RW:made ?p))) (RW:stacks-avail ?avail) (R:next-count ?avail ?new-avail))
+        eff: (and (N:RW:started ?o) (W:shipped ?o) (N:RW:stacks-avail ?avail) (RW:stacks-avail ?new-avail))
+    open-new-stack: ?open:3 ?new-open:3
+        pre: (and (RW:stacks-avail ?open) (R:next-count ?open ?new-open))
+        eff: (and (N:RW:stacks-avail ?open) (RW:stacks-avail ?new-open) (increase (total-cost) 1))
+Init[18]:
+  S:(next-count n0 n1)
+  S:(next-count n1 n2)
+  S:(next-count n2 n3)
+  S:(next-count n3 n4)
+  S:(next-count n4 n5)
+  (stacks-avail n0)
+  (waiting o1)
+  S:(includes o1 p2)
+  (waiting o2)
+  S:(includes o2 p1)
+  S:(includes o2 p2)
+  (waiting o3)
+  S:(includes o3 p3)
+  (waiting o4)
+  S:(includes o4 p3)
+  S:(includes o4 p4)
+  (waiting o5)
+  S:(includes o5 p5)
+Init[1]:
+  (= (total-cost) 0)
+Goal: (and (W:shipped o1) (W:shipped o2) (W:shipped o3) (W:shipped o4) (W:shipped o5))
+Metric: 1
+---- Domain: pddl-data/ipc-2008/seq-opt/openstacks/p01-domain.pddl | pddl-data/ipc-2008/seq-opt/openstacks/p01.pddl END ----

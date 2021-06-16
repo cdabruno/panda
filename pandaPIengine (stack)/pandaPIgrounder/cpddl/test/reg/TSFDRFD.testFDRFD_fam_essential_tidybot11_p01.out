@@ -1,0 +1,1528 @@
+begin_version
+3
+end_version
+begin_metric
+1
+end_metric
+29
+begin_variable
+var0
+-1
+6
+gripper-rel pr2 xrel-1 yrel0
+gripper-rel pr2 xrel-1 yrel1
+gripper-rel pr2 xrel0 yrel0
+gripper-rel pr2 xrel0 yrel1
+gripper-rel pr2 xrel1 yrel0
+gripper-rel pr2 xrel1 yrel1
+end_variable
+begin_variable
+var1
+-1
+5
+base-pos pr2 x0 y0
+base-pos pr2 x1 y0
+base-pos pr2 x2 y0
+base-pos pr2 x3 y0
+base-pos pr2 x4 y0
+end_variable
+begin_variable
+var2
+-1
+4
+holding pr2 object0
+object-pos object0 x2 y2
+object-pos object0 x3 y2
+on-cart object0 cart
+end_variable
+begin_variable
+var3
+-1
+4
+holding pr2 object2
+object-pos object2 x2 y2
+object-pos object2 x3 y2
+on-cart object2 cart
+end_variable
+begin_variable
+var4
+-1
+2
+NOT-object-done object0
+object-done object0
+end_variable
+begin_variable
+var5
+-1
+2
+NOT-object-done object1
+object-done object1
+end_variable
+begin_variable
+var6
+-1
+2
+NOT-object-done object2
+object-done object2
+end_variable
+begin_variable
+var7
+-1
+2
+NOT-object-done object3
+object-done object3
+end_variable
+begin_variable
+var8
+-1
+2
+NOT-parked pr2
+parked pr2
+end_variable
+begin_variable
+var9
+-1
+2
+not-pushed cart
+pushing pr2 cart
+end_variable
+begin_variable
+var10
+-1
+2
+gripper-empty pr2
+none-of-those
+end_variable
+begin_variable
+var11
+-1
+2
+not-pushing pr2
+none-of-those
+end_variable
+begin_variable
+var12
+-1
+2
+NOT-base-obstacle x0 y0
+base-obstacle x0 y0
+end_variable
+begin_variable
+var13
+-1
+2
+NOT-base-obstacle x1 y0
+base-obstacle x1 y0
+end_variable
+begin_variable
+var14
+-1
+2
+NOT-base-obstacle x2 y0
+base-obstacle x2 y0
+end_variable
+begin_variable
+var15
+-1
+2
+NOT-base-obstacle x3 y0
+base-obstacle x3 y0
+end_variable
+begin_variable
+var16
+-1
+2
+NOT-base-obstacle x4 y0
+base-obstacle x4 y0
+end_variable
+begin_variable
+var17
+-1
+2
+NOT-gripper-obstacle x0 y0
+gripper-obstacle x0 y0
+end_variable
+begin_variable
+var18
+-1
+2
+NOT-gripper-obstacle x0 y1
+gripper-obstacle x0 y1
+end_variable
+begin_variable
+var19
+-1
+2
+NOT-gripper-obstacle x1 y0
+gripper-obstacle x1 y0
+end_variable
+begin_variable
+var20
+-1
+2
+NOT-gripper-obstacle x1 y1
+gripper-obstacle x1 y1
+end_variable
+begin_variable
+var21
+-1
+2
+NOT-gripper-obstacle x2 y0
+gripper-obstacle x2 y0
+end_variable
+begin_variable
+var22
+-1
+2
+NOT-gripper-obstacle x2 y1
+gripper-obstacle x2 y1
+end_variable
+begin_variable
+var23
+-1
+2
+NOT-gripper-obstacle x2 y2
+gripper-obstacle x2 y2
+end_variable
+begin_variable
+var24
+-1
+2
+NOT-gripper-obstacle x3 y0
+gripper-obstacle x3 y0
+end_variable
+begin_variable
+var25
+-1
+2
+NOT-gripper-obstacle x3 y1
+gripper-obstacle x3 y1
+end_variable
+begin_variable
+var26
+-1
+2
+NOT-gripper-obstacle x3 y2
+gripper-obstacle x3 y2
+end_variable
+begin_variable
+var27
+-1
+2
+NOT-gripper-obstacle x4 y0
+gripper-obstacle x4 y0
+end_variable
+begin_variable
+var28
+-1
+2
+NOT-gripper-obstacle x4 y1
+gripper-obstacle x4 y1
+end_variable
+16
+begin_mutex_group
+1
+4 0
+end_mutex_group
+begin_mutex_group
+1
+5 0
+end_mutex_group
+begin_mutex_group
+1
+6 0
+end_mutex_group
+begin_mutex_group
+1
+7 0
+end_mutex_group
+begin_mutex_group
+2
+4 0
+4 1
+end_mutex_group
+begin_mutex_group
+2
+5 0
+5 1
+end_mutex_group
+begin_mutex_group
+2
+6 0
+6 1
+end_mutex_group
+begin_mutex_group
+2
+7 0
+7 1
+end_mutex_group
+begin_mutex_group
+2
+8 0
+8 1
+end_mutex_group
+begin_mutex_group
+2
+9 0
+9 1
+end_mutex_group
+begin_mutex_group
+2
+11 0
+9 1
+end_mutex_group
+begin_mutex_group
+3
+10 0
+2 0
+3 0
+end_mutex_group
+begin_mutex_group
+4
+2 0
+2 1
+2 2
+2 3
+end_mutex_group
+begin_mutex_group
+4
+3 0
+3 1
+3 2
+3 3
+end_mutex_group
+begin_mutex_group
+5
+1 0
+1 1
+1 2
+1 3
+1 4
+end_mutex_group
+begin_mutex_group
+6
+0 0
+0 1
+0 2
+0 3
+0 4
+0 5
+end_mutex_group
+begin_state
+2
+0
+1
+2
+0
+0
+0
+0
+1
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+1
+0
+1
+1
+0
+1
+end_state
+begin_goal
+4
+4 1
+5 1
+6 1
+7 1
+end_goal
+106
+begin_operator
+base-left pr2 x1 x0 y0
+2
+8 0
+11 0
+3
+0 1 1 0
+0 12 0 1
+0 13 -1 0
+1
+end_operator
+begin_operator
+base-left pr2 x2 x1 y0
+2
+8 0
+11 0
+3
+0 1 2 1
+0 13 0 1
+0 14 -1 0
+1
+end_operator
+begin_operator
+base-left pr2 x3 x2 y0
+2
+8 0
+11 0
+3
+0 1 3 2
+0 14 0 1
+0 15 -1 0
+1
+end_operator
+begin_operator
+base-left pr2 x4 x3 y0
+2
+8 0
+11 0
+3
+0 1 4 3
+0 15 0 1
+0 16 -1 0
+1
+end_operator
+begin_operator
+base-right pr2 x0 x1 y0
+2
+8 0
+11 0
+3
+0 1 0 1
+0 12 -1 0
+0 13 0 1
+1
+end_operator
+begin_operator
+base-right pr2 x1 x2 y0
+2
+8 0
+11 0
+3
+0 1 1 2
+0 13 -1 0
+0 14 0 1
+1
+end_operator
+begin_operator
+base-right pr2 x2 x3 y0
+2
+8 0
+11 0
+3
+0 1 2 3
+0 14 -1 0
+0 15 0 1
+1
+end_operator
+begin_operator
+base-right pr2 x3 x4 y0
+2
+8 0
+11 0
+3
+0 1 3 4
+0 15 -1 0
+0 16 0 1
+1
+end_operator
+begin_operator
+finish-object object0 x2 y2
+1
+2 1
+1
+0 4 0 1
+1
+end_operator
+begin_operator
+finish-object object1 x2 y3
+0
+1
+0 5 0 1
+1
+end_operator
+begin_operator
+finish-object object2 x3 y2
+1
+3 2
+1
+0 6 0 1
+1
+end_operator
+begin_operator
+finish-object object3 x3 y3
+0
+1
+0 7 0 1
+1
+end_operator
+begin_operator
+get-down pr2 x1 y0 xrel1 x2 yrel1 y1 object0 y2
+4
+0 5
+1 1
+4 0
+8 1
+3
+0 2 1 0
+0 10 0 1
+0 23 -1 0
+1
+end_operator
+begin_operator
+get-down pr2 x1 y0 xrel1 x2 yrel1 y1 object2 y2
+4
+0 5
+1 1
+6 0
+8 1
+3
+0 3 1 0
+0 10 0 1
+0 23 -1 0
+1
+end_operator
+begin_operator
+get-down pr2 x2 y0 xrel0 x2 yrel1 y1 object0 y2
+4
+0 3
+1 2
+4 0
+8 1
+3
+0 2 1 0
+0 10 0 1
+0 23 -1 0
+1
+end_operator
+begin_operator
+get-down pr2 x2 y0 xrel0 x2 yrel1 y1 object2 y2
+4
+0 3
+1 2
+6 0
+8 1
+3
+0 3 1 0
+0 10 0 1
+0 23 -1 0
+1
+end_operator
+begin_operator
+get-down pr2 x2 y0 xrel1 x3 yrel1 y1 object0 y2
+4
+0 5
+1 2
+4 0
+8 1
+3
+0 2 2 0
+0 10 0 1
+0 26 -1 0
+1
+end_operator
+begin_operator
+get-down pr2 x2 y0 xrel1 x3 yrel1 y1 object2 y2
+4
+0 5
+1 2
+6 0
+8 1
+3
+0 3 2 0
+0 10 0 1
+0 26 -1 0
+1
+end_operator
+begin_operator
+get-down pr2 x3 y0 xrel-1 x2 yrel1 y1 object0 y2
+4
+0 1
+1 3
+4 0
+8 1
+3
+0 2 1 0
+0 10 0 1
+0 23 -1 0
+1
+end_operator
+begin_operator
+get-down pr2 x3 y0 xrel-1 x2 yrel1 y1 object2 y2
+4
+0 1
+1 3
+6 0
+8 1
+3
+0 3 1 0
+0 10 0 1
+0 23 -1 0
+1
+end_operator
+begin_operator
+get-down pr2 x3 y0 xrel0 x3 yrel1 y1 object0 y2
+4
+0 3
+1 3
+4 0
+8 1
+3
+0 2 2 0
+0 10 0 1
+0 26 -1 0
+1
+end_operator
+begin_operator
+get-down pr2 x3 y0 xrel0 x3 yrel1 y1 object2 y2
+4
+0 3
+1 3
+6 0
+8 1
+3
+0 3 2 0
+0 10 0 1
+0 26 -1 0
+1
+end_operator
+begin_operator
+get-down pr2 x4 y0 xrel-1 x3 yrel1 y1 object0 y2
+4
+0 1
+1 4
+4 0
+8 1
+3
+0 2 2 0
+0 10 0 1
+0 26 -1 0
+1
+end_operator
+begin_operator
+get-down pr2 x4 y0 xrel-1 x3 yrel1 y1 object2 y2
+4
+0 1
+1 4
+6 0
+8 1
+3
+0 3 2 0
+0 10 0 1
+0 26 -1 0
+1
+end_operator
+begin_operator
+get-from-cart pr2 x0 y0 xrel0 yrel1 object0 cart x0 y1
+3
+0 3
+1 0
+8 1
+2
+0 2 3 0
+0 10 0 1
+1
+end_operator
+begin_operator
+get-from-cart pr2 x0 y0 xrel0 yrel1 object2 cart x0 y1
+3
+0 3
+1 0
+8 1
+2
+0 3 3 0
+0 10 0 1
+1
+end_operator
+begin_operator
+get-from-cart pr2 x1 y0 xrel-1 yrel1 object0 cart x0 y1
+3
+0 1
+1 1
+8 1
+2
+0 2 3 0
+0 10 0 1
+1
+end_operator
+begin_operator
+get-from-cart pr2 x1 y0 xrel-1 yrel1 object2 cart x0 y1
+3
+0 1
+1 1
+8 1
+2
+0 3 3 0
+0 10 0 1
+1
+end_operator
+begin_operator
+grasp-cart-below pr2 cart x0 y0 y1
+2
+1 0
+8 0
+2
+0 9 0 1
+0 11 0 1
+1
+end_operator
+begin_operator
+gripper-down pr2 x0 y0 xrel0 x0 yrel0 yrel1 y0 y1
+2
+1 0
+8 1
+3
+0 0 2 3
+0 17 -1 0
+0 18 0 1
+1
+end_operator
+begin_operator
+gripper-down pr2 x0 y0 xrel1 x1 yrel0 yrel1 y0 y1
+2
+1 0
+8 1
+3
+0 0 4 5
+0 19 -1 0
+0 20 0 1
+1
+end_operator
+begin_operator
+gripper-down pr2 x1 y0 xrel-1 x0 yrel0 yrel1 y0 y1
+2
+1 1
+8 1
+3
+0 0 0 1
+0 17 -1 0
+0 18 0 1
+1
+end_operator
+begin_operator
+gripper-down pr2 x1 y0 xrel0 x1 yrel0 yrel1 y0 y1
+2
+1 1
+8 1
+3
+0 0 2 3
+0 19 -1 0
+0 20 0 1
+1
+end_operator
+begin_operator
+gripper-down pr2 x1 y0 xrel1 x2 yrel0 yrel1 y0 y1
+2
+1 1
+8 1
+3
+0 0 4 5
+0 21 -1 0
+0 22 0 1
+1
+end_operator
+begin_operator
+gripper-down pr2 x2 y0 xrel-1 x1 yrel0 yrel1 y0 y1
+2
+1 2
+8 1
+3
+0 0 0 1
+0 19 -1 0
+0 20 0 1
+1
+end_operator
+begin_operator
+gripper-down pr2 x2 y0 xrel0 x2 yrel0 yrel1 y0 y1
+2
+1 2
+8 1
+3
+0 0 2 3
+0 21 -1 0
+0 22 0 1
+1
+end_operator
+begin_operator
+gripper-down pr2 x2 y0 xrel1 x3 yrel0 yrel1 y0 y1
+2
+1 2
+8 1
+3
+0 0 4 5
+0 24 -1 0
+0 25 0 1
+1
+end_operator
+begin_operator
+gripper-down pr2 x3 y0 xrel-1 x2 yrel0 yrel1 y0 y1
+2
+1 3
+8 1
+3
+0 0 0 1
+0 21 -1 0
+0 22 0 1
+1
+end_operator
+begin_operator
+gripper-down pr2 x3 y0 xrel0 x3 yrel0 yrel1 y0 y1
+2
+1 3
+8 1
+3
+0 0 2 3
+0 24 -1 0
+0 25 0 1
+1
+end_operator
+begin_operator
+gripper-down pr2 x3 y0 xrel1 x4 yrel0 yrel1 y0 y1
+2
+1 3
+8 1
+3
+0 0 4 5
+0 27 -1 0
+0 28 0 1
+1
+end_operator
+begin_operator
+gripper-down pr2 x4 y0 xrel-1 x3 yrel0 yrel1 y0 y1
+2
+1 4
+8 1
+3
+0 0 0 1
+0 24 -1 0
+0 25 0 1
+1
+end_operator
+begin_operator
+gripper-down pr2 x4 y0 xrel0 x4 yrel0 yrel1 y0 y1
+2
+1 4
+8 1
+3
+0 0 2 3
+0 27 -1 0
+0 28 0 1
+1
+end_operator
+begin_operator
+gripper-left pr2 x0 y0 xrel1 xrel0 x1 x0 yrel0 y0
+2
+1 0
+8 1
+3
+0 0 4 2
+0 17 0 1
+0 19 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x0 y0 xrel1 xrel0 x1 x0 yrel1 y1
+2
+1 0
+8 1
+3
+0 0 5 3
+0 18 0 1
+0 20 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x1 y0 xrel0 xrel-1 x1 x0 yrel0 y0
+2
+1 1
+8 1
+3
+0 0 2 0
+0 17 0 1
+0 19 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x1 y0 xrel0 xrel-1 x1 x0 yrel1 y1
+2
+1 1
+8 1
+3
+0 0 3 1
+0 18 0 1
+0 20 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x1 y0 xrel1 xrel0 x2 x1 yrel0 y0
+2
+1 1
+8 1
+3
+0 0 4 2
+0 19 0 1
+0 21 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x1 y0 xrel1 xrel0 x2 x1 yrel1 y1
+2
+1 1
+8 1
+3
+0 0 5 3
+0 20 0 1
+0 22 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x2 y0 xrel0 xrel-1 x2 x1 yrel0 y0
+2
+1 2
+8 1
+3
+0 0 2 0
+0 19 0 1
+0 21 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x2 y0 xrel0 xrel-1 x2 x1 yrel1 y1
+2
+1 2
+8 1
+3
+0 0 3 1
+0 20 0 1
+0 22 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x2 y0 xrel1 xrel0 x3 x2 yrel0 y0
+2
+1 2
+8 1
+3
+0 0 4 2
+0 21 0 1
+0 24 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x2 y0 xrel1 xrel0 x3 x2 yrel1 y1
+2
+1 2
+8 1
+3
+0 0 5 3
+0 22 0 1
+0 25 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x3 y0 xrel0 xrel-1 x3 x2 yrel0 y0
+2
+1 3
+8 1
+3
+0 0 2 0
+0 21 0 1
+0 24 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x3 y0 xrel0 xrel-1 x3 x2 yrel1 y1
+2
+1 3
+8 1
+3
+0 0 3 1
+0 22 0 1
+0 25 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x3 y0 xrel1 xrel0 x4 x3 yrel0 y0
+2
+1 3
+8 1
+3
+0 0 4 2
+0 24 0 1
+0 27 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x3 y0 xrel1 xrel0 x4 x3 yrel1 y1
+2
+1 3
+8 1
+3
+0 0 5 3
+0 25 0 1
+0 28 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x4 y0 xrel0 xrel-1 x4 x3 yrel0 y0
+2
+1 4
+8 1
+3
+0 0 2 0
+0 24 0 1
+0 27 -1 0
+1
+end_operator
+begin_operator
+gripper-left pr2 x4 y0 xrel0 xrel-1 x4 x3 yrel1 y1
+2
+1 4
+8 1
+3
+0 0 3 1
+0 25 0 1
+0 28 -1 0
+1
+end_operator
+begin_operator
+gripper-right pr2 x0 y0 xrel0 xrel1 x0 x1 yrel0 y0
+2
+1 0
+8 1
+3
+0 0 2 4
+0 17 -1 0
+0 19 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x0 y0 xrel0 xrel1 x0 x1 yrel1 y1
+2
+1 0
+8 1
+3
+0 0 3 5
+0 18 -1 0
+0 20 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x1 y0 xrel-1 xrel0 x0 x1 yrel0 y0
+2
+1 1
+8 1
+3
+0 0 0 2
+0 17 -1 0
+0 19 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x1 y0 xrel-1 xrel0 x0 x1 yrel1 y1
+2
+1 1
+8 1
+3
+0 0 1 3
+0 18 -1 0
+0 20 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x1 y0 xrel0 xrel1 x1 x2 yrel0 y0
+2
+1 1
+8 1
+3
+0 0 2 4
+0 19 -1 0
+0 21 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x1 y0 xrel0 xrel1 x1 x2 yrel1 y1
+2
+1 1
+8 1
+3
+0 0 3 5
+0 20 -1 0
+0 22 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x2 y0 xrel-1 xrel0 x1 x2 yrel0 y0
+2
+1 2
+8 1
+3
+0 0 0 2
+0 19 -1 0
+0 21 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x2 y0 xrel-1 xrel0 x1 x2 yrel1 y1
+2
+1 2
+8 1
+3
+0 0 1 3
+0 20 -1 0
+0 22 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x2 y0 xrel0 xrel1 x2 x3 yrel0 y0
+2
+1 2
+8 1
+3
+0 0 2 4
+0 21 -1 0
+0 24 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x2 y0 xrel0 xrel1 x2 x3 yrel1 y1
+2
+1 2
+8 1
+3
+0 0 3 5
+0 22 -1 0
+0 25 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x3 y0 xrel-1 xrel0 x2 x3 yrel0 y0
+2
+1 3
+8 1
+3
+0 0 0 2
+0 21 -1 0
+0 24 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x3 y0 xrel-1 xrel0 x2 x3 yrel1 y1
+2
+1 3
+8 1
+3
+0 0 1 3
+0 22 -1 0
+0 25 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x3 y0 xrel0 xrel1 x3 x4 yrel0 y0
+2
+1 3
+8 1
+3
+0 0 2 4
+0 24 -1 0
+0 27 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x3 y0 xrel0 xrel1 x3 x4 yrel1 y1
+2
+1 3
+8 1
+3
+0 0 3 5
+0 25 -1 0
+0 28 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x4 y0 xrel-1 xrel0 x3 x4 yrel0 y0
+2
+1 4
+8 1
+3
+0 0 0 2
+0 24 -1 0
+0 27 0 1
+1
+end_operator
+begin_operator
+gripper-right pr2 x4 y0 xrel-1 xrel0 x3 x4 yrel1 y1
+2
+1 4
+8 1
+3
+0 0 1 3
+0 25 -1 0
+0 28 0 1
+1
+end_operator
+begin_operator
+gripper-up pr2 x0 y0 xrel0 x0 yrel1 yrel0 y1 y0
+2
+1 0
+8 1
+3
+0 0 3 2
+0 17 0 1
+0 18 -1 0
+1
+end_operator
+begin_operator
+gripper-up pr2 x0 y0 xrel1 x1 yrel1 yrel0 y1 y0
+2
+1 0
+8 1
+3
+0 0 5 4
+0 19 0 1
+0 20 -1 0
+1
+end_operator
+begin_operator
+gripper-up pr2 x1 y0 xrel-1 x0 yrel1 yrel0 y1 y0
+2
+1 1
+8 1
+3
+0 0 1 0
+0 17 0 1
+0 18 -1 0
+1
+end_operator
+begin_operator
+gripper-up pr2 x1 y0 xrel0 x1 yrel1 yrel0 y1 y0
+2
+1 1
+8 1
+3
+0 0 3 2
+0 19 0 1
+0 20 -1 0
+1
+end_operator
+begin_operator
+gripper-up pr2 x1 y0 xrel1 x2 yrel1 yrel0 y1 y0
+2
+1 1
+8 1
+3
+0 0 5 4
+0 21 0 1
+0 22 -1 0
+1
+end_operator
+begin_operator
+gripper-up pr2 x2 y0 xrel-1 x1 yrel1 yrel0 y1 y0
+2
+1 2
+8 1
+3
+0 0 1 0
+0 19 0 1
+0 20 -1 0
+1
+end_operator
+begin_operator
+gripper-up pr2 x2 y0 xrel0 x2 yrel1 yrel0 y1 y0
+2
+1 2
+8 1
+3
+0 0 3 2
+0 21 0 1
+0 22 -1 0
+1
+end_operator
+begin_operator
+gripper-up pr2 x2 y0 xrel1 x3 yrel1 yrel0 y1 y0
+2
+1 2
+8 1
+3
+0 0 5 4
+0 24 0 1
+0 25 -1 0
+1
+end_operator
+begin_operator
+gripper-up pr2 x3 y0 xrel-1 x2 yrel1 yrel0 y1 y0
+2
+1 3
+8 1
+3
+0 0 1 0
+0 21 0 1
+0 22 -1 0
+1
+end_operator
+begin_operator
+gripper-up pr2 x3 y0 xrel0 x3 yrel1 yrel0 y1 y0
+2
+1 3
+8 1
+3
+0 0 3 2
+0 24 0 1
+0 25 -1 0
+1
+end_operator
+begin_operator
+gripper-up pr2 x3 y0 xrel1 x4 yrel1 yrel0 y1 y0
+2
+1 3
+8 1
+3
+0 0 5 4
+0 27 0 1
+0 28 -1 0
+1
+end_operator
+begin_operator
+gripper-up pr2 x4 y0 xrel-1 x3 yrel1 yrel0 y1 y0
+2
+1 4
+8 1
+3
+0 0 1 0
+0 24 0 1
+0 25 -1 0
+1
+end_operator
+begin_operator
+gripper-up pr2 x4 y0 xrel0 x4 yrel1 yrel0 y1 y0
+2
+1 4
+8 1
+3
+0 0 3 2
+0 27 0 1
+0 28 -1 0
+1
+end_operator
+begin_operator
+park pr2
+1
+11 0
+1
+0 8 0 1
+1
+end_operator
+begin_operator
+put-down pr2 x1 y0 xrel1 x2 yrel1 y1 object0 y2
+3
+0 5
+1 1
+8 1
+3
+0 2 0 1
+0 10 -1 0
+0 23 0 1
+1
+end_operator
+begin_operator
+put-down pr2 x1 y0 xrel1 x2 yrel1 y1 object2 y2
+3
+0 5
+1 1
+8 1
+3
+0 3 0 1
+0 10 -1 0
+0 23 0 1
+1
+end_operator
+begin_operator
+put-down pr2 x2 y0 xrel0 x2 yrel1 y1 object0 y2
+3
+0 3
+1 2
+8 1
+3
+0 2 0 1
+0 10 -1 0
+0 23 0 1
+1
+end_operator
+begin_operator
+put-down pr2 x2 y0 xrel0 x2 yrel1 y1 object2 y2
+3
+0 3
+1 2
+8 1
+3
+0 3 0 1
+0 10 -1 0
+0 23 0 1
+1
+end_operator
+begin_operator
+put-down pr2 x2 y0 xrel1 x3 yrel1 y1 object0 y2
+3
+0 5
+1 2
+8 1
+3
+0 2 0 2
+0 10 -1 0
+0 26 0 1
+1
+end_operator
+begin_operator
+put-down pr2 x2 y0 xrel1 x3 yrel1 y1 object2 y2
+3
+0 5
+1 2
+8 1
+3
+0 3 0 2
+0 10 -1 0
+0 26 0 1
+1
+end_operator
+begin_operator
+put-down pr2 x3 y0 xrel-1 x2 yrel1 y1 object0 y2
+3
+0 1
+1 3
+8 1
+3
+0 2 0 1
+0 10 -1 0
+0 23 0 1
+1
+end_operator
+begin_operator
+put-down pr2 x3 y0 xrel-1 x2 yrel1 y1 object2 y2
+3
+0 1
+1 3
+8 1
+3
+0 3 0 1
+0 10 -1 0
+0 23 0 1
+1
+end_operator
+begin_operator
+put-down pr2 x3 y0 xrel0 x3 yrel1 y1 object0 y2
+3
+0 3
+1 3
+8 1
+3
+0 2 0 2
+0 10 -1 0
+0 26 0 1
+1
+end_operator
+begin_operator
+put-down pr2 x3 y0 xrel0 x3 yrel1 y1 object2 y2
+3
+0 3
+1 3
+8 1
+3
+0 3 0 2
+0 10 -1 0
+0 26 0 1
+1
+end_operator
+begin_operator
+put-down pr2 x4 y0 xrel-1 x3 yrel1 y1 object0 y2
+3
+0 1
+1 4
+8 1
+3
+0 2 0 2
+0 10 -1 0
+0 26 0 1
+1
+end_operator
+begin_operator
+put-down pr2 x4 y0 xrel-1 x3 yrel1 y1 object2 y2
+3
+0 1
+1 4
+8 1
+3
+0 3 0 2
+0 10 -1 0
+0 26 0 1
+1
+end_operator
+begin_operator
+put-on-cart pr2 x0 y0 xrel0 yrel1 object0 cart x0 y1
+3
+0 3
+1 0
+8 1
+2
+0 2 0 3
+0 10 -1 0
+1
+end_operator
+begin_operator
+put-on-cart pr2 x0 y0 xrel0 yrel1 object2 cart x0 y1
+3
+0 3
+1 0
+8 1
+2
+0 3 0 3
+0 10 -1 0
+1
+end_operator
+begin_operator
+put-on-cart pr2 x1 y0 xrel-1 yrel1 object0 cart x0 y1
+3
+0 1
+1 1
+8 1
+2
+0 2 0 3
+0 10 -1 0
+1
+end_operator
+begin_operator
+put-on-cart pr2 x1 y0 xrel-1 yrel1 object2 cart x0 y1
+3
+0 1
+1 1
+8 1
+2
+0 3 0 3
+0 10 -1 0
+1
+end_operator
+begin_operator
+ungrasp-cart pr2 cart
+0
+2
+0 9 1 0
+0 11 -1 0
+1
+end_operator
+begin_operator
+unpark pr2 xrel0 yrel0
+1
+0 2
+1
+0 8 1 0
+1
+end_operator
+0

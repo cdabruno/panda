@@ -1,0 +1,54 @@
+Random seed: 42
+Time limit: 15 seconds
+Reading input from results/grounded/rover11.sas.
+- State has 118 bits divided into 118 mutex groups.
+- Domain contains 386 actions.
+- Domain contains 494 tasks.
+- Domain contains 513 methods.
+- The initial state contains 52 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 494
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- A* Search
+- Distance G is "modification depth"
+   9s visitime    0.01s generated nodes      5003 nodes/sec     524 cur h   54 mod.depth    7 inserts       624 duplicates         0 size       624 hash fail      0
+  20s visitime    0.02s generated nodes     10003 nodes/sec     486 cur h   51 mod.depth   10 inserts      1268 duplicates         0 size      1268 hash fail      0
+Reached time limit - stopping search.
+Search Results
+- Search time 20.54 seconds
+- Visited list time 0.02 seconds
+- Visited list inserts 1268
+- Visited list pruned 0
+- Visited list contains 1268
+- Visited list hash collisions 0
+- Generated 10003 search nodes
+  Calculated heuristic for 7302 nodes
+  One modifications 0
+  Effectless actions 2701
+- including 0 one modification actions
+- including 0 one modification methods
+- and       2701 progressions of effectless actions
+- Generated 355 nodes per second
+- Final fringe contains 6034 nodes
+- Status: Timeout

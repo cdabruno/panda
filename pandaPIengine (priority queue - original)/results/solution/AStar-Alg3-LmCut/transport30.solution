@@ -1,0 +1,59 @@
+Random seed: 42
+Time limit: 15 seconds
+Reading input from results/grounded/transport30.sas.
+- State has 364 bits divided into 364 mutex groups.
+- Domain contains 1968 actions.
+- Domain contains 2649 tasks.
+- Domain contains 3037 methods.
+- The initial state contains 32 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 2475
+- The problem is cyclic
+- Number of cyclic SCCs: 6
+- Number of cyclic SCCs of size 1: 0
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (1 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- A* Search
+- Distance G is "modification depth"
+   7s visitime    0.02s generated nodes      5000 nodes/sec     696 cur h 2147483647 mod.depth    8 inserts       912 duplicates         0 size       912 hash fail      0
+   9s visitime    0.04s generated nodes     10003 nodes/sec    1052 cur h 2147483647 mod.depth    8 inserts      1870 duplicates         0 size      1870 hash fail      0
+  12s visitime    0.06s generated nodes     15006 nodes/sec    1231 cur h 2147483647 mod.depth    8 inserts      2811 duplicates         0 size      2811 hash fail      0
+  15s visitime    0.09s generated nodes     20007 nodes/sec    1273 cur h 2147483647 mod.depth    9 inserts      3780 duplicates         0 size      3780 hash fail      0
+  19s visitime    0.12s generated nodes     25012 nodes/sec    1304 cur h 2147483647 mod.depth    9 inserts      4733 duplicates         0 size      4733 hash fail      0
+Reached time limit - stopping search.
+Search Results
+- Search time 19.17 seconds
+- Visited list time 0.12 seconds
+- Visited list inserts 4733
+- Visited list pruned 0
+- Visited list contains 4733
+- Visited list hash collisions 0
+- Generated 25012 search nodes
+  Calculated heuristic for 25010 nodes
+  One modifications 0
+  Effectless actions 2
+- including 0 one modification actions
+- including 0 one modification methods
+- and       2 progressions of effectless actions
+- Generated 1304 nodes per second
+- Final fringe contains 20277 nodes
+- Status: Timeout

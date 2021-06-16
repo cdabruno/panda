@@ -1,0 +1,388 @@
+Fact[32]:
+  (at driver1 p1-0)
+  (at driver1 p1-2)
+  (at driver1 s0)
+  (at driver1 s1)
+  (at driver1 s2)
+  (at driver2 p1-0)
+  (at driver2 p1-2)
+  (at driver2 s0)
+  (at driver2 s1)
+  (at driver2 s2)
+  (at package1 s0)
+  (at package1 s1)
+  (at package1 s2)
+  (at package2 s0)
+  (at package2 s1)
+  (at package2 s2)
+  (at truck1 s0)
+  (at truck1 s1)
+  (at truck1 s2)
+  (at truck2 s0)
+  (at truck2 s1)
+  (at truck2 s2)
+  (driving driver1 truck1)
+  (driving driver1 truck2)
+  (driving driver2 truck1)
+  (driving driver2 truck2)
+  (empty truck1)
+  (empty truck2)
+  (in package1 truck1)
+  (in package1 truck2)
+  (in package2 truck1)
+  (in package2 truck2)
+Op[88]:
+  (board-truck driver1 truck1 s0), cost: 1
+    pre: (at driver1 s0) (at truck1 s0) (empty truck1)
+    add: (driving driver1 truck1)
+    del: (at driver1 s0) (empty truck1)
+  (board-truck driver1 truck1 s1), cost: 1
+    pre: (at driver1 s1) (at truck1 s1) (empty truck1)
+    add: (driving driver1 truck1)
+    del: (at driver1 s1) (empty truck1)
+  (board-truck driver1 truck1 s2), cost: 1
+    pre: (at driver1 s2) (at truck1 s2) (empty truck1)
+    add: (driving driver1 truck1)
+    del: (at driver1 s2) (empty truck1)
+  (board-truck driver1 truck2 s0), cost: 1
+    pre: (at driver1 s0) (at truck2 s0) (empty truck2)
+    add: (driving driver1 truck2)
+    del: (at driver1 s0) (empty truck2)
+  (board-truck driver1 truck2 s1), cost: 1
+    pre: (at driver1 s1) (at truck2 s1) (empty truck2)
+    add: (driving driver1 truck2)
+    del: (at driver1 s1) (empty truck2)
+  (board-truck driver1 truck2 s2), cost: 1
+    pre: (at driver1 s2) (at truck2 s2) (empty truck2)
+    add: (driving driver1 truck2)
+    del: (at driver1 s2) (empty truck2)
+  (board-truck driver2 truck1 s0), cost: 1
+    pre: (at driver2 s0) (at truck1 s0) (empty truck1)
+    add: (driving driver2 truck1)
+    del: (at driver2 s0) (empty truck1)
+  (board-truck driver2 truck1 s1), cost: 1
+    pre: (at driver2 s1) (at truck1 s1) (empty truck1)
+    add: (driving driver2 truck1)
+    del: (at driver2 s1) (empty truck1)
+  (board-truck driver2 truck1 s2), cost: 1
+    pre: (at driver2 s2) (at truck1 s2) (empty truck1)
+    add: (driving driver2 truck1)
+    del: (at driver2 s2) (empty truck1)
+  (board-truck driver2 truck2 s0), cost: 1
+    pre: (at driver2 s0) (at truck2 s0) (empty truck2)
+    add: (driving driver2 truck2)
+    del: (at driver2 s0) (empty truck2)
+  (board-truck driver2 truck2 s1), cost: 1
+    pre: (at driver2 s1) (at truck2 s1) (empty truck2)
+    add: (driving driver2 truck2)
+    del: (at driver2 s1) (empty truck2)
+  (board-truck driver2 truck2 s2), cost: 1
+    pre: (at driver2 s2) (at truck2 s2) (empty truck2)
+    add: (driving driver2 truck2)
+    del: (at driver2 s2) (empty truck2)
+  (disembark-truck driver1 truck1 s0), cost: 1
+    pre: (at truck1 s0) (driving driver1 truck1)
+    add: (at driver1 s0) (empty truck1)
+    del: (driving driver1 truck1)
+  (disembark-truck driver1 truck1 s1), cost: 1
+    pre: (at truck1 s1) (driving driver1 truck1)
+    add: (at driver1 s1) (empty truck1)
+    del: (driving driver1 truck1)
+  (disembark-truck driver1 truck1 s2), cost: 1
+    pre: (at truck1 s2) (driving driver1 truck1)
+    add: (at driver1 s2) (empty truck1)
+    del: (driving driver1 truck1)
+  (disembark-truck driver1 truck2 s0), cost: 1
+    pre: (at truck2 s0) (driving driver1 truck2)
+    add: (at driver1 s0) (empty truck2)
+    del: (driving driver1 truck2)
+  (disembark-truck driver1 truck2 s1), cost: 1
+    pre: (at truck2 s1) (driving driver1 truck2)
+    add: (at driver1 s1) (empty truck2)
+    del: (driving driver1 truck2)
+  (disembark-truck driver1 truck2 s2), cost: 1
+    pre: (at truck2 s2) (driving driver1 truck2)
+    add: (at driver1 s2) (empty truck2)
+    del: (driving driver1 truck2)
+  (disembark-truck driver2 truck1 s0), cost: 1
+    pre: (at truck1 s0) (driving driver2 truck1)
+    add: (at driver2 s0) (empty truck1)
+    del: (driving driver2 truck1)
+  (disembark-truck driver2 truck1 s1), cost: 1
+    pre: (at truck1 s1) (driving driver2 truck1)
+    add: (at driver2 s1) (empty truck1)
+    del: (driving driver2 truck1)
+  (disembark-truck driver2 truck1 s2), cost: 1
+    pre: (at truck1 s2) (driving driver2 truck1)
+    add: (at driver2 s2) (empty truck1)
+    del: (driving driver2 truck1)
+  (disembark-truck driver2 truck2 s0), cost: 1
+    pre: (at truck2 s0) (driving driver2 truck2)
+    add: (at driver2 s0) (empty truck2)
+    del: (driving driver2 truck2)
+  (disembark-truck driver2 truck2 s1), cost: 1
+    pre: (at truck2 s1) (driving driver2 truck2)
+    add: (at driver2 s1) (empty truck2)
+    del: (driving driver2 truck2)
+  (disembark-truck driver2 truck2 s2), cost: 1
+    pre: (at truck2 s2) (driving driver2 truck2)
+    add: (at driver2 s2) (empty truck2)
+    del: (driving driver2 truck2)
+  (drive-truck truck1 s0 s1 driver1), cost: 1
+    pre: (at truck1 s0) (driving driver1 truck1)
+    add: (at truck1 s1)
+    del: (at truck1 s0)
+  (drive-truck truck1 s0 s1 driver2), cost: 1
+    pre: (at truck1 s0) (driving driver2 truck1)
+    add: (at truck1 s1)
+    del: (at truck1 s0)
+  (drive-truck truck1 s0 s2 driver1), cost: 1
+    pre: (at truck1 s0) (driving driver1 truck1)
+    add: (at truck1 s2)
+    del: (at truck1 s0)
+  (drive-truck truck1 s0 s2 driver2), cost: 1
+    pre: (at truck1 s0) (driving driver2 truck1)
+    add: (at truck1 s2)
+    del: (at truck1 s0)
+  (drive-truck truck1 s1 s0 driver1), cost: 1
+    pre: (at truck1 s1) (driving driver1 truck1)
+    add: (at truck1 s0)
+    del: (at truck1 s1)
+  (drive-truck truck1 s1 s0 driver2), cost: 1
+    pre: (at truck1 s1) (driving driver2 truck1)
+    add: (at truck1 s0)
+    del: (at truck1 s1)
+  (drive-truck truck1 s1 s2 driver1), cost: 1
+    pre: (at truck1 s1) (driving driver1 truck1)
+    add: (at truck1 s2)
+    del: (at truck1 s1)
+  (drive-truck truck1 s1 s2 driver2), cost: 1
+    pre: (at truck1 s1) (driving driver2 truck1)
+    add: (at truck1 s2)
+    del: (at truck1 s1)
+  (drive-truck truck1 s2 s0 driver1), cost: 1
+    pre: (at truck1 s2) (driving driver1 truck1)
+    add: (at truck1 s0)
+    del: (at truck1 s2)
+  (drive-truck truck1 s2 s0 driver2), cost: 1
+    pre: (at truck1 s2) (driving driver2 truck1)
+    add: (at truck1 s0)
+    del: (at truck1 s2)
+  (drive-truck truck1 s2 s1 driver1), cost: 1
+    pre: (at truck1 s2) (driving driver1 truck1)
+    add: (at truck1 s1)
+    del: (at truck1 s2)
+  (drive-truck truck1 s2 s1 driver2), cost: 1
+    pre: (at truck1 s2) (driving driver2 truck1)
+    add: (at truck1 s1)
+    del: (at truck1 s2)
+  (drive-truck truck2 s0 s1 driver1), cost: 1
+    pre: (at truck2 s0) (driving driver1 truck2)
+    add: (at truck2 s1)
+    del: (at truck2 s0)
+  (drive-truck truck2 s0 s1 driver2), cost: 1
+    pre: (at truck2 s0) (driving driver2 truck2)
+    add: (at truck2 s1)
+    del: (at truck2 s0)
+  (drive-truck truck2 s0 s2 driver1), cost: 1
+    pre: (at truck2 s0) (driving driver1 truck2)
+    add: (at truck2 s2)
+    del: (at truck2 s0)
+  (drive-truck truck2 s0 s2 driver2), cost: 1
+    pre: (at truck2 s0) (driving driver2 truck2)
+    add: (at truck2 s2)
+    del: (at truck2 s0)
+  (drive-truck truck2 s1 s0 driver1), cost: 1
+    pre: (at truck2 s1) (driving driver1 truck2)
+    add: (at truck2 s0)
+    del: (at truck2 s1)
+  (drive-truck truck2 s1 s0 driver2), cost: 1
+    pre: (at truck2 s1) (driving driver2 truck2)
+    add: (at truck2 s0)
+    del: (at truck2 s1)
+  (drive-truck truck2 s1 s2 driver1), cost: 1
+    pre: (at truck2 s1) (driving driver1 truck2)
+    add: (at truck2 s2)
+    del: (at truck2 s1)
+  (drive-truck truck2 s1 s2 driver2), cost: 1
+    pre: (at truck2 s1) (driving driver2 truck2)
+    add: (at truck2 s2)
+    del: (at truck2 s1)
+  (drive-truck truck2 s2 s0 driver1), cost: 1
+    pre: (at truck2 s2) (driving driver1 truck2)
+    add: (at truck2 s0)
+    del: (at truck2 s2)
+  (drive-truck truck2 s2 s0 driver2), cost: 1
+    pre: (at truck2 s2) (driving driver2 truck2)
+    add: (at truck2 s0)
+    del: (at truck2 s2)
+  (drive-truck truck2 s2 s1 driver1), cost: 1
+    pre: (at truck2 s2) (driving driver1 truck2)
+    add: (at truck2 s1)
+    del: (at truck2 s2)
+  (drive-truck truck2 s2 s1 driver2), cost: 1
+    pre: (at truck2 s2) (driving driver2 truck2)
+    add: (at truck2 s1)
+    del: (at truck2 s2)
+  (load-truck package1 truck1 s0), cost: 1
+    pre: (at package1 s0) (at truck1 s0)
+    add: (in package1 truck1)
+    del: (at package1 s0)
+  (load-truck package1 truck1 s1), cost: 1
+    pre: (at package1 s1) (at truck1 s1)
+    add: (in package1 truck1)
+    del: (at package1 s1)
+  (load-truck package1 truck1 s2), cost: 1
+    pre: (at package1 s2) (at truck1 s2)
+    add: (in package1 truck1)
+    del: (at package1 s2)
+  (load-truck package1 truck2 s0), cost: 1
+    pre: (at package1 s0) (at truck2 s0)
+    add: (in package1 truck2)
+    del: (at package1 s0)
+  (load-truck package1 truck2 s1), cost: 1
+    pre: (at package1 s1) (at truck2 s1)
+    add: (in package1 truck2)
+    del: (at package1 s1)
+  (load-truck package1 truck2 s2), cost: 1
+    pre: (at package1 s2) (at truck2 s2)
+    add: (in package1 truck2)
+    del: (at package1 s2)
+  (load-truck package2 truck1 s0), cost: 1
+    pre: (at package2 s0) (at truck1 s0)
+    add: (in package2 truck1)
+    del: (at package2 s0)
+  (load-truck package2 truck1 s1), cost: 1
+    pre: (at package2 s1) (at truck1 s1)
+    add: (in package2 truck1)
+    del: (at package2 s1)
+  (load-truck package2 truck1 s2), cost: 1
+    pre: (at package2 s2) (at truck1 s2)
+    add: (in package2 truck1)
+    del: (at package2 s2)
+  (load-truck package2 truck2 s0), cost: 1
+    pre: (at package2 s0) (at truck2 s0)
+    add: (in package2 truck2)
+    del: (at package2 s0)
+  (load-truck package2 truck2 s1), cost: 1
+    pre: (at package2 s1) (at truck2 s1)
+    add: (in package2 truck2)
+    del: (at package2 s1)
+  (load-truck package2 truck2 s2), cost: 1
+    pre: (at package2 s2) (at truck2 s2)
+    add: (in package2 truck2)
+    del: (at package2 s2)
+  (unload-truck package1 truck1 s0), cost: 1
+    pre: (at truck1 s0) (in package1 truck1)
+    add: (at package1 s0)
+    del: (in package1 truck1)
+  (unload-truck package1 truck1 s1), cost: 1
+    pre: (at truck1 s1) (in package1 truck1)
+    add: (at package1 s1)
+    del: (in package1 truck1)
+  (unload-truck package1 truck1 s2), cost: 1
+    pre: (at truck1 s2) (in package1 truck1)
+    add: (at package1 s2)
+    del: (in package1 truck1)
+  (unload-truck package1 truck2 s0), cost: 1
+    pre: (at truck2 s0) (in package1 truck2)
+    add: (at package1 s0)
+    del: (in package1 truck2)
+  (unload-truck package1 truck2 s1), cost: 1
+    pre: (at truck2 s1) (in package1 truck2)
+    add: (at package1 s1)
+    del: (in package1 truck2)
+  (unload-truck package1 truck2 s2), cost: 1
+    pre: (at truck2 s2) (in package1 truck2)
+    add: (at package1 s2)
+    del: (in package1 truck2)
+  (unload-truck package2 truck1 s0), cost: 1
+    pre: (at truck1 s0) (in package2 truck1)
+    add: (at package2 s0)
+    del: (in package2 truck1)
+  (unload-truck package2 truck1 s1), cost: 1
+    pre: (at truck1 s1) (in package2 truck1)
+    add: (at package2 s1)
+    del: (in package2 truck1)
+  (unload-truck package2 truck1 s2), cost: 1
+    pre: (at truck1 s2) (in package2 truck1)
+    add: (at package2 s2)
+    del: (in package2 truck1)
+  (unload-truck package2 truck2 s0), cost: 1
+    pre: (at truck2 s0) (in package2 truck2)
+    add: (at package2 s0)
+    del: (in package2 truck2)
+  (unload-truck package2 truck2 s1), cost: 1
+    pre: (at truck2 s1) (in package2 truck2)
+    add: (at package2 s1)
+    del: (in package2 truck2)
+  (unload-truck package2 truck2 s2), cost: 1
+    pre: (at truck2 s2) (in package2 truck2)
+    add: (at package2 s2)
+    del: (in package2 truck2)
+  (walk driver1 p1-0 s0), cost: 1
+    pre: (at driver1 p1-0)
+    add: (at driver1 s0)
+    del: (at driver1 p1-0)
+  (walk driver1 p1-0 s1), cost: 1
+    pre: (at driver1 p1-0)
+    add: (at driver1 s1)
+    del: (at driver1 p1-0)
+  (walk driver1 p1-2 s1), cost: 1
+    pre: (at driver1 p1-2)
+    add: (at driver1 s1)
+    del: (at driver1 p1-2)
+  (walk driver1 p1-2 s2), cost: 1
+    pre: (at driver1 p1-2)
+    add: (at driver1 s2)
+    del: (at driver1 p1-2)
+  (walk driver1 s0 p1-0), cost: 1
+    pre: (at driver1 s0)
+    add: (at driver1 p1-0)
+    del: (at driver1 s0)
+  (walk driver1 s1 p1-0), cost: 1
+    pre: (at driver1 s1)
+    add: (at driver1 p1-0)
+    del: (at driver1 s1)
+  (walk driver1 s1 p1-2), cost: 1
+    pre: (at driver1 s1)
+    add: (at driver1 p1-2)
+    del: (at driver1 s1)
+  (walk driver1 s2 p1-2), cost: 1
+    pre: (at driver1 s2)
+    add: (at driver1 p1-2)
+    del: (at driver1 s2)
+  (walk driver2 p1-0 s0), cost: 1
+    pre: (at driver2 p1-0)
+    add: (at driver2 s0)
+    del: (at driver2 p1-0)
+  (walk driver2 p1-0 s1), cost: 1
+    pre: (at driver2 p1-0)
+    add: (at driver2 s1)
+    del: (at driver2 p1-0)
+  (walk driver2 p1-2 s1), cost: 1
+    pre: (at driver2 p1-2)
+    add: (at driver2 s1)
+    del: (at driver2 p1-2)
+  (walk driver2 p1-2 s2), cost: 1
+    pre: (at driver2 p1-2)
+    add: (at driver2 s2)
+    del: (at driver2 p1-2)
+  (walk driver2 s0 p1-0), cost: 1
+    pre: (at driver2 s0)
+    add: (at driver2 p1-0)
+    del: (at driver2 s0)
+  (walk driver2 s1 p1-0), cost: 1
+    pre: (at driver2 s1)
+    add: (at driver2 p1-0)
+    del: (at driver2 s1)
+  (walk driver2 s1 p1-2), cost: 1
+    pre: (at driver2 s1)
+    add: (at driver2 p1-2)
+    del: (at driver2 s1)
+  (walk driver2 s2 p1-2), cost: 1
+    pre: (at driver2 s2)
+    add: (at driver2 p1-2)
+    del: (at driver2 s2)
+Init State: (at driver1 s2) (at driver2 s2) (at package1 s0) (at package2 s0) (at truck1 s0) (at truck2 s0) (empty truck1) (empty truck2)
+Goal: (at driver1 s1) (at package1 s0) (at package2 s0) (at truck1 s1)

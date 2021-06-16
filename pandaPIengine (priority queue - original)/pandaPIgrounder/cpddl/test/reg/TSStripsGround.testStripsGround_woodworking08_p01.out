@@ -1,0 +1,792 @@
+Fact[44]:
+  (available b0)
+  (available b1)
+  (available p0)
+  (available p1)
+  (boardsize b0 s1)
+  (boardsize b1 s1)
+  (colour p0 green)
+  (colour p0 mauve)
+  (colour p0 natural)
+  (colour p1 green)
+  (colour p1 mauve)
+  (colour p1 natural)
+  (colour p2 green)
+  (colour p2 mauve)
+  (colour p2 natural)
+  (empty highspeed-saw0)
+  (in-highspeed-saw b0 highspeed-saw0)
+  (in-highspeed-saw b1 highspeed-saw0)
+  (surface-condition p0 rough)
+  (surface-condition p0 smooth)
+  (surface-condition p0 verysmooth)
+  (surface-condition p1 rough)
+  (surface-condition p1 smooth)
+  (surface-condition p1 verysmooth)
+  (surface-condition p2 smooth)
+  (surface-condition p2 verysmooth)
+  (treatment p0 colourfragments)
+  (treatment p0 glazed)
+  (treatment p0 untreated)
+  (treatment p0 varnished)
+  (treatment p1 colourfragments)
+  (treatment p1 glazed)
+  (treatment p1 untreated)
+  (treatment p1 varnished)
+  (treatment p2 colourfragments)
+  (treatment p2 glazed)
+  (treatment p2 untreated)
+  (treatment p2 varnished)
+  (unused p0)
+  (unused p1)
+  (wood p0 beech)
+  (wood p0 cherry)
+  (wood p1 beech)
+  (wood p1 cherry)
+Op[186]:
+  (cut-board-medium b0 p0 highspeed-saw0 beech rough s3 s2 s1), cost: 10
+    pre: (in-highspeed-saw b0 highspeed-saw0) (unused p0)
+    add: (available p0) (boardsize b0 s1) (colour p0 natural) (surface-condition p0 rough) (treatment p0 untreated) (wood p0 beech)
+    del: (unused p0)
+  (cut-board-medium b0 p1 highspeed-saw0 beech rough s3 s2 s1), cost: 10
+    pre: (in-highspeed-saw b0 highspeed-saw0) (unused p1)
+    add: (available p1) (boardsize b0 s1) (colour p1 natural) (surface-condition p1 rough) (treatment p1 untreated) (wood p1 beech)
+    del: (unused p1)
+  (cut-board-medium b1 p0 highspeed-saw0 cherry rough s3 s2 s1), cost: 10
+    pre: (in-highspeed-saw b1 highspeed-saw0) (unused p0)
+    add: (available p0) (boardsize b1 s1) (colour p0 natural) (surface-condition p0 rough) (treatment p0 untreated) (wood p0 cherry)
+    del: (unused p0)
+  (cut-board-medium b1 p1 highspeed-saw0 cherry rough s3 s2 s1), cost: 10
+    pre: (in-highspeed-saw b1 highspeed-saw0) (unused p1)
+    add: (available p1) (boardsize b1 s1) (colour p1 natural) (surface-condition p1 rough) (treatment p1 untreated) (wood p1 cherry)
+    del: (unused p1)
+  (do-glaze p0 glazer0 green), cost: 15
+    pre: (available p0) (treatment p0 untreated)
+    add: (colour p0 green) (treatment p0 glazed)
+    del: (colour p0 natural) (treatment p0 untreated)
+  (do-glaze p0 glazer0 mauve), cost: 15
+    pre: (available p0) (treatment p0 untreated)
+    add: (colour p0 mauve) (treatment p0 glazed)
+    del: (colour p0 natural) (treatment p0 untreated)
+  (do-glaze p1 glazer0 green), cost: 15
+    pre: (available p1) (treatment p1 untreated)
+    add: (colour p1 green) (treatment p1 glazed)
+    del: (colour p1 natural) (treatment p1 untreated)
+  (do-glaze p1 glazer0 mauve), cost: 15
+    pre: (available p1) (treatment p1 untreated)
+    add: (colour p1 mauve) (treatment p1 glazed)
+    del: (colour p1 natural) (treatment p1 untreated)
+  (do-glaze p2 glazer0 green), cost: 10
+    pre: (treatment p2 untreated)
+    add: (colour p2 green) (treatment p2 glazed)
+    del: (colour p2 natural) (treatment p2 untreated)
+  (do-glaze p2 glazer0 mauve), cost: 10
+    pre: (treatment p2 untreated)
+    add: (colour p2 mauve) (treatment p2 glazed)
+    del: (colour p2 natural) (treatment p2 untreated)
+  (do-grind p0 grinder0 smooth green colourfragments untreated), cost: 30
+    pre: (available p0) (colour p0 green) (surface-condition p0 smooth) (treatment p0 colourfragments)
+    add: (colour p0 natural) (surface-condition p0 verysmooth) (treatment p0 untreated)
+    del: (colour p0 green) (surface-condition p0 smooth) (treatment p0 colourfragments)
+  (do-grind p0 grinder0 smooth green glazed untreated), cost: 30
+    pre: (available p0) (colour p0 green) (surface-condition p0 smooth) (treatment p0 glazed)
+    add: (colour p0 natural) (surface-condition p0 verysmooth) (treatment p0 untreated)
+    del: (colour p0 green) (surface-condition p0 smooth) (treatment p0 glazed)
+  (do-grind p0 grinder0 smooth green untreated untreated), cost: 30
+    pre: (available p0) (colour p0 green) (surface-condition p0 smooth) (treatment p0 untreated)
+    add: (colour p0 natural) (surface-condition p0 verysmooth)
+    del: (colour p0 green) (surface-condition p0 smooth)
+  (do-grind p0 grinder0 smooth green varnished colourfragments), cost: 30
+    pre: (available p0) (colour p0 green) (surface-condition p0 smooth) (treatment p0 varnished)
+    add: (colour p0 natural) (surface-condition p0 verysmooth) (treatment p0 colourfragments)
+    del: (colour p0 green) (surface-condition p0 smooth) (treatment p0 varnished)
+  (do-grind p0 grinder0 smooth mauve colourfragments untreated), cost: 30
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 smooth) (treatment p0 colourfragments)
+    add: (colour p0 natural) (surface-condition p0 verysmooth) (treatment p0 untreated)
+    del: (colour p0 mauve) (surface-condition p0 smooth) (treatment p0 colourfragments)
+  (do-grind p0 grinder0 smooth mauve glazed untreated), cost: 30
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 smooth) (treatment p0 glazed)
+    add: (colour p0 natural) (surface-condition p0 verysmooth) (treatment p0 untreated)
+    del: (colour p0 mauve) (surface-condition p0 smooth) (treatment p0 glazed)
+  (do-grind p0 grinder0 smooth mauve untreated untreated), cost: 30
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 smooth) (treatment p0 untreated)
+    add: (colour p0 natural) (surface-condition p0 verysmooth)
+    del: (colour p0 mauve) (surface-condition p0 smooth)
+  (do-grind p0 grinder0 smooth mauve varnished colourfragments), cost: 30
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 smooth) (treatment p0 varnished)
+    add: (colour p0 natural) (surface-condition p0 verysmooth) (treatment p0 colourfragments)
+    del: (colour p0 mauve) (surface-condition p0 smooth) (treatment p0 varnished)
+  (do-grind p0 grinder0 smooth natural colourfragments untreated), cost: 30
+    pre: (available p0) (colour p0 natural) (surface-condition p0 smooth) (treatment p0 colourfragments)
+    add: (surface-condition p0 verysmooth) (treatment p0 untreated)
+    del: (surface-condition p0 smooth) (treatment p0 colourfragments)
+  (do-grind p0 grinder0 smooth natural glazed untreated), cost: 30
+    pre: (available p0) (colour p0 natural) (surface-condition p0 smooth) (treatment p0 glazed)
+    add: (surface-condition p0 verysmooth) (treatment p0 untreated)
+    del: (surface-condition p0 smooth) (treatment p0 glazed)
+  (do-grind p0 grinder0 smooth natural untreated untreated), cost: 30
+    pre: (available p0) (colour p0 natural) (surface-condition p0 smooth) (treatment p0 untreated)
+    add: (surface-condition p0 verysmooth)
+    del: (surface-condition p0 smooth)
+  (do-grind p0 grinder0 smooth natural varnished colourfragments), cost: 30
+    pre: (available p0) (colour p0 natural) (surface-condition p0 smooth) (treatment p0 varnished)
+    add: (surface-condition p0 verysmooth) (treatment p0 colourfragments)
+    del: (surface-condition p0 smooth) (treatment p0 varnished)
+  (do-grind p0 grinder0 verysmooth green colourfragments untreated), cost: 30
+    pre: (available p0) (colour p0 green) (surface-condition p0 verysmooth) (treatment p0 colourfragments)
+    add: (colour p0 natural) (treatment p0 untreated)
+    del: (colour p0 green) (treatment p0 colourfragments)
+  (do-grind p0 grinder0 verysmooth green glazed untreated), cost: 30
+    pre: (available p0) (colour p0 green) (surface-condition p0 verysmooth) (treatment p0 glazed)
+    add: (colour p0 natural) (treatment p0 untreated)
+    del: (colour p0 green) (treatment p0 glazed)
+  (do-grind p0 grinder0 verysmooth green untreated untreated), cost: 30
+    pre: (available p0) (colour p0 green) (surface-condition p0 verysmooth) (treatment p0 untreated)
+    add: (colour p0 natural)
+    del: (colour p0 green)
+  (do-grind p0 grinder0 verysmooth green varnished colourfragments), cost: 30
+    pre: (available p0) (colour p0 green) (surface-condition p0 verysmooth) (treatment p0 varnished)
+    add: (colour p0 natural) (treatment p0 colourfragments)
+    del: (colour p0 green) (treatment p0 varnished)
+  (do-grind p0 grinder0 verysmooth mauve colourfragments untreated), cost: 30
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 verysmooth) (treatment p0 colourfragments)
+    add: (colour p0 natural) (treatment p0 untreated)
+    del: (colour p0 mauve) (treatment p0 colourfragments)
+  (do-grind p0 grinder0 verysmooth mauve glazed untreated), cost: 30
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 verysmooth) (treatment p0 glazed)
+    add: (colour p0 natural) (treatment p0 untreated)
+    del: (colour p0 mauve) (treatment p0 glazed)
+  (do-grind p0 grinder0 verysmooth mauve untreated untreated), cost: 30
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 verysmooth) (treatment p0 untreated)
+    add: (colour p0 natural)
+    del: (colour p0 mauve)
+  (do-grind p0 grinder0 verysmooth mauve varnished colourfragments), cost: 30
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 verysmooth) (treatment p0 varnished)
+    add: (colour p0 natural) (treatment p0 colourfragments)
+    del: (colour p0 mauve) (treatment p0 varnished)
+  (do-grind p0 grinder0 verysmooth natural colourfragments untreated), cost: 30
+    pre: (available p0) (colour p0 natural) (surface-condition p0 verysmooth) (treatment p0 colourfragments)
+    add: (treatment p0 untreated)
+    del: (treatment p0 colourfragments)
+  (do-grind p0 grinder0 verysmooth natural glazed untreated), cost: 30
+    pre: (available p0) (colour p0 natural) (surface-condition p0 verysmooth) (treatment p0 glazed)
+    add: (treatment p0 untreated)
+    del: (treatment p0 glazed)
+  (do-grind p0 grinder0 verysmooth natural varnished colourfragments), cost: 30
+    pre: (available p0) (colour p0 natural) (surface-condition p0 verysmooth) (treatment p0 varnished)
+    add: (treatment p0 colourfragments)
+    del: (treatment p0 varnished)
+  (do-grind p1 grinder0 smooth green colourfragments untreated), cost: 30
+    pre: (available p1) (colour p1 green) (surface-condition p1 smooth) (treatment p1 colourfragments)
+    add: (colour p1 natural) (surface-condition p1 verysmooth) (treatment p1 untreated)
+    del: (colour p1 green) (surface-condition p1 smooth) (treatment p1 colourfragments)
+  (do-grind p1 grinder0 smooth green glazed untreated), cost: 30
+    pre: (available p1) (colour p1 green) (surface-condition p1 smooth) (treatment p1 glazed)
+    add: (colour p1 natural) (surface-condition p1 verysmooth) (treatment p1 untreated)
+    del: (colour p1 green) (surface-condition p1 smooth) (treatment p1 glazed)
+  (do-grind p1 grinder0 smooth green untreated untreated), cost: 30
+    pre: (available p1) (colour p1 green) (surface-condition p1 smooth) (treatment p1 untreated)
+    add: (colour p1 natural) (surface-condition p1 verysmooth)
+    del: (colour p1 green) (surface-condition p1 smooth)
+  (do-grind p1 grinder0 smooth green varnished colourfragments), cost: 30
+    pre: (available p1) (colour p1 green) (surface-condition p1 smooth) (treatment p1 varnished)
+    add: (colour p1 natural) (surface-condition p1 verysmooth) (treatment p1 colourfragments)
+    del: (colour p1 green) (surface-condition p1 smooth) (treatment p1 varnished)
+  (do-grind p1 grinder0 smooth mauve colourfragments untreated), cost: 30
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 smooth) (treatment p1 colourfragments)
+    add: (colour p1 natural) (surface-condition p1 verysmooth) (treatment p1 untreated)
+    del: (colour p1 mauve) (surface-condition p1 smooth) (treatment p1 colourfragments)
+  (do-grind p1 grinder0 smooth mauve glazed untreated), cost: 30
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 smooth) (treatment p1 glazed)
+    add: (colour p1 natural) (surface-condition p1 verysmooth) (treatment p1 untreated)
+    del: (colour p1 mauve) (surface-condition p1 smooth) (treatment p1 glazed)
+  (do-grind p1 grinder0 smooth mauve untreated untreated), cost: 30
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 smooth) (treatment p1 untreated)
+    add: (colour p1 natural) (surface-condition p1 verysmooth)
+    del: (colour p1 mauve) (surface-condition p1 smooth)
+  (do-grind p1 grinder0 smooth mauve varnished colourfragments), cost: 30
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 smooth) (treatment p1 varnished)
+    add: (colour p1 natural) (surface-condition p1 verysmooth) (treatment p1 colourfragments)
+    del: (colour p1 mauve) (surface-condition p1 smooth) (treatment p1 varnished)
+  (do-grind p1 grinder0 smooth natural colourfragments untreated), cost: 30
+    pre: (available p1) (colour p1 natural) (surface-condition p1 smooth) (treatment p1 colourfragments)
+    add: (surface-condition p1 verysmooth) (treatment p1 untreated)
+    del: (surface-condition p1 smooth) (treatment p1 colourfragments)
+  (do-grind p1 grinder0 smooth natural glazed untreated), cost: 30
+    pre: (available p1) (colour p1 natural) (surface-condition p1 smooth) (treatment p1 glazed)
+    add: (surface-condition p1 verysmooth) (treatment p1 untreated)
+    del: (surface-condition p1 smooth) (treatment p1 glazed)
+  (do-grind p1 grinder0 smooth natural untreated untreated), cost: 30
+    pre: (available p1) (colour p1 natural) (surface-condition p1 smooth) (treatment p1 untreated)
+    add: (surface-condition p1 verysmooth)
+    del: (surface-condition p1 smooth)
+  (do-grind p1 grinder0 smooth natural varnished colourfragments), cost: 30
+    pre: (available p1) (colour p1 natural) (surface-condition p1 smooth) (treatment p1 varnished)
+    add: (surface-condition p1 verysmooth) (treatment p1 colourfragments)
+    del: (surface-condition p1 smooth) (treatment p1 varnished)
+  (do-grind p1 grinder0 verysmooth green colourfragments untreated), cost: 30
+    pre: (available p1) (colour p1 green) (surface-condition p1 verysmooth) (treatment p1 colourfragments)
+    add: (colour p1 natural) (treatment p1 untreated)
+    del: (colour p1 green) (treatment p1 colourfragments)
+  (do-grind p1 grinder0 verysmooth green glazed untreated), cost: 30
+    pre: (available p1) (colour p1 green) (surface-condition p1 verysmooth) (treatment p1 glazed)
+    add: (colour p1 natural) (treatment p1 untreated)
+    del: (colour p1 green) (treatment p1 glazed)
+  (do-grind p1 grinder0 verysmooth green untreated untreated), cost: 30
+    pre: (available p1) (colour p1 green) (surface-condition p1 verysmooth) (treatment p1 untreated)
+    add: (colour p1 natural)
+    del: (colour p1 green)
+  (do-grind p1 grinder0 verysmooth green varnished colourfragments), cost: 30
+    pre: (available p1) (colour p1 green) (surface-condition p1 verysmooth) (treatment p1 varnished)
+    add: (colour p1 natural) (treatment p1 colourfragments)
+    del: (colour p1 green) (treatment p1 varnished)
+  (do-grind p1 grinder0 verysmooth mauve colourfragments untreated), cost: 30
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 verysmooth) (treatment p1 colourfragments)
+    add: (colour p1 natural) (treatment p1 untreated)
+    del: (colour p1 mauve) (treatment p1 colourfragments)
+  (do-grind p1 grinder0 verysmooth mauve glazed untreated), cost: 30
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 verysmooth) (treatment p1 glazed)
+    add: (colour p1 natural) (treatment p1 untreated)
+    del: (colour p1 mauve) (treatment p1 glazed)
+  (do-grind p1 grinder0 verysmooth mauve untreated untreated), cost: 30
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 verysmooth) (treatment p1 untreated)
+    add: (colour p1 natural)
+    del: (colour p1 mauve)
+  (do-grind p1 grinder0 verysmooth mauve varnished colourfragments), cost: 30
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 verysmooth) (treatment p1 varnished)
+    add: (colour p1 natural) (treatment p1 colourfragments)
+    del: (colour p1 mauve) (treatment p1 varnished)
+  (do-grind p1 grinder0 verysmooth natural colourfragments untreated), cost: 30
+    pre: (available p1) (colour p1 natural) (surface-condition p1 verysmooth) (treatment p1 colourfragments)
+    add: (treatment p1 untreated)
+    del: (treatment p1 colourfragments)
+  (do-grind p1 grinder0 verysmooth natural glazed untreated), cost: 30
+    pre: (available p1) (colour p1 natural) (surface-condition p1 verysmooth) (treatment p1 glazed)
+    add: (treatment p1 untreated)
+    del: (treatment p1 glazed)
+  (do-grind p1 grinder0 verysmooth natural varnished colourfragments), cost: 30
+    pre: (available p1) (colour p1 natural) (surface-condition p1 verysmooth) (treatment p1 varnished)
+    add: (treatment p1 colourfragments)
+    del: (treatment p1 varnished)
+  (do-grind p2 grinder0 smooth green colourfragments untreated), cost: 15
+    pre: (colour p2 green) (surface-condition p2 smooth) (treatment p2 colourfragments)
+    add: (colour p2 natural) (surface-condition p2 verysmooth) (treatment p2 untreated)
+    del: (colour p2 green) (surface-condition p2 smooth) (treatment p2 colourfragments)
+  (do-grind p2 grinder0 smooth green glazed untreated), cost: 15
+    pre: (colour p2 green) (surface-condition p2 smooth) (treatment p2 glazed)
+    add: (colour p2 natural) (surface-condition p2 verysmooth) (treatment p2 untreated)
+    del: (colour p2 green) (surface-condition p2 smooth) (treatment p2 glazed)
+  (do-grind p2 grinder0 smooth green untreated untreated), cost: 15
+    pre: (colour p2 green) (surface-condition p2 smooth) (treatment p2 untreated)
+    add: (colour p2 natural) (surface-condition p2 verysmooth)
+    del: (colour p2 green) (surface-condition p2 smooth)
+  (do-grind p2 grinder0 smooth green varnished colourfragments), cost: 15
+    pre: (colour p2 green) (surface-condition p2 smooth) (treatment p2 varnished)
+    add: (colour p2 natural) (surface-condition p2 verysmooth) (treatment p2 colourfragments)
+    del: (colour p2 green) (surface-condition p2 smooth) (treatment p2 varnished)
+  (do-grind p2 grinder0 smooth mauve colourfragments untreated), cost: 15
+    pre: (colour p2 mauve) (surface-condition p2 smooth) (treatment p2 colourfragments)
+    add: (colour p2 natural) (surface-condition p2 verysmooth) (treatment p2 untreated)
+    del: (colour p2 mauve) (surface-condition p2 smooth) (treatment p2 colourfragments)
+  (do-grind p2 grinder0 smooth mauve glazed untreated), cost: 15
+    pre: (colour p2 mauve) (surface-condition p2 smooth) (treatment p2 glazed)
+    add: (colour p2 natural) (surface-condition p2 verysmooth) (treatment p2 untreated)
+    del: (colour p2 mauve) (surface-condition p2 smooth) (treatment p2 glazed)
+  (do-grind p2 grinder0 smooth mauve untreated untreated), cost: 15
+    pre: (colour p2 mauve) (surface-condition p2 smooth) (treatment p2 untreated)
+    add: (colour p2 natural) (surface-condition p2 verysmooth)
+    del: (colour p2 mauve) (surface-condition p2 smooth)
+  (do-grind p2 grinder0 smooth mauve varnished colourfragments), cost: 15
+    pre: (colour p2 mauve) (surface-condition p2 smooth) (treatment p2 varnished)
+    add: (colour p2 natural) (surface-condition p2 verysmooth) (treatment p2 colourfragments)
+    del: (colour p2 mauve) (surface-condition p2 smooth) (treatment p2 varnished)
+  (do-grind p2 grinder0 smooth natural colourfragments untreated), cost: 15
+    pre: (colour p2 natural) (surface-condition p2 smooth) (treatment p2 colourfragments)
+    add: (surface-condition p2 verysmooth) (treatment p2 untreated)
+    del: (surface-condition p2 smooth) (treatment p2 colourfragments)
+  (do-grind p2 grinder0 smooth natural glazed untreated), cost: 15
+    pre: (colour p2 natural) (surface-condition p2 smooth) (treatment p2 glazed)
+    add: (surface-condition p2 verysmooth) (treatment p2 untreated)
+    del: (surface-condition p2 smooth) (treatment p2 glazed)
+  (do-grind p2 grinder0 smooth natural untreated untreated), cost: 15
+    pre: (colour p2 natural) (surface-condition p2 smooth) (treatment p2 untreated)
+    add: (surface-condition p2 verysmooth)
+    del: (surface-condition p2 smooth)
+  (do-grind p2 grinder0 smooth natural varnished colourfragments), cost: 15
+    pre: (colour p2 natural) (surface-condition p2 smooth) (treatment p2 varnished)
+    add: (surface-condition p2 verysmooth) (treatment p2 colourfragments)
+    del: (surface-condition p2 smooth) (treatment p2 varnished)
+  (do-grind p2 grinder0 verysmooth green colourfragments untreated), cost: 15
+    pre: (colour p2 green) (surface-condition p2 verysmooth) (treatment p2 colourfragments)
+    add: (colour p2 natural) (treatment p2 untreated)
+    del: (colour p2 green) (treatment p2 colourfragments)
+  (do-grind p2 grinder0 verysmooth green glazed untreated), cost: 15
+    pre: (colour p2 green) (surface-condition p2 verysmooth) (treatment p2 glazed)
+    add: (colour p2 natural) (treatment p2 untreated)
+    del: (colour p2 green) (treatment p2 glazed)
+  (do-grind p2 grinder0 verysmooth green untreated untreated), cost: 15
+    pre: (colour p2 green) (surface-condition p2 verysmooth) (treatment p2 untreated)
+    add: (colour p2 natural)
+    del: (colour p2 green)
+  (do-grind p2 grinder0 verysmooth green varnished colourfragments), cost: 15
+    pre: (colour p2 green) (surface-condition p2 verysmooth) (treatment p2 varnished)
+    add: (colour p2 natural) (treatment p2 colourfragments)
+    del: (colour p2 green) (treatment p2 varnished)
+  (do-grind p2 grinder0 verysmooth mauve colourfragments untreated), cost: 15
+    pre: (colour p2 mauve) (surface-condition p2 verysmooth) (treatment p2 colourfragments)
+    add: (colour p2 natural) (treatment p2 untreated)
+    del: (colour p2 mauve) (treatment p2 colourfragments)
+  (do-grind p2 grinder0 verysmooth mauve glazed untreated), cost: 15
+    pre: (colour p2 mauve) (surface-condition p2 verysmooth) (treatment p2 glazed)
+    add: (colour p2 natural) (treatment p2 untreated)
+    del: (colour p2 mauve) (treatment p2 glazed)
+  (do-grind p2 grinder0 verysmooth mauve untreated untreated), cost: 15
+    pre: (colour p2 mauve) (surface-condition p2 verysmooth) (treatment p2 untreated)
+    add: (colour p2 natural)
+    del: (colour p2 mauve)
+  (do-grind p2 grinder0 verysmooth mauve varnished colourfragments), cost: 15
+    pre: (colour p2 mauve) (surface-condition p2 verysmooth) (treatment p2 varnished)
+    add: (colour p2 natural) (treatment p2 colourfragments)
+    del: (colour p2 mauve) (treatment p2 varnished)
+  (do-grind p2 grinder0 verysmooth natural colourfragments untreated), cost: 15
+    pre: (colour p2 natural) (surface-condition p2 verysmooth) (treatment p2 colourfragments)
+    add: (treatment p2 untreated)
+    del: (treatment p2 colourfragments)
+  (do-grind p2 grinder0 verysmooth natural glazed untreated), cost: 15
+    pre: (colour p2 natural) (surface-condition p2 verysmooth) (treatment p2 glazed)
+    add: (treatment p2 untreated)
+    del: (treatment p2 glazed)
+  (do-grind p2 grinder0 verysmooth natural varnished colourfragments), cost: 15
+    pre: (colour p2 natural) (surface-condition p2 verysmooth) (treatment p2 varnished)
+    add: (treatment p2 colourfragments)
+    del: (treatment p2 varnished)
+  (do-immersion-varnish p0 immersion-varnisher0 mauve smooth), cost: 10
+    pre: (available p0) (surface-condition p0 smooth) (treatment p0 untreated)
+    add: (colour p0 mauve) (treatment p0 varnished)
+    del: (colour p0 natural) (treatment p0 untreated)
+  (do-immersion-varnish p0 immersion-varnisher0 mauve verysmooth), cost: 10
+    pre: (available p0) (surface-condition p0 verysmooth) (treatment p0 untreated)
+    add: (colour p0 mauve) (treatment p0 varnished)
+    del: (colour p0 natural) (treatment p0 untreated)
+  (do-immersion-varnish p1 immersion-varnisher0 mauve smooth), cost: 10
+    pre: (available p1) (surface-condition p1 smooth) (treatment p1 untreated)
+    add: (colour p1 mauve) (treatment p1 varnished)
+    del: (colour p1 natural) (treatment p1 untreated)
+  (do-immersion-varnish p1 immersion-varnisher0 mauve verysmooth), cost: 10
+    pre: (available p1) (surface-condition p1 verysmooth) (treatment p1 untreated)
+    add: (colour p1 mauve) (treatment p1 varnished)
+    del: (colour p1 natural) (treatment p1 untreated)
+  (do-plane p0 planer0 rough green colourfragments), cost: 20
+    pre: (available p0) (colour p0 green) (surface-condition p0 rough) (treatment p0 colourfragments)
+    add: (colour p0 natural) (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (colour p0 green) (surface-condition p0 rough) (treatment p0 colourfragments)
+  (do-plane p0 planer0 rough green glazed), cost: 20
+    pre: (available p0) (colour p0 green) (surface-condition p0 rough) (treatment p0 glazed)
+    add: (colour p0 natural) (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (colour p0 green) (surface-condition p0 rough) (treatment p0 glazed)
+  (do-plane p0 planer0 rough green untreated), cost: 20
+    pre: (available p0) (colour p0 green) (surface-condition p0 rough) (treatment p0 untreated)
+    add: (colour p0 natural) (surface-condition p0 smooth)
+    del: (colour p0 green) (surface-condition p0 rough)
+  (do-plane p0 planer0 rough green varnished), cost: 20
+    pre: (available p0) (colour p0 green) (surface-condition p0 rough) (treatment p0 varnished)
+    add: (colour p0 natural) (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (colour p0 green) (surface-condition p0 rough) (treatment p0 varnished)
+  (do-plane p0 planer0 rough mauve colourfragments), cost: 20
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 rough) (treatment p0 colourfragments)
+    add: (colour p0 natural) (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (colour p0 mauve) (surface-condition p0 rough) (treatment p0 colourfragments)
+  (do-plane p0 planer0 rough mauve glazed), cost: 20
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 rough) (treatment p0 glazed)
+    add: (colour p0 natural) (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (colour p0 mauve) (surface-condition p0 rough) (treatment p0 glazed)
+  (do-plane p0 planer0 rough mauve untreated), cost: 20
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 rough) (treatment p0 untreated)
+    add: (colour p0 natural) (surface-condition p0 smooth)
+    del: (colour p0 mauve) (surface-condition p0 rough)
+  (do-plane p0 planer0 rough mauve varnished), cost: 20
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 rough) (treatment p0 varnished)
+    add: (colour p0 natural) (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (colour p0 mauve) (surface-condition p0 rough) (treatment p0 varnished)
+  (do-plane p0 planer0 rough natural colourfragments), cost: 20
+    pre: (available p0) (colour p0 natural) (surface-condition p0 rough) (treatment p0 colourfragments)
+    add: (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (surface-condition p0 rough) (treatment p0 colourfragments)
+  (do-plane p0 planer0 rough natural glazed), cost: 20
+    pre: (available p0) (colour p0 natural) (surface-condition p0 rough) (treatment p0 glazed)
+    add: (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (surface-condition p0 rough) (treatment p0 glazed)
+  (do-plane p0 planer0 rough natural untreated), cost: 20
+    pre: (available p0) (colour p0 natural) (surface-condition p0 rough) (treatment p0 untreated)
+    add: (surface-condition p0 smooth)
+    del: (surface-condition p0 rough)
+  (do-plane p0 planer0 rough natural varnished), cost: 20
+    pre: (available p0) (colour p0 natural) (surface-condition p0 rough) (treatment p0 varnished)
+    add: (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (surface-condition p0 rough) (treatment p0 varnished)
+  (do-plane p0 planer0 smooth green colourfragments), cost: 20
+    pre: (available p0) (colour p0 green) (surface-condition p0 smooth) (treatment p0 colourfragments)
+    add: (colour p0 natural) (treatment p0 untreated)
+    del: (colour p0 green) (treatment p0 colourfragments)
+  (do-plane p0 planer0 smooth green glazed), cost: 20
+    pre: (available p0) (colour p0 green) (surface-condition p0 smooth) (treatment p0 glazed)
+    add: (colour p0 natural) (treatment p0 untreated)
+    del: (colour p0 green) (treatment p0 glazed)
+  (do-plane p0 planer0 smooth green untreated), cost: 20
+    pre: (available p0) (colour p0 green) (surface-condition p0 smooth) (treatment p0 untreated)
+    add: (colour p0 natural)
+    del: (colour p0 green)
+  (do-plane p0 planer0 smooth green varnished), cost: 20
+    pre: (available p0) (colour p0 green) (surface-condition p0 smooth) (treatment p0 varnished)
+    add: (colour p0 natural) (treatment p0 untreated)
+    del: (colour p0 green) (treatment p0 varnished)
+  (do-plane p0 planer0 smooth mauve colourfragments), cost: 20
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 smooth) (treatment p0 colourfragments)
+    add: (colour p0 natural) (treatment p0 untreated)
+    del: (colour p0 mauve) (treatment p0 colourfragments)
+  (do-plane p0 planer0 smooth mauve glazed), cost: 20
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 smooth) (treatment p0 glazed)
+    add: (colour p0 natural) (treatment p0 untreated)
+    del: (colour p0 mauve) (treatment p0 glazed)
+  (do-plane p0 planer0 smooth mauve untreated), cost: 20
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 smooth) (treatment p0 untreated)
+    add: (colour p0 natural)
+    del: (colour p0 mauve)
+  (do-plane p0 planer0 smooth mauve varnished), cost: 20
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 smooth) (treatment p0 varnished)
+    add: (colour p0 natural) (treatment p0 untreated)
+    del: (colour p0 mauve) (treatment p0 varnished)
+  (do-plane p0 planer0 smooth natural colourfragments), cost: 20
+    pre: (available p0) (colour p0 natural) (surface-condition p0 smooth) (treatment p0 colourfragments)
+    add: (treatment p0 untreated)
+    del: (treatment p0 colourfragments)
+  (do-plane p0 planer0 smooth natural glazed), cost: 20
+    pre: (available p0) (colour p0 natural) (surface-condition p0 smooth) (treatment p0 glazed)
+    add: (treatment p0 untreated)
+    del: (treatment p0 glazed)
+  (do-plane p0 planer0 smooth natural varnished), cost: 20
+    pre: (available p0) (colour p0 natural) (surface-condition p0 smooth) (treatment p0 varnished)
+    add: (treatment p0 untreated)
+    del: (treatment p0 varnished)
+  (do-plane p0 planer0 verysmooth green colourfragments), cost: 20
+    pre: (available p0) (colour p0 green) (surface-condition p0 verysmooth) (treatment p0 colourfragments)
+    add: (colour p0 natural) (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (colour p0 green) (surface-condition p0 verysmooth) (treatment p0 colourfragments)
+  (do-plane p0 planer0 verysmooth green glazed), cost: 20
+    pre: (available p0) (colour p0 green) (surface-condition p0 verysmooth) (treatment p0 glazed)
+    add: (colour p0 natural) (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (colour p0 green) (surface-condition p0 verysmooth) (treatment p0 glazed)
+  (do-plane p0 planer0 verysmooth green untreated), cost: 20
+    pre: (available p0) (colour p0 green) (surface-condition p0 verysmooth) (treatment p0 untreated)
+    add: (colour p0 natural) (surface-condition p0 smooth)
+    del: (colour p0 green) (surface-condition p0 verysmooth)
+  (do-plane p0 planer0 verysmooth green varnished), cost: 20
+    pre: (available p0) (colour p0 green) (surface-condition p0 verysmooth) (treatment p0 varnished)
+    add: (colour p0 natural) (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (colour p0 green) (surface-condition p0 verysmooth) (treatment p0 varnished)
+  (do-plane p0 planer0 verysmooth mauve colourfragments), cost: 20
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 verysmooth) (treatment p0 colourfragments)
+    add: (colour p0 natural) (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (colour p0 mauve) (surface-condition p0 verysmooth) (treatment p0 colourfragments)
+  (do-plane p0 planer0 verysmooth mauve glazed), cost: 20
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 verysmooth) (treatment p0 glazed)
+    add: (colour p0 natural) (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (colour p0 mauve) (surface-condition p0 verysmooth) (treatment p0 glazed)
+  (do-plane p0 planer0 verysmooth mauve untreated), cost: 20
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 verysmooth) (treatment p0 untreated)
+    add: (colour p0 natural) (surface-condition p0 smooth)
+    del: (colour p0 mauve) (surface-condition p0 verysmooth)
+  (do-plane p0 planer0 verysmooth mauve varnished), cost: 20
+    pre: (available p0) (colour p0 mauve) (surface-condition p0 verysmooth) (treatment p0 varnished)
+    add: (colour p0 natural) (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (colour p0 mauve) (surface-condition p0 verysmooth) (treatment p0 varnished)
+  (do-plane p0 planer0 verysmooth natural colourfragments), cost: 20
+    pre: (available p0) (colour p0 natural) (surface-condition p0 verysmooth) (treatment p0 colourfragments)
+    add: (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (surface-condition p0 verysmooth) (treatment p0 colourfragments)
+  (do-plane p0 planer0 verysmooth natural glazed), cost: 20
+    pre: (available p0) (colour p0 natural) (surface-condition p0 verysmooth) (treatment p0 glazed)
+    add: (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (surface-condition p0 verysmooth) (treatment p0 glazed)
+  (do-plane p0 planer0 verysmooth natural untreated), cost: 20
+    pre: (available p0) (colour p0 natural) (surface-condition p0 verysmooth) (treatment p0 untreated)
+    add: (surface-condition p0 smooth)
+    del: (surface-condition p0 verysmooth)
+  (do-plane p0 planer0 verysmooth natural varnished), cost: 20
+    pre: (available p0) (colour p0 natural) (surface-condition p0 verysmooth) (treatment p0 varnished)
+    add: (surface-condition p0 smooth) (treatment p0 untreated)
+    del: (surface-condition p0 verysmooth) (treatment p0 varnished)
+  (do-plane p1 planer0 rough green colourfragments), cost: 20
+    pre: (available p1) (colour p1 green) (surface-condition p1 rough) (treatment p1 colourfragments)
+    add: (colour p1 natural) (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (colour p1 green) (surface-condition p1 rough) (treatment p1 colourfragments)
+  (do-plane p1 planer0 rough green glazed), cost: 20
+    pre: (available p1) (colour p1 green) (surface-condition p1 rough) (treatment p1 glazed)
+    add: (colour p1 natural) (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (colour p1 green) (surface-condition p1 rough) (treatment p1 glazed)
+  (do-plane p1 planer0 rough green untreated), cost: 20
+    pre: (available p1) (colour p1 green) (surface-condition p1 rough) (treatment p1 untreated)
+    add: (colour p1 natural) (surface-condition p1 smooth)
+    del: (colour p1 green) (surface-condition p1 rough)
+  (do-plane p1 planer0 rough green varnished), cost: 20
+    pre: (available p1) (colour p1 green) (surface-condition p1 rough) (treatment p1 varnished)
+    add: (colour p1 natural) (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (colour p1 green) (surface-condition p1 rough) (treatment p1 varnished)
+  (do-plane p1 planer0 rough mauve colourfragments), cost: 20
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 rough) (treatment p1 colourfragments)
+    add: (colour p1 natural) (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (colour p1 mauve) (surface-condition p1 rough) (treatment p1 colourfragments)
+  (do-plane p1 planer0 rough mauve glazed), cost: 20
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 rough) (treatment p1 glazed)
+    add: (colour p1 natural) (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (colour p1 mauve) (surface-condition p1 rough) (treatment p1 glazed)
+  (do-plane p1 planer0 rough mauve untreated), cost: 20
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 rough) (treatment p1 untreated)
+    add: (colour p1 natural) (surface-condition p1 smooth)
+    del: (colour p1 mauve) (surface-condition p1 rough)
+  (do-plane p1 planer0 rough mauve varnished), cost: 20
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 rough) (treatment p1 varnished)
+    add: (colour p1 natural) (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (colour p1 mauve) (surface-condition p1 rough) (treatment p1 varnished)
+  (do-plane p1 planer0 rough natural colourfragments), cost: 20
+    pre: (available p1) (colour p1 natural) (surface-condition p1 rough) (treatment p1 colourfragments)
+    add: (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (surface-condition p1 rough) (treatment p1 colourfragments)
+  (do-plane p1 planer0 rough natural glazed), cost: 20
+    pre: (available p1) (colour p1 natural) (surface-condition p1 rough) (treatment p1 glazed)
+    add: (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (surface-condition p1 rough) (treatment p1 glazed)
+  (do-plane p1 planer0 rough natural untreated), cost: 20
+    pre: (available p1) (colour p1 natural) (surface-condition p1 rough) (treatment p1 untreated)
+    add: (surface-condition p1 smooth)
+    del: (surface-condition p1 rough)
+  (do-plane p1 planer0 rough natural varnished), cost: 20
+    pre: (available p1) (colour p1 natural) (surface-condition p1 rough) (treatment p1 varnished)
+    add: (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (surface-condition p1 rough) (treatment p1 varnished)
+  (do-plane p1 planer0 smooth green colourfragments), cost: 20
+    pre: (available p1) (colour p1 green) (surface-condition p1 smooth) (treatment p1 colourfragments)
+    add: (colour p1 natural) (treatment p1 untreated)
+    del: (colour p1 green) (treatment p1 colourfragments)
+  (do-plane p1 planer0 smooth green glazed), cost: 20
+    pre: (available p1) (colour p1 green) (surface-condition p1 smooth) (treatment p1 glazed)
+    add: (colour p1 natural) (treatment p1 untreated)
+    del: (colour p1 green) (treatment p1 glazed)
+  (do-plane p1 planer0 smooth green untreated), cost: 20
+    pre: (available p1) (colour p1 green) (surface-condition p1 smooth) (treatment p1 untreated)
+    add: (colour p1 natural)
+    del: (colour p1 green)
+  (do-plane p1 planer0 smooth green varnished), cost: 20
+    pre: (available p1) (colour p1 green) (surface-condition p1 smooth) (treatment p1 varnished)
+    add: (colour p1 natural) (treatment p1 untreated)
+    del: (colour p1 green) (treatment p1 varnished)
+  (do-plane p1 planer0 smooth mauve colourfragments), cost: 20
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 smooth) (treatment p1 colourfragments)
+    add: (colour p1 natural) (treatment p1 untreated)
+    del: (colour p1 mauve) (treatment p1 colourfragments)
+  (do-plane p1 planer0 smooth mauve glazed), cost: 20
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 smooth) (treatment p1 glazed)
+    add: (colour p1 natural) (treatment p1 untreated)
+    del: (colour p1 mauve) (treatment p1 glazed)
+  (do-plane p1 planer0 smooth mauve untreated), cost: 20
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 smooth) (treatment p1 untreated)
+    add: (colour p1 natural)
+    del: (colour p1 mauve)
+  (do-plane p1 planer0 smooth mauve varnished), cost: 20
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 smooth) (treatment p1 varnished)
+    add: (colour p1 natural) (treatment p1 untreated)
+    del: (colour p1 mauve) (treatment p1 varnished)
+  (do-plane p1 planer0 smooth natural colourfragments), cost: 20
+    pre: (available p1) (colour p1 natural) (surface-condition p1 smooth) (treatment p1 colourfragments)
+    add: (treatment p1 untreated)
+    del: (treatment p1 colourfragments)
+  (do-plane p1 planer0 smooth natural glazed), cost: 20
+    pre: (available p1) (colour p1 natural) (surface-condition p1 smooth) (treatment p1 glazed)
+    add: (treatment p1 untreated)
+    del: (treatment p1 glazed)
+  (do-plane p1 planer0 smooth natural varnished), cost: 20
+    pre: (available p1) (colour p1 natural) (surface-condition p1 smooth) (treatment p1 varnished)
+    add: (treatment p1 untreated)
+    del: (treatment p1 varnished)
+  (do-plane p1 planer0 verysmooth green colourfragments), cost: 20
+    pre: (available p1) (colour p1 green) (surface-condition p1 verysmooth) (treatment p1 colourfragments)
+    add: (colour p1 natural) (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (colour p1 green) (surface-condition p1 verysmooth) (treatment p1 colourfragments)
+  (do-plane p1 planer0 verysmooth green glazed), cost: 20
+    pre: (available p1) (colour p1 green) (surface-condition p1 verysmooth) (treatment p1 glazed)
+    add: (colour p1 natural) (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (colour p1 green) (surface-condition p1 verysmooth) (treatment p1 glazed)
+  (do-plane p1 planer0 verysmooth green untreated), cost: 20
+    pre: (available p1) (colour p1 green) (surface-condition p1 verysmooth) (treatment p1 untreated)
+    add: (colour p1 natural) (surface-condition p1 smooth)
+    del: (colour p1 green) (surface-condition p1 verysmooth)
+  (do-plane p1 planer0 verysmooth green varnished), cost: 20
+    pre: (available p1) (colour p1 green) (surface-condition p1 verysmooth) (treatment p1 varnished)
+    add: (colour p1 natural) (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (colour p1 green) (surface-condition p1 verysmooth) (treatment p1 varnished)
+  (do-plane p1 planer0 verysmooth mauve colourfragments), cost: 20
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 verysmooth) (treatment p1 colourfragments)
+    add: (colour p1 natural) (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (colour p1 mauve) (surface-condition p1 verysmooth) (treatment p1 colourfragments)
+  (do-plane p1 planer0 verysmooth mauve glazed), cost: 20
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 verysmooth) (treatment p1 glazed)
+    add: (colour p1 natural) (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (colour p1 mauve) (surface-condition p1 verysmooth) (treatment p1 glazed)
+  (do-plane p1 planer0 verysmooth mauve untreated), cost: 20
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 verysmooth) (treatment p1 untreated)
+    add: (colour p1 natural) (surface-condition p1 smooth)
+    del: (colour p1 mauve) (surface-condition p1 verysmooth)
+  (do-plane p1 planer0 verysmooth mauve varnished), cost: 20
+    pre: (available p1) (colour p1 mauve) (surface-condition p1 verysmooth) (treatment p1 varnished)
+    add: (colour p1 natural) (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (colour p1 mauve) (surface-condition p1 verysmooth) (treatment p1 varnished)
+  (do-plane p1 planer0 verysmooth natural colourfragments), cost: 20
+    pre: (available p1) (colour p1 natural) (surface-condition p1 verysmooth) (treatment p1 colourfragments)
+    add: (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (surface-condition p1 verysmooth) (treatment p1 colourfragments)
+  (do-plane p1 planer0 verysmooth natural glazed), cost: 20
+    pre: (available p1) (colour p1 natural) (surface-condition p1 verysmooth) (treatment p1 glazed)
+    add: (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (surface-condition p1 verysmooth) (treatment p1 glazed)
+  (do-plane p1 planer0 verysmooth natural untreated), cost: 20
+    pre: (available p1) (colour p1 natural) (surface-condition p1 verysmooth) (treatment p1 untreated)
+    add: (surface-condition p1 smooth)
+    del: (surface-condition p1 verysmooth)
+  (do-plane p1 planer0 verysmooth natural varnished), cost: 20
+    pre: (available p1) (colour p1 natural) (surface-condition p1 verysmooth) (treatment p1 varnished)
+    add: (surface-condition p1 smooth) (treatment p1 untreated)
+    del: (surface-condition p1 verysmooth) (treatment p1 varnished)
+  (do-plane p2 planer0 smooth green colourfragments), cost: 10
+    pre: (colour p2 green) (surface-condition p2 smooth) (treatment p2 colourfragments)
+    add: (colour p2 natural) (treatment p2 untreated)
+    del: (colour p2 green) (treatment p2 colourfragments)
+  (do-plane p2 planer0 smooth green glazed), cost: 10
+    pre: (colour p2 green) (surface-condition p2 smooth) (treatment p2 glazed)
+    add: (colour p2 natural) (treatment p2 untreated)
+    del: (colour p2 green) (treatment p2 glazed)
+  (do-plane p2 planer0 smooth green untreated), cost: 10
+    pre: (colour p2 green) (surface-condition p2 smooth) (treatment p2 untreated)
+    add: (colour p2 natural)
+    del: (colour p2 green)
+  (do-plane p2 planer0 smooth green varnished), cost: 10
+    pre: (colour p2 green) (surface-condition p2 smooth) (treatment p2 varnished)
+    add: (colour p2 natural) (treatment p2 untreated)
+    del: (colour p2 green) (treatment p2 varnished)
+  (do-plane p2 planer0 smooth mauve colourfragments), cost: 10
+    pre: (colour p2 mauve) (surface-condition p2 smooth) (treatment p2 colourfragments)
+    add: (colour p2 natural) (treatment p2 untreated)
+    del: (colour p2 mauve) (treatment p2 colourfragments)
+  (do-plane p2 planer0 smooth mauve glazed), cost: 10
+    pre: (colour p2 mauve) (surface-condition p2 smooth) (treatment p2 glazed)
+    add: (colour p2 natural) (treatment p2 untreated)
+    del: (colour p2 mauve) (treatment p2 glazed)
+  (do-plane p2 planer0 smooth mauve untreated), cost: 10
+    pre: (colour p2 mauve) (surface-condition p2 smooth) (treatment p2 untreated)
+    add: (colour p2 natural)
+    del: (colour p2 mauve)
+  (do-plane p2 planer0 smooth mauve varnished), cost: 10
+    pre: (colour p2 mauve) (surface-condition p2 smooth) (treatment p2 varnished)
+    add: (colour p2 natural) (treatment p2 untreated)
+    del: (colour p2 mauve) (treatment p2 varnished)
+  (do-plane p2 planer0 smooth natural colourfragments), cost: 10
+    pre: (colour p2 natural) (surface-condition p2 smooth) (treatment p2 colourfragments)
+    add: (treatment p2 untreated)
+    del: (treatment p2 colourfragments)
+  (do-plane p2 planer0 smooth natural glazed), cost: 10
+    pre: (colour p2 natural) (surface-condition p2 smooth) (treatment p2 glazed)
+    add: (treatment p2 untreated)
+    del: (treatment p2 glazed)
+  (do-plane p2 planer0 smooth natural varnished), cost: 10
+    pre: (colour p2 natural) (surface-condition p2 smooth) (treatment p2 varnished)
+    add: (treatment p2 untreated)
+    del: (treatment p2 varnished)
+  (do-plane p2 planer0 verysmooth green colourfragments), cost: 10
+    pre: (colour p2 green) (surface-condition p2 verysmooth) (treatment p2 colourfragments)
+    add: (colour p2 natural) (surface-condition p2 smooth) (treatment p2 untreated)
+    del: (colour p2 green) (surface-condition p2 verysmooth) (treatment p2 colourfragments)
+  (do-plane p2 planer0 verysmooth green glazed), cost: 10
+    pre: (colour p2 green) (surface-condition p2 verysmooth) (treatment p2 glazed)
+    add: (colour p2 natural) (surface-condition p2 smooth) (treatment p2 untreated)
+    del: (colour p2 green) (surface-condition p2 verysmooth) (treatment p2 glazed)
+  (do-plane p2 planer0 verysmooth green untreated), cost: 10
+    pre: (colour p2 green) (surface-condition p2 verysmooth) (treatment p2 untreated)
+    add: (colour p2 natural) (surface-condition p2 smooth)
+    del: (colour p2 green) (surface-condition p2 verysmooth)
+  (do-plane p2 planer0 verysmooth green varnished), cost: 10
+    pre: (colour p2 green) (surface-condition p2 verysmooth) (treatment p2 varnished)
+    add: (colour p2 natural) (surface-condition p2 smooth) (treatment p2 untreated)
+    del: (colour p2 green) (surface-condition p2 verysmooth) (treatment p2 varnished)
+  (do-plane p2 planer0 verysmooth mauve colourfragments), cost: 10
+    pre: (colour p2 mauve) (surface-condition p2 verysmooth) (treatment p2 colourfragments)
+    add: (colour p2 natural) (surface-condition p2 smooth) (treatment p2 untreated)
+    del: (colour p2 mauve) (surface-condition p2 verysmooth) (treatment p2 colourfragments)
+  (do-plane p2 planer0 verysmooth mauve glazed), cost: 10
+    pre: (colour p2 mauve) (surface-condition p2 verysmooth) (treatment p2 glazed)
+    add: (colour p2 natural) (surface-condition p2 smooth) (treatment p2 untreated)
+    del: (colour p2 mauve) (surface-condition p2 verysmooth) (treatment p2 glazed)
+  (do-plane p2 planer0 verysmooth mauve untreated), cost: 10
+    pre: (colour p2 mauve) (surface-condition p2 verysmooth) (treatment p2 untreated)
+    add: (colour p2 natural) (surface-condition p2 smooth)
+    del: (colour p2 mauve) (surface-condition p2 verysmooth)
+  (do-plane p2 planer0 verysmooth mauve varnished), cost: 10
+    pre: (colour p2 mauve) (surface-condition p2 verysmooth) (treatment p2 varnished)
+    add: (colour p2 natural) (surface-condition p2 smooth) (treatment p2 untreated)
+    del: (colour p2 mauve) (surface-condition p2 verysmooth) (treatment p2 varnished)
+  (do-plane p2 planer0 verysmooth natural colourfragments), cost: 10
+    pre: (colour p2 natural) (surface-condition p2 verysmooth) (treatment p2 colourfragments)
+    add: (surface-condition p2 smooth) (treatment p2 untreated)
+    del: (surface-condition p2 verysmooth) (treatment p2 colourfragments)
+  (do-plane p2 planer0 verysmooth natural glazed), cost: 10
+    pre: (colour p2 natural) (surface-condition p2 verysmooth) (treatment p2 glazed)
+    add: (surface-condition p2 smooth) (treatment p2 untreated)
+    del: (surface-condition p2 verysmooth) (treatment p2 glazed)
+  (do-plane p2 planer0 verysmooth natural untreated), cost: 10
+    pre: (colour p2 natural) (surface-condition p2 verysmooth) (treatment p2 untreated)
+    add: (surface-condition p2 smooth)
+    del: (surface-condition p2 verysmooth)
+  (do-plane p2 planer0 verysmooth natural varnished), cost: 10
+    pre: (colour p2 natural) (surface-condition p2 verysmooth) (treatment p2 varnished)
+    add: (surface-condition p2 smooth) (treatment p2 untreated)
+    del: (surface-condition p2 verysmooth) (treatment p2 varnished)
+  (do-saw-medium b0 p0 saw0 beech rough s3 s2 s1), cost: 30
+    pre: (available b0) (unused p0)
+    add: (available p0) (boardsize b0 s1) (colour p0 natural) (surface-condition p0 rough) (treatment p0 untreated) (wood p0 beech)
+    del: (unused p0)
+  (do-saw-medium b0 p1 saw0 beech rough s3 s2 s1), cost: 30
+    pre: (available b0) (unused p1)
+    add: (available p1) (boardsize b0 s1) (colour p1 natural) (surface-condition p1 rough) (treatment p1 untreated) (wood p1 beech)
+    del: (unused p1)
+  (do-saw-medium b1 p0 saw0 cherry rough s3 s2 s1), cost: 30
+    pre: (available b1) (unused p0)
+    add: (available p0) (boardsize b1 s1) (colour p0 natural) (surface-condition p0 rough) (treatment p0 untreated) (wood p0 cherry)
+    del: (unused p0)
+  (do-saw-medium b1 p1 saw0 cherry rough s3 s2 s1), cost: 30
+    pre: (available b1) (unused p1)
+    add: (available p1) (boardsize b1 s1) (colour p1 natural) (surface-condition p1 rough) (treatment p1 untreated) (wood p1 cherry)
+    del: (unused p1)
+  (do-spray-varnish p2 spray-varnisher0 mauve smooth), cost: 5
+    pre: (surface-condition p2 smooth) (treatment p2 untreated)
+    add: (colour p2 mauve) (treatment p2 varnished)
+    del: (colour p2 natural) (treatment p2 untreated)
+  (do-spray-varnish p2 spray-varnisher0 mauve verysmooth), cost: 5
+    pre: (surface-condition p2 verysmooth) (treatment p2 untreated)
+    add: (colour p2 mauve) (treatment p2 varnished)
+    del: (colour p2 natural) (treatment p2 untreated)
+  (load-highspeed-saw b0 highspeed-saw0), cost: 30
+    pre: (available b0) (empty highspeed-saw0)
+    add: (in-highspeed-saw b0 highspeed-saw0)
+    del: (available b0) (empty highspeed-saw0)
+  (load-highspeed-saw b1 highspeed-saw0), cost: 30
+    pre: (available b1) (empty highspeed-saw0)
+    add: (in-highspeed-saw b1 highspeed-saw0)
+    del: (available b1) (empty highspeed-saw0)
+  (unload-highspeed-saw b0 highspeed-saw0), cost: 10
+    pre: (in-highspeed-saw b0 highspeed-saw0)
+    add: (available b0) (empty highspeed-saw0)
+    del: (in-highspeed-saw b0 highspeed-saw0)
+  (unload-highspeed-saw b1 highspeed-saw0), cost: 10
+    pre: (in-highspeed-saw b1 highspeed-saw0)
+    add: (available b1) (empty highspeed-saw0)
+    del: (in-highspeed-saw b1 highspeed-saw0)
+Init State: (available b0) (available b1) (colour p2 natural) (empty highspeed-saw0) (surface-condition p2 verysmooth) (treatment p2 colourfragments) (unused p0) (unused p1)
+Goal: (available p0) (available p1) (colour p0 mauve) (colour p1 green) (colour p2 mauve) (surface-condition p0 verysmooth) (surface-condition p1 smooth) (treatment p0 varnished) (treatment p1 glazed) (wood p0 beech) (wood p1 cherry)

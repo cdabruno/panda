@@ -1,0 +1,34 @@
+Invariants:
+< {at V0:rover C1:waypoint}
+, {at_soil_sample V0:waypoint}
+, {at_soil_sample C0:waypoint}
+, {at_rock_sample V0:waypoint}
+, {at_rock_sample C0:waypoint}
+, {empty V0:store, full V0:store}
+, {empty V0:store, full C1:store}
+, {empty C0:store, full C1:store}
+, {empty C1:store, full V0:store}
+, {have_rock_analysis V0:rover V1:waypoint, at_rock_sample V1:waypoint}
+, {have_rock_analysis V0:rover V1:waypoint, at_rock_sample C2:waypoint}
+, {have_rock_analysis V0:rover C1:waypoint, at_rock_sample C2:waypoint}
+, {have_rock_analysis C1:rover V0:waypoint, at_rock_sample V0:waypoint}
+, {have_rock_analysis C1:rover V0:waypoint, at_rock_sample C2:waypoint}
+, {have_soil_analysis V0:rover V1:waypoint, at_soil_sample V1:waypoint}
+, {have_soil_analysis V0:rover V1:waypoint, at_soil_sample C2:waypoint}
+, {have_soil_analysis V0:rover C1:waypoint, at_soil_sample C2:waypoint}
+, {have_soil_analysis C1:rover V0:waypoint, at_soil_sample V0:waypoint}
+, {have_soil_analysis C1:rover V0:waypoint, at_soil_sample C2:waypoint}
+, {empty V0:store, full V0:store, at_soil_sample C1:waypoint}
+, {empty C0:store, full C1:store, at_soil_sample C2:waypoint}
+, {empty C1:store, full V0:store, at_soil_sample C2:waypoint}
+, {full V0:store, at_soil_sample C1:waypoint, at_rock_sample C2:waypoint}
+, {full C0:store, at_soil_sample C1:waypoint, at_rock_sample C2:waypoint}
+>
+Mutex Groups:
+< {at rover0 C0:waypoint}
+, {at_soil_sample V0:waypoint}
+, {at_rock_sample V0:waypoint}
+, {empty rover0store, full rover0store}
+, {have_rock_analysis rover0 V0:waypoint, at_rock_sample V0:waypoint}
+, {have_soil_analysis rover0 V0:waypoint, at_soil_sample V0:waypoint}
+>

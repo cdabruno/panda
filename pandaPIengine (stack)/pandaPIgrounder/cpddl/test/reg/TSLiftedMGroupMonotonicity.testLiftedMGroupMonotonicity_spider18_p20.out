@@ -1,0 +1,60 @@
+Invariants:
+< {on V0:card C1:cardposition}
+, {current-deal C0:deal}
+, {currently-dealing, NOT-currently-dealing}
+, {currently-collecting-deck, NOT-currently-collecting-deck}
+, {collect-card C0:cardposition, NOT-currently-collecting-deck}
+, {currently-updating-unmovable, NOT-currently-updating-unmovable}
+, {make-unmovable C0:card, NOT-currently-updating-unmovable}
+, {currently-updating-movable, NOT-currently-updating-movable}
+, {make-movable C0:cardposition, NOT-currently-updating-movable}
+>
+Mutex Groups:
+< {on V0:card C1:cardposition}
+, {current-deal C0:deal}
+, {currently-dealing, NOT-currently-dealing}
+, {currently-collecting-deck, NOT-currently-collecting-deck}
+, {collect-card C0:cardposition, NOT-currently-collecting-deck}
+, {currently-updating-unmovable, NOT-currently-updating-unmovable}
+, {make-unmovable C0:card, NOT-currently-updating-unmovable}
+, {currently-updating-movable, NOT-currently-updating-movable}
+, {make-movable C0:cardposition, NOT-currently-updating-movable}
+>
+Goal aware:
+< {on card-d0-s0-v0 C0:cardposition}
+, {on card-d0-s0-v1 C0:cardposition}
+, {on card-d0-s0-v2 C0:cardposition}
+, {on card-d0-s0-v3 C0:cardposition}
+, {on card-d0-s0-v4 C0:cardposition}
+, {on card-d0-s0-v5 C0:cardposition}
+, {on card-d0-s0-v6 C0:cardposition}
+, {on card-d0-s0-v7 C0:cardposition}
+, {on card-d0-s0-v8 C0:cardposition}
+, {on card-d1-s0-v0 C0:cardposition}
+, {on card-d1-s0-v1 C0:cardposition}
+, {on card-d1-s0-v2 C0:cardposition}
+, {on card-d1-s0-v3 C0:cardposition}
+, {on card-d1-s0-v4 C0:cardposition}
+, {on card-d1-s0-v5 C0:cardposition}
+, {on card-d1-s0-v6 C0:cardposition}
+, {on card-d1-s0-v7 C0:cardposition}
+, {on card-d1-s0-v8 C0:cardposition}
+, {on card-d2-s0-v0 C0:cardposition}
+, {on card-d2-s0-v1 C0:cardposition}
+, {on card-d2-s0-v2 C0:cardposition}
+, {on card-d2-s0-v3 C0:cardposition}
+, {on card-d2-s0-v4 C0:cardposition}
+, {on card-d2-s0-v5 C0:cardposition}
+, {on card-d2-s0-v6 C0:cardposition}
+, {on card-d2-s0-v7 C0:cardposition}
+, {on card-d2-s0-v8 C0:cardposition}
+, {on card-d3-s0-v0 C0:cardposition}
+, {on card-d3-s0-v1 C0:cardposition}
+, {on card-d3-s0-v2 C0:cardposition}
+, {on card-d3-s0-v3 C0:cardposition}
+, {on card-d3-s0-v4 C0:cardposition}
+, {on card-d3-s0-v5 C0:cardposition}
+, {on card-d3-s0-v6 C0:cardposition}
+, {on card-d3-s0-v7 C0:cardposition}
+, {on card-d3-s0-v8 C0:cardposition}
+>

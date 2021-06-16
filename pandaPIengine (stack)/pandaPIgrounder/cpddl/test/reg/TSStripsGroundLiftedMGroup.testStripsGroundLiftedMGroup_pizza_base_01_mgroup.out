@@ -1,0 +1,37 @@
+{undecidedsize}
+ (undecidedsize):fam
+
+{free V0:slice}
+ (free slice2):fam
+ (free slice3):fam
+ (free slice4):fam
+ (free slice5):fam
+ (free slice6):fam
+ (free slice7):fam
+ (free slice8):fam
+
+{holding C0:slice tray1, freearms}:=1
+ (freearms) (holding slice1 tray1) (holding slice2 tray1) (holding slice3 tray1) (holding slice4 tray1) (holding slice5 tray1) (holding slice6 tray1) (holding slice7 tray1) (holding slice8 tray1):=1:fam
+
+{pizzasize V0:slice C1:size, free V0:slice}:=1
+ (free slice2) (pizzasize slice2 eighth) (pizzasize slice2 half) (pizzasize slice2 quarter) (pizzasize slice2 sixteenth):=1:fam
+ (free slice3) (pizzasize slice3 eighth) (pizzasize slice3 half) (pizzasize slice3 quarter) (pizzasize slice3 sixteenth):=1:fam
+ (free slice4) (pizzasize slice4 eighth) (pizzasize slice4 half) (pizzasize slice4 quarter) (pizzasize slice4 sixteenth):=1:fam
+ (free slice5) (pizzasize slice5 eighth) (pizzasize slice5 half) (pizzasize slice5 quarter) (pizzasize slice5 sixteenth):=1:fam
+ (free slice6) (pizzasize slice6 eighth) (pizzasize slice6 half) (pizzasize slice6 quarter) (pizzasize slice6 sixteenth):=1:fam
+ (free slice7) (pizzasize slice7 eighth) (pizzasize slice7 half) (pizzasize slice7 quarter) (pizzasize slice7 sixteenth):=1:fam
+ (free slice8) (pizzasize slice8 eighth) (pizzasize slice8 half) (pizzasize slice8 quarter) (pizzasize slice8 sixteenth):=1:fam
+
+{servedsize C0:size, undecidedsize}:=1
+ (servedsize eighth) (servedsize half) (servedsize one) (servedsize quarter) (servedsize sixteenth) (undecidedsize):=1:fam
+
+{ontray V0:slice tray1, holding V0:slice tray1, free V0:slice}
+ (holding slice1 tray1) (ontray slice1 tray1):fam
+ (free slice2) (holding slice2 tray1) (ontray slice2 tray1):fam
+ (free slice3) (holding slice3 tray1) (ontray slice3 tray1):fam
+ (free slice4) (holding slice4 tray1) (ontray slice4 tray1):fam
+ (free slice5) (holding slice5 tray1) (ontray slice5 tray1):fam
+ (free slice6) (holding slice6 tray1) (ontray slice6 tray1):fam
+ (free slice7) (holding slice7 tray1) (ontray slice7 tray1):fam
+ (free slice8) (holding slice8 tray1) (ontray slice8 tray1):fam
+

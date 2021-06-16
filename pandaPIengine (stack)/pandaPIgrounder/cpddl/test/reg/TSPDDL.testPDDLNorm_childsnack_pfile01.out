@@ -1,0 +1,131 @@
+---- Domain: pddl-data/ipc-2014/seq-opt/childsnack/domain.pddl | pddl-data/ipc-2014/seq-opt/childsnack/child-snack_pfile01.pddl ----
+Domain: child-snack
+Problem: prob-snack
+Require: ff
+Type[7]:
+    [0]: object, parent: -1
+    [1]: child, parent: 0
+    [2]: bread-portion, parent: 0
+    [3]: content-portion, parent: 0
+    [4]: sandwich, parent: 0
+    [5]: tray, parent: 0
+    [6]: place, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+    [1]: 1 2 3 4 5 6
+    [2]: 7 8 9 10 11 12
+    [3]: 13 14 15 16 17 18
+    [4]: 24 25 26 27 28 29 30 31
+    [5]: 19 20
+    [6]: 0 21 22 23
+Obj[32]:
+    [0]: kitchen, type: 6, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [1]: child1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: child2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: child3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: child4, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: child5, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: child6, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: bread1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: bread2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: bread3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: bread4, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: bread5, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: bread6, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: content1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: content2, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: content3, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: content4, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: content5, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: content6, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: tray1, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: tray2, type: 5, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [21]: table1, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [22]: table2, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [23]: table3, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [24]: sandw1, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [25]: sandw2, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [26]: sandw3, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [27]: sandw4, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [28]: sandw5, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [29]: sandw6, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [30]: sandw7, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [31]: sandw8, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[14]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    at_kitchen_bread: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at_kitchen_content: 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at_kitchen_sandwich: 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    no_gluten_bread: 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    no_gluten_content: 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    ontray: 4 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    no_gluten_sandwich: 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    allergic_gluten: 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    not_allergic_gluten: 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    served: 1 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    waiting: 1 6 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    at: 5 6 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    notexist: 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+Function[0]:
+Action[6]:
+    make_sandwich_no_gluten: ?s:4 ?b:2 ?c:3
+        pre: (and (RW:at_kitchen_bread ?b) (RW:at_kitchen_content ?c) (R:no_gluten_bread ?b) (R:no_gluten_content ?c) (RW:notexist ?s))
+        eff: (and (N:RW:at_kitchen_bread ?b) (N:RW:at_kitchen_content ?c) (RW:at_kitchen_sandwich ?s) (RW:no_gluten_sandwich ?s) (N:RW:notexist ?s))
+    make_sandwich: ?s:4 ?b:2 ?c:3
+        pre: (and (RW:at_kitchen_bread ?b) (RW:at_kitchen_content ?c) (RW:notexist ?s))
+        eff: (and (N:RW:at_kitchen_bread ?b) (N:RW:at_kitchen_content ?c) (RW:at_kitchen_sandwich ?s) (N:RW:notexist ?s))
+    put_on_tray: ?s:4 ?t:5
+        pre: (and (RW:at_kitchen_sandwich ?s) (RW:at ?t kitchen))
+        eff: (and (N:RW:at_kitchen_sandwich ?s) (RW:ontray ?s ?t))
+    serve_sandwich_no_gluten: ?s:4 ?c:1 ?t:5 ?p:6
+        pre: (and (R:allergic_gluten ?c) (RW:ontray ?s ?t) (R:waiting ?c ?p) (RW:no_gluten_sandwich ?s) (RW:at ?t ?p))
+        eff: (and (N:RW:ontray ?s ?t) (W:served ?c))
+    serve_sandwich: ?s:4 ?c:1 ?t:5 ?p:6
+        pre: (and (R:not_allergic_gluten ?c) (R:waiting ?c ?p) (RW:ontray ?s ?t) (RW:at ?t ?p))
+        eff: (and (N:RW:ontray ?s ?t) (W:served ?c))
+    move_tray: ?t:5 ?p1:6 ?p2:6
+        pre: (and (RW:at ?t ?p1))
+        eff: (and (N:RW:at ?t ?p1) (RW:at ?t ?p2))
+Init[38]:
+  (at tray1 kitchen)
+  (at tray2 kitchen)
+  (at_kitchen_bread bread1)
+  (at_kitchen_bread bread2)
+  (at_kitchen_bread bread3)
+  (at_kitchen_bread bread4)
+  (at_kitchen_bread bread5)
+  (at_kitchen_bread bread6)
+  (at_kitchen_content content1)
+  (at_kitchen_content content2)
+  (at_kitchen_content content3)
+  (at_kitchen_content content4)
+  (at_kitchen_content content5)
+  (at_kitchen_content content6)
+  S:(no_gluten_bread bread4)
+  S:(no_gluten_bread bread1)
+  S:(no_gluten_content content6)
+  S:(no_gluten_content content5)
+  S:(allergic_gluten child3)
+  S:(allergic_gluten child4)
+  S:(not_allergic_gluten child1)
+  S:(not_allergic_gluten child2)
+  S:(not_allergic_gluten child5)
+  S:(not_allergic_gluten child6)
+  S:(waiting child1 table1)
+  S:(waiting child2 table1)
+  S:(waiting child3 table1)
+  S:(waiting child4 table3)
+  S:(waiting child5 table1)
+  S:(waiting child6 table3)
+  (notexist sandw1)
+  (notexist sandw2)
+  (notexist sandw3)
+  (notexist sandw4)
+  (notexist sandw5)
+  (notexist sandw6)
+  (notexist sandw7)
+  (notexist sandw8)
+Init[0]:
+Goal: (and (W:served child1) (W:served child2) (W:served child3) (W:served child4) (W:served child5) (W:served child6))
+Metric: 0
+---- Domain: pddl-data/ipc-2014/seq-opt/childsnack/domain.pddl | pddl-data/ipc-2014/seq-opt/childsnack/child-snack_pfile01.pddl END ----

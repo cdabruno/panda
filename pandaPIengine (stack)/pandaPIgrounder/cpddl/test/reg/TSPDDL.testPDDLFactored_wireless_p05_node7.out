@@ -1,0 +1,109 @@
+---- Domain: pddl-data/codmap-2015/factored/wireless/p05/domain-node7.pddl | pddl-data/codmap-2015/factored/wireless/p05/problem-node7.pddl ----
+Domain: wireless
+Problem: wireless-05
+Require: 1000ff
+Type[6]:
+    [0]: object, parent: -1
+    [1]: node, parent: 0
+    [2]: level, parent: 0
+    [3]: message, parent: 0
+    [4]: base, parent: 1
+    [5]: sensor, parent: 1
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+    [1]: 0 1 2 3 4 5 6 7
+    [2]: 8 9 10 11
+    [3]: 12 13 14 15 16 17 18
+    [4]: 0
+    [5]: 1 2 3 4 5 6 7
+Obj[19]:
+    [0]: base, type: 4, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [1]: node1, type: 5, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [2]: node2, type: 5, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [3]: node3, type: 5, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [4]: node4, type: 5, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [5]: node5, type: 5, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [6]: node6, type: 5, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [7]: node7, type: 5, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [8]: zero, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [9]: low, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [10]: normal, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [11]: high, type: 2, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [12]: msg1-1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: msg2-1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: msg3-1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: msg4-1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: msg5-1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: msg6-1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: msg7-1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[9]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    neighbor: 1 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    has-data: 1 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    higher: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    next: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    is-message-at: 3 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    message-data: 3 5 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    sending: 5 1 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    energy: 5 2 :: is-private: 1, owner-param: -1, read: 1, write: 1
+Function[0]:
+Action[5]:
+    generate-data_node7: ?e0:2 ?e1:2
+        pre: (and (RW:energy node7 ?e0) (R:higher ?e0 zero) (R:next ?e0 ?e1))
+        eff: (and (N:RW:energy node7 ?e0) (RW:energy node7 ?e1) (RW:has-data node7 node7))
+    add-to-message_node7: ?s2:5 ?m:3
+        pre: (and (RW:has-data node7 ?s2) (RW:is-message-at ?m node7) (N:RW:message-data ?m ?s2))
+        eff: (and (N:RW:has-data node7 ?s2) (RW:message-data ?m ?s2))
+    send-message_node7: ?receiver:1 ?m:3 ?e0:2 ?e1:2
+        pre: (and (RW:energy node7 ?e0) (R:higher ?e0 zero) (R:next ?e0 ?e1) (R:neighbor node7 ?receiver) (RW:is-message-at ?m node7) (N:RW:is-message-at ?m ?receiver) (N:RW:sending node7 ?receiver ?m))
+        eff: (and (N:RW:energy node7 ?e0) (N:RW:is-message-at ?m node7) (RW:energy node7 ?e1) (RW:sending node7 ?receiver ?m))
+    receive-message_node7: ?sender:5 ?m:3
+        pre: (and (N:RW:is-message-at ?m node7) (RW:sending ?sender node7 ?m))
+        eff: (and (N:RW:sending ?sender node7 ?m) (RW:is-message-at ?m node7))
+    get-data-from-message_node7: ?s:5 ?m:3
+        pre: (and (RW:is-message-at ?m node7) (RW:message-data ?m ?s))
+        eff: (and (N:RW:message-data ?m ?s) (RW:has-data node7 ?s))
+Init[39]:
+  S:(higher high low)
+  S:(higher high normal)
+  S:(higher high zero)
+  S:(higher normal low)
+  S:(higher normal zero)
+  S:(higher low zero)
+  S:(next high normal)
+  S:(next normal low)
+  S:(next low zero)
+  (energy node1 normal)
+  (is-message-at msg1-1 node1)
+  (energy node2 normal)
+  (is-message-at msg2-1 node2)
+  (energy node3 normal)
+  (is-message-at msg3-1 node3)
+  (energy node4 normal)
+  (is-message-at msg4-1 node4)
+  (energy node5 high)
+  (is-message-at msg5-1 node5)
+  (energy node6 high)
+  (is-message-at msg6-1 node6)
+  (energy node7 high)
+  (is-message-at msg7-1 node7)
+  S:(neighbor node1 node2)
+  S:(neighbor node2 node1)
+  S:(neighbor node2 node3)
+  S:(neighbor node3 node2)
+  S:(neighbor node3 node4)
+  S:(neighbor node4 node3)
+  S:(neighbor node3 node5)
+  S:(neighbor node5 node3)
+  S:(neighbor node4 node5)
+  S:(neighbor node5 node4)
+  S:(neighbor node5 base)
+  S:(neighbor base node5)
+  S:(neighbor node6 node5)
+  S:(neighbor node5 node6)
+  S:(neighbor node7 node6)
+  S:(neighbor node6 node7)
+Init[0]:
+Goal: (and (RW:has-data base node1) (RW:has-data base node2) (RW:has-data base node3) (RW:has-data base node4) (RW:has-data base node5) (RW:has-data base node6) (RW:has-data base node7))
+Metric: 0
+---- Domain: pddl-data/codmap-2015/factored/wireless/p05/domain-node7.pddl | pddl-data/codmap-2015/factored/wireless/p05/problem-node7.pddl END ----

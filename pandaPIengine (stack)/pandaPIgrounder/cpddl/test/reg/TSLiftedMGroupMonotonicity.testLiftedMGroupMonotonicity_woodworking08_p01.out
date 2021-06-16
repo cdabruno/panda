@@ -1,0 +1,44 @@
+Invariants:
+< {unused V0:part}
+, {unused C0:part}
+, {unused V0:part, surface-condition V0:part C1:surface}
+, {unused V0:part, treatment V0:part C1:treatmentstatus}
+, {unused V0:part, wood V0:part V1:awood}
+, {unused V0:part, wood V0:part C1:awood}
+, {unused C1:part, surface-condition V0:woodobj C2:surface}
+, {unused C1:part, treatment V0:part C2:treatmentstatus}
+, {unused C1:part, wood V0:woodobj C2:awood}
+, {unused C1:part, wood C2:woodobj V0:awood}
+, {unused C1:part, boardsize V0:board C2:aboardsize}
+, {unused C1:part, boardsize C2:board V0:aboardsize}
+, {unused C2:part, wood V0:woodobj V1:awood}
+, {unused C2:part, boardsize V0:board V1:aboardsize}
+, {available V0:board, in-highspeed-saw V0:board V1:highspeed-saw}
+, {available V0:board, in-highspeed-saw V0:board C1:highspeed-saw}
+, {in-highspeed-saw C1:board V0:highspeed-saw, empty V0:highspeed-saw}
+, {in-highspeed-saw C1:board V0:highspeed-saw, empty C2:highspeed-saw}
+, {unused C1:part, available C2:woodobj, in-highspeed-saw C3:board V0:highspeed-saw}
+, {unused V0:part, available V0:part, in-highspeed-saw C2:board V1:highspeed-saw, empty V1:highspeed-saw}
+, {unused V0:part, available V0:part, in-highspeed-saw C2:board V1:highspeed-saw, empty C3:highspeed-saw}
+>
+Mutex Groups:
+< {unused V0:part}
+, {unused V0:part, surface-condition V0:part C1:surface}
+, {unused V0:part, treatment V0:part C1:treatmentstatus}
+, {unused V0:part, wood V0:part V1:awood}
+, {unused V0:part, wood V0:part C1:awood}
+, {available V0:board, in-highspeed-saw V0:board highspeed-saw0}
+, {in-highspeed-saw C0:board highspeed-saw0, empty highspeed-saw0}
+>
+Goal aware:
+< {unused p0, surface-condition p0 C0:surface}
+, {unused p0, treatment p0 C0:treatmentstatus}
+, {unused p0, wood p0 beech}
+, {unused p0, wood p0 C0:awood}
+, {unused p1, surface-condition p1 C0:surface}
+, {unused p1, treatment p1 C0:treatmentstatus}
+, {unused p1, wood p1 cherry}
+, {unused p1, wood p1 C0:awood}
+, {unused p2, wood p2 beech}
+, {unused p2, wood p2 C0:awood}
+>

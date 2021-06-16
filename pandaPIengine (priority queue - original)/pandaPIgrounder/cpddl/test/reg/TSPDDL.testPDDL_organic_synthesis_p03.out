@@ -1,0 +1,305 @@
+---- Domain: pddl-data/ipc-2018/seq-opt/organic-synthesis/domain-p03.pddl | pddl-data/ipc-2018/seq-opt/organic-synthesis/p03.pddl ----
+Domain: organic-synthesis
+Problem: mit_p03
+Require: ff
+Type[34]:
+    [0]: object, parent: -1
+    [1]: chemical_atom, parent: 0
+    [2]: phosphorus, parent: 1
+    [3]: calcium, parent: 1
+    [4]: sulfur, parent: 1
+    [5]: magnesium, parent: 1
+    [6]: aluminium, parent: 1
+    [7]: chromium, parent: 1
+    [8]: iron, parent: 1
+    [9]: manganese, parent: 1
+    [10]: mercury, parent: 1
+    [11]: boron, parent: 1
+    [12]: copper, parent: 1
+    [13]: palladium, parent: 1
+    [14]: r_group, parent: 1
+    [15]: halogen, parent: 14
+    [16]: alkalimetal, parent: 14
+    [17]: hcno, parent: 14
+    [18]: hc, parent: 17
+    [19]: nitrogen, parent: 17
+    [20]: oxygen, parent: 17
+    [21]: hydrogen, parent: 18
+    [22]: carbon, parent: 18
+    [23]: chlorine, parent: 15
+    [24]: fluorine, parent: 15
+    [25]: bromine, parent: 15
+    [26]: iodine, parent: 15
+    [27]: astatine, parent: 15
+    [28]: lithium, parent: 16
+    [29]: sodium, parent: 16
+    [30]: potassium, parent: 16
+    [31]: rubidium, parent: 16
+    [32]: caesium, parent: 16
+    [33]: francium, parent: 16
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+    [1]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+    [2]:
+    [3]:
+    [4]:
+    [5]:
+    [6]: 0
+    [7]:
+    [8]:
+    [9]:
+    [10]:
+    [11]:
+    [12]:
+    [13]:
+    [14]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+    [15]:
+    [16]: 20
+    [17]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 21 22
+    [18]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+    [19]: 21
+    [20]: 22
+    [21]: 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+    [22]: 1 2 3 4
+    [23]:
+    [24]:
+    [25]:
+    [26]:
+    [27]:
+    [28]: 20
+    [29]:
+    [30]:
+    [31]:
+    [32]:
+    [33]:
+Obj[23]:
+    [0]: al1, type: 6, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: c1, type: 22, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: c17, type: 22, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: c2, type: 22, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: c3, type: 22, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: h1, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: h15, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: h16, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: h17, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: h18, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: h19, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: h2, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: h20, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: h21, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: h22, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: h24, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: h26, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: h3, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: h50, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: h51, type: 21, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: li1, type: 28, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [21]: n1, type: 19, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [22]: o7, type: 20, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[5]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    bond: 1 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    doublebond: 1 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    triplebond: 1 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    aromaticbond: 1 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+Function[0]:
+Action[52]:
+    aldehydereduction: ?al_2:6 ?c_8:22 ?h_4:21 ?h_3:21 ?o_7:20 ?h_6:21 ?h_5:21 ?li_1:28 ?c_9:22 ?h_10:21
+        pre: (and (N:R:= ?h_3 ?h_4) (N:R:= ?h_3 ?h_6) (N:R:= ?h_3 ?h_5) (N:R:= ?h_4 ?h_6) (N:R:= ?h_5 ?h_6) (N:R:= ?h_4 ?h_5) (RW:bond ?li_1 ?al_2) (RW:bond ?h_3 ?al_2) (RW:bond ?h_4 ?al_2) (RW:bond ?h_5 ?al_2) (RW:bond ?h_6 ?al_2) (N:R:= ?c_8 ?c_9) (RW:doublebond ?o_7 ?c_8) (RW:bond ?c_8 ?c_9) (RW:bond ?h_10 ?c_8))
+        eff: (and (N:RW:bond ?h_3 ?al_2) (N:RW:bond ?al_2 ?h_3) (N:RW:bond ?h_4 ?al_2) (N:RW:bond ?al_2 ?h_4) (RW:bond ?h_3 ?c_8) (RW:bond ?c_8 ?h_3) (RW:bond ?h_4 ?o_7) (RW:bond ?o_7 ?h_4) (N:RW:doublebond ?o_7 ?c_8) (N:RW:doublebond ?c_8 ?o_7) (RW:bond ?o_7 ?c_8) (RW:bond ?c_8 ?o_7))
+    aldolcondensation: ?o_4:20 ?o_15:20 ?na_14:29 ?h_8:21 ?h_9:21 ?c_1:22 ?c_5:22 ?o_10:20 ?h_11:21 ?h_12:21 ?h_13:21 ?r1_2:14 ?r1_3:14 ?o_7:20 ?c_6:22
+        pre: (and (N:R:= ?c_1 ?c_5) (N:R:= ?h_11 ?h_8) (N:R:= ?h_11 ?h_9) (N:R:= ?h_8 ?h_9) (N:R:= ?o_4 ?o_10) (N:R:= ?o_4 ?o_15) (N:R:= ?o_10 ?o_15) (N:R:= ?h_11 ?h_12) (RW:bond ?o_10 ?h_11) (RW:bond ?o_10 ?h_12) (RW:bond ?na_14 ?o_15) (RW:bond ?h_13 ?o_15) (N:R:= ?r1_2 ?r1_3) (RW:bond ?r1_2 ?c_1) (RW:bond ?r1_3 ?c_1) (RW:doublebond ?o_4 ?c_1) (N:R:= ?h_9 ?h_8) (N:R:= ?c_6 ?c_5) (RW:bond ?c_6 ?c_5) (RW:bond ?h_9 ?c_5) (RW:bond ?h_8 ?c_5) (RW:doublebond ?o_7 ?c_6))
+        eff: (and (N:RW:doublebond ?o_4 ?c_1) (N:RW:doublebond ?c_1 ?o_4) (RW:doublebond ?c_1 ?c_5) (RW:doublebond ?c_5 ?c_1) (RW:bond ?h_11 ?o_4) (RW:bond ?o_4 ?h_11) (RW:bond ?na_14 ?o_4) (RW:bond ?o_4 ?na_14) (N:RW:bond ?h_8 ?c_5) (N:RW:bond ?c_5 ?h_8) (N:RW:bond ?h_9 ?c_5) (N:RW:bond ?c_5 ?h_9) (RW:bond ?o_10 ?h_8) (RW:bond ?h_8 ?o_10) (RW:bond ?h_9 ?o_15) (RW:bond ?o_15 ?h_9) (N:RW:bond ?o_10 ?h_11) (N:RW:bond ?h_11 ?o_10) (N:RW:bond ?na_14 ?o_15) (N:RW:bond ?o_15 ?na_14))
+    alkylationofbetadicarbonyl: ?r1_2:15 ?c_1:22 ?h_6:21 ?c_4:22 ?c_3:22 ?c_5:22 ?o_7:20 ?o_8:20
+        pre: (and (N:R:= ?c_1 ?c_4) (RW:bond ?r1_2 ?c_1) (N:R:= ?c_3 ?c_4) (N:R:= ?o_7 ?o_8) (N:R:= ?c_4 ?c_5) (N:R:= ?c_3 ?c_5) (RW:bond ?c_3 ?c_4) (RW:doublebond ?c_3 ?o_7) (RW:bond ?c_4 ?c_5) (RW:bond ?h_6 ?c_4) (RW:doublebond ?c_5 ?o_8))
+        eff: (and (N:RW:bond ?r1_2 ?c_1) (N:RW:bond ?c_1 ?r1_2) (RW:bond ?c_1 ?c_4) (RW:bond ?c_4 ?c_1) (RW:bond ?r1_2 ?h_6) (RW:bond ?h_6 ?r1_2) (N:RW:bond ?h_6 ?c_4) (N:RW:bond ?c_4 ?h_6))
+    amidesynthesisfromacidchloride: ?n_5:19 ?c_2:22 ?cl_1:23 ?h_8:21 ?o_4:20 ?c_3:22 ?h_7:21 ?c_6:22
+        pre: (and (N:R:= ?c_2 ?c_3) (RW:bond ?c_2 ?cl_1) (RW:bond ?c_3 ?c_2) (RW:doublebond ?o_4 ?c_2) (N:R:= ?h_7 ?h_8) (RW:bond ?h_7 ?n_5) (RW:bond ?h_8 ?n_5) (RW:bond ?c_6 ?n_5))
+        eff: (and (N:RW:bond ?c_2 ?cl_1) (N:RW:bond ?cl_1 ?c_2) (RW:bond ?h_8 ?cl_1) (RW:bond ?cl_1 ?h_8) (RW:bond ?c_2 ?n_5) (RW:bond ?n_5 ?c_2) (N:RW:bond ?h_8 ?n_5) (N:RW:bond ?n_5 ?h_8))
+    amidesynthesisfromacidhalides: ?c_1:22 ?h_6:21 ?n_8:19 ?r1_4:15 ?c_2:22 ?o_3:20 ?h_7:21 ?h_5:21
+        pre: (and (N:R:= ?c_1 ?c_2) (RW:bond ?r1_4 ?c_1) (RW:bond ?c_2 ?c_1) (RW:doublebond ?o_3 ?c_1) (N:R:= ?h_6 ?h_7) (N:R:= ?h_5 ?h_7) (N:R:= ?h_5 ?h_6) (RW:bond ?h_5 ?n_8) (RW:bond ?h_6 ?n_8) (RW:bond ?h_7 ?n_8))
+        eff: (and (N:RW:bond ?r1_4 ?c_1) (N:RW:bond ?c_1 ?r1_4) (RW:bond ?n_8 ?c_1) (RW:bond ?c_1 ?n_8) (RW:bond ?h_6 ?r1_4) (RW:bond ?r1_4 ?h_6) (N:RW:bond ?h_6 ?n_8) (N:RW:bond ?n_8 ?h_6))
+    aromaticbromination: ?br_5:25 ?h_13:21 ?br_6:25 ?c_7:22 ?br_1:25 ?br_3:25 ?fe_4:8 ?br_2:25 ?c_9:22 ?c_8:22 ?c_11:22 ?c_10:22 ?c_12:22
+        pre: (and (N:R:= ?br_5 ?br_6) (N:R:= ?br_1 ?br_3) (N:R:= ?br_2 ?br_3) (N:R:= ?br_1 ?br_2) (RW:bond ?br_1 ?fe_4) (RW:bond ?fe_4 ?br_2) (RW:bond ?fe_4 ?br_3) (RW:bond ?br_5 ?br_6) (N:R:= ?c_10 ?c_12) (N:R:= ?c_7 ?c_10) (N:R:= ?c_9 ?c_11) (N:R:= ?c_7 ?c_12) (N:R:= ?c_8 ?c_12) (N:R:= ?c_8 ?c_11) (N:R:= ?c_8 ?c_10) (N:R:= ?c_8 ?c_9) (N:R:= ?c_9 ?c_12) (N:R:= ?c_7 ?c_8) (N:R:= ?c_10 ?c_11) (N:R:= ?c_10 ?c_9) (N:R:= ?c_7 ?c_11) (N:R:= ?c_12 ?c_11) (N:R:= ?c_7 ?c_9) (RW:bond ?h_13 ?c_7) (R:aromaticbond ?c_7 ?c_8) (R:aromaticbond ?c_10 ?c_7) (R:aromaticbond ?c_8 ?c_9) (R:aromaticbond ?c_9 ?c_12) (R:aromaticbond ?c_11 ?c_10) (R:aromaticbond ?c_12 ?c_11))
+        eff: (and (N:RW:bond ?br_5 ?br_6) (N:RW:bond ?br_6 ?br_5) (RW:bond ?br_5 ?h_13) (RW:bond ?h_13 ?br_5) (RW:bond ?br_6 ?c_7) (RW:bond ?c_7 ?br_6) (N:RW:bond ?h_13 ?c_7) (N:RW:bond ?c_7 ?h_13))
+    aromaticnitration: ?o_12:20 ?n_1:19 ?h_8:21 ?c_3:22 ?o_6:20 ?h_10:21 ?c_2:22 ?o_5:20 ?o_4:20 ?h_9:21 ?s_15:4 ?h_7:21 ?o_13:20 ?o_14:20 ?o_11:20
+        pre: (and (N:R:= ?h_10 ?h_8) (N:R:= ?o_6 ?o_12) (N:R:= ?c_3 ?c_2) (RW:bond ?c_3 ?h_10) (R:aromaticbond ?c_2 ?c_3) (N:R:= ?o_5 ?o_4) (N:R:= ?o_6 ?o_4) (N:R:= ?o_6 ?o_5) (RW:bond ?o_6 ?h_9) (RW:bond ?n_1 ?o_6) (RW:bond ?n_1 ?o_5) (RW:doublebond ?n_1 ?o_4) (N:R:= ?o_12 ?o_14) (N:R:= ?o_12 ?o_11) (N:R:= ?h_8 ?h_7) (N:R:= ?o_14 ?o_13) (N:R:= ?o_12 ?o_13) (N:R:= ?o_14 ?o_11) (N:R:= ?o_11 ?o_13) (RW:bond ?o_12 ?h_8) (RW:bond ?o_14 ?h_7) (RW:doublebond ?s_15 ?o_11) (RW:bond ?s_15 ?o_12) (RW:doublebond ?s_15 ?o_13) (RW:bond ?s_15 ?o_14))
+        eff: (and (RW:bond ?n_1 ?c_3) (RW:bond ?c_3 ?n_1) (N:RW:bond ?n_1 ?o_6) (N:RW:bond ?o_6 ?n_1) (N:RW:bond ?c_3 ?h_10) (N:RW:bond ?h_10 ?c_3) (RW:bond ?o_6 ?h_8) (RW:bond ?h_8 ?o_6) (N:RW:bond ?o_12 ?h_8) (N:RW:bond ?h_8 ?o_12) (RW:bond ?o_12 ?h_10) (RW:bond ?h_10 ?o_12))
+    catalytichydrogenationofalkenes: ?c_3:22 ?h_5:21 ?c_4:22 ?pd_1:13 ?h_6:21
+        pre: (and (N:R:= ?c_4 ?c_3) (RW:doublebond ?c_4 ?c_3) (N:R:= ?h_5 ?h_6) (RW:bond ?h_5 ?h_6))
+        eff: (and (N:RW:doublebond ?c_4 ?c_3) (N:RW:doublebond ?c_3 ?c_4) (N:RW:bond ?h_5 ?h_6) (N:RW:bond ?h_6 ?h_5) (RW:bond ?c_4 ?c_3) (RW:bond ?c_3 ?c_4) (RW:bond ?h_5 ?c_3) (RW:bond ?c_3 ?h_5) (RW:bond ?h_6 ?c_4) (RW:bond ?c_4 ?h_6))
+    catalytichydrogenationofnitriles: ?h_6:21 ?h_7:21 ?h_4:21 ?h_5:21 ?n_1:19 ?c_2:22 ?c_3:22
+        pre: (and (N:R:= ?h_4 ?h_6) (N:R:= ?h_4 ?h_5) (N:R:= ?h_4 ?h_7) (N:R:= ?h_6 ?h_5) (N:R:= ?h_6 ?h_7) (N:R:= ?h_5 ?h_7) (N:R:= ?c_2 ?c_3) (RW:triplebond ?c_2 ?n_1) (RW:bond ?c_2 ?c_3) (RW:bond ?h_4 ?h_5) (RW:bond ?h_6 ?h_7))
+        eff: (and (N:RW:triplebond ?c_2 ?n_1) (N:RW:triplebond ?n_1 ?c_2) (RW:bond ?c_2 ?n_1) (RW:bond ?n_1 ?c_2) (RW:bond ?h_4 ?n_1) (RW:bond ?n_1 ?h_4) (RW:bond ?h_6 ?n_1) (RW:bond ?n_1 ?h_6) (RW:bond ?h_5 ?c_2) (RW:bond ?c_2 ?h_5) (RW:bond ?h_7 ?c_2) (RW:bond ?c_2 ?h_7) (N:RW:bond ?h_4 ?h_5) (N:RW:bond ?h_5 ?h_4) (N:RW:bond ?h_6 ?h_7) (N:RW:bond ?h_7 ?h_6))
+    catalytichydrogenationofnitrogroup: ?h_6:21 ?h_7:21 ?h_5:21 ?o_1:20 ?o_2:20 ?h_8:21 ?h_9:21 ?h_10:21 ?n_3:19 ?c_4:22
+        pre: (and (N:R:= ?h_7 ?h_8) (N:R:= ?h_7 ?h_9) (N:R:= ?h_7 ?h_10) (N:R:= ?h_7 ?h_5) (N:R:= ?h_7 ?h_6) (N:R:= ?h_8 ?h_9) (N:R:= ?h_8 ?h_10) (N:R:= ?h_8 ?h_5) (N:R:= ?h_8 ?h_6) (N:R:= ?h_9 ?h_10) (N:R:= ?h_9 ?h_5) (N:R:= ?h_9 ?h_6) (N:R:= ?h_10 ?h_5) (N:R:= ?h_10 ?h_6) (N:R:= ?h_5 ?h_6) (N:R:= ?o_1 ?o_2) (RW:doublebond ?o_1 ?n_3) (RW:bond ?o_2 ?n_3) (RW:bond ?n_3 ?c_4) (RW:bond ?h_5 ?h_6) (N:R:= ?h_8 ?h_7) (RW:bond ?h_8 ?h_7) (N:R:= ?h_10 ?h_9) (RW:bond ?h_10 ?h_9))
+        eff: (and (N:RW:doublebond ?o_1 ?n_3) (N:RW:doublebond ?n_3 ?o_1) (RW:bond ?o_1 ?h_7) (RW:bond ?h_7 ?o_1) (RW:bond ?o_1 ?h_8) (RW:bond ?h_8 ?o_1) (N:RW:bond ?o_2 ?n_3) (N:RW:bond ?n_3 ?o_2) (RW:bond ?o_2 ?h_9) (RW:bond ?h_9 ?o_2) (RW:bond ?o_2 ?h_10) (RW:bond ?h_10 ?o_2) (RW:bond ?n_3 ?h_5) (RW:bond ?h_5 ?n_3) (RW:bond ?h_6 ?n_3) (RW:bond ?n_3 ?h_6) (N:RW:bond ?h_5 ?h_6) (N:RW:bond ?h_6 ?h_5) (N:RW:bond ?h_8 ?h_7) (N:RW:bond ?h_7 ?h_8) (N:RW:bond ?h_10 ?h_9) (N:RW:bond ?h_9 ?h_10))
+    claisencondensation: ?o_11:20 ?o_14:20 ?h_1:21 ?c_2:22 ?na_13:29 ?c_9:22 ?o_5:20 ?o_4:20 ?c_3:22 ?r1_6:14 ?r2_8:14 ?r1_12:14 ?o_10:20 ?r1_15:14
+        pre: (and (N:R:= ?c_2 ?c_9) (N:R:= ?o_14 ?o_11) (N:R:= ?o_5 ?o_4) (N:R:= ?c_2 ?c_3) (RW:bond ?c_2 ?h_1) (RW:bond ?o_5 ?r1_6) (RW:bond ?o_5 ?c_3) (RW:doublebond ?c_3 ?o_4) (RW:bond ?c_3 ?c_2) (N:R:= ?o_11 ?o_10) (RW:bond ?o_11 ?r1_12) (RW:bond ?c_9 ?r2_8) (RW:bond ?c_9 ?o_11) (RW:doublebond ?o_10 ?c_9) (RW:bond ?o_14 ?na_13) (RW:bond ?r1_15 ?o_14))
+        eff: (and (N:RW:bond ?c_2 ?h_1) (N:RW:bond ?h_1 ?c_2) (RW:bond ?h_1 ?o_14) (RW:bond ?o_14 ?h_1) (RW:bond ?c_9 ?c_2) (RW:bond ?c_2 ?c_9) (N:RW:bond ?c_9 ?o_11) (N:RW:bond ?o_11 ?c_9) (RW:bond ?o_11 ?na_13) (RW:bond ?na_13 ?o_11) (N:RW:bond ?o_14 ?na_13) (N:RW:bond ?na_13 ?o_14))
+    cyanidedisplacementofbromidesn2: ?r1_3:16 ?c_2:22 ?c_5:22 ?r2_4:15 ?n_1:19
+        pre: (and (N:R:= ?c_2 ?c_5) (RW:triplebond ?c_2 ?n_1) (RW:bond ?c_2 ?r1_3) (RW:bond ?r2_4 ?c_5))
+        eff: (and (N:RW:bond ?c_2 ?r1_3) (N:RW:bond ?r1_3 ?c_2) (RW:bond ?c_2 ?c_5) (RW:bond ?c_5 ?c_2) (RW:bond ?r1_3 ?r2_4) (RW:bond ?r2_4 ?r1_3) (N:RW:bond ?r2_4 ?c_5) (N:RW:bond ?c_5 ?r2_4))
+    cyanidedisplacementoftosylgroupsn2: ?o_5:20 ?r1_3:16 ?c_2:22 ?c_8:22 ?n_1:19 ?c_9:22 ?o_7:20 ?o_6:20 ?s_4:4
+        pre: (and (N:R:= ?c_2 ?c_8) (RW:bond ?r1_3 ?c_2) (RW:triplebond ?c_2 ?n_1) (N:R:= ?o_5 ?o_6) (N:R:= ?c_9 ?c_8) (N:R:= ?o_7 ?o_6) (N:R:= ?o_5 ?o_7) (RW:bond ?c_9 ?s_4) (RW:bond ?c_8 ?o_5) (RW:doublebond ?s_4 ?o_7) (RW:doublebond ?o_6 ?s_4) (RW:bond ?o_5 ?s_4))
+        eff: (and (N:RW:bond ?r1_3 ?c_2) (N:RW:bond ?c_2 ?r1_3) (RW:bond ?c_8 ?c_2) (RW:bond ?c_2 ?c_8) (RW:bond ?o_5 ?r1_3) (RW:bond ?r1_3 ?o_5) (N:RW:bond ?c_8 ?o_5) (N:RW:bond ?o_5 ?c_8))
+    cyanohydrinformation: ?o_4:20 ?c_2:22 ?c_5:22 ?r2_3:1 ?n_1:19 ?r1_6:18 ?r1_7:18
+        pre: (and (N:R:= ?c_2 ?c_5) (RW:triplebond ?n_1 ?c_2) (RW:bond ?r2_3 ?c_2) (N:R:= ?r1_6 ?r1_7) (RW:doublebond ?o_4 ?c_5) (RW:bond ?r1_6 ?c_5) (RW:bond ?c_5 ?r1_7))
+        eff: (and (N:RW:bond ?r2_3 ?c_2) (N:RW:bond ?c_2 ?r2_3) (RW:bond ?c_2 ?c_5) (RW:bond ?c_5 ?c_2) (RW:bond ?o_4 ?r2_3) (RW:bond ?r2_3 ?o_4) (N:RW:doublebond ?o_4 ?c_5) (N:RW:doublebond ?c_5 ?o_4) (RW:bond ?o_4 ?c_5) (RW:bond ?c_5 ?o_4))
+    decarboxylationofbetaketoesters: ?o_10:20 ?o_1:20 ?h_3:21 ?c_4:22 ?c_7:22 ?h_2:21 ?o_11:20 ?o_9:20 ?c_8:22 ?c_5:22 ?c_6:22
+        pre: (and (N:R:= ?c_7 ?c_4) (N:R:= ?h_2 ?h_3) (N:R:= ?o_1 ?o_10) (N:R:= ?h_3 ?h_2) (RW:bond ?h_3 ?o_1) (RW:bond ?h_2 ?o_1) (N:R:= ?o_9 ?o_10) (N:R:= ?o_9 ?o_11) (N:R:= ?o_10 ?o_11) (N:R:= ?c_5 ?c_7) (N:R:= ?c_5 ?c_6) (N:R:= ?c_4 ?c_7) (N:R:= ?c_7 ?c_6) (N:R:= ?c_4 ?c_8) (N:R:= ?c_7 ?c_8) (N:R:= ?c_6 ?c_8) (N:R:= ?c_5 ?c_4) (N:R:= ?c_4 ?c_6) (N:R:= ?c_5 ?c_8) (RW:bond ?c_5 ?c_4) (RW:bond ?c_7 ?c_4) (RW:bond ?c_5 ?c_6) (RW:doublebond ?o_9 ?c_5) (RW:bond ?o_10 ?c_7) (RW:doublebond ?o_11 ?c_7) (RW:bond ?c_8 ?o_10))
+        eff: (and (N:RW:bond ?h_2 ?o_1) (N:RW:bond ?o_1 ?h_2) (N:RW:bond ?h_3 ?o_1) (N:RW:bond ?o_1 ?h_3) (RW:doublebond ?o_1 ?c_7) (RW:doublebond ?c_7 ?o_1) (RW:bond ?h_2 ?o_10) (RW:bond ?o_10 ?h_2) (RW:bond ?h_3 ?c_4) (RW:bond ?c_4 ?h_3) (N:RW:bond ?c_7 ?c_4) (N:RW:bond ?c_4 ?c_7) (N:RW:bond ?o_10 ?c_7) (N:RW:bond ?c_7 ?o_10))
+    dehydrationofamides: ?cl_2:23 ?n_6:19 ?o_9:20 ?c_7:22 ?h_10:21 ?h_11:21 ?p_1:2 ?o_5:20 ?cl_4:23 ?cl_3:23 ?r1_8:1
+        pre: (and (N:R:= ?h_11 ?h_10) (N:R:= ?cl_4 ?cl_3) (N:R:= ?cl_3 ?cl_2) (N:R:= ?cl_4 ?cl_2) (RW:doublebond ?o_5 ?p_1) (RW:bond ?cl_4 ?p_1) (RW:bond ?cl_3 ?p_1) (RW:bond ?cl_2 ?p_1) (RW:bond ?h_11 ?n_6) (RW:bond ?h_10 ?n_6) (RW:doublebond ?o_9 ?c_7) (RW:bond ?r1_8 ?c_7) (RW:bond ?n_6 ?c_7))
+        eff: (and (N:RW:bond ?cl_2 ?p_1) (N:RW:bond ?p_1 ?cl_2) (RW:bond ?o_9 ?p_1) (RW:bond ?p_1 ?o_9) (RW:bond ?cl_2 ?h_11) (RW:bond ?h_11 ?cl_2) (N:RW:bond ?n_6 ?c_7) (N:RW:bond ?c_7 ?n_6) (RW:triplebond ?n_6 ?c_7) (RW:triplebond ?c_7 ?n_6) (N:RW:bond ?h_10 ?n_6) (N:RW:bond ?n_6 ?h_10) (N:RW:bond ?h_11 ?n_6) (N:RW:bond ?n_6 ?h_11) (N:RW:doublebond ?o_9 ?c_7) (N:RW:doublebond ?c_7 ?o_9) (RW:bond ?h_10 ?o_9) (RW:bond ?o_9 ?h_10))
+    diazotization: ?h_7:21 ?o_6:20 ?n_9:19 ?o_3:20 ?h_1:21 ?n_5:19 ?cl_2:23 ?h_8:21 ?na_4:29 ?c_10:22
+        pre: (and (N:R:= ?o_3 ?o_6) (N:R:= ?h_1 ?h_7) (N:R:= ?h_1 ?h_8) (N:R:= ?h_7 ?h_8) (N:R:= ?n_5 ?n_9) (RW:bond ?h_1 ?cl_2) (RW:bond ?o_3 ?na_4) (RW:bond ?o_3 ?n_5) (RW:doublebond ?n_5 ?o_6) (N:R:= ?h_8 ?h_7) (RW:bond ?n_9 ?c_10) (RW:bond ?h_8 ?n_9) (RW:bond ?h_7 ?n_9))
+        eff: (and (N:RW:bond ?h_1 ?cl_2) (N:RW:bond ?cl_2 ?h_1) (RW:bond ?cl_2 ?n_5) (RW:bond ?n_5 ?cl_2) (N:RW:bond ?o_3 ?n_5) (N:RW:bond ?n_5 ?o_3) (N:RW:doublebond ?n_5 ?o_6) (N:RW:doublebond ?o_6 ?n_5) (RW:triplebond ?n_5 ?n_9) (RW:triplebond ?n_9 ?n_5) (N:RW:bond ?h_7 ?n_9) (N:RW:bond ?n_9 ?h_7) (N:RW:bond ?h_8 ?n_9) (N:RW:bond ?n_9 ?h_8))
+    dieckmanncyclization: ?o_16:20 ?c_14:22 ?c_2:22 ?h_1:21 ?o_4:20 ?r1_9:1 ?o_15:20 ?c_11:22 ?r2_17:1 ?r1_6:1 ?r1_7:1 ?c_3:22 ?c_5:22 ?r1_10:1 ?c_8:22 ?r1_12:1 ?r1_13:1
+        pre: (and (N:R:= ?c_2 ?c_14) (N:R:= ?c_3 ?c_14) (N:R:= ?r1_7 ?r1_6) (N:R:= ?r1_9 ?r1_13) (N:R:= ?r1_6 ?r1_9) (N:R:= ?r1_9 ?r1_12) (N:R:= ?o_4 ?o_15) (N:R:= ?r1_9 ?r1_10) (N:R:= ?r1_10 ?r1_13) (N:R:= ?c_2 ?c_5) (N:R:= ?c_2 ?c_3) (N:R:= ?r1_7 ?r1_12) (N:R:= ?c_8 ?c_11) (N:R:= ?o_16 ?o_15) (N:R:= ?c_3 ?c_11) (N:R:= ?c_3 ?c_8) (N:R:= ?r1_6 ?r1_12) (N:R:= ?c_11 ?c_14) (N:R:= ?c_5 ?c_8) (N:R:= ?r1_6 ?r1_10) (N:R:= ?c_5 ?c_11) (N:R:= ?c_2 ?c_8) (N:R:= ?c_3 ?c_5) (N:R:= ?r1_7 ?r1_10) (N:R:= ?c_2 ?c_11) (N:R:= ?c_8 ?c_14) (N:R:= ?r1_7 ?r1_9) (N:R:= ?r1_13 ?r1_12) (N:R:= ?r1_7 ?r1_13) (N:R:= ?c_5 ?c_14) (N:R:= ?r1_10 ?r1_12) (N:R:= ?r1_6 ?r1_13) (N:R:= ?o_4 ?o_16) (RW:bond ?h_1 ?c_2) (RW:bond ?c_2 ?c_3) (RW:bond ?c_3 ?c_5) (RW:doublebond ?o_4 ?c_3) (RW:bond ?c_5 ?r1_7) (RW:bond ?c_5 ?r1_6) (RW:bond ?c_5 ?c_8) (RW:bond ?c_8 ?r1_9) (RW:bond ?r1_10 ?c_8) (RW:bond ?c_8 ?c_11) (RW:bond ?c_11 ?r1_13) (RW:bond ?c_11 ?r1_12) (RW:bond ?c_11 ?c_14) (RW:bond ?c_14 ?o_16) (RW:doublebond ?o_15 ?c_14) (RW:bond ?o_16 ?r2_17))
+        eff: (and (N:RW:bond ?h_1 ?c_2) (N:RW:bond ?c_2 ?h_1) (RW:bond ?o_16 ?h_1) (RW:bond ?h_1 ?o_16) (RW:bond ?c_14 ?c_2) (RW:bond ?c_2 ?c_14) (N:RW:bond ?c_14 ?o_16) (N:RW:bond ?o_16 ?c_14))
+    dielsaldercycloaddition: ?c_1:22 ?c_3:22 ?c_2:22 ?c_5:22 ?c_4:22 ?c_6:22
+        pre: (and (N:R:= ?c_1 ?c_2) (N:R:= ?c_1 ?c_4) (N:R:= ?c_1 ?c_3) (N:R:= ?c_1 ?c_6) (N:R:= ?c_1 ?c_5) (N:R:= ?c_2 ?c_4) (N:R:= ?c_2 ?c_3) (N:R:= ?c_2 ?c_6) (N:R:= ?c_2 ?c_5) (N:R:= ?c_4 ?c_3) (N:R:= ?c_4 ?c_6) (N:R:= ?c_4 ?c_5) (N:R:= ?c_3 ?c_6) (N:R:= ?c_3 ?c_5) (N:R:= ?c_6 ?c_5) (RW:bond ?c_1 ?c_2) (RW:doublebond ?c_4 ?c_1) (RW:doublebond ?c_3 ?c_2) (RW:doublebond ?c_6 ?c_5))
+        eff: (and (N:RW:bond ?c_1 ?c_2) (N:RW:bond ?c_2 ?c_1) (RW:doublebond ?c_1 ?c_2) (RW:doublebond ?c_2 ?c_1) (N:RW:doublebond ?c_4 ?c_1) (N:RW:doublebond ?c_1 ?c_4) (RW:bond ?c_4 ?c_1) (RW:bond ?c_1 ?c_4) (N:RW:doublebond ?c_3 ?c_2) (N:RW:doublebond ?c_2 ?c_3) (RW:bond ?c_3 ?c_2) (RW:bond ?c_2 ?c_3) (RW:bond ?c_6 ?c_3) (RW:bond ?c_3 ?c_6) (RW:bond ?c_4 ?c_5) (RW:bond ?c_5 ?c_4) (N:RW:doublebond ?c_6 ?c_5) (N:RW:doublebond ?c_5 ?c_6) (RW:bond ?c_6 ?c_5) (RW:bond ?c_5 ?c_6))
+    enolateattackonalkylhalidesn2: ?o_4:20 ?r1_1:15 ?r2_3:16 ?c_2:22 ?c_5:22 ?c_6:22
+        pre: (and (N:R:= ?c_2 ?c_5) (N:R:= ?c_2 ?c_6) (N:R:= ?c_5 ?c_6) (RW:bond ?r1_1 ?c_2) (N:R:= ?c_6 ?c_5) (RW:bond ?c_6 ?o_4) (RW:doublebond ?c_6 ?c_5) (RW:bond ?r2_3 ?o_4))
+        eff: (and (N:RW:bond ?r1_1 ?c_2) (N:RW:bond ?c_2 ?r1_1) (RW:bond ?r2_3 ?r1_1) (RW:bond ?r1_1 ?r2_3) (RW:bond ?c_2 ?c_5) (RW:bond ?c_5 ?c_2) (N:RW:bond ?r2_3 ?o_4) (N:RW:bond ?o_4 ?r2_3) (N:RW:bond ?c_6 ?o_4) (N:RW:bond ?o_4 ?c_6) (RW:doublebond ?c_6 ?o_4) (RW:doublebond ?o_4 ?c_6) (N:RW:doublebond ?c_6 ?c_5) (N:RW:doublebond ?c_5 ?c_6) (RW:bond ?c_6 ?c_5) (RW:bond ?c_5 ?c_6))
+    enolatecalkylation: ?c_21:22 ?h_8:21 ?h_7:21 ?c_1:22 ?c_4:22 ?li_18:28 ?n_17:19 ?br_7:25 ?br_6:25 ?r1_9:1 ?c_2:22 ?r2_10:1 ?o_3:20 ?c_19:22 ?c_5:22 ?c_20:22 ?c_15:22 ?c_14:22 ?c_16:22 ?c_11:22 ?c_13:22 ?c_12:22
+        pre: (and (N:R:= ?c_4 ?c_1) (N:R:= ?c_4 ?c_21) (N:R:= ?c_1 ?c_21) (N:R:= ?br_6 ?br_7) (N:R:= ?c_1 ?c_2) (N:R:= ?r2_10 ?r1_9) (N:R:= ?h_8 ?h_7) (RW:bond ?h_8 ?c_1) (RW:bond ?h_7 ?c_1) (RW:doublebond ?o_3 ?c_2) (RW:bond ?c_1 ?c_2) (RW:bond ?c_2 ?r2_10) (RW:bond ?r1_9 ?c_1) (N:R:= ?c_4 ?c_20) (N:R:= ?c_5 ?c_20) (N:R:= ?br_7 ?br_6) (N:R:= ?c_21 ?c_19) (N:R:= ?c_19 ?c_20) (N:R:= ?c_4 ?c_5) (N:R:= ?c_21 ?c_4) (N:R:= ?c_21 ?c_20) (N:R:= ?c_21 ?c_5) (N:R:= ?c_4 ?c_19) (N:R:= ?c_5 ?c_19) (RW:bond ?c_21 ?br_7) (RW:bond ?br_6 ?c_4) (RW:bond ?c_4 ?c_5) (RW:bond ?c_5 ?c_19) (RW:bond ?c_20 ?c_19) (RW:bond ?c_20 ?c_21) (N:R:= ?c_15 ?c_14) (N:R:= ?c_15 ?c_13) (N:R:= ?c_16 ?c_12) (N:R:= ?c_12 ?c_13) (N:R:= ?c_15 ?c_11) (N:R:= ?c_11 ?c_13) (N:R:= ?c_15 ?c_16) (N:R:= ?c_14 ?c_11) (N:R:= ?c_14 ?c_13) (N:R:= ?c_14 ?c_12) (N:R:= ?c_15 ?c_12) (N:R:= ?c_16 ?c_13) (N:R:= ?c_16 ?c_11) (N:R:= ?c_14 ?c_16) (N:R:= ?c_12 ?c_11) (RW:bond ?c_15 ?c_14) (RW:bond ?c_16 ?c_15) (RW:bond ?c_15 ?n_17) (RW:bond ?n_17 ?li_18) (RW:bond ?n_17 ?c_12) (RW:bond ?c_12 ?c_11) (RW:bond ?c_13 ?c_12))
+        eff: (and (RW:bond ?c_4 ?c_1) (RW:bond ?c_1 ?c_4) (N:RW:bond ?h_8 ?c_1) (N:RW:bond ?c_1 ?h_8) (RW:bond ?c_21 ?c_1) (RW:bond ?c_1 ?c_21) (N:RW:bond ?h_7 ?c_1) (N:RW:bond ?c_1 ?h_7) (N:RW:bond ?br_6 ?c_4) (N:RW:bond ?c_4 ?br_6) (RW:bond ?br_7 ?li_18) (RW:bond ?li_18 ?br_7) (N:RW:bond ?c_21 ?br_7) (N:RW:bond ?br_7 ?c_21) (RW:bond ?n_17 ?h_8) (RW:bond ?h_8 ?n_17) (N:RW:bond ?n_17 ?li_18) (N:RW:bond ?li_18 ?n_17))
+    enolateformation: ?o_13:20 ?n_7:19 ?c_12:22 ?li_8:28 ?c_9:22 ?h_11:21 ?c_1:22 ?c_3:22 ?c_2:22 ?c_5:22 ?c_4:22 ?c_6:22 ?c_10:22
+        pre: (and (N:R:= ?c_9 ?c_12) (N:R:= ?c_2 ?c_4) (N:R:= ?c_2 ?c_5) (N:R:= ?c_2 ?c_3) (N:R:= ?c_1 ?c_5) (N:R:= ?c_2 ?c_1) (N:R:= ?c_5 ?c_6) (N:R:= ?c_3 ?c_4) (N:R:= ?c_4 ?c_5) (N:R:= ?c_1 ?c_4) (N:R:= ?c_3 ?c_5) (N:R:= ?c_1 ?c_6) (N:R:= ?c_3 ?c_6) (N:R:= ?c_1 ?c_3) (N:R:= ?c_4 ?c_6) (N:R:= ?c_2 ?c_6) (RW:bond ?c_2 ?c_1) (RW:bond ?n_7 ?c_2) (RW:bond ?c_2 ?c_3) (RW:bond ?n_7 ?c_4) (RW:bond ?c_4 ?c_5) (RW:bond ?c_4 ?c_6) (RW:bond ?li_8 ?n_7) (N:R:= ?c_10 ?c_12) (N:R:= ?c_10 ?c_9) (RW:bond ?c_10 ?c_9) (RW:bond ?c_9 ?c_12) (RW:doublebond ?c_9 ?o_13) (RW:bond ?h_11 ?c_12))
+        eff: (and (N:RW:bond ?li_8 ?n_7) (N:RW:bond ?n_7 ?li_8) (RW:bond ?h_11 ?n_7) (RW:bond ?n_7 ?h_11) (RW:bond ?o_13 ?li_8) (RW:bond ?li_8 ?o_13) (N:RW:bond ?c_9 ?c_12) (N:RW:bond ?c_12 ?c_9) (RW:doublebond ?c_9 ?c_12) (RW:doublebond ?c_12 ?c_9) (N:RW:doublebond ?c_9 ?o_13) (N:RW:doublebond ?o_13 ?c_9) (RW:bond ?c_9 ?o_13) (RW:bond ?o_13 ?c_9) (N:RW:bond ?h_11 ?c_12) (N:RW:bond ?c_12 ?h_11))
+    fischeresterification: ?h_7:21 ?c_3:22 ?o_6:20 ?o_1:20 ?h_5:21 ?c_4:22 ?o_2:20 ?c_8:22
+        pre: (and (N:R:= ?o_1 ?o_6) (N:R:= ?c_3 ?c_4) (N:R:= ?o_1 ?o_2) (RW:bond ?h_5 ?o_1) (RW:bond ?c_3 ?o_1) (RW:doublebond ?o_2 ?c_3) (RW:bond ?c_4 ?c_3) (RW:bond ?o_6 ?c_8) (RW:bond ?h_7 ?o_6))
+        eff: (and (N:RW:bond ?c_3 ?o_1) (N:RW:bond ?o_1 ?c_3) (RW:bond ?h_7 ?o_1) (RW:bond ?o_1 ?h_7) (RW:bond ?c_3 ?o_6) (RW:bond ?o_6 ?c_3) (N:RW:bond ?h_7 ?o_6) (N:RW:bond ?o_6 ?h_7))
+    friedelcraftsacylation: ?h_9:21 ?cl_8:23 ?c_10:22 ?c_6:22 ?cl_1:23 ?cl_2:23 ?al_4:6 ?cl_3:23 ?o_7:20 ?c_5:22 ?c_15:22 ?c_14:22 ?c_11:22 ?c_13:22 ?c_12:22
+        pre: (and (N:R:= ?c_6 ?c_10) (N:R:= ?cl_3 ?cl_1) (N:R:= ?cl_3 ?cl_2) (N:R:= ?cl_2 ?cl_1) (RW:bond ?cl_3 ?al_4) (RW:bond ?cl_2 ?al_4) (RW:bond ?cl_1 ?al_4) (N:R:= ?c_6 ?c_5) (RW:doublebond ?c_6 ?o_7) (RW:bond ?c_6 ?cl_8) (RW:bond ?c_5 ?c_6) (N:R:= ?c_10 ?c_12) (N:R:= ?c_10 ?c_11) (N:R:= ?c_11 ?c_12) (N:R:= ?c_11 ?c_13) (N:R:= ?c_13 ?c_14) (N:R:= ?c_13 ?c_15) (N:R:= ?c_12 ?c_15) (N:R:= ?c_12 ?c_14) (N:R:= ?c_10 ?c_15) (N:R:= ?c_14 ?c_15) (N:R:= ?c_12 ?c_13) (N:R:= ?c_10 ?c_14) (N:R:= ?c_11 ?c_14) (N:R:= ?c_10 ?c_13) (N:R:= ?c_11 ?c_15) (R:aromaticbond ?c_10 ?c_11) (R:aromaticbond ?c_11 ?c_12) (R:aromaticbond ?c_12 ?c_13) (R:aromaticbond ?c_13 ?c_14) (R:aromaticbond ?c_14 ?c_15) (R:aromaticbond ?c_10 ?c_15) (RW:bond ?h_9 ?c_10))
+        eff: (and (N:RW:bond ?c_6 ?cl_8) (N:RW:bond ?cl_8 ?c_6) (RW:bond ?c_6 ?c_10) (RW:bond ?c_10 ?c_6) (RW:bond ?h_9 ?cl_8) (RW:bond ?cl_8 ?h_9) (N:RW:bond ?h_9 ?c_10) (N:RW:bond ?c_10 ?h_9))
+    gabrielsynthesis: ?n_7:19 ?n_8:19 ?k_1:30 ?n_6:19 ?c_16:22 ?c_15:22 ?r2_3:15 ?r1_2:1 ?o_5:20 ?o_4:20 ?c_14:22 ?c_11:22 ?c_10:22 ?c_13:22 ?c_12:22 ?c_9:22
+        pre: (and (N:R:= ?c_15 ?c_16) (N:R:= ?n_8 ?n_6) (N:R:= ?n_8 ?n_7) (N:R:= ?n_6 ?n_7) (N:R:= ?o_5 ?o_4) (N:R:= ?c_14 ?c_11) (N:R:= ?c_16 ?c_11) (N:R:= ?c_12 ?c_14) (N:R:= ?c_16 ?c_13) (N:R:= ?c_12 ?c_9) (N:R:= ?c_9 ?c_10) (N:R:= ?c_15 ?c_13) (N:R:= ?c_14 ?c_10) (N:R:= ?c_13 ?c_11) (N:R:= ?c_15 ?c_11) (N:R:= ?c_14 ?c_9) (N:R:= ?c_11 ?c_10) (N:R:= ?c_15 ?c_12) (N:R:= ?c_13 ?c_9) (N:R:= ?c_12 ?c_10) (N:R:= ?c_16 ?c_10) (N:R:= ?c_15 ?c_14) (N:R:= ?c_16 ?c_9) (N:R:= ?c_16 ?c_12) (N:R:= ?c_12 ?c_11) (N:R:= ?c_16 ?c_14) (N:R:= ?c_13 ?c_10) (N:R:= ?c_9 ?c_11) (N:R:= ?c_15 ?c_10) (N:R:= ?c_13 ?c_12) (N:R:= ?c_15 ?c_9) (N:R:= ?c_13 ?c_14) (RW:bond ?n_8 ?k_1) (RW:doublebond ?c_15 ?o_5) (RW:doublebond ?c_16 ?o_4) (RW:bond ?c_16 ?c_13) (RW:bond ?n_8 ?c_16) (RW:bond ?c_15 ?n_8) (RW:bond ?c_12 ?c_15) (R:aromaticbond ?c_14 ?c_9) (R:aromaticbond ?c_13 ?c_14) (R:aromaticbond ?c_12 ?c_13) (R:aromaticbond ?c_11 ?c_12) (R:aromaticbond ?c_10 ?c_11) (R:aromaticbond ?c_9 ?c_10) (RW:bond ?r1_2 ?r2_3) (RW:bond ?n_6 ?n_7))
+        eff: (and (RW:bond ?k_1 ?r2_3) (RW:bond ?r2_3 ?k_1) (N:RW:bond ?n_8 ?k_1) (N:RW:bond ?k_1 ?n_8) (N:RW:bond ?r1_2 ?r2_3) (N:RW:bond ?r2_3 ?r1_2) (RW:bond ?r1_2 ?n_8) (RW:bond ?n_8 ?r1_2) (RW:bond ?n_6 ?c_15) (RW:bond ?c_15 ?n_6) (RW:bond ?c_16 ?n_7) (RW:bond ?n_7 ?c_16) (N:RW:bond ?c_15 ?n_8) (N:RW:bond ?n_8 ?c_15) (N:RW:bond ?n_8 ?c_16) (N:RW:bond ?c_16 ?n_8))
+    grignardadditiontoacidchlorides: ?mg_9:5 ?cl_5:23 ?o_12:20 ?o_4:20 ?mg_3:5 ?c_2:22 ?c_7:22 ?c_8:22 ?h_11:21 ?r1_1:15 ?h_13:21 ?r1_10:15 ?c_6:22
+        pre: (and (N:R:= ?c_2 ?c_7) (N:R:= ?c_2 ?c_8) (N:R:= ?c_7 ?c_8) (N:R:= ?o_4 ?o_12) (N:R:= ?mg_3 ?mg_9) (RW:bond ?mg_3 ?r1_1) (RW:bond ?c_2 ?mg_3) (N:R:= ?h_11 ?h_13) (RW:bond ?h_11 ?o_12) (RW:bond ?o_12 ?h_13) (RW:bond ?c_8 ?mg_9) (RW:bond ?mg_9 ?r1_10) (N:R:= ?c_7 ?c_6) (RW:bond ?cl_5 ?c_7) (RW:bond ?c_6 ?c_7) (RW:doublebond ?o_4 ?c_7))
+        eff: (and (N:RW:bond ?c_2 ?mg_3) (N:RW:bond ?mg_3 ?c_2) (RW:bond ?c_7 ?c_2) (RW:bond ?c_2 ?c_7) (RW:bond ?cl_5 ?mg_3) (RW:bond ?mg_3 ?cl_5) (N:RW:doublebond ?o_4 ?c_7) (N:RW:doublebond ?c_7 ?o_4) (RW:bond ?o_4 ?c_7) (RW:bond ?c_7 ?o_4) (RW:bond ?o_4 ?h_11) (RW:bond ?h_11 ?o_4) (N:RW:bond ?cl_5 ?c_7) (N:RW:bond ?c_7 ?cl_5) (RW:bond ?c_8 ?c_7) (RW:bond ?c_7 ?c_8) (N:RW:bond ?c_8 ?mg_9) (N:RW:bond ?mg_9 ?c_8) (RW:bond ?mg_9 ?o_12) (RW:bond ?o_12 ?mg_9) (N:RW:bond ?h_11 ?o_12) (N:RW:bond ?o_12 ?h_11))
+    grignardreaction: ?c_6:22 ?o_2:20 ?c_5:22 ?mg_4:5 ?h_1:21 ?r1_3:15
+        pre: (and (N:R:= ?c_5 ?c_6) (RW:bond ?c_6 ?mg_4) (RW:bond ?mg_4 ?r1_3) (RW:doublebond ?o_2 ?c_5))
+        eff: (and (RW:bond ?h_1 ?o_2) (RW:bond ?o_2 ?h_1) (N:RW:doublebond ?o_2 ?c_5) (N:RW:doublebond ?c_5 ?o_2) (RW:bond ?o_2 ?c_5) (RW:bond ?c_5 ?o_2) (N:RW:bond ?c_6 ?mg_4) (N:RW:bond ?mg_4 ?c_6) (RW:bond ?c_6 ?c_5) (RW:bond ?c_5 ?c_6))
+    grignardreagentformation: ?mg_3:5 ?c_2:22 ?r2_1:15
+        pre: (RW:bond ?c_2 ?r2_1)
+        eff: (and (N:RW:bond ?c_2 ?r2_1) (N:RW:bond ?r2_1 ?c_2) (RW:bond ?r2_1 ?mg_3) (RW:bond ?mg_3 ?r2_1) (RW:bond ?c_2 ?mg_3) (RW:bond ?mg_3 ?c_2))
+    hydrationofaldehydesandketones: ?o_4:20 ?c_5:22 ?h_2:21 ?o_3:20 ?h_1:21 ?r1_6:14 ?r1_7:14
+        pre: (and (N:R:= ?o_3 ?o_4) (N:R:= ?h_1 ?h_2) (RW:bond ?h_1 ?o_3) (RW:bond ?h_2 ?o_3) (N:R:= ?r1_7 ?r1_6) (RW:doublebond ?o_4 ?c_5) (RW:bond ?c_5 ?r1_7) (RW:bond ?r1_6 ?c_5))
+        eff: (and (N:RW:bond ?h_2 ?o_3) (N:RW:bond ?o_3 ?h_2) (RW:bond ?h_2 ?o_4) (RW:bond ?o_4 ?h_2) (RW:bond ?c_5 ?o_3) (RW:bond ?o_3 ?c_5) (N:RW:doublebond ?o_4 ?c_5) (N:RW:doublebond ?c_5 ?o_4) (RW:bond ?o_4 ?c_5) (RW:bond ?c_5 ?o_4))
+    hydrationofalkenes: ?h_6:21 ?o_1:20 ?h_2:21 ?c_4:22 ?c_5:22 ?h_3:21
+        pre: (and (N:R:= ?c_5 ?c_4) (N:R:= ?h_2 ?h_6) (N:R:= ?h_2 ?h_3) (RW:bond ?h_2 ?o_1) (RW:bond ?h_3 ?o_1) (RW:doublebond ?c_5 ?c_4))
+        eff: (and (N:RW:bond ?h_2 ?o_1) (N:RW:bond ?o_1 ?h_2) (RW:bond ?o_1 ?c_5) (RW:bond ?c_5 ?o_1) (N:RW:doublebond ?c_5 ?c_4) (N:RW:doublebond ?c_4 ?c_5) (RW:bond ?c_5 ?c_4) (RW:bond ?c_4 ?c_5) (RW:bond ?h_6 ?c_4) (RW:bond ?c_4 ?h_6))
+    hydrolysisofnitriles: ?h_6:21 ?o_4:20 ?o_7:20 ?h_5:21 ?n_1:19 ?h_8:21 ?c_2:22 ?c_3:22 ?h_9:21 ?h_10:21
+        pre: (and (N:R:= ?h_5 ?h_6) (N:R:= ?h_5 ?h_8) (N:R:= ?h_6 ?h_8) (N:R:= ?o_4 ?o_7) (N:R:= ?c_2 ?c_3) (RW:bond ?c_2 ?c_3) (RW:triplebond ?c_2 ?n_1) (N:R:= ?h_6 ?h_5) (RW:bond ?h_6 ?o_4) (RW:bond ?h_5 ?o_4) (N:R:= ?h_9 ?h_8) (RW:bond ?h_9 ?o_7) (RW:bond ?h_8 ?o_7))
+        eff: (and (N:RW:triplebond ?c_2 ?n_1) (N:RW:triplebond ?n_1 ?c_2) (RW:bond ?h_5 ?n_1) (RW:bond ?n_1 ?h_5) (RW:bond ?h_6 ?n_1) (RW:bond ?n_1 ?h_6) (RW:bond ?h_8 ?n_1) (RW:bond ?n_1 ?h_8) (RW:doublebond ?o_4 ?c_2) (RW:doublebond ?c_2 ?o_4) (RW:bond ?o_7 ?c_2) (RW:bond ?c_2 ?o_7) (N:RW:bond ?h_5 ?o_4) (N:RW:bond ?o_4 ?h_5) (N:RW:bond ?h_6 ?o_4) (N:RW:bond ?o_4 ?h_6) (N:RW:bond ?h_8 ?o_7) (N:RW:bond ?o_7 ?h_8))
+    hydroxylsubstitutionofdiazoniumionsn1: ?n_5:19 ?c_2:22 ?o_1:20 ?h_3:21 ?n_6:19 ?h_4:21
+        pre: (and (N:R:= ?n_6 ?n_5) (RW:triplebond ?n_6 ?n_5) (RW:bond ?c_2 ?n_5) (N:R:= ?h_4 ?h_3) (RW:bond ?o_1 ?h_4) (RW:bond ?o_1 ?h_3))
+        eff: (and (RW:bond ?o_1 ?c_2) (RW:bond ?c_2 ?o_1) (N:RW:bond ?o_1 ?h_3) (N:RW:bond ?h_3 ?o_1) (N:RW:bond ?c_2 ?n_5) (N:RW:bond ?n_5 ?c_2))
+    imineformation: ?c_5:22 ?o_8:20 ?h_2:21 ?n_1:19 ?h_3:21 ?c_4:22 ?r1_6:18 ?r1_7:18
+        pre: (and (N:R:= ?h_2 ?h_3) (N:R:= ?h_3 ?h_2) (RW:bond ?h_3 ?n_1) (RW:bond ?h_2 ?n_1) (RW:bond ?c_4 ?n_1) (N:R:= ?r1_6 ?r1_7) (RW:bond ?r1_6 ?c_5) (RW:bond ?r1_7 ?c_5) (RW:doublebond ?o_8 ?c_5))
+        eff: (and (N:RW:bond ?h_2 ?n_1) (N:RW:bond ?n_1 ?h_2) (N:RW:bond ?h_3 ?n_1) (N:RW:bond ?n_1 ?h_3) (RW:doublebond ?n_1 ?c_5) (RW:doublebond ?c_5 ?n_1) (RW:bond ?h_2 ?o_8) (RW:bond ?o_8 ?h_2) (RW:bond ?h_3 ?o_8) (RW:bond ?o_8 ?h_3) (N:RW:doublebond ?o_8 ?c_5) (N:RW:doublebond ?c_5 ?o_8))
+    iminereductiontoamine: ?al_10:6 ?h_7:21 ?o_6:20 ?n_1:19 ?c_2:22 ?h_11:21 ?r1_3:18 ?r1_4:18 ?r1_5:18 ?h_8:21 ?h_12:21 ?h_13:21 ?h_14:21 ?li_9:28
+        pre: (and (N:R:= ?h_7 ?h_11) (N:R:= ?r1_4 ?r1_5) (N:R:= ?r1_3 ?r1_5) (N:R:= ?r1_3 ?r1_4) (RW:bond ?n_1 ?r1_3) (RW:doublebond ?c_2 ?n_1) (RW:bond ?c_2 ?r1_4) (RW:bond ?c_2 ?r1_5) (N:R:= ?h_8 ?h_7) (RW:bond ?h_8 ?o_6) (RW:bond ?h_7 ?o_6) (N:R:= ?h_11 ?h_12) (N:R:= ?h_11 ?h_13) (N:R:= ?h_12 ?h_13) (N:R:= ?h_13 ?h_14) (N:R:= ?h_12 ?h_14) (N:R:= ?h_11 ?h_14) (RW:bond ?h_11 ?al_10) (RW:bond ?h_12 ?al_10) (RW:bond ?h_13 ?al_10) (RW:bond ?h_14 ?al_10))
+        eff: (and (N:RW:doublebond ?c_2 ?n_1) (N:RW:doublebond ?n_1 ?c_2) (RW:bond ?c_2 ?n_1) (RW:bond ?n_1 ?c_2) (RW:bond ?h_7 ?n_1) (RW:bond ?n_1 ?h_7) (RW:bond ?h_11 ?c_2) (RW:bond ?c_2 ?h_11) (N:RW:bond ?h_7 ?o_6) (N:RW:bond ?o_6 ?h_7) (RW:bond ?o_6 ?al_10) (RW:bond ?al_10 ?o_6) (N:RW:bond ?h_11 ?al_10) (N:RW:bond ?al_10 ?h_11))
+    intramolecularoxymercurationreduction: ?o_15:20 ?o_3:20 ?o_2:20 ?c_19:22 ?hg_1:10 ?c_20:22 ?o_21:20 ?h_11:21 ?b_10:11 ?o_5:20 ?o_8:20 ?c_4:22 ?c_7:22 ?c_6:22 ?c_9:22 ?h_12:21 ?h_13:21 ?h_14:21 ?c_17:22 ?c_16:22 ?c_18:22
+        pre: (and (N:R:= ?c_20 ?c_19) (N:R:= ?o_2 ?o_3) (N:R:= ?o_2 ?o_15) (N:R:= ?o_2 ?o_21) (N:R:= ?o_3 ?o_15) (N:R:= ?o_3 ?o_21) (N:R:= ?o_15 ?o_21) (N:R:= ?o_2 ?o_5) (N:R:= ?o_2 ?o_8) (N:R:= ?o_5 ?o_8) (N:R:= ?c_4 ?c_9) (N:R:= ?c_6 ?c_7) (N:R:= ?o_3 ?o_5) (N:R:= ?o_3 ?o_8) (N:R:= ?c_6 ?c_9) (N:R:= ?c_4 ?c_6) (N:R:= ?c_4 ?c_7) (N:R:= ?c_7 ?c_9) (RW:bond ?hg_1 ?o_2) (RW:bond ?hg_1 ?o_3) (RW:bond ?o_2 ?c_4) (RW:doublebond ?c_4 ?o_5) (RW:bond ?c_4 ?c_6) (RW:bond ?o_3 ?c_7) (RW:doublebond ?c_7 ?o_8) (RW:bond ?c_7 ?c_9) (N:R:= ?h_11 ?h_12) (N:R:= ?h_11 ?h_13) (N:R:= ?h_12 ?h_13) (N:R:= ?h_13 ?h_14) (N:R:= ?h_12 ?h_14) (N:R:= ?h_11 ?h_14) (RW:bond ?b_10 ?h_11) (RW:bond ?b_10 ?h_12) (RW:bond ?b_10 ?h_13) (RW:bond ?b_10 ?h_14) (N:R:= ?c_17 ?c_19) (N:R:= ?c_16 ?c_17) (N:R:= ?c_16 ?c_19) (N:R:= ?c_16 ?c_18) (N:R:= ?c_17 ?c_20) (N:R:= ?c_19 ?c_20) (N:R:= ?c_18 ?c_19) (N:R:= ?c_17 ?c_18) (N:R:= ?c_18 ?c_20) (N:R:= ?c_16 ?c_20) (RW:bond ?c_16 ?c_17) (RW:bond ?c_17 ?c_18) (RW:bond ?c_18 ?c_19) (RW:doublebond ?c_19 ?c_20) (RW:bond ?c_16 ?o_21))
+        eff: (and (N:RW:bond ?hg_1 ?o_2) (N:RW:bond ?o_2 ?hg_1) (N:RW:bond ?hg_1 ?o_3) (N:RW:bond ?o_3 ?hg_1) (N:RW:bond ?b_10 ?h_11) (N:RW:bond ?h_11 ?b_10) (RW:bond ?b_10 ?o_15) (RW:bond ?o_15 ?b_10) (RW:bond ?c_20 ?h_11) (RW:bond ?h_11 ?c_20) (N:RW:doublebond ?c_19 ?c_20) (N:RW:doublebond ?c_20 ?c_19) (RW:bond ?c_19 ?c_20) (RW:bond ?c_20 ?c_19) (RW:bond ?c_19 ?o_21) (RW:bond ?o_21 ?c_19))
+    lahreductionofanhydrides: ?h_6:21 ?o_4:20 ?o_7:20 ?al_1:6 ?o_3:20 ?o_10:20 ?c_13:22 ?c_12:22 ?li_2:28 ?o_11:20 ?h_9:21 ?h_14:21 ?h_15:21 ?h_16:21 ?h_17:21 ?h_5:21 ?h_8:21
+        pre: (and (N:R:= ?c_12 ?c_13) (N:R:= ?h_14 ?h_15) (N:R:= ?h_14 ?h_16) (N:R:= ?h_14 ?h_17) (N:R:= ?h_14 ?h_6) (N:R:= ?h_14 ?h_9) (N:R:= ?h_15 ?h_16) (N:R:= ?h_15 ?h_17) (N:R:= ?h_15 ?h_6) (N:R:= ?h_15 ?h_9) (N:R:= ?h_16 ?h_17) (N:R:= ?h_16 ?h_6) (N:R:= ?h_16 ?h_9) (N:R:= ?h_17 ?h_6) (N:R:= ?h_17 ?h_9) (N:R:= ?h_6 ?h_9) (N:R:= ?o_3 ?o_4) (N:R:= ?o_3 ?o_7) (N:R:= ?o_3 ?o_11) (N:R:= ?o_3 ?o_10) (N:R:= ?o_4 ?o_7) (N:R:= ?o_4 ?o_11) (N:R:= ?o_4 ?o_10) (N:R:= ?o_7 ?o_11) (N:R:= ?o_7 ?o_10) (N:R:= ?o_11 ?o_10) (N:R:= ?o_10 ?o_3) (N:R:= ?o_11 ?o_3) (N:R:= ?o_10 ?o_11) (RW:doublebond ?o_10 ?c_12) (RW:doublebond ?o_11 ?c_13) (RW:bond ?c_13 ?o_3) (RW:bond ?o_3 ?c_12) (RW:bond ?h_14 ?al_1) (RW:bond ?h_15 ?al_1) (RW:bond ?al_1 ?h_16) (RW:bond ?al_1 ?h_17) (N:R:= ?h_5 ?h_6) (RW:bond ?h_5 ?o_4) (RW:bond ?h_6 ?o_4) (N:R:= ?h_9 ?h_8) (RW:bond ?o_7 ?h_9) (RW:bond ?o_7 ?h_8))
+        eff: (and (RW:bond ?o_3 ?al_1) (RW:bond ?al_1 ?o_3) (RW:bond ?al_1 ?o_4) (RW:bond ?o_4 ?al_1) (RW:bond ?al_1 ?o_7) (RW:bond ?o_7 ?al_1) (N:RW:bond ?h_14 ?al_1) (N:RW:bond ?al_1 ?h_14) (N:RW:bond ?h_15 ?al_1) (N:RW:bond ?al_1 ?h_15) (N:RW:bond ?al_1 ?h_16) (N:RW:bond ?h_16 ?al_1) (N:RW:bond ?al_1 ?h_17) (N:RW:bond ?h_17 ?al_1) (RW:bond ?li_2 ?o_3) (RW:bond ?o_3 ?li_2) (N:RW:bond ?o_3 ?c_12) (N:RW:bond ?c_12 ?o_3) (N:RW:bond ?c_13 ?o_3) (N:RW:bond ?o_3 ?c_13) (N:RW:bond ?h_6 ?o_4) (N:RW:bond ?o_4 ?h_6) (RW:bond ?o_11 ?h_6) (RW:bond ?h_6 ?o_11) (N:RW:bond ?o_7 ?h_9) (N:RW:bond ?h_9 ?o_7) (RW:bond ?h_9 ?o_10) (RW:bond ?o_10 ?h_9) (N:RW:doublebond ?o_10 ?c_12) (N:RW:doublebond ?c_12 ?o_10) (RW:bond ?o_10 ?c_12) (RW:bond ?c_12 ?o_10) (N:RW:doublebond ?o_11 ?c_13) (N:RW:doublebond ?c_13 ?o_11) (RW:bond ?o_11 ?c_13) (RW:bond ?c_13 ?o_11) (RW:bond ?c_12 ?h_14) (RW:bond ?h_14 ?c_12) (RW:bond ?c_12 ?h_15) (RW:bond ?h_15 ?c_12) (RW:bond ?c_13 ?h_16) (RW:bond ?h_16 ?c_13) (RW:bond ?c_13 ?h_17) (RW:bond ?h_17 ?c_13))
+    lahreductionofaldehydesandketones: ?o_11:20 ?h_6:21 ?o_7:20 ?al_2:6 ?c_8:22 ?h_12:21 ?li_1:28 ?h_13:21 ?h_4:21 ?h_5:21 ?h_3:21 ?r1_9:14 ?c_10:22
+        pre: (and (N:R:= ?h_6 ?h_12) (N:R:= ?o_11 ?o_7) (N:R:= ?h_12 ?h_13) (RW:bond ?o_11 ?h_12) (RW:bond ?o_11 ?h_13) (N:R:= ?h_6 ?h_3) (N:R:= ?h_6 ?h_5) (N:R:= ?h_5 ?h_3) (N:R:= ?h_5 ?h_4) (N:R:= ?h_6 ?h_4) (N:R:= ?h_4 ?h_3) (RW:bond ?h_6 ?al_2) (RW:bond ?h_5 ?al_2) (RW:bond ?h_4 ?al_2) (RW:bond ?h_3 ?al_2) (N:R:= ?c_8 ?c_10) (RW:doublebond ?c_8 ?o_7) (RW:bond ?c_10 ?c_8) (RW:bond ?r1_9 ?c_8))
+        eff: (and (RW:bond ?o_11 ?li_1) (RW:bond ?li_1 ?o_11) (N:RW:bond ?h_6 ?al_2) (N:RW:bond ?al_2 ?h_6) (RW:bond ?h_6 ?c_8) (RW:bond ?c_8 ?h_6) (N:RW:doublebond ?c_8 ?o_7) (N:RW:doublebond ?o_7 ?c_8) (RW:bond ?c_8 ?o_7) (RW:bond ?o_7 ?c_8) (RW:bond ?h_12 ?o_7) (RW:bond ?o_7 ?h_12) (N:RW:bond ?o_11 ?h_12) (N:RW:bond ?h_12 ?o_11))
+    lahreductionofnitriles: ?h_6:21 ?o_11:20 ?al_1:6 ?o_14:20 ?n_7:19 ?h_5:21 ?h_10:21 ?c_8:22 ?h_13:21 ?li_2:28 ?h_12:21 ?h_15:21 ?h_4:21 ?h_3:21 ?c_9:22
+        pre: (and (N:R:= ?o_14 ?o_11) (N:R:= ?h_5 ?h_6) (N:R:= ?h_5 ?h_10) (N:R:= ?h_5 ?h_13) (N:R:= ?h_6 ?h_10) (N:R:= ?h_6 ?h_13) (N:R:= ?h_10 ?h_13) (N:R:= ?h_10 ?h_12) (RW:bond ?h_10 ?o_11) (RW:bond ?o_11 ?h_12) (N:R:= ?h_13 ?h_15) (RW:bond ?h_13 ?o_14) (RW:bond ?o_14 ?h_15) (N:R:= ?h_6 ?h_3) (N:R:= ?h_6 ?h_5) (N:R:= ?h_5 ?h_3) (N:R:= ?h_5 ?h_4) (N:R:= ?h_6 ?h_4) (N:R:= ?h_4 ?h_3) (RW:bond ?h_6 ?al_1) (RW:bond ?h_5 ?al_1) (RW:bond ?h_4 ?al_1) (RW:bond ?h_3 ?al_1) (N:R:= ?c_8 ?c_9) (RW:bond ?c_8 ?c_9) (RW:triplebond ?n_7 ?c_8))
+        eff: (and (N:RW:bond ?h_5 ?al_1) (N:RW:bond ?al_1 ?h_5) (N:RW:bond ?h_6 ?al_1) (N:RW:bond ?al_1 ?h_6) (RW:bond ?al_1 ?o_14) (RW:bond ?o_14 ?al_1) (RW:bond ?li_2 ?o_11) (RW:bond ?o_11 ?li_2) (RW:bond ?h_5 ?c_8) (RW:bond ?c_8 ?h_5) (RW:bond ?h_6 ?c_8) (RW:bond ?c_8 ?h_6) (N:RW:triplebond ?n_7 ?c_8) (N:RW:triplebond ?c_8 ?n_7) (RW:bond ?n_7 ?c_8) (RW:bond ?c_8 ?n_7) (RW:bond ?h_10 ?n_7) (RW:bond ?n_7 ?h_10) (RW:bond ?h_13 ?n_7) (RW:bond ?n_7 ?h_13) (N:RW:bond ?h_10 ?o_11) (N:RW:bond ?o_11 ?h_10) (N:RW:bond ?h_13 ?o_14) (N:RW:bond ?o_14 ?h_13))
+    michaeladditiontounsaturatedketones: ?c_3:22 ?h_5:21 ?c_7:22 ?c_6:22 ?c_1:22 ?o_4:20 ?c_2:22 ?c_8:22 ?o_9:20
+        pre: (and (N:R:= ?c_3 ?c_7) (N:R:= ?c_3 ?c_6) (N:R:= ?c_7 ?c_6) (N:R:= ?c_1 ?c_2) (N:R:= ?c_2 ?c_3) (N:R:= ?c_1 ?c_3) (RW:doublebond ?o_4 ?c_1) (RW:bond ?c_2 ?c_1) (RW:bond ?c_1 ?c_3) (RW:bond ?h_5 ?c_3) (N:R:= ?c_7 ?c_8) (N:R:= ?c_6 ?c_8) (RW:doublebond ?c_7 ?c_6) (RW:bond ?c_8 ?c_6) (RW:doublebond ?o_9 ?c_8))
+        eff: (and (N:RW:bond ?h_5 ?c_3) (N:RW:bond ?c_3 ?h_5) (RW:bond ?c_3 ?c_7) (RW:bond ?c_7 ?c_3) (RW:bond ?h_5 ?c_6) (RW:bond ?c_6 ?h_5) (N:RW:doublebond ?c_7 ?c_6) (N:RW:doublebond ?c_6 ?c_7) (RW:bond ?c_7 ?c_6) (RW:bond ?c_6 ?c_7))
+    nitrilesubstitutionofdiazoniumionsn1: ?r1_6:1 ?c_3:22 ?c_5:22 ?n_1:19 ?n_2:19 ?n_4:19
+        pre: (and (N:R:= ?c_3 ?c_5) (N:R:= ?n_1 ?n_2) (RW:bond ?n_1 ?c_3) (RW:triplebond ?n_2 ?n_1) (RW:bond ?r1_6 ?c_5) (RW:triplebond ?c_5 ?n_4))
+        eff: (and (N:RW:bond ?n_1 ?c_3) (N:RW:bond ?c_3 ?n_1) (RW:bond ?c_3 ?c_5) (RW:bond ?c_5 ?c_3) (N:RW:bond ?r1_6 ?c_5) (N:RW:bond ?c_5 ?r1_6))
+    oxidationofalcoholswithpcc: ?o_5:20 ?o_4:20 ?cl_1:23 ?h_7:21 ?o_8:20 ?h_9:21 ?c_3:22 ?cr_2:7 ?c_15:22 ?c_17:22 ?c_16:22 ?c_13:22 ?c_12:22 ?h_11:21 ?n_14:19 ?o_6:20
+        pre: (and (N:R:= ?h_9 ?h_7) (N:R:= ?o_4 ?o_8) (N:R:= ?o_4 ?o_5) (N:R:= ?o_8 ?o_5) (RW:bond ?c_3 ?h_9) (RW:bond ?c_3 ?o_8) (RW:bond ?o_8 ?h_7) (N:R:= ?c_12 ?c_13) (N:R:= ?c_12 ?c_15) (N:R:= ?c_17 ?c_15) (N:R:= ?c_17 ?c_16) (N:R:= ?c_13 ?c_15) (N:R:= ?c_15 ?c_16) (N:R:= ?c_13 ?c_16) (N:R:= ?c_13 ?c_17) (N:R:= ?c_12 ?c_17) (N:R:= ?c_12 ?c_16) (R:aromaticbond ?c_12 ?c_13) (R:aromaticbond ?c_17 ?c_12) (R:aromaticbond ?c_13 ?n_14) (R:aromaticbond ?n_14 ?c_15) (RW:bond ?n_14 ?h_11) (R:aromaticbond ?c_15 ?c_16) (R:aromaticbond ?c_16 ?c_17) (N:R:= ?o_5 ?o_4) (N:R:= ?o_6 ?o_4) (N:R:= ?o_6 ?o_5) (RW:doublebond ?cr_2 ?o_6) (RW:bond ?cr_2 ?cl_1) (RW:bond ?cr_2 ?o_5) (RW:doublebond ?cr_2 ?o_4))
+        eff: (and (N:RW:bond ?cr_2 ?cl_1) (N:RW:bond ?cl_1 ?cr_2) (N:RW:doublebond ?cr_2 ?o_4) (N:RW:doublebond ?o_4 ?cr_2) (RW:bond ?cr_2 ?o_4) (RW:bond ?o_4 ?cr_2) (N:RW:bond ?c_3 ?o_8) (N:RW:bond ?o_8 ?c_3) (RW:doublebond ?c_3 ?o_8) (RW:doublebond ?o_8 ?c_3) (N:RW:bond ?c_3 ?h_9) (N:RW:bond ?h_9 ?c_3) (RW:bond ?o_4 ?h_7) (RW:bond ?h_7 ?o_4) (RW:bond ?o_5 ?h_9) (RW:bond ?h_9 ?o_5) (N:RW:bond ?o_8 ?h_7) (N:RW:bond ?h_7 ?o_8))
+    oxidationofprimaryalcoholwithpotassiumpermanganate: ?o_5:20 ?o_7:20 ?o_3:20 ?o_2:20 ?h_9:21 ?c_8:22 ?h_10:21 ?mn_1:9 ?o_4:20 ?h_11:21
+        pre: (and (N:R:= ?h_9 ?h_10) (N:R:= ?o_2 ?o_3) (N:R:= ?o_2 ?o_5) (N:R:= ?o_2 ?o_7) (N:R:= ?o_3 ?o_5) (N:R:= ?o_3 ?o_7) (N:R:= ?o_5 ?o_7) (N:R:= ?o_3 ?o_4) (N:R:= ?o_2 ?o_4) (N:R:= ?o_4 ?o_5) (RW:doublebond ?o_2 ?mn_1) (RW:doublebond ?o_3 ?mn_1) (RW:doublebond ?o_4 ?mn_1) (RW:bond ?o_5 ?mn_1) (N:R:= ?h_9 ?h_11) (N:R:= ?h_10 ?h_11) (RW:bond ?h_9 ?o_7) (RW:bond ?c_8 ?o_7) (RW:bond ?h_10 ?c_8) (RW:bond ?h_11 ?c_8))
+        eff: (and (N:RW:doublebond ?o_2 ?mn_1) (N:RW:doublebond ?mn_1 ?o_2) (N:RW:doublebond ?o_3 ?mn_1) (N:RW:doublebond ?mn_1 ?o_3) (N:RW:bond ?o_5 ?mn_1) (N:RW:bond ?mn_1 ?o_5) (RW:doublebond ?o_5 ?mn_1) (RW:doublebond ?mn_1 ?o_5) (RW:bond ?o_2 ?c_8) (RW:bond ?c_8 ?o_2) (RW:bond ?h_9 ?o_2) (RW:bond ?o_2 ?h_9) (RW:bond ?o_3 ?h_10) (RW:bond ?h_10 ?o_3) (RW:bond ?o_3 ?h_11) (RW:bond ?h_11 ?o_3) (N:RW:bond ?c_8 ?o_7) (N:RW:bond ?o_7 ?c_8) (RW:doublebond ?c_8 ?o_7) (RW:doublebond ?o_7 ?c_8) (N:RW:bond ?h_9 ?o_7) (N:RW:bond ?o_7 ?h_9) (N:RW:bond ?h_10 ?c_8) (N:RW:bond ?c_8 ?h_10) (N:RW:bond ?h_11 ?c_8) (N:RW:bond ?c_8 ?h_11))
+    paalknorrpyrrolesynthesis: ?o_11:20 ?h_4:21 ?o_12:20 ?h_3:21 ?n_1:19 ?c_7:22 ?c_6:22 ?c_9:22 ?c_8:22 ?h_13:21 ?h_14:21 ?c_2:22 ?c_5:22 ?c_10:22
+        pre: (and (N:R:= ?c_6 ?c_9) (N:R:= ?c_6 ?c_7) (N:R:= ?c_6 ?c_8) (N:R:= ?c_9 ?c_7) (N:R:= ?c_9 ?c_8) (N:R:= ?c_7 ?c_8) (N:R:= ?h_3 ?h_4) (N:R:= ?h_3 ?h_14) (N:R:= ?h_3 ?h_13) (N:R:= ?h_4 ?h_14) (N:R:= ?h_4 ?h_13) (N:R:= ?h_14 ?h_13) (N:R:= ?o_11 ?o_12) (RW:bond ?h_3 ?n_1) (RW:bond ?h_4 ?n_1) (RW:bond ?c_2 ?n_1) (N:R:= ?c_9 ?c_10) (N:R:= ?c_6 ?c_10) (N:R:= ?c_7 ?c_10) (N:R:= ?c_5 ?c_10) (N:R:= ?c_8 ?c_10) (N:R:= ?c_5 ?c_6) (N:R:= ?c_8 ?c_9) (N:R:= ?c_5 ?c_7) (N:R:= ?c_5 ?c_9) (N:R:= ?c_5 ?c_8) (N:R:= ?c_7 ?c_9) (RW:bond ?c_5 ?c_6) (RW:bond ?c_6 ?c_7) (RW:doublebond ?o_11 ?c_6) (RW:bond ?c_7 ?c_8) (RW:bond ?h_14 ?c_7) (RW:bond ?c_8 ?c_9) (RW:bond ?h_13 ?c_8) (RW:bond ?c_9 ?c_10) (RW:doublebond ?o_12 ?c_9))
+        eff: (and (N:RW:bond ?h_3 ?n_1) (N:RW:bond ?n_1 ?h_3) (N:RW:bond ?h_4 ?n_1) (N:RW:bond ?n_1 ?h_4) (RW:bond ?c_6 ?n_1) (RW:bond ?n_1 ?c_6) (RW:bond ?c_9 ?n_1) (RW:bond ?n_1 ?c_9) (RW:bond ?h_3 ?o_11) (RW:bond ?o_11 ?h_3) (RW:bond ?h_4 ?o_11) (RW:bond ?o_11 ?h_4) (N:RW:bond ?c_6 ?c_7) (N:RW:bond ?c_7 ?c_6) (RW:doublebond ?c_6 ?c_7) (RW:doublebond ?c_7 ?c_6) (N:RW:doublebond ?o_11 ?c_6) (N:RW:doublebond ?c_6 ?o_11) (N:RW:bond ?h_14 ?c_7) (N:RW:bond ?c_7 ?h_14) (N:RW:bond ?c_8 ?c_9) (N:RW:bond ?c_9 ?c_8) (RW:doublebond ?c_8 ?c_9) (RW:doublebond ?c_9 ?c_8) (N:RW:bond ?h_13 ?c_8) (N:RW:bond ?c_8 ?h_13) (N:RW:doublebond ?o_12 ?c_9) (N:RW:doublebond ?c_9 ?o_12) (RW:bond ?h_13 ?o_12) (RW:bond ?o_12 ?h_13) (RW:bond ?h_14 ?o_12) (RW:bond ?o_12 ?h_14))
+    pbr3conversionofalcoholstoalkylbromides: ?o_5:20 ?br_4:25 ?c_7:22 ?p_1:2 ?br_3:25 ?br_2:25 ?h_6:21
+        pre: (and (N:R:= ?br_2 ?br_3) (N:R:= ?br_2 ?br_4) (N:R:= ?br_4 ?br_3) (RW:bond ?br_2 ?p_1) (RW:bond ?p_1 ?br_4) (RW:bond ?p_1 ?br_3) (RW:bond ?h_6 ?o_5) (RW:bond ?o_5 ?c_7))
+        eff: (and (N:RW:bond ?p_1 ?br_4) (N:RW:bond ?br_4 ?p_1) (RW:bond ?p_1 ?o_5) (RW:bond ?o_5 ?p_1) (RW:bond ?br_4 ?c_7) (RW:bond ?c_7 ?br_4) (N:RW:bond ?o_5 ?c_7) (N:RW:bond ?c_7 ?o_5))
+    reductiveozonolysis: ?o_1:20 ?o_3:20 ?s_6:4 ?o_2:20 ?c_5:22 ?c_4:22 ?h_9:21 ?c_7:22 ?h_11:21 ?h_10:21 ?c_8:22 ?h_12:21 ?h_13:21 ?h_14:21
+        pre: (and (N:R:= ?c_4 ?c_5) (N:R:= ?o_2 ?o_1) (N:R:= ?o_2 ?o_3) (N:R:= ?o_1 ?o_3) (N:R:= ?h_14 ?h_11) (N:R:= ?h_12 ?h_11) (N:R:= ?h_14 ?h_10) (N:R:= ?h_12 ?h_10) (N:R:= ?h_9 ?h_11) (N:R:= ?h_12 ?h_9) (N:R:= ?h_13 ?h_10) (N:R:= ?h_13 ?h_9) (N:R:= ?h_14 ?h_9) (N:R:= ?h_13 ?h_11) (N:R:= ?h_13 ?h_12) (N:R:= ?h_9 ?h_10) (N:R:= ?c_8 ?c_7) (N:R:= ?h_10 ?h_11) (N:R:= ?h_14 ?h_13) (N:R:= ?h_14 ?h_12) (RW:bond ?s_6 ?c_8) (RW:bond ?s_6 ?c_7) (RW:bond ?h_14 ?c_8) (RW:bond ?h_13 ?c_8) (RW:bond ?h_12 ?c_8) (RW:bond ?c_7 ?h_9) (RW:bond ?c_7 ?h_10) (RW:bond ?c_7 ?h_11) (N:R:= ?o_3 ?o_1) (RW:bond ?o_2 ?o_3) (RW:doublebond ?o_2 ?o_1) (N:R:= ?c_5 ?c_4) (RW:doublebond ?c_5 ?c_4))
+        eff: (and (N:RW:doublebond ?o_2 ?o_1) (N:RW:doublebond ?o_1 ?o_2) (RW:doublebond ?c_4 ?o_1) (RW:doublebond ?o_1 ?c_4) (N:RW:bond ?o_2 ?o_3) (N:RW:bond ?o_3 ?o_2) (RW:doublebond ?c_5 ?o_2) (RW:doublebond ?o_2 ?c_5) (RW:bond ?o_3 ?s_6) (RW:bond ?s_6 ?o_3) (N:RW:doublebond ?c_5 ?c_4) (N:RW:doublebond ?c_4 ?c_5))
+    sandmeyerreaction: ?cl_6:23 ?n_4:19 ?r1_1:15 ?n_3:19 ?c_5:22 ?cu_2:12
+        pre: (and (N:R:= ?n_3 ?n_4) (RW:bond ?r1_1 ?cu_2) (RW:triplebond ?n_3 ?n_4) (RW:bond ?cl_6 ?n_3) (RW:bond ?n_4 ?c_5))
+        eff: (and (N:RW:bond ?r1_1 ?cu_2) (N:RW:bond ?cu_2 ?r1_1) (RW:bond ?r1_1 ?c_5) (RW:bond ?c_5 ?r1_1) (RW:bond ?cl_6 ?cu_2) (RW:bond ?cu_2 ?cl_6) (N:RW:bond ?cl_6 ?n_3) (N:RW:bond ?n_3 ?cl_6) (N:RW:bond ?n_4 ?c_5) (N:RW:bond ?c_5 ?n_4))
+    sodiumdichromateoxidationofprimaryalcohol: ?c_25:22 ?h_21:21 ?h_23:21 ?o_12:20 ?h_27:21 ?h_29:21 ?h_28:21 ?na_10:29 ?na_11:29 ?o_5:20 ?o_7:20 ?c_19:22 ?o_9:20 ?o_8:20 ?c_13:22 ?h_22:21 ?cr_2:7 ?cr_1:7 ?h_16:21 ?o_20:20 ?h_14:21 ?h_15:21 ?o_26:20 ?o_4:20 ?o_6:20 ?o_3:20 ?r0_17:22 ?r0_18:22 ?r0_24:22
+        pre: (and (N:R:= ?c_13 ?c_19) (N:R:= ?c_13 ?c_25) (N:R:= ?c_19 ?c_25) (N:R:= ?h_15 ?h_14) (N:R:= ?h_15 ?h_16) (N:R:= ?h_15 ?h_21) (N:R:= ?h_15 ?h_27) (N:R:= ?h_15 ?h_22) (N:R:= ?h_15 ?h_23) (N:R:= ?h_15 ?h_28) (N:R:= ?h_15 ?h_29) (N:R:= ?h_14 ?h_16) (N:R:= ?h_14 ?h_21) (N:R:= ?h_14 ?h_27) (N:R:= ?h_14 ?h_22) (N:R:= ?h_14 ?h_23) (N:R:= ?h_14 ?h_28) (N:R:= ?h_14 ?h_29) (N:R:= ?h_16 ?h_21) (N:R:= ?h_16 ?h_27) (N:R:= ?h_16 ?h_22) (N:R:= ?h_16 ?h_23) (N:R:= ?h_16 ?h_28) (N:R:= ?h_16 ?h_29) (N:R:= ?h_21 ?h_27) (N:R:= ?h_21 ?h_22) (N:R:= ?h_21 ?h_23) (N:R:= ?h_21 ?h_28) (N:R:= ?h_21 ?h_29) (N:R:= ?h_27 ?h_22) (N:R:= ?h_27 ?h_23) (N:R:= ?h_27 ?h_28) (N:R:= ?h_27 ?h_29) (N:R:= ?h_22 ?h_23) (N:R:= ?h_22 ?h_28) (N:R:= ?h_22 ?h_29) (N:R:= ?h_23 ?h_28) (N:R:= ?h_23 ?h_29) (N:R:= ?h_28 ?h_29) (N:R:= ?cr_1 ?cr_2) (N:R:= ?o_5 ?o_9) (N:R:= ?o_5 ?o_7) (N:R:= ?o_5 ?o_8) (N:R:= ?o_5 ?o_12) (N:R:= ?o_5 ?o_20) (N:R:= ?o_5 ?o_26) (N:R:= ?o_9 ?o_7) (N:R:= ?o_9 ?o_8) (N:R:= ?o_9 ?o_12) (N:R:= ?o_9 ?o_20) (N:R:= ?o_9 ?o_26) (N:R:= ?o_7 ?o_8) (N:R:= ?o_7 ?o_12) (N:R:= ?o_7 ?o_20) (N:R:= ?o_7 ?o_26) (N:R:= ?o_8 ?o_12) (N:R:= ?o_8 ?o_20) (N:R:= ?o_8 ?o_26) (N:R:= ?o_12 ?o_20) (N:R:= ?o_12 ?o_26) (N:R:= ?o_20 ?o_26) (N:R:= ?na_11 ?na_10) (N:R:= ?o_5 ?o_6) (N:R:= ?o_9 ?o_5) (N:R:= ?o_8 ?o_6) (N:R:= ?o_4 ?o_8) (N:R:= ?o_4 ?o_3) (N:R:= ?o_4 ?o_9) (N:R:= ?na_10 ?na_11) (N:R:= ?o_5 ?o_3) (N:R:= ?o_3 ?o_8) (N:R:= ?o_4 ?o_5) (N:R:= ?o_7 ?o_6) (N:R:= ?o_9 ?o_3) (N:R:= ?o_3 ?o_7) (N:R:= ?o_3 ?o_6) (N:R:= ?o_9 ?o_6) (N:R:= ?o_4 ?o_6) (N:R:= ?o_4 ?o_7) (RW:doublebond ?cr_1 ?o_4) (RW:bond ?cr_1 ?o_9) (RW:doublebond ?cr_1 ?o_5) (RW:bond ?cr_1 ?o_3) (RW:bond ?cr_2 ?o_3) (RW:bond ?o_9 ?na_10) (RW:doublebond ?cr_2 ?o_7) (RW:bond ?cr_2 ?o_8) (RW:doublebond ?cr_2 ?o_6) (RW:bond ?o_8 ?na_11) (N:R:= ?h_16 ?h_15) (N:R:= ?h_16 ?h_14) (RW:bond ?c_13 ?r0_17) (RW:bond ?c_13 ?h_16) (RW:bond ?c_13 ?h_15) (RW:bond ?o_12 ?h_14) (RW:bond ?c_13 ?o_12) (N:R:= ?h_22 ?h_21) (RW:bond ?c_19 ?r0_18) (RW:bond ?c_19 ?h_22) (RW:bond ?c_19 ?h_21) (RW:bond ?c_19 ?o_20) (RW:bond ?o_20 ?h_23) (RW:bond ?c_25 ?r0_24) (RW:bond ?c_25 ?h_27) (RW:bond ?c_25 ?h_28) (RW:bond ?c_25 ?o_26) (RW:bond ?o_26 ?h_29))
+        eff: (and (N:RW:doublebond ?cr_1 ?o_5) (N:RW:doublebond ?o_5 ?cr_1) (N:RW:bond ?cr_1 ?o_9) (N:RW:bond ?o_9 ?cr_1) (N:RW:doublebond ?cr_2 ?o_7) (N:RW:doublebond ?o_7 ?cr_2) (N:RW:bond ?cr_2 ?o_8) (N:RW:bond ?o_8 ?cr_2) (RW:bond ?c_13 ?o_5) (RW:bond ?o_5 ?c_13) (RW:bond ?h_15 ?o_5) (RW:bond ?o_5 ?h_15) (RW:bond ?h_14 ?o_7) (RW:bond ?o_7 ?h_14) (RW:bond ?o_7 ?h_16) (RW:bond ?h_16 ?o_7) (N:RW:bond ?o_8 ?na_11) (N:RW:bond ?na_11 ?o_8) (RW:bond ?o_8 ?c_19) (RW:bond ?c_19 ?o_8) (RW:bond ?o_8 ?h_21) (RW:bond ?h_21 ?o_8) (N:RW:bond ?o_9 ?na_10) (N:RW:bond ?na_10 ?o_9) (RW:bond ?o_9 ?c_25) (RW:bond ?c_25 ?o_9) (RW:bond ?o_9 ?h_27) (RW:bond ?h_27 ?o_9) (N:RW:bond ?c_13 ?o_12) (N:RW:bond ?o_12 ?c_13) (RW:doublebond ?c_13 ?o_12) (RW:doublebond ?o_12 ?c_13) (N:RW:bond ?o_12 ?h_14) (N:RW:bond ?h_14 ?o_12) (N:RW:bond ?c_13 ?h_15) (N:RW:bond ?h_15 ?c_13) (N:RW:bond ?c_13 ?h_16) (N:RW:bond ?h_16 ?c_13) (N:RW:bond ?c_19 ?o_20) (N:RW:bond ?o_20 ?c_19) (RW:doublebond ?c_19 ?o_20) (RW:doublebond ?o_20 ?c_19) (N:RW:bond ?c_19 ?h_21) (N:RW:bond ?h_21 ?c_19) (N:RW:bond ?c_19 ?h_22) (N:RW:bond ?h_22 ?c_19) (N:RW:bond ?o_20 ?h_23) (N:RW:bond ?h_23 ?o_20) (N:RW:bond ?c_25 ?o_26) (N:RW:bond ?o_26 ?c_25) (RW:doublebond ?c_25 ?o_26) (RW:doublebond ?o_26 ?c_25) (N:RW:bond ?c_25 ?h_27) (N:RW:bond ?h_27 ?c_25) (N:RW:bond ?c_25 ?h_28) (N:RW:bond ?h_28 ?c_25) (N:RW:bond ?o_26 ?h_29) (N:RW:bond ?h_29 ?o_26))
+    sodiumdichromateoxidationofsecondaryalcohol: ?c_26:22 ?c_20:22 ?h_21:21 ?h_23:21 ?o_12:20 ?h_29:21 ?h_28:21 ?na_10:29 ?na_11:29 ?o_5:20 ?o_7:20 ?o_9:20 ?o_8:20 ?c_13:22 ?cr_2:7 ?cr_1:7 ?h_30:21 ?h_31:21 ?o_22:20 ?h_14:21 ?h_15:21 ?o_27:20 ?r1_25:1 ?r1_24:1 ?r1_18:1 ?r1_19:1 ?r1_16:1 ?r1_17:1 ?o_4:20 ?o_6:20 ?o_3:20
+        pre: (and (N:R:= ?h_14 ?h_15) (N:R:= ?h_14 ?h_21) (N:R:= ?h_14 ?h_23) (N:R:= ?h_14 ?h_30) (N:R:= ?h_14 ?h_31) (N:R:= ?h_14 ?h_28) (N:R:= ?h_14 ?h_29) (N:R:= ?h_15 ?h_21) (N:R:= ?h_15 ?h_23) (N:R:= ?h_15 ?h_30) (N:R:= ?h_15 ?h_31) (N:R:= ?h_15 ?h_28) (N:R:= ?h_15 ?h_29) (N:R:= ?h_21 ?h_23) (N:R:= ?h_21 ?h_30) (N:R:= ?h_21 ?h_31) (N:R:= ?h_21 ?h_28) (N:R:= ?h_21 ?h_29) (N:R:= ?h_23 ?h_30) (N:R:= ?h_23 ?h_31) (N:R:= ?h_23 ?h_28) (N:R:= ?h_23 ?h_29) (N:R:= ?h_30 ?h_31) (N:R:= ?h_30 ?h_28) (N:R:= ?h_30 ?h_29) (N:R:= ?h_31 ?h_28) (N:R:= ?h_31 ?h_29) (N:R:= ?h_28 ?h_29) (N:R:= ?c_13 ?c_20) (N:R:= ?c_13 ?c_26) (N:R:= ?c_20 ?c_26) (N:R:= ?cr_1 ?cr_2) (N:R:= ?o_5 ?o_9) (N:R:= ?o_5 ?o_7) (N:R:= ?o_5 ?o_8) (N:R:= ?o_5 ?o_12) (N:R:= ?o_5 ?o_22) (N:R:= ?o_5 ?o_27) (N:R:= ?o_9 ?o_7) (N:R:= ?o_9 ?o_8) (N:R:= ?o_9 ?o_12) (N:R:= ?o_9 ?o_22) (N:R:= ?o_9 ?o_27) (N:R:= ?o_7 ?o_8) (N:R:= ?o_7 ?o_12) (N:R:= ?o_7 ?o_22) (N:R:= ?o_7 ?o_27) (N:R:= ?o_8 ?o_12) (N:R:= ?o_8 ?o_22) (N:R:= ?o_8 ?o_27) (N:R:= ?o_12 ?o_22) (N:R:= ?o_12 ?o_27) (N:R:= ?o_22 ?o_27) (N:R:= ?na_11 ?na_10) (N:R:= ?r1_24 ?r1_25) (RW:bond ?c_26 ?r1_24) (RW:bond ?c_26 ?r1_25) (RW:bond ?c_26 ?h_28) (RW:bond ?c_26 ?o_27) (RW:bond ?o_27 ?h_29) (N:R:= ?r1_18 ?r1_19) (RW:bond ?r1_18 ?c_20) (RW:bond ?r1_19 ?c_20) (RW:bond ?c_20 ?h_21) (RW:bond ?c_20 ?o_22) (RW:bond ?o_22 ?h_23) (N:R:= ?r1_17 ?r1_16) (RW:bond ?c_13 ?r1_17) (RW:bond ?c_13 ?o_12) (RW:bond ?c_13 ?h_14) (RW:bond ?c_13 ?r1_16) (RW:bond ?o_12 ?h_15) (N:R:= ?o_5 ?o_6) (N:R:= ?o_9 ?o_5) (N:R:= ?o_8 ?o_6) (N:R:= ?o_4 ?o_8) (N:R:= ?o_4 ?o_3) (N:R:= ?o_4 ?o_9) (N:R:= ?na_10 ?na_11) (N:R:= ?o_5 ?o_3) (N:R:= ?o_3 ?o_8) (N:R:= ?o_4 ?o_5) (N:R:= ?o_7 ?o_6) (N:R:= ?o_9 ?o_3) (N:R:= ?o_3 ?o_7) (N:R:= ?o_3 ?o_6) (N:R:= ?o_9 ?o_6) (N:R:= ?o_4 ?o_6) (N:R:= ?o_4 ?o_7) (RW:doublebond ?cr_1 ?o_4) (RW:bond ?cr_1 ?o_9) (RW:doublebond ?cr_1 ?o_5) (RW:bond ?cr_1 ?o_3) (RW:bond ?cr_2 ?o_3) (RW:bond ?o_9 ?na_10) (RW:doublebond ?cr_2 ?o_7) (RW:bond ?cr_2 ?o_8) (RW:doublebond ?cr_2 ?o_6) (RW:bond ?o_8 ?na_11))
+        eff: (and (N:RW:doublebond ?cr_1 ?o_5) (N:RW:doublebond ?o_5 ?cr_1) (N:RW:bond ?cr_1 ?o_9) (N:RW:bond ?o_9 ?cr_1) (N:RW:doublebond ?cr_2 ?o_7) (N:RW:doublebond ?o_7 ?cr_2) (N:RW:bond ?cr_2 ?o_8) (N:RW:bond ?o_8 ?cr_2) (RW:bond ?o_5 ?h_14) (RW:bond ?h_14 ?o_5) (RW:bond ?o_5 ?h_15) (RW:bond ?h_15 ?o_5) (RW:bond ?o_7 ?h_21) (RW:bond ?h_21 ?o_7) (RW:bond ?o_7 ?h_23) (RW:bond ?h_23 ?o_7) (N:RW:bond ?o_8 ?na_11) (N:RW:bond ?na_11 ?o_8) (RW:bond ?h_30 ?o_8) (RW:bond ?o_8 ?h_30) (RW:bond ?o_8 ?h_31) (RW:bond ?h_31 ?o_8) (N:RW:bond ?o_9 ?na_10) (N:RW:bond ?na_10 ?o_9) (RW:bond ?o_9 ?h_28) (RW:bond ?h_28 ?o_9) (RW:bond ?o_9 ?h_29) (RW:bond ?h_29 ?o_9) (N:RW:bond ?c_13 ?o_12) (N:RW:bond ?o_12 ?c_13) (RW:doublebond ?c_13 ?o_12) (RW:doublebond ?o_12 ?c_13) (N:RW:bond ?o_12 ?h_15) (N:RW:bond ?h_15 ?o_12) (N:RW:bond ?c_13 ?h_14) (N:RW:bond ?h_14 ?c_13) (N:RW:bond ?c_20 ?h_21) (N:RW:bond ?h_21 ?c_20) (N:RW:bond ?c_20 ?o_22) (N:RW:bond ?o_22 ?c_20) (RW:doublebond ?c_20 ?o_22) (RW:doublebond ?o_22 ?c_20) (N:RW:bond ?o_22 ?h_23) (N:RW:bond ?h_23 ?o_22) (N:RW:bond ?c_26 ?o_27) (N:RW:bond ?o_27 ?c_26) (RW:doublebond ?c_26 ?o_27) (RW:doublebond ?o_27 ?c_26) (N:RW:bond ?c_26 ?h_28) (N:RW:bond ?h_28 ?c_26) (N:RW:bond ?o_27 ?h_29) (N:RW:bond ?h_29 ?o_27))
+    stetterreaction: ?c_1:22 ?c_8:22 ?c_3:22 ?h_10:21 ?r1_2:22 ?o_6:20 ?c_5:22 ?c_4:22 ?c_9:22 ?o_7:20
+        pre: (and (N:R:= ?c_1 ?c_3) (N:R:= ?c_1 ?c_8) (N:R:= ?c_3 ?c_8) (N:R:= ?c_5 ?c_3) (N:R:= ?c_4 ?r1_2) (N:R:= ?c_5 ?c_1) (N:R:= ?c_4 ?c_1) (N:R:= ?c_1 ?r1_2) (N:R:= ?c_4 ?c_3) (N:R:= ?c_3 ?c_1) (N:R:= ?c_4 ?c_5) (N:R:= ?c_3 ?r1_2) (N:R:= ?c_5 ?r1_2) (RW:doublebond ?o_6 ?c_4) (RW:bond ?c_4 ?c_5) (RW:bond ?c_3 ?c_4) (RW:doublebond ?c_1 ?c_3) (RW:bond ?r1_2 ?c_1) (N:R:= ?c_8 ?c_9) (RW:bond ?h_10 ?c_8) (RW:bond ?c_8 ?c_9) (RW:doublebond ?o_7 ?c_8))
+        eff: (and (N:RW:doublebond ?c_1 ?c_3) (N:RW:doublebond ?c_3 ?c_1) (RW:bond ?c_1 ?c_3) (RW:bond ?c_3 ?c_1) (RW:bond ?c_8 ?c_1) (RW:bond ?c_1 ?c_8) (RW:bond ?h_10 ?c_3) (RW:bond ?c_3 ?h_10) (N:RW:bond ?h_10 ?c_8) (N:RW:bond ?c_8 ?h_10))
+    thionylchlorideconversionofcarboxylicacidstoacidchlorides: ?o_5:20 ?s_4:4 ?cl_2:23 ?h_9:21 ?c_7:22 ?cl_1:23 ?o_3:20 ?c_8:22 ?o_6:20
+        pre: (and (N:R:= ?cl_1 ?cl_2) (RW:bond ?s_4 ?cl_1) (RW:bond ?s_4 ?cl_2) (RW:doublebond ?s_4 ?o_3) (N:R:= ?c_7 ?c_8) (N:R:= ?o_5 ?o_6) (RW:bond ?c_7 ?o_5) (RW:bond ?h_9 ?o_5) (RW:doublebond ?c_7 ?o_6) (RW:bond ?c_8 ?c_7))
+        eff: (and (N:RW:bond ?s_4 ?cl_1) (N:RW:bond ?cl_1 ?s_4) (RW:bond ?c_7 ?cl_1) (RW:bond ?cl_1 ?c_7) (N:RW:bond ?s_4 ?cl_2) (N:RW:bond ?cl_2 ?s_4) (RW:bond ?h_9 ?cl_2) (RW:bond ?cl_2 ?h_9) (RW:doublebond ?o_5 ?s_4) (RW:doublebond ?s_4 ?o_5) (N:RW:bond ?c_7 ?o_5) (N:RW:bond ?o_5 ?c_7) (N:RW:bond ?h_9 ?o_5) (N:RW:bond ?o_5 ?h_9))
+    tosylationofalcohols: ?s_1:4 ?r1_2:15 ?o_6:20 ?h_8:21 ?o_5:20 ?o_4:20 ?c_3:22 ?c_7:22
+        pre: (and (N:R:= ?o_5 ?o_4) (RW:bond ?s_1 ?c_3) (RW:bond ?s_1 ?r1_2) (RW:doublebond ?s_1 ?o_5) (RW:doublebond ?s_1 ?o_4) (RW:bond ?h_8 ?o_6) (RW:bond ?c_7 ?o_6))
+        eff: (and (N:RW:bond ?s_1 ?r1_2) (N:RW:bond ?r1_2 ?s_1) (RW:bond ?o_6 ?s_1) (RW:bond ?s_1 ?o_6) (RW:bond ?h_8 ?r1_2) (RW:bond ?r1_2 ?h_8) (N:RW:bond ?h_8 ?o_6) (N:RW:bond ?o_6 ?h_8))
+    williamsonethersynthesis: ?c_1:22 ?r1_2:15 ?h_5:21 ?o_4:20 ?c_3:22
+        pre: (and (RW:bond ?c_1 ?r1_2) (RW:bond ?c_3 ?o_4) (RW:bond ?h_5 ?o_4))
+        eff: (and (N:RW:bond ?c_1 ?r1_2) (N:RW:bond ?r1_2 ?c_1) (RW:bond ?o_4 ?c_1) (RW:bond ?c_1 ?o_4) (RW:bond ?h_5 ?r1_2) (RW:bond ?r1_2 ?h_5) (N:RW:bond ?h_5 ?o_4) (N:RW:bond ?o_4 ?h_5))
+Init[38]:
+  (bond al1 h15)
+  (bond h15 al1)
+  (bond al1 h16)
+  (bond h16 al1)
+  (bond al1 h17)
+  (bond h17 al1)
+  (bond al1 h18)
+  (bond h18 al1)
+  (bond c1 h1)
+  (bond h1 c1)
+  (bond c1 h2)
+  (bond h2 c1)
+  (bond c1 h3)
+  (bond h3 c1)
+  (bond c1 c2)
+  (bond c2 c1)
+  (bond c17 h24)
+  (bond h24 c17)
+  (bond c17 h26)
+  (bond h26 c17)
+  (doublebond c17 o7)
+  (doublebond o7 c17)
+  (bond c2 h19)
+  (bond h19 c2)
+  (bond c2 h20)
+  (bond h20 c2)
+  (bond c2 c3)
+  (bond c3 c2)
+  (bond c3 h21)
+  (bond h21 c3)
+  (bond c3 h22)
+  (bond h22 c3)
+  (bond c3 n1)
+  (bond n1 c3)
+  (bond h50 n1)
+  (bond n1 h50)
+  (bond h51 n1)
+  (bond n1 h51)
+Init[0]:
+Goal: (and (RW:bond c1 c2) (RW:bond c2 c1) (RW:bond c1 h1) (RW:bond h1 c1) (RW:bond c1 h2) (RW:bond h2 c1) (RW:bond c1 h3) (RW:bond h3 c1) (RW:bond c17 n1) (RW:bond n1 c17) (RW:bond c17 h15) (RW:bond h15 c17) (RW:bond c17 h24) (RW:bond h24 c17) (RW:bond c17 h26) (RW:bond h26 c17) (RW:bond c2 c3) (RW:bond c3 c2) (RW:bond c2 h19) (RW:bond h19 c2) (RW:bond c2 h20) (RW:bond h20 c2) (RW:bond c3 h21) (RW:bond h21 c3) (RW:bond c3 h22) (RW:bond h22 c3) (RW:bond c3 n1) (RW:bond n1 c3) (RW:bond h50 n1) (RW:bond n1 h50))
+Metric: 0
+---- Domain: pddl-data/ipc-2018/seq-opt/organic-synthesis/domain-p03.pddl | pddl-data/ipc-2018/seq-opt/organic-synthesis/p03.pddl END ----

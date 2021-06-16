@@ -1,0 +1,55 @@
+Invariants:
+< {at-segment V0:airplane C1:segment}
+, {facing V0:airplane C1:direction}
+, {is-pushing V0:airplane}
+, {is-pushing C0:airplane}
+, {at-segment V0:airplane V1:segment, not_occupied V1:segment}
+, {at-segment V0:airplane C1:segment, airborne V0:airplane C2:segment}
+, {at-segment V0:airplane C2:segment, airborne V0:airplane V1:segment}
+, {at-segment C1:airplane V0:segment, not_occupied V0:segment}
+, {is-moving V0:airplane, is-pushing V0:airplane}
+, {is-moving V0:airplane, is-pushing C1:airplane}
+, {is-moving C0:airplane, is-pushing C1:airplane}
+, {not_occupied C0:segment, is-moving C1:airplane, is-pushing C2:airplane}
+, {not_occupied C1:segment, is-moving V0:airplane, is-pushing V0:airplane}
+, {airborne V0:airplane V1:segment, is-moving V0:airplane, is-pushing V0:airplane}
+, {airborne V0:airplane C1:segment, is-moving V0:airplane, is-pushing V0:airplane}
+, {airborne V0:airplane V1:segment, is-moving V0:airplane, is-pushing C2:airplane}
+, {airborne V0:airplane C1:segment, is-moving V0:airplane, is-pushing C2:airplane}
+, {airborne V0:airplane V1:segment, is-moving C2:airplane, is-pushing V0:airplane}
+, {airborne V0:airplane C1:segment, is-moving C2:airplane, is-pushing V0:airplane}
+, {airborne V0:airplane V1:segment, is-moving V2:airplane, is-pushing V2:airplane}
+, {airborne V0:airplane V1:segment, is-moving C2:airplane, is-pushing C3:airplane}
+, {airborne V0:airplane C1:segment, is-moving C2:airplane, is-pushing C3:airplane}
+, {airborne V0:airplane C2:segment, is-moving V1:airplane, is-pushing V1:airplane}
+, {airborne C1:airplane V0:segment, is-moving C2:airplane, is-pushing C3:airplane}
+, {airborne C2:airplane V0:segment, is-moving V1:airplane, is-pushing V1:airplane}
+, {is-moving V0:airplane, is-pushing V0:airplane, is-parked V0:airplane V1:segment}
+, {is-moving V0:airplane, is-pushing V0:airplane, is-parked V0:airplane C1:segment}
+, {is-moving V0:airplane, is-pushing V0:airplane, is-parked V1:airplane V2:segment}
+, {is-moving V0:airplane, is-pushing V0:airplane, is-parked V1:airplane C2:segment}
+, {is-moving V0:airplane, is-pushing V0:airplane, is-parked C2:airplane V1:segment}
+, {is-moving V0:airplane, is-pushing C1:airplane, is-parked V0:airplane C2:segment}
+, {is-moving V0:airplane, is-pushing C2:airplane, is-parked V0:airplane V1:segment}
+, {is-moving C1:airplane, is-pushing V0:airplane, is-parked V0:airplane C2:segment}
+, {is-moving C1:airplane, is-pushing C2:airplane, is-parked V0:airplane C3:segment}
+, {is-moving C1:airplane, is-pushing C2:airplane, is-parked C3:airplane V0:segment}
+, {is-moving C2:airplane, is-pushing V0:airplane, is-parked V0:airplane V1:segment}
+, {is-moving C2:airplane, is-pushing C3:airplane, is-parked V0:airplane V1:segment}
+>
+Mutex Groups:
+< {at-segment airplane_cfbeg C0:segment}
+, {facing airplane_cfbeg C0:direction}
+, {at-segment airplane_cfbeg V0:segment, not_occupied V0:segment}
+, {at-segment airplane_cfbeg C0:segment, airborne airplane_cfbeg C1:segment}
+, {at-segment airplane_cfbeg C1:segment, airborne airplane_cfbeg V0:segment}
+, {is-moving airplane_cfbeg, is-pushing airplane_cfbeg}
+, {airborne airplane_cfbeg V0:segment, is-moving airplane_cfbeg, is-pushing airplane_cfbeg}
+, {airborne airplane_cfbeg C0:segment, is-moving airplane_cfbeg, is-pushing airplane_cfbeg}
+, {is-moving airplane_cfbeg, is-pushing airplane_cfbeg, is-parked airplane_cfbeg V0:segment}
+, {is-moving airplane_cfbeg, is-pushing airplane_cfbeg, is-parked airplane_cfbeg C0:segment}
+>
+Goal aware:
+< {is-moving airplane_cfbeg, is-pushing airplane_cfbeg, is-parked airplane_cfbeg seg_pp_0_60}
+, {is-moving airplane_cfbeg, is-pushing airplane_cfbeg, is-parked airplane_cfbeg C0:segment}
+>

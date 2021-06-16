@@ -1,0 +1,51 @@
+Invariants:
+< {waiting V0:order}
+, {waiting C0:order}
+, {stacks-avail C0:count}
+, {NOT-made V0:product}
+, {NOT-made C0:product}
+, {waiting V0:order, started V0:order}
+, {waiting C0:order, started C1:order}
+, {waiting C1:order, started V0:order}
+, {made V0:product, NOT-made V0:product}
+, {made V0:product, NOT-made C1:product}
+, {made C0:product, NOT-made C1:product}
+, {waiting V0:order, started V0:order, shipped V0:order}
+, {waiting C0:order, started C1:order, shipped C2:order}
+, {waiting C1:order, started V0:order, shipped V0:order}
+, {waiting C1:order, started C2:order, shipped V0:order}
+>
+Mutex Groups:
+< {waiting V0:order}
+, {stacks-avail C0:count}
+, {NOT-made V0:product}
+, {waiting V0:order, started V0:order}
+, {made V0:product, NOT-made V0:product}
+, {waiting V0:order, started V0:order, shipped V0:order}
+>
+Goal aware:
+< {waiting o1, started o1, shipped o1}
+, {waiting o2, started o2, shipped o2}
+, {waiting o3, started o3, shipped o3}
+, {waiting o4, started o4, shipped o4}
+, {waiting o5, started o5, shipped o5}
+, {waiting o6, started o6, shipped o6}
+, {waiting o7, started o7, shipped o7}
+, {waiting o8, started o8, shipped o8}
+, {waiting o9, started o9, shipped o9}
+, {waiting o10, started o10, shipped o10}
+, {waiting o11, started o11, shipped o11}
+, {waiting o12, started o12, shipped o12}
+, {waiting o13, started o13, shipped o13}
+, {waiting o14, started o14, shipped o14}
+, {waiting o15, started o15, shipped o15}
+, {waiting o16, started o16, shipped o16}
+, {waiting o17, started o17, shipped o17}
+, {waiting o18, started o18, shipped o18}
+, {waiting o19, started o19, shipped o19}
+, {waiting o20, started o20, shipped o20}
+, {waiting o21, started o21, shipped o21}
+, {waiting o22, started o22, shipped o22}
+, {waiting o23, started o23, shipped o23}
+, {waiting o24, started o24, shipped o24}
+>

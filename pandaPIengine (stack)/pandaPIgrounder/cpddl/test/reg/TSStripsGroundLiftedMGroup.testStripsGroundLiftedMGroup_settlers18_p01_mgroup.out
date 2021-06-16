@@ -1,0 +1,67 @@
+{potential V0:vehicle}
+ (potential v0):fam
+ (potential v1):fam
+ (potential v2):fam
+
+{NOT-connected-by-rail V0:place V1:place}
+ (NOT-connected-by-rail p0 p1):fam
+ (NOT-connected-by-rail p0 p2):fam
+ (NOT-connected-by-rail p1 p0):fam
+ (NOT-connected-by-rail p2 p0):fam
+
+{NOT-has-coal-stack V0:place}
+ (NOT-has-coal-stack p0):fam
+ (NOT-has-coal-stack p1):fam
+ (NOT-has-coal-stack p2):fam
+
+{NOT-has-sawmill V0:place}
+ (NOT-has-sawmill p0):fam
+ (NOT-has-sawmill p1):fam
+ (NOT-has-sawmill p2):fam
+
+{NOT-has-ironworks V0:place}
+ (NOT-has-ironworks p0):fam
+ (NOT-has-ironworks p1):fam
+ (NOT-has-ironworks p2):fam
+
+{connected-by-rail V0:place V1:place, NOT-connected-by-rail V0:place V1:place}:=1
+ (NOT-connected-by-rail p0 p1) (connected-by-rail p0 p1):=1:fam
+ (NOT-connected-by-rail p0 p2) (connected-by-rail p0 p2):=1:fam
+ (NOT-connected-by-rail p1 p0) (connected-by-rail p1 p0):=1:fam
+ (NOT-connected-by-rail p2 p0) (connected-by-rail p2 p0):=1:fam
+
+{has-coal-stack V0:place, NOT-has-coal-stack V0:place}:=1
+ (NOT-has-coal-stack p0) (has-coal-stack p0):=1:fam
+ (NOT-has-coal-stack p1) (has-coal-stack p1):=1:fam
+ (NOT-has-coal-stack p2) (has-coal-stack p2):=1:fam
+
+{has-sawmill V0:place, NOT-has-sawmill V0:place}:=1
+ (NOT-has-sawmill p0) (has-sawmill p0):=1:fam
+ (NOT-has-sawmill p1) (has-sawmill p1):=1:fam:G
+ (NOT-has-sawmill p2) (has-sawmill p2):=1:fam
+
+{has-ironworks V0:place, NOT-has-ironworks V0:place}:=1
+ (NOT-has-ironworks p0) (has-ironworks p0):=1:fam
+ (NOT-has-ironworks p1) (has-ironworks p1):=1:fam
+ (NOT-has-ironworks p2) (has-ironworks p2):=1:fam
+
+{potential V0:vehicle, is-cart V0:vehicle}
+ (is-cart v0) (potential v0):fam
+ (is-cart v1) (potential v1):fam
+ (is-cart v2) (potential v2):fam
+
+{potential V0:vehicle, is-train V0:vehicle}
+ (is-train v0) (potential v0):fam
+ (is-train v1) (potential v1):fam
+ (is-train v2) (potential v2):fam
+
+{potential V0:vehicle, is-at V0:vehicle C1:place}:=1
+ (is-at v0 p0) (is-at v0 p1) (is-at v0 p2) (potential v0):=1:fam
+ (is-at v1 p0) (is-at v1 p1) (is-at v1 p2) (potential v1):=1:fam
+ (is-at v2 p0) (is-at v2 p1) (is-at v2 p2) (potential v2):=1:fam
+
+{potential V0:vehicle, is-cart V0:vehicle, is-train V0:vehicle}:=1
+ (is-cart v0) (is-train v0) (potential v0):=1:fam
+ (is-cart v1) (is-train v1) (potential v1):=1:fam
+ (is-cart v2) (is-train v2) (potential v2):=1:fam
+

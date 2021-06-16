@@ -1,0 +1,37 @@
+Invariants:
+< {NOT-object-done V0:object}
+, {NOT-object-done C0:object}
+, {parked V0:robot, NOT-parked V0:robot}
+, {parked V0:robot, NOT-parked C1:robot}
+, {parked C0:robot, NOT-parked C1:robot}
+, {parked C1:robot, NOT-parked V0:robot}
+, {object-done V0:object, NOT-object-done V0:object}
+, {object-done V0:object, NOT-object-done C1:object}
+, {object-done C0:object, NOT-object-done C1:object}
+, {holding V0:robot C1:object, gripper-empty V0:robot}
+, {holding V0:robot C1:object, gripper-empty C2:robot}
+, {pushing V0:robot V1:cart, not-pushing V0:robot}
+, {pushing V0:robot C1:cart, not-pushing V0:robot}
+, {pushing V0:robot V1:cart, not-pushing C2:robot}
+, {pushing V0:robot C1:cart, not-pushing C2:robot}
+, {pushing V0:robot V1:cart, not-pushed V1:cart}
+, {pushing V0:robot V1:cart, not-pushed C2:cart}
+, {pushing V0:robot C1:cart, not-pushed C2:cart}
+, {pushing C1:robot V0:cart, not-pushing C2:robot}
+, {pushing C1:robot V0:cart, not-pushed V0:cart}
+, {pushing C1:robot V0:cart, not-pushed C2:cart}
+>
+Mutex Groups:
+< {NOT-object-done V0:object}
+, {parked pr2, NOT-parked pr2}
+, {object-done V0:object, NOT-object-done V0:object}
+, {holding pr2 C0:object, gripper-empty pr2}
+, {pushing pr2 cart, not-pushing pr2}
+, {pushing pr2 cart, not-pushed cart}
+>
+Goal aware:
+< {object-done object0, NOT-object-done object0}
+, {object-done object1, NOT-object-done object1}
+, {object-done object2, NOT-object-done object2}
+, {object-done object3, NOT-object-done object3}
+>

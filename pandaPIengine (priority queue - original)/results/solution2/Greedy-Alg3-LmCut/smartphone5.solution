@@ -1,0 +1,67 @@
+Random seed: 42
+Time limit: 2 seconds
+Reading input from results/grounded/smartphone5.sas.
+- State has 23 bits divided into 23 mutex groups.
+- Domain contains 21 actions.
+- Domain contains 26 tasks.
+- Domain contains 12 methods.
+- The initial state contains 8 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 1 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 26
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Greedy Search
+Search Results
+- Search time0 seconds
+- Visited list time 4.5e-05 seconds
+- Visited list inserts 9
+- Visited list pruned 0
+- Visited list contains 9
+- Visited list hash collisions 0
+- Visited list used hash buckets 9
+- Generated 44 search nodes
+  Calculated heuristic for 19 nodes
+  One modifications 22
+  Effectless actions 3
+- including 22 one modification actions
+- including 0 one modification methods
+- and       3 progressions of effectless actions
+- Generated -2147483648 nodes per second
+- Final fringe contains 7 nodes
+- Status: Solved
+- Found solution of length 11
+- Total costs of actions: 8
+==>
+18 press_Home_Default[]
+26 press_Home_EMail[]
+27 select_EMail_EMailAccount_NoOp[account1]
+33 press_EMail_NewEMail[account1]
+38 enter_EMailAddress[Biundo,BiundoEMailAddress]
+39 attachRegularInformationToEMail[email1,dateForMeeting]
+40 press_EMail_NewEMail_Send[Biundo,email1]
+41 extractsInformation_Regular[Biundo,email1,dateForMeeting]
+root 2
+5 press_Home[] -> do_press_Home_Default 18
+4 enterMode_EMail[] -> do_enterMode_EMail_ViaHome 5 26
+2 __top[] -> <<<<<<__top_method;extractsInformation[Biundo,email1,dateForMeeting];do_extractsInformation_Regular;2;0,1,-1>;contact[Biundo,email1];do_mail;1;0,-1,2>;send_EMail[Biundo,email1];do_send_EMail_ViaEMail;1;0,-1,-2,-3,-4,-5,2>;select_EMail_EMailAccount[account1];do_select_EMail_EMailAccount_NoOp;2;0,1,-1,3,4,5,6>;attachInformation[email1,dateForMeeting];do_attachInformation_ToEMail;0;-1,1,2,3,4,5,6>;attachInformationToEMail[email1,dateForMeeting];do_attachInformationToEMail_Regular;0;-1,1,2,3,4,5,6> 39 4 27 33 38 40 41
+<==

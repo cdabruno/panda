@@ -1,0 +1,72 @@
+Random seed: 42
+Time limit: 15 seconds
+Reading input from results/grounded/entertainment1.sas.
+- State has 20 bits divided into 20 mutex groups.
+- Domain contains 24 actions.
+- Domain contains 44 tasks.
+- Domain contains 45 methods.
+- The initial state contains 10 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 44
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(add;distance;correct count)
+Search config:
+ - type: cost optimal
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+Search Results
+- Search time 0.002 seconds
+- Visited list time 8.6e-05 seconds
+- Visited list inserts 27
+- Visited list pruned 3
+- Visited list contains 24
+- Visited list hash collisions 0
+- Generated 67 search nodes
+  Calculated heuristic for 52 nodes
+  One modifications 12
+  Effectless actions 3
+- including 12 one modification actions
+- including 0 one modification methods
+- and       3 progressions of effectless actions
+- Generated 26000 nodes per second
+- Final fringe contains 2 nodes
+- Status: Solved
+- Found solution of length 15
+- Total costs of actions: 5
+==>
+8 plug|instance_1[dvd-1,dvd-1-scart-1,scart-to-cinch-1,scart-to-cinch-1-scart-1]
+52 plug|instance_2[scart-to-cinch-1,scart-to-cinch-1-cinch-3,cinch-cable-2,cinch-cable-2-cinch-1]
+55 plug|instance_3[cinch-cable-2,cinch-cable-2-cinch-2,simple-tv-1,simple-tv-1-cinch-1]
+62 plug|instance_4[scart-to-cinch-1,scart-to-cinch-1-cinch-2,cinch-cable-1,cinch-cable-1-cinch-1]
+65 plug|instance_7[cinch-cable-1,cinch-cable-1-cinch-2,simple-tv-1,simple-tv-1-cinch-2]
+root 0
+64 direct_a_connect[cinch-cable-1,simple-tv-1] -> <m-dconnect-a;plug[cinch-cable-1,cinch-cable-1-cinch-2,simple-tv-1,simple-tv-1-cinch-2];_method_for_multiple_expansions_of_plug|instance_7;0;-1> 65
+61 direct_a_connect[scart-to-cinch-1,cinch-cable-1] -> <m-dconnect-a;plug[scart-to-cinch-1,scart-to-cinch-1-cinch-2,cinch-cable-1,cinch-cable-1-cinch-1];_method_for_multiple_expansions_of_plug|instance_4;0;-1> 62
+57 a_connect[scart-to-cinch-1,simple-tv-1] -> <m-connect-rec-a;a_connect[scart-to-cinch-1,cinch-cable-1];m-connect-direct-a;0;-1,1> 61 64
+54 direct_v_connect[cinch-cable-2,simple-tv-1] -> <m-dconnect-v;plug[cinch-cable-2,cinch-cable-2-cinch-2,simple-tv-1,simple-tv-1-cinch-1];_method_for_multiple_expansions_of_plug|instance_3;0;-1> 55
+51 direct_v_connect[scart-to-cinch-1,cinch-cable-2] -> <m-dconnect-v;plug[scart-to-cinch-1,scart-to-cinch-1-cinch-3,cinch-cable-2,cinch-cable-2-cinch-1];_method_for_multiple_expansions_of_plug|instance_2;0;-1> 52
+49 v_connect[scart-to-cinch-1,simple-tv-1] -> <m-connect-rec-v;v_connect[scart-to-cinch-1,cinch-cable-2];m-connect-direct-v;0;-1,1> 51 54
+13 av_connect[scart-to-cinch-1,simple-tv-1] -> m-connect-split-1 49 57
+7 direct_av_connect[dvd-1,scart-to-cinch-1] -> <m-dconnect-av;plug[dvd-1,dvd-1-scart-1,scart-to-cinch-1,scart-to-cinch-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 8
+1 av_connect[dvd-1,simple-tv-1] -> m-connect-rec-av-1 7 13
+0 __top[] -> __top_method 1
+<==

@@ -1,0 +1,20 @@
+Invariants:
+< {at_tent V0:tent C1:place}
+, {at_person V0:person C1:place}
+, {at_car V0:car C1:place}
+, {walked V0:couple C1:place}
+, {up V0:tent, down V0:tent}
+, {up V0:tent, down C1:tent}
+, {up C0:tent, down C1:tent}
+, {up C1:tent, down V0:tent}
+>
+Mutex Groups:
+< {at_tent tent0 C0:place}
+, {at_person V0:person C1:place}
+, {at_car V0:car C1:place}
+, {walked couple0 C0:place}
+, {up tent0, down tent0}
+>
+Goal aware:
+< {walked couple0 C0:place}
+>

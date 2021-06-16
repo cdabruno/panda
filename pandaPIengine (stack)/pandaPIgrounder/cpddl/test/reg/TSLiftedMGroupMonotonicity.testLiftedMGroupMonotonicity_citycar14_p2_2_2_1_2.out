@@ -1,0 +1,23 @@
+Invariants:
+< {starting V0:car V1:garage}
+, {starting V0:car C1:garage}
+, {starting C1:car V0:garage}
+, {in_place V0:road, NOT-in_place V0:road}
+, {in_place C0:road, NOT-in_place C1:road}
+, {at_car_jun V0:car C1:junction, at_car_road V0:car C2:road, starting V0:car C3:garage}
+, {at_car_jun V0:car C1:junction, at_car_road V0:car C2:road, starting V0:car C3:garage, arrived V0:car C4:junction}
+, {at_car_jun V0:car C2:junction, at_car_road V0:car C3:road, starting V0:car C4:garage, arrived V0:car V1:junction}
+>
+Mutex Groups:
+< {starting V0:car garage0}
+, {in_place V0:road, NOT-in_place V0:road}
+, {at_car_jun V0:car C1:junction, at_car_road V0:car C2:road, starting V0:car garage0}
+, {at_car_jun V0:car C1:junction, at_car_road V0:car C2:road, starting V0:car garage0, arrived V0:car C3:junction}
+, {at_car_jun V0:car C2:junction, at_car_road V0:car C3:road, starting V0:car garage0, arrived V0:car V1:junction}
+>
+Goal aware:
+< {at_car_jun car0 C0:junction, at_car_road car0 C1:road, starting car0 garage0, arrived car0 junction1-1}
+, {at_car_jun car0 C0:junction, at_car_road car0 C1:road, starting car0 garage0, arrived car0 C2:junction}
+, {at_car_jun car1 C0:junction, at_car_road car1 C1:road, starting car1 garage0, arrived car1 junction1-0}
+, {at_car_jun car1 C0:junction, at_car_road car1 C1:road, starting car1 garage0, arrived car1 C2:junction}
+>

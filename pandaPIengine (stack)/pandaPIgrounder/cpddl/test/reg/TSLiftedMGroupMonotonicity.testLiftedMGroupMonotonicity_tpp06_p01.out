@@ -1,0 +1,17 @@
+Invariants:
+< {loaded V0:goods V1:truck C2:level}
+, {ready-to-load V0:goods V1:market C2:level}
+, {stored V0:goods C1:level}
+, {on-sale V0:goods V1:market C2:level}
+, {at V0:truck C1:place}
+>
+Mutex Groups:
+< {loaded goods1 truck1 C0:level}
+, {ready-to-load goods1 market1 C0:level}
+, {stored goods1 C0:level}
+, {on-sale goods1 market1 C0:level}
+, {at truck1 C0:place}
+>
+Goal aware:
+< {stored goods1 C0:level}
+>

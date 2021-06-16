@@ -1,0 +1,70 @@
+{shaker-level shaker1 C0:level}:=1
+ (shaker-level shaker1 l0) (shaker-level shaker1 l1) (shaker-level shaker1 l2):=1:fam
+
+{ontable shaker1, holding C0:hand shaker1}:=1
+ (holding left shaker1) (holding right shaker1) (ontable shaker1):=1:fam
+
+{ontable V0:container, holding C1:hand V0:container}:=1
+ (holding left shot1) (holding right shot1) (ontable shot1):=1:fam
+ (holding left shot2) (holding right shot2) (ontable shot2):=1:fam
+ (holding left shot3) (holding right shot3) (ontable shot3):=1:fam
+ (holding left shot4) (holding right shot4) (ontable shot4):=1:fam
+ (holding left shot5) (holding right shot5) (ontable shot5):=1:fam
+ (holding left shot6) (holding right shot6) (ontable shot6):=1:fam
+ (holding left shot7) (holding right shot7) (ontable shot7):=1:fam
+ (holding left shot8) (holding right shot8) (ontable shot8):=1:fam
+ (holding left shot9) (holding right shot9) (ontable shot9):=1:fam
+
+{holding V0:hand C1:container, handempty V0:hand}:=1
+ (handempty left) (holding left shaker1) (holding left shot1) (holding left shot2) (holding left shot3) (holding left shot4) (holding left shot5) (holding left shot6) (holding left shot7) (holding left shot8) (holding left shot9):=1:fam
+ (handempty right) (holding right shaker1) (holding right shot1) (holding right shot2) (holding right shot3) (holding right shot4) (holding right shot5) (holding right shot6) (holding right shot7) (holding right shot8) (holding right shot9):=1:fam
+
+{empty V0:shot, contains V0:shot C1:beverage}:=1
+ (contains shot1 cocktail8) (contains shot1 ingredient1) (contains shot1 ingredient2) (contains shot1 ingredient3) (empty shot1):=1:fam:G
+ (contains shot2 cocktail3) (contains shot2 ingredient1) (contains shot2 ingredient2) (contains shot2 ingredient3) (empty shot2):=1:fam:G
+ (contains shot3 cocktail1) (contains shot3 ingredient1) (contains shot3 ingredient2) (contains shot3 ingredient3) (empty shot3):=1:fam:G
+ (contains shot4 cocktail5) (contains shot4 ingredient1) (contains shot4 ingredient2) (contains shot4 ingredient3) (empty shot4):=1:fam:G
+ (contains shot5 cocktail4) (contains shot5 ingredient1) (contains shot5 ingredient2) (contains shot5 ingredient3) (empty shot5):=1:fam:G
+ (contains shot6 cocktail6) (contains shot6 ingredient1) (contains shot6 ingredient2) (contains shot6 ingredient3) (empty shot6):=1:fam:G
+ (contains shot7 cocktail2) (contains shot7 ingredient1) (contains shot7 ingredient2) (contains shot7 ingredient3) (empty shot7):=1:fam:G
+ (contains shot8 cocktail7) (contains shot8 ingredient1) (contains shot8 ingredient2) (contains shot8 ingredient3) (empty shot8):=1:fam:G
+ (contains shot9 cocktail1) (contains shot9 cocktail2) (contains shot9 cocktail3) (contains shot9 cocktail4) (contains shot9 cocktail5) (contains shot9 cocktail6) (contains shot9 cocktail7) (contains shot9 cocktail8) (contains shot9 ingredient1) (contains shot9 ingredient2) (contains shot9 ingredient3) (empty shot9):=1:fam
+
+{clean V0:shot, used V0:shot C1:beverage}
+ (clean shot1) (used shot1 ingredient1) (used shot1 ingredient2) (used shot1 ingredient3):fam
+ (clean shot2) (used shot2 ingredient1) (used shot2 ingredient2) (used shot2 ingredient3):fam
+ (clean shot3) (used shot3 ingredient1) (used shot3 ingredient2) (used shot3 ingredient3):fam
+ (clean shot4) (used shot4 ingredient1) (used shot4 ingredient2) (used shot4 ingredient3):fam
+ (clean shot5) (used shot5 ingredient1) (used shot5 ingredient2) (used shot5 ingredient3):fam
+ (clean shot6) (used shot6 ingredient1) (used shot6 ingredient2) (used shot6 ingredient3):fam
+ (clean shot7) (used shot7 ingredient1) (used shot7 ingredient2) (used shot7 ingredient3):fam
+ (clean shot8) (used shot8 ingredient1) (used shot8 ingredient2) (used shot8 ingredient3):fam
+ (clean shot9) (used shot9 ingredient1) (used shot9 ingredient2) (used shot9 ingredient3):fam
+
+{empty shaker1, contains shaker1 C0:cocktail, unshaked shaker1}:=1
+ (contains shaker1 cocktail1) (contains shaker1 cocktail2) (contains shaker1 cocktail3) (contains shaker1 cocktail4) (contains shaker1 cocktail5) (contains shaker1 cocktail6) (contains shaker1 cocktail7) (contains shaker1 cocktail8) (empty shaker1) (unshaked shaker1):=1:fam
+
+{empty shaker1, unshaked shaker1, shaked shaker1}:=1
+ (empty shaker1) (shaked shaker1) (unshaked shaker1):=1:fam
+
+{contains V0:shot V1:cocktail, clean V0:shot, used V0:shot C2:beverage}
+ (clean shot1) (contains shot1 cocktail8) (used shot1 ingredient1) (used shot1 ingredient2) (used shot1 ingredient3):=1:fam:G
+ (clean shot2) (contains shot2 cocktail3) (used shot2 ingredient1) (used shot2 ingredient2) (used shot2 ingredient3):=1:fam:G
+ (clean shot3) (contains shot3 cocktail1) (used shot3 ingredient1) (used shot3 ingredient2) (used shot3 ingredient3):=1:fam:G
+ (clean shot4) (contains shot4 cocktail5) (used shot4 ingredient1) (used shot4 ingredient2) (used shot4 ingredient3):=1:fam:G
+ (clean shot5) (contains shot5 cocktail4) (used shot5 ingredient1) (used shot5 ingredient2) (used shot5 ingredient3):=1:fam:G
+ (clean shot6) (contains shot6 cocktail6) (used shot6 ingredient1) (used shot6 ingredient2) (used shot6 ingredient3):=1:fam:G
+ (clean shot7) (contains shot7 cocktail2) (used shot7 ingredient1) (used shot7 ingredient2) (used shot7 ingredient3):=1:fam:G
+ (clean shot8) (contains shot8 cocktail7) (used shot8 ingredient1) (used shot8 ingredient2) (used shot8 ingredient3):=1:fam:G
+ (clean shot9) (contains shot9 cocktail1) (used shot9 ingredient1) (used shot9 ingredient2) (used shot9 ingredient3):fam
+ (clean shot9) (contains shot9 cocktail2) (used shot9 ingredient1) (used shot9 ingredient2) (used shot9 ingredient3):fam
+ (clean shot9) (contains shot9 cocktail3) (used shot9 ingredient1) (used shot9 ingredient2) (used shot9 ingredient3):fam
+ (clean shot9) (contains shot9 cocktail4) (used shot9 ingredient1) (used shot9 ingredient2) (used shot9 ingredient3):fam
+ (clean shot9) (contains shot9 cocktail5) (used shot9 ingredient1) (used shot9 ingredient2) (used shot9 ingredient3):fam
+ (clean shot9) (contains shot9 cocktail6) (used shot9 ingredient1) (used shot9 ingredient2) (used shot9 ingredient3):fam
+ (clean shot9) (contains shot9 cocktail7) (used shot9 ingredient1) (used shot9 ingredient2) (used shot9 ingredient3):fam
+ (clean shot9) (contains shot9 cocktail8) (used shot9 ingredient1) (used shot9 ingredient2) (used shot9 ingredient3):fam
+
+{contains V0:shot C1:cocktail, clean V0:shot, used V0:shot C2:beverage}
+ (clean shot9) (contains shot9 cocktail1) (contains shot9 cocktail2) (contains shot9 cocktail3) (contains shot9 cocktail4) (contains shot9 cocktail5) (contains shot9 cocktail6) (contains shot9 cocktail7) (contains shot9 cocktail8) (used shot9 ingredient1) (used shot9 ingredient2) (used shot9 ingredient3):fam
+

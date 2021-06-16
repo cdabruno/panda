@@ -1,0 +1,35 @@
+{current_stage C0:stage}:=1
+ (current_stage stage1) (current_stage stage2) (current_stage stage3) (current_stage stage4):=1:fam
+
+{current_worker C0:worker}:=1
+ (current_worker noworker) (current_worker worker1) (current_worker worker2) (current_worker worker3) (current_worker worker4):=1:fam
+
+{max_worker C0:worker}:=1
+ (max_worker worker2) (max_worker worker3) (max_worker worker4):=1:fam
+
+{num_food C0:num}:=1
+ (num_food num0) (num_food num1) (num_food num10) (num_food num11) (num_food num12) (num_food num13) (num_food num14) (num_food num15) (num_food num16) (num_food num2) (num_food num3) (num_food num4) (num_food num5) (num_food num6) (num_food num7) (num_food num8) (num_food num9):=1:fam
+
+{space_rooms V0:room}
+ (space_rooms room3):fam
+ (space_rooms room4):fam
+
+{NOT-plowed_fields}
+ (NOT-plowed_fields):fam
+
+{hold_round C0:round C1:roundparts, current_round C2:round}:=1
+ (current_round round1) (current_round round10) (current_round round2) (current_round round3) (current_round round4) (current_round round5) (current_round round6) (current_round round7) (current_round round8) (current_round round9) (hold_round round1 backhome) (hold_round round1 roundend) (hold_round round10 backhome) (hold_round round10 roundend) (hold_round round2 backhome) (hold_round round2 roundend) (hold_round round3 backhome) (hold_round round3 roundend) (hold_round round4 backhome) (hold_round round4 roundend) (hold_round round5 backhome) (hold_round round5 roundend) (hold_round round6 backhome) (hold_round round6 roundend) (hold_round round7 backhome) (hold_round round7 roundend) (hold_round round8 backhome) (hold_round round8 roundend) (hold_round round9 backhome) (hold_round round9 roundend):=1:fam
+
+{plowed_fields, NOT-plowed_fields}:=1
+ (NOT-plowed_fields) (plowed_fields):=1:fam
+
+{space_rooms V0:room, built_rooms V0:room V1:worker}
+ (built_rooms room3 worker3) (space_rooms room3):fam
+ (built_rooms room3 worker4) (space_rooms room3):fam
+ (built_rooms room4 worker3) (space_rooms room4):fam
+ (built_rooms room4 worker4) (space_rooms room4):fam
+
+{space_rooms V0:room, built_rooms V0:room C1:worker}:=1
+ (built_rooms room3 worker3) (built_rooms room3 worker4) (space_rooms room3):=1:fam
+ (built_rooms room4 worker3) (built_rooms room4 worker4) (space_rooms room4):=1:fam
+

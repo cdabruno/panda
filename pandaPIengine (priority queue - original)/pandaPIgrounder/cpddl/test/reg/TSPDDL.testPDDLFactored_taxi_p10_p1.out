@@ -1,0 +1,99 @@
+---- Domain: pddl-data/codmap-2015/factored/taxi/p10/domain-p1.pddl | pddl-data/codmap-2015/factored/taxi/p10/problem-p1.pddl ----
+Domain: taxi
+Problem: taxi-10
+Require: 1000ff
+Type[5]:
+    [0]: object, parent: -1
+    [1]: location, parent: 0
+    [2]: agent, parent: 0
+    [3]: taxi, parent: 2
+    [4]: passenger, parent: 2
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+    [1]: 7 8 9 10 11 12 13 14
+    [2]: 0 1 2 3 4 5 6
+    [3]: 0 1 2
+    [4]: 3 4 5 6
+Obj[15]:
+    [0]: t1, type: 3, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [1]: t2, type: 3, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [2]: t3, type: 3, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [3]: p1, type: 4, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [4]: p2, type: 4, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [5]: p3, type: 4, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [6]: p4, type: 4, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [7]: g1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: g2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: g3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: c, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: d, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: h1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: h2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: h3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[7]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    directly-connected: 1 1 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    at: 2 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    in: 4 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    empty: 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    free: 1 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    goal-of: 4 1 :: is-private: 1, owner-param: -1, read: 1, write: 0
+Function[0]:
+Action[2]:
+    enter_p1: ?t:3 ?l:1
+        pre: (and (RW:at p1 ?l) (RW:at ?t ?l) (RW:empty ?t))
+        eff: (and (N:RW:empty ?t) (N:RW:at p1 ?l) (RW:in p1 ?t))
+    exit_p1: ?t:3 ?l:1
+        pre: (and (RW:in p1 ?t) (RW:at ?t ?l) (R:goal-of p1 ?l))
+        eff: (and (N:RW:in p1 ?t) (RW:empty ?t) (RW:at p1 ?l))
+Init[46]:
+  S:(directly-connected g1 c)
+  S:(directly-connected g1 d)
+  S:(directly-connected g2 c)
+  S:(directly-connected g2 d)
+  S:(directly-connected g3 c)
+  S:(directly-connected g3 d)
+  S:(directly-connected c g1)
+  S:(directly-connected c g2)
+  S:(directly-connected c g3)
+  S:(directly-connected c d)
+  S:(directly-connected c h1)
+  S:(directly-connected c h2)
+  S:(directly-connected c h3)
+  S:(directly-connected d g1)
+  S:(directly-connected d g2)
+  S:(directly-connected d g3)
+  S:(directly-connected d c)
+  S:(directly-connected d h1)
+  S:(directly-connected d h2)
+  S:(directly-connected d h3)
+  S:(directly-connected h1 c)
+  S:(directly-connected h1 d)
+  S:(directly-connected h1 h2)
+  S:(directly-connected h2 c)
+  S:(directly-connected h2 d)
+  S:(directly-connected h2 h1)
+  S:(directly-connected h2 h3)
+  S:(directly-connected h3 c)
+  S:(directly-connected h3 d)
+  S:(directly-connected h3 h2)
+  (at t1 g1)
+  (at t2 g2)
+  (at t3 g3)
+  (empty t1)
+  (empty t2)
+  (empty t3)
+  (at p1 h1)
+  (at p2 h2)
+  (at p3 h3)
+  (at p4 d)
+  S:(free h1)
+  S:(free h2)
+  S:(free h3)
+  S:(free c)
+  S:(free d)
+  S:(goal-of p1 d)
+Init[0]:
+Goal: (and (RW:at t1 g1) (RW:at t2 g2) (RW:at t3 g3) (RW:at p1 d) (RW:at p2 h1) (RW:at p3 h2) (RW:at p4 h3))
+Metric: 0
+---- Domain: pddl-data/codmap-2015/factored/taxi/p10/domain-p1.pddl | pddl-data/codmap-2015/factored/taxi/p10/problem-p1.pddl END ----

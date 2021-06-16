@@ -1,0 +1,15 @@
+< {capacity V0:vehicle C1:capacity-number}:=1
+, {at-vehicle V0:vehicle C1:location}:=1
+, {count-package V0:package V1:object C2:pnum}:=1
+, {count-package V0:package V1:locatable C2:pnum}:=1
+, {capacity V0:vehicle C4:capacity-number, count-package V1:package V2:target V3:pnum}:=1
+, {capacity V0:vehicle C4:capacity-number, count-package V1:package V2:capacity-number V3:pnum}:=1
+, {capacity V0:vehicle C4:capacity-number, count-package V1:package V2:package-property1 V3:pnum}:=1
+, {capacity V0:vehicle C4:capacity-number, count-package V1:package V2:pnum V3:pnum}:=1
+, {capacity V0:vehicle C4:capacity-number, count-package V1:package V2:package V3:pnum}:=1
+>
+Goal aware:
+< {count-package package-bag1 city-1-loc-3 C0:pnum}:=1
+, {count-package package-bag2 city-1-loc-1 C0:pnum}:=1
+, {count-package package-bag3 city-2-loc-2 C0:pnum}:=1
+>

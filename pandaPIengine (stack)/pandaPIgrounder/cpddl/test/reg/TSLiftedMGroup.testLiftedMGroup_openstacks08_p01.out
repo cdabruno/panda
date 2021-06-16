@@ -1,0 +1,14 @@
+< {waiting V0:order}
+, {stacks-avail C0:count}:=1
+, {NOT-made V0:product}
+, {waiting V0:order, started V0:order}
+, {made V0:product, NOT-made V0:product}:=1
+, {waiting V0:order, started V0:order, shipped V0:order}:=1
+>
+Goal aware:
+< {waiting o1, started o1, shipped o1}:=1
+, {waiting o2, started o2, shipped o2}:=1
+, {waiting o3, started o3, shipped o3}:=1
+, {waiting o4, started o4, shipped o4}:=1
+, {waiting o5, started o5, shipped o5}:=1
+>

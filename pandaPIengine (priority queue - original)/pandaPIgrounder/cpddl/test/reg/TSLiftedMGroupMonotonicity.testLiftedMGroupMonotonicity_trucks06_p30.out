@@ -1,0 +1,11 @@
+Invariants:
+< {time-now C0:time}
+, {at V0:package C2:location, in V0:package V1:truck C3:truckarea}
+, {in C2:package V0:truck V1:truckarea, free V1:truckarea V0:truck}
+, {in C2:package V0:truck V1:truckarea, free V1:truckarea C3:truck}
+>
+Mutex Groups:
+< {time-now C0:time}
+, {at V0:package C1:location, in V0:package truck1 C2:truckarea}
+, {in C1:package truck1 V0:truckarea, free V0:truckarea truck1}
+>

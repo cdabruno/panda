@@ -1,0 +1,76 @@
+---- Domain: pddl-data/various/molgen/domain.pddl | pddl-data/various/molgen/p01.pddl ----
+Domain: molgen-adl
+Problem: rat-insulin-adl
+Require: ff
+Type[1]:
+    [0]: object, parent: -1
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6
+Obj[7]:
+    [0]: linker, type: 0, is-constant: 1, is-private: 0, owner: -1, is-agent: 0
+    [1]: insulin-gene, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: e-coli-exosome, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: junk-exosome, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: e-coli, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: junk, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: antibiotic-1, type: 0, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[15]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    mrna: 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    molecule: 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    connected-cdna-mrna: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    single-strand: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    hair-pin: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    double-strand: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    cleavable: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    cleaved: 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    bacterium: 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    accepts: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    contains: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    antibiotic: 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    pure: 0 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    resists: 0 0 :: is-private: 0, owner-param: -1, read: 1, write: 0
+Function[0]:
+Action[8]:
+    reverse-transcribe: ?x:0
+        pre: (and (R:mrna ?x))
+        eff: (and (RW:connected-cdna-mrna ?x))
+    separate: ?x:0
+        pre: (and (RW:connected-cdna-mrna ?x))
+        eff: (and (RW:single-strand ?x) (N:RW:connected-cdna-mrna ?x))
+    polymerize: ?x:0
+        pre: (and (RW:single-strand ?x))
+        eff: (and (RW:hair-pin ?x) (N:RW:single-strand ?x))
+    digest: ?x:0
+        pre: (and (RW:hair-pin ?x))
+        eff: (and (RW:double-strand ?x) (N:RW:hair-pin ?x))
+    ligate: ?x:0 ?y:0
+        pre: (and (N:R:= ?x ?y))
+        eff: (and (when (and (RW:double-strand ?y) (R:= ?x linker)) (RW:cleavable ?y)) (when (and (RW:cleaved ?x) (RW:cleaved ?y) (N:R:= ?x linker)) (and (RW:contains ?x ?y) (RW:cleavable ?y) (N:RW:cleaved ?x) (N:RW:cleaved ?y))))
+    cleave: ?x:0
+        pre: (and (RW:cleavable ?x))
+        eff: (and (RW:cleaved ?x) (N:RW:cleavable ?x))
+    transform: ?x:0 ?y:0
+        pre: (and (R:bacterium ?y) (N:R:= ?x ?y) (RW:cleavable ?x) (R:accepts ?x ?y))
+        eff: (and (RW:contains ?x ?y) (N:RW:cleavable ?x))
+    screen: ?x:0 ?y:0 ?z:0
+        pre: (and (R:bacterium ?x) (R:antibiotic ?z) (N:R:= ?x ?y) (N:R:= ?y ?z) (N:R:= ?x ?z) (R:resists ?z ?y) (RW:contains ?y ?x))
+        eff: (and (W:pure ?x))
+Init[13]:
+  S:(molecule insulin-gene)
+  S:(molecule e-coli-exosome)
+  S:(molecule junk-exosome)
+  S:(molecule linker)
+  S:(bacterium e-coli)
+  S:(bacterium junk)
+  S:(antibiotic antibiotic-1)
+  S:(mrna insulin-gene)
+  (cleavable e-coli-exosome)
+  (cleavable junk-exosome)
+  S:(accepts junk-exosome junk)
+  S:(accepts e-coli-exosome e-coli)
+  S:(resists antibiotic-1 e-coli-exosome)
+Init[0]:
+Goal: (and (RW:contains insulin-gene e-coli-exosome) (RW:contains e-coli-exosome e-coli) (W:pure e-coli))
+Metric: 0
+---- Domain: pddl-data/various/molgen/domain.pddl | pddl-data/various/molgen/p01.pddl END ----

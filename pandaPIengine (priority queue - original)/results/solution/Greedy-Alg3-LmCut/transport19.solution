@@ -1,0 +1,55 @@
+Random seed: 42
+Time limit: 15 seconds
+Reading input from results/grounded/transport19.sas.
+- State has 76 bits divided into 76 mutex groups.
+- Domain contains 278 actions.
+- Domain contains 402 tasks.
+- Domain contains 401 methods.
+- The initial state contains 15 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 380
+- The problem is cyclic
+- Number of cyclic SCCs: 2
+- Number of cyclic SCCs of size 1: 0
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Greedy Search
+   8s visitime    0.02s generated nodes      5000 nodes/sec     556 cur h   67 mod.depth   42 inserts      1167 duplicates         7 size      1160 hash fail      0
+  17s visitime    0.04s generated nodes     10001 nodes/sec     571 cur h   68 mod.depth   43 inserts      2790 duplicates        16 size      2774 hash fail      0
+Reached time limit - stopping search.
+Search Results
+- Search time 17.51 seconds
+- Visited list time 0.04 seconds
+- Visited list inserts 2790
+- Visited list pruned 16
+- Visited list contains 2774
+- Visited list hash collisions 0
+- Generated 10001 search nodes
+  Calculated heuristic for 9977 nodes
+  One modifications 0
+  Effectless actions 24
+- including 0 one modification actions
+- including 0 one modification methods
+- and       24 progressions of effectless actions
+- Generated 569 nodes per second
+- Final fringe contains 7187 nodes
+- Status: Timeout

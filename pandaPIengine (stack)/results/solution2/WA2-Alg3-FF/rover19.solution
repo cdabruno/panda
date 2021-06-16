@@ -1,0 +1,58 @@
+Random seed: 42
+Time limit: 2 seconds
+Reading input from results/grounded/rover19.sas.
+- State has 353 bits divided into 353 mutex groups.
+- Domain contains 1852 actions.
+- Domain contains 2258 tasks.
+- Domain contains 2589 methods.
+- The initial state contains 153 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 2258
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 0
+No heuristics given, setting default ... 
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (1 ms)
+Heuristic #0 = hhRC2(ff;distance;correct count)
+Search config:
+ - type: cost optimal
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+   1s visitime    0.11s generated nodes     40046 nodes/sec   36705 cur h  194 mod.depth   83 inserts      6201 dups       572 size      5629 hash fail    575 hash buckets   5626
+   2s visitime    0.22s generated nodes     80092 nodes/sec   37566 cur h  202 mod.depth   84 inserts     12413 dups      1157 size     11256 hash fail   1163 hash buckets  11250
+   3s visitime    0.32s generated nodes    115120 nodes/sec   36732 cur h  202 mod.depth   81 inserts     17843 dups      1665 size     16178 hash fail   1672 hash buckets  16171
+Reached time limit - stopping search.
+Search Results
+- Search time3.13 seconds
+- Visited list time 0.32 seconds
+- Visited list inserts 17843
+- Visited list pruned 1665
+- Visited list contains 16178
+- Visited list hash collisions 1672
+- Visited list used hash buckets 16171
+- Generated 115120 search nodes
+  Calculated heuristic for 69173 nodes
+  One modifications 26649
+  Effectless actions 19298
+- including 26649 one modification actions
+- including 0 one modification methods
+- and       19298 progressions of effectless actions
+- Generated 22071 nodes per second
+- Final fringe contains 269 nodes
+- Status: Timeout

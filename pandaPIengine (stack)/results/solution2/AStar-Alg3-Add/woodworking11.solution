@@ -1,0 +1,56 @@
+Random seed: 42
+Time limit: 2 seconds
+Reading input from results/grounded/woodworking11.sas.
+- State has 99 bits divided into 99 mutex groups.
+- Domain contains 739 actions.
+- Domain contains 1181 tasks.
+- Domain contains 2001 methods.
+- The initial state contains 10 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 16 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 1181
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(add;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- A* Search
+- Distance G is "modification depth"
+   1s visitime    0.22s generated nodes    135071 nodes/sec  130000 cur h 2147483647 mod.depth   29 inserts     61698 dups     25419 size     36279 hash fail  25457 hash buckets  36241
+   2s visitime    0.46s generated nodes    210099 nodes/sec   99999 cur h 2147483647 mod.depth   32 inserts    101686 dups     43212 size     58474 hash fail  43309 hash buckets  58377
+Reached time limit - stopping search.
+Search Results
+- Search time3.02 seconds
+- Visited list time 0.65 seconds
+- Visited list inserts 143680
+- Visited list pruned 65556
+- Visited list contains 78124
+- Visited list hash collisions 65730
+- Visited list used hash buckets 77950
+- Generated 285129 search nodes
+  Calculated heuristic for 209236 nodes
+  One modifications 75893
+  Effectless actions 0
+- including 75893 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 69329 nodes per second
+- Final fringe contains 277 nodes
+- Status: Timeout

@@ -1,0 +1,29 @@
+{at C0:rover C1:waypoint}:=1
+ (at rover0 waypoint0) (at rover0 waypoint1) (at rover0 waypoint2) (at rover0 waypoint3) (at rover0 waypoint4):=1:fam
+
+{at_soil_sample V0:waypoint}
+ (at_soil_sample waypoint1):fam
+ (at_soil_sample waypoint2):fam
+ (at_soil_sample waypoint3):fam
+ (at_soil_sample waypoint4):fam
+
+{at_rock_sample V0:waypoint}
+ (at_rock_sample waypoint3):fam
+ (at_rock_sample waypoint4):fam
+
+{energy C0:rover C1:energylevel}:=1
+ (energy rover0 level0) (energy rover0 level1) (energy rover0 level10) (energy rover0 level11) (energy rover0 level12) (energy rover0 level13) (energy rover0 level14) (energy rover0 level15) (energy rover0 level16) (energy rover0 level17) (energy rover0 level18) (energy rover0 level19) (energy rover0 level2) (energy rover0 level21) (energy rover0 level22) (energy rover0 level25) (energy rover0 level26) (energy rover0 level29) (energy rover0 level3) (energy rover0 level33) (energy rover0 level4) (energy rover0 level5) (energy rover0 level6) (energy rover0 level7) (energy rover0 level8) (energy rover0 level9):=1:fam
+
+{empty V0:store, full V0:store}:=1
+ (empty rover0store) (full rover0store):=1:fam
+
+{have_rock_analysis C1:rover V0:waypoint, at_rock_sample V0:waypoint}:=1
+ (at_rock_sample waypoint3) (have_rock_analysis rover0 waypoint3):=1:fam
+ (at_rock_sample waypoint4) (have_rock_analysis rover0 waypoint4):=1:fam
+
+{have_soil_analysis C1:rover V0:waypoint, at_soil_sample V0:waypoint}:=1
+ (at_soil_sample waypoint1) (have_soil_analysis rover0 waypoint1):=1:fam
+ (at_soil_sample waypoint2) (have_soil_analysis rover0 waypoint2):=1:fam
+ (at_soil_sample waypoint3) (have_soil_analysis rover0 waypoint3):=1:fam
+ (at_soil_sample waypoint4) (have_soil_analysis rover0 waypoint4):=1:fam
+

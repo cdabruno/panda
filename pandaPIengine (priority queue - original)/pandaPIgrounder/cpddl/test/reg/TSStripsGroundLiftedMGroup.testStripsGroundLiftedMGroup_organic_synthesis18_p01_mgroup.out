@@ -1,0 +1,19 @@
+{bond o066 V0:hydrogen}
+ (bond o066 h061):fam
+
+{bond V0:hydrogen o066}
+ (bond h061 o066):fam
+
+{bond C1:chemical_atom V0:hydrogen}:=1
+ (bond c032 h061) (bond o066 h061):=1:fam:G
+
+{doublebond V0:chemical_atom C1:chemical_atom}
+ (doublebond c032 c033):fam
+ (doublebond c033 c032):fam
+
+{bond o066 V0:chemical_atom, doublebond V0:chemical_atom C1:chemical_atom}
+ (bond o066 c033) (doublebond c033 c032):=1:fam:G
+
+{bond V0:chemical_atom o066, doublebond V0:chemical_atom C1:chemical_atom}
+ (bond c033 o066) (doublebond c033 c032):=1:fam:G
+

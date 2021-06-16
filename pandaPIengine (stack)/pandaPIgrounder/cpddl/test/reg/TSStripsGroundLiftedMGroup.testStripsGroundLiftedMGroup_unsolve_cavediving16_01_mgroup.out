@@ -1,0 +1,23 @@
+{in-storage C0:tank}:=1
+ (in-storage dummy) (in-storage t0) (in-storage t1) (in-storage t2) (in-storage t3) (in-storage t4) (in-storage t5):=1:fam
+
+{available V0:diver}
+ (available d0):fam
+ (available d1):fam
+
+{capacity V0:diver C1:quantity}:=1
+ (capacity d0 four) (capacity d0 one) (capacity d0 three) (capacity d0 two) (capacity d0 zero):=1:fam
+ (capacity d1 four) (capacity d1 one) (capacity d1 three) (capacity d1 two) (capacity d1 zero):=1:fam
+
+{available V0:diver, at-surface V0:diver}
+ (at-surface d0) (available d0):fam
+ (at-surface d1) (available d1):fam
+
+{at-diver V0:diver C1:location, available V0:diver, at-surface V0:diver}
+ (at-diver d0 l0) (at-diver d0 l1) (at-diver d0 l2) (at-surface d0) (available d0):fam
+ (at-diver d1 l0) (at-diver d1 l1) (at-diver d1 l2) (at-surface d1) (available d1):fam
+
+{at-diver V0:diver C1:location, available V0:diver, at-surface V0:diver, decompressing V0:diver}:=1
+ (at-diver d0 l0) (at-diver d0 l1) (at-diver d0 l2) (at-surface d0) (available d0) (decompressing d0):=1:fam:G
+ (at-diver d1 l0) (at-diver d1 l1) (at-diver d1 l2) (at-surface d1) (available d1) (decompressing d1):=1:fam:G
+

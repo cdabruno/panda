@@ -1,0 +1,69 @@
+Random seed: 42
+Time limit: 15 seconds
+Reading input from results/grounded/transport3.sas.
+- State has 15 bits divided into 15 mutex groups.
+- Domain contains 28 actions.
+- Domain contains 44 tasks.
+- Domain contains 42 methods.
+- The initial state contains 5 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 42
+- The problem is cyclic
+- Number of cyclic SCCs: 1
+- Number of cyclic SCCs of size 1: 0
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: cost optimal
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+   1s visitime    0.18s generated nodes    290194 nodes/sec  286469 cur h 2147483647 mod.depth   11 inserts     42282 duplicates      1481 size     40801 hash fail      0
+   2s visitime    0.38s generated nodes    565426 nodes/sec  278672 cur h 2147483647 mod.depth   11 inserts     81774 duplicates      3283 size     78491 hash fail      0
+   3s visitime    0.58s generated nodes    825565 nodes/sec  271925 cur h 2147483647 mod.depth   12 inserts    119198 duplicates      5403 size    113795 hash fail      0
+   4s visitime    0.78s generated nodes   1075786 nodes/sec  266020 cur h 2147483647 mod.depth   12 inserts    154445 duplicates      6999 size    147446 hash fail      0
+   5s visitime    0.99s generated nodes   1325982 nodes/sec  262000 cur h 2147483647 mod.depth   12 inserts    190001 duplicates      8748 size    181253 hash fail      0
+   6s visitime    1.20s generated nodes   1556185 nodes/sec  256669 cur h 2147483647 mod.depth   12 inserts    222659 duplicates     10606 size    212053 hash fail      0
+   7s visitime    1.42s generated nodes   1796384 nodes/sec  254013 cur h 2147483647 mod.depth   12 inserts    256869 duplicates     12625 size    244244 hash fail      0
+   8s visitime    1.63s generated nodes   1976568 nodes/sec  244836 cur h 2147483647 mod.depth   12 inserts    282392 duplicates     14207 size    268185 hash fail      0
+   9s visitime    1.83s generated nodes   2146711 nodes/sec  236135 cur h 2147483647 mod.depth   12 inserts    306697 duplicates     15844 size    290853 hash fail      0
+  10s visitime    2.04s generated nodes   2331833 nodes/sec  230874 cur h 2147483647 mod.depth   12 inserts    332963 duplicates     17657 size    315306 hash fail      0
+  11s visitime    2.25s generated nodes   2561997 nodes/sec  230582 cur h 2147483647 mod.depth   13 inserts    365799 duplicates     19894 size    345905 hash fail      0
+  12s visitime    2.45s generated nodes   2762161 nodes/sec  227638 cur h 2147483647 mod.depth   13 inserts    393812 duplicates     21136 size    372676 hash fail      0
+  13s visitime    2.65s generated nodes   2957332 nodes/sec  225063 cur h 2147483647 mod.depth   13 inserts    421054 duplicates     22395 size    398659 hash fail      0
+  14s visitime    2.86s generated nodes   3167532 nodes/sec  224012 cur h 2147483647 mod.depth   13 inserts    450603 duplicates     23877 size    426726 hash fail      0
+  15s visitime    3.07s generated nodes   3402750 nodes/sec  224692 cur h 2147483647 mod.depth   13 inserts    483534 duplicates     25537 size    457997 hash fail      0
+Reached time limit - stopping search.
+Search Results
+- Search time 16.00 seconds
+- Visited list time 3.26 seconds
+- Visited list inserts 506649
+- Visited list pruned 26775
+- Visited list contains 479874
+- Visited list hash collisions 0
+- Generated 3567883 search nodes
+  Calculated heuristic for 2496284 nodes
+  One modifications 837466
+  Effectless actions 234133
+- including 837466 one modification actions
+- including 0 one modification methods
+- and       234133 progressions of effectless actions
+- Generated 155978 nodes per second
+- Final fringe contains 1533376 nodes
+- Status: Timeout

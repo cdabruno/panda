@@ -1,0 +1,28 @@
+Invariants:
+< {first C1:batch-atom V0:pipe}
+, {normal C0:pipe, not-occupied C1:tank-slot}
+, {occupied V0:tank-slot, not-occupied V0:tank-slot}
+, {first V0:batch-atom C1:pipe, follow V0:batch-atom C2:batch-atom, on V0:batch-atom C3:area}
+, {normal V0:pipe, push-updating V0:pipe, pop-updating V0:pipe}
+, {normal C0:pipe, push-updating C1:pipe, pop-updating C2:pipe}
+, {push-updating C0:pipe, pop-updating C1:pipe, occupied C2:tank-slot}
+>
+Mutex Groups:
+< {first C1:batch-atom V0:pipe}
+, {occupied V0:tank-slot, not-occupied V0:tank-slot}
+, {first V0:batch-atom C1:pipe, follow V0:batch-atom C2:batch-atom, on V0:batch-atom C3:area}
+, {normal V0:pipe, push-updating V0:pipe, pop-updating V0:pipe}
+>
+Goal aware:
+< {first b10 C0:pipe, follow b10 C1:batch-atom, on b10 C2:area}
+, {first b4 C0:pipe, follow b4 C1:batch-atom, on b4 C2:area}
+, {first b6 C0:pipe, follow b6 C1:batch-atom, on b6 C2:area}
+, {first b13 C0:pipe, follow b13 C1:batch-atom, on b13 C2:area}
+, {first b2 C0:pipe, follow b2 C1:batch-atom, on b2 C2:area}
+, {first b11 C0:pipe, follow b11 C1:batch-atom, on b11 C2:area}
+, {first b18 C0:pipe, follow b18 C1:batch-atom, on b18 C2:area}
+, {first b12 C0:pipe, follow b12 C1:batch-atom, on b12 C2:area}
+, {normal s12, push-updating s12, pop-updating s12}
+, {normal s13, push-updating s13, pop-updating s13}
+, {normal s34, push-updating s34, pop-updating s34}
+>

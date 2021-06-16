@@ -1,0 +1,147 @@
+---- Domain: pddl-data/ipc-2014/seq-opt/cavediving/domain.pddl | pddl-data/ipc-2014/seq-opt/cavediving/testing01.pddl ----
+Domain: cave-diving-adl
+Problem: cave-diving-adl-p01
+Require: 200ff
+Type[5]:
+    [0]: object, parent: -1
+    [1]: location, parent: 0
+    [2]: diver, parent: 0
+    [3]: tank, parent: 0
+    [4]: quantity, parent: 0
+Obj-by-Type:
+    [0]: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+    [1]: 0 1 2 3 4 5
+    [2]: 6 7 8 9
+    [3]: 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+    [4]: 26 27 28 29 30
+Obj[31]:
+    [0]: l0, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [1]: l1, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [2]: l2, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [3]: l3, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [4]: l4, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [5]: l5, type: 1, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [6]: d0, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [7]: d1, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [8]: d2, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [9]: d3, type: 2, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [10]: t0, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [11]: t1, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [12]: t2, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [13]: t3, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [14]: t4, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [15]: t5, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [16]: t6, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [17]: t7, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [18]: t8, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [19]: t9, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [20]: t10, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [21]: t11, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [22]: t12, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [23]: t13, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [24]: t14, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [25]: dummy, type: 3, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [26]: zero, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [27]: one, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [28]: two, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [29]: three, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+    [30]: four, type: 4, is-constant: 0, is-private: 0, owner: -1, is-agent: 0
+Predicate[17]:
+    =: 0 0 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    at-tank: 3 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    in-storage: 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    full: 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    next-tank: 3 3 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    at-diver: 2 1 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    available: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    at-surface: 2 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    decompressing: 2 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    precludes: 2 2 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    cave-entrance: 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    connected: 1 1 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    next-quantity: 4 4 :: is-private: 0, owner-param: -1, read: 1, write: 0
+    holding: 2 3 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    capacity: 2 4 :: is-private: 0, owner-param: -1, read: 1, write: 1
+    have-photo: 1 :: is-private: 0, owner-param: -1, read: 0, write: 1
+    in-water: :: is-private: 0, owner-param: -1, read: 1, write: 1
+Function[3]:
+    hiring-cost: 2 :: is-private: 0, owner-param: -1, read: 0, write: 0
+    other-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+    total-cost: :: is-private: 0, owner-param: -1, read: 0, write: 0
+Action[8]:
+    hire-diver: ?d1:2
+        pre: (and (RW:available ?d1) (N:RW:in-water))
+        eff: (and (RW:at-surface ?d1) (N:RW:available ?d1) (forall (?d2:2 I[0]:?d1:2) (when (R:precludes ?d1 ?d2) (N:RW:available ?d2))) (RW:in-water) (increase (total-cost) (hiring-cost ?d1)))
+    prepare-tank: ?d:2 ?t1:3 ?t2:3 ?q1:4 ?q2:4
+        pre: (and (RW:at-surface ?d) (RW:in-storage ?t1) (R:next-quantity ?q1 ?q2) (RW:capacity ?d ?q2) (R:next-tank ?t1 ?t2))
+        eff: (and (N:RW:in-storage ?t1) (N:RW:capacity ?d ?q2) (RW:in-storage ?t2) (RW:full ?t1) (RW:capacity ?d ?q1) (RW:holding ?d ?t1) (increase (total-cost) (other-cost)))
+    enter-water: ?d:2 ?l:1
+        pre: (and (RW:at-surface ?d) (R:cave-entrance ?l))
+        eff: (and (N:RW:at-surface ?d) (RW:at-diver ?d ?l) (increase (total-cost) (other-cost)))
+    pickup-tank: ?d:2 ?t:3 ?l:1 ?q1:4 ?q2:4
+        pre: (and (RW:at-diver ?d ?l) (RW:at-tank ?t ?l) (R:next-quantity ?q1 ?q2) (RW:capacity ?d ?q2))
+        eff: (and (N:RW:at-tank ?t ?l) (N:RW:capacity ?d ?q2) (RW:holding ?d ?t) (RW:capacity ?d ?q1) (increase (total-cost) (other-cost)))
+    drop-tank: ?d:2 ?t:3 ?l:1 ?q1:4 ?q2:4
+        pre: (and (RW:at-diver ?d ?l) (RW:holding ?d ?t) (R:next-quantity ?q1 ?q2) (RW:capacity ?d ?q1))
+        eff: (and (N:RW:holding ?d ?t) (N:RW:capacity ?d ?q1) (RW:at-tank ?t ?l) (RW:capacity ?d ?q2) (increase (total-cost) (other-cost)))
+    swim: ?d:2 ?t:3 ?l1:1 ?l2:1
+        pre: (and (RW:at-diver ?d ?l1) (RW:holding ?d ?t) (RW:full ?t) (R:connected ?l1 ?l2))
+        eff: (and (N:RW:at-diver ?d ?l1) (N:RW:full ?t) (RW:at-diver ?d ?l2) (increase (total-cost) (other-cost)))
+    photograph: ?d:2 ?l:1 ?t:3
+        pre: (and (RW:at-diver ?d ?l) (RW:holding ?d ?t) (RW:full ?t))
+        eff: (and (N:RW:full ?t) (W:have-photo ?l) (increase (total-cost) (other-cost)))
+    decompress: ?d:2 ?l:1
+        pre: (and (RW:at-diver ?d ?l) (R:cave-entrance ?l))
+        eff: (and (N:RW:at-diver ?d ?l) (W:decompressing ?d) (N:RW:in-water) (increase (total-cost) (other-cost)))
+Init[41]:
+  (available d0)
+  (available d1)
+  (available d2)
+  (available d3)
+  (capacity d0 four)
+  (capacity d1 four)
+  (capacity d2 four)
+  (capacity d3 four)
+  (in-storage t0)
+  S:(next-tank t0 t1)
+  S:(next-tank t1 t2)
+  S:(next-tank t2 t3)
+  S:(next-tank t3 t4)
+  S:(next-tank t4 t5)
+  S:(next-tank t5 t6)
+  S:(next-tank t6 t7)
+  S:(next-tank t7 t8)
+  S:(next-tank t8 t9)
+  S:(next-tank t9 t10)
+  S:(next-tank t10 t11)
+  S:(next-tank t11 t12)
+  S:(next-tank t12 t13)
+  S:(next-tank t13 t14)
+  S:(next-tank t14 dummy)
+  S:(cave-entrance l0)
+  S:(connected l0 l1)
+  S:(connected l1 l0)
+  S:(connected l1 l2)
+  S:(connected l2 l1)
+  S:(connected l2 l3)
+  S:(connected l3 l2)
+  S:(connected l1 l4)
+  S:(connected l4 l1)
+  S:(connected l1 l5)
+  S:(connected l5 l1)
+  S:(next-quantity zero one)
+  S:(next-quantity one two)
+  S:(next-quantity two three)
+  S:(next-quantity three four)
+  S:(precludes d1 d3)
+  S:(precludes d2 d3)
+Init[6]:
+  (= (hiring-cost d0) 60)
+  (= (hiring-cost d1) 10)
+  (= (hiring-cost d2) 10)
+  (= (hiring-cost d3) 58)
+  (= (other-cost) 1)
+  (= (total-cost) 0)
+Goal: (and (W:have-photo l4) (W:have-photo l5) (W:decompressing d0) (W:decompressing d1) (W:decompressing d2) (W:decompressing d3))
+Metric: 1
+---- Domain: pddl-data/ipc-2014/seq-opt/cavediving/domain.pddl | pddl-data/ipc-2014/seq-opt/cavediving/testing01.pddl END ----

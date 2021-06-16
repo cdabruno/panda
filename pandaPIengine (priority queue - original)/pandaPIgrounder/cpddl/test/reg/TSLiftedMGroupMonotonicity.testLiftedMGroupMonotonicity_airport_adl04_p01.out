@@ -1,0 +1,160 @@
+Invariants:
+< {at-segment V0:airplane C1:segment}
+, {facing V0:airplane C1:direction}
+, {is-pushing V0:airplane}
+, {is-pushing C0:airplane}
+, {at-segment V0:airplane C1:segment, blocked C2:segment V0:airplane}
+, {at-segment V0:airplane C1:segment, airborne V0:airplane C2:segment}
+, {at-segment V0:airplane C2:segment, blocked V1:segment V0:airplane}
+, {at-segment V0:airplane C2:segment, airborne V0:airplane V1:segment}
+, {is-moving V0:airplane, is-pushing V0:airplane}
+, {is-moving V0:airplane, is-pushing C1:airplane}
+, {is-moving C0:airplane, is-pushing C1:airplane}
+, {at-segment V0:airplane C1:segment, facing V0:airplane C2:direction, blocked C3:segment V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked C2:segment V0:airplane, airborne V0:airplane C3:segment}
+, {at-segment V0:airplane C2:segment, facing V0:airplane C3:direction, blocked V1:segment V0:airplane}
+, {at-segment V0:airplane C2:segment, blocked C3:segment V0:airplane, airborne V0:airplane V1:segment}
+, {is-moving V0:airplane, is-pushing V0:airplane, is-parked V0:airplane V1:segment}
+, {is-moving V0:airplane, is-pushing V0:airplane, is-parked V0:airplane C1:segment}
+, {is-moving V0:airplane, is-pushing C1:airplane, is-parked V0:airplane C2:segment}
+, {is-moving V0:airplane, is-pushing C2:airplane, is-parked V0:airplane V1:segment}
+, {is-moving C1:airplane, is-pushing C2:airplane, is-parked V0:airplane C3:segment}
+, {is-moving C1:airplane, is-pushing C2:airplane, is-parked C3:airplane V0:segment}
+, {is-moving C2:airplane, is-pushing C3:airplane, is-parked V0:airplane V1:segment}
+, {at-segment V0:airplane C1:segment, facing V0:airplane C2:direction, blocked C3:segment V0:airplane, airborne V0:airplane C4:segment}
+, {at-segment V0:airplane C2:segment, facing V0:airplane C3:direction, blocked C4:segment V0:airplane, airborne V0:airplane V1:segment}
+>
+Mutex Groups:
+< {at-segment V0:airplane C1:segment}
+, {facing V0:airplane C1:direction}
+, {is-pushing V0:airplane}
+, {is-pushing C0:airplane}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_09thresh_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_09help_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_a_09_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_27thresh_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_27help_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_27_0_150 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_b_27_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n1_n2_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n1_a_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n2_n3_1_0_86 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n2_n3_0_85 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n3_n_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n_n4_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n_c_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n4_n5_1_0_85 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n4_n5_0_86 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n5_n6_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n6_b_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_c_c2_1_0_83 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_c_c2_0_84 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_c4_c5_0_50 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_c5_c6_0_50 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_c5_c_a02_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_c5_c_b02_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_c6_c7_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_a02_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_b02_0_100 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n2_n3_2_0_86 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n2_n3_3_0_86 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n2_n3_4_0_85 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n2_n3_5_0_86 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n2_n3_6_0_86 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n4_n5_2_0_86 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n4_n5_3_0_86 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n4_n5_4_0_85 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n4_n5_5_0_86 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_n4_n5_6_0_86 airplane_cfbeg}
+, {at-segment airplane_cfbeg C0:segment, blocked seg_c_c2_2_0_83 airplane_cfbeg}
+, {at-segment airplane_dfboy C0:segment, blocked seg_09thresh_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_09help_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_09_0_150 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_a_09_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_rwy_0_1300 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_27thresh_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_27help_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_27_0_150 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_b_27_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n1_n2_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n1_a_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n2_n3_1_0_86 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n2_n3_0_85 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n3_n_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n_n4_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n_c_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n4_n5_1_0_85 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n4_n5_0_86 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n5_n6_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n6_b_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_c_c2_1_0_83 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_c_c2_0_84 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_c4_c5_0_50 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_c5_c6_0_50 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_c5_c_a02_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_c5_c_b02_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_c6_c7_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_a02_0_100 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n2_n3_2_0_86 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n2_n3_3_0_86 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n2_n3_4_0_85 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n2_n3_5_0_86 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n2_n3_6_0_86 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n4_n5_2_0_86 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n4_n5_3_0_86 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n4_n5_4_0_85 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n4_n5_5_0_86 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_n4_n5_6_0_86 airplane_dfboy}
+, {at-segment airplane_dfboy C0:segment, blocked seg_c_c2_2_0_83 airplane_dfboy}
+, {at-segment V0:airplane C1:segment, blocked seg_09thresh_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_09help_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_a_09_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_27thresh_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_27help_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_27_0_150 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_b_27_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n1_n2_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n1_a_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n2_n3_1_0_86 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n2_n3_0_85 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n3_n_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n_n4_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n_c_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n4_n5_1_0_85 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n4_n5_0_86 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n5_n6_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n6_b_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_c_c2_1_0_83 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_c_c2_0_84 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_c4_c5_0_50 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_c5_c6_0_50 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_c5_c_a02_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_c5_c_b02_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_c6_c7_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_a02_0_100 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n2_n3_2_0_86 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n2_n3_3_0_86 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n2_n3_4_0_85 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n2_n3_5_0_86 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n2_n3_6_0_86 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n4_n5_2_0_86 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n4_n5_3_0_86 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n4_n5_4_0_85 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n4_n5_5_0_86 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_n4_n5_6_0_86 V0:airplane}
+, {at-segment V0:airplane C1:segment, blocked seg_c_c2_2_0_83 V0:airplane}
+, {at-segment V0:airplane C1:segment, airborne V0:airplane C2:segment}
+, {at-segment V0:airplane C2:segment, airborne V0:airplane V1:segment}
+, {is-moving airplane_dfboy, is-pushing C0:airplane}
+, {is-moving V0:airplane, is-pushing V0:airplane}
+, {is-moving airplane_dfboy, is-pushing C0:airplane, is-parked airplane_dfboy C1:segment}
+, {is-moving airplane_dfboy, is-pushing C1:airplane, is-parked airplane_dfboy V0:segment}
+, {is-moving V0:airplane, is-pushing V0:airplane, is-parked V0:airplane V1:segment}
+, {is-moving V0:airplane, is-pushing V0:airplane, is-parked V0:airplane C1:segment}
+>
+Goal aware:
+< {at-segment airplane_dfboy C0:segment, airborne airplane_dfboy seg_09_0_150}
+, {at-segment airplane_dfboy C0:segment, airborne airplane_dfboy C1:segment}
+, {is-moving airplane_cfbeg, is-pushing airplane_cfbeg, is-parked airplane_cfbeg seg_a02_0_100}
+, {is-moving airplane_cfbeg, is-pushing airplane_cfbeg, is-parked airplane_cfbeg C0:segment}
+>
