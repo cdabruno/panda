@@ -13,15 +13,15 @@ properties_memory = []
 properties_description = []
 properties_time = []
 
-commands = ["./build/pandaPIengine --timelimit '2'",
-            "./build/pandaPIengine --timelimit '2' --heuristic 'rc2(lmc)'",
-            "./build/pandaPIengine --timelimit '2' --heuristic 'rc2(add)'",
-            "./build/pandaPIengine --timelimit '2' --astarweight '2'",
-            "./pandaPIengine --timelimit '2' --heuristic 'rc2(lmc)' --astarweight '2'",
-            "./build/pandaPIengine --timelimit '2' --heuristic 'rc2(add)' --astarweight '2'",
-            "./build/pandaPIengine --timelimit '2' --gValue 'none'",
-            "./build/pandaPIengine --timelimit '2' --heuristic 'rc2(lmc)' --gValue 'none'",
-            "./build/pandaPIengine --timelimit '2' --heuristic 'rc2(add)' --gValue 'none'"]
+commands = ["./build/pandaPIengine --timelimit '900'",
+            "./build/pandaPIengine --timelimit '900' --heuristic 'rc2(lmc)'",
+            "./build/pandaPIengine --timelimit '900' --heuristic 'rc2(add)'",
+            "./build/pandaPIengine --timelimit '900' --astarweight '2'",
+            "./build/pandaPIengine --timelimit '900' --heuristic 'rc2(lmc)' --astarweight '2'",
+            "./build/pandaPIengine --timelimit '900' --heuristic 'rc2(add)' --astarweight '2'",
+            "./build/pandaPIengine --timelimit '900' --gValue 'none'",
+            "./build/pandaPIengine --timelimit '900' --heuristic 'rc2(lmc)' --gValue 'none'",
+            "./build/pandaPIengine --timelimit '900' --heuristic 'rc2(add)' --gValue 'none'"]
 
 paths = ["AStar-Alg3-FF",
         "AStar-Alg3-LmCut",
