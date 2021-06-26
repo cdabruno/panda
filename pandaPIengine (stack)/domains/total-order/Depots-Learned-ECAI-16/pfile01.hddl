@@ -1,0 +1,49 @@
+(define (problem p)
+(:domain depots)
+(:objects
+	DEPOT0 - DEPOT
+	DISTRIBUTOR0 - DISTRIBUTOR
+	DISTRIBUTOR1 - DISTRIBUTOR
+	TRUCK0 - TRUCK
+	TRUCK1 - TRUCK
+	HOIST0 - HOIST
+	HOIST1 - HOIST
+	HOIST2 - HOIST
+	PALLET0 - PALLET
+	PALLET1 - PALLET
+	PALLET2 - PALLET
+	CRATE0 - CRATE
+	CRATE1 - CRATE
+)
+(:htn
+	:tasks (and
+	(task0 (ACHIEVE-ON CRATE0 PALLET2))
+	(task1 (ACHIEVE-ON CRATE1 PALLET1))
+	)
+:ordering (and
+	(< task1 task0)
+)
+:constraints ( )
+)
+(:init
+        (AT PALLET0 DEPOT0)
+        (CLEAR CRATE1)
+        (AT PALLET1 DISTRIBUTOR0)
+        (CLEAR CRATE0)
+        (AT PALLET2 DISTRIBUTOR1)
+        (CLEAR PALLET2)
+        (AT TRUCK0 DISTRIBUTOR1)
+        (AT TRUCK1 DEPOT0)
+        (AT HOIST0 DEPOT0)
+        (AVAILABLE HOIST0)
+        (AT HOIST1 DISTRIBUTOR0)
+        (AVAILABLE HOIST1)
+        (AT HOIST2 DISTRIBUTOR1)
+        (AVAILABLE HOIST2)
+        (AT CRATE0 DISTRIBUTOR0)
+        (ON CRATE0 PALLET1)
+        (AT CRATE1 DEPOT0)
+        (ON CRATE1 PALLET0)
+)
+)
+
