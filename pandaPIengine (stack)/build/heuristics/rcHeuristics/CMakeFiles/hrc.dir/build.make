@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/bruno/Desktop/panda/pandaPIengine (stack)/src"
+CMAKE_SOURCE_DIR = "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/bruno/Desktop/panda/pandaPIengine (stack)/build"
+CMAKE_BINARY_DIR = "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build"
 
 # Include any dependencies generated for this target.
 include heuristics/rcHeuristics/CMakeFiles/hrc.dir/depend.make
@@ -58,95 +58,95 @@ include heuristics/rcHeuristics/CMakeFiles/hrc.dir/progress.make
 include heuristics/rcHeuristics/CMakeFiles/hrc.dir/flags.make
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/LMCutLandmark.cpp.o: heuristics/rcHeuristics/CMakeFiles/hrc.dir/flags.make
-heuristics/rcHeuristics/CMakeFiles/hrc.dir/LMCutLandmark.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/LMCutLandmark.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/LMCutLandmark.cpp.o"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/LMCutLandmark.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/LMCutLandmark.cpp"
+heuristics/rcHeuristics/CMakeFiles/hrc.dir/LMCutLandmark.cpp.o: /home/bruno/Desktop/newPanda/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/LMCutLandmark.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/LMCutLandmark.cpp.o"
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/LMCutLandmark.cpp.o -c "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/LMCutLandmark.cpp"
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/LMCutLandmark.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hrc.dir/LMCutLandmark.cpp.i"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/LMCutLandmark.cpp" > CMakeFiles/hrc.dir/LMCutLandmark.cpp.i
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/LMCutLandmark.cpp" > CMakeFiles/hrc.dir/LMCutLandmark.cpp.i
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/LMCutLandmark.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hrc.dir/LMCutLandmark.cpp.s"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/LMCutLandmark.cpp" -o CMakeFiles/hrc.dir/LMCutLandmark.cpp.s
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/LMCutLandmark.cpp" -o CMakeFiles/hrc.dir/LMCutLandmark.cpp.s
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/RCModelFactory.cpp.o: heuristics/rcHeuristics/CMakeFiles/hrc.dir/flags.make
-heuristics/rcHeuristics/CMakeFiles/hrc.dir/RCModelFactory.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/RCModelFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/RCModelFactory.cpp.o"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/RCModelFactory.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/RCModelFactory.cpp"
+heuristics/rcHeuristics/CMakeFiles/hrc.dir/RCModelFactory.cpp.o: /home/bruno/Desktop/newPanda/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/RCModelFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/RCModelFactory.cpp.o"
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/RCModelFactory.cpp.o -c "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/RCModelFactory.cpp"
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/RCModelFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hrc.dir/RCModelFactory.cpp.i"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/RCModelFactory.cpp" > CMakeFiles/hrc.dir/RCModelFactory.cpp.i
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/RCModelFactory.cpp" > CMakeFiles/hrc.dir/RCModelFactory.cpp.i
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/RCModelFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hrc.dir/RCModelFactory.cpp.s"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/RCModelFactory.cpp" -o CMakeFiles/hrc.dir/RCModelFactory.cpp.s
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/RCModelFactory.cpp" -o CMakeFiles/hrc.dir/RCModelFactory.cpp.s
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hhRC.cpp.o: heuristics/rcHeuristics/CMakeFiles/hrc.dir/flags.make
-heuristics/rcHeuristics/CMakeFiles/hrc.dir/hhRC.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/hhRC.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/hhRC.cpp.o"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/hhRC.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hhRC.cpp"
+heuristics/rcHeuristics/CMakeFiles/hrc.dir/hhRC.cpp.o: /home/bruno/Desktop/newPanda/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/hhRC.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/hhRC.cpp.o"
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/hhRC.cpp.o -c "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hhRC.cpp"
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hhRC.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hrc.dir/hhRC.cpp.i"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hhRC.cpp" > CMakeFiles/hrc.dir/hhRC.cpp.i
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hhRC.cpp" > CMakeFiles/hrc.dir/hhRC.cpp.i
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hhRC.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hrc.dir/hhRC.cpp.s"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hhRC.cpp" -o CMakeFiles/hrc.dir/hhRC.cpp.s
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hhRC.cpp" -o CMakeFiles/hrc.dir/hhRC.cpp.s
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF-2.cpp.o: heuristics/rcHeuristics/CMakeFiles/hrc.dir/flags.make
-heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF-2.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/hsAddFF-2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF-2.cpp.o"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/hsAddFF-2.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsAddFF-2.cpp"
+heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF-2.cpp.o: /home/bruno/Desktop/newPanda/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/hsAddFF-2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF-2.cpp.o"
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/hsAddFF-2.cpp.o -c "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsAddFF-2.cpp"
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF-2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hrc.dir/hsAddFF-2.cpp.i"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsAddFF-2.cpp" > CMakeFiles/hrc.dir/hsAddFF-2.cpp.i
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsAddFF-2.cpp" > CMakeFiles/hrc.dir/hsAddFF-2.cpp.i
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF-2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hrc.dir/hsAddFF-2.cpp.s"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsAddFF-2.cpp" -o CMakeFiles/hrc.dir/hsAddFF-2.cpp.s
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsAddFF-2.cpp" -o CMakeFiles/hrc.dir/hsAddFF-2.cpp.s
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF.cpp.o: heuristics/rcHeuristics/CMakeFiles/hrc.dir/flags.make
-heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/hsAddFF.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF.cpp.o"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/hsAddFF.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsAddFF.cpp"
+heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF.cpp.o: /home/bruno/Desktop/newPanda/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/hsAddFF.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF.cpp.o"
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/hsAddFF.cpp.o -c "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsAddFF.cpp"
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hrc.dir/hsAddFF.cpp.i"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsAddFF.cpp" > CMakeFiles/hrc.dir/hsAddFF.cpp.i
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsAddFF.cpp" > CMakeFiles/hrc.dir/hsAddFF.cpp.i
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsAddFF.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hrc.dir/hsAddFF.cpp.s"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsAddFF.cpp" -o CMakeFiles/hrc.dir/hsAddFF.cpp.s
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsAddFF.cpp" -o CMakeFiles/hrc.dir/hsAddFF.cpp.s
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsFilter.cpp.o: heuristics/rcHeuristics/CMakeFiles/hrc.dir/flags.make
-heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsFilter.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/hsFilter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsFilter.cpp.o"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/hsFilter.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsFilter.cpp"
+heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsFilter.cpp.o: /home/bruno/Desktop/newPanda/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/hsFilter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsFilter.cpp.o"
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/hsFilter.cpp.o -c "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsFilter.cpp"
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsFilter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hrc.dir/hsFilter.cpp.i"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsFilter.cpp" > CMakeFiles/hrc.dir/hsFilter.cpp.i
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsFilter.cpp" > CMakeFiles/hrc.dir/hsFilter.cpp.i
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsFilter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hrc.dir/hsFilter.cpp.s"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsFilter.cpp" -o CMakeFiles/hrc.dir/hsFilter.cpp.s
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsFilter.cpp" -o CMakeFiles/hrc.dir/hsFilter.cpp.s
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsLmCut.cpp.o: heuristics/rcHeuristics/CMakeFiles/hrc.dir/flags.make
-heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsLmCut.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/hsLmCut.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsLmCut.cpp.o"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/hsLmCut.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsLmCut.cpp"
+heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsLmCut.cpp.o: /home/bruno/Desktop/newPanda/panda/pandaPIengine\ (stack)/src/heuristics/rcHeuristics/hsLmCut.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsLmCut.cpp.o"
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hrc.dir/hsLmCut.cpp.o -c "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsLmCut.cpp"
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsLmCut.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hrc.dir/hsLmCut.cpp.i"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsLmCut.cpp" > CMakeFiles/hrc.dir/hsLmCut.cpp.i
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsLmCut.cpp" > CMakeFiles/hrc.dir/hsLmCut.cpp.i
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsLmCut.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hrc.dir/hsLmCut.cpp.s"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsLmCut.cpp" -o CMakeFiles/hrc.dir/hsLmCut.cpp.s
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics/hsLmCut.cpp" -o CMakeFiles/hrc.dir/hsLmCut.cpp.s
 
 # Object files for target hrc
 hrc_OBJECTS = \
@@ -170,9 +170,9 @@ heuristics/rcHeuristics/libhrc.a: heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsF
 heuristics/rcHeuristics/libhrc.a: heuristics/rcHeuristics/CMakeFiles/hrc.dir/hsLmCut.cpp.o
 heuristics/rcHeuristics/libhrc.a: heuristics/rcHeuristics/CMakeFiles/hrc.dir/build.make
 heuristics/rcHeuristics/libhrc.a: heuristics/rcHeuristics/CMakeFiles/hrc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libhrc.a"
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && $(CMAKE_COMMAND) -P CMakeFiles/hrc.dir/cmake_clean_target.cmake
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hrc.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libhrc.a"
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && $(CMAKE_COMMAND) -P CMakeFiles/hrc.dir/cmake_clean_target.cmake
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hrc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/build: heuristics/rcHeuristics/libhrc.a
@@ -180,10 +180,10 @@ heuristics/rcHeuristics/CMakeFiles/hrc.dir/build: heuristics/rcHeuristics/libhrc
 .PHONY : heuristics/rcHeuristics/CMakeFiles/hrc.dir/build
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/clean:
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && $(CMAKE_COMMAND) -P CMakeFiles/hrc.dir/cmake_clean.cmake
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" && $(CMAKE_COMMAND) -P CMakeFiles/hrc.dir/cmake_clean.cmake
 .PHONY : heuristics/rcHeuristics/CMakeFiles/hrc.dir/clean
 
 heuristics/rcHeuristics/CMakeFiles/hrc.dir/depend:
-	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/bruno/Desktop/panda/pandaPIengine (stack)/src" "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics" "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics/CMakeFiles/hrc.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src" "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics" "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build" "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics" "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics/CMakeFiles/hrc.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : heuristics/rcHeuristics/CMakeFiles/hrc.dir/depend
 

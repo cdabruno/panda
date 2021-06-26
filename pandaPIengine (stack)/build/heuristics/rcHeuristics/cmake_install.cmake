@@ -1,4 +1,4 @@
-# Install script for directory: /home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics
+# Install script for directory: /home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics/rcHeuristics
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

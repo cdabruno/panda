@@ -1,4 +1,4 @@
-# Install script for directory: /home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics
+# Install script for directory: /home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/landmarks/cmake_install.cmake")
-  include("/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics/cmake_install.cmake")
+  include("/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/landmarks/cmake_install.cmake")
+  include("/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/rcHeuristics/cmake_install.cmake")
 
 endif()
 

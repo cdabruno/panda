@@ -1,4 +1,4 @@
-# Install script for directory: /home/bruno/Desktop/panda/pandaPIengine (stack)/src
+# Install script for directory: /home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,10 +39,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/bruno/Desktop/panda/pandaPIengine (stack)/build/search/cmake_install.cmake")
-  include("/home/bruno/Desktop/panda/pandaPIengine (stack)/build/symbolic_search/cmake_install.cmake")
-  include("/home/bruno/Desktop/panda/pandaPIengine (stack)/build/heuristics/cmake_install.cmake")
-  include("/home/bruno/Desktop/panda/pandaPIengine (stack)/build/intDataStructures/cmake_install.cmake")
+  include("/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/search/cmake_install.cmake")
+  include("/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/symbolic_search/cmake_install.cmake")
+  include("/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/heuristics/cmake_install.cmake")
+  include("/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/intDataStructures/cmake_install.cmake")
 
 endif()
 
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

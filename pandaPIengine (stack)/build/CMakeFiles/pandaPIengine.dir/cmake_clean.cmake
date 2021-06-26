@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/cmdline.c"
-  "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/cmdline.h"
+  "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/cmdline.c"
+  "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/cmdline.h"
   "CMakeFiles/pandaPIengine.dir/Debug.cpp.o"
   "CMakeFiles/pandaPIengine.dir/Invariants.cpp.o"
   "CMakeFiles/pandaPIengine.dir/Model.cpp.o"

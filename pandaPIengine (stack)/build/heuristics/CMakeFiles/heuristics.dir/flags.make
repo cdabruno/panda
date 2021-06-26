@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG   -Wall -Wextra -Wno-unused-parameter -Wno-sign-compare
 
 CXX_DEFINES = -DIL_STD
 
-CXX_INCLUDES = -I"/home/bruno/Desktop/panda/pandaPIengine (stack)/src/search" -I"/home/bruno/Desktop/panda/pandaPIengine (stack)/src/symbolic_search" -I"/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics" -I"/home/bruno/Desktop/panda/pandaPIengine (stack)/src/intDataStructures" -isystem "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/symbolic_search/cudd-3.0.0/cudd" -isystem "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/symbolic_search/cudd-3.0.0/cplusplus" 
+CXX_INCLUDES = -I"/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/search" -I"/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/symbolic_search" -I"/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/heuristics" -I"/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/intDataStructures" -isystem "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/symbolic_search/cudd-3.0.0/cudd" -isystem "/home/bruno/Desktop/newPanda/panda/pandaPIengine (stack)/src/symbolic_search/cudd-3.0.0/cplusplus" 
 
