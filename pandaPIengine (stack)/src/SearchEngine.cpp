@@ -15,6 +15,9 @@
 #include <landmarks/lmExtraction/LmCausal.h>
 #include <landmarks/lmExtraction/LMsInAndOrGraphs.h>
 #include <fringes/OneQueueWAStarFringe.h>
+#include <fringes/StackFringe.h>
+#include <fringes/StackOrderFringe.h>
+#include <stack>
 #include "./search/PriorityQueueSearch.h"
 
 #include "Debug.h"
@@ -191,6 +194,7 @@ int main(int argc, char *argv[]) {
 	if (args_info.sat_given) algo = SAT;
 	if (args_info.bdd_given) algo = BDD;
 	if (args_info.interactive_given) algo = INTERACTIVE;
+	
 
 
 	if (algo == INTERACTIVE){
@@ -304,23 +308,26 @@ int main(int argc, char *argv[]) {
 
 			cout << "Heuristic #" << i << " = " << heuristics[i]->getDescription() << endl; 
 		}
-
+		
 		int aStarWeight = args_info.astarweight_arg;
     	aStar aStarType = gValNone;
     	if (string(args_info.gValue_arg) == "path") aStarType = gValPathCosts;
     	if (string(args_info.gValue_arg) == "action") aStarType = gValActionCosts;
     	if (string(args_info.gValue_arg) == "mixed") aStarType = gValActionPathCosts;
     	if (string(args_info.gValue_arg) == "none") aStarType = gValNone;
+		if (string(args_info.gValue_arg) == "stack") aStarType = gValStack;
 		
 		bool suboptimalSearch = args_info.suboptimal_flag;
 
 		cout << "Search config:" << endl;
 		cout << " - type: ";
-		switch (aStarWeight){
+		switch (aStarType){
 			case gValNone: cout << "greedy"; break;
 			case gValActionCosts: cout << "cost optimal"; break;
 			case gValPathCosts: cout << "path cost"; break;
 			case gValActionPathCosts: cout << "action cost + decomposition cost"; break;
+			
+
 		}
 		cout << endl;
 		cout << " - weight: " << aStarWeight << endl;
@@ -338,11 +345,23 @@ int main(int argc, char *argv[]) {
     	
 		VisitedList visi(htn,noVisitedList, taskHash, taskSequenceHash, topologicalOrdering, orderPairsHash, layerHash, allowGIcheck, allowParalleSequencesMode);
     	PriorityQueueSearch search;
-    	OneQueueWAStarFringe fringe(aStarType, aStarWeight, hLength);
 
+		StackFringe fringeStack(aStarType);
+		//OneQueueWAStarFringe fringe(aStarType, aStarWeight, hLength);
 
 		bool printPlan = !args_info.noPlanOutput_flag;
-    	search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringe);
+
+		
+		//search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringeStack, 1, 0);
+		
+		
+		search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringeStack, 1, 1);
+
+		//search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringe, 0, 1);
+    	
+
+
+		
 	} else if (algo == SAT){
 #ifndef CMAKE_NO_SAT
 		bool block_compression = args_info.blockcompression_flag;

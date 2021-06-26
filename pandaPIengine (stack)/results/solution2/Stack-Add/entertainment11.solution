@@ -1,0 +1,86 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/entertainment11.sas.
+- State has 130 bits divided into 130 mutex groups.
+- Domain contains 246 actions.
+- Domain contains 374 tasks.
+- Domain contains 364 methods.
+- The initial state contains 56 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 361
+- The problem is cyclic
+- Number of cyclic SCCs: 2
+- Number of cyclic SCCs of size 1: 0
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Stack Search
+- Using Stack Algorithm.
+Search Results
+- Search time 0.016 seconds
+- Visited list time 8e-05 seconds
+- Visited list inserts 20
+- Visited list pruned 0
+- Visited list contains 20
+- Visited list hash collisions 0
+- Visited list used hash buckets 20
+- Generated 82 search nodes
+  Calculated heuristic for 65 nodes
+  One modifications 17
+  Effectless actions 0
+- including 17 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 4062 nodes per second
+- Final fringe contains 34 nodes
+- Status: Solved
+- Found solution of length 27
+- Total costs of actions: 8
+==>
+13 plug|instance_1[blu-ray-1,blu-ray-1-hdmi-1,hdmi-cable-2,hdmi-cable-2-hdmi-1]
+24 plug|instance_1[hdmi-cable-2,hdmi-cable-2-hdmi-2,amplifier-1,amplifier-1-hdmi-14]
+38 plug|instance_7[amplifier-1,amplifier-1-speakerWire-12,speaker-wire-1,speaker-wire-1-speakerWire-1]
+44 plug|instance_7[speaker-wire-1,speaker-wire-1-speakerWire-2,box-1,box-1-speakerWire-1]
+56 plug|instance_7[amplifier-1,amplifier-1-speakerWire-11,speaker-wire-2,speaker-wire-2-speakerWire-1]
+62 plug|instance_7[speaker-wire-2,speaker-wire-2-speakerWire-2,box-2,box-2-speakerWire-1]
+77 plug|instance_2[blu-ray-1,blu-ray-1-cinch-3,cinch-cable-2,cinch-cable-2-cinch-1]
+80 plug|instance_3[cinch-cable-2,cinch-cable-2-cinch-2,tv-1,tv-1-cinch-6]
+root 0
+79 direct_v_connect[cinch-cable-2,tv-1] -> <m-dconnect-v;plug[cinch-cable-2,cinch-cable-2-cinch-2,tv-1,tv-1-cinch-6];_method_for_multiple_expansions_of_plug|instance_3;0;-1> 80
+76 direct_v_connect[blu-ray-1,cinch-cable-2] -> <m-dconnect-v;plug[blu-ray-1,blu-ray-1-cinch-3,cinch-cable-2,cinch-cable-2-cinch-1];_method_for_multiple_expansions_of_plug|instance_2;0;-1> 77
+73 v_connect[blu-ray-1,cinch-cable-2] -> m-connect-direct-v 76
+66 v_connect[blu-ray-1,tv-1] -> m-connect-rec-v 73 79
+61 plug[speaker-wire-2,speaker-wire-2-speakerWire-2,box-2,box-2-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 62
+58 direct_a_connect[speaker-wire-2,box-2] -> m-dconnect-a 61
+55 plug[amplifier-1,amplifier-1-speakerWire-11,speaker-wire-2,speaker-wire-2-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 56
+49 direct_a_connect[amplifier-1,speaker-wire-2] -> m-dconnect-a 55
+45 a_connect[amplifier-1,box-2] -> <m-connect-rec-a;a_connect[amplifier-1,speaker-wire-2];m-connect-direct-a;0;-1,1> 49 58
+43 plug[speaker-wire-1,speaker-wire-1-speakerWire-2,box-1,box-1-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 44
+40 direct_a_connect[speaker-wire-1,box-1] -> m-dconnect-a 43
+37 plug[amplifier-1,amplifier-1-speakerWire-12,speaker-wire-1,speaker-wire-1-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 38
+33 direct_a_connect[amplifier-1,speaker-wire-1] -> m-dconnect-a 37
+28 a_connect[amplifier-1,box-1] -> <m-connect-rec-a;a_connect[amplifier-1,speaker-wire-1];m-connect-direct-a;0;-1,1> 33 40
+23 direct_a_connect[hdmi-cable-2,amplifier-1] -> <m-dconnect-a;plug[hdmi-cable-2,hdmi-cable-2-hdmi-2,amplifier-1,amplifier-1-hdmi-14];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 24
+12 direct_a_connect[blu-ray-1,hdmi-cable-2] -> <m-dconnect-a;plug[blu-ray-1,blu-ray-1-hdmi-1,hdmi-cable-2,hdmi-cable-2-hdmi-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 13
+9 a_connect[blu-ray-1,hdmi-cable-2] -> m-connect-direct-a 12
+7 a_connect[blu-ray-1,amplifier-1] -> m-connect-rec-a 9 23
+0 __top[] -> __top_method 7 28 45 66
+<==

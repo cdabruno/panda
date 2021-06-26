@@ -1,0 +1,66 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/satellite2.sas.
+- State has 14 bits divided into 14 mutex groups.
+- Domain contains 34 actions.
+- Domain contains 40 tasks.
+- Domain contains 59 methods.
+- The initial state contains 4 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 40
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(add;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Stack Search
+- Using Stack Algorithm.
+Search Results
+- Search time 0 seconds
+- Visited list time 1.2e-05 seconds
+- Visited list inserts 5
+- Visited list pruned 0
+- Visited list contains 5
+- Visited list hash collisions 0
+- Visited list used hash buckets 5
+- Generated 43 search nodes
+  Calculated heuristic for 28 nodes
+  One modifications 14
+  Effectless actions 1
+- including 14 one modification actions
+- including 0 one modification methods
+- and       1 progressions of effectless actions
+- Generated -2147483648 nodes per second
+- Final fringe contains 4 nodes
+- Status: Solved
+- Found solution of length 8
+- Total costs of actions: 5
+==>
+17 switch_on[instrument0,satellite0]
+36 turn_to[satellite0,star0,phenomenon1]
+37 calibrate[satellite0,instrument0,star0]
+38 turn_to[satellite0,phenomenon1,star0]
+39 take_image[satellite0,phenomenon1,instrument0,image1]
+root 0
+35 auto_calibrate[satellite0,instrument0] -> method6 36 37
+16 do_observation[phenomenon1,image1] -> <method0;activate_instrument[satellite0,instrument0];method5;0;-1,-2,1,2> 17 35 38 39
+0 __top[] -> __top_method 16
+<==

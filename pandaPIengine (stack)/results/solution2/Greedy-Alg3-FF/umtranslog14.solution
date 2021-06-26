@@ -1,0 +1,69 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/umtranslog14.sas.
+- State has 9 bits divided into 9 mutex groups.
+- Domain contains 7 actions.
+- Domain contains 8 tasks.
+- Domain contains 1 methods.
+- The initial state contains 4 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 1 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 8
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 0
+No heuristics given, setting default ... 
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(ff;distance;correct count)
+Search config:
+ - type: greedy
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy Search
+Search Results
+- Search time 0 seconds
+- Visited list time 8e-06 seconds
+- Visited list inserts 2
+- Visited list pruned 0
+- Visited list contains 2
+- Visited list hash collisions 0
+- Visited list used hash buckets 2
+- Generated 11 search nodes
+  Calculated heuristic for 2 nodes
+  One modifications 9
+  Effectless actions 0
+- including 9 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated -2147483648 nodes per second
+- Final fringe contains 0 nodes
+- Status: Solved
+- Found solution of length 10
+- Total costs of actions: 9
+==>
+1 collect_fees[Tische]
+2 open_door[LKW]
+3 load_package[Tische,LKW,Vendee]
+4 close_door[LKW]
+5 move_vehicle_no_traincar[LKW,Vendee,VendeeFrancheComteRoadRoute,FrancheComte]
+6 open_door[LKW]
+7 unload_package[Tische,LKW,FrancheComte]
+8 close_door[LKW]
+9 deliver_p[Tische]
+root 0
+0 __top[] -> <<<<<<<<<<<__top_method;transport[Tische,Vendee,FrancheComte];method_transport_pi_ca_de;0;-1,-2,-3>;carry[Tische,Vendee,FrancheComte];method_carry_cd;1;0,-1,2>;carry_direct[Tische,Vendee,FrancheComte];method_carry_direct;1;0,-1,2>;helper_carry_direct[LKW,Tische,Vendee,FrancheComte];method_helper_carry_direct_noMoveFirst;1;0,-1,-2,-3,2>;unload_top[Tische,LKW,FrancheComte];method_unload_top_normal;3;0,1,2,-1,4>;unload[Tische,LKW,FrancheComte];method_unload_regular;3;0,1,2,-1,-2,-3,4>;move[LKW,Vendee,FrancheComte];method_move_no_traincar;2;0,1,-1,3,4,5,6>;load_top[Tische,LKW,Vendee];method_load_top_normal;1;0,-1,2,3,4,5,6>;load[Tische,LKW,Vendee];method_load_regular;1;0,-1,-2,-3,2,3,4,5,6>;deliver[Tische];method_deliver_dp;8;0,1,2,3,4,5,6,7,-1>;pickup[Tische];method_pickup_normal;0;-1,1,2,3,4,5,6,7,8> 1 2 3 4 5 6 7 8 9
+<==

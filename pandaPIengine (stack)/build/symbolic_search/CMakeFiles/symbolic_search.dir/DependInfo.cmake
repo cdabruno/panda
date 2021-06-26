@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/bruno/Desktop/pandaPIengine/src/symbolic_search/automaton.cpp" "/home/bruno/Desktop/pandaPIengine/build/symbolic_search/CMakeFiles/symbolic_search.dir/automaton.cpp.o"
-  "/home/bruno/Desktop/pandaPIengine/src/symbolic_search/sym_variables.cpp" "/home/bruno/Desktop/pandaPIengine/build/symbolic_search/CMakeFiles/symbolic_search.dir/sym_variables.cpp.o"
-  "/home/bruno/Desktop/pandaPIengine/src/symbolic_search/transition_relation.cpp" "/home/bruno/Desktop/pandaPIengine/build/symbolic_search/CMakeFiles/symbolic_search.dir/transition_relation.cpp.o"
+  "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/symbolic_search/automaton.cpp" "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/symbolic_search/CMakeFiles/symbolic_search.dir/automaton.cpp.o"
+  "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/symbolic_search/sym_variables.cpp" "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/symbolic_search/CMakeFiles/symbolic_search.dir/sym_variables.cpp.o"
+  "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/symbolic_search/transition_relation.cpp" "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/symbolic_search/CMakeFiles/symbolic_search.dir/transition_relation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,12 +17,12 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/bruno/Desktop/pandaPIengine/src/search"
-  "/home/bruno/Desktop/pandaPIengine/src/symbolic_search"
-  "/home/bruno/Desktop/pandaPIengine/src/heuristics"
-  "/home/bruno/Desktop/pandaPIengine/src/intDataStructures"
-  "/home/bruno/Desktop/pandaPIengine/src/symbolic_search/cudd-3.0.0/cudd"
-  "/home/bruno/Desktop/pandaPIengine/src/symbolic_search/cudd-3.0.0/cplusplus"
+  "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/search"
+  "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/symbolic_search"
+  "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/heuristics"
+  "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/intDataStructures"
+  "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/symbolic_search/cudd-3.0.0/cudd"
+  "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/symbolic_search/cudd-3.0.0/cplusplus"
   )
 
 # Targets to which this target links.

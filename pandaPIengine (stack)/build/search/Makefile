@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bruno/Desktop/pandaPIengine/src
+CMAKE_SOURCE_DIR = "/home/bruno/Desktop/panda/pandaPIengine (stack)/src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bruno/Desktop/pandaPIengine/build
+CMAKE_BINARY_DIR = "/home/bruno/Desktop/panda/pandaPIengine (stack)/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bruno/Desktop/pandaPIengine/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bruno/Desktop/pandaPIengine/build/CMakeFiles /home/bruno/Desktop/pandaPIengine/build/search/CMakeFiles/progress.marks
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f CMakeFiles/Makefile2 search/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bruno/Desktop/pandaPIengine/build/CMakeFiles 0
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/search/CMakeFiles/progress.marks"
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f CMakeFiles/Makefile2 search/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f CMakeFiles/Makefile2 search/clean
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f CMakeFiles/Makefile2 search/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f CMakeFiles/Makefile2 search/preinstall
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f CMakeFiles/Makefile2 search/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f CMakeFiles/Makefile2 search/preinstall
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f CMakeFiles/Makefile2 search/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 search/CMakeFiles/search.dir/rule:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f CMakeFiles/Makefile2 search/CMakeFiles/search.dir/rule
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f CMakeFiles/Makefile2 search/CMakeFiles/search.dir/rule
 .PHONY : search/CMakeFiles/search.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ search: search/CMakeFiles/search.dir/rule
 
 # fast build rule for target.
 search/fast:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/build
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/build
 .PHONY : search/fast
 
 PriorityQueueSearch.o: PriorityQueueSearch.cpp.o
@@ -131,7 +131,7 @@ PriorityQueueSearch.o: PriorityQueueSearch.cpp.o
 
 # target to build an object file
 PriorityQueueSearch.cpp.o:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/PriorityQueueSearch.cpp.o
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/PriorityQueueSearch.cpp.o
 .PHONY : PriorityQueueSearch.cpp.o
 
 PriorityQueueSearch.i: PriorityQueueSearch.cpp.i
@@ -140,7 +140,7 @@ PriorityQueueSearch.i: PriorityQueueSearch.cpp.i
 
 # target to preprocess a source file
 PriorityQueueSearch.cpp.i:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/PriorityQueueSearch.cpp.i
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/PriorityQueueSearch.cpp.i
 .PHONY : PriorityQueueSearch.cpp.i
 
 PriorityQueueSearch.s: PriorityQueueSearch.cpp.s
@@ -149,7 +149,7 @@ PriorityQueueSearch.s: PriorityQueueSearch.cpp.s
 
 # target to generate assembly for a file
 PriorityQueueSearch.cpp.s:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/PriorityQueueSearch.cpp.s
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/PriorityQueueSearch.cpp.s
 .PHONY : PriorityQueueSearch.cpp.s
 
 QueueFringe.o: QueueFringe.cpp.o
@@ -158,7 +158,7 @@ QueueFringe.o: QueueFringe.cpp.o
 
 # target to build an object file
 QueueFringe.cpp.o:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/QueueFringe.cpp.o
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/QueueFringe.cpp.o
 .PHONY : QueueFringe.cpp.o
 
 QueueFringe.i: QueueFringe.cpp.i
@@ -167,7 +167,7 @@ QueueFringe.i: QueueFringe.cpp.i
 
 # target to preprocess a source file
 QueueFringe.cpp.i:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/QueueFringe.cpp.i
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/QueueFringe.cpp.i
 .PHONY : QueueFringe.cpp.i
 
 QueueFringe.s: QueueFringe.cpp.s
@@ -176,7 +176,7 @@ QueueFringe.s: QueueFringe.cpp.s
 
 # target to generate assembly for a file
 QueueFringe.cpp.s:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/QueueFringe.cpp.s
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/QueueFringe.cpp.s
 .PHONY : QueueFringe.cpp.s
 
 StackFringe.o: StackFringe.cpp.o
@@ -185,7 +185,7 @@ StackFringe.o: StackFringe.cpp.o
 
 # target to build an object file
 StackFringe.cpp.o:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/StackFringe.cpp.o
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/StackFringe.cpp.o
 .PHONY : StackFringe.cpp.o
 
 StackFringe.i: StackFringe.cpp.i
@@ -194,7 +194,7 @@ StackFringe.i: StackFringe.cpp.i
 
 # target to preprocess a source file
 StackFringe.cpp.i:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/StackFringe.cpp.i
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/StackFringe.cpp.i
 .PHONY : StackFringe.cpp.i
 
 StackFringe.s: StackFringe.cpp.s
@@ -203,7 +203,7 @@ StackFringe.s: StackFringe.cpp.s
 
 # target to generate assembly for a file
 StackFringe.cpp.s:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/StackFringe.cpp.s
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/StackFringe.cpp.s
 .PHONY : StackFringe.cpp.s
 
 UnsortedFringe.o: UnsortedFringe.cpp.o
@@ -212,7 +212,7 @@ UnsortedFringe.o: UnsortedFringe.cpp.o
 
 # target to build an object file
 UnsortedFringe.cpp.o:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/UnsortedFringe.cpp.o
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/UnsortedFringe.cpp.o
 .PHONY : UnsortedFringe.cpp.o
 
 UnsortedFringe.i: UnsortedFringe.cpp.i
@@ -221,7 +221,7 @@ UnsortedFringe.i: UnsortedFringe.cpp.i
 
 # target to preprocess a source file
 UnsortedFringe.cpp.i:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/UnsortedFringe.cpp.i
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/UnsortedFringe.cpp.i
 .PHONY : UnsortedFringe.cpp.i
 
 UnsortedFringe.s: UnsortedFringe.cpp.s
@@ -230,7 +230,7 @@ UnsortedFringe.s: UnsortedFringe.cpp.s
 
 # target to generate assembly for a file
 UnsortedFringe.cpp.s:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/UnsortedFringe.cpp.s
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/UnsortedFringe.cpp.s
 .PHONY : UnsortedFringe.cpp.s
 
 UnsrtFringeContainer.o: UnsrtFringeContainer.cpp.o
@@ -239,7 +239,7 @@ UnsrtFringeContainer.o: UnsrtFringeContainer.cpp.o
 
 # target to build an object file
 UnsrtFringeContainer.cpp.o:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/UnsrtFringeContainer.cpp.o
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/UnsrtFringeContainer.cpp.o
 .PHONY : UnsrtFringeContainer.cpp.o
 
 UnsrtFringeContainer.i: UnsrtFringeContainer.cpp.i
@@ -248,7 +248,7 @@ UnsrtFringeContainer.i: UnsrtFringeContainer.cpp.i
 
 # target to preprocess a source file
 UnsrtFringeContainer.cpp.i:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/UnsrtFringeContainer.cpp.i
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/UnsrtFringeContainer.cpp.i
 .PHONY : UnsrtFringeContainer.cpp.i
 
 UnsrtFringeContainer.s: UnsrtFringeContainer.cpp.s
@@ -257,7 +257,7 @@ UnsrtFringeContainer.s: UnsrtFringeContainer.cpp.s
 
 # target to generate assembly for a file
 UnsrtFringeContainer.cpp.s:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/UnsrtFringeContainer.cpp.s
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/UnsrtFringeContainer.cpp.s
 .PHONY : UnsrtFringeContainer.cpp.s
 
 fringes/OneQueueWAStarFringe.o: fringes/OneQueueWAStarFringe.cpp.o
@@ -266,7 +266,7 @@ fringes/OneQueueWAStarFringe.o: fringes/OneQueueWAStarFringe.cpp.o
 
 # target to build an object file
 fringes/OneQueueWAStarFringe.cpp.o:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/fringes/OneQueueWAStarFringe.cpp.o
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/fringes/OneQueueWAStarFringe.cpp.o
 .PHONY : fringes/OneQueueWAStarFringe.cpp.o
 
 fringes/OneQueueWAStarFringe.i: fringes/OneQueueWAStarFringe.cpp.i
@@ -275,7 +275,7 @@ fringes/OneQueueWAStarFringe.i: fringes/OneQueueWAStarFringe.cpp.i
 
 # target to preprocess a source file
 fringes/OneQueueWAStarFringe.cpp.i:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/fringes/OneQueueWAStarFringe.cpp.i
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/fringes/OneQueueWAStarFringe.cpp.i
 .PHONY : fringes/OneQueueWAStarFringe.cpp.i
 
 fringes/OneQueueWAStarFringe.s: fringes/OneQueueWAStarFringe.cpp.s
@@ -284,8 +284,62 @@ fringes/OneQueueWAStarFringe.s: fringes/OneQueueWAStarFringe.cpp.s
 
 # target to generate assembly for a file
 fringes/OneQueueWAStarFringe.cpp.s:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/fringes/OneQueueWAStarFringe.cpp.s
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/fringes/OneQueueWAStarFringe.cpp.s
 .PHONY : fringes/OneQueueWAStarFringe.cpp.s
+
+fringes/StackFringe.o: fringes/StackFringe.cpp.o
+
+.PHONY : fringes/StackFringe.o
+
+# target to build an object file
+fringes/StackFringe.cpp.o:
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/fringes/StackFringe.cpp.o
+.PHONY : fringes/StackFringe.cpp.o
+
+fringes/StackFringe.i: fringes/StackFringe.cpp.i
+
+.PHONY : fringes/StackFringe.i
+
+# target to preprocess a source file
+fringes/StackFringe.cpp.i:
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/fringes/StackFringe.cpp.i
+.PHONY : fringes/StackFringe.cpp.i
+
+fringes/StackFringe.s: fringes/StackFringe.cpp.s
+
+.PHONY : fringes/StackFringe.s
+
+# target to generate assembly for a file
+fringes/StackFringe.cpp.s:
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/fringes/StackFringe.cpp.s
+.PHONY : fringes/StackFringe.cpp.s
+
+fringes/StackOrderFringe.o: fringes/StackOrderFringe.cpp.o
+
+.PHONY : fringes/StackOrderFringe.o
+
+# target to build an object file
+fringes/StackOrderFringe.cpp.o:
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/fringes/StackOrderFringe.cpp.o
+.PHONY : fringes/StackOrderFringe.cpp.o
+
+fringes/StackOrderFringe.i: fringes/StackOrderFringe.cpp.i
+
+.PHONY : fringes/StackOrderFringe.i
+
+# target to preprocess a source file
+fringes/StackOrderFringe.cpp.i:
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/fringes/StackOrderFringe.cpp.i
+.PHONY : fringes/StackOrderFringe.cpp.i
+
+fringes/StackOrderFringe.s: fringes/StackOrderFringe.cpp.s
+
+.PHONY : fringes/StackOrderFringe.s
+
+# target to generate assembly for a file
+fringes/StackOrderFringe.cpp.s:
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(MAKE) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/fringes/StackOrderFringe.cpp.s
+.PHONY : fringes/StackOrderFringe.cpp.s
 
 # Help Target
 help:
@@ -314,6 +368,12 @@ help:
 	@echo "... fringes/OneQueueWAStarFringe.o"
 	@echo "... fringes/OneQueueWAStarFringe.i"
 	@echo "... fringes/OneQueueWAStarFringe.s"
+	@echo "... fringes/StackFringe.o"
+	@echo "... fringes/StackFringe.i"
+	@echo "... fringes/StackFringe.s"
+	@echo "... fringes/StackOrderFringe.o"
+	@echo "... fringes/StackOrderFringe.i"
+	@echo "... fringes/StackOrderFringe.s"
 .PHONY : help
 
 
@@ -325,6 +385,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bruno/Desktop/pandaPIengine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

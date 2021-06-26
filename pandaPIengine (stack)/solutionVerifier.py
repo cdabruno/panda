@@ -11,7 +11,11 @@ paths = ["WA2-Alg3-LmCut",
         "AStar-Alg3-FF",
         "Greedy-Alg3-LmCut",
         "Greedy-Alg3-Add",
-        "Greedy-Alg3-FF"]
+        "Greedy-Alg3-FF",
+        "Stack-No-Order",
+        "Stack-LmCut",
+        "Stack-Add",
+        "Stack-FF"]
 
 solutions_found = {}
 

@@ -1,0 +1,138 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/smartphone3.sas.
+- State has 49 bits divided into 49 mutex groups.
+- Domain contains 57 actions.
+- Domain contains 74 tasks.
+- Domain contains 77 methods.
+- The initial state contains 10 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 8 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: no
+- Instance is parallel sequences: no
+Calculate SCCs...
+- Number of SCCs: 74
+- The problem is cyclic
+- Number of cyclic SCCs: 4
+- Number of cyclic SCCs of size 1: 4
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: partial order
+- hashs to use: state task task-sequence
+- memory information: topological ordering order-pairs layer
+- Visited list allows deletion of search nodes: false
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+   1s visitime    0.32s generated nodes     15006 nodes/sec   14654 cur h   24 mod.depth   40 inserts      7487 dups      4534 size      2953 hash fail   4534 hash buckets   2953
+   2s visitime    1.07s generated nodes     30019 nodes/sec   10182 cur h   25 mod.depth   40 inserts     17080 dups     11266 size      5814 hash fail  11267 hash buckets   5813
+   4s visitime    1.65s generated nodes     40030 nodes/sec    9270 cur h   24 mod.depth   44 inserts     22937 dups     15360 size      7577 hash fail  15361 hash buckets   7576
+   5s visitime    2.19s generated nodes     55040 nodes/sec    9757 cur h   25 mod.depth   31 inserts     32337 dups     21989 size     10348 hash fail  21991 hash buckets  10346
+   7s visitime    2.95s generated nodes     70051 nodes/sec    9507 cur h   20 mod.depth   48 inserts     41971 dups     28670 size     13301 hash fail  28673 hash buckets  13298
+   8s visitime    3.56s generated nodes     80055 nodes/sec    9154 cur h   18 mod.depth   50 inserts     48647 dups     33482 size     15165 hash fail  33487 hash buckets  15160
+   9s visitime    4.11s generated nodes     95062 nodes/sec    9618 cur h   21 mod.depth   47 inserts     58413 dups     40654 size     17759 hash fail  40663 hash buckets  17750
+  11s visitime    4.73s generated nodes    110072 nodes/sec    9824 cur h   22 mod.depth   45 inserts     66850 dups     46678 size     20172 hash fail  46689 hash buckets  20161
+  12s visitime    5.19s generated nodes    115073 nodes/sec    9396 cur h   23 mod.depth   45 inserts     70647 dups     49596 size     21051 hash fail  49608 hash buckets  21039
+  13s visitime    5.77s generated nodes    125077 nodes/sec    9184 cur h   19 mod.depth   52 inserts     78004 dups     54879 size     23125 hash fail  54893 hash buckets  23111
+  15s visitime    6.43s generated nodes    140093 nodes/sec    9264 cur h   30 mod.depth   31 inserts     89306 dups     63534 size     25772 hash fail  63552 hash buckets  25754
+Search Results
+- Search time 15.93 seconds
+- Visited list time 6.79 seconds
+- Visited list inserts 92434
+- Visited list pruned 65974
+- Visited list contains 26460
+- Visited list hash collisions 65995
+- Visited list used hash buckets 26439
+- Generated 144023 search nodes
+  Calculated heuristic for 140129 nodes
+  One modifications 1220
+  Effectless actions 2674
+- including 1220 one modification actions
+- including 0 one modification methods
+- and       2674 progressions of effectless actions
+- Generated 8798 nodes per second
+- Final fringe contains 2889 nodes
+- Status: Solved
+- Found solution of length 67
+- Total costs of actions: 41
+==>
+52622 press_Home_Programs[]
+52628 attachRegularInformationToEMail[email1,room101]
+52639 attachRegularInformationToEMail[email1,dateForMeeting]
+52644 attachRegularInformationToEMail[email2,dateForMeeting]
+52650 attachRegularInformationToEMail[email2,agenda]
+52656 attachRegularInformationToEMail[email1,agenda]
+52707 press_Programs_Tasks[]
+143781 press_Tasks_Menu[]
+143785 press_Tasks_Menu_NewTask[taskCreateHandout]
+143786 set_Task_Time[taskCreateHandout,dateForMeeting]
+143787 set_Task_Reminder[taskCreateHandout]
+143791 set_Task_Name[taskCreateHandout]
+143797 press_Tasks_NewTask_OK[taskCreateHandout]
+143799 press_Home_Default[]
+143803 press_Home_Calendar[]
+143808 press_Calendar_Menu[]
+143811 press_Calendar_Menu_NewAppointment[appointmentForMeeting]
+143812 set_Appointment_Reminder[appointmentForMeeting]
+143813 set_Appointment_Location[appointmentForMeeting,room101]
+143816 set_Appointment_Name[appointmentForMeeting]
+143822 set_Appointment_Time[appointmentForMeeting,dateForMeeting]
+143825 press_Calendar_NewAppointment_OK[appointmentForMeeting,dateForMeeting]
+143827 press_Home_Default[]
+143828 attachRegularInformationToEMail[email2,room101]
+143840 press_Home_EMail[]
+143841 select_EMail_EMailAccount_NoOp[account1]
+143846 press_EMail_NewEMail[account1]
+143857 enter_EMailAddress[headOfDepartment,headOfDepartmentEMailAddress]
+143870 press_EMail_NewEMail_Send[headOfDepartment,email1]
+143939 extractsInformation_Regular[headOfDepartment,email1,dateForMeeting]
+143943 extractsInformation_Regular[headOfDepartment,email1,room101]
+143945 extractsInformation_Regular[headOfDepartment,email1,agenda]
+143946 press_Home_Default[]
+143947 press_Home_EMail[]
+143948 select_EMail_EMailAccount_NoOp[account1]
+143949 press_EMail_NewEMail[account1]
+143950 enter_EMailAddress[peer1,peer1EMailAddress]
+143951 press_EMail_NewEMail_Send[peer1,email2]
+144015 extractsInformation_Regular[peer1,email2,room101]
+144018 extractsInformation_Regular[peer1,email2,agenda]
+144019 extractsInformation_Regular[peer1,email2,dateForMeeting]
+root 0
+144012 do_extractsMultipleInformation_Multiple_splitted_7[peer1,email2] -> <_splitting_method_do_extractsMultipleInformation_Multiple_splitted_7;extractsInformation[peer1,email2,dateForMeeting];do_extractsInformation_Regular;0;-1> 144019
+144003 extractsMultipleInformation[peer1,email2] -> <do_extractsMultipleInformation_Single;extractsInformation[peer1,email2,agenda];do_extractsInformation_Regular;0;-1> 144018
+143979 extractsMultipleInformation[peer1,email2] -> do_extractsMultipleInformation_Multiple 144003 144012
+143965 do_extractsMultipleInformation_Multiple_splitted_7[peer1,email2] -> <_splitting_method_do_extractsMultipleInformation_Multiple_splitted_7;extractsInformation[peer1,email2,room101];do_extractsInformation_Regular;0;-1> 144015
+143962 extractsMultipleInformation[peer1,email2] -> do_extractsMultipleInformation_Multiple 143979 143965
+143936 do_extractsMultipleInformation_Multiple_splitted_7[headOfDepartment,email1] -> <_splitting_method_do_extractsMultipleInformation_Multiple_splitted_7;extractsInformation[headOfDepartment,email1,room101];do_extractsInformation_Regular;0;-1> 143943
+143926 extractsMultipleInformation[headOfDepartment,email1] -> <do_extractsMultipleInformation_Single;extractsInformation[headOfDepartment,email1,dateForMeeting];do_extractsInformation_Regular;0;-1> 143939
+143913 extractsMultipleInformation[headOfDepartment,email1] -> do_extractsMultipleInformation_Multiple 143926 143936
+143894 do_extractsMultipleInformation_Multiple_splitted_7[headOfDepartment,email1] -> <_splitting_method_do_extractsMultipleInformation_Multiple_splitted_7;extractsInformation[headOfDepartment,email1,agenda];do_extractsInformation_Regular;0;-1> 143945
+143890 extractsMultipleInformation[headOfDepartment,email1] -> do_extractsMultipleInformation_Multiple 143913 143894
+143832 enterMode_EMail[] -> <do_enterMode_EMail_ViaHome;press_Home[];do_press_Home_Default;0;-1,1> 143946 143947
+52710 create_NewTask[taskCreateHandout] -> <do_create_NewTask_Normal;configure_Task[taskCreateHandout];do_configure_Task;2;0,1,-1,-2,-3,3> 143781 143785 143791 143787 143786 143797
+52692 enterMode_EMail[] -> <do_enterMode_EMail_ViaHome;press_Home[];do_press_Home_Default;0;-1,1> 143827 143840
+1597 enterMode_Calendar[] -> <<do_enterMode_Calendar_ViaHome;enterMode_Home[];do_enterMode_Home;0;-1,1>;press_Home[];do_press_Home_Default;0;-1,1> 143799 143803
+1591 attachMultipleInformation[email1] -> <<do_attachMultipleInformation_Single;attachInformation[email1,dateForMeeting];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email1,dateForMeeting];do_attachInformationToEMail_Regular;0;-1> 52639
+1583 do_attachMultipleInformation_Multiple_splitted_3[email1] -> <<_splitting_method_do_attachMultipleInformation_Multiple_splitted_3;attachInformation[email1,agenda];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email1,agenda];do_attachInformationToEMail_Regular;0;-1> 52656
+1580 attachMultipleInformation[email1] -> do_attachMultipleInformation_Multiple 1591 1583
+1571 do_attachMultipleInformation_Multiple_splitted_3[email2] -> <<_splitting_method_do_attachMultipleInformation_Multiple_splitted_3;attachInformation[email2,dateForMeeting];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email2,dateForMeeting];do_attachInformationToEMail_Regular;0;-1> 52644
+1564 enterMode_Tasks[] -> do_enterMode_Tasks_FromHome 52622 52707
+1543 attachMultipleInformation[email2] -> <<do_attachMultipleInformation_Single;attachInformation[email2,room101];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email2,room101];do_attachInformationToEMail_Regular;0;-1> 143828
+1532 do_attachMultipleInformation_Multiple_splitted_3[email1] -> <<_splitting_method_do_attachMultipleInformation_Multiple_splitted_3;attachInformation[email1,room101];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email1,room101];do_attachInformationToEMail_Regular;0;-1> 52628
+1525 do_attachMultipleInformation_Multiple_splitted_3[email2] -> <<_splitting_method_do_attachMultipleInformation_Multiple_splitted_3;attachInformation[email2,agenda];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email2,agenda];do_attachInformationToEMail_Regular;0;-1> 52650
+451 attachMultipleInformation[email1] -> do_attachMultipleInformation_Multiple 1580 1532
+16 attachMultipleInformation[email2] -> do_attachMultipleInformation_Multiple 1543 1571
+8 attachMultipleInformation[email2] -> do_attachMultipleInformation_Multiple 16 1525
+0 __top[] -> <<<<<<<<<__top_method;create_Appointment[appointmentForMeeting,room101,dateForMeeting];do_create_Appointment;7;0,1,2,3,4,5,6,-1,-2>;create_NewAppointment[appointmentForMeeting,dateForMeeting,room101];do_create_NewAppointment;8;0,1,2,3,4,5,6,7,-1,-2,-3,-4>;configure_Appointment[appointmentForMeeting,dateForMeeting,room101];do_configure_Appointment;10;0,1,2,3,4,5,6,7,8,9,-1,-2,-3,-4,11>;send_EMail[peer1,email2];do_send_EMail_ViaEMail;4;0,1,2,3,-1,-2,-3,-4,-5,5,6,7,8,9,10,11,12,13,14>;do_send_EMail_ViaEMail_splitted_8[peer1];_splitting_method_do_send_EMail_ViaEMail_splitted_8;7;0,1,2,3,4,5,6,-1,8,9,10,11,12,13,14,15,16,17,18>;select_EMail_EMailAccount[account1];do_select_EMail_EMailAccount_NoOp;5;0,1,2,3,4,-1,6,7,8,9,10,11,12,13,14,15,16,17,18>;send_EMail[headOfDepartment,email1];<do_send_EMail_ViaEMail;select_EMail_EMailAccount[account1];do_select_EMail_EMailAccount_NoOp;1;0,-1,2,3,4>;3;0,1,2,-1,-2,-3,-4,-5,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18>;do_send_EMail_ViaEMail_splitted_8[headOfDepartment];_splitting_method_do_send_EMail_ViaEMail_splitted_8;6;0,1,2,3,4,5,-1,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22>;create_Task[taskCreateHandout];do_create_Task;2;0,1,-1,-2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22> 451 8 1564 52710 52692 143841 143846 143857 143870 143832 143948 143949 143950 143951 143890 143962 1597 143808 143811 143816 143812 143813 143822 143825
+<==

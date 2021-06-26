@@ -1,4 +1,4 @@
-# Install script for directory: /home/bruno/Desktop/pandaPIengine/src/symbolic_search
+# Install script for directory: /home/bruno/Desktop/panda/pandaPIengine (stack)/src/symbolic_search
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

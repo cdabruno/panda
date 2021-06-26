@@ -1,0 +1,100 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/satellite22.sas.
+- State has 29 bits divided into 29 mutex groups.
+- Domain contains 119 actions.
+- Domain contains 131 tasks.
+- Domain contains 213 methods.
+- The initial state contains 6 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 131
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 0
+No heuristics given, setting default ... 
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(ff;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+   1s visitime    0.22s generated nodes    100059 nodes/sec   96118 cur h   22 mod.depth   11 inserts     33972 dups     14994 size     18978 hash fail  15005 hash buckets  18967
+   2s visitime    0.42s generated nodes    255306 nodes/sec  123634 cur h   20 mod.depth   13 inserts     73420 dups     30415 size     43005 hash fail  30460 hash buckets  42960
+   3s visitime    0.60s generated nodes    510545 nodes/sec  166409 cur h   18 mod.depth   15 inserts    132179 dups     51948 size     80231 hash fail  52147 hash buckets  80032
+   4s visitime    0.78s generated nodes    745732 nodes/sec  183271 cur h   21 mod.depth   12 inserts    189952 dups     72838 size    117114 hash fail  73238 hash buckets 116714
+   5s visitime    0.97s generated nodes    881020 nodes/sec  172918 cur h   18 mod.depth   15 inserts    218800 dups     83163 size    135637 hash fail  83697 hash buckets 135103
+   6s visitime    1.17s generated nodes    991113 nodes/sec  161946 cur h   16 mod.depth   17 inserts    250223 dups     95833 size    154390 hash fail  96493 hash buckets 153730
+   7s visitime    1.36s generated nodes   1111253 nodes/sec  155965 cur h   20 mod.depth   13 inserts    277975 dups    106180 size    171795 hash fail 106989 hash buckets 170986
+Search Results
+- Search time 7.81 seconds
+- Visited list time 1.49 seconds
+- Visited list inserts 311623
+- Visited list pruned 119260
+- Visited list contains 192363
+- Visited list hash collisions 120279
+- Visited list used hash buckets 191344
+- Generated 1236783 search nodes
+  Calculated heuristic for 848947 nodes
+  One modifications 283991
+  Effectless actions 103845
+- including 283991 one modification actions
+- including 0 one modification methods
+- and       103845 progressions of effectless actions
+- Generated 108700 nodes per second
+- Final fringe contains 3010 nodes
+- Status: Solved
+- Found solution of length 33
+- Total costs of actions: 22
+==>
+1236734 switch_on[instrument0,satellite0]
+1236748 turn_to[satellite0,star0,star1]
+1236751 calibrate[satellite0,instrument0,star0]
+1236752 turn_to[satellite0,star8,star0]
+1236753 take_image[satellite0,star8,instrument0,image0]
+1236755 turn_to[satellite0,planet5,star8]
+1236756 take_image[satellite0,planet5,instrument0,image0]
+1236758 turn_to[satellite0,phenomenon10,planet5]
+1236759 take_image[satellite0,phenomenon10,instrument0,spectrograph2]
+1236762 turn_to[satellite0,star7,phenomenon10]
+1236763 take_image[satellite0,star7,instrument0,image0]
+1236764 switch_on[instrument2,satellite2]
+1236770 turn_to[satellite2,star1,star7]
+1236773 calibrate[satellite2,instrument2,star1]
+1236774 turn_to[satellite2,star3,star1]
+1236775 take_image[satellite2,star3,instrument2,thermograph1]
+1236776 turn_to[satellite2,planet9,star3]
+1236777 take_image[satellite2,planet9,instrument2,infrared3]
+1236778 turn_to[satellite2,phenomenon6,planet9]
+1236779 take_image[satellite2,phenomenon6,instrument2,infrared3]
+1236780 turn_to[satellite2,planet4,phenomenon6]
+1236781 take_image[satellite2,planet4,instrument2,thermograph1]
+root 0
+1236769 auto_calibrate[satellite2,instrument2] -> method6 1236770 1236773
+1236736 auto_calibrate[satellite0,instrument0] -> method6 1236748 1236751
+1235593 do_observation[planet9,infrared3] -> <method0;activate_instrument[satellite2,instrument2];method5;0;-1,-2,1,2> 1236764 1236769 1236776 1236777
+1235559 do_observation[star7,image0] -> <method0;activate_instrument[satellite0,instrument0];method5;0;-1,-2,1,2> 1236734 1236736 1236762 1236763
+1235512 do_observation[star8,image0] -> <method1;method1_splitted_1[satellite0,star8,image0];_splitting_method_method1_splitted_1;1;0,-1> 1236752 1236753
+1132524 do_observation[phenomenon10,spectrograph2] -> <method1;method1_splitted_1[satellite0,phenomenon10,spectrograph2];_splitting_method_method1_splitted_1;1;0,-1> 1236758 1236759
+1128735 do_observation[star3,thermograph1] -> <method1;method1_splitted_1[satellite2,star3,thermograph1];_splitting_method_method1_splitted_1;1;0,-1> 1236774 1236775
+46 do_observation[planet5,image0] -> <method1;method1_splitted_1[satellite0,planet5,image0];_splitting_method_method1_splitted_1;1;0,-1> 1236755 1236756
+30 do_observation[phenomenon6,infrared3] -> <method1;method1_splitted_1[satellite2,phenomenon6,infrared3];_splitting_method_method1_splitted_1;1;0,-1> 1236778 1236779
+13 do_observation[planet4,thermograph1] -> <method1;method1_splitted_1[satellite2,planet4,thermograph1];_splitting_method_method1_splitted_1;1;0,-1> 1236780 1236781
+0 __top[] -> __top_method 1128735 13 46 30 1235559 1235512 1235593 1132524
+<==

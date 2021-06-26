@@ -1,0 +1,70 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/woodworking6.sas.
+- State has 23 bits divided into 23 mutex groups.
+- Domain contains 25 actions.
+- Domain contains 36 tasks.
+- Domain contains 38 methods.
+- The initial state contains 8 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 9 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 36
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: greedy
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy Search
+Search Results
+- Search time 0.001 seconds
+- Visited list time 3.9e-05 seconds
+- Visited list inserts 12
+- Visited list pruned 0
+- Visited list contains 12
+- Visited list hash collisions 0
+- Visited list used hash buckets 12
+- Generated 37 search nodes
+  Calculated heuristic for 34 nodes
+  One modifications 3
+  Effectless actions 0
+- including 3 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 34000 nodes per second
+- Final fringe contains 8 nodes
+- Status: Solved
+- Found solution of length 13
+- Total costs of actions: 6
+==>
+18 do_plane[p2,rough,blue,glazed]
+22 do_saw_small[b0,p1,walnut,smooth,s6,s5]
+27 do_glaze[p2,glazer0,blue]
+30 do_glaze[p1,glazer0,blue]
+31 do_plane[p0,verysmooth,natural,glazed]
+33 do_spray_varnish[p0,spray_varnisher0,blue,smooth]
+root 0
+32 method12_splitted_5[p0,blue] -> <_splitting_method_method12_splitted_5;do_colour[p0,blue,spray_varnisher0];method1;0;-1> 33
+25 method11_splitted_1[p1,blue] -> <_splitting_method_method11_splitted_1;do_colour[p1,blue,glazer0];method2;0;-1> 30
+20 method12_splitted_5[p2,blue] -> <_splitting_method_method12_splitted_5;do_colour[p2,blue,glazer0];method2;0;-1> 27
+15 method12_splitted_2[p2,rough,smooth,untreated] -> <_splitting_method_method12_splitted_2;grindNplane[p2,rough,blue,glazed,smooth,natural,untreated];method7;0;-1> 18
+8 process[p1,blue,smooth,smooth] -> <<method11;cut_and_saw[b0,p1,walnut,smooth];method10;0;-1,1>;do_saw[b0,p1,walnut,smooth];method5;0;-1,1> 22 25
+1 method12_splitted_2[p0,verysmooth,smooth,untreated] -> <_splitting_method_method12_splitted_2;grindNplane[p0,verysmooth,natural,glazed,smooth,natural,untreated];method7;0;-1> 31
+0 __top[] -> <<__top_method;process[p2,blue,rough,smooth];method12;2;0,1,-1,-2>;process[p0,blue,verysmooth,smooth];method12;0;-1,-2,1,2,3> 1 32 8 15 20
+<==

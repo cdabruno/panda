@@ -1,0 +1,59 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/woodworking8.sas.
+- State has 90 bits divided into 90 mutex groups.
+- Domain contains 588 actions.
+- Domain contains 912 tasks.
+- Domain contains 1357 methods.
+- The initial state contains 10 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 17 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 912
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+   5s visitime    0.01s generated nodes      5002 nodes/sec     952 cur h   29 mod.depth   10 inserts      1123 dups         0 size      1123 hash fail      0 hash buckets   1123
+   9s visitime    0.01s generated nodes     10004 nodes/sec    1011 cur h   30 mod.depth   10 inserts      2339 dups         0 size      2339 hash fail      0 hash buckets   2339
+  14s visitime    0.02s generated nodes     15004 nodes/sec    1065 cur h   30 mod.depth   10 inserts      3560 dups         0 size      3560 hash fail      2 hash buckets   3558
+  18s visitime    0.03s generated nodes     20004 nodes/sec    1099 cur h   32 mod.depth    8 inserts      4796 dups         0 size      4796 hash fail      2 hash buckets   4794
+  22s visitime    0.04s generated nodes     25004 nodes/sec    1128 cur h   29 mod.depth   12 inserts      6188 dups         0 size      6188 hash fail      4 hash buckets   6184
+Reached time limit - stopping search.
+Search Results
+- Search time 22.27 seconds
+- Visited list time 0.04 seconds
+- Visited list inserts 6188
+- Visited list pruned 0
+- Visited list contains 6188
+- Visited list hash collisions 4
+- Visited list used hash buckets 6184
+- Generated 25004 search nodes
+  Calculated heuristic for 25004 nodes
+  One modifications 0
+  Effectless actions 0
+- including 0 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 1123 nodes per second
+- Final fringe contains 6653 nodes
+- Status: Timeout

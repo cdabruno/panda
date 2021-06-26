@@ -1,0 +1,95 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/pcp1.sas.
+- State has 7 bits divided into 7 mutex groups.
+- Domain contains 10 actions.
+- Domain contains 13 tasks.
+- Domain contains 13 methods.
+- The initial state contains 1 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 1 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 13
+- The problem is cyclic
+- Number of cyclic SCCs: 2
+- Number of cyclic SCCs of size 1: 2
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+Search Results
+- Search time 0.014 seconds
+- Visited list time 0.000665 seconds
+- Visited list inserts 290
+- Visited list pruned 0
+- Visited list contains 290
+- Visited list hash collisions 0
+- Visited list used hash buckets 290
+- Generated 4081 search nodes
+  Calculated heuristic for 1730 nodes
+  One modifications 2351
+  Effectless actions 0
+- including 2351 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 123571 nodes per second
+- Final fringe contains 124 nodes
+- Status: Solved
+- Found solution of length 35
+- Total costs of actions: 26
+==>
+193 t1G1[]
+256 t1G2[]
+429 t3G1[]
+1060 t3G2[]
+1555 t2G1[]
+2853 t2G2[]
+4053 t3G1[]
+4054 t3G2[]
+4055 yG1[]
+4056 yG2[]
+4057 yG1[]
+4058 yG2[]
+4059 xG1[]
+4060 xG2[]
+4061 xG1[]
+4062 xG2[]
+4063 yG1[]
+4064 yG2[]
+4065 yG1[]
+4066 yG2[]
+4067 yG1[]
+4068 yG2[]
+4069 xG1[]
+4070 xG2[]
+4071 yG1[]
+4072 yG2[]
+root 0
+4052 SG2[] -> G2_S2t3_y_y 4054 4056 4058
+2852 SG1[] -> G1_S2t3_y_y_x 4053 4055 4057 4059
+1554 SG2[] -> G2_S2t2_S_x_x 2853 4052 4060 4062
+1059 SG1[] -> G1_S2t2_S_x_y 1555 2852 4061 4063
+428 SG2[] -> G2_S2t3_S_y_y 1060 1554 4064 4066
+255 SG1[] -> G1_S2t3_S_y_y_x 429 1059 4065 4067 4069
+192 SG1[] -> G1_S2t1_S_y 193 255 4071
+4 SG2[] -> G2_S2t1_S_y_x_y 256 428 4068 4070 4072
+0 __top[] -> __top_method 192 4
+<==

@@ -1,0 +1,77 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/pcp8.sas.
+- State has 7 bits divided into 7 mutex groups.
+- Domain contains 10 actions.
+- Domain contains 13 tasks.
+- Domain contains 13 methods.
+- The initial state contains 1 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 1 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 13
+- The problem is cyclic
+- Number of cyclic SCCs: 2
+- Number of cyclic SCCs of size 1: 2
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+Search Results
+- Search time 0.001 seconds
+- Visited list time 4.5e-05 seconds
+- Visited list inserts 19
+- Visited list pruned 0
+- Visited list contains 19
+- Visited list hash collisions 0
+- Visited list used hash buckets 19
+- Generated 241 search nodes
+  Calculated heuristic for 104 nodes
+  One modifications 137
+  Effectless actions 0
+- including 137 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 104000 nodes per second
+- Final fringe contains 14 nodes
+- Status: Solved
+- Found solution of length 17
+- Total costs of actions: 12
+==>
+123 t3G1[]
+207 t3G2[]
+219 t1G1[]
+220 t1G2[]
+221 aG1[]
+222 aG2[]
+223 aG1[]
+224 aG2[]
+225 bG1[]
+226 bG2[]
+227 aG1[]
+228 aG2[]
+root 0
+218 SG2[] -> G2_S2t1_a 220 222
+206 SG1[] -> G1_S2t1_a_a 219 221 223
+122 SG1[] -> G1_S2t3_S_b_a 123 206 225 227
+6 SG2[] -> G2_S2t3_S_a_b_a 207 218 224 226 228
+0 __top[] -> __top_method 122 6
+<==

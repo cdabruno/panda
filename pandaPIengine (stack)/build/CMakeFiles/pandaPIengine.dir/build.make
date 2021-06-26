@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bruno/Desktop/pandaPIengine/src
+CMAKE_SOURCE_DIR = "/home/bruno/Desktop/panda/pandaPIengine (stack)/src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bruno/Desktop/pandaPIengine/build
+CMAKE_BINARY_DIR = "/home/bruno/Desktop/panda/pandaPIengine (stack)/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/pandaPIengine.dir/depend.make
@@ -57,129 +57,129 @@ include CMakeFiles/pandaPIengine.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/pandaPIengine.dir/flags.make
 
-/home/bruno/Desktop/pandaPIengine/src/cmdline.h: /home/bruno/Desktop/pandaPIengine/src/options.ggo
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/bruno/Desktop/pandaPIengine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating getopt parser code (cmdline.{h,c}) ..."
-	cd /home/bruno/Desktop/pandaPIengine/src && gengetopt --include-getopt --default-optional --unamed-opts -i options.ggo
+/home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/cmdline.h: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/options.ggo
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating getopt parser code (cmdline.{h,c}) ..."
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/src" && gengetopt --include-getopt --default-optional --unamed-opts -i options.ggo
 
-/home/bruno/Desktop/pandaPIengine/src/cmdline.c: /home/bruno/Desktop/pandaPIengine/src/cmdline.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/bruno/Desktop/pandaPIengine/src/cmdline.c
+/home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/cmdline.c: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/cmdline.h
+	@$(CMAKE_COMMAND) -E touch_nocreate "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/cmdline.c"
 
 CMakeFiles/pandaPIengine.dir/Debug.cpp.o: CMakeFiles/pandaPIengine.dir/flags.make
-CMakeFiles/pandaPIengine.dir/Debug.cpp.o: /home/bruno/Desktop/pandaPIengine/src/Debug.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Desktop/pandaPIengine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pandaPIengine.dir/Debug.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/Debug.cpp.o -c /home/bruno/Desktop/pandaPIengine/src/Debug.cpp
+CMakeFiles/pandaPIengine.dir/Debug.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/Debug.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pandaPIengine.dir/Debug.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/Debug.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/Debug.cpp"
 
 CMakeFiles/pandaPIengine.dir/Debug.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pandaPIengine.dir/Debug.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Desktop/pandaPIengine/src/Debug.cpp > CMakeFiles/pandaPIengine.dir/Debug.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/Debug.cpp" > CMakeFiles/pandaPIengine.dir/Debug.cpp.i
 
 CMakeFiles/pandaPIengine.dir/Debug.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pandaPIengine.dir/Debug.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Desktop/pandaPIengine/src/Debug.cpp -o CMakeFiles/pandaPIengine.dir/Debug.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/Debug.cpp" -o CMakeFiles/pandaPIengine.dir/Debug.cpp.s
 
 CMakeFiles/pandaPIengine.dir/Invariants.cpp.o: CMakeFiles/pandaPIengine.dir/flags.make
-CMakeFiles/pandaPIengine.dir/Invariants.cpp.o: /home/bruno/Desktop/pandaPIengine/src/Invariants.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Desktop/pandaPIengine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pandaPIengine.dir/Invariants.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/Invariants.cpp.o -c /home/bruno/Desktop/pandaPIengine/src/Invariants.cpp
+CMakeFiles/pandaPIengine.dir/Invariants.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/Invariants.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pandaPIengine.dir/Invariants.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/Invariants.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/Invariants.cpp"
 
 CMakeFiles/pandaPIengine.dir/Invariants.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pandaPIengine.dir/Invariants.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Desktop/pandaPIengine/src/Invariants.cpp > CMakeFiles/pandaPIengine.dir/Invariants.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/Invariants.cpp" > CMakeFiles/pandaPIengine.dir/Invariants.cpp.i
 
 CMakeFiles/pandaPIengine.dir/Invariants.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pandaPIengine.dir/Invariants.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Desktop/pandaPIengine/src/Invariants.cpp -o CMakeFiles/pandaPIengine.dir/Invariants.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/Invariants.cpp" -o CMakeFiles/pandaPIengine.dir/Invariants.cpp.s
 
 CMakeFiles/pandaPIengine.dir/Model.cpp.o: CMakeFiles/pandaPIengine.dir/flags.make
-CMakeFiles/pandaPIengine.dir/Model.cpp.o: /home/bruno/Desktop/pandaPIengine/src/Model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Desktop/pandaPIengine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pandaPIengine.dir/Model.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/Model.cpp.o -c /home/bruno/Desktop/pandaPIengine/src/Model.cpp
+CMakeFiles/pandaPIengine.dir/Model.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/Model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pandaPIengine.dir/Model.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/Model.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/Model.cpp"
 
 CMakeFiles/pandaPIengine.dir/Model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pandaPIengine.dir/Model.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Desktop/pandaPIengine/src/Model.cpp > CMakeFiles/pandaPIengine.dir/Model.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/Model.cpp" > CMakeFiles/pandaPIengine.dir/Model.cpp.i
 
 CMakeFiles/pandaPIengine.dir/Model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pandaPIengine.dir/Model.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Desktop/pandaPIengine/src/Model.cpp -o CMakeFiles/pandaPIengine.dir/Model.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/Model.cpp" -o CMakeFiles/pandaPIengine.dir/Model.cpp.s
 
 CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.o: CMakeFiles/pandaPIengine.dir/flags.make
-CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.o: /home/bruno/Desktop/pandaPIengine/src/ProgressionNetwork.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Desktop/pandaPIengine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.o -c /home/bruno/Desktop/pandaPIengine/src/ProgressionNetwork.cpp
+CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/ProgressionNetwork.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/ProgressionNetwork.cpp"
 
 CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Desktop/pandaPIengine/src/ProgressionNetwork.cpp > CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/ProgressionNetwork.cpp" > CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.i
 
 CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Desktop/pandaPIengine/src/ProgressionNetwork.cpp -o CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/ProgressionNetwork.cpp" -o CMakeFiles/pandaPIengine.dir/ProgressionNetwork.cpp.s
 
 CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.o: CMakeFiles/pandaPIengine.dir/flags.make
-CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.o: /home/bruno/Desktop/pandaPIengine/src/SearchEngine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Desktop/pandaPIengine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.o -c /home/bruno/Desktop/pandaPIengine/src/SearchEngine.cpp
+CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/SearchEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/SearchEngine.cpp"
 
 CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Desktop/pandaPIengine/src/SearchEngine.cpp > CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/SearchEngine.cpp" > CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.i
 
 CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Desktop/pandaPIengine/src/SearchEngine.cpp -o CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/SearchEngine.cpp" -o CMakeFiles/pandaPIengine.dir/SearchEngine.cpp.s
 
 CMakeFiles/pandaPIengine.dir/Util.cpp.o: CMakeFiles/pandaPIengine.dir/flags.make
-CMakeFiles/pandaPIengine.dir/Util.cpp.o: /home/bruno/Desktop/pandaPIengine/src/Util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Desktop/pandaPIengine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pandaPIengine.dir/Util.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/Util.cpp.o -c /home/bruno/Desktop/pandaPIengine/src/Util.cpp
+CMakeFiles/pandaPIengine.dir/Util.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/Util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pandaPIengine.dir/Util.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/Util.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/Util.cpp"
 
 CMakeFiles/pandaPIengine.dir/Util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pandaPIengine.dir/Util.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Desktop/pandaPIengine/src/Util.cpp > CMakeFiles/pandaPIengine.dir/Util.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/Util.cpp" > CMakeFiles/pandaPIengine.dir/Util.cpp.i
 
 CMakeFiles/pandaPIengine.dir/Util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pandaPIengine.dir/Util.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Desktop/pandaPIengine/src/Util.cpp -o CMakeFiles/pandaPIengine.dir/Util.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/Util.cpp" -o CMakeFiles/pandaPIengine.dir/Util.cpp.s
 
 CMakeFiles/pandaPIengine.dir/VisitedList.cpp.o: CMakeFiles/pandaPIengine.dir/flags.make
-CMakeFiles/pandaPIengine.dir/VisitedList.cpp.o: /home/bruno/Desktop/pandaPIengine/src/VisitedList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Desktop/pandaPIengine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pandaPIengine.dir/VisitedList.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/VisitedList.cpp.o -c /home/bruno/Desktop/pandaPIengine/src/VisitedList.cpp
+CMakeFiles/pandaPIengine.dir/VisitedList.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/VisitedList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pandaPIengine.dir/VisitedList.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/VisitedList.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/VisitedList.cpp"
 
 CMakeFiles/pandaPIengine.dir/VisitedList.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pandaPIengine.dir/VisitedList.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Desktop/pandaPIengine/src/VisitedList.cpp > CMakeFiles/pandaPIengine.dir/VisitedList.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/VisitedList.cpp" > CMakeFiles/pandaPIengine.dir/VisitedList.cpp.i
 
 CMakeFiles/pandaPIengine.dir/VisitedList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pandaPIengine.dir/VisitedList.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Desktop/pandaPIengine/src/VisitedList.cpp -o CMakeFiles/pandaPIengine.dir/VisitedList.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/VisitedList.cpp" -o CMakeFiles/pandaPIengine.dir/VisitedList.cpp.s
 
 CMakeFiles/pandaPIengine.dir/cmdline.c.o: CMakeFiles/pandaPIengine.dir/flags.make
-CMakeFiles/pandaPIengine.dir/cmdline.c.o: /home/bruno/Desktop/pandaPIengine/src/cmdline.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Desktop/pandaPIengine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/pandaPIengine.dir/cmdline.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pandaPIengine.dir/cmdline.c.o   -c /home/bruno/Desktop/pandaPIengine/src/cmdline.c
+CMakeFiles/pandaPIengine.dir/cmdline.c.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/cmdline.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/pandaPIengine.dir/cmdline.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pandaPIengine.dir/cmdline.c.o   -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/cmdline.c"
 
 CMakeFiles/pandaPIengine.dir/cmdline.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pandaPIengine.dir/cmdline.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bruno/Desktop/pandaPIengine/src/cmdline.c > CMakeFiles/pandaPIengine.dir/cmdline.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/cmdline.c" > CMakeFiles/pandaPIengine.dir/cmdline.c.i
 
 CMakeFiles/pandaPIengine.dir/cmdline.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pandaPIengine.dir/cmdline.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bruno/Desktop/pandaPIengine/src/cmdline.c -o CMakeFiles/pandaPIengine.dir/cmdline.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/cmdline.c" -o CMakeFiles/pandaPIengine.dir/cmdline.c.s
 
 CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.o: CMakeFiles/pandaPIengine.dir/flags.make
-CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.o: /home/bruno/Desktop/pandaPIengine/src/interactivePlanner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Desktop/pandaPIengine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.o -c /home/bruno/Desktop/pandaPIengine/src/interactivePlanner.cpp
+CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.o: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/interactivePlanner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.o -c "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/interactivePlanner.cpp"
 
 CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Desktop/pandaPIengine/src/interactivePlanner.cpp > CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/interactivePlanner.cpp" > CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.i
 
 CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Desktop/pandaPIengine/src/interactivePlanner.cpp -o CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bruno/Desktop/panda/pandaPIengine (stack)/src/interactivePlanner.cpp" -o CMakeFiles/pandaPIengine.dir/interactivePlanner.cpp.s
 
 # Object files for target pandaPIengine
 pandaPIengine_OBJECTS = \
@@ -215,7 +215,7 @@ pandaPIengine: intDataStructures/libintDataStructures.a
 pandaPIengine: heuristics/libheuristics.a
 pandaPIengine: heuristics/rcHeuristics/libhrc.a
 pandaPIengine: CMakeFiles/pandaPIengine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bruno/Desktop/pandaPIengine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable pandaPIengine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable pandaPIengine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pandaPIengine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -227,8 +227,8 @@ CMakeFiles/pandaPIengine.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/pandaPIengine.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/pandaPIengine.dir/clean
 
-CMakeFiles/pandaPIengine.dir/depend: /home/bruno/Desktop/pandaPIengine/src/cmdline.h
-CMakeFiles/pandaPIengine.dir/depend: /home/bruno/Desktop/pandaPIengine/src/cmdline.c
-	cd /home/bruno/Desktop/pandaPIengine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bruno/Desktop/pandaPIengine/src /home/bruno/Desktop/pandaPIengine/src /home/bruno/Desktop/pandaPIengine/build /home/bruno/Desktop/pandaPIengine/build /home/bruno/Desktop/pandaPIengine/build/CMakeFiles/pandaPIengine.dir/DependInfo.cmake --color=$(COLOR)
+CMakeFiles/pandaPIengine.dir/depend: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/cmdline.h
+CMakeFiles/pandaPIengine.dir/depend: /home/bruno/Desktop/panda/pandaPIengine\ (stack)/src/cmdline.c
+	cd "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/bruno/Desktop/panda/pandaPIengine (stack)/src" "/home/bruno/Desktop/panda/pandaPIengine (stack)/src" "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" "/home/bruno/Desktop/panda/pandaPIengine (stack)/build" "/home/bruno/Desktop/panda/pandaPIengine (stack)/build/CMakeFiles/pandaPIengine.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/pandaPIengine.dir/depend
 

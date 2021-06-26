@@ -1,0 +1,77 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/satellite16.sas.
+- State has 11 bits divided into 11 mutex groups.
+- Domain contains 43 actions.
+- Domain contains 55 tasks.
+- Domain contains 92 methods.
+- The initial state contains 2 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 55
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+Search Results
+- Search time 0.054 seconds
+- Visited list time 0.000373 seconds
+- Visited list inserts 120
+- Visited list pruned 0
+- Visited list contains 120
+- Visited list hash collisions 0
+- Visited list used hash buckets 120
+- Generated 2009 search nodes
+  Calculated heuristic for 1841 nodes
+  One modifications 160
+  Effectless actions 8
+- including 160 one modification actions
+- including 0 one modification methods
+- and       8 progressions of effectless actions
+- Generated 34092 nodes per second
+- Final fringe contains 646 nodes
+- Status: Solved
+- Found solution of length 19
+- Total costs of actions: 10
+==>
+1758 switch_on[instrument0,satellite0]
+1992 calibrate[satellite0,instrument0,star0]
+1993 turn_to[satellite0,planet2,star0]
+1994 take_image[satellite0,planet2,instrument0,infrared2]
+1995 turn_to[satellite0,planet3,planet2]
+1997 take_image[satellite0,planet3,instrument0,infrared2]
+1998 turn_to[satellite0,star4,planet3]
+1999 take_image[satellite0,star4,instrument0,infrared0]
+2000 turn_to[satellite0,planet5,star4]
+2006 take_image[satellite0,planet5,instrument0,infrared2]
+root 0
+2005 method1_splitted_1[satellite0,planet5,infrared2] -> _splitting_method_method1_splitted_1 2006
+1996 method1_splitted_1[satellite0,planet3,infrared2] -> _splitting_method_method1_splitted_1 1997
+1991 auto_calibrate[satellite0,instrument0] -> method7 1992
+1757 do_observation[planet5,infrared2] -> method1 2000 2005
+531 activate_instrument[satellite0,instrument0] -> method5 1758 1991
+301 do_observation[planet2,infrared2] -> method0 531 1993 1994
+111 do_observation[star4,infrared0] -> <method1;method1_splitted_1[satellite0,star4,infrared0];_splitting_method_method1_splitted_1;1;0,-1> 1998 1999
+3 do_observation[planet3,infrared2] -> method1 1995 1996
+0 __top[] -> __top_method 301 3 111 1757
+<==

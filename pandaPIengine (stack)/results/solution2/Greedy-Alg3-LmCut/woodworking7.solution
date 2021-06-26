@@ -1,0 +1,88 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/woodworking7.sas.
+- State has 55 bits divided into 55 mutex groups.
+- Domain contains 164 actions.
+- Domain contains 254 tasks.
+- Domain contains 320 methods.
+- The initial state contains 15 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 17 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 254
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: greedy
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy Search
+Search Results
+- Search time 0.013 seconds
+- Visited list time 0.000142 seconds
+- Visited list inserts 31
+- Visited list pruned 0
+- Visited list contains 31
+- Visited list hash collisions 0
+- Visited list used hash buckets 31
+- Generated 122 search nodes
+  Calculated heuristic for 120 nodes
+  One modifications 2
+  Effectless actions 0
+- including 2 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 9230 nodes per second
+- Final fringe contains 45 nodes
+- Status: Solved
+- Found solution of length 31
+- Total costs of actions: 12
+==>
+63 do_plane[p4,verysmooth,black,varnished]
+72 do_plane[p0,verysmooth,natural,glazed]
+85 do_spray_varnish[p4,spray_varnisher0,mauve,smooth]
+91 do_spray_varnish[p0,spray_varnisher0,black,smooth]
+94 do_saw_medium[b0,p1,walnut,smooth,s6,s5,s4]
+98 do_grind[p2,smooth,black,glazed,untreated]
+103 do_glaze[p2,glazer0,blue]
+104 do_saw_medium[b0,p3,walnut,smooth,s6,s5,s4]
+109 do_plane[p5,rough,mauve,glazed]
+116 do_immersion_varnish[p5,immersion_varnisher0,black,smooth]
+119 do_immersion_varnish[p3,immersion_varnisher0,black,smooth]
+120 do_glaze[p1,glazer0,blue]
+root 0
+112 method12_splitted_3[p5,black] -> <_splitting_method_method12_splitted_3;do_colour[p5,black,immersion_varnisher0];method0;0;-1> 116
+107 method11_splitted_2[p3,black] -> <_splitting_method_method11_splitted_2;do_colour[p3,black,immersion_varnisher0];method0;0;-1> 119
+79 do_colour[p0,black,spray_varnisher0] -> method1 91
+78 method12_splitted_3[p0,black] -> _splitting_method_method12_splitted_3 79
+69 do_colour[p4,mauve,spray_varnisher0] -> method1 85
+68 method12_splitted_3[p4,mauve] -> _splitting_method_method12_splitted_3 69
+57 method12_splitted_8[p2,smooth,verysmooth,untreated] -> <_splitting_method_method12_splitted_8;grindNplane[p2,smooth,black,glazed,verysmooth,natural,untreated];method3;0;-1> 98
+53 process[p1,blue,smooth,smooth] -> <<<<method11;method11_splitted_7[b0,p1,smooth];_splitting_method_method11_splitted_7;0;-1,1>;cut_and_saw[b0,p1,walnut,smooth];method10;0;-1,1>;do_saw[b0,p1,walnut,smooth];method8;0;-1,1>;method11_splitted_2[p1,blue];<_splitting_method_method11_splitted_2;do_colour[p1,blue,glazer0];method2;0;-1>;1;0,-1> 94 120
+45 method12_splitted_8[p5,rough,smooth,untreated] -> <_splitting_method_method12_splitted_8;grindNplane[p5,rough,mauve,glazed,smooth,natural,untreated];method7;0;-1> 109
+39 __top_method_splitted_1[p1,smooth] -> _splitting_method___top_method_splitted_1 53
+30 method12_splitted_8[p4,verysmooth,smooth,untreated] -> <_splitting_method_method12_splitted_8;grindNplane[p4,verysmooth,black,varnished,smooth,natural,untreated];method7;0;-1> 63
+17 method12_splitted_8[p0,verysmooth,smooth,untreated] -> <_splitting_method_method12_splitted_8;grindNplane[p0,verysmooth,natural,glazed,smooth,natural,untreated];method7;0;-1> 72
+14 process[p2,blue,smooth,verysmooth] -> <<method12;method12_splitted_3[p2,blue];_splitting_method_method12_splitted_3;1;0,-1>;do_colour[p2,blue,glazer0];method2;1;0,-1> 57 103
+12 __top_method_splitted_11[p5,rough,smooth] -> <_splitting_method___top_method_splitted_11;process[p5,black,rough,smooth];method12;0;-1,-2> 45 112
+9 __top_method_splitted_15[p2,blue,verysmooth] -> _splitting_method___top_method_splitted_15 14
+7 process[p3,black,smooth,smooth] -> <<<method11;method11_splitted_7[b0,p3,smooth];_splitting_method_method11_splitted_7;0;-1,1>;cut_and_saw[b0,p3,walnut,smooth];method10;0;-1,1>;do_saw[b0,p3,walnut,smooth];method8;0;-1,1> 104 107
+4 __top_method_splitted_6[p3,smooth] -> _splitting_method___top_method_splitted_6 7
+2 __top_method_splitted_14[p0,black,verysmooth] -> <_splitting_method___top_method_splitted_14;process[p0,black,verysmooth,smooth];method12;0;-1,-2> 17 78
+0 __top[] -> <__top_method;process[p4,mauve,verysmooth,smooth];method12;5;0,1,2,3,4,-1,-2> 39 4 12 2 9 30 68
+<==

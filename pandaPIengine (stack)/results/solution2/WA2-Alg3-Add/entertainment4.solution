@@ -1,0 +1,72 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/entertainment4.sas.
+- State has 20 bits divided into 20 mutex groups.
+- Domain contains 26 actions.
+- Domain contains 53 tasks.
+- Domain contains 65 methods.
+- The initial state contains 8 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 53
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(add;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+Search Results
+- Search time 0 seconds
+- Visited list time 2.5e-05 seconds
+- Visited list inserts 10
+- Visited list pruned 0
+- Visited list contains 10
+- Visited list hash collisions 0
+- Visited list used hash buckets 10
+- Generated 31 search nodes
+  Calculated heuristic for 26 nodes
+  One modifications 5
+  Effectless actions 0
+- including 5 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated -2147483648 nodes per second
+- Final fringe contains 9 nodes
+- Status: Solved
+- Found solution of length 13
+- Total costs of actions: 4
+==>
+8 plug|instance_1[dvd-1,dvd-1-scart-1,scart-cable-2,scart-cable-2-scart-1]
+15 plug|instance_1[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-1]
+23 plug|instance_1[game-console-1,game-console-1-scart-1,scart-cable-1,scart-cable-1-scart-1]
+28 plug|instance_1[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-2]
+root 0
+27 direct_av_connect[scart-cable-1,tv1-1] -> <m-dconnect-av;plug[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-2];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 28
+24 av_connect[scart-cable-1,tv1-1] -> m-connect-direct-av 27
+22 direct_av_connect[game-console-1,scart-cable-1] -> <m-dconnect-av;plug[game-console-1,game-console-1-scart-1,scart-cable-1,scart-cable-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 23
+17 av_connect[game-console-1,tv1-1] -> m-connect-rec-av-1 22 24
+14 direct_av_connect[scart-cable-2,tv1-1] -> <m-dconnect-av;plug[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 15
+9 av_connect[scart-cable-2,tv1-1] -> m-connect-direct-av 14
+7 direct_av_connect[dvd-1,scart-cable-2] -> <m-dconnect-av;plug[dvd-1,dvd-1-scart-1,scart-cable-2,scart-cable-2-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 8
+1 av_connect[dvd-1,tv1-1] -> m-connect-rec-av-1 7 9
+0 __top[] -> __top_method 1 17
+<==

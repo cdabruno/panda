@@ -1,0 +1,62 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/woodworking11.sas.
+- State has 99 bits divided into 99 mutex groups.
+- Domain contains 739 actions.
+- Domain contains 1181 tasks.
+- Domain contains 2001 methods.
+- The initial state contains 10 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 16 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 1181
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (1 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+   4s visitime    0.00s generated nodes      5010 nodes/sec    1224 cur h   22 mod.depth    8 inserts       129 dups         0 size       129 hash fail      0 hash buckets    129
+   7s visitime    0.00s generated nodes     10167 nodes/sec    1452 cur h   21 mod.depth    9 inserts       247 dups         0 size       247 hash fail      0 hash buckets    247
+   9s visitime    0.00s generated nodes     15195 nodes/sec    1617 cur h   19 mod.depth   11 inserts       350 dups         0 size       350 hash fail      0 hash buckets    350
+  12s visitime    0.00s generated nodes     20218 nodes/sec    1646 cur h   23 mod.depth    7 inserts       471 dups         0 size       471 hash fail      0 hash buckets    471
+  15s visitime    0.00s generated nodes     25278 nodes/sec    1657 cur h   21 mod.depth    9 inserts       555 dups         0 size       555 hash fail      0 hash buckets    555
+  17s visitime    0.00s generated nodes     30402 nodes/sec    1788 cur h   25 mod.depth    6 inserts       646 dups         0 size       646 hash fail      0 hash buckets    646
+  19s visitime    0.00s generated nodes     35538 nodes/sec    1857 cur h   24 mod.depth    7 inserts       746 dups         0 size       746 hash fail      0 hash buckets    746
+  22s visitime    0.01s generated nodes     40540 nodes/sec    1840 cur h   26 mod.depth    5 inserts       879 dups         0 size       879 hash fail      0 hash buckets    879
+Reached time limit - stopping search.
+Search Results
+- Search time 22.03 seconds
+- Visited list time 0.01 seconds
+- Visited list inserts 879
+- Visited list pruned 0
+- Visited list contains 879
+- Visited list hash collisions 0
+- Visited list used hash buckets 879
+- Generated 40540 search nodes
+  Calculated heuristic for 40540 nodes
+  One modifications 0
+  Effectless actions 0
+- including 0 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 1840 nodes per second
+- Final fringe contains 3959 nodes
+- Status: Timeout

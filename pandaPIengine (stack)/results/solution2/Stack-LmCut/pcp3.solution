@@ -1,0 +1,68 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/pcp3.sas.
+- State has 7 bits divided into 7 mutex groups.
+- Domain contains 10 actions.
+- Domain contains 13 tasks.
+- Domain contains 13 methods.
+- The initial state contains 1 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 1 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 13
+- The problem is cyclic
+- Number of cyclic SCCs: 2
+- Number of cyclic SCCs of size 1: 2
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(add;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Stack Search
+- Using Stack Algorithm.
+   1s visitime    0.08s generated nodes     25029 nodes/sec   19179 cur h 1241 mod.depth 1226 inserts      1691 dups         0 size      1691 hash fail      0 hash buckets   1691
+   3s visitime    0.23s generated nodes     35047 nodes/sec    9279 cur h 1737 mod.depth 1722 inserts      2368 dups         0 size      2368 hash fail      0 hash buckets   2368
+   4s visitime    0.29s generated nodes     40047 nodes/sec    8353 cur h 1980 mod.depth 1966 inserts      2705 dups         0 size      2705 hash fail      1 hash buckets   2704
+   5s visitime    0.35s generated nodes     45047 nodes/sec    7732 cur h 2237 mod.depth 2216 inserts      3044 dups         0 size      3044 hash fail      1 hash buckets   3043
+   7s visitime    0.43s generated nodes     50058 nodes/sec    7147 cur h 2479 mod.depth 2466 inserts      3383 dups         0 size      3383 hash fail      1 hash buckets   3382
+   8s visitime    0.54s generated nodes     55069 nodes/sec    6170 cur h 2722 mod.depth 2708 inserts      3720 dups         0 size      3720 hash fail      1 hash buckets   3719
+  10s visitime    0.63s generated nodes     60069 nodes/sec    5783 cur h 2966 mod.depth 2952 inserts      4057 dups         0 size      4057 hash fail      1 hash buckets   4056
+  12s visitime    0.75s generated nodes     65077 nodes/sec    5287 cur h 3211 mod.depth 3198 inserts      4395 dups         0 size      4395 hash fail      1 hash buckets   4394
+  14s visitime    0.88s generated nodes     70081 nodes/sec    4887 cur h 3461 mod.depth 3440 inserts      4732 dups         0 size      4732 hash fail      1 hash buckets   4731
+  16s visitime    1.00s generated nodes     75092 nodes/sec    4602 cur h 3700 mod.depth 3686 inserts      5070 dups         0 size      5070 hash fail      1 hash buckets   5069
+  18s visitime    1.16s generated nodes     80092 nodes/sec    4249 cur h 3947 mod.depth 3934 inserts      5408 dups         0 size      5408 hash fail      1 hash buckets   5407
+  21s visitime    1.33s generated nodes     85100 nodes/sec    3944 cur h 4193 mod.depth 4178 inserts      5746 dups         0 size      5746 hash fail      1 hash buckets   5745
+Reached time limit - stopping search.
+Search Results
+- Search time 21.57 seconds
+- Visited list time 1.33 seconds
+- Visited list inserts 5746
+- Visited list pruned 0
+- Visited list contains 5746
+- Visited list hash collisions 1
+- Visited list used hash buckets 5745
+- Generated 85100 search nodes
+  Calculated heuristic for 34472 nodes
+  One modifications 50628
+  Effectless actions 0
+- including 50628 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 1597 nodes per second
+- Final fringe contains 4708 nodes
+- Status: Timeout

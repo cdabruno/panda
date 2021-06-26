@@ -1,0 +1,78 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/satellite8.sas.
+- State has 9 bits divided into 9 mutex groups.
+- Domain contains 21 actions.
+- Domain contains 29 tasks.
+- Domain contains 37 methods.
+- The initial state contains 2 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 29
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Stack Search
+- Using Stack Algorithm.
+Search Results
+- Search time 0.001 seconds
+- Visited list time 4.4e-05 seconds
+- Visited list inserts 13
+- Visited list pruned 0
+- Visited list contains 13
+- Visited list hash collisions 0
+- Visited list used hash buckets 13
+- Generated 67 search nodes
+  Calculated heuristic for 48 nodes
+  One modifications 16
+  Effectless actions 3
+- including 16 one modification actions
+- including 0 one modification methods
+- and       3 progressions of effectless actions
+- Generated 48000 nodes per second
+- Final fringe contains 13 nodes
+- Status: Solved
+- Found solution of length 21
+- Total costs of actions: 13
+==>
+28 switch_on[instrument01,satellite0]
+41 turn_to[satellite0,GroundStation0,Phenomenon6]
+46 calibrate[satellite0,instrument01,GroundStation0]
+51 turn_to[satellite0,Phenomenon4,GroundStation0]
+52 take_image[satellite0,Phenomenon4,instrument01,thermograph]
+53 switch_off[instrument01,satellite0]
+54 switch_on[instrument02,satellite0]
+56 turn_to[satellite0,GroundStation0,Phenomenon4]
+61 calibrate[satellite0,instrument02,GroundStation0]
+62 turn_to[satellite0,Phenomenon6,GroundStation0]
+63 take_image[satellite0,Phenomenon6,instrument02,x_ray]
+64 turn_to[satellite0,Star5,Phenomenon6]
+65 take_image[satellite0,Star5,instrument02,x_ray]
+root 0
+55 auto_calibrate[satellite0,instrument02] -> method6 56 61
+36 auto_calibrate[satellite0,instrument01] -> method6 41 46
+27 activate_instrument[satellite0,instrument02] -> method4 53 54 55
+26 activate_instrument[satellite0,instrument01] -> method5 28 36
+21 do_observation[Phenomenon4,thermograph] -> method0 26 51 52
+15 do_observation[Star5,x_ray] -> method0 27 64 65
+2 do_observation[Phenomenon6,x_ray] -> <method1;method1_splitted_1[satellite0,Phenomenon6,x_ray];_splitting_method_method1_splitted_1;1;0,-1> 62 63
+0 __top[] -> __top_method 21 15 2
+<==

@@ -1,0 +1,133 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/transport10.sas.
+- State has 31 bits divided into 31 mutex groups.
+- Domain contains 80 actions.
+- Domain contains 116 tasks.
+- Domain contains 102 methods.
+- The initial state contains 10 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 114
+- The problem is cyclic
+- Number of cyclic SCCs: 1
+- Number of cyclic SCCs of size 1: 0
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(add;distance;correct count)
+Search config:
+ - type: greedy
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy Search
+Search Results
+- Search time 0.006 seconds
+- Visited list time 0.00081 seconds
+- Visited list inserts 144
+- Visited list pruned 20
+- Visited list contains 124
+- Visited list hash collisions 20
+- Visited list used hash buckets 124
+- Generated 609 search nodes
+  Calculated heuristic for 515 nodes
+  One modifications 31
+  Effectless actions 63
+- including 31 one modification actions
+- including 0 one modification methods
+- and       63 progressions of effectless actions
+- Generated 85833 nodes per second
+- Final fringe contains 334 nodes
+- Status: Solved
+- Found solution of length 73
+- Total costs of actions: 32
+==>
+11 noop[truck-0,city-loc-6]
+33 noop[truck-0,city-loc-6]
+41 noop[truck-0,city-loc-6]
+293 pick-up[truck-0,city-loc-6,package-5,capacity-2,capacity-3]
+306 drive[truck-0,city-loc-6,city-loc-0]
+307 noop[truck-0,city-loc-0]
+308 noop[truck-0,city-loc-0]
+452 drop[truck-0,city-loc-0,package-5,capacity-2,capacity-3]
+453 pick-up[truck-0,city-loc-0,package-2,capacity-2,capacity-3]
+466 drive[truck-0,city-loc-0,city-loc-6]
+473 drop[truck-0,city-loc-6,package-2,capacity-2,capacity-3]
+478 pick-up[truck-0,city-loc-6,package-0,capacity-2,capacity-3]
+496 drive[truck-0,city-loc-6,city-loc-3]
+497 noop[truck-0,city-loc-3]
+526 drop[truck-0,city-loc-3,package-0,capacity-2,capacity-3]
+527 pick-up[truck-0,city-loc-3,package-1,capacity-2,capacity-3]
+531 drive[truck-0,city-loc-3,city-loc-6]
+541 drop[truck-0,city-loc-6,package-1,capacity-2,capacity-3]
+543 pick-up[truck-0,city-loc-6,package-6,capacity-2,capacity-3]
+551 drive[truck-0,city-loc-6,city-loc-3]
+552 noop[truck-0,city-loc-3]
+560 drop[truck-0,city-loc-3,package-6,capacity-2,capacity-3]
+561 pick-up[truck-0,city-loc-3,package-4,capacity-2,capacity-3]
+566 drive[truck-0,city-loc-3,city-loc-6]
+574 drive[truck-0,city-loc-6,city-loc-0]
+577 pick-up[truck-0,city-loc-0,package-3,capacity-1,capacity-2]
+582 pick-up[truck-0,city-loc-0,package-7,capacity-0,capacity-1]
+588 drive[truck-0,city-loc-0,city-loc-6]
+600 drop[truck-0,city-loc-6,package-7,capacity-0,capacity-1]
+601 drop[truck-0,city-loc-6,package-4,capacity-1,capacity-2]
+602 drive[truck-0,city-loc-6,city-loc-3]
+607 drop[truck-0,city-loc-3,package-3,capacity-2,capacity-3]
+root 0
+606 unload[truck-0,city-loc-3,package-3] -> m-unload 607
+594 unload[truck-0,city-loc-6,package-7] -> m-unload 600
+587 get-to[truck-0,city-loc-6] -> m-drive-to 588
+581 get-to[truck-0,city-loc-3] -> m-drive-to 602
+576 load[truck-0,city-loc-0,package-7] -> m-load 582
+573 unload[truck-0,city-loc-6,package-4] -> m-unload 601
+565 get-to[truck-0,city-loc-6] -> m-drive-to 566
+559 load[truck-0,city-loc-3,package-4] -> m-load 561
+556 unload[truck-0,city-loc-3,package-6] -> m-unload 560
+546 get-to[truck-0,city-loc-3] -> m-i-am-there 552
+538 unload[truck-0,city-loc-6,package-1] -> m-unload 541
+530 get-to[truck-0,city-loc-6] -> m-drive-to 531
+525 unload[truck-0,city-loc-3,package-0] -> m-unload 526
+510 load[truck-0,city-loc-3,package-1] -> m-load 527
+480 get-to[truck-0,city-loc-3] -> m-i-am-there 497
+469 unload[truck-0,city-loc-6,package-2] -> m-unload 473
+457 get-to[truck-0,city-loc-6] -> m-drive-to 466
+444 load[truck-0,city-loc-0,package-2] -> m-load 453
+443 load[truck-0,city-loc-0,package-3] -> m-load 577
+440 unload[truck-0,city-loc-0,package-5] -> m-unload 452
+303 get-to[truck-0,city-loc-0] -> m-i-am-there 308
+63 get-to[truck-0,city-loc-0] -> m-i-am-there 307
+60 m-deliver_splitted_1[truck-0,package-3] -> _splitting_method_m-deliver_splitted_1 63 443
+57 load[truck-0,city-loc-6,package-0] -> m-load 478
+54 get-to[truck-0,city-loc-0] -> m-drive-to 574
+51 get-to[truck-0,city-loc-3] -> m-drive-to 496
+49 load[truck-0,city-loc-6,package-6] -> m-load 543
+45 get-to[truck-0,city-loc-0] -> m-drive-to 306
+40 get-to[truck-0,city-loc-6] -> m-i-am-there 41
+32 get-to[truck-0,city-loc-6] -> m-i-am-there 33
+26 get-to[truck-0,city-loc-3] -> m-drive-to 551
+23 load[truck-0,city-loc-6,package-5] -> m-load 293
+22 m-deliver_splitted_1[truck-0,package-4] -> _splitting_method_m-deliver_splitted_1 26 559
+20 m-deliver_splitted_1[truck-0,package-2] -> _splitting_method_m-deliver_splitted_1 45 444
+18 m-deliver_splitted_1[truck-0,package-6] -> _splitting_method_m-deliver_splitted_1 32 49
+16 m-deliver_splitted_1[truck-0,package-0] -> _splitting_method_m-deliver_splitted_1 40 57
+10 get-to[truck-0,city-loc-6] -> m-i-am-there 11
+6 m-deliver_splitted_1[truck-0,package-5] -> _splitting_method_m-deliver_splitted_1 10 23
+4 m-deliver_splitted_1[truck-0,package-7] -> _splitting_method_m-deliver_splitted_1 54 576
+2 m-deliver_splitted_1[truck-0,package-1] -> _splitting_method_m-deliver_splitted_1 51 510
+0 __top[] -> <<<<<<<<__top_method;deliver[package-7,city-loc-6];m-deliver;7;0,1,2,3,4,5,6,-1,-2,-3>;deliver[package-6,city-loc-3];m-deliver;6;0,1,2,3,4,5,-1,-2,-3,7,8,9>;deliver[package-5,city-loc-0];m-deliver;5;0,1,2,3,4,-1,-2,-3,6,7,8,9,10,11>;deliver[package-4,city-loc-6];m-deliver;4;0,1,2,3,-1,-2,-3,5,6,7,8,9,10,11,12,13>;deliver[package-3,city-loc-3];m-deliver;3;0,1,2,-1,-2,-3,4,5,6,7,8,9,10,11,12,13,14,15>;deliver[package-2,city-loc-6];m-deliver;2;0,1,-1,-2,-3,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17>;deliver[package-1,city-loc-6];m-deliver;1;0,-1,-2,-3,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19>;deliver[package-0,city-loc-3];m-deliver;0;-1,-2,-3,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21> 16 480 525 2 530 538 20 457 469 60 581 606 22 565 573 6 303 440 18 546 556 4 587 594
+<==

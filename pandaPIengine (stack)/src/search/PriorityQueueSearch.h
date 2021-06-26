@@ -12,6 +12,10 @@
 #include "../heuristics/hhZero.h"
 #include "../heuristics/rcHeuristics/hhRC.h"
 
+#include "fringes/StackOrderFringe.h"
+
+
+
 #ifdef LMCOUNTHEURISTIC
 #include "../heuristics/landmarks/hhLMCount.h"
 #endif
@@ -20,7 +24,7 @@
 #include <iomanip>
 #include <sys/time.h>
 #include <Heuristic.h>
-#include <stack>
+
 
 namespace progression {
 
@@ -34,17 +38,16 @@ namespace progression {
         template<class VisitedList, class Fringe>
         void
         search(Model *htn, searchNode *tnI, int timeLimit, bool suboptimalSearch, bool printSolution, Heuristic **hF,
-               int hLength, VisitedList &visitedList, Fringe &fringe) {
+               int hLength, VisitedList &visitedList, Fringe &fringe, int flagStack, int flagHeuristic) {
             timeval tp;
             gettimeofday(&tp, NULL);
+            
             long startT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
             long currentT;
             long lastOutput = startT;
             bool reachedTimeLimit = false;
             const int checkAfter = CHECKAFTER;
             int lastCheck = 0;
-
-            std::stack<searchNode*> fringeStack;
 
             searchNode *tnSol = nullptr;
             bool continueSearch = true;
@@ -58,171 +61,360 @@ namespace progression {
             } else {
                 cout << "- Search is stopped after first solution is found." << endl;
             }
-
-            fringe.printTypeInfo();
-
-            // compute the heuristic
-            tnI->heuristicValue = new int[hLength];
-            for (int i = 0; i < hLength; i++) {
-                tnI->heuristicValue[i] = 0;
+            if(!flagStack){
+                cout << "- Utilizing heuristics." << endl;
             }
 
+            fringe.printTypeInfo();
+            if(flagStack){
+                cout << "- Using Stack Algorithm." << endl;
+            }
+            
+            // compute the heuristic
+            if(!flagHeuristic){
+                tnI->heuristicValue = new int[hLength];
+                for (int i = 0; i < hLength; i++) {
+                    tnI->heuristicValue[i] = 0;
+                }
+            }
             
 
             // add initial search node to queue
             //if (visitedList.insertVisi(tnI))
-            fringeStack.push(tnI);
-            assert(!fringeStack.empty());
+            fringe.push(tnI);
+            assert(!fringe.isEmpty());
 
             int numSearchNodes = 1;
 
-            while (!fringeStack.empty()) {
-                searchNode *n = fringeStack.top();
-                fringeStack.pop();
-                assert(n != nullptr);
+            if(!flagStack){
+                while (!fringe.isEmpty()) {
+                    searchNode *n = fringe.pop();
+                    assert(n != nullptr);
 
-                // check whether we have seen this search node
-                if (!suboptimalSearch && !visitedList.insertVisi(n)) {
-                    delete n;
-                    continue;
-                }
-                //assert(!visitedList.insertVisi(n));
+                    // check whether we have seen this search node
+                    if (!suboptimalSearch && !visitedList.insertVisi(n)) {
+                        delete n;
+                        continue;
+                    }
+                    //assert(!visitedList.insertVisi(n));
 
-                if (!suboptimalSearch && htn->isGoal(n)) {
-                    // A non-early goal test makes only sense in an optimal planning setting.
-                    // -> continuing search makes not really sense here
-                    gettimeofday(&tp, NULL);
-                    currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
-                    tnSol = handleNewSolution(n, tnSol, currentT - startT);
-                    continueSearch = this->optimzeSol;
+                    if (!suboptimalSearch && htn->isGoal(n)) {
+                        // A non-early goal test makes only sense in an optimal planning setting.
+                        // -> continuing search makes not really sense here
+                        gettimeofday(&tp, NULL);
+                        currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+                        tnSol = handleNewSolution(n, tnSol, currentT - startT);
+                        continueSearch = this->optimzeSol;
+                        if (!continueSearch)
+                            break;
+                    }
+
+                    if (n->numAbstract == 0) {
+                        for (int i = 0; i < n->numPrimitive; i++) {
+                            if (!htn->isApplicable(n, n->unconstraintPrimitive[i]->task))
+                                continue;
+                            searchNode *n2 = htn->apply(n, i);
+                            numSearchNodes++;
+                            // check whether we have seen this one already
+                            if (suboptimalSearch && !visitedList.insertVisi(n2)) {
+                                delete n2;
+                                continue;
+                            }
+                            //assert(!visitedList.insertVisi(n2));
+
+
+                            // compute the heuristic
+                            if(!flagStack){
+                                n2->heuristicValue = new int[hLength];
+                                for (int i = 0; i < hLength; i++) {
+                                    hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
+                                }
+                            }
+                            
+                            
+                            if (!n2->goalReachable) { // progression has detected unsol
+                                delete n2;
+                                continue;
+                            }
+
+                            assert(n2->goalReachable || (!htn->isGoal(n2))); // otherwise the heuristic is not save
+
+                            if (suboptimalSearch && htn->isGoal(n2)) {
+                                gettimeofday(&tp, NULL);
+                                currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+                                tnSol = handleNewSolution(n2, tnSol, currentT - startT);
+                                continueSearch = this->optimzeSol;
+                                if (!continueSearch)
+                                    break;
+                            }
+
+                            fringe.push(n2);
+
+                        }
+                    }
+
                     if (!continueSearch)
                         break;
-                }
 
-                if (n->numAbstract == 0) {
-                    for (int i = 0; i < n->numPrimitive; i++) {
-                        if (!htn->isApplicable(n, n->unconstraintPrimitive[i]->task))
-                            continue;
-                        searchNode *n2 = htn->apply(n, i);
-                        numSearchNodes++;
-                        if (!n2->goalReachable) { // progression has detected unsol
-                            delete n2;
-                            continue;
+                    if (n->numAbstract > 0) {
+                        int decomposedStep = rand() % n->numAbstract;
+                        int task = n->unconstraintAbstract[decomposedStep]->task;
+
+                        for (int i = 0; i < htn->numMethodsForTask[task]; i++) {
+                            int method = htn->taskToMethods[task][i];
+                            searchNode *n2 = htn->decompose(n, decomposedStep, method);
+                            numSearchNodes++;
+                            // check whether we have seen this one already
+                            if (suboptimalSearch && !visitedList.insertVisi(n2)) {
+                                delete n2;
+                                continue;
+                            }
+                            //assert(!visitedList.insertVisi(n2));
+
+                            // compute the heuristic
+                            n2->heuristicValue = new int[hLength];
+                            for (int i = 0; i < hLength; i++) {
+                                hF[i]->setHeuristicValue(n2, n, decomposedStep, method);
+                            }
+                            
+                            if (!n2->goalReachable) { // decomposition has detected unsol
+                                delete n2;
+                                continue; // with next method
+                            }
+
+
+                            assert(n2->goalReachable || (!htn->isGoal(n2))); // otherwise the heuristic is not save
+
+                            if (suboptimalSearch && htn->isGoal(n2)) {
+                                gettimeofday(&tp, NULL);
+                                currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+                                tnSol = handleNewSolution(n2, tnSol, currentT - startT);
+                                continueSearch = this->optimzeSol;
+                                if (!continueSearch)
+                                    break;
+
+                            }
+                            fringe.push(n2);
+
                         }
-
-                        // check whether we have seen this one already
-                        if (suboptimalSearch && !visitedList.insertVisi(n2)) {
-                            delete n2;
-                            continue;
-                        }
-                        //assert(!visitedList.insertVisi(n2));
-
-
-                        // compute the heuristic
-                        n2->heuristicValue = new int[hLength];
-                        for (int i = 0; i < hLength; i++) {
-                            hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
-                        }
-
-                        assert(n2->goalReachable || (!htn->isGoal(n2))); // otherwise the heuristic is not save
-
-                        if (suboptimalSearch && htn->isGoal(n2)) {
-                            gettimeofday(&tp, NULL);
-                            currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
-                            tnSol = handleNewSolution(n2, tnSol, currentT - startT);
-                            continueSearch = this->optimzeSol;
-                            if (!continueSearch)
-                                break;
-                        }
-
-                        fringeStack.push(n2);
-
                     }
-                }
 
-                if (!continueSearch)
-                    break;
 
-                if (n->numAbstract > 0) {
-                    int decomposedStep = rand() % n->numAbstract;
-                    int task = n->unconstraintAbstract[decomposedStep]->task;
+                    int allnodes = numSearchNodes + htn->numOneModActions + htn->numOneModMethods + htn->numEffLessProg;
 
-                    for (int i = 0; i < htn->numMethodsForTask[task]; i++) {
-                        int method = htn->taskToMethods[task][i];
-                        searchNode *n2 = htn->decompose(n, decomposedStep, method);
-                        numSearchNodes++;
-                        if (!n2->goalReachable) { // decomposition has detected unsol
-                            delete n2;
-                            continue; // with next method
+                    if (allnodes - lastCheck >= checkAfter) {
+                        lastCheck = allnodes;
+
+                        gettimeofday(&tp, NULL);
+                        currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+
+                        if (((currentT - lastOutput) / 1000) > 0) {
+                            cout << setw(4) << int((currentT - startT) / 1000) << "s "
+                                << "visitime " << setw(7) << fixed << setprecision(2) << visitedList.time / 1000 << "s"
+                                << " generated nodes " << setw(9) << allnodes
+                                << " nodes/sec " << setw(7) << int(double(allnodes) / (currentT - startT) * 1000)
+                                << " cur h " << setw(4) << n->heuristicValue[0]
+                                << " mod.depth " << setw(4) << n->modificationDepth
+                                << " inserts " << setw(9) << visitedList.attemptedInsertions
+                                << " dups " << setw(9) << visitedList.attemptedInsertions - visitedList.uniqueInsertions
+                                << " size " << setw(9) << visitedList.uniqueInsertions
+                                << " hash fail " << setw(6) << visitedList.subHashCollision
+                                << " hash buckets " << setw(6) << visitedList.attemptedInsertions - visitedList.subHashCollision	
+                                << endl;
+                            lastOutput = currentT;
                         }
-
-                        // check whether we have seen this one already
-                        if (suboptimalSearch && !visitedList.insertVisi(n2)) {
-                            delete n2;
-                            continue;
+                        if ((timeLimit > 0) && ((currentT - startT) / 1000 > timeLimit)) {
+                            reachedTimeLimit = true;
+                            cout << "Reached time limit - stopping search." << endl;
+                            break;
                         }
-                        //assert(!visitedList.insertVisi(n2));
-
-                        // compute the heuristic
-                        n2->heuristicValue = new int[hLength];
-                        for (int i = 0; i < hLength; i++) {
-                            hF[i]->setHeuristicValue(n2, n, decomposedStep, method);
-                        }
-
-                        assert(n2->goalReachable || (!htn->isGoal(n2))); // otherwise the heuristic is not save
-
-                        if (suboptimalSearch && htn->isGoal(n2)) {
-                            gettimeofday(&tp, NULL);
-                            currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
-                            tnSol = handleNewSolution(n2, tnSol, currentT - startT);
-                            continueSearch = this->optimzeSol;
-                            if (!continueSearch)
-                                break;
-
-                        }
-                        fringeStack.push(n2);
-
                     }
+
+                    if (visitedList.canDeleteProcessedNodes)
+                        delete n;
                 }
-
-
-                int allnodes = numSearchNodes + htn->numOneModActions + htn->numOneModMethods + htn->numEffLessProg;
-
-                if (allnodes - lastCheck >= checkAfter) {
-                    lastCheck = allnodes;
-
-                    gettimeofday(&tp, NULL);
-                    currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
-
-                    if (((currentT - lastOutput) / 1000) > 0) {
-                        cout << setw(4) << int((currentT - startT) / 1000) << "s "
-                             << "visitime " << setw(7) << fixed << setprecision(2) << visitedList.time / 1000 << "s"
-                             << " generated nodes " << setw(9) << allnodes
-                             << " nodes/sec " << setw(7) << int(double(allnodes) / (currentT - startT) * 1000)
-                             << " cur h " << setw(4) << n->heuristicValue[0]
-                             << " mod.depth " << setw(4) << n->modificationDepth
-                             << " inserts " << setw(9) << visitedList.attemptedInsertions
-                             << " dups " << setw(9) << visitedList.attemptedInsertions - visitedList.uniqueInsertions
-                             << " size " << setw(9) << visitedList.uniqueInsertions
-                             << " hash fail " << setw(6) << visitedList.subHashCollision
-							 << " hash buckets " << setw(6) << visitedList.attemptedInsertions - visitedList.subHashCollision	
-                             << endl;
-                        lastOutput = currentT;
-                    }
-                    if ((timeLimit > 0) && ((currentT - startT) / 1000 > timeLimit)) {
-                        reachedTimeLimit = true;
-                        cout << "Reached time limit - stopping search." << endl;
-                        break;
-                    }
-                }
-
-                if (visitedList.canDeleteProcessedNodes)
-                    delete n;
+                
             }
+
+            else{
+
+                
+                StackOrderFringe children(hLength);
+
+                while (!fringe.isEmpty()) {
+                    searchNode *n = fringe.pop();
+                    assert(n != nullptr);
+
+                    // check whether we have seen this search node
+                    if (!suboptimalSearch && !visitedList.insertVisi(n)) {
+                        delete n;
+                        continue;
+                    }
+                    //assert(!visitedList.insertVisi(n));
+
+                    if (!suboptimalSearch && htn->isGoal(n)) {
+                        // A non-early goal test makes only sense in an optimal planning setting.
+                        // -> continuing search makes not really sense here
+                        gettimeofday(&tp, NULL);
+                        currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+                        tnSol = handleNewSolution(n, tnSol, currentT - startT);
+                        continueSearch = this->optimzeSol;
+                        if (!continueSearch)
+                            break;
+                    }
+
+                    if (n->numAbstract == 0) {
+                        for (int i = 0; i < n->numPrimitive; i++) {
+                            if (!htn->isApplicable(n, n->unconstraintPrimitive[i]->task))
+                                continue;
+                            searchNode *n2 = htn->apply(n, i);
+                            numSearchNodes++;
+                            // check whether we have seen this one already
+                            if (suboptimalSearch && !visitedList.insertVisi(n2)) {
+                                delete n2;
+                                continue;
+                            }
+                            //assert(!visitedList.insertVisi(n2));
+
+
+                            // compute the heuristic
+                            if(flagHeuristic){
+                                n2->heuristicValue = new int[hLength];
+                                for (int i = 0; i < hLength; i++) {
+                                    hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
+                                }
+                            }
+                            
+                            
+                            if (!n2->goalReachable) { // progression has detected unsol
+                                delete n2;
+                                continue;
+                            }
+
+                            assert(n2->goalReachable || (!htn->isGoal(n2))); // otherwise the heuristic is not save
+
+                            if (suboptimalSearch && htn->isGoal(n2)) {
+                                gettimeofday(&tp, NULL);
+                                currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+                                tnSol = handleNewSolution(n2, tnSol, currentT - startT);
+                                continueSearch = this->optimzeSol;
+                                if (!continueSearch)
+                                    break;
+                            }
+                            if(flagHeuristic){
+                                children.push(n2);
+                            }
+                            else{
+                                fringe.push(n2);
+                            }
+                            
+
+                        }
+                    }
+
+                    if (!continueSearch)
+                        break;
+
+                    if (n->numAbstract > 0) {
+                        int decomposedStep = rand() % n->numAbstract;
+                        int task = n->unconstraintAbstract[decomposedStep]->task;
+
+                        for (int i = 0; i < htn->numMethodsForTask[task]; i++) {
+                            int method = htn->taskToMethods[task][i];
+                            searchNode *n2 = htn->decompose(n, decomposedStep, method);
+                            numSearchNodes++;
+                            // check whether we have seen this one already
+                            if (suboptimalSearch && !visitedList.insertVisi(n2)) {
+                                delete n2;
+                                continue;
+                            }
+                            //assert(!visitedList.insertVisi(n2));
+
+                            if(flagHeuristic){
+                                n2->heuristicValue = new int[hLength];
+                                for (int i = 0; i < hLength; i++) {
+                                    hF[i]->setHeuristicValue(n2, n, decomposedStep, method);
+                                }
+                            }
+                            
+                            
+                            
+                            if (!n2->goalReachable) { // decomposition has detected unsol
+                                delete n2;
+                                continue; // with next method
+                            }
+
+
+                            assert(n2->goalReachable || (!htn->isGoal(n2))); // otherwise the heuristic is not save
+
+                            if (suboptimalSearch && htn->isGoal(n2)) {
+                                gettimeofday(&tp, NULL);
+                                currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+                                tnSol = handleNewSolution(n2, tnSol, currentT - startT);
+                                continueSearch = this->optimzeSol;
+                                if (!continueSearch)
+                                    break;
+
+                            }
+                            if(flagHeuristic){
+                                children.push(n2);
+                            }
+                            else{
+                                fringe.push(n2);
+                            }
+
+                        }
+                    }
+
+                    if(flagHeuristic){
+                        while(!children.isEmpty()){
+                            fringe.push(children.pop());
+                        }
+                    }
+                    
+
+
+                    int allnodes = numSearchNodes + htn->numOneModActions + htn->numOneModMethods + htn->numEffLessProg;
+
+                    if (allnodes - lastCheck >= checkAfter) {
+                        lastCheck = allnodes;
+
+                        gettimeofday(&tp, NULL);
+                        currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+
+                        if (((currentT - lastOutput) / 1000) > 0) {
+                            cout << setw(4) << int((currentT - startT) / 1000) << "s "
+                                << "visitime " << setw(7) << fixed << setprecision(2) << visitedList.time / 1000 << "s"
+                                << " generated nodes " << setw(9) << allnodes
+                                << " nodes/sec " << setw(7) << int(double(allnodes) / (currentT - startT) * 1000)
+                                << " cur h " << setw(4) << n->heuristicValue[0]
+                                << " mod.depth " << setw(4) << n->modificationDepth
+                                << " inserts " << setw(9) << visitedList.attemptedInsertions
+                                << " dups " << setw(9) << visitedList.attemptedInsertions - visitedList.uniqueInsertions
+                                << " size " << setw(9) << visitedList.uniqueInsertions
+                                << " hash fail " << setw(6) << visitedList.subHashCollision
+                                << " hash buckets " << setw(6) << visitedList.attemptedInsertions - visitedList.subHashCollision	
+                                << endl;
+                            lastOutput = currentT;
+                        }
+                        if ((timeLimit > 0) && ((currentT - startT) / 1000 > timeLimit)) {
+                            reachedTimeLimit = true;
+                            cout << "Reached time limit - stopping search." << endl;
+                            break;
+                        }
+                    }
+
+                    if (visitedList.canDeleteProcessedNodes)
+                        delete n;
+                }
+            }
+
+            
+            
             gettimeofday(&tp, NULL);
             currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
             cout << "Search Results" << endl;
-            cout << "- Search time" << double(currentT - startT) / 1000 << " seconds" << endl;
+            cout << "- Search time " << double(currentT - startT) / 1000 << " seconds" << endl;
             cout << "- Visited list time " << visitedList.time / 1000 << " seconds" << endl;
             cout << "- Visited list inserts " << visitedList.attemptedInsertions << endl;
             cout << "- Visited list pruned " << visitedList.attemptedInsertions - visitedList.uniqueInsertions << endl;
@@ -240,7 +432,7 @@ namespace progression {
             cout << "- and       " << (htn->numEffLessProg) << " progressions of effectless actions" << endl;
             cout << "- Generated " << int(double(numSearchNodes) / (currentT - startT) * 1000) << " nodes per second"
                  << endl;
-            cout << "- Final fringe contains " << fringeStack.size() << " nodes" << endl;
+            cout << "- Final fringe contains " << fringe.size() << " nodes" << endl;
             if (this->foundSols > 1) {
                 cout << "- Found " << this->foundSols << " solutions." << endl;
                 cout << "  - first solution after " << this->firstSolTime << "ms." << endl;
@@ -269,8 +461,8 @@ namespace progression {
 
 #ifndef NDEBUG
             cout << "Deleting elements in fringe..." << endl;
-            while (!fringeStack.isEmpty()) {
-                searchNode *n = fringeStack.pop();
+            while (!fringe.isEmpty()) {
+                searchNode *n = fringe.pop();
                 delete n;
             }
             delete tnSol;

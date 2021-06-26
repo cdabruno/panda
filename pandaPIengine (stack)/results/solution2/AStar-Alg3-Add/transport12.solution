@@ -1,0 +1,106 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/transport12.sas.
+- State has 32 bits divided into 32 mutex groups.
+- Domain contains 82 actions.
+- Domain contains 129 tasks.
+- Domain contains 131 methods.
+- The initial state contains 8 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 121
+- The problem is cyclic
+- Number of cyclic SCCs: 2
+- Number of cyclic SCCs of size 1: 0
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(add;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+Search Results
+- Search time 0.048 seconds
+- Visited list time 0.007186 seconds
+- Visited list inserts 1319
+- Visited list pruned 267
+- Visited list contains 1052
+- Visited list hash collisions 267
+- Visited list used hash buckets 1052
+- Generated 5317 search nodes
+  Calculated heuristic for 4156 nodes
+  One modifications 1050
+  Effectless actions 111
+- including 1050 one modification actions
+- including 0 one modification methods
+- and       111 progressions of effectless actions
+- Generated 86583 nodes per second
+- Final fringe contains 1133 nodes
+- Status: Solved
+- Found solution of length 45
+- Total costs of actions: 18
+==>
+18 noop[truck-0,city-loc-1]
+83 pick-up[truck-0,city-loc-1,package-1,capacity-1,capacity-2]
+4357 drive[truck-0,city-loc-1,city-loc-3]
+4363 pick-up[truck-0,city-loc-3,package-2,capacity-0,capacity-1]
+4610 drive[truck-0,city-loc-3,city-loc-2]
+4611 noop[truck-0,city-loc-2]
+4961 drop[truck-0,city-loc-2,package-1,capacity-0,capacity-1]
+4963 drive[truck-1,city-loc-1,city-loc-1]
+4969 pick-up[truck-1,city-loc-1,package-3,capacity-1,capacity-2]
+5012 drive[truck-1,city-loc-1,city-loc-3]
+5013 noop[truck-1,city-loc-3]
+5045 pick-up[truck-1,city-loc-3,package-0,capacity-0,capacity-1]
+5303 drop[truck-0,city-loc-2,package-2,capacity-1,capacity-2]
+5306 drop[truck-1,city-loc-3,package-3,capacity-0,capacity-1]
+5307 drive[truck-1,city-loc-3,city-loc-1]
+5308 drive[truck-1,city-loc-1,city-loc-4]
+5309 drive[truck-1,city-loc-4,city-loc-0]
+5315 drop[truck-1,city-loc-0,package-0,capacity-1,capacity-2]
+root 0
+5314 unload[truck-1,city-loc-0,package-0] -> m-unload 5315
+5195 get-to[truck-1,city-loc-1] -> m-drive-to 5307
+5054 get-to[truck-1,city-loc-4] -> m-drive-to-via 5195 5308
+5050 get-to[truck-1,city-loc-0] -> m-drive-to-via 5054 5309
+5042 load[truck-1,city-loc-3,package-0] -> m-load 5045
+5033 unload[truck-1,city-loc-3,package-3] -> m-unload 5306
+4972 get-to[truck-1,city-loc-3] -> m-i-am-there 5013
+4965 load[truck-1,city-loc-1,package-3] -> m-load 4969
+4615 unload[truck-0,city-loc-2,package-2] -> m-unload 5303
+4612 unload[truck-0,city-loc-2,package-1] -> m-unload 4961
+4366 get-to[truck-0,city-loc-2] -> m-i-am-there 4611
+4358 load[truck-0,city-loc-3,package-2] -> m-load 4363
+87 get-to[truck-0,city-loc-2] -> m-drive-to 4610
+75 get-to[truck-0,city-loc-3] -> m-drive-to 4357
+73 m-deliver_splitted_1[truck-0,package-2] -> _splitting_method_m-deliver_splitted_1 75 4358
+69 deliver[package-2,city-loc-2] -> m-deliver 73 4366 4615
+61 get-to[truck-1,city-loc-1] -> m-drive-to 4963
+54 get-to[truck-1,city-loc-3] -> m-drive-to 5012
+52 m-deliver_splitted_1[truck-1,package-0] -> _splitting_method_m-deliver_splitted_1 54 5042
+41 m-deliver_splitted_1[truck-1,package-3] -> _splitting_method_m-deliver_splitted_1 61 4965
+39 deliver[package-3,city-loc-3] -> m-deliver 41 4972 5033
+37 deliver[package-0,city-loc-0] -> m-deliver 52 5050 5314
+34 load[truck-0,city-loc-1,package-1] -> m-load 83
+17 get-to[truck-0,city-loc-1] -> m-i-am-there 18
+6 m-deliver_splitted_1[truck-0,package-1] -> _splitting_method_m-deliver_splitted_1 17 34
+2 deliver[package-1,city-loc-2] -> m-deliver 6 87 4612
+0 __top[] -> __top_method 37 2 69 39
+<==

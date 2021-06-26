@@ -1,0 +1,109 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/woodworking10.sas.
+- State has 101 bits divided into 101 mutex groups.
+- Domain contains 701 actions.
+- Domain contains 1082 tasks.
+- Domain contains 1577 methods.
+- The initial state contains 13 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 19 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 1082
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (1 ms)
+Heuristic #0 = hhRC2(add;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Stack Search
+- Using Stack Algorithm.
+Search Results
+- Search time 0.064 seconds
+- Visited list time 0.004819 seconds
+- Visited list inserts 1528
+- Visited list pruned 593
+- Visited list contains 935
+- Visited list hash collisions 593
+- Visited list used hash buckets 935
+- Generated 4851 search nodes
+  Calculated heuristic for 4841 nodes
+  One modifications 10
+  Effectless actions 0
+- including 10 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 75640 nodes per second
+- Final fringe contains 104 nodes
+- Status: Solved
+- Found solution of length 51
+- Total costs of actions: 15
+==>
+132 do_saw_large[b3,p1,mahogany,smooth,s3,s1,s2,s0]
+148 do_saw_large[b0,p3,teak,rough,s6,s4,s5,s3]
+156 do_saw_large[b3,p0,mahogany,smooth,s3,s1,s2,s0]
+166 do_saw_small[b3,p4,mahogany,smooth,s3,s2]
+4772 do_plane[p5,rough,blue,glazed]
+4780 do_saw_medium[b0,p2,teak,rough,s6,s5,s4]
+4791 do_spray_varnish[p0,spray_varnisher0,green,smooth]
+4795 do_grind[p1,smooth,natural,untreated,untreated]
+4808 do_immersion_varnish[p1,immersion_varnisher0,black,verysmooth]
+4811 do_grind_untreated[p5,grinder0,smooth,natural]
+4834 do_spray_varnish[p4,spray_varnisher0,natural,smooth]
+4837 do_grind_untreated[p3,grinder0,rough,natural]
+4845 do_glaze[p3,glazer0,mauve]
+4848 do_immersion_varnish[p5,immersion_varnisher0,natural,verysmooth]
+4849 do_glaze[p2,glazer0,mauve]
+root 0
+4842 method14_splitted_4[p3,mauve] -> <_splitting_method_method14_splitted_4;do_colour[p3,mauve,glazer0];method2;0;-1> 4845
+4831 do_colour[p5,natural,immersion_varnisher0] -> method0 4848
+4817 method16_splitted_5[natural] -> _splitting_method_method16_splitted_5 4831
+4802 do_colour[p1,black,immersion_varnisher0] -> method0 4808
+4800 method14_splitted_4[p1,black] -> _splitting_method_method14_splitted_4 4802
+4788 method11_splitted_2[p2,mauve] -> <_splitting_method_method11_splitted_2;do_colour[p2,mauve,glazer0];method2;0;-1> 4849
+4778 method16_splitted_13[p5,grinder0,natural,natural,untreated,verysmooth] -> _splitting_method_method16_splitted_13 4811
+4770 do_colour[p4,natural,spray_varnisher0] -> method1 4834
+171 method11_splitted_2[p4,natural] -> _splitting_method_method11_splitted_2 4770
+162 do_colour[p0,green,spray_varnisher0] -> method1 4791
+161 method11_splitted_2[p0,green] -> _splitting_method_method11_splitted_2 162
+153 method14_splitted_9[p3,rough,verysmooth,untreated] -> <_splitting_method_method14_splitted_9;grindNplane[p3,rough,natural,untreated,verysmooth,natural,untreated];method13;0;-1> 4837
+142 grindNplane[p1,smooth,natural,untreated,verysmooth,natural,untreated] -> method3 4795
+137 method14_splitted_9[p1,smooth,verysmooth,untreated] -> _splitting_method_method14_splitted_9 142
+127 do_saw[b0,p3,teak,rough] -> method9 148
+123 method14_splitted_12[p1,smooth] -> <<_splitting_method_method14_splitted_12;cut_and_saw[b3,p1,mahogany,smooth];method10;0;-1>;do_saw[b3,p1,mahogany,smooth];method9;0;-1> 132
+121 method14_splitted_12[p3,rough] -> <_splitting_method_method14_splitted_12;cut_and_saw[b0,p3,teak,rough];method10;0;-1> 127
+119 do_saw[b3,p4,mahogany,smooth] -> method5 166
+116 process[p1,black,smooth,verysmooth] -> method14 123 137 4800
+113 process[p3,mauve,rough,verysmooth] -> method14 121 153 4842
+110 cut_and_saw[b3,p4,mahogany,smooth] -> method10 119
+107 __top_method_splitted_1[p3,verysmooth] -> _splitting_method___top_method_splitted_1 113
+96 method11_splitted_7[p0,smooth] -> <<_splitting_method_method11_splitted_7;cut_and_saw[b3,p0,mahogany,smooth];method10;0;-1>;do_saw[b3,p0,mahogany,smooth];method9;0;-1> 156
+89 method16_splitted_10[p5,rough,untreated] -> <_splitting_method_method16_splitted_10;grindNplane[p5,rough,blue,glazed,smooth,natural,untreated];method7;0;-1> 4772
+73 process[p0,green,smooth,smooth] -> method11 96 161
+70 __top_method_splitted_14[p0,green] -> _splitting_method___top_method_splitted_14 73
+64 process[p5,natural,rough,verysmooth] -> method16 89 4778 4817
+62 __top_method_splitted_11[p5,verysmooth] -> _splitting_method___top_method_splitted_11 64
+50 method11_splitted_7[p4,smooth] -> _splitting_method_method11_splitted_7 110
+45 do_saw[b0,p2,teak,rough] -> method8 4780
+42 process[p4,natural,smooth,smooth] -> method11 50 171
+25 __top_method_splitted_6[p4] -> _splitting_method___top_method_splitted_6 42
+12 method11_splitted_7[p2,rough] -> <_splitting_method_method11_splitted_7;cut_and_saw[b0,p2,teak,rough];method10;0;-1> 45
+10 __top_method_splitted_16[p2,mauve] -> <_splitting_method___top_method_splitted_16;process[p2,mauve,rough,rough];method11;0;-1,-2> 12 4788
+1 __top_method_splitted_15[p1,black,verysmooth] -> _splitting_method___top_method_splitted_15 116
+0 __top[] -> __top_method 25 107 62 70 10 1
+<==

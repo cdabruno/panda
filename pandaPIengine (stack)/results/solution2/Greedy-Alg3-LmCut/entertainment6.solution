@@ -1,0 +1,96 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/entertainment6.sas.
+- State has 64 bits divided into 64 mutex groups.
+- Domain contains 104 actions.
+- Domain contains 239 tasks.
+- Domain contains 404 methods.
+- The initial state contains 16 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 211
+- The problem is cyclic
+- Number of cyclic SCCs: 15
+- Number of cyclic SCCs of size 1: 8
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: greedy
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy Search
+Search Results
+- Search time 0.042 seconds
+- Visited list time 0.000226 seconds
+- Visited list inserts 73
+- Visited list pruned 2
+- Visited list contains 71
+- Visited list hash collisions 2
+- Visited list used hash buckets 71
+- Generated 338 search nodes
+  Calculated heuristic for 290 nodes
+  One modifications 38
+  Effectless actions 10
+- including 38 one modification actions
+- including 0 one modification methods
+- and       10 progressions of effectless actions
+- Generated 6904 nodes per second
+- Final fringe contains 90 nodes
+- Status: Solved
+- Found solution of length 37
+- Total costs of actions: 8
+==>
+19 plug|instance_1[blu-ray-1,blu-ray-1-scart-1,scart-cable-3,scart-cable-3-scart-1]
+55 plug|instance_1[scart-cable-3,scart-cable-3-scart-2,multi-scart-1,multi-scart-1-scart-2]
+98 plug|instance_1[multi-scart-1,multi-scart-1-scart-1,scart-cable-2,scart-cable-2-scart-1]
+168 plug|instance_1[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-1]
+197 plug|instance_1[dvd-1,dvd-1-scart-1,scart-cable-1,scart-cable-1-scart-1]
+221 plug|instance_1[scart-cable-1,scart-cable-1-scart-2,multi-scart-1,multi-scart-1-scart-3]
+234 __method_precondition_m-dconnect-av-empty[multi-scart-1,scart-cable-2]
+244 __method_precondition_m-dconnect-av-empty[scart-cable-2,tv1-1]
+302 plug|instance_1[game-console-1,game-console-1-scart-1,scart-cable-4,scart-cable-4-scart-1]
+312 plug|instance_1[scart-cable-4,scart-cable-4-scart-2,multi-scart-1,multi-scart-1-scart-4]
+325 __method_precondition_m-dconnect-av-empty[multi-scart-1,scart-cable-2]
+335 __method_precondition_m-dconnect-av-empty[scart-cable-2,tv1-1]
+root 0
+334 direct_av_connect[scart-cable-2,tv1-1] -> m-dconnect-av-empty 335
+327 av_connect[scart-cable-2,tv1-1] -> m-connect-direct-av 334
+324 direct_av_connect[multi-scart-1,scart-cable-2] -> m-dconnect-av-empty 325
+316 av_connect[multi-scart-1,tv1-1] -> m-connect-rec-av-1 324 327
+311 direct_av_connect[scart-cable-4,multi-scart-1] -> <m-dconnect-av;plug[scart-cable-4,scart-cable-4-scart-2,multi-scart-1,multi-scart-1-scart-4];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 312
+305 av_connect[scart-cable-4,tv1-1] -> m-connect-rec-av-1 311 316
+301 direct_av_connect[game-console-1,scart-cable-4] -> <m-dconnect-av;plug[game-console-1,game-console-1-scart-1,scart-cable-4,scart-cable-4-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 302
+249 av_connect[game-console-1,tv1-1] -> m-connect-rec-av-1 301 305
+243 direct_av_connect[scart-cable-2,tv1-1] -> m-dconnect-av-empty 244
+236 av_connect[scart-cable-2,tv1-1] -> m-connect-direct-av 243
+233 direct_av_connect[multi-scart-1,scart-cable-2] -> m-dconnect-av-empty 234
+225 av_connect[multi-scart-1,tv1-1] -> m-connect-rec-av-1 233 236
+220 direct_av_connect[scart-cable-1,multi-scart-1] -> <m-dconnect-av;plug[scart-cable-1,scart-cable-1-scart-2,multi-scart-1,multi-scart-1-scart-3];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 221
+213 av_connect[scart-cable-1,tv1-1] -> m-connect-rec-av-1 220 225
+196 direct_av_connect[dvd-1,scart-cable-1] -> <m-dconnect-av;plug[dvd-1,dvd-1-scart-1,scart-cable-1,scart-cable-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 197
+182 av_connect[dvd-1,tv1-1] -> m-connect-rec-av-1 196 213
+167 direct_av_connect[scart-cable-2,tv1-1] -> <m-dconnect-av;plug[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 168
+159 av_connect[scart-cable-2,tv1-1] -> m-connect-direct-av 167
+97 direct_av_connect[multi-scart-1,scart-cable-2] -> <m-dconnect-av;plug[multi-scart-1,multi-scart-1-scart-1,scart-cable-2,scart-cable-2-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 98
+61 av_connect[multi-scart-1,tv1-1] -> m-connect-rec-av-1 97 159
+54 direct_av_connect[scart-cable-3,multi-scart-1] -> <m-dconnect-av;plug[scart-cable-3,scart-cable-3-scart-2,multi-scart-1,multi-scart-1-scart-2];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 55
+45 av_connect[scart-cable-3,tv1-1] -> m-connect-rec-av-1 54 61
+18 direct_av_connect[blu-ray-1,scart-cable-3] -> <m-dconnect-av;plug[blu-ray-1,blu-ray-1-scart-1,scart-cable-3,scart-cable-3-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 19
+3 av_connect[blu-ray-1,tv1-1] -> m-connect-rec-av-1 18 45
+0 __top[] -> __top_method 3 182 249
+<==

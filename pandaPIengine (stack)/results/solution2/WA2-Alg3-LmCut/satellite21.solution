@@ -1,0 +1,85 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/satellite21.sas.
+- State has 17 bits divided into 17 mutex groups.
+- Domain contains 67 actions.
+- Domain contains 76 tasks.
+- Domain contains 120 methods.
+- The initial state contains 4 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 76
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+   1s visitime    0.01s generated nodes     60104 nodes/sec   59274 cur h   13 mod.depth    9 inserts      3767 dups         0 size      3767 hash fail      1 hash buckets   3766
+   2s visitime    0.03s generated nodes    125213 nodes/sec   61288 cur h   15 mod.depth    6 inserts     10189 dups         0 size     10189 hash fail      7 hash buckets  10182
+   3s visitime    0.06s generated nodes    190304 nodes/sec   61547 cur h   14 mod.depth    8 inserts     17696 dups         0 size     17696 hash fail     13 hash buckets  17683
+   4s visitime    0.09s generated nodes    225324 nodes/sec   53712 cur h   16 mod.depth    6 inserts     21721 dups         0 size     21721 hash fail     24 hash buckets  21697
+Search Results
+- Search time 4.24 seconds
+- Visited list time 0.09 seconds
+- Visited list inserts 21805
+- Visited list pruned 1
+- Visited list contains 21804
+- Visited list hash collisions 25
+- Visited list used hash buckets 21780
+- Generated 226391 search nodes
+  Calculated heuristic for 154398 nodes
+  One modifications 69962
+  Effectless actions 2031
+- including 69962 one modification actions
+- including 0 one modification methods
+- and       2031 progressions of effectless actions
+- Generated 36440 nodes per second
+- Final fringe contains 31591 nodes
+- Status: Solved
+- Found solution of length 23
+- Total costs of actions: 15
+==>
+131743 switch_on[instrument0,satellite0]
+226368 turn_to[satellite0,star0,star3]
+226377 calibrate[satellite0,instrument0,star0]
+226378 turn_to[satellite0,phenomenon5,star0]
+226379 take_image[satellite0,phenomenon5,instrument0,spectrograph0]
+226380 turn_to[satellite0,star4,phenomenon5]
+226381 take_image[satellite0,star4,instrument0,spectrograph0]
+226382 turn_to[satellite0,star3,star4]
+226383 take_image[satellite0,star3,instrument0,infrared1]
+226384 turn_to[satellite0,phenomenon6,star3]
+226385 take_image[satellite0,phenomenon6,instrument0,infrared1]
+226386 turn_to[satellite0,star7,phenomenon6]
+226387 take_image[satellite0,star7,instrument0,spectrograph0]
+226388 turn_to[satellite0,star2,star7]
+226389 take_image[satellite0,star2,instrument0,infrared1]
+root 0
+226367 auto_calibrate[satellite0,instrument0] -> method6 226368 226377
+131742 do_observation[phenomenon6,infrared1] -> <method0;activate_instrument[satellite0,instrument0];method5;0;-1,-2,1,2> 131743 226367 226384 226385
+131564 do_observation[star3,infrared1] -> <method1;method1_splitted_1[satellite0,star3,infrared1];_splitting_method_method1_splitted_1;1;0,-1> 226382 226383
+2631 do_observation[star2,infrared1] -> <method1;method1_splitted_1[satellite0,star2,infrared1];_splitting_method_method1_splitted_1;1;0,-1> 226388 226389
+2572 do_observation[star4,spectrograph0] -> <method1;method1_splitted_1[satellite0,star4,spectrograph0];_splitting_method_method1_splitted_1;1;0,-1> 226380 226381
+2501 do_observation[star7,spectrograph0] -> <method1;method1_splitted_1[satellite0,star7,spectrograph0];_splitting_method_method1_splitted_1;1;0,-1> 226386 226387
+3 do_observation[phenomenon5,spectrograph0] -> <method1;method1_splitted_1[satellite0,phenomenon5,spectrograph0];_splitting_method_method1_splitted_1;1;0,-1> 226378 226379
+0 __top[] -> __top_method 2631 131564 2572 3 131742 2501
+<==

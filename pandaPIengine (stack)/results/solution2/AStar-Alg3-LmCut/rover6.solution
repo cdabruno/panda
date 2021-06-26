@@ -1,0 +1,58 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/rover6.sas.
+- State has 57 bits divided into 57 mutex groups.
+- Domain contains 192 actions.
+- Domain contains 245 tasks.
+- Domain contains 225 methods.
+- The initial state contains 27 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 245
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+   5s visitime    0.01s generated nodes      5010 nodes/sec     841 cur h   60 mod.depth    9 inserts       744 dups         0 size       744 hash fail      0 hash buckets    744
+  12s visitime    0.02s generated nodes     10023 nodes/sec     788 cur h   57 mod.depth   13 inserts      1511 dups         0 size      1511 hash fail      0 hash buckets   1511
+  18s visitime    0.03s generated nodes     15028 nodes/sec     813 cur h   57 mod.depth   12 inserts      2281 dups         0 size      2281 hash fail      0 hash buckets   2281
+  24s visitime    0.04s generated nodes     20044 nodes/sec     808 cur h   58 mod.depth   13 inserts      3066 dups         0 size      3066 hash fail      0 hash buckets   3066
+Reached time limit - stopping search.
+Search Results
+- Search time 24.80 seconds
+- Visited list time 0.04 seconds
+- Visited list inserts 3066
+- Visited list pruned 0
+- Visited list contains 3066
+- Visited list hash collisions 0
+- Visited list used hash buckets 3066
+- Generated 20044 search nodes
+  Calculated heuristic for 15133 nodes
+  One modifications 0
+  Effectless actions 4911
+- including 0 one modification actions
+- including 0 one modification methods
+- and       4911 progressions of effectless actions
+- Generated 610 nodes per second
+- Final fringe contains 12067 nodes
+- Status: Timeout

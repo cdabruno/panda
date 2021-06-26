@@ -1,0 +1,55 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/rover13.sas.
+- State has 136 bits divided into 136 mutex groups.
+- Domain contains 571 actions.
+- Domain contains 707 tasks.
+- Domain contains 716 methods.
+- The initial state contains 56 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 707
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+  22s visitime    0.01s generated nodes      5005 nodes/sec     226 cur h   60 mod.depth    8 inserts      1048 dups         0 size      1048 hash fail      0 hash buckets   1048
+Reached time limit - stopping search.
+Search Results
+- Search time 22.13 seconds
+- Visited list time 0.01 seconds
+- Visited list inserts 1048
+- Visited list pruned 0
+- Visited list contains 1048
+- Visited list hash collisions 0
+- Visited list used hash buckets 1048
+- Generated 5005 search nodes
+  Calculated heuristic for 4339 nodes
+  One modifications 0
+  Effectless actions 666
+- including 0 one modification actions
+- including 0 one modification methods
+- and       666 progressions of effectless actions
+- Generated 196 nodes per second
+- Final fringe contains 3291 nodes
+- Status: Timeout

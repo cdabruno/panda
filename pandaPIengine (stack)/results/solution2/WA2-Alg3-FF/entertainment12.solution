@@ -1,0 +1,101 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/entertainment12.sas.
+- State has 148 bits divided into 148 mutex groups.
+- Domain contains 280 actions.
+- Domain contains 435 tasks.
+- Domain contains 454 methods.
+- The initial state contains 63 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 413
+- The problem is cyclic
+- Number of cyclic SCCs: 4
+- Number of cyclic SCCs of size 1: 1
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 0
+No heuristics given, setting default ... 
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (1 ms)
+Heuristic #0 = hhRC2(ff;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+Search Results
+- Search time 0.007 seconds
+- Visited list time 0.000307 seconds
+- Visited list inserts 44
+- Visited list pruned 5
+- Visited list contains 39
+- Visited list hash collisions 5
+- Visited list used hash buckets 39
+- Generated 172 search nodes
+  Calculated heuristic for 140 nodes
+  One modifications 31
+  Effectless actions 1
+- including 31 one modification actions
+- including 0 one modification methods
+- and       1 progressions of effectless actions
+- Generated 20000 nodes per second
+- Final fringe contains 65 nodes
+- Status: Solved
+- Found solution of length 39
+- Total costs of actions: 11
+==>
+19 plug|instance_4[blu-ray-1,blu-ray-1-cinch-2,cinch-cable-4,cinch-cable-4-cinch-1]
+24 plug|instance_7[cinch-cable-4,cinch-cable-4-cinch-2,amplifier-1,amplifier-1-cinch-2]
+43 plug|instance_1[sat-receiver-1,sat-receiver-1-scart-3,scart-to-cinch-cable-1,scart-to-cinch-cable-1-scart-1]
+65 plug|instance_7[scart-to-cinch-cable-1,scart-to-cinch-cable-1-cinch-2,amplifier-1,amplifier-1-cinch-1]
+87 plug|instance_4[amplifier-1,amplifier-1-speakerWire-9,speaker-wire-1,speaker-wire-1-speakerWire-1]
+95 plug|instance_7[speaker-wire-1,speaker-wire-1-speakerWire-2,box-1,box-1-speakerWire-1]
+107 plug|instance_7[amplifier-1,amplifier-1-speakerWire-10,speaker-wire-2,speaker-wire-2-speakerWire-1]
+111 plug|instance_4[speaker-wire-2,speaker-wire-2-speakerWire-2,box-2,box-2-speakerWire-1]
+136 plug|instance_1[blu-ray-1,blu-ray-1-hdmi-1,hdmi-cable-1,hdmi-cable-1-hdmi-1]
+145 plug|instance_1[hdmi-cable-1,hdmi-cable-1-hdmi-2,tv-1,tv-1-hdmi-1]
+159 __method_precondition_m-dconnect-v-empty[sat-receiver-1,scart-to-cinch-cable-1]
+168 plug|instance_2[scart-to-cinch-cable-1,scart-to-cinch-cable-1-cinch-3,tv-1,tv-1-cinch-6]
+root 0
+167 plug[scart-to-cinch-cable-1,scart-to-cinch-cable-1-cinch-3,tv-1,tv-1-cinch-6] -> _method_for_multiple_expansions_of_plug|instance_2 168
+166 direct_v_connect[scart-to-cinch-cable-1,tv-1] -> m-dconnect-v 167
+158 direct_v_connect[sat-receiver-1,scart-to-cinch-cable-1] -> m-dconnect-v-empty 159
+156 v_connect[sat-receiver-1,scart-to-cinch-cable-1] -> m-connect-direct-v 158
+146 v_connect[sat-receiver-1,tv-1] -> m-connect-rec-v 156 166
+144 direct_v_connect[hdmi-cable-1,tv-1] -> <m-dconnect-v;plug[hdmi-cable-1,hdmi-cable-1-hdmi-2,tv-1,tv-1-hdmi-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 145
+135 direct_v_connect[blu-ray-1,hdmi-cable-1] -> <m-dconnect-v;plug[blu-ray-1,blu-ray-1-hdmi-1,hdmi-cable-1,hdmi-cable-1-hdmi-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 136
+132 v_connect[blu-ray-1,hdmi-cable-1] -> m-connect-direct-v 135
+119 v_connect[blu-ray-1,tv-1] -> m-connect-rec-v 132 144
+110 plug[speaker-wire-2,speaker-wire-2-speakerWire-2,box-2,box-2-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_4 111
+109 direct_a_connect[speaker-wire-2,box-2] -> m-dconnect-a 110
+106 plug[amplifier-1,amplifier-1-speakerWire-10,speaker-wire-2,speaker-wire-2-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 107
+99 direct_a_connect[amplifier-1,speaker-wire-2] -> m-dconnect-a 106
+97 a_connect[amplifier-1,box-2] -> <m-connect-rec-a;a_connect[amplifier-1,speaker-wire-2];m-connect-direct-a;0;-1,1> 99 109
+94 plug[speaker-wire-1,speaker-wire-1-speakerWire-2,box-1,box-1-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 95
+91 direct_a_connect[speaker-wire-1,box-1] -> m-dconnect-a 94
+86 plug[amplifier-1,amplifier-1-speakerWire-9,speaker-wire-1,speaker-wire-1-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_4 87
+77 direct_a_connect[amplifier-1,speaker-wire-1] -> m-dconnect-a 86
+66 a_connect[amplifier-1,box-1] -> <m-connect-rec-a;a_connect[amplifier-1,speaker-wire-1];m-connect-direct-a;0;-1,1> 77 91
+64 plug[scart-to-cinch-cable-1,scart-to-cinch-cable-1-cinch-2,amplifier-1,amplifier-1-cinch-1] -> _method_for_multiple_expansions_of_plug|instance_7 65
+46 direct_a_connect[scart-to-cinch-cable-1,amplifier-1] -> m-dconnect-a 64
+42 direct_a_connect[sat-receiver-1,scart-to-cinch-cable-1] -> <m-dconnect-a;plug[sat-receiver-1,sat-receiver-1-scart-3,scart-to-cinch-cable-1,scart-to-cinch-cable-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 43
+32 a_connect[sat-receiver-1,amplifier-1] -> <m-connect-rec-a;a_connect[sat-receiver-1,scart-to-cinch-cable-1];m-connect-direct-a;0;-1,1> 42 46
+23 direct_a_connect[cinch-cable-4,amplifier-1] -> <m-dconnect-a;plug[cinch-cable-4,cinch-cable-4-cinch-2,amplifier-1,amplifier-1-cinch-2];_method_for_multiple_expansions_of_plug|instance_7;0;-1> 24
+18 direct_a_connect[blu-ray-1,cinch-cable-4] -> <m-dconnect-a;plug[blu-ray-1,blu-ray-1-cinch-2,cinch-cable-4,cinch-cable-4-cinch-1];_method_for_multiple_expansions_of_plug|instance_4;0;-1> 19
+2 a_connect[blu-ray-1,amplifier-1] -> <m-connect-rec-a;a_connect[blu-ray-1,cinch-cable-4];m-connect-direct-a;0;-1,1> 18 23
+0 __top[] -> __top_method 2 32 66 97 119 146
+<==

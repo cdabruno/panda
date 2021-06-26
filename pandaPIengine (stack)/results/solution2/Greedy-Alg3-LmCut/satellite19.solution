@@ -1,0 +1,88 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/satellite19.sas.
+- State has 23 bits divided into 23 mutex groups.
+- Domain contains 104 actions.
+- Domain contains 128 tasks.
+- Domain contains 260 methods.
+- The initial state contains 4 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 128
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: greedy
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy Search
+   1s visitime    0.00s generated nodes     15058 nodes/sec   13139 cur h   16 mod.depth    5 inserts       606 dups         0 size       606 hash fail      0 hash buckets    606
+   2s visitime    0.01s generated nodes     30109 nodes/sec   11788 cur h   15 mod.depth    8 inserts      1463 dups         0 size      1463 hash fail      0 hash buckets   1463
+   3s visitime    0.02s generated nodes     50197 nodes/sec   13767 cur h   15 mod.depth    6 inserts      2964 dups         0 size      2964 hash fail      0 hash buckets   2964
+   4s visitime    0.02s generated nodes     80343 nodes/sec   17072 cur h   17 mod.depth    6 inserts      5452 dups         0 size      5452 hash fail      0 hash buckets   5452
+   5s visitime    0.03s generated nodes    105389 nodes/sec   17975 cur h   17 mod.depth    6 inserts      7631 dups         0 size      7631 hash fail      3 hash buckets   7628
+   6s visitime    0.04s generated nodes    120410 nodes/sec   17412 cur h   17 mod.depth    5 inserts      9023 dups         0 size      9023 hash fail      4 hash buckets   9019
+Search Results
+- Search time 7.60 seconds
+- Visited list time 0.05 seconds
+- Visited list inserts 9891
+- Visited list pruned 0
+- Visited list contains 9891
+- Visited list hash collisions 5
+- Visited list used hash buckets 9886
+- Generated 130874 search nodes
+  Calculated heuristic for 116717 nodes
+  One modifications 13875
+  Effectless actions 282
+- including 13875 one modification actions
+- including 0 one modification methods
+- and       282 progressions of effectless actions
+- Generated 15363 nodes per second
+- Final fringe contains 32964 nodes
+- Status: Solved
+- Found solution of length 25
+- Total costs of actions: 13
+==>
+101034 switch_on[instrument0,satellite0]
+130847 turn_to[satellite0,star1,star6]
+130848 calibrate[satellite0,instrument0,star1]
+130849 turn_to[satellite0,star4,star1]
+130850 take_image[satellite0,star4,instrument0,spectrograph0]
+130851 turn_to[satellite0,planet2,star4]
+130858 take_image[satellite0,planet2,instrument0,spectrograph0]
+130859 turn_to[satellite0,planet3,planet2]
+130863 take_image[satellite0,planet3,instrument0,spectrograph0]
+130864 turn_to[satellite0,star5,planet3]
+130868 take_image[satellite0,star5,instrument0,spectrograph0]
+130869 turn_to[satellite0,star6,star5]
+130872 take_image[satellite0,star6,instrument0,thermograph1]
+root 0
+130871 method1_splitted_1[satellite0,star6,thermograph1] -> _splitting_method_method1_splitted_1 130872
+130867 method1_splitted_1[satellite0,star5,spectrograph0] -> _splitting_method_method1_splitted_1 130868
+130862 method1_splitted_1[satellite0,planet3,spectrograph0] -> _splitting_method_method1_splitted_1 130863
+130857 method1_splitted_1[satellite0,planet2,spectrograph0] -> _splitting_method_method1_splitted_1 130858
+130846 auto_calibrate[satellite0,instrument0] -> method6 130847 130848
+101033 do_observation[star6,thermograph1] -> method1 130869 130871
+37322 do_observation[star5,spectrograph0] -> method1 130864 130867
+37281 do_observation[planet2,spectrograph0] -> method1 130851 130857
+37269 activate_instrument[satellite0,instrument0] -> method5 101034 130846
+692 do_observation[star4,spectrograph0] -> method0 37269 130849 130850
+14 do_observation[planet3,spectrograph0] -> method1 130859 130862
+0 __top[] -> __top_method 37281 14 692 37322 101033
+<==

@@ -1,0 +1,135 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/rover7.sas.
+- State has 69 bits divided into 69 mutex groups.
+- Domain contains 185 actions.
+- Domain contains 243 tasks.
+- Domain contains 218 methods.
+- The initial state contains 28 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 243
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(add;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+   1s visitime    0.06s generated nodes     60055 nodes/sec   59935 cur h   41 mod.depth   27 inserts      9105 dups       329 size      8776 hash fail    333 hash buckets   8772
+   2s visitime    0.12s generated nodes    105097 nodes/sec   50430 cur h   46 mod.depth   21 inserts     15844 dups       829 size     15015 hash fail    837 hash buckets  15007
+   3s visitime    0.18s generated nodes    160172 nodes/sec   51818 cur h   39 mod.depth   31 inserts     24357 dups      1656 size     22701 hash fail   1673 hash buckets  22684
+   4s visitime    0.25s generated nodes    255317 nodes/sec   62136 cur h   39 mod.depth   29 inserts     38753 dups      3052 size     35701 hash fail   3102 hash buckets  35651
+   5s visitime    0.31s generated nodes    350438 nodes/sec   68565 cur h   32 mod.depth   37 inserts     53598 dups      5003 size     48595 hash fail   5083 hash buckets  48515
+   6s visitime    0.38s generated nodes    445592 nodes/sec   72856 cur h   37 mod.depth   33 inserts     68180 dups      7170 size     61010 hash fail   7296 hash buckets  60884
+   7s visitime    0.45s generated nodes    495669 nodes/sec   69411 cur h   35 mod.depth   36 inserts     75605 dups      8140 size     67465 hash fail   8300 hash buckets  67305
+Search Results
+- Search time 7.21 seconds
+- Visited list time 0.45 seconds
+- Visited list inserts 76184
+- Visited list pruned 8216
+- Visited list contains 67968
+- Visited list hash collisions 8378
+- Visited list used hash buckets 67806
+- Generated 499072 search nodes
+  Calculated heuristic for 348869 nodes
+  One modifications 52582
+  Effectless actions 97621
+- including 52582 one modification actions
+- including 0 one modification methods
+- and       97621 progressions of effectless actions
+- Generated 48386 nodes per second
+- Final fringe contains 210383 nodes
+- Status: Solved
+- Found solution of length 69
+- Total costs of actions: 18
+==>
+86 __method_precondition_m-navigate_abs-1[rover1,waypoint3]
+178 __method_precondition_m-navigate_abs-1[rover0,waypoint2]
+436 __method_precondition_m-navigate_abs-1[rover2,waypoint4]
+668 __method_precondition_m-navigate_abs-3[rover0,waypoint2,waypoint1]
+1052 __method_precondition_m-navigate_abs-1[rover2,waypoint4]
+3902 __method_precondition_m-empty-store-1[rover2store]
+64855 __method_precondition_m-empty-store-1[rover0store]
+105794 __method_precondition_m-empty-store-1[rover1store]
+144506 __method_precondition_m-navigate_abs-1[rover0,waypoint2]
+496895 calibrate[rover0,camera0,objective0,waypoint2]
+496906 __method_precondition_m-navigate_abs-1[rover0,waypoint2]
+496919 sample_rock[rover1,rover1store,waypoint3]
+496970 __method_precondition_m-navigate_abs-3[rover1,waypoint3,waypoint2]
+497091 navigate[rover1,waypoint3,waypoint2]
+497092 communicate_rock_data[rover1,general,waypoint3,waypoint2,waypoint3]
+497100 take_image[rover0,waypoint2,objective0,camera0,high_res]
+497109 __method_precondition_m-navigate_abs-1[rover0,waypoint2]
+497110 communicate_image_data[rover0,general,objective0,high_res,waypoint2,waypoint3]
+497120 sample_rock[rover2,rover2store,waypoint4]
+497121 __method_precondition_m-empty-store-2[rover2store]
+497129 __method_precondition_m-navigate_abs-1[rover2,waypoint4]
+497130 communicate_rock_data[rover2,general,waypoint4,waypoint4,waypoint3]
+498193 drop[rover2,rover2store]
+498196 sample_soil[rover2,rover2store,waypoint4]
+498203 __method_precondition_m-navigate_abs-1[rover2,waypoint4]
+498204 communicate_soil_data[rover2,general,waypoint4,waypoint4,waypoint3]
+498210 sample_rock[rover0,rover0store,waypoint2]
+498265 __method_precondition_m-navigate_abs-1[rover0,waypoint2]
+498266 communicate_rock_data[rover0,general,waypoint2,waypoint2,waypoint3]
+498267 navigate[rover0,waypoint2,waypoint1]
+499037 __method_precondition_m-empty-store-2[rover0store]
+499038 drop[rover0,rover0store]
+499039 sample_soil[rover0,rover0store,waypoint1]
+499056 __method_precondition_m-navigate_abs-3[rover0,waypoint0,waypoint2]
+499057 navigate[rover0,waypoint1,waypoint2]
+499058 communicate_soil_data[rover0,general,waypoint1,waypoint2,waypoint3]
+root 0
+499055 navigate_abs[rover0,waypoint2] -> m-navigate_abs-3 499056 499057
+499041 m-send_soil_data_splitted_13[rover0,general,waypoint1] -> <_splitting_method_m-send_soil_data_splitted_13;m-send_soil_data_splitted_8[rover0,general,waypoint1,waypoint2];_splitting_method_m-send_soil_data_splitted_8;1;0,-1> 499055 499058
+499036 empty-store[rover0store,rover0] -> m-empty-store-2 499037 499038
+498264 navigate_abs[rover0,waypoint2] -> m-navigate_abs-2 498265
+498234 m-send_rock_data_splitted_12[rover0,general,waypoint2] -> <_splitting_method_m-send_rock_data_splitted_12;m-send_rock_data_splitted_7[rover0,general,waypoint2,waypoint2];_splitting_method_m-send_rock_data_splitted_7;1;0,-1> 498264 498266
+498202 navigate_abs[rover2,waypoint4] -> m-navigate_abs-2 498203
+498199 m-send_soil_data_splitted_13[rover2,general,waypoint4] -> <_splitting_method_m-send_soil_data_splitted_13;m-send_soil_data_splitted_8[rover2,general,waypoint4,waypoint4];_splitting_method_m-send_soil_data_splitted_8;1;0,-1> 498202 498204
+497128 navigate_abs[rover2,waypoint4] -> m-navigate_abs-2 497129
+497125 m-send_rock_data_splitted_12[rover2,general,waypoint4] -> <_splitting_method_m-send_rock_data_splitted_12;m-send_rock_data_splitted_7[rover2,general,waypoint4,waypoint4];_splitting_method_m-send_rock_data_splitted_7;1;0,-1> 497128 497130
+497108 navigate_abs[rover0,waypoint2] -> m-navigate_abs-2 497109
+497102 m-send_image_data_splitted_11[rover0,general,objective0,high_res] -> <_splitting_method_m-send_image_data_splitted_11;m-send_image_data_splitted_6[rover0,general,objective0,high_res,waypoint2];_splitting_method_m-send_image_data_splitted_6;1;0,-1> 497108 497110
+496969 navigate_abs[rover1,waypoint2] -> m-navigate_abs-3 496970 497091
+496939 m-send_rock_data_splitted_12[rover1,general,waypoint3] -> <_splitting_method_m-send_rock_data_splitted_12;m-send_rock_data_splitted_7[rover1,general,waypoint3,waypoint2];_splitting_method_m-send_rock_data_splitted_7;1;0,-1> 496969 497092
+496905 navigate_abs[rover0,waypoint2] -> m-navigate_abs-2 496906
+496898 m-get_image_data_splitted_2[rover0,objective0,camera0,high_res] -> _splitting_method_m-get_image_data_splitted_2 496905 497100
+144505 navigate_abs[rover0,waypoint2] -> m-navigate_abs-2 144506
+105793 empty-store[rover1store,rover1] -> m-empty-store-1 105794
+64859 m-calibrate_abs_splitted_9[rover0,camera0] -> <_splitting_method_m-calibrate_abs_splitted_9;m-calibrate_abs_splitted_1[rover0,camera0,waypoint2];_splitting_method_m-calibrate_abs_splitted_1;1;0,-1> 144505 496895
+64854 empty-store[rover0store,rover0] -> m-empty-store-1 64855
+3906 empty-store[rover2store,rover2] -> m-empty-store-2 497121 498193
+3901 empty-store[rover2store,rover2] -> m-empty-store-1 3902
+3900 get_image_data[objective0,high_res] -> <<<m-get_image_data;m-get_image_data_splitted_10[rover0,high_res,objective0];_splitting_method_m-get_image_data_splitted_10;0;-1,-2,1>;calibrate_abs[rover0,camera0];m-calibrate_abs;0;-1,1,2>;send_image_data[rover0,objective0,high_res];m-send_image_data;2;0,1,-1> 64859 496898 497102
+1051 navigate_abs[rover2,waypoint4] -> m-navigate_abs-2 1052
+667 navigate_abs[rover0,waypoint1] -> m-navigate_abs-3 668 498267
+435 navigate_abs[rover2,waypoint4] -> m-navigate_abs-2 436
+177 navigate_abs[rover0,waypoint2] -> m-navigate_abs-2 178
+85 navigate_abs[rover1,waypoint3] -> m-navigate_abs-2 86
+12 get_rock_data[waypoint4] -> <<m-get_rock_data;m-get_rock_data_splitted_3[rover2,waypoint4];_splitting_method_m-get_rock_data_splitted_3;1;0,-1,-2,2>;send_rock_data[rover2,waypoint4];m-send_rock_data;3;0,1,2,-1> 1051 3901 497120 497125
+10 get_rock_data[waypoint3] -> <<m-get_rock_data;m-get_rock_data_splitted_3[rover1,waypoint3];_splitting_method_m-get_rock_data_splitted_3;1;0,-1,-2,2>;send_rock_data[rover1,waypoint3];m-send_rock_data;3;0,1,2,-1> 85 105793 496919 496939
+7 get_soil_data[waypoint1] -> <<m-get_soil_data;m-get_soil_data_splitted_4[rover0,waypoint1];_splitting_method_m-get_soil_data_splitted_4;1;0,-1,-2,2>;send_soil_data[rover0,waypoint1];m-send_soil_data;3;0,1,2,-1> 667 499036 499039 499041
+5 get_soil_data[waypoint4] -> <<m-get_soil_data;m-get_soil_data_splitted_4[rover2,waypoint4];_splitting_method_m-get_soil_data_splitted_4;1;0,-1,-2,2>;send_soil_data[rover2,waypoint4];m-send_soil_data;3;0,1,2,-1> 435 3906 498196 498199
+1 get_rock_data[waypoint2] -> <<m-get_rock_data;m-get_rock_data_splitted_3[rover0,waypoint2];_splitting_method_m-get_rock_data_splitted_3;1;0,-1,-2,2>;send_rock_data[rover0,waypoint2];m-send_rock_data;3;0,1,2,-1> 177 64854 498210 498234
+0 __top[] -> __top_method 5 7 10 1 12 3900
+<==

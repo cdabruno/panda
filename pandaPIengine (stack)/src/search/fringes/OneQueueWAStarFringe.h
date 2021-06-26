@@ -10,7 +10,7 @@ class OneQueueWAStarFringe;
 #include "../../ProgressionNetwork.h"
 #include <queue>
 
-enum aStar {gValNone, gValPathCosts, gValActionCosts, gValActionPathCosts};
+enum aStar {gValNone, gValPathCosts, gValActionCosts, gValActionPathCosts, gValStack};
 
 struct TieBreakingNodePointerComaprator {
 	int numOfHeuristics;

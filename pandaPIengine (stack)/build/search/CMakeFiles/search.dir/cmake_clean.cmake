@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/search.dir/UnsortedFringe.cpp.o"
   "CMakeFiles/search.dir/UnsrtFringeContainer.cpp.o"
   "CMakeFiles/search.dir/fringes/OneQueueWAStarFringe.cpp.o"
+  "CMakeFiles/search.dir/fringes/StackFringe.cpp.o"
+  "CMakeFiles/search.dir/fringes/StackOrderFringe.cpp.o"
   "libsearch.a"
   "libsearch.pdb"
 )

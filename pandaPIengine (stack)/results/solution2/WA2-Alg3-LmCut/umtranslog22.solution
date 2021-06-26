@@ -1,0 +1,78 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/umtranslog22.sas.
+- State has 15 bits divided into 15 mutex groups.
+- Domain contains 12 actions.
+- Domain contains 14 tasks.
+- Domain contains 3 methods.
+- The initial state contains 6 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 2 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 14
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 2
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy A* Search with weight 2
+- Distance G is "modification depth"
+Search Results
+- Search time 0.001 seconds
+- Visited list time 7.9e-05 seconds
+- Visited list inserts 18
+- Visited list pruned 0
+- Visited list contains 18
+- Visited list hash collisions 0
+- Visited list used hash buckets 18
+- Generated 57 search nodes
+  Calculated heuristic for 34 nodes
+  One modifications 23
+  Effectless actions 0
+- including 23 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 34000 nodes per second
+- Final fringe contains 12 nodes
+- Status: Solved
+- Found solution of length 20
+- Total costs of actions: 18
+==>
+1 collect_fees[Toshiba_Laptops]
+6 open_door[Pferd]
+8 load_package[Toshiba_Laptops,Pferd,O27]
+14 close_door[Pferd]
+16 move_vehicle_no_traincar[Pferd,O27,James_Franck_Ring,O28]
+20 open_door[Pferd]
+28 unload_package[Toshiba_Laptops,Pferd,O28]
+30 close_door[Pferd]
+44 deliver_p[Toshiba_Laptops]
+45 collect_fees[Drucker]
+48 open_door[Pferd]
+49 load_package[Drucker,Pferd,O28]
+50 close_door[Pferd]
+51 move_vehicle_no_traincar[Pferd,O28,Frauen_Strasse,Bibliothek]
+52 open_door[Pferd]
+53 unload_package[Drucker,Pferd,Bibliothek]
+54 close_door[Pferd]
+55 deliver_p[Drucker]
+root 0
+47 helper_carry_direct[Pferd,Drucker,O28,Bibliothek] -> <<<<<method_helper_carry_direct_noMoveFirst;unload_top[Drucker,Pferd,Bibliothek];method_unload_top_normal;2;0,1,-1>;unload[Drucker,Pferd,Bibliothek];method_unload_regular;2;0,1,-1,-2,-3>;move[Pferd,O28,Bibliothek];method_move_no_traincar;1;0,-1,2,3,4>;load_top[Drucker,Pferd,O28];method_load_top_normal;0;-1,1,2,3,4>;load[Drucker,Pferd,O28];method_load_regular;0;-1,-2,-3,1,2,3,4> 48 49 50 51 52 53 54
+0 __top[] -> <<<<<<<<<<<<<<<__top_method;transport[Drucker,O28,Bibliothek];method_transport_pi_ca_de;1;0,-1,-2,-3>;carry[Drucker,O28,Bibliothek];method_carry_cd;2;0,1,-1,3>;carry_direct[Drucker,O28,Bibliothek];method_carry_direct;2;0,1,-1,3>;deliver[Drucker];method_deliver_dp;3;0,1,2,-1>;pickup[Drucker];method_pickup_normal;1;0,-1,2,3>;transport[Toshiba_Laptops,O27,O28];method_transport_pi_ca_de;0;-1,-2,-3,1,2,3>;carry[Toshiba_Laptops,O27,O28];method_carry_cd;1;0,-1,2,3,4,5>;carry_direct[Toshiba_Laptops,O27,O28];method_carry_direct;1;0,-1,2,3,4,5>;helper_carry_direct[Pferd,Toshiba_Laptops,O27,O28];<method_helper_carry_direct_noMoveFirst;move[Pferd,O27,O28];method_move_no_traincar;1;0,-1,2>;1;0,-1,-2,-3,2,3,4,5>;unload_top[Toshiba_Laptops,Pferd,O28];method_unload_top_normal;3;0,1,2,-1,4,5,6,7>;unload[Toshiba_Laptops,Pferd,O28];method_unload_regular;3;0,1,2,-1,-2,-3,4,5,6,7>;load_top[Toshiba_Laptops,Pferd,O27];method_load_top_normal;1;0,-1,2,3,4,5,6,7,8,9>;load[Toshiba_Laptops,Pferd,O27];method_load_regular;1;0,-1,-2,-3,2,3,4,5,6,7,8,9>;deliver[Toshiba_Laptops];method_deliver_dp;8;0,1,2,3,4,5,6,7,-1,9,10,11>;pickup[Toshiba_Laptops];method_pickup_normal;0;-1,1,2,3,4,5,6,7,8,9,10,11> 1 6 8 14 16 20 28 30 44 45 47 55
+<==
