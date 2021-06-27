@@ -346,17 +346,21 @@ int main(int argc, char *argv[]) {
 		VisitedList visi(htn,noVisitedList, taskHash, taskSequenceHash, topologicalOrdering, orderPairsHash, layerHash, allowGIcheck, allowParalleSequencesMode);
     	PriorityQueueSearch search;
 
+		// UNCOMMENT THIS FOR STACK SEARCH
 		StackFringe fringeStack(aStarType);
+
+		// UNCOMMENT THIS FOR REGULAR PROGRESSION SEARCH
 		//OneQueueWAStarFringe fringe(aStarType, aStarWeight, hLength);
 
 		bool printPlan = !args_info.noPlanOutput_flag;
 
-		
+		// UNCOMMENT THIS FOR STACK SEARCH WITHOUT MOVE-ORDERING
 		//search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringeStack, 1, 0);
 		
-		
+		// UNCOMMENT THIS FOR STACK SEARCH WITH MOVE-ORDERING
 		search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringeStack, 1, 1);
 
+		// UNCOMMENT THIS FOR REGULAR PROGRESSION SEARCH 
 		//search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringe, 0, 1);
     	
 
