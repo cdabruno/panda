@@ -86,6 +86,7 @@ struct searchNode {
 	int modificationDepth;
 	int mixedModificationDepth;
 	int actionCosts = 0;
+	int depth;
 
 //    HeuristicPayload** hPL = nullptr;
 

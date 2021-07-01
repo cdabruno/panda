@@ -38,9 +38,13 @@ namespace progression {
         template<class VisitedList, class Fringe>
         void
         search(Model *htn, searchNode *tnI, int timeLimit, bool suboptimalSearch, bool printSolution, Heuristic **hF,
-               int hLength, VisitedList &visitedList, Fringe &fringe, int flagStack, int flagHeuristic) {
+               int hLength, VisitedList &visitedList, Fringe &fringe, int flagStack, int flagHeuristic, int flagExaustive) {
             timeval tp;
             gettimeofday(&tp, NULL);
+
+            tnI->depth = 0;
+
+            int maxDepth = 0;
             
             long startT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
             long currentT;
@@ -61,7 +65,7 @@ namespace progression {
             } else {
                 cout << "- Search is stopped after first solution is found." << endl;
             }
-            if(!flagStack){
+            if(flagHeuristic){
                 cout << "- Utilizing heuristics." << endl;
             }
 
@@ -105,7 +109,7 @@ namespace progression {
                         currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
                         tnSol = handleNewSolution(n, tnSol, currentT - startT);
                         continueSearch = this->optimzeSol;
-                        if (!continueSearch)
+                        if (!continueSearch && !flagExaustive)
                             break;
                     }
 
@@ -115,6 +119,10 @@ namespace progression {
                                 continue;
                             searchNode *n2 = htn->apply(n, i);
                             numSearchNodes++;
+                            n2->depth = n->depth+1;
+                            if(n2->depth > maxDepth){
+                                maxDepth = n2->depth;
+                            }
                             // check whether we have seen this one already
                             if (suboptimalSearch && !visitedList.insertVisi(n2)) {
                                 delete n2;
@@ -144,7 +152,7 @@ namespace progression {
                                 currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
                                 tnSol = handleNewSolution(n2, tnSol, currentT - startT);
                                 continueSearch = this->optimzeSol;
-                                if (!continueSearch)
+                                if (!continueSearch && !flagExaustive)
                                     break;
                             }
 
@@ -153,7 +161,7 @@ namespace progression {
                         }
                     }
 
-                    if (!continueSearch)
+                    if (!continueSearch && !flagExaustive)
                         break;
 
                     if (n->numAbstract > 0) {
@@ -163,6 +171,10 @@ namespace progression {
                         for (int i = 0; i < htn->numMethodsForTask[task]; i++) {
                             int method = htn->taskToMethods[task][i];
                             searchNode *n2 = htn->decompose(n, decomposedStep, method);
+                            n2->depth = n->depth+1;
+                            if(n2->depth > maxDepth){
+                                maxDepth = n2->depth;
+                            }
                             numSearchNodes++;
                             // check whether we have seen this one already
                             if (suboptimalSearch && !visitedList.insertVisi(n2)) {
@@ -190,7 +202,7 @@ namespace progression {
                                 currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
                                 tnSol = handleNewSolution(n2, tnSol, currentT - startT);
                                 continueSearch = this->optimzeSol;
-                                if (!continueSearch)
+                                if (!continueSearch && !flagExaustive)
                                     break;
 
                             }
@@ -259,7 +271,7 @@ namespace progression {
                         currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
                         tnSol = handleNewSolution(n, tnSol, currentT - startT);
                         continueSearch = this->optimzeSol;
-                        if (!continueSearch)
+                        if (!continueSearch && !flagExaustive)
                             break;
                     }
 
@@ -269,6 +281,10 @@ namespace progression {
                                 continue;
                             searchNode *n2 = htn->apply(n, i);
                             numSearchNodes++;
+                            n2->depth = n->depth+1;
+                            if(n2->depth > maxDepth){
+                                maxDepth = n2->depth;
+                            }
                             // check whether we have seen this one already
                             if (suboptimalSearch && !visitedList.insertVisi(n2)) {
                                 delete n2;
@@ -280,6 +296,7 @@ namespace progression {
                             // compute the heuristic
                             if(flagHeuristic){
                                 n2->heuristicValue = new int[hLength];
+                                
                                 for (int i = 0; i < hLength; i++) {
                                     hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
                                 }
@@ -298,7 +315,7 @@ namespace progression {
                                 currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
                                 tnSol = handleNewSolution(n2, tnSol, currentT - startT);
                                 continueSearch = this->optimzeSol;
-                                if (!continueSearch)
+                                if (!continueSearch && !flagExaustive)
                                     break;
                             }
                             if(flagHeuristic){
@@ -312,7 +329,7 @@ namespace progression {
                         }
                     }
 
-                    if (!continueSearch)
+                    if (!continueSearch && !flagExaustive)
                         break;
 
                     if (n->numAbstract > 0) {
@@ -323,6 +340,10 @@ namespace progression {
                             int method = htn->taskToMethods[task][i];
                             searchNode *n2 = htn->decompose(n, decomposedStep, method);
                             numSearchNodes++;
+                            n2->depth = n->depth+1;
+                            if(n2->depth > maxDepth){
+                                maxDepth = n2->depth;
+                            }
                             // check whether we have seen this one already
                             if (suboptimalSearch && !visitedList.insertVisi(n2)) {
                                 delete n2;
@@ -352,7 +373,7 @@ namespace progression {
                                 currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
                                 tnSol = handleNewSolution(n2, tnSol, currentT - startT);
                                 continueSearch = this->optimzeSol;
-                                if (!continueSearch)
+                                if (!continueSearch && !flagExaustive)
                                     break;
 
                             }
@@ -400,6 +421,7 @@ namespace progression {
                         if ((timeLimit > 0) && ((currentT - startT) / 1000 > timeLimit)) {
                             reachedTimeLimit = true;
                             cout << "Reached time limit - stopping search." << endl;
+                            
                             break;
                         }
                     }
@@ -410,11 +432,16 @@ namespace progression {
             }
 
             
+
+            
             
             gettimeofday(&tp, NULL);
             currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
             cout << "Search Results" << endl;
             cout << "- Search time " << double(currentT - startT) / 1000 << " seconds" << endl;
+            if(flagExaustive){
+                cout << "Max depth reached with exaustive algorithm: " << maxDepth << "." << endl;
+            }
             cout << "- Visited list time " << visitedList.time / 1000 << " seconds" << endl;
             cout << "- Visited list inserts " << visitedList.attemptedInsertions << endl;
             cout << "- Visited list pruned " << visitedList.attemptedInsertions - visitedList.uniqueInsertions << endl;
