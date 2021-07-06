@@ -1,3 +1,70 @@
 Random seed: 42
 Time limit: 20 seconds
 Reading input from results/grounded/transport28.sas.
+- State has 250 bits divided into 250 mutex groups.
+- Domain contains 900 actions.
+- Domain contains 1416 tasks.
+- Domain contains 1406 methods.
+- The initial state contains 30 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 1326
+- The problem is cyclic
+- Number of cyclic SCCs: 5
+- Number of cyclic SCCs of size 1: 0
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 0
+No heuristics given, setting default ... 
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(ff;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Stack Search
+- Using Stack Algorithm.
+   1s visitime    0.53s generated nodes     10002 nodes/sec    7322 cur h 2559 mod.depth 2496 inserts      2495 dups         0 size      2495 hash fail      0 hash buckets   2495
+   2s visitime    1.17s generated nodes     15002 nodes/sec    6039 cur h 3809 mod.depth 3746 inserts      3745 dups         0 size      3745 hash fail      0 hash buckets   3745
+   3s visitime    2.05s generated nodes     20002 nodes/sec    5191 cur h 5059 mod.depth 4996 inserts      4995 dups         0 size      4995 hash fail      1 hash buckets   4994
+   5s visitime    3.16s generated nodes     25002 nodes/sec    4595 cur h 6309 mod.depth 6246 inserts      6245 dups         0 size      6245 hash fail      1 hash buckets   6244
+   7s visitime    4.53s generated nodes     30002 nodes/sec    4111 cur h 7559 mod.depth 7496 inserts      7495 dups         0 size      7495 hash fail      3 hash buckets   7492
+   9s visitime    6.15s generated nodes     35002 nodes/sec    3720 cur h 8809 mod.depth 8746 inserts      8745 dups         0 size      8745 hash fail      6 hash buckets   8739
+  11s visitime    7.99s generated nodes     40002 nodes/sec    3411 cur h 10059 mod.depth 9996 inserts      9995 dups         0 size      9995 hash fail      8 hash buckets   9987
+  14s visitime   10.07s generated nodes     45002 nodes/sec    3149 cur h 11309 mod.depth 11246 inserts     11245 dups         0 size     11245 hash fail      8 hash buckets  11237
+  17s visitime   12.32s generated nodes     50002 nodes/sec    2939 cur h 12559 mod.depth 12496 inserts     12495 dups         0 size     12495 hash fail      9 hash buckets  12486
+  20s visitime   14.93s generated nodes     55002 nodes/sec    2735 cur h 13809 mod.depth 13746 inserts     13745 dups         0 size     13745 hash fail     10 hash buckets  13735
+  23s visitime   17.71s generated nodes     60002 nodes/sec    2569 cur h 15059 mod.depth 14996 inserts     14995 dups         0 size     14995 hash fail     11 hash buckets  14984
+Reached time limit - stopping search.
+Search Results
+- Search time 23.36 seconds
+Max depth reached with exaustive algorithm: 14995.
+- Visited list time 17.71 seconds
+- Visited list inserts 14995
+- Visited list pruned 0
+- Visited list contains 14995
+- Visited list hash collisions 11
+- Visited list used hash buckets 14984
+- Generated 60002 search nodes
+  Calculated heuristic for 59995 nodes
+  One modifications 4
+  Effectless actions 3
+- including 4 one modification actions
+- including 0 one modification methods
+- and       3 progressions of effectless actions
+- Generated 2568 nodes per second
+- Final fringe contains 7678 nodes
+- Status: Timeout

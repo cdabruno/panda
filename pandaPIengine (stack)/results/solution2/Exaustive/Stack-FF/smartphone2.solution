@@ -1,3 +1,102 @@
 Random seed: 42
 Time limit: 20 seconds
 Reading input from results/grounded/smartphone2.sas.
+- State has 16 bits divided into 16 mutex groups.
+- Domain contains 16 actions.
+- Domain contains 22 tasks.
+- Domain contains 25 methods.
+- The initial state contains 4 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 3 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: no
+- Instance is parallel sequences: no
+Calculate SCCs...
+- Number of SCCs: 22
+- The problem is cyclic
+- Number of cyclic SCCs: 2
+- Number of cyclic SCCs of size 1: 2
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 0
+No heuristics given, setting default ... 
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(ff;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: partial order
+- hashs to use: state task task-sequence
+- memory information: topological ordering order-pairs layer
+- Visited list allows deletion of search nodes: false
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Stack Search
+- Using Stack Algorithm.
+   1s visitime    1.12s generated nodes     25032 nodes/sec   20773 cur h   16 mod.depth   64 inserts     24538 dups     22292 size      2246 hash fail  22293 hash buckets   2245
+   2s visitime    2.19s generated nodes     40061 nodes/sec   17149 cur h   20 mod.depth   66 inserts     39529 dups     36410 size      3119 hash fail  36411 hash buckets   3118
+   3s visitime    3.51s generated nodes     50072 nodes/sec   13398 cur h   24 mod.depth   68 inserts     49520 dups     45854 size      3666 hash fail  45855 hash buckets   3665
+   5s visitime    4.98s generated nodes     60094 nodes/sec   11370 cur h   22 mod.depth   76 inserts     59429 dups     55289 size      4140 hash fail  55290 hash buckets   4139
+   6s visitime    5.98s generated nodes     70130 nodes/sec   11026 cur h   18 mod.depth   83 inserts     69357 dups     64734 size      4623 hash fail  64735 hash buckets   4622
+   7s visitime    7.33s generated nodes     80157 nodes/sec   10263 cur h   18 mod.depth   86 inserts     79328 dups     74235 size      5093 hash fail  74236 hash buckets   5092
+   8s visitime    8.42s generated nodes     85171 nodes/sec    9503 cur h   20 mod.depth   87 inserts     84346 dups     79023 size      5323 hash fail  79024 hash buckets   5322
+  10s visitime    9.91s generated nodes     90178 nodes/sec    8583 cur h   31 mod.depth   79 inserts     89558 dups     84029 size      5529 hash fail  84030 hash buckets   5528
+  12s visitime   11.36s generated nodes     95181 nodes/sec    7913 cur h   23 mod.depth   90 inserts     94358 dups     88631 size      5727 hash fail  88632 hash buckets   5726
+  13s visitime   12.78s generated nodes    100196 nodes/sec    7400 cur h   29 mod.depth   84 inserts     99483 dups     93552 size      5931 hash fail  93553 hash buckets   5930
+  15s visitime   14.27s generated nodes    105200 nodes/sec    6942 cur h   31 mod.depth   82 inserts    104547 dups     98417 size      6130 hash fail  98418 hash buckets   6129
+  17s visitime   16.07s generated nodes    110217 nodes/sec    6462 cur h   27 mod.depth   89 inserts    109422 dups    103107 size      6315 hash fail 103108 hash buckets   6314
+  18s visitime   17.45s generated nodes    115234 nodes/sec    6225 cur h   27 mod.depth   89 inserts    114422 dups    107882 size      6540 hash fail 107883 hash buckets   6539
+  19s visitime   18.44s generated nodes    120257 nodes/sec    6147 cur h   25 mod.depth   94 inserts    119356 dups    112572 size      6784 hash fail 112573 hash buckets   6783
+  21s visitime   19.80s generated nodes    125271 nodes/sec    5951 cur h   21 mod.depth   98 inserts    124333 dups    117329 size      7004 hash fail 117330 hash buckets   7003
+Reached time limit - stopping search.
+Search Results
+- Search time 21.05 seconds
+Max depth reached with exaustive algorithm: 104.
+- Visited list time 19.80 seconds
+- Visited list inserts 124333
+- Visited list pruned 117329
+- Visited list contains 7004
+- Visited list hash collisions 117330
+- Visited list used hash buckets 7003
+- Generated 125271 search nodes
+  Calculated heuristic for 125212 nodes
+  One modifications 57
+  Effectless actions 2
+- including 57 one modification actions
+- including 0 one modification methods
+- and       2 progressions of effectless actions
+- Generated 5948 nodes per second
+- Final fringe contains 433 nodes
+- Status: Solved
+- Found solution of length 23
+- Total costs of actions: 11
+==>
+59 attachRegularInformationToEMail[email1,agenda]
+64 attachRegularInformationToEMail[email1,dateForMeeting]
+65 attachRegularInformationToEMail[email1,room101]
+67 press_Home_EMail[]
+68 select_EMail_EMailAccount_NoOp[account1]
+69 press_EMail_NewEMail[account1]
+70 enter_EMailAddress[headOfDepartment,headOfDepartmentEMailAddress]
+71 press_EMail_NewEMail_Send[headOfDepartment,email1]
+114 extractsInformation_Regular[headOfDepartment,email1,agenda]
+115 extractsInformation_Regular[headOfDepartment,email1,dateForMeeting]
+116 extractsInformation_Regular[headOfDepartment,email1,room101]
+root 0
+107 extractsMultipleInformation[headOfDepartment,email1] -> <do_extractsMultipleInformation_Single;extractsInformation[headOfDepartment,email1,agenda];do_extractsInformation_Regular;0;-1> 114
+105 do_extractsMultipleInformation_Multiple_splitted_2[headOfDepartment,email1] -> <_splitting_method_do_extractsMultipleInformation_Multiple_splitted_2;extractsInformation[headOfDepartment,email1,room101];do_extractsInformation_Regular;0;-1> 116
+100 extractsMultipleInformation[headOfDepartment,email1] -> do_extractsMultipleInformation_Multiple 107 105
+90 do_extractsMultipleInformation_Multiple_splitted_2[headOfDepartment,email1] -> <_splitting_method_do_extractsMultipleInformation_Multiple_splitted_2;extractsInformation[headOfDepartment,email1,dateForMeeting];do_extractsInformation_Regular;0;-1> 115
+87 extractsMultipleInformation[headOfDepartment,email1] -> do_extractsMultipleInformation_Multiple 100 90
+66 enterMode_EMail[] -> do_enterMode_EMail_FromHome 67
+57 do_attachMultipleInformation_Multiple_splitted_1[email1] -> <<_splitting_method_do_attachMultipleInformation_Multiple_splitted_1;attachInformation[email1,dateForMeeting];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email1,dateForMeeting];do_attachInformationToEMail_Regular;0;-1> 64
+50 do_attachMultipleInformation_Multiple_splitted_1[email1] -> <<_splitting_method_do_attachMultipleInformation_Multiple_splitted_1;attachInformation[email1,room101];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email1,room101];do_attachInformationToEMail_Regular;0;-1> 65
+47 attachMultipleInformation[email1] -> <<do_attachMultipleInformation_Single;attachInformation[email1,agenda];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email1,agenda];do_attachInformationToEMail_Regular;0;-1> 59
+17 attachMultipleInformation[email1] -> do_attachMultipleInformation_Multiple 47 50
+11 attachMultipleInformation[email1] -> do_attachMultipleInformation_Multiple 17 57
+0 __top[] -> <<__top_method;send_EMail[headOfDepartment,email1];do_send_EMail_ViaEMail;1;0,-1,-2,-3,-4,-5,2>;select_EMail_EMailAccount[account1];do_select_EMail_EMailAccount_NoOp;2;0,1,-1,3,4,5,6> 11 66 68 69 70 71 87
+<==

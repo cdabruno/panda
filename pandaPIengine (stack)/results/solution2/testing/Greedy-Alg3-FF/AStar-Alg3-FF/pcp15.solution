@@ -1,0 +1,95 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/pcp15.sas.
+- State has 6 bits divided into 6 mutex groups.
+- Domain contains 8 actions.
+- Domain contains 11 tasks.
+- Domain contains 9 methods.
+- The initial state contains 1 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 1 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 11
+- The problem is cyclic
+- Number of cyclic SCCs: 2
+- Number of cyclic SCCs of size 1: 2
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 0
+No heuristics given, setting default ... 
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(ff;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+Search Results
+- Search time 0.003 seconds
+- Visited list time 0.000408 seconds
+- Visited list inserts 93
+- Visited list pruned 0
+- Visited list contains 93
+- Visited list hash collisions 0
+- Visited list used hash buckets 93
+- Generated 874 search nodes
+  Calculated heuristic for 366 nodes
+  One modifications 508
+  Effectless actions 0
+- including 508 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 122000 nodes per second
+- Final fringe contains 30 nodes
+- Status: Solved
+- Found solution of length 33
+- Total costs of actions: 24
+==>
+80 t2G1[]
+88 t2G2[]
+147 t2G1[]
+271 t2G2[]
+400 t1G1[]
+546 t1G2[]
+799 t1G1[]
+800 t1G2[]
+801 p0G1[]
+802 p0G2[]
+803 p0G1[]
+804 p0G2[]
+805 p1G1[]
+806 p1G2[]
+807 p0G1[]
+808 p0G2[]
+809 p0G1[]
+810 p0G2[]
+811 p1G1[]
+812 p1G2[]
+813 p0G1[]
+814 p0G2[]
+815 p0G1[]
+816 p0G2[]
+root 0
+798 SG2[] -> G2_S2t1_0 800 802
+545 SG1[] -> G1_S2t1_0_0_1 799 801 803 805
+399 SG2[] -> G2_S2t1_S_0 546 798 804
+270 SG1[] -> G1_S2t1_S_0_0_1 400 545 807 809 811
+146 SG2[] -> G2_S2t2_S_1_0_0 271 399 806 808 810
+87 SG1[] -> G1_S2t2_S_0 147 270 813
+79 SG1[] -> G1_S2t2_S_0 80 87 815
+4 SG2[] -> G2_S2t2_S_1_0_0 88 146 812 814 816
+0 __top[] -> __top_method 79 4
+<==

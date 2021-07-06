@@ -24,3 +24,44 @@ Search config:
  - type: path cost
  - weight: 1
  - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Stack Search
+- Using Stack Algorithm.
+   1s visitime    0.15s generated nodes     10001 nodes/sec    9862 cur h  802 mod.depth  831 inserts      2466 dups       501 size      1965 hash fail    501 hash buckets   1965
+   2s visitime    0.61s generated nodes     20005 nodes/sec    6710 cur h 1659 mod.depth 1683 inserts      4910 dups       995 size      3915 hash fail    995 hash buckets   3915
+   4s visitime    0.95s generated nodes     25007 nodes/sec    5822 cur h 2094 mod.depth 2118 inserts      6116 dups      1223 size      4893 hash fail   1223 hash buckets   4893
+   5s visitime    1.40s generated nodes     30013 nodes/sec    5009 cur h 2515 mod.depth 2539 inserts      7338 dups      1469 size      5869 hash fail   1470 hash buckets   5868
+   7s visitime    1.93s generated nodes     35014 nodes/sec    4406 cur h 2920 mod.depth 2944 inserts      8557 dups      1710 size      6847 hash fail   1711 hash buckets   6846
+  10s visitime    2.54s generated nodes     40016 nodes/sec    3923 cur h 3325 mod.depth 3349 inserts      9786 dups      1964 size      7822 hash fail   1965 hash buckets   7821
+  12s visitime    3.16s generated nodes     45019 nodes/sec    3604 cur h 3762 mod.depth 3789 inserts     10992 dups      2194 size      8798 hash fail   2197 hash buckets   8795
+  15s visitime    3.89s generated nodes     50019 nodes/sec    3297 cur h 4210 mod.depth 4241 inserts     12200 dups      2426 size      9774 hash fail   2429 hash buckets   9771
+  18s visitime    4.73s generated nodes     55019 nodes/sec    3021 cur h 4607 mod.depth 4638 inserts     13426 dups      2676 size     10750 hash fail   2679 hash buckets  10747
+  21s visitime    5.62s generated nodes     60019 nodes/sec    2797 cur h 5047 mod.depth 5074 inserts     14637 dups      2910 size     11727 hash fail   2913 hash buckets  11724
+Reached time limit - stopping search.
+Search Results
+- Search time 21.46 seconds
+Max depth reached with exaustive algorithm: 5067.
+- Visited list time 5.62 seconds
+- Visited list inserts 14637
+- Visited list pruned 2910
+- Visited list contains 11727
+- Visited list hash collisions 2913
+- Visited list used hash buckets 11724
+- Generated 60019 search nodes
+  Calculated heuristic for 46914 nodes
+  One modifications 12403
+  Effectless actions 702
+- including 12403 one modification actions
+- including 0 one modification methods
+- and       702 progressions of effectless actions
+- Generated 2186 nodes per second
+- Final fringe contains 5906 nodes
+- Status: Timeout

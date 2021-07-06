@@ -1,0 +1,86 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/satellite12.sas.
+- State has 20 bits divided into 20 mutex groups.
+- Domain contains 41 actions.
+- Domain contains 55 tasks.
+- Domain contains 74 methods.
+- The initial state contains 4 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 55
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 0
+No heuristics given, setting default ... 
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(ff;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+Search Results
+- Search time 0.034 seconds
+- Visited list time 0.006227 seconds
+- Visited list inserts 2507
+- Visited list pruned 174
+- Visited list contains 2333
+- Visited list hash collisions 174
+- Visited list used hash buckets 2333
+- Generated 9801 search nodes
+  Calculated heuristic for 7103 nodes
+  One modifications 2526
+  Effectless actions 172
+- including 2526 one modification actions
+- including 0 one modification methods
+- and       172 progressions of effectless actions
+- Generated 208911 nodes per second
+- Final fringe contains 446 nodes
+- Status: Solved
+- Found solution of length 26
+- Total costs of actions: 16
+==>
+5613 switch_on[instrument11,satellite1]
+7981 turn_to[satellite1,GroundStation1,Phenomenon7]
+7982 switch_on[instrument03,satellite0]
+9773 turn_to[satellite0,GroundStation0,Phenomenon6]
+9775 calibrate[satellite1,instrument11,GroundStation1]
+9779 turn_to[satellite1,Phenomenon4,GroundStation1]
+9780 take_image[satellite1,Phenomenon4,instrument11,thermograph]
+9782 calibrate[satellite0,instrument03,GroundStation0]
+9783 switch_off[instrument11,satellite1]
+9788 turn_to[satellite0,Phenomenon6,GroundStation0]
+9789 take_image[satellite0,Phenomenon6,instrument03,hd_video]
+9790 switch_on[instrument12,satellite1]
+9793 turn_to[satellite1,GroundStation1,Phenomenon4]
+9794 calibrate[satellite1,instrument12,GroundStation1]
+9795 turn_to[satellite1,Star5,GroundStation1]
+9796 take_image[satellite1,Star5,instrument12,x_ray]
+root 0
+9792 auto_calibrate[satellite1,instrument12] -> method6 9793 9794
+7991 auto_calibrate[satellite0,instrument03] -> method6 9773 9782
+7644 auto_calibrate[satellite1,instrument11] -> method6 7981 9775
+5592 activate_instrument[satellite1,instrument12] -> method4 9783 9790 9792
+5591 activate_instrument[satellite0,instrument03] -> method5 7982 7991
+396 do_observation[Phenomenon6,hd_video] -> method0 5591 9788 9789
+225 do_observation[Star5,x_ray] -> method0 5592 9795 9796
+216 activate_instrument[satellite1,instrument11] -> method5 5613 7644
+13 do_observation[Phenomenon4,thermograph] -> method0 216 9779 9780
+0 __top[] -> __top_method 13 225 396
+<==

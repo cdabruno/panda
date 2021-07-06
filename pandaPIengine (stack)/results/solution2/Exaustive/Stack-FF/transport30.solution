@@ -1,3 +1,70 @@
 Random seed: 42
 Time limit: 20 seconds
 Reading input from results/grounded/transport30.sas.
+- State has 364 bits divided into 364 mutex groups.
+- Domain contains 1968 actions.
+- Domain contains 2649 tasks.
+- Domain contains 3037 methods.
+- The initial state contains 32 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 2475
+- The problem is cyclic
+- Number of cyclic SCCs: 6
+- Number of cyclic SCCs of size 1: 0
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 0
+No heuristics given, setting default ... 
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (1 ms)
+Heuristic #0 = hhRC2(ff;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Stack Search
+- Using Stack Algorithm.
+   1s visitime    0.06s generated nodes     10035 nodes/sec    8525 cur h  841 mod.depth  959 inserts      1039 dups        27 size      1012 hash fail     27 hash buckets   1012
+   2s visitime    0.19s generated nodes     20040 nodes/sec    7785 cur h 1665 mod.depth 1637 inserts      1948 dups        48 size      1900 hash fail     48 hash buckets   1900
+   4s visitime    0.39s generated nodes     25043 nodes/sec    5934 cur h 2034 mod.depth 2006 inserts      2427 dups        56 size      2371 hash fail     56 hash buckets   2371
+   6s visitime    0.59s generated nodes     30044 nodes/sec    4810 cur h 2371 mod.depth 2343 inserts      2828 dups        84 size      2744 hash fail     84 hash buckets   2744
+   8s visitime    0.83s generated nodes     35045 nodes/sec    4260 cur h 2748 mod.depth 2720 inserts      3266 dups        95 size      3171 hash fail     95 hash buckets   3171
+  10s visitime    1.11s generated nodes     40051 nodes/sec    3855 cur h 3105 mod.depth 3077 inserts      3706 dups       112 size      3594 hash fail    113 hash buckets   3593
+  12s visitime    1.41s generated nodes     45061 nodes/sec    3524 cur h 3461 mod.depth 3433 inserts      4125 dups       133 size      3992 hash fail    135 hash buckets   3990
+  15s visitime    1.79s generated nodes     50063 nodes/sec    3309 cur h 3822 mod.depth 3794 inserts      4616 dups       149 size      4467 hash fail    151 hash buckets   4465
+  17s visitime    2.18s generated nodes     55065 nodes/sec    3151 cur h 4220 mod.depth 4192 inserts      5088 dups       159 size      4929 hash fail    161 hash buckets   4927
+  20s visitime    2.62s generated nodes     60066 nodes/sec    2966 cur h 4582 mod.depth 4554 inserts      5565 dups       170 size      5395 hash fail    172 hash buckets   5393
+  22s visitime    3.08s generated nodes     65066 nodes/sec    2837 cur h 4981 mod.depth 4953 inserts      6007 dups       179 size      5828 hash fail    181 hash buckets   5826
+Reached time limit - stopping search.
+Search Results
+- Search time 22.93 seconds
+Max depth reached with exaustive algorithm: 4940.
+- Visited list time 3.08 seconds
+- Visited list inserts 6007
+- Visited list pruned 179
+- Visited list contains 5828
+- Visited list hash collisions 181
+- Visited list used hash buckets 5826
+- Generated 65066 search nodes
+  Calculated heuristic for 52158 nodes
+  One modifications 12903
+  Effectless actions 5
+- including 12903 one modification actions
+- including 0 one modification methods
+- and       5 progressions of effectless actions
+- Generated 2274 nodes per second
+- Final fringe contains 17793 nodes
+- Status: Timeout

@@ -1,0 +1,85 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/entertainment10.sas.
+- State has 131 bits divided into 131 mutex groups.
+- Domain contains 246 actions.
+- Domain contains 379 tasks.
+- Domain contains 402 methods.
+- The initial state contains 52 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 357
+- The problem is cyclic
+- Number of cyclic SCCs: 4
+- Number of cyclic SCCs of size 1: 1
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+   2s visitime    0.01s generated nodes     10005 nodes/sec    4228 cur h    8 mod.depth   14 inserts      2838 dups       335 size      2503 hash fail    335 hash buckets   2503
+   3s visitime    0.03s generated nodes     15013 nodes/sec    3939 cur h   10 mod.depth   12 inserts      4444 dups       407 size      4037 hash fail    407 hash buckets   4037
+Search Results
+- Search time 4.35 seconds
+- Visited list time 0.03 seconds
+- Visited list inserts 5682
+- Visited list pruned 432
+- Visited list contains 5250
+- Visited list hash collisions 432
+- Visited list used hash buckets 5250
+- Generated 19211 search nodes
+  Calculated heuristic for 16060 nodes
+  One modifications 3149
+  Effectless actions 2
+- including 3149 one modification actions
+- including 0 one modification methods
+- and       2 progressions of effectless actions
+- Generated 3690 nodes per second
+- Final fringe contains 6577 nodes
+- Status: Solved
+- Found solution of length 23
+- Total costs of actions: 8
+==>
+13 plug|instance_4[blu-ray-1,blu-ray-1-cinch-2,cinch-cable-1,cinch-cable-1-cinch-1]
+273 plug|instance_7[cinch-cable-1,cinch-cable-1-cinch-2,amplifier-1,amplifier-1-cinch-3]
+2431 plug|instance_4[sat-receiver-1,sat-receiver-1-cinch-6,cinch-cable-2,cinch-cable-2-cinch-1]
+2539 plug|instance_7[cinch-cable-2,cinch-cable-2-cinch-2,amplifier-1,amplifier-1-cinch-4]
+11311 plug|instance_1[blu-ray-1,blu-ray-1-hdmi-1,hdmi-cable-1,hdmi-cable-1-hdmi-1]
+17565 plug|instance_1[hdmi-cable-1,hdmi-cable-1-hdmi-2,tv-1,tv-1-hdmi-2]
+19204 plug|instance_2[sat-receiver-1,sat-receiver-1-cinch-4,cinch-cable-4,cinch-cable-4-cinch-1]
+19209 plug|instance_3[cinch-cable-4,cinch-cable-4-cinch-2,tv-1,tv-1-cinch-6]
+root 0
+19208 direct_v_connect[cinch-cable-4,tv-1] -> <m-dconnect-v;plug[cinch-cable-4,cinch-cable-4-cinch-2,tv-1,tv-1-cinch-6];_method_for_multiple_expansions_of_plug|instance_3;0;-1> 19209
+19203 direct_v_connect[sat-receiver-1,cinch-cable-4] -> <m-dconnect-v;plug[sat-receiver-1,sat-receiver-1-cinch-4,cinch-cable-4,cinch-cable-4-cinch-1];_method_for_multiple_expansions_of_plug|instance_2;0;-1> 19204
+19200 v_connect[sat-receiver-1,cinch-cable-4] -> m-connect-direct-v 19203
+18029 v_connect[sat-receiver-1,tv-1] -> m-connect-rec-v 19200 19208
+17564 direct_v_connect[hdmi-cable-1,tv-1] -> <m-dconnect-v;plug[hdmi-cable-1,hdmi-cable-1-hdmi-2,tv-1,tv-1-hdmi-2];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 17565
+11310 direct_v_connect[blu-ray-1,hdmi-cable-1] -> <m-dconnect-v;plug[blu-ray-1,blu-ray-1-hdmi-1,hdmi-cable-1,hdmi-cable-1-hdmi-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 11311
+11307 v_connect[blu-ray-1,hdmi-cable-1] -> m-connect-direct-v 11310
+2631 v_connect[blu-ray-1,tv-1] -> m-connect-rec-v 11307 17564
+2538 direct_a_connect[cinch-cable-2,amplifier-1] -> <m-dconnect-a;plug[cinch-cable-2,cinch-cable-2-cinch-2,amplifier-1,amplifier-1-cinch-4];_method_for_multiple_expansions_of_plug|instance_7;0;-1> 2539
+2430 direct_a_connect[sat-receiver-1,cinch-cable-2] -> <m-dconnect-a;plug[sat-receiver-1,sat-receiver-1-cinch-6,cinch-cable-2,cinch-cable-2-cinch-1];_method_for_multiple_expansions_of_plug|instance_4;0;-1> 2431
+285 a_connect[sat-receiver-1,amplifier-1] -> <m-connect-rec-a;a_connect[sat-receiver-1,cinch-cable-2];m-connect-direct-a;0;-1,1> 2430 2538
+272 direct_a_connect[cinch-cable-1,amplifier-1] -> <m-dconnect-a;plug[cinch-cable-1,cinch-cable-1-cinch-2,amplifier-1,amplifier-1-cinch-3];_method_for_multiple_expansions_of_plug|instance_7;0;-1> 273
+12 direct_a_connect[blu-ray-1,cinch-cable-1] -> <m-dconnect-a;plug[blu-ray-1,blu-ray-1-cinch-2,cinch-cable-1,cinch-cable-1-cinch-1];_method_for_multiple_expansions_of_plug|instance_4;0;-1> 13
+2 a_connect[blu-ray-1,amplifier-1] -> <m-connect-rec-a;a_connect[blu-ray-1,cinch-cable-1];m-connect-direct-a;0;-1,1> 12 272
+0 __top[] -> __top_method 2 285 2631 18029
+<==

@@ -1,0 +1,85 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/smartphone2.sas.
+- State has 16 bits divided into 16 mutex groups.
+- Domain contains 16 actions.
+- Domain contains 22 tasks.
+- Domain contains 25 methods.
+- The initial state contains 4 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 3 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: no
+- Instance is parallel sequences: no
+Calculate SCCs...
+- Number of SCCs: 22
+- The problem is cyclic
+- Number of cyclic SCCs: 2
+- Number of cyclic SCCs of size 1: 2
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 0
+No heuristics given, setting default ... 
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(ff;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: partial order
+- hashs to use: state task task-sequence
+- memory information: topological ordering order-pairs layer
+- Visited list allows deletion of search nodes: false
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+Search Results
+- Search time 0.013 seconds
+- Visited list time 0.01024 seconds
+- Visited list inserts 256
+- Visited list pruned 118
+- Visited list contains 138
+- Visited list hash collisions 118
+- Visited list used hash buckets 138
+- Generated 710 search nodes
+  Calculated heuristic for 598 nodes
+  One modifications 101
+  Effectless actions 11
+- including 101 one modification actions
+- including 0 one modification methods
+- and       11 progressions of effectless actions
+- Generated 46000 nodes per second
+- Final fringe contains 55 nodes
+- Status: Solved
+- Found solution of length 23
+- Total costs of actions: 11
+==>
+72 attachRegularInformationToEMail[email1,agenda]
+73 attachRegularInformationToEMail[email1,dateForMeeting]
+74 attachRegularInformationToEMail[email1,room101]
+78 press_Home_EMail[]
+79 select_EMail_EMailAccount_NoOp[account1]
+80 press_EMail_NewEMail[account1]
+81 enter_EMailAddress[headOfDepartment,headOfDepartmentEMailAddress]
+82 press_EMail_NewEMail_Send[headOfDepartment,email1]
+693 extractsInformation_Regular[headOfDepartment,email1,agenda]
+707 extractsInformation_Regular[headOfDepartment,email1,room101]
+708 extractsInformation_Regular[headOfDepartment,email1,dateForMeeting]
+root 0
+691 do_extractsMultipleInformation_Multiple_splitted_2[headOfDepartment,email1] -> <_splitting_method_do_extractsMultipleInformation_Multiple_splitted_2;extractsInformation[headOfDepartment,email1,room101];do_extractsInformation_Regular;0;-1> 707
+682 extractsMultipleInformation[headOfDepartment,email1] -> <do_extractsMultipleInformation_Single;extractsInformation[headOfDepartment,email1,agenda];do_extractsInformation_Regular;0;-1> 693
+666 do_extractsMultipleInformation_Multiple_splitted_2[headOfDepartment,email1] -> <_splitting_method_do_extractsMultipleInformation_Multiple_splitted_2;extractsInformation[headOfDepartment,email1,dateForMeeting];do_extractsInformation_Regular;0;-1> 708
+140 extractsMultipleInformation[headOfDepartment,email1] -> do_extractsMultipleInformation_Multiple 682 666
+106 extractsMultipleInformation[headOfDepartment,email1] -> do_extractsMultipleInformation_Multiple 140 691
+77 enterMode_EMail[] -> do_enterMode_EMail_FromHome 78
+68 attachMultipleInformation[email1] -> <<do_attachMultipleInformation_Single;attachInformation[email1,agenda];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email1,agenda];do_attachInformationToEMail_Regular;0;-1> 72
+49 do_attachMultipleInformation_Multiple_splitted_1[email1] -> <<_splitting_method_do_attachMultipleInformation_Multiple_splitted_1;attachInformation[email1,room101];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email1,room101];do_attachInformationToEMail_Regular;0;-1> 74
+46 do_attachMultipleInformation_Multiple_splitted_1[email1] -> <<_splitting_method_do_attachMultipleInformation_Multiple_splitted_1;attachInformation[email1,dateForMeeting];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email1,dateForMeeting];do_attachInformationToEMail_Regular;0;-1> 73
+17 attachMultipleInformation[email1] -> do_attachMultipleInformation_Multiple 68 49
+11 attachMultipleInformation[email1] -> do_attachMultipleInformation_Multiple 17 46
+0 __top[] -> <<__top_method;send_EMail[headOfDepartment,email1];do_send_EMail_ViaEMail;1;0,-1,-2,-3,-4,-5,2>;select_EMail_EMailAccount[account1];do_select_EMail_EMailAccount_NoOp;2;0,1,-1,3,4,5,6> 11 77 79 80 81 82 106
+<==

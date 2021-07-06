@@ -1,3 +1,104 @@
 Random seed: 42
 Time limit: 20 seconds
 Reading input from results/grounded/entertainment11.sas.
+- State has 130 bits divided into 130 mutex groups.
+- Domain contains 246 actions.
+- Domain contains 374 tasks.
+- Domain contains 364 methods.
+- The initial state contains 56 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 361
+- The problem is cyclic
+- Number of cyclic SCCs: 2
+- Number of cyclic SCCs of size 1: 0
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(add;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Stack Search
+- Using Stack Algorithm.
+   1s visitime    0.84s generated nodes     15001 nodes/sec    9678 cur h 2592 mod.depth 1319 inserts      4564 dups         1 size      4563 hash fail      4 hash buckets   4560
+   2s visitime    1.57s generated nodes     20002 nodes/sec    7097 cur h 3468 mod.depth 1754 inserts      6085 dups         1 size      6084 hash fail      4 hash buckets   6081
+   4s visitime    2.53s generated nodes     25005 nodes/sec    5587 cur h 4349 mod.depth 2193 inserts      7606 dups         1 size      7605 hash fail      4 hash buckets   7602
+   6s visitime    3.71s generated nodes     30006 nodes/sec    4612 cur h 5206 mod.depth 2626 inserts      9130 dups         1 size      9129 hash fail      4 hash buckets   9126
+   8s visitime    5.08s generated nodes     35009 nodes/sec    3946 cur h 6081 mod.depth 3059 inserts     10652 dups         1 size     10651 hash fail      4 hash buckets  10648
+  11s visitime    6.69s generated nodes     40009 nodes/sec    3431 cur h 6940 mod.depth 3494 inserts     12175 dups         1 size     12174 hash fail      4 hash buckets  12171
+  14s visitime    8.49s generated nodes     45011 nodes/sec    3047 cur h 7833 mod.depth 3935 inserts     13694 dups         1 size     13693 hash fail      5 hash buckets  13689
+  18s visitime   10.53s generated nodes     50014 nodes/sec    2728 cur h 8695 mod.depth 4366 inserts     15218 dups         1 size     15217 hash fail      6 hash buckets  15212
+  22s visitime   12.75s generated nodes     55017 nodes/sec    2481 cur h 9560 mod.depth 4804 inserts     16741 dups         1 size     16740 hash fail      6 hash buckets  16735
+Reached time limit - stopping search.
+Search Results
+- Search time 22.17 seconds
+Max depth reached with exaustive algorithm: 4798.
+- Visited list time 12.75 seconds
+- Visited list inserts 16741
+- Visited list pruned 1
+- Visited list contains 16740
+- Visited list hash collisions 6
+- Visited list used hash buckets 16735
+- Generated 55017 search nodes
+  Calculated heuristic for 43060 nodes
+  One modifications 11957
+  Effectless actions 0
+- including 11957 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 1942 nodes per second
+- Final fringe contains 9591 nodes
+- Found 4 solutions.
+  - first solution after 2ms.
+  - best solution after 2ms.
+- Status: Solved
+- Found solution of length 29
+- Total costs of actions: 6
+==>
+11 plug|instance_4[blu-ray-1,blu-ray-1-cinch-2,cinch-cable-3,cinch-cable-3-cinch-1]
+18 plug|instance_7[cinch-cable-3,cinch-cable-3-cinch-2,amplifier-1,amplifier-1-cinch-2]
+32 plug|instance_7[amplifier-1,amplifier-1-speakerWire-10,speaker-wire-2,speaker-wire-2-speakerWire-1]
+38 plug|instance_7[speaker-wire-2,speaker-wire-2-speakerWire-2,box-1,box-1-speakerWire-1]
+48 plug|instance_4[amplifier-1,amplifier-1-speakerWire-8,speaker-wire-1,speaker-wire-1-speakerWire-1]
+56 plug|instance_7[speaker-wire-1,speaker-wire-1-speakerWire-2,box-2,box-2-speakerWire-1]
+root 0
+157 v_connect[blu-ray-1,hdmi-dvi-cable-1] -> m-connect-rec-v
+149 v_connect[blu-ray-1,hdmi-dvip-cable-2] -> m-connect-rec-v 157
+137 v_connect[blu-ray-1,hdmi-dvi-cable-1] -> m-connect-rec-v 149
+123 v_connect[blu-ray-1,hdmi-dvip-cable-1] -> m-connect-rec-v 137
+110 v_connect[blu-ray-1,hdmi-dvi-cable-1] -> m-connect-rec-v 123
+97 v_connect[blu-ray-1,hdmi-dvip-cable-1] -> m-connect-rec-v 110
+75 v_connect[blu-ray-1,hdmi-dvi-cable-1] -> m-connect-rec-v 97
+68 v_connect[blu-ray-1,hdmi-dvip-cable-2] -> m-connect-rec-v 75
+66 v_connect[blu-ray-1,tv-1] -> m-connect-rec-v 68
+55 plug[speaker-wire-1,speaker-wire-1-speakerWire-2,box-2,box-2-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 56
+52 direct_a_connect[speaker-wire-1,box-2] -> m-dconnect-a 55
+47 plug[amplifier-1,amplifier-1-speakerWire-8,speaker-wire-1,speaker-wire-1-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_4 48
+46 direct_a_connect[amplifier-1,speaker-wire-1] -> m-dconnect-a 47
+40 a_connect[amplifier-1,box-2] -> <m-connect-rec-a;a_connect[amplifier-1,speaker-wire-1];m-connect-direct-a;0;-1,1> 46 52
+37 plug[speaker-wire-2,speaker-wire-2-speakerWire-2,box-1,box-1-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 38
+34 direct_a_connect[speaker-wire-2,box-1] -> m-dconnect-a 37
+31 plug[amplifier-1,amplifier-1-speakerWire-10,speaker-wire-2,speaker-wire-2-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 32
+24 direct_a_connect[amplifier-1,speaker-wire-2] -> m-dconnect-a 31
+21 a_connect[amplifier-1,box-1] -> <m-connect-rec-a;a_connect[amplifier-1,speaker-wire-2];m-connect-direct-a;0;-1,1> 24 34
+17 direct_a_connect[cinch-cable-3,amplifier-1] -> <m-dconnect-a;plug[cinch-cable-3,cinch-cable-3-cinch-2,amplifier-1,amplifier-1-cinch-2];_method_for_multiple_expansions_of_plug|instance_7;0;-1> 18
+10 direct_a_connect[blu-ray-1,cinch-cable-3] -> <m-dconnect-a;plug[blu-ray-1,blu-ray-1-cinch-2,cinch-cable-3,cinch-cable-3-cinch-1];_method_for_multiple_expansions_of_plug|instance_4;0;-1> 11
+2 a_connect[blu-ray-1,amplifier-1] -> <m-connect-rec-a;a_connect[blu-ray-1,cinch-cable-3];m-connect-direct-a;0;-1,1> 10 17
+0 __top[] -> __top_method 2 21 40 66
+<==

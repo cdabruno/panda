@@ -1,0 +1,171 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/pcp14.sas.
+- State has 6 bits divided into 6 mutex groups.
+- Domain contains 8 actions.
+- Domain contains 11 tasks.
+- Domain contains 9 methods.
+- The initial state contains 1 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 1 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 11
+- The problem is cyclic
+- Number of cyclic SCCs: 2
+- Number of cyclic SCCs of size 1: 2
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- the option "store cuts" of the RC heuristic can only be used with the inner heuristic LM-Cut. It will be disabled.
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(add;distance;correct count)
+Search config:
+ - type: greedy
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Greedy Search
+Search Results
+- Search time 0.325 seconds
+- Visited list time 0.026747 seconds
+- Visited list inserts 6367
+- Visited list pruned 0
+- Visited list contains 6367
+- Visited list hash collisions 1
+- Visited list used hash buckets 6366
+- Generated 62794 search nodes
+  Calculated heuristic for 25462 nodes
+  One modifications 37332
+  Effectless actions 0
+- including 37332 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 78344 nodes per second
+- Final fringe contains 1743 nodes
+- Status: Solved
+- Found solution of length 111
+- Total costs of actions: 90
+==>
+32 t1G1[]
+68 t1G2[]
+117 t1G1[]
+216 t1G2[]
+339 t1G1[]
+505 t1G2[]
+681 t1G1[]
+1100 t1G2[]
+1487 t1G1[]
+2307 t1G2[]
+2328 t2G1[]
+7142 t2G2[]
+7150 t2G1[]
+12690 t2G2[]
+12698 t2G1[]
+25596 t2G2[]
+25623 t2G1[]
+62700 t2G2[]
+62716 t2G1[]
+62717 t2G2[]
+62718 p1G1[]
+62719 p1G2[]
+62720 p1G1[]
+62721 p1G2[]
+62722 p1G1[]
+62723 p1G2[]
+62724 p1G1[]
+62725 p1G2[]
+62726 p1G1[]
+62727 p1G2[]
+62728 p0G1[]
+62729 p0G2[]
+62730 p1G1[]
+62731 p1G2[]
+62732 p1G1[]
+62733 p1G2[]
+62734 p1G1[]
+62735 p1G2[]
+62736 p1G1[]
+62737 p1G2[]
+62738 p1G1[]
+62739 p1G2[]
+62740 p0G1[]
+62741 p0G2[]
+62742 p1G1[]
+62743 p1G2[]
+62744 p1G1[]
+62745 p1G2[]
+62746 p1G1[]
+62747 p1G2[]
+62748 p1G1[]
+62749 p1G2[]
+62750 p1G1[]
+62751 p1G2[]
+62752 p0G1[]
+62753 p0G2[]
+62754 p1G1[]
+62755 p1G2[]
+62756 p1G1[]
+62757 p1G2[]
+62758 p1G1[]
+62759 p1G2[]
+62760 p1G1[]
+62761 p1G2[]
+62762 p1G1[]
+62763 p1G2[]
+62764 p0G1[]
+62765 p0G2[]
+62766 p1G1[]
+62767 p1G2[]
+62768 p1G1[]
+62769 p1G2[]
+62770 p1G1[]
+62771 p1G2[]
+62772 p1G1[]
+62773 p1G2[]
+62774 p1G1[]
+62775 p1G2[]
+62776 p0G1[]
+62777 p0G2[]
+62778 p1G1[]
+62779 p1G2[]
+62780 p1G1[]
+62781 p1G2[]
+62782 p1G1[]
+62783 p1G2[]
+62784 p1G1[]
+62785 p1G2[]
+62786 p1G1[]
+62787 p1G2[]
+root 0
+62715 SG2[] -> G2_S2t2_1_1_1_1_1_0 62717 62719 62721 62723 62725 62727 62729
+62699 SG1[] -> G1_S2t2_1 62716 62718
+25622 SG2[] -> G2_S2t2_S_1_1_1_1_1_0 62700 62715 62731 62733 62735 62737 62739 62741
+25595 SG1[] -> G1_S2t2_S_1 25623 62699 62720
+12697 SG2[] -> G2_S2t2_S_1_1_1_1_1_0 25596 25622 62743 62745 62747 62749 62751 62753
+12689 SG1[] -> G1_S2t2_S_1 12698 25595 62722
+7149 SG2[] -> G2_S2t2_S_1_1_1_1_1_0 12690 12697 62755 62757 62759 62761 62763 62765
+7141 SG1[] -> G1_S2t2_S_1 7150 12689 62724
+2327 SG2[] -> G2_S2t2_S_1_1_1_1_1_0 7142 7149 62767 62769 62771 62773 62775 62777
+2306 SG1[] -> G1_S2t2_S_1 2328 7141 62726
+1486 SG2[] -> G2_S2t1_S_1 2307 2327 62779
+1099 SG1[] -> G1_S2t1_S_0_1_1_1_1_1 1487 2306 62728 62730 62732 62734 62736 62738
+680 SG2[] -> G2_S2t1_S_1 1100 1486 62781
+504 SG1[] -> G1_S2t1_S_0_1_1_1_1_1 681 1099 62740 62742 62744 62746 62748 62750
+338 SG2[] -> G2_S2t1_S_1 505 680 62783
+215 SG1[] -> G1_S2t1_S_0_1_1_1_1_1 339 504 62752 62754 62756 62758 62760 62762
+116 SG2[] -> G2_S2t1_S_1 216 338 62785
+67 SG1[] -> G1_S2t1_S_0_1_1_1_1_1 117 215 62764 62766 62768 62770 62772 62774
+31 SG1[] -> G1_S2t1_S_0_1_1_1_1_1 32 67 62776 62778 62780 62782 62784 62786
+3 SG2[] -> G2_S2t1_S_1 68 116 62787
+0 __top[] -> __top_method 31 3
+<==

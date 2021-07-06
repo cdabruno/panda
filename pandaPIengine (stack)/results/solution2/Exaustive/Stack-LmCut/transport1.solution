@@ -24,3 +24,71 @@ Search config:
  - type: path cost
  - weight: 1
  - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Stack Search
+- Using Stack Algorithm.
+   1s visitime    0.01s generated nodes     51372 nodes/sec   46448 cur h  316 mod.depth  326 inserts       636 dups       313 size       323 hash fail    313 hash buckets    323
+   2s visitime    0.02s generated nodes     77040 nodes/sec   35178 cur h  388 mod.depth  398 inserts       780 dups       385 size       395 hash fail    385 hash buckets    395
+   3s visitime    0.02s generated nodes     97915 nodes/sec   30081 cur h  438 mod.depth  448 inserts       880 dups       435 size       445 hash fail    435 hash buckets    445
+   4s visitime    0.03s generated nodes    118841 nodes/sec   26610 cur h  483 mod.depth  493 inserts       970 dups       480 size       490 hash fail    480 hash buckets    490
+   5s visitime    0.03s generated nodes    134433 nodes/sec   24576 cur h  514 mod.depth  524 inserts      1032 dups       511 size       521 hash fail    511 hash buckets    521
+   6s visitime    0.04s generated nodes    150438 nodes/sec   22866 cur h  544 mod.depth  554 inserts      1092 dups       541 size       551 hash fail    541 hash buckets    551
+   7s visitime    0.04s generated nodes    166188 nodes/sec   21460 cur h  572 mod.depth  582 inserts      1148 dups       569 size       579 hash fail    569 hash buckets    579
+   8s visitime    0.05s generated nodes    182119 nodes/sec   20244 cur h  599 mod.depth  609 inserts      1202 dups       596 size       606 hash fail    596 hash buckets    606
+  10s visitime    0.05s generated nodes    198148 nodes/sec   19224 cur h  625 mod.depth  635 inserts      1254 dups       622 size       632 hash fail    622 hash buckets    632
+  11s visitime    0.06s generated nodes    213544 nodes/sec   18336 cur h  649 mod.depth  659 inserts      1302 dups       646 size       656 hash fail    646 hash buckets    656
+  13s visitime    0.06s generated nodes    229516 nodes/sec   17504 cur h  673 mod.depth  683 inserts      1350 dups       670 size       680 hash fail    670 hash buckets    680
+  14s visitime    0.06s generated nodes    240484 nodes/sec   16998 cur h  689 mod.depth  699 inserts      1382 dups       686 size       696 hash fail    686 hash buckets    696
+  15s visitime    0.07s generated nodes    251708 nodes/sec   16508 cur h  705 mod.depth  715 inserts      1414 dups       702 size       712 hash fail    702 hash buckets    712
+  16s visitime    0.07s generated nodes    272703 nodes/sec   16614 cur h  734 mod.depth  744 inserts      1472 dups       731 size       741 hash fail    731 hash buckets    741
+  17s visitime    0.07s generated nodes    293773 nodes/sec   16822 cur h  762 mod.depth  772 inserts      1528 dups       759 size       769 hash fail    759 hash buckets    769
+  18s visitime    0.08s generated nodes    315627 nodes/sec   16992 cur h  790 mod.depth  800 inserts      1584 dups       787 size       797 hash fail    787 hash buckets    797
+  19s visitime    0.08s generated nodes    338265 nodes/sec   17106 cur h  818 mod.depth  828 inserts      1640 dups       815 size       825 hash fail    815 hash buckets    825
+  20s visitime    0.08s generated nodes    349878 nodes/sec   16679 cur h  832 mod.depth  842 inserts      1668 dups       829 size       839 hash fail    829 hash buckets    839
+Reached time limit - stopping search.
+Search Results
+- Search time 21.26 seconds
+Max depth reached with exaustive algorithm: 844.
+- Visited list time 0.08 seconds
+- Visited list inserts 1680
+- Visited list pruned 835
+- Visited list contains 845
+- Visited list hash collisions 835
+- Visited list used hash buckets 845
+- Generated 354915 search nodes
+  Calculated heuristic for 3368 nodes
+  One modifications 351128
+  Effectless actions 419
+- including 351128 one modification actions
+- including 0 one modification methods
+- and       419 progressions of effectless actions
+- Generated 158 nodes per second
+- Final fringe contains 429 nodes
+- Status: Solved
+- Found solution of length 14
+- Total costs of actions: 6
+==>
+12 drive[truck-0,city-loc-2,city-loc-1]
+13 pick-up[truck-0,city-loc-1,package-0,capacity-0,capacity-1]
+20 drive[truck-0,city-loc-1,city-loc-0]
+24 drop[truck-0,city-loc-0,package-0,capacity-0,capacity-1]
+25 drive[truck-0,city-loc-0,city-loc-1]
+26 pick-up[truck-0,city-loc-1,package-1,capacity-0,capacity-1]
+root 0
+38 get-to[truck-0,city-loc-1] -> m-drive-to-via
+31 get-to[truck-0,city-loc-2] -> m-drive-to-via 38
+19 get-to[truck-0,city-loc-0] -> m-drive-to 20
+11 get-to[truck-0,city-loc-1] -> m-drive-to 25
+5 get-to[truck-0,city-loc-1] -> m-drive-to 12
+3 m-deliver_splitted_1[truck-0,package-0] -> <_splitting_method_m-deliver_splitted_1;load[truck-0,city-loc-1,package-0];m-load;1;0,-1> 5 13
+1 m-deliver_splitted_1[truck-0,package-1] -> <_splitting_method_m-deliver_splitted_1;load[truck-0,city-loc-1,package-1];m-load;1;0,-1> 11 26
+0 __top[] -> <<<<__top_method;deliver[package-1,city-loc-2];m-deliver;1;0,-1,-2,-3>;unload[truck-0,city-loc-2,package-1];m-unload;3;0,1,2,-1>;deliver[package-0,city-loc-0];m-deliver;0;-1,-2,-3,1,2,3>;unload[truck-0,city-loc-0,package-0];m-unload;2;0,1,-1,3,4,5> 3 19 24 1 31
+<==

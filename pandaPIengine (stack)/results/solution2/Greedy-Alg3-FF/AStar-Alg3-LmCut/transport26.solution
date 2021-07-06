@@ -1,0 +1,57 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/transport26.sas.
+- State has 216 bits divided into 216 mutex groups.
+- Domain contains 1052 actions.
+- Domain contains 1473 tasks.
+- Domain contains 1545 methods.
+- The initial state contains 28 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 1397
+- The problem is cyclic
+- Number of cyclic SCCs: 4
+- Number of cyclic SCCs of size 1: 0
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (1 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+ 114s visitime    0.03s generated nodes      5007 nodes/sec      43 cur h  112 mod.depth   20 inserts      1439 dups         1 size      1438 hash fail      1 hash buckets   1438
+Reached time limit - stopping search.
+Search Results
+- Search time 114.52 seconds
+- Visited list time 0.03 seconds
+- Visited list inserts 1439
+- Visited list pruned 1
+- Visited list contains 1438
+- Visited list hash collisions 1
+- Visited list used hash buckets 1438
+- Generated 5007 search nodes
+  Calculated heuristic for 5001 nodes
+  One modifications 0
+  Effectless actions 6
+- including 0 one modification actions
+- including 0 one modification methods
+- and       6 progressions of effectless actions
+- Generated 43 nodes per second
+- Final fringe contains 3045 nodes
+- Status: Timeout

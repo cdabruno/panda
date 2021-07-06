@@ -1,3 +1,63 @@
 Random seed: 42
 Time limit: 20 seconds
 Reading input from results/grounded/transport17.sas.
+- State has 62 bits divided into 62 mutex groups.
+- Domain contains 240 actions.
+- Domain contains 340 tasks.
+- Domain contains 355 methods.
+- The initial state contains 13 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 324
+- The problem is cyclic
+- Number of cyclic SCCs: 2
+- Number of cyclic SCCs of size 1: 0
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Stack Search
+- Using Stack Algorithm.
+   2s visitime    0.01s generated nodes      5007 nodes/sec    1689 cur h  322 mod.depth  355 inserts       747 dups       125 size       622 hash fail    125 hash buckets    622
+   6s visitime    0.06s generated nodes     10008 nodes/sec    1451 cur h  598 mod.depth  648 inserts      1506 dups       245 size      1261 hash fail    245 hash buckets   1261
+  10s visitime    0.14s generated nodes     15014 nodes/sec    1386 cur h  895 mod.depth  928 inserts      2222 dups       381 size      1841 hash fail    381 hash buckets   1841
+  13s visitime    0.21s generated nodes     20033 nodes/sec    1449 cur h 1187 mod.depth 1220 inserts      2953 dups       514 size      2439 hash fail    514 hash buckets   2439
+  18s visitime    0.35s generated nodes     25039 nodes/sec    1387 cur h 1463 mod.depth 1496 inserts      3762 dups       617 size      3145 hash fail    617 hash buckets   3145
+  22s visitime    0.50s generated nodes     30051 nodes/sec    1347 cur h 1752 mod.depth 1785 inserts      4503 dups       747 size      3756 hash fail    747 hash buckets   3756
+Reached time limit - stopping search.
+Search Results
+- Search time 22.30 seconds
+Max depth reached with exaustive algorithm: 1775.
+- Visited list time 0.50 seconds
+- Visited list inserts 4503
+- Visited list pruned 747
+- Visited list contains 3756
+- Visited list hash collisions 747
+- Visited list used hash buckets 3756
+- Generated 30051 search nodes
+  Calculated heuristic for 21021 nodes
+  One modifications 8838
+  Effectless actions 192
+- including 8838 one modification actions
+- including 0 one modification methods
+- and       192 progressions of effectless actions
+- Generated 942 nodes per second
+- Final fringe contains 5638 nodes
+- Status: Timeout

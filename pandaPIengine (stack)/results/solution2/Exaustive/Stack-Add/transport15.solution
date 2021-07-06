@@ -25,3 +25,42 @@ Search config:
  - type: path cost
  - weight: 1
  - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Stack Search
+- Using Stack Algorithm.
+   1s visitime    0.65s generated nodes     15003 nodes/sec    7635 cur h 1756 mod.depth 1692 inserts      4997 dups      1651 size      3346 hash fail   1652 hash buckets   3345
+   3s visitime    1.19s generated nodes     20007 nodes/sec    5535 cur h 2312 mod.depth 2248 inserts      6665 dups      2207 size      4458 hash fail   2209 hash buckets   4456
+   5s visitime    1.90s generated nodes     25011 nodes/sec    4315 cur h 2868 mod.depth 2804 inserts      8333 dups      2763 size      5570 hash fail   2765 hash buckets   5568
+   8s visitime    2.74s generated nodes     30015 nodes/sec    3549 cur h 3424 mod.depth 3360 inserts     10001 dups      3319 size      6682 hash fail   3321 hash buckets   6680
+  11s visitime    3.72s generated nodes     35019 nodes/sec    3032 cur h 3980 mod.depth 3916 inserts     11669 dups      3875 size      7794 hash fail   3878 hash buckets   7791
+  15s visitime    4.92s generated nodes     40023 nodes/sec    2607 cur h 4536 mod.depth 4472 inserts     13337 dups      4431 size      8906 hash fail   4435 hash buckets   8902
+  19s visitime    6.28s generated nodes     45027 nodes/sec    2284 cur h 5092 mod.depth 5028 inserts     15005 dups      4987 size     10018 hash fail   4992 hash buckets  10013
+  24s visitime    7.81s generated nodes     50031 nodes/sec    2027 cur h 5648 mod.depth 5584 inserts     16673 dups      5543 size     11130 hash fail   5552 hash buckets  11121
+Reached time limit - stopping search.
+Search Results
+- Search time 24.68 seconds
+Max depth reached with exaustive algorithm: 5582.
+- Visited list time 7.81 seconds
+- Visited list inserts 16673
+- Visited list pruned 5543
+- Visited list contains 11130
+- Visited list hash collisions 5552
+- Visited list used hash buckets 11121
+- Generated 50031 search nodes
+  Calculated heuristic for 38939 nodes
+  One modifications 8318
+  Effectless actions 2774
+- including 8318 one modification actions
+- including 0 one modification methods
+- and       2774 progressions of effectless actions
+- Generated 1577 nodes per second
+- Final fringe contains 5610 nodes
+- Status: Timeout

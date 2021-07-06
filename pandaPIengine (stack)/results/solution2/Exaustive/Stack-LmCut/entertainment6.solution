@@ -1,3 +1,74 @@
 Random seed: 42
 Time limit: 20 seconds
 Reading input from results/grounded/entertainment6.sas.
+- State has 64 bits divided into 64 mutex groups.
+- Domain contains 104 actions.
+- Domain contains 239 tasks.
+- Domain contains 404 methods.
+- The initial state contains 16 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 211
+- The problem is cyclic
+- Number of cyclic SCCs: 15
+- Number of cyclic SCCs of size 1: 8
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Stack Search
+- Using Stack Algorithm.
+SOLUTION: (33ms) Found new solution with action costs of 8.
+SOLUTION: (72ms) Found new solution with action costs of 8.
+SOLUTION: (89ms) Found new solution with action costs of 8.
+SOLUTION: (125ms) Found new solution with action costs of 8.
+SOLUTION: (141ms) Found new solution with action costs of 8.
+   1s visitime    0.08s generated nodes     15002 nodes/sec    7665 cur h 1384 mod.depth  351 inserts      4358 dups       492 size      3866 hash fail    493 hash buckets   3865
+   3s visitime    0.27s generated nodes     20002 nodes/sec    5590 cur h 2384 mod.depth  601 inserts      5608 dups       492 size      5116 hash fail    493 hash buckets   5115
+   5s visitime    0.54s generated nodes     25002 nodes/sec    4612 cur h 3384 mod.depth  851 inserts      6858 dups       492 size      6366 hash fail    493 hash buckets   6365
+   7s visitime    0.86s generated nodes     30002 nodes/sec    4204 cur h 4384 mod.depth 1101 inserts      8108 dups       492 size      7616 hash fail    493 hash buckets   7615
+   9s visitime    1.38s generated nodes     35002 nodes/sec    3647 cur h 5384 mod.depth 1351 inserts      9358 dups       492 size      8866 hash fail    493 hash buckets   8865
+  11s visitime    1.94s generated nodes     40002 nodes/sec    3342 cur h 6384 mod.depth 1601 inserts     10608 dups       492 size     10116 hash fail    495 hash buckets  10113
+  14s visitime    2.57s generated nodes     45002 nodes/sec    3116 cur h 7384 mod.depth 1851 inserts     11858 dups       492 size     11366 hash fail    495 hash buckets  11363
+  17s visitime    3.36s generated nodes     50002 nodes/sec    2875 cur h 8384 mod.depth 2101 inserts     13108 dups       492 size     12616 hash fail    496 hash buckets  12612
+  20s visitime    4.18s generated nodes     55002 nodes/sec    2708 cur h 9384 mod.depth 2351 inserts     14358 dups       492 size     13866 hash fail    497 hash buckets  13861
+  23s visitime    5.05s generated nodes     60002 nodes/sec    2580 cur h 10384 mod.depth 2601 inserts     15608 dups       492 size     15116 hash fail    499 hash buckets  15109
+Reached time limit - stopping search.
+Search Results
+- Search time 23.26 seconds
+Max depth reached with exaustive algorithm: 2600.
+- Visited list time 5.05 seconds
+- Visited list inserts 15608
+- Visited list pruned 492
+- Visited list contains 15116
+- Visited list hash collisions 499
+- Visited list used hash buckets 15109
+- Generated 60002 search nodes
+  Calculated heuristic for 43219 nodes
+  One modifications 16213
+  Effectless actions 570
+- including 16213 one modification actions
+- including 0 one modification methods
+- and       570 progressions of effectless actions
+- Generated 1858 nodes per second
+- Final fringe contains 5204 nodes
+- Found 6 solutions.
+  - first solution after 16ms.
+  - best solution after 141ms.

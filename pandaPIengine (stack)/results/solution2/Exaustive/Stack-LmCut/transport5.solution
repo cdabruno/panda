@@ -18,9 +18,50 @@ Calculate SCCs...
 - Number of cyclic SCCs of size 1: 0
 Selected Planning Algorithm: progression searchParsing heuristics ...
 Number of specified heuristics: 1
-- Calculating minimal implied costs and distances (1 ms)
+- Calculating minimal implied costs and distances (0 ms)
 Heuristic #0 = hhRC2(lmc;distance;correct count)
 Search config:
  - type: path cost
  - weight: 1
  - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- Stack Search
+- Using Stack Algorithm.
+   1s visitime    0.11s generated nodes      5000 nodes/sec    3767 cur h 1275 mod.depth 1252 inserts      1253 dups         0 size      1253 hash fail      0 hash buckets   1253
+   3s visitime    0.46s generated nodes     10000 nodes/sec    3305 cur h 2525 mod.depth 2502 inserts      2503 dups         0 size      2503 hash fail      0 hash buckets   2503
+   4s visitime    1.03s generated nodes     15000 nodes/sec    3030 cur h 3775 mod.depth 3752 inserts      3753 dups         0 size      3753 hash fail      2 hash buckets   3751
+   7s visitime    1.78s generated nodes     20000 nodes/sec    2846 cur h 5025 mod.depth 5002 inserts      5003 dups         0 size      5003 hash fail      3 hash buckets   5000
+   9s visitime    2.74s generated nodes     25000 nodes/sec    2687 cur h 6275 mod.depth 6252 inserts      6253 dups         0 size      6253 hash fail      4 hash buckets   6249
+  11s visitime    3.94s generated nodes     30000 nodes/sec    2533 cur h 7525 mod.depth 7502 inserts      7503 dups         0 size      7503 hash fail      4 hash buckets   7499
+  14s visitime    5.35s generated nodes     35000 nodes/sec    2399 cur h 8775 mod.depth 8752 inserts      8753 dups         0 size      8753 hash fail      5 hash buckets   8748
+  17s visitime    6.98s generated nodes     40000 nodes/sec    2277 cur h 10025 mod.depth 10002 inserts     10003 dups         0 size     10003 hash fail      7 hash buckets   9996
+  20s visitime    8.82s generated nodes     45000 nodes/sec    2169 cur h 11275 mod.depth 11252 inserts     11253 dups         0 size     11253 hash fail      8 hash buckets  11245
+  24s visitime   10.90s generated nodes     50000 nodes/sec    2067 cur h 12525 mod.depth 12502 inserts     12503 dups         0 size     12503 hash fail     10 hash buckets  12493
+Reached time limit - stopping search.
+Search Results
+- Search time 24.18 seconds
+Max depth reached with exaustive algorithm: 12503.
+- Visited list time 10.90 seconds
+- Visited list inserts 12503
+- Visited list pruned 0
+- Visited list contains 12503
+- Visited list hash collisions 10
+- Visited list used hash buckets 12493
+- Generated 50000 search nodes
+  Calculated heuristic for 49999 nodes
+  One modifications 0
+  Effectless actions 1
+- including 0 one modification actions
+- including 0 one modification methods
+- and       1 progressions of effectless actions
+- Generated 2067 nodes per second
+- Final fringe contains 6259 nodes
+- Status: Timeout

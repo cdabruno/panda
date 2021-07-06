@@ -75,7 +75,7 @@ namespace progression {
             }
             
             // compute the heuristic
-            if(!flagHeuristic){
+            if(flagHeuristic){
                 tnI->heuristicValue = new int[hLength];
                 for (int i = 0; i < hLength; i++) {
                     tnI->heuristicValue[i] = 0;
@@ -132,12 +132,12 @@ namespace progression {
 
 
                             // compute the heuristic
-                            if(!flagStack){
-                                n2->heuristicValue = new int[hLength];
-                                for (int i = 0; i < hLength; i++) {
-                                    hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
-                                }
+                            
+                            n2->heuristicValue = new int[hLength];
+                            for (int i = 0; i < hLength; i++) {
+                                hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
                             }
+                            
                             
                             
                             if (!n2->goalReachable) { // progression has detected unsol
