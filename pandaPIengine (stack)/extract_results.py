@@ -12,9 +12,9 @@ paths = [#"WA2-Alg3-LmCut",
          #"Greedy-Alg3-LmCut",
          #"Greedy-Alg3-Add",
          #"Greedy-Alg3-FF",
-         "solution2/Exaustive/Stack-Add",
-         "solution2/Exaustive/Stack-FF",
-         "solution2/Exaustive/Stack-LmCut",
+         "Stack-Add",
+         "Stack-FF",
+         "Stack-LmCut",
          #"solution2/Exaustive/Stack-No-Order"
         ]
 
@@ -41,6 +41,8 @@ for path in paths:
 
     for domain in range(len(domains)):
         list_problems = os.listdir("paper-domains/{}/problems".format(domains[domain]))
+
+        
         number_problems = len(list_problems)
         
         
@@ -51,7 +53,12 @@ for path in paths:
             ind = newww[1]
             
             #if domains[domain] in file_title:
-            handler = open("results/{0}/{1}{2}.solution".format(path, domains[domain], ind), "r")
+            handler = open("results/solution2/Exaustive/{0}/{1}{2}.solution".format(path, domains[domain], ind), "r")
+
+            nodes_per_second[p + "/" + path] = "undefined"
+            search_time[p + "/" + path] = "undefined"
+            expanded_nodes[p + "/" + path] = "undefined"
+            max_depth[p + "/" + path] = "undefined"
             
             #solution_text = handler.read()
             for line in handler:
@@ -64,6 +71,7 @@ for path in paths:
                 search_time_pos = line[pos2 : pos2 + 35]
                 expanded_node_pos = line[pos3 : pos3 + 40]
                 max_depth_pos = line[pos4 : pos4 + 45]
+
                 
             
                 if nodes_sec_pos.endswith("nodes per second"):
@@ -101,43 +109,46 @@ for path in paths:
     # print("nodes", nodes_per_second)
                 
 
-print(domains[domain])
-with open('results/{}_results_expanded_nodes.csv'.format(domains[domain]), 'w') as csv_file:  
-    writer = csv.writer(csv_file)
-    writer.writerow(["20s timeout"]+paths)
+   
+        
+for domain in range(len(domains)):       
+    list_problems = os.listdir("paper-domains/{}/problems".format(domains[domain]))
+    with open('results/statistics/{}_results_expanded_nodes.csv'.format(domains[domain]), 'w') as csv_file:  
+        writer = csv.writer(csv_file)
+        writer.writerow(["20s timeout"]+paths)
 
-    for p in list_problems:
-        row = [p]
-        for path in paths:
-            row.append(expanded_nodes[p+"/"+path])
-        writer.writerow(row)
+        for p in list_problems:
+            row = [p]
+            for path in paths:
+                row.append(expanded_nodes[p+"/"+path])
+            writer.writerow(row)
 
-with open('results/{}_results_search_time.csv'.format(domains[domain]), 'w') as csv_file:  
-    writer = csv.writer(csv_file)
-    writer.writerow(["20s timeout"]+paths)
+    with open('results/statistics/{}_results_search_time.csv'.format(domains[domain]), 'w') as csv_file:  
+        writer = csv.writer(csv_file)
+        writer.writerow(["20s timeout"]+paths)
 
-    for p in list_problems:
-        row = [p]
-        for path in paths:
-            row.append(search_time[p+"/"+path])
-        writer.writerow(row)
+        for p in list_problems:
+            row = [p]
+            for path in paths:
+                row.append(search_time[p+"/"+path])
+            writer.writerow(row)
 
-with open('results/{}_results_nodes_per_second.csv'.format(domains[domain]), 'w') as csv_file:  
-    writer = csv.writer(csv_file)
-    writer.writerow(["20s timeout"]+paths)
+    with open('results/statistics/{}_results_nodes_per_second.csv'.format(domains[domain]), 'w') as csv_file:  
+        writer = csv.writer(csv_file)
+        writer.writerow(["20s timeout"]+paths)
 
-    for p in list_problems:
-        row = [p]
-        for path in paths:
-            row.append(nodes_per_second[p+"/"+path])
-        writer.writerow(row)
+        for p in list_problems:
+            row = [p]
+            for path in paths:
+                row.append(nodes_per_second[p+"/"+path])
+            writer.writerow(row)
 
-with open('results/{}_max_depth.csv'.format(domains[domain]), 'w') as csv_file:  
-    writer = csv.writer(csv_file)
-    writer.writerow(["20s timeout"]+paths)
+    with open('results/statistics/{}_max_depth.csv'.format(domains[domain]), 'w') as csv_file:  
+        writer = csv.writer(csv_file)
+        writer.writerow(["20s timeout"]+paths)
 
-    for p in list_problems:
-        row = [p]
-        for path in paths:
-            row.append(max_depth[p+"/"+path])
-        writer.writerow(row)
+        for p in list_problems:
+            row = [p]
+            for path in paths:
+                row.append(max_depth[p+"/"+path])
+            writer.writerow(row)

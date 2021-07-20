@@ -1,0 +1,32 @@
+;; #state features
+24
++colour[p0,red]
++surface_condition[p0,smooth]
++treatment[p0,varnished]
++unused[p1]
++colour[p2,natural]
++surface_condition[p2,verysmooth]
++treatment[p2,varnished]
++surface_condition[p0,verysmooth]
++treatment[p0,untreated]
++colour[p0,natural]
++available[p1]
++wood[p1,pine]
++surface_condition[p1,rough]
++colour[p1,natural]
++treatment[p1,untreated]
++treatment[p2,untreated]
++surface_condition[p2,smooth]
++treatment[p0,glazed]
++treatment[p1,glazed]
++colour[p1,red]
++surface_condition[p1,smooth]
++colour[p2,red]
++treatment[p2,glazed]
++treatment[p1,varnished]
+
+;; Mutex Groups
+24
+0 0 +colour[p0,red]
+1 1 +surface_condition[p0,smooth]
+2 2 +treatment[p0,varnished]

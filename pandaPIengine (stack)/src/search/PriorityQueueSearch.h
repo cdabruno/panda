@@ -74,12 +74,22 @@ namespace progression {
                 cout << "- Using Stack Algorithm." << endl;
             }
             
+
+            
+            
+
+
+            
             // compute the heuristic
             if(flagHeuristic){
                 tnI->heuristicValue = new int[hLength];
                 for (int i = 0; i < hLength; i++) {
-                    tnI->heuristicValue[i] = 0;
+                    for (int i = 0; i < hLength; i++) {
+                            hF[i]->setHeuristicValue(tnI);
+                        }
+                    
                 }
+                cout << "- Starting state heuristic value: " << tnI->heuristicValue;
             }
             
 

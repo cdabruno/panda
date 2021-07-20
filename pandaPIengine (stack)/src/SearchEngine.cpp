@@ -361,13 +361,13 @@ int main(int argc, char *argv[]) {
 		//search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringeStack, 1, 1, 0);
 
 		// UNCOMMENT THIS FOR REGULAR PROGRESSION SEARCH 
-		search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringe, 0, 1, 0);
+		//search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringe, 0, 1, 0);
 
 		//search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringeStack, 1, 1, 1);
 
 		//search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringeStack, 1, 0, 1);
 
-		//search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringe, 0, 1, 1);
+		search.search(htn, tnI, timeL, suboptimalSearch, printPlan, heuristics, hLength, visi, fringe, 0, 1, 1);
 
 
     	

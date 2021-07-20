@@ -955,3 +955,252 @@ m-navigate_abs-1
 m-navigate_abs-2
 127
 40 -1
+-1
+m-navigate_abs-3
+127
+53 45 -1
+0 1 -1
+m-navigate_abs-4
+127
+54 128 23 45 22 -1
+1 2 0 1 0 3 0 4 0 2 3 4 2 3 -1
+_splitting_method_m-navigate_abs-4_splitted_5
+128
+41 -1
+-1
+_splitting_method_m-navigate_abs-4_splitted_5
+128
+39 -1
+-1
+<_splitting_method_m-calibrate_abs_splitted_9;m-calibrate_abs_splitted_1[rover0,camera2,waypoint1];_splitting_method_m-calibrate_abs_splitted_1;1;0,-1>
+129
+127 55 -1
+0 1 -1
+<_splitting_method_m-calibrate_abs_splitted_9;m-calibrate_abs_splitted_1[rover0,camera2,waypoint0];_splitting_method_m-calibrate_abs_splitted_1;1;0,-1>
+129
+124 56 -1
+0 1 -1
+<_splitting_method_m-send_image_data_splitted_11;m-send_image_data_splitted_6[rover0,general,objective0,colour,waypoint1];_splitting_method_m-send_image_data_splitted_6;1;0,-1>
+130
+127 57 -1
+0 1 -1
+<_splitting_method_m-send_image_data_splitted_11;m-send_image_data_splitted_6[rover0,general,objective0,colour,waypoint0];_splitting_method_m-send_image_data_splitted_6;1;0,-1>
+130
+124 58 -1
+0 1 -1
+<m-get_image_data;send_image_data[rover1,objective2,high_res];m-send_image_data;1;0,-1>
+131
+132 136 -1
+0 1 -1
+<_splitting_method_m-get_image_data_splitted_10;calibrate_abs[rover1,camera1];m-calibrate_abs;0;-1,1>
+132
+121 133 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+133
+114 59 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+133
+116 60 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+133
+120 61 -1
+0 1 -1
+<_splitting_method_m-get_image_data_splitted_10;calibrate_abs[rover1,camera0];m-calibrate_abs;0;-1,1>
+132
+135 134 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+134
+114 62 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+134
+116 63 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+134
+120 64 -1
+0 1 -1
+<_splitting_method_m-calibrate_abs_splitted_9;m-calibrate_abs_splitted_1[rover1,camera0,waypoint2];_splitting_method_m-calibrate_abs_splitted_1;1;0,-1>
+135
+116 65 -1
+0 1 -1
+<_splitting_method_m-calibrate_abs_splitted_9;m-calibrate_abs_splitted_1[rover1,camera0,waypoint1];_splitting_method_m-calibrate_abs_splitted_1;1;0,-1>
+135
+120 66 -1
+0 1 -1
+<_splitting_method_m-calibrate_abs_splitted_9;m-calibrate_abs_splitted_1[rover1,camera0,waypoint0];_splitting_method_m-calibrate_abs_splitted_1;1;0,-1>
+135
+114 67 -1
+0 1 -1
+<_splitting_method_m-send_image_data_splitted_11;m-send_image_data_splitted_6[rover1,general,objective2,high_res,waypoint1];_splitting_method_m-send_image_data_splitted_6;1;0,-1>
+136
+120 68 -1
+0 1 -1
+<_splitting_method_m-send_image_data_splitted_11;m-send_image_data_splitted_6[rover1,general,objective2,high_res,waypoint0];_splitting_method_m-send_image_data_splitted_6;1;0,-1>
+136
+114 69 -1
+0 1 -1
+<_splitting_method_m-send_image_data_splitted_11;m-send_image_data_splitted_6[rover1,general,objective2,high_res,waypoint2];_splitting_method_m-send_image_data_splitted_6;1;0,-1>
+136
+116 70 -1
+0 1 -1
+<<m-get_image_data;m-get_image_data_splitted_10[rover0,high_res,objective2];<_splitting_method_m-get_image_data_splitted_10;calibrate_abs[rover0,camera2];m-calibrate_abs;0;-1,1>;0;-1,-2,1>;send_image_data[rover0,objective2,high_res];m-send_image_data;2;0,1,-1>
+131
+129 137 138 -1
+1 2 0 1 0 2 -1
+_splitting_method_m-get_image_data_splitted_2
+137
+124 71 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+137
+127 72 -1
+0 1 -1
+<_splitting_method_m-send_image_data_splitted_11;m-send_image_data_splitted_6[rover0,general,objective2,high_res,waypoint1];_splitting_method_m-send_image_data_splitted_6;1;0,-1>
+138
+127 73 -1
+0 1 -1
+<_splitting_method_m-send_image_data_splitted_11;m-send_image_data_splitted_6[rover0,general,objective2,high_res,waypoint0];_splitting_method_m-send_image_data_splitted_6;1;0,-1>
+138
+124 74 -1
+0 1 -1
+<m-get_image_data;send_image_data[rover1,objective0,high_res];m-send_image_data;1;0,-1>
+139
+140 143 -1
+0 1 -1
+<_splitting_method_m-get_image_data_splitted_10;calibrate_abs[rover1,camera1];m-calibrate_abs;0;-1,1>
+140
+121 141 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+141
+114 75 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+141
+116 76 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+141
+118 77 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+141
+120 78 -1
+0 1 -1
+<_splitting_method_m-get_image_data_splitted_10;calibrate_abs[rover1,camera0];m-calibrate_abs;0;-1,1>
+140
+135 142 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+142
+114 79 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+142
+116 80 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+142
+118 81 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+142
+120 82 -1
+0 1 -1
+<_splitting_method_m-send_image_data_splitted_11;m-send_image_data_splitted_6[rover1,general,objective0,high_res,waypoint1];_splitting_method_m-send_image_data_splitted_6;1;0,-1>
+143
+120 83 -1
+0 1 -1
+<_splitting_method_m-send_image_data_splitted_11;m-send_image_data_splitted_6[rover1,general,objective0,high_res,waypoint0];_splitting_method_m-send_image_data_splitted_6;1;0,-1>
+143
+114 84 -1
+0 1 -1
+<_splitting_method_m-send_image_data_splitted_11;m-send_image_data_splitted_6[rover1,general,objective0,high_res,waypoint2];_splitting_method_m-send_image_data_splitted_6;1;0,-1>
+143
+116 85 -1
+0 1 -1
+<<m-get_image_data;m-get_image_data_splitted_10[rover0,high_res,objective0];<_splitting_method_m-get_image_data_splitted_10;calibrate_abs[rover0,camera2];m-calibrate_abs;0;-1,1>;0;-1,-2,1>;send_image_data[rover0,objective0,high_res];m-send_image_data;2;0,1,-1>
+139
+129 144 145 -1
+1 2 0 1 0 2 -1
+_splitting_method_m-get_image_data_splitted_2
+144
+124 86 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+144
+125 87 -1
+0 1 -1
+_splitting_method_m-get_image_data_splitted_2
+144
+127 88 -1
+0 1 -1
+<_splitting_method_m-send_image_data_splitted_11;m-send_image_data_splitted_6[rover0,general,objective0,high_res,waypoint1];_splitting_method_m-send_image_data_splitted_6;1;0,-1>
+145
+127 89 -1
+0 1 -1
+<_splitting_method_m-send_image_data_splitted_11;m-send_image_data_splitted_6[rover0,general,objective0,high_res,waypoint0];_splitting_method_m-send_image_data_splitted_6;1;0,-1>
+145
+124 90 -1
+0 1 -1
+m-empty-store-1
+146
+92 -1
+-1
+m-empty-store-2
+146
+94 93 -1
+0 1 -1
+<_splitting_method_m-send_rock_data_splitted_12;m-send_rock_data_splitted_7[rover0,general,waypoint1,waypoint1];_splitting_method_m-send_rock_data_splitted_7;1;0,-1>
+147
+127 95 -1
+0 1 -1
+<_splitting_method_m-send_rock_data_splitted_12;m-send_rock_data_splitted_7[rover0,general,waypoint1,waypoint0];_splitting_method_m-send_rock_data_splitted_7;1;0,-1>
+147
+124 96 -1
+0 1 -1
+<_splitting_method_m-send_rock_data_splitted_12;m-send_rock_data_splitted_7[rover0,general,waypoint0,waypoint1];_splitting_method_m-send_rock_data_splitted_7;1;0,-1>
+148
+127 98 -1
+0 1 -1
+<_splitting_method_m-send_rock_data_splitted_12;m-send_rock_data_splitted_7[rover0,general,waypoint0,waypoint0];_splitting_method_m-send_rock_data_splitted_7;1;0,-1>
+148
+124 99 -1
+0 1 -1
+m-empty-store-1
+149
+101 -1
+-1
+m-empty-store-2
+149
+103 102 -1
+0 1 -1
+<_splitting_method_m-send_soil_data_splitted_13;m-send_soil_data_splitted_8[rover1,general,waypoint2,waypoint2];_splitting_method_m-send_soil_data_splitted_8;1;0,-1>
+150
+116 104 -1
+0 1 -1
+<_splitting_method_m-send_soil_data_splitted_13;m-send_soil_data_splitted_8[rover1,general,waypoint2,waypoint1];_splitting_method_m-send_soil_data_splitted_8;1;0,-1>
+150
+120 105 -1
+0 1 -1
+<_splitting_method_m-send_soil_data_splitted_13;m-send_soil_data_splitted_8[rover1,general,waypoint2,waypoint0];_splitting_method_m-send_soil_data_splitted_8;1;0,-1>
+150
+114 106 -1
+0 1 -1
+<_splitting_method_m-send_soil_data_splitted_13;m-send_soil_data_splitted_8[rover1,general,waypoint1,waypoint2];_splitting_method_m-send_soil_data_splitted_8;1;0,-1>
+151
+116 108 -1
+0 1 -1
+<_splitting_method_m-send_soil_data_splitted_13;m-send_soil_data_splitted_8[rover1,general,waypoint1,waypoint1];_splitting_method_m-send_soil_data_splitted_8;1;0,-1>
+151
+120 109 -1
+0 1 -1
+<_splitting_method_m-send_soil_data_splitted_13;m-send_soil_data_splitted_8[rover1,general,waypoint1,waypoint0];_splitting_method_m-send_soil_data_splitted_8;1;0,-1>
+151
+114 110 -1
+0 1 -1
