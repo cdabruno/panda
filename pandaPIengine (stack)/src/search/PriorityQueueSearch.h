@@ -42,9 +42,127 @@ namespace progression {
             timeval tp;
             gettimeofday(&tp, NULL);
 
+        
+            // VARIABLE NUMBER
+            cout << "Variable number: " << htn->numVars << endl;
+
+            // VARIABLE DOMAIN SIZE
+            int minVarDom = INT_MAX;
+            int maxVarDom = INT_MIN;
+            int sumVarDom = 0;
+            int currVarDom;
+            for(int i = 0; i < htn->numVars; i++){
+                currVarDom = htn->lastIndex[i] - htn->firstIndex[i] + 1;
+                cout << "Variable :" << htn->varNames[i] << " Domain size: " << currVarDom << endl;
+                sumVarDom = sumVarDom + currVarDom;
+                if(currVarDom > maxVarDom){
+                    maxVarDom = currVarDom;
+                }
+                if(currVarDom < minVarDom){
+                    minVarDom = currVarDom;
+                }
+            }
+            int avgVarDom = sumVarDom / htn->numVars;
+
+            cout << "Min domain: " << minVarDom << endl;
+            cout << "Max domain: " << maxVarDom << endl;
+            cout << "Avg domain: " << avgVarDom << endl;
+
+            // MULT DOMAIN
+            for(int i = 0; i < htn->numVars-1; i++){
+                for(int j = i+1; j < htn->numVars; j++){
+                    currVarDom = (htn->lastIndex[i] - htn->firstIndex[i] + 1) * (htn->lastIndex[j] - htn->firstIndex[j] + 1);
+                    htn->
+                    cout << "Var pair:" << htn->varNames[i] << ", " << htn->varNames[j] << " Mult size: " << currVarDom << endl;
+                }
+            }
+
+            // VAR NUMBER
+            cout << "Number of variables: " << htn->numVars << endl;
+
+            // TASKS
+            int primitives = 0;
+            int nonPrimitives = 0;
+            for(int i = 0; i < htn->numTasks; i++){
+                if(htn->isPrimitive[i]){
+                    primitives++;
+                }
+                else{
+                    nonPrimitives++;
+                }
+            }
+            cout << "Num primitive tasks: " << primitives << endl;
+            cout << "Num non-primitive tasks: " << nonPrimitives << endl;
+            cout << "Total tasks: " << htn->numTasks << endl;
+
+            cout << "Number of methods: " << htn->numMethods << endl;
+
+            /*
+            // METHOD NAMES
+            string *differentNames;
+            differentNames = new string[htn->numMethods];
+            for(int i = 0; i < htn->numMethods; i++){
+                differentNames[i] = "";
+            }
+            int methodIndex = 0;
+
+
+            for(int i = 0; i < htn->numMethods; i++){
+            
+                if(std::find(differentNames->begin, differentNames->end, htn->methodNames[i]) == differentNames->end()){
+                    differentNames[methodIndex] = htn->methodNames[i];
+                    methodIndex++;
+                }
+            }
+            cout << "Number of method names: " << methodIndex << endl;
+            
+            // PRIMITIVE NAMES
+            string *differentNamesP;
+            differentNamesP = new string[htn->numTasks];
+            for(int i = 0; i < htn->numTasks; i++){
+                differentNamesP[i] = "";
+            }
+            int taskIndex = 0;
+
+
+            for(int i = 0; i < htn->numTasks; i++){
+            
+                if(std::find(differentNamesP->begin(), differentNamesP->end(), htn->taskNames[i]) == differentNamesP->end() && htn->isPrimitive[i]){
+                    differentNamesP[methodIndex] = htn->taskNames[i];
+                    taskIndex++;
+                }
+            }
+            cout << "Number of primitive tasks names: " << taskIndex << endl;
+
+            // TASK NAMES
+            string *differentNamesT;
+            differentNamesT = new string[htn->numTasks];
+            for(int i = 0; i < htn->numTasks; i++){
+                differentNamesT[i] = "";
+            }
+            taskIndex = 0;
+
+
+            for(int i = 0; i < htn->numTasks; i++){
+            
+                if(std::find(differentNamesT->begin(), differentNamesT->end(), htn->taskNames[i]) == differentNamesT->end()){
+                    differentNamesT[methodIndex] = htn->taskNames[i];
+                    taskIndex++;
+                }
+            }
+            cout << "Number of tasks: " << htn->numTasks << endl;
+            cout << "Number of tasks names: " << taskIndex << endl;
+            */
+
+
+
+
+
             tnI->depth = 0;
+            tnI->abstractDepth = 0;
 
             int maxDepth = 0;
+            int maxNonPrimitive = 0;
             
             long startT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
             long currentT;
@@ -85,11 +203,11 @@ namespace progression {
                 tnI->heuristicValue = new int[hLength];
                 for (int i = 0; i < hLength; i++) {
                     for (int i = 0; i < hLength; i++) {
-                            hF[i]->setHeuristicValue(tnI);
+                            hF[i]->setHeuristicValue(tnI, NULL, 0, 0);
                         }
                     
                 }
-                cout << "- Starting state heuristic value: " << tnI->heuristicValue;
+                cout << "- Starting state heuristic value: " << *(tnI->heuristicValue) << endl;
             }
             
 
@@ -129,7 +247,11 @@ namespace progression {
                                 continue;
                             searchNode *n2 = htn->apply(n, i);
                             numSearchNodes++;
-                            n2->depth = n->depth+1;
+                            n2->abstractDepth = n->abstractDepth;
+                            if(n2->abstractDepth > maxNonPrimitive){
+                                maxNonPrimitive = n2->abstractDepth;
+                            }
+                            n2->depth = n->depth + 1;
                             if(n2->depth > maxDepth){
                                 maxDepth = n2->depth;
                             }
@@ -144,10 +266,16 @@ namespace progression {
                             // compute the heuristic
                             
                             n2->heuristicValue = new int[hLength];
-                            for (int i = 0; i < hLength; i++) {
-                                hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
+                            if(!flagHeuristic){
+                                for (int i = 0; i < hLength; i++) {
+                                   n2->heuristicValue = 0;
+                                }
                             }
-                            
+                            else{
+                                for (int i = 0; i < hLength; i++) {
+                                    hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
+                                }
+                            }
                             
                             
                             if (!n2->goalReachable) { // progression has detected unsol
@@ -182,6 +310,10 @@ namespace progression {
                             int method = htn->taskToMethods[task][i];
                             searchNode *n2 = htn->decompose(n, decomposedStep, method);
                             n2->depth = n->depth+1;
+                            n2->abstractDepth = n->abstractDepth + 1;
+                            if(n2->abstractDepth > maxNonPrimitive){
+                                maxNonPrimitive = n2->abstractDepth;
+                            }
                             if(n2->depth > maxDepth){
                                 maxDepth = n2->depth;
                             }
@@ -195,8 +327,15 @@ namespace progression {
 
                             // compute the heuristic
                             n2->heuristicValue = new int[hLength];
-                            for (int i = 0; i < hLength; i++) {
-                                hF[i]->setHeuristicValue(n2, n, decomposedStep, method);
+                            if(!flagHeuristic){
+                                for (int i = 0; i < hLength; i++) {
+                                   n2->heuristicValue = 0;
+                                }
+                            }
+                            else{
+                                for (int i = 0; i < hLength; i++) {
+                                    hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
+                                }
                             }
                             
                             if (!n2->goalReachable) { // decomposition has detected unsol
@@ -292,6 +431,10 @@ namespace progression {
                             searchNode *n2 = htn->apply(n, i);
                             numSearchNodes++;
                             n2->depth = n->depth+1;
+                            n2->abstractDepth = n->abstractDepth;
+                            if(n2->abstractDepth > maxNonPrimitive){
+                                maxNonPrimitive = n2->abstractDepth;
+                            }
                             if(n2->depth > maxDepth){
                                 maxDepth = n2->depth;
                             }
@@ -351,6 +494,10 @@ namespace progression {
                             searchNode *n2 = htn->decompose(n, decomposedStep, method);
                             numSearchNodes++;
                             n2->depth = n->depth+1;
+                            n2->abstractDepth = n->abstractDepth + 1;
+                            if(n2->abstractDepth > maxNonPrimitive){
+                                maxNonPrimitive = n2->abstractDepth;
+                            }
                             if(n2->depth > maxDepth){
                                 maxDepth = n2->depth;
                             }
@@ -449,9 +596,8 @@ namespace progression {
             currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
             cout << "Search Results" << endl;
             cout << "- Search time " << double(currentT - startT) / 1000 << " seconds" << endl;
-            if(flagExaustive){
-                cout << "Max depth reached with exaustive algorithm: " << maxDepth << "." << endl;
-            }
+            cout << "- Depth reached: " << maxDepth << "." << endl;
+            cout << "- Depth reached expanding abstract methods: " << maxNonPrimitive << endl;
             cout << "- Visited list time " << visitedList.time / 1000 << " seconds" << endl;
             cout << "- Visited list inserts " << visitedList.attemptedInsertions << endl;
             cout << "- Visited list pruned " << visitedList.attemptedInsertions - visitedList.uniqueInsertions << endl;

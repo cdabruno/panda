@@ -1,3 +1,175 @@
 Random seed: 42
 Time limit: 20 seconds
 Reading input from results/grounded/umtranslog2.sas.
+- State has 13 bits divided into 13 mutex groups.
+- Domain contains 11 actions.
+- Domain contains 12 tasks.
+- Domain contains 1 methods.
+- The initial state contains 6 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 1 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 12
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 13
+Variable :+Available[Plane_RampStuttgart] Domain size: 1
+Variable :+Available[Plane_RampHeathrow] Domain size: 1
+Variable :+At_Vehicle[Flugzeug,FlughafenStuttgart] Domain size: 1
+Variable :+At_Package[Drucker,FlughafenStuttgart] Domain size: 1
+Variable :-Door_Open[Flugzeug] Domain size: 1
+Variable :-Fees_Collected[Drucker] Domain size: 1
+Variable :+Ramp_Connected[Plane_RampStuttgart,Flugzeug] Domain size: 1
+Variable :+At_Vehicle[Flugzeug,HeathrowAirport] Domain size: 1
+Variable :+At_Package[Drucker,Flugzeug] Domain size: 1
+Variable :+Door_Open[Flugzeug] Domain size: 1
+Variable :+Fees_Collected[Drucker] Domain size: 1
+Variable :+Ramp_Connected[Plane_RampHeathrow,Flugzeug] Domain size: 1
+Variable :+Delivered[Drucker] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+Available[Plane_RampStuttgart], +Available[Plane_RampHeathrow] Mult size: 1
+Var pair:+Available[Plane_RampStuttgart], +At_Vehicle[Flugzeug,FlughafenStuttgart] Mult size: 1
+Var pair:+Available[Plane_RampStuttgart], +At_Package[Drucker,FlughafenStuttgart] Mult size: 1
+Var pair:+Available[Plane_RampStuttgart], -Door_Open[Flugzeug] Mult size: 1
+Var pair:+Available[Plane_RampStuttgart], -Fees_Collected[Drucker] Mult size: 1
+Var pair:+Available[Plane_RampStuttgart], +Ramp_Connected[Plane_RampStuttgart,Flugzeug] Mult size: 1
+Var pair:+Available[Plane_RampStuttgart], +At_Vehicle[Flugzeug,HeathrowAirport] Mult size: 1
+Var pair:+Available[Plane_RampStuttgart], +At_Package[Drucker,Flugzeug] Mult size: 1
+Var pair:+Available[Plane_RampStuttgart], +Door_Open[Flugzeug] Mult size: 1
+Var pair:+Available[Plane_RampStuttgart], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+Available[Plane_RampStuttgart], +Ramp_Connected[Plane_RampHeathrow,Flugzeug] Mult size: 1
+Var pair:+Available[Plane_RampStuttgart], +Delivered[Drucker] Mult size: 1
+Var pair:+Available[Plane_RampHeathrow], +At_Vehicle[Flugzeug,FlughafenStuttgart] Mult size: 1
+Var pair:+Available[Plane_RampHeathrow], +At_Package[Drucker,FlughafenStuttgart] Mult size: 1
+Var pair:+Available[Plane_RampHeathrow], -Door_Open[Flugzeug] Mult size: 1
+Var pair:+Available[Plane_RampHeathrow], -Fees_Collected[Drucker] Mult size: 1
+Var pair:+Available[Plane_RampHeathrow], +Ramp_Connected[Plane_RampStuttgart,Flugzeug] Mult size: 1
+Var pair:+Available[Plane_RampHeathrow], +At_Vehicle[Flugzeug,HeathrowAirport] Mult size: 1
+Var pair:+Available[Plane_RampHeathrow], +At_Package[Drucker,Flugzeug] Mult size: 1
+Var pair:+Available[Plane_RampHeathrow], +Door_Open[Flugzeug] Mult size: 1
+Var pair:+Available[Plane_RampHeathrow], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+Available[Plane_RampHeathrow], +Ramp_Connected[Plane_RampHeathrow,Flugzeug] Mult size: 1
+Var pair:+Available[Plane_RampHeathrow], +Delivered[Drucker] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,FlughafenStuttgart], +At_Package[Drucker,FlughafenStuttgart] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,FlughafenStuttgart], -Door_Open[Flugzeug] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,FlughafenStuttgart], -Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,FlughafenStuttgart], +Ramp_Connected[Plane_RampStuttgart,Flugzeug] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,FlughafenStuttgart], +At_Vehicle[Flugzeug,HeathrowAirport] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,FlughafenStuttgart], +At_Package[Drucker,Flugzeug] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,FlughafenStuttgart], +Door_Open[Flugzeug] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,FlughafenStuttgart], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,FlughafenStuttgart], +Ramp_Connected[Plane_RampHeathrow,Flugzeug] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,FlughafenStuttgart], +Delivered[Drucker] Mult size: 1
+Var pair:+At_Package[Drucker,FlughafenStuttgart], -Door_Open[Flugzeug] Mult size: 1
+Var pair:+At_Package[Drucker,FlughafenStuttgart], -Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Package[Drucker,FlughafenStuttgart], +Ramp_Connected[Plane_RampStuttgart,Flugzeug] Mult size: 1
+Var pair:+At_Package[Drucker,FlughafenStuttgart], +At_Vehicle[Flugzeug,HeathrowAirport] Mult size: 1
+Var pair:+At_Package[Drucker,FlughafenStuttgart], +At_Package[Drucker,Flugzeug] Mult size: 1
+Var pair:+At_Package[Drucker,FlughafenStuttgart], +Door_Open[Flugzeug] Mult size: 1
+Var pair:+At_Package[Drucker,FlughafenStuttgart], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Package[Drucker,FlughafenStuttgart], +Ramp_Connected[Plane_RampHeathrow,Flugzeug] Mult size: 1
+Var pair:+At_Package[Drucker,FlughafenStuttgart], +Delivered[Drucker] Mult size: 1
+Var pair:-Door_Open[Flugzeug], -Fees_Collected[Drucker] Mult size: 1
+Var pair:-Door_Open[Flugzeug], +Ramp_Connected[Plane_RampStuttgart,Flugzeug] Mult size: 1
+Var pair:-Door_Open[Flugzeug], +At_Vehicle[Flugzeug,HeathrowAirport] Mult size: 1
+Var pair:-Door_Open[Flugzeug], +At_Package[Drucker,Flugzeug] Mult size: 1
+Var pair:-Door_Open[Flugzeug], +Door_Open[Flugzeug] Mult size: 1
+Var pair:-Door_Open[Flugzeug], +Fees_Collected[Drucker] Mult size: 1
+Var pair:-Door_Open[Flugzeug], +Ramp_Connected[Plane_RampHeathrow,Flugzeug] Mult size: 1
+Var pair:-Door_Open[Flugzeug], +Delivered[Drucker] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +Ramp_Connected[Plane_RampStuttgart,Flugzeug] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +At_Vehicle[Flugzeug,HeathrowAirport] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +At_Package[Drucker,Flugzeug] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +Door_Open[Flugzeug] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +Fees_Collected[Drucker] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +Ramp_Connected[Plane_RampHeathrow,Flugzeug] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +Delivered[Drucker] Mult size: 1
+Var pair:+Ramp_Connected[Plane_RampStuttgart,Flugzeug], +At_Vehicle[Flugzeug,HeathrowAirport] Mult size: 1
+Var pair:+Ramp_Connected[Plane_RampStuttgart,Flugzeug], +At_Package[Drucker,Flugzeug] Mult size: 1
+Var pair:+Ramp_Connected[Plane_RampStuttgart,Flugzeug], +Door_Open[Flugzeug] Mult size: 1
+Var pair:+Ramp_Connected[Plane_RampStuttgart,Flugzeug], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+Ramp_Connected[Plane_RampStuttgart,Flugzeug], +Ramp_Connected[Plane_RampHeathrow,Flugzeug] Mult size: 1
+Var pair:+Ramp_Connected[Plane_RampStuttgart,Flugzeug], +Delivered[Drucker] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,HeathrowAirport], +At_Package[Drucker,Flugzeug] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,HeathrowAirport], +Door_Open[Flugzeug] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,HeathrowAirport], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,HeathrowAirport], +Ramp_Connected[Plane_RampHeathrow,Flugzeug] Mult size: 1
+Var pair:+At_Vehicle[Flugzeug,HeathrowAirport], +Delivered[Drucker] Mult size: 1
+Var pair:+At_Package[Drucker,Flugzeug], +Door_Open[Flugzeug] Mult size: 1
+Var pair:+At_Package[Drucker,Flugzeug], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Package[Drucker,Flugzeug], +Ramp_Connected[Plane_RampHeathrow,Flugzeug] Mult size: 1
+Var pair:+At_Package[Drucker,Flugzeug], +Delivered[Drucker] Mult size: 1
+Var pair:+Door_Open[Flugzeug], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+Door_Open[Flugzeug], +Ramp_Connected[Plane_RampHeathrow,Flugzeug] Mult size: 1
+Var pair:+Door_Open[Flugzeug], +Delivered[Drucker] Mult size: 1
+Var pair:+Fees_Collected[Drucker], +Ramp_Connected[Plane_RampHeathrow,Flugzeug] Mult size: 1
+Var pair:+Fees_Collected[Drucker], +Delivered[Drucker] Mult size: 1
+Var pair:+Ramp_Connected[Plane_RampHeathrow,Flugzeug], +Delivered[Drucker] Mult size: 1
+Number of variables: 13
+Num primitive tasks: 11
+Num non-primitive tasks: 1
+Total tasks: 12
+Number of methods: 1
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 12
+Search Results
+- Search time 0.001 seconds
+- Depth reached: 1.
+- Depth reached expanding abstract methods: 1
+- Visited list time 8e-06 seconds
+- Visited list inserts 2
+- Visited list pruned 0
+- Visited list contains 2
+- Visited list hash collisions 0
+- Visited list used hash buckets 2
+- Generated 15 search nodes
+  Calculated heuristic for 2 nodes
+  One modifications 13
+  Effectless actions 0
+- including 13 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 2000 nodes per second
+- Final fringe contains 0 nodes
+- Status: Solved
+- Found solution of length 14
+- Total costs of actions: 13
+==>
+1 collect_fees[Drucker]
+2 attach_conveyor_ramp[Flugzeug,Plane_RampStuttgart,FlughafenStuttgart]
+3 open_door[Flugzeug]
+4 load_package[Drucker,Flugzeug,FlughafenStuttgart]
+5 close_door[Flugzeug]
+6 detach_conveyor_ramp[Flugzeug,Plane_RampStuttgart,FlughafenStuttgart]
+7 move_vehicle_no_traincar[Flugzeug,FlughafenStuttgart,Stuttart_London_Air_Route,HeathrowAirport]
+8 attach_conveyor_ramp[Flugzeug,Plane_RampHeathrow,HeathrowAirport]
+9 open_door[Flugzeug]
+10 unload_package[Drucker,Flugzeug,HeathrowAirport]
+11 close_door[Flugzeug]
+12 detach_conveyor_ramp[Flugzeug,Plane_RampHeathrow,HeathrowAirport]
+13 deliver_p[Drucker]
+root 0
+0 __top[] -> <<<<<<<<<<<__top_method;transport[Drucker,FlughafenStuttgart,HeathrowAirport];method_transport_pi_ca_de;0;-1,-2,-3>;carry[Drucker,FlughafenStuttgart,HeathrowAirport];method_carry_cd;1;0,-1,2>;carry_direct[Drucker,FlughafenStuttgart,HeathrowAirport];method_carry_direct;1;0,-1,2>;helper_carry_direct[Flugzeug,Drucker,FlughafenStuttgart,HeathrowAirport];method_helper_carry_direct_noMoveFirst;1;0,-1,-2,-3,2>;unload_top[Drucker,Flugzeug,HeathrowAirport];method_unload_top_normal;3;0,1,2,-1,4>;unload[Drucker,Flugzeug,HeathrowAirport];method_unload_airplane;3;0,1,2,-1,-2,-3,-4,-5,4>;move[Flugzeug,FlughafenStuttgart,HeathrowAirport];method_move_no_traincar;2;0,1,-1,3,4,5,6,7,8>;load_top[Drucker,Flugzeug,FlughafenStuttgart];method_load_top_normal;1;0,-1,2,3,4,5,6,7,8>;load[Drucker,Flugzeug,FlughafenStuttgart];method_load_airplane;1;0,-1,-2,-3,-4,-5,2,3,4,5,6,7,8>;deliver[Drucker];method_deliver_dp;12;0,1,2,3,4,5,6,7,8,9,10,11,-1>;pickup[Drucker];method_pickup_normal;0;-1,1,2,3,4,5,6,7,8,9,10,11,12> 1 2 3 4 5 6 7 8 9 10 11 12 13
+<==

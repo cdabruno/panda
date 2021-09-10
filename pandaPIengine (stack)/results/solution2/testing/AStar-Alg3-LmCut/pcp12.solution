@@ -24,3 +24,125 @@ Search config:
  - type: path cost
  - weight: 1
  - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 6
+Variable :+turnA[] Domain size: 1
+Variable :+turnB[] Domain size: 1
+Variable :+lt1[] Domain size: 1
+Variable :+lt2[] Domain size: 1
+Variable :+l0[] Domain size: 1
+Variable :+l1[] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+turnA[], +turnB[] Mult size: 1
+Var pair:+turnA[], +lt1[] Mult size: 1
+Var pair:+turnA[], +lt2[] Mult size: 1
+Var pair:+turnA[], +l0[] Mult size: 1
+Var pair:+turnA[], +l1[] Mult size: 1
+Var pair:+turnB[], +lt1[] Mult size: 1
+Var pair:+turnB[], +lt2[] Mult size: 1
+Var pair:+turnB[], +l0[] Mult size: 1
+Var pair:+turnB[], +l1[] Mult size: 1
+Var pair:+lt1[], +lt2[] Mult size: 1
+Var pair:+lt1[], +l0[] Mult size: 1
+Var pair:+lt1[], +l1[] Mult size: 1
+Var pair:+lt2[], +l0[] Mult size: 1
+Var pair:+lt2[], +l1[] Mult size: 1
+Var pair:+l0[], +l1[] Mult size: 1
+Number of variables: 6
+Num primitive tasks: 8
+Num non-primitive tasks: 3
+Total tasks: 11
+Number of methods: 9
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 8
+Search Results
+- Search time 0.016 seconds
+- Depth reached: 13.
+- Depth reached expanding abstract methods: 13
+- Visited list time 0.001146 seconds
+- Visited list inserts 405
+- Visited list pruned 0
+- Visited list contains 405
+- Visited list hash collisions 0
+- Visited list used hash buckets 405
+- Generated 3859 search nodes
+  Calculated heuristic for 1614 nodes
+  One modifications 2245
+  Effectless actions 0
+- including 2245 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 100875 nodes per second
+- Final fringe contains 130 nodes
+- Status: Solved
+- Found solution of length 55
+- Total costs of actions: 42
+==>
+21 t1G1[]
+77 t1G2[]
+148 t1G1[]
+220 t1G2[]
+377 t1G1[]
+641 t1G2[]
+845 t2G1[]
+1415 t2G2[]
+1599 t2G1[]
+2860 t2G2[]
+2868 t2G1[]
+2869 t2G2[]
+2870 p1G1[]
+2871 p1G2[]
+2872 p1G1[]
+2873 p1G2[]
+2874 p1G1[]
+2875 p1G2[]
+2876 p0G1[]
+2877 p0G2[]
+2878 p1G1[]
+2879 p1G2[]
+2880 p1G1[]
+2881 p1G2[]
+2882 p1G1[]
+2883 p1G2[]
+2884 p0G1[]
+2885 p0G2[]
+2886 p1G1[]
+2887 p1G2[]
+2888 p1G1[]
+2889 p1G2[]
+2890 p1G1[]
+2891 p1G2[]
+2892 p0G1[]
+2893 p0G2[]
+2894 p1G1[]
+2895 p1G2[]
+2896 p1G1[]
+2897 p1G2[]
+2898 p1G1[]
+2899 p1G2[]
+root 0
+2867 SG2[] -> G2_S2t2_1_1_1_0 2869 2871 2873 2875 2877
+2859 SG1[] -> G1_S2t2_1 2868 2870
+1598 SG2[] -> G2_S2t2_S_1_1_1_0 2860 2867 2879 2881 2883 2885
+1414 SG1[] -> G1_S2t2_S_1 1599 2859 2872
+844 SG2[] -> G2_S2t2_S_1_1_1_0 1415 1598 2887 2889 2891 2893
+640 SG1[] -> G1_S2t2_S_1 845 1414 2874
+376 SG2[] -> G2_S2t1_S_1 641 844 2895
+219 SG1[] -> G1_S2t1_S_0_1_1_1 377 640 2876 2878 2880 2882
+147 SG2[] -> G2_S2t1_S_1 220 376 2897
+76 SG1[] -> G1_S2t1_S_0_1_1_1 148 219 2884 2886 2888 2890
+20 SG1[] -> G1_S2t1_S_0_1_1_1 21 76 2892 2894 2896 2898
+3 SG2[] -> G2_S2t1_S_1 77 147 2899
+0 __top[] -> __top_method 20 3
+<==

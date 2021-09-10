@@ -35,20 +35,22 @@ Search Configuration
 - Utilizing heuristics.
 - Greedy A* Search with weight 2
 - Distance G is "modification depth"
-   1s visitime    0.32s generated nodes     15006 nodes/sec   14654 cur h   24 mod.depth   40 inserts      7487 dups      4534 size      2953 hash fail   4534 hash buckets   2953
-   2s visitime    1.07s generated nodes     30019 nodes/sec   10182 cur h   25 mod.depth   40 inserts     17080 dups     11266 size      5814 hash fail  11267 hash buckets   5813
-   4s visitime    1.65s generated nodes     40030 nodes/sec    9270 cur h   24 mod.depth   44 inserts     22937 dups     15360 size      7577 hash fail  15361 hash buckets   7576
-   5s visitime    2.19s generated nodes     55040 nodes/sec    9757 cur h   25 mod.depth   31 inserts     32337 dups     21989 size     10348 hash fail  21991 hash buckets  10346
-   7s visitime    2.95s generated nodes     70051 nodes/sec    9507 cur h   20 mod.depth   48 inserts     41971 dups     28670 size     13301 hash fail  28673 hash buckets  13298
-   8s visitime    3.56s generated nodes     80055 nodes/sec    9154 cur h   18 mod.depth   50 inserts     48647 dups     33482 size     15165 hash fail  33487 hash buckets  15160
-   9s visitime    4.11s generated nodes     95062 nodes/sec    9618 cur h   21 mod.depth   47 inserts     58413 dups     40654 size     17759 hash fail  40663 hash buckets  17750
-  11s visitime    4.73s generated nodes    110072 nodes/sec    9824 cur h   22 mod.depth   45 inserts     66850 dups     46678 size     20172 hash fail  46689 hash buckets  20161
-  12s visitime    5.19s generated nodes    115073 nodes/sec    9396 cur h   23 mod.depth   45 inserts     70647 dups     49596 size     21051 hash fail  49608 hash buckets  21039
-  13s visitime    5.77s generated nodes    125077 nodes/sec    9184 cur h   19 mod.depth   52 inserts     78004 dups     54879 size     23125 hash fail  54893 hash buckets  23111
-  15s visitime    6.43s generated nodes    140093 nodes/sec    9264 cur h   30 mod.depth   31 inserts     89306 dups     63534 size     25772 hash fail  63552 hash buckets  25754
+- Starting state heuristic value: 40
+   1s visitime    0.32s generated nodes     15006 nodes/sec   13933 cur h   24 mod.depth   40 inserts      7487 dups      4534 size      2953 hash fail   4534 hash buckets   2953
+   2s visitime    0.86s generated nodes     30019 nodes/sec   12217 cur h   25 mod.depth   40 inserts     17080 dups     11266 size      5814 hash fail  11267 hash buckets   5813
+   4s visitime    1.58s generated nodes     40030 nodes/sec    9571 cur h   24 mod.depth   44 inserts     22937 dups     15360 size      7577 hash fail  15361 hash buckets   7576
+   5s visitime    2.00s generated nodes     50038 nodes/sec    9576 cur h   23 mod.depth   45 inserts     29381 dups     20050 size      9331 hash fail  20052 hash buckets   9329
+   6s visitime    2.50s generated nodes     65051 nodes/sec   10086 cur h   25 mod.depth   37 inserts     38713 dups     26333 size     12380 hash fail  26336 hash buckets  12377
+   7s visitime    3.02s generated nodes     80055 nodes/sec   10530 cur h   18 mod.depth   50 inserts     48647 dups     33482 size     15165 hash fail  33487 hash buckets  15160
+   9s visitime    3.69s generated nodes     90060 nodes/sec    9921 cur h   16 mod.depth   52 inserts     55026 dups     38064 size     16962 hash fail  38071 hash buckets  16955
+  10s visitime    4.36s generated nodes    100063 nodes/sec    9621 cur h   26 mod.depth   35 inserts     61974 dups     43397 size     18577 hash fail  43406 hash buckets  18568
+  11s visitime    4.87s generated nodes    115073 nodes/sec    9972 cur h   23 mod.depth   45 inserts     70647 dups     49596 size     21051 hash fail  49608 hash buckets  21039
+  12s visitime    5.28s generated nodes    125077 nodes/sec    9965 cur h   19 mod.depth   52 inserts     78004 dups     54879 size     23125 hash fail  54893 hash buckets  23111
+  13s visitime    5.85s generated nodes    135086 nodes/sec    9854 cur h   19 mod.depth   52 inserts     85105 dups     60384 size     24721 hash fail  60400 hash buckets  24705
+  15s visitime    6.36s generated nodes    140093 nodes/sec    9319 cur h   30 mod.depth   31 inserts     89306 dups     63534 size     25772 hash fail  63552 hash buckets  25754
 Search Results
-- Search time 15.93 seconds
-- Visited list time 6.79 seconds
+- Search time 15.68 seconds
+- Visited list time 6.64 seconds
 - Visited list inserts 92434
 - Visited list pruned 65974
 - Visited list contains 26460
@@ -61,7 +63,7 @@ Search Results
 - including 1220 one modification actions
 - including 0 one modification methods
 - and       2674 progressions of effectless actions
-- Generated 8798 nodes per second
+- Generated 8935 nodes per second
 - Final fringe contains 2889 nodes
 - Status: Solved
 - Found solution of length 67
@@ -76,8 +78,8 @@ Search Results
 52707 press_Programs_Tasks[]
 143781 press_Tasks_Menu[]
 143785 press_Tasks_Menu_NewTask[taskCreateHandout]
-143786 set_Task_Time[taskCreateHandout,dateForMeeting]
-143787 set_Task_Reminder[taskCreateHandout]
+143786 set_Task_Reminder[taskCreateHandout]
+143787 set_Task_Time[taskCreateHandout,dateForMeeting]
 143791 set_Task_Name[taskCreateHandout]
 143797 press_Tasks_NewTask_OK[taskCreateHandout]
 143799 press_Home_Default[]
@@ -120,7 +122,7 @@ root 0
 143894 do_extractsMultipleInformation_Multiple_splitted_7[headOfDepartment,email1] -> <_splitting_method_do_extractsMultipleInformation_Multiple_splitted_7;extractsInformation[headOfDepartment,email1,agenda];do_extractsInformation_Regular;0;-1> 143945
 143890 extractsMultipleInformation[headOfDepartment,email1] -> do_extractsMultipleInformation_Multiple 143913 143894
 143832 enterMode_EMail[] -> <do_enterMode_EMail_ViaHome;press_Home[];do_press_Home_Default;0;-1,1> 143946 143947
-52710 create_NewTask[taskCreateHandout] -> <do_create_NewTask_Normal;configure_Task[taskCreateHandout];do_configure_Task;2;0,1,-1,-2,-3,3> 143781 143785 143791 143787 143786 143797
+52710 create_NewTask[taskCreateHandout] -> <do_create_NewTask_Normal;configure_Task[taskCreateHandout];do_configure_Task;2;0,1,-1,-2,-3,3> 143781 143785 143791 143786 143787 143797
 52692 enterMode_EMail[] -> <do_enterMode_EMail_ViaHome;press_Home[];do_press_Home_Default;0;-1,1> 143827 143840
 1597 enterMode_Calendar[] -> <<do_enterMode_Calendar_ViaHome;enterMode_Home[];do_enterMode_Home;0;-1,1>;press_Home[];do_press_Home_Default;0;-1,1> 143799 143803
 1591 attachMultipleInformation[email1] -> <<do_attachMultipleInformation_Single;attachInformation[email1,dateForMeeting];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email1,dateForMeeting];do_attachInformationToEMail_Regular;0;-1> 52639

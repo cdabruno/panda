@@ -29,14 +29,71 @@ Visited List configured
 - hashs to use: state task task-sequence
 - memory information: topological ordering
 - Visited list allows deletion of search nodes: true
+Variable number: 9
+Variable :+At_Vehicle[Pferd,O27] Domain size: 1
+Variable :+At_Package[MaseratiMC12,O27] Domain size: 1
+Variable :-Fees_Collected[MaseratiMC12] Domain size: 1
+Variable :-Ramp_Down[Pferd] Domain size: 1
+Variable :+At_Vehicle[Pferd,O28] Domain size: 1
+Variable :+Fees_Collected[MaseratiMC12] Domain size: 1
+Variable :+Ramp_Down[Pferd] Domain size: 1
+Variable :+Delivered[MaseratiMC12] Domain size: 1
+Variable :+At_Package[MaseratiMC12,Pferd] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+At_Vehicle[Pferd,O27], +At_Package[MaseratiMC12,O27] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], -Fees_Collected[MaseratiMC12] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], -Ramp_Down[Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +Fees_Collected[MaseratiMC12] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +Ramp_Down[Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +Delivered[MaseratiMC12] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +At_Package[MaseratiMC12,Pferd] Mult size: 1
+Var pair:+At_Package[MaseratiMC12,O27], -Fees_Collected[MaseratiMC12] Mult size: 1
+Var pair:+At_Package[MaseratiMC12,O27], -Ramp_Down[Pferd] Mult size: 1
+Var pair:+At_Package[MaseratiMC12,O27], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:+At_Package[MaseratiMC12,O27], +Fees_Collected[MaseratiMC12] Mult size: 1
+Var pair:+At_Package[MaseratiMC12,O27], +Ramp_Down[Pferd] Mult size: 1
+Var pair:+At_Package[MaseratiMC12,O27], +Delivered[MaseratiMC12] Mult size: 1
+Var pair:+At_Package[MaseratiMC12,O27], +At_Package[MaseratiMC12,Pferd] Mult size: 1
+Var pair:-Fees_Collected[MaseratiMC12], -Ramp_Down[Pferd] Mult size: 1
+Var pair:-Fees_Collected[MaseratiMC12], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:-Fees_Collected[MaseratiMC12], +Fees_Collected[MaseratiMC12] Mult size: 1
+Var pair:-Fees_Collected[MaseratiMC12], +Ramp_Down[Pferd] Mult size: 1
+Var pair:-Fees_Collected[MaseratiMC12], +Delivered[MaseratiMC12] Mult size: 1
+Var pair:-Fees_Collected[MaseratiMC12], +At_Package[MaseratiMC12,Pferd] Mult size: 1
+Var pair:-Ramp_Down[Pferd], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:-Ramp_Down[Pferd], +Fees_Collected[MaseratiMC12] Mult size: 1
+Var pair:-Ramp_Down[Pferd], +Ramp_Down[Pferd] Mult size: 1
+Var pair:-Ramp_Down[Pferd], +Delivered[MaseratiMC12] Mult size: 1
+Var pair:-Ramp_Down[Pferd], +At_Package[MaseratiMC12,Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +Fees_Collected[MaseratiMC12] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +Ramp_Down[Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +Delivered[MaseratiMC12] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +At_Package[MaseratiMC12,Pferd] Mult size: 1
+Var pair:+Fees_Collected[MaseratiMC12], +Ramp_Down[Pferd] Mult size: 1
+Var pair:+Fees_Collected[MaseratiMC12], +Delivered[MaseratiMC12] Mult size: 1
+Var pair:+Fees_Collected[MaseratiMC12], +At_Package[MaseratiMC12,Pferd] Mult size: 1
+Var pair:+Ramp_Down[Pferd], +Delivered[MaseratiMC12] Mult size: 1
+Var pair:+Ramp_Down[Pferd], +At_Package[MaseratiMC12,Pferd] Mult size: 1
+Var pair:+Delivered[MaseratiMC12], +At_Package[MaseratiMC12,Pferd] Mult size: 1
+Number of variables: 9
+Num primitive tasks: 7
+Num non-primitive tasks: 1
+Total tasks: 8
+Number of methods: 1
 Search Configuration
 - Using JAIR 2020 progression algorithm
 - Search is stopped after first solution is found.
 - Utilizing heuristics.
 - A* Search
 - Distance G is "modification depth"
+- Starting state heuristic value: 8
 Search Results
 - Search time 0 seconds
+- Depth reached: 1.
+- Depth reached expanding abstract methods: 1
 - Visited list time 9e-06 seconds
 - Visited list inserts 2
 - Visited list pruned 0

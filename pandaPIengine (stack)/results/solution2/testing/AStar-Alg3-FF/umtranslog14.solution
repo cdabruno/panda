@@ -29,15 +29,72 @@ Visited List configured
 - hashs to use: state task task-sequence
 - memory information: topological ordering
 - Visited list allows deletion of search nodes: true
+Variable number: 9
+Variable :+At_Vehicle[LKW,Vendee] Domain size: 1
+Variable :+At_Package[Tische,Vendee] Domain size: 1
+Variable :-Door_Open[LKW] Domain size: 1
+Variable :-Fees_Collected[Tische] Domain size: 1
+Variable :+At_Vehicle[LKW,FrancheComte] Domain size: 1
+Variable :+At_Package[Tische,LKW] Domain size: 1
+Variable :+Door_Open[LKW] Domain size: 1
+Variable :+Fees_Collected[Tische] Domain size: 1
+Variable :+Delivered[Tische] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+At_Vehicle[LKW,Vendee], +At_Package[Tische,Vendee] Mult size: 1
+Var pair:+At_Vehicle[LKW,Vendee], -Door_Open[LKW] Mult size: 1
+Var pair:+At_Vehicle[LKW,Vendee], -Fees_Collected[Tische] Mult size: 1
+Var pair:+At_Vehicle[LKW,Vendee], +At_Vehicle[LKW,FrancheComte] Mult size: 1
+Var pair:+At_Vehicle[LKW,Vendee], +At_Package[Tische,LKW] Mult size: 1
+Var pair:+At_Vehicle[LKW,Vendee], +Door_Open[LKW] Mult size: 1
+Var pair:+At_Vehicle[LKW,Vendee], +Fees_Collected[Tische] Mult size: 1
+Var pair:+At_Vehicle[LKW,Vendee], +Delivered[Tische] Mult size: 1
+Var pair:+At_Package[Tische,Vendee], -Door_Open[LKW] Mult size: 1
+Var pair:+At_Package[Tische,Vendee], -Fees_Collected[Tische] Mult size: 1
+Var pair:+At_Package[Tische,Vendee], +At_Vehicle[LKW,FrancheComte] Mult size: 1
+Var pair:+At_Package[Tische,Vendee], +At_Package[Tische,LKW] Mult size: 1
+Var pair:+At_Package[Tische,Vendee], +Door_Open[LKW] Mult size: 1
+Var pair:+At_Package[Tische,Vendee], +Fees_Collected[Tische] Mult size: 1
+Var pair:+At_Package[Tische,Vendee], +Delivered[Tische] Mult size: 1
+Var pair:-Door_Open[LKW], -Fees_Collected[Tische] Mult size: 1
+Var pair:-Door_Open[LKW], +At_Vehicle[LKW,FrancheComte] Mult size: 1
+Var pair:-Door_Open[LKW], +At_Package[Tische,LKW] Mult size: 1
+Var pair:-Door_Open[LKW], +Door_Open[LKW] Mult size: 1
+Var pair:-Door_Open[LKW], +Fees_Collected[Tische] Mult size: 1
+Var pair:-Door_Open[LKW], +Delivered[Tische] Mult size: 1
+Var pair:-Fees_Collected[Tische], +At_Vehicle[LKW,FrancheComte] Mult size: 1
+Var pair:-Fees_Collected[Tische], +At_Package[Tische,LKW] Mult size: 1
+Var pair:-Fees_Collected[Tische], +Door_Open[LKW] Mult size: 1
+Var pair:-Fees_Collected[Tische], +Fees_Collected[Tische] Mult size: 1
+Var pair:-Fees_Collected[Tische], +Delivered[Tische] Mult size: 1
+Var pair:+At_Vehicle[LKW,FrancheComte], +At_Package[Tische,LKW] Mult size: 1
+Var pair:+At_Vehicle[LKW,FrancheComte], +Door_Open[LKW] Mult size: 1
+Var pair:+At_Vehicle[LKW,FrancheComte], +Fees_Collected[Tische] Mult size: 1
+Var pair:+At_Vehicle[LKW,FrancheComte], +Delivered[Tische] Mult size: 1
+Var pair:+At_Package[Tische,LKW], +Door_Open[LKW] Mult size: 1
+Var pair:+At_Package[Tische,LKW], +Fees_Collected[Tische] Mult size: 1
+Var pair:+At_Package[Tische,LKW], +Delivered[Tische] Mult size: 1
+Var pair:+Door_Open[LKW], +Fees_Collected[Tische] Mult size: 1
+Var pair:+Door_Open[LKW], +Delivered[Tische] Mult size: 1
+Var pair:+Fees_Collected[Tische], +Delivered[Tische] Mult size: 1
+Number of variables: 9
+Num primitive tasks: 7
+Num non-primitive tasks: 1
+Total tasks: 8
+Number of methods: 1
 Search Configuration
 - Using JAIR 2020 progression algorithm
 - Search is stopped after first solution is found.
 - Utilizing heuristics.
 - A* Search
 - Distance G is "modification depth"
+- Starting state heuristic value: 8
 Search Results
 - Search time 0 seconds
-- Visited list time 8e-06 seconds
+- Depth reached: 1.
+- Depth reached expanding abstract methods: 1
+- Visited list time 1.2e-05 seconds
 - Visited list inserts 2
 - Visited list pruned 0
 - Visited list contains 2

@@ -15,25 +15,27 @@ properties_time = []
 timeout = 20
 # counts = []
 
-commands = ["./build/pandaPIengine --timelimit '20'",
-            "./build/pandaPIengine --timelimit '20' --heuristic 'rc2(lmc)'",
-            "./build/pandaPIengine --timelimit '20' --heuristic 'rc2(add)'",
-            "./build/pandaPIengine --timelimit '20' --astarweight '2'",
-            "./build/pandaPIengine --timelimit '20' --heuristic 'rc2(lmc)' --astarweight '2'",
-            "./build/pandaPIengine --timelimit '20' --heuristic 'rc2(add)' --astarweight '2'",
-            "./build/pandaPIengine --timelimit '20' --gValue 'none'",
-            "./build/pandaPIengine --timelimit '20' --heuristic 'rc2(lmc)' --gValue 'none'",
-            "./build/pandaPIengine --timelimit '20' --heuristic 'rc2(add)' --gValue 'none'"]
+commands = [#"./build/pandaPIengine --timelimit '20'"
+            "./build/pandaPIengine --timelimit '20' --heuristic 'rc2(lmc)'"
+            #"./build/pandaPIengine --timelimit '20' --heuristic 'rc2(add)'",
+            #"./build/pandaPIengine --timelimit '20' --astarweight '2'",
+            #"./build/pandaPIengine --timelimit '20' --heuristic 'rc2(lmc)' --astarweight '2'",
+            #"./build/pandaPIengine --timelimit '20' --heuristic 'rc2(add)' --astarweight '2'",
+            #"./build/pandaPIengine --timelimit '20' --gValue 'none'",
+            #"./build/pandaPIengine --timelimit '20' --heuristic 'rc2(lmc)' --gValue 'none'",
+            #"./build/pandaPIengine --timelimit '20' --heuristic 'rc2(add)' --gValue 'none'"
+            ]
 
-paths = ["testing/AStar-Alg3-FF",
-        "testing/AStar-Alg3-LmCut",
-        "testing/AStar-Alg3-Add",
-        "testing/WA2-Alg3-FF",
-        "testing/WA2-Alg3-LmCut",
-        "testing/WA2-Alg3-Add",
-        "testing/Greedy-Alg3-FF",
-        "testing/Greedy-Alg3-LmCut",
-        "testing/Greedy-Alg3-Add"]
+paths = [#"testing/AStar-Alg3-FF",
+        "testing/AStar-Alg3-LmCut"
+        #"testing/AStar-Alg3-Add",
+        #"testing/WA2-Alg3-FF",
+        #"testing/WA2-Alg3-LmCut",
+        #"testing/WA2-Alg3-Add",
+        #"testing/Greedy-Alg3-FF",
+        #"testing/Greedy-Alg3-LmCut",
+        #"testing/Greedy-Alg3-Add"
+        ]
 
 for c in range(len(commands)):
 

@@ -1,3 +1,868 @@
 Random seed: 42
 Time limit: 20 seconds
 Reading input from results/grounded/entertainment5.sas.
+- State has 39 bits divided into 39 mutex groups.
+- Domain contains 49 actions.
+- Domain contains 91 tasks.
+- Domain contains 108 methods.
+- The initial state contains 17 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 91
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 39
+Variable :+unused[dvd-1-scart-1] Domain size: 1
+Variable :+unused[tv1-1-scart-1] Domain size: 1
+Variable :+unused[tv1-1-scart-2] Domain size: 1
+Variable :+unused[tv1-1-cinch-3] Domain size: 1
+Variable :+unused[game-console-1-scart-1] Domain size: 1
+Variable :+unused[scart-cable-1-scart-1] Domain size: 1
+Variable :+unused[scart-cable-1-scart-2] Domain size: 1
+Variable :+unused[scart-cable-2-scart-1] Domain size: 1
+Variable :+unused[scart-cable-2-scart-2] Domain size: 1
+Variable :+unused[scart-cable-3-scart-1] Domain size: 1
+Variable :+unused[scart-cable-3-scart-2] Domain size: 1
+Variable :+unused[cinch-cable-1-cinch-1] Domain size: 1
+Variable :+unused[cinch-cable-1-cinch-2] Domain size: 1
+Variable :+unused[cinch-cable-2-cinch-1] Domain size: 1
+Variable :+unused[cinch-cable-2-cinch-2] Domain size: 1
+Variable :+unused[active-speaker-1-cinch-1] Domain size: 1
+Variable :+unused[active-speaker-1-cinch-2] Domain size: 1
+Variable :+audio_connected[dvd-1,scart-cable-1] Domain size: 1
+Variable :+video_connected[dvd-1,scart-cable-1] Domain size: 1
+Variable :+audio_connected[dvd-1,scart-cable-2] Domain size: 1
+Variable :+video_connected[dvd-1,scart-cable-2] Domain size: 1
+Variable :+audio_connected[dvd-1,scart-cable-3] Domain size: 1
+Variable :+video_connected[dvd-1,scart-cable-3] Domain size: 1
+Variable :+audio_connected[game-console-1,scart-cable-1] Domain size: 1
+Variable :+video_connected[game-console-1,scart-cable-1] Domain size: 1
+Variable :+audio_connected[game-console-1,scart-cable-2] Domain size: 1
+Variable :+video_connected[game-console-1,scart-cable-2] Domain size: 1
+Variable :+audio_connected[game-console-1,scart-cable-3] Domain size: 1
+Variable :+video_connected[game-console-1,scart-cable-3] Domain size: 1
+Variable :+audio_connected[scart-cable-1,tv1-1] Domain size: 1
+Variable :+video_connected[scart-cable-1,tv1-1] Domain size: 1
+Variable :+audio_connected[scart-cable-2,tv1-1] Domain size: 1
+Variable :+video_connected[scart-cable-2,tv1-1] Domain size: 1
+Variable :+audio_connected[scart-cable-3,tv1-1] Domain size: 1
+Variable :+video_connected[scart-cable-3,tv1-1] Domain size: 1
+Variable :+audio_connected[cinch-cable-1,active-speaker-1] Domain size: 1
+Variable :+audio_connected[cinch-cable-2,active-speaker-1] Domain size: 1
+Variable :+audio_connected[tv1-1,cinch-cable-1] Domain size: 1
+Variable :+audio_connected[tv1-1,cinch-cable-2] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+unused[dvd-1-scart-1], +unused[tv1-1-scart-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[tv1-1-scart-2] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[tv1-1-cinch-3] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[game-console-1-scart-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[scart-cable-1-scart-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[scart-cable-1-scart-2] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[scart-cable-2-scart-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[scart-cable-2-scart-2] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[scart-cable-3-scart-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[scart-cable-3-scart-2] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[cinch-cable-1-cinch-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[cinch-cable-1-cinch-2] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[cinch-cable-2-cinch-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[dvd-1-scart-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[tv1-1-scart-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[tv1-1-cinch-3] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[game-console-1-scart-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[scart-cable-1-scart-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[scart-cable-1-scart-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[scart-cable-2-scart-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[scart-cable-2-scart-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[scart-cable-3-scart-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[scart-cable-3-scart-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[cinch-cable-1-cinch-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[cinch-cable-1-cinch-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[cinch-cable-2-cinch-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[tv1-1-cinch-3] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[game-console-1-scart-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[scart-cable-1-scart-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[scart-cable-1-scart-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[scart-cable-2-scart-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[scart-cable-2-scart-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[scart-cable-3-scart-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[scart-cable-3-scart-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[cinch-cable-1-cinch-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[cinch-cable-1-cinch-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[cinch-cable-2-cinch-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-scart-2], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +unused[game-console-1-scart-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +unused[scart-cable-1-scart-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +unused[scart-cable-1-scart-2] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +unused[scart-cable-2-scart-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +unused[scart-cable-2-scart-2] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +unused[scart-cable-3-scart-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +unused[scart-cable-3-scart-2] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +unused[cinch-cable-1-cinch-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +unused[cinch-cable-1-cinch-2] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +unused[cinch-cable-2-cinch-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[tv1-1-cinch-3], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +unused[scart-cable-1-scart-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +unused[scart-cable-1-scart-2] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +unused[scart-cable-2-scart-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +unused[scart-cable-2-scart-2] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +unused[scart-cable-3-scart-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +unused[scart-cable-3-scart-2] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +unused[cinch-cable-1-cinch-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +unused[cinch-cable-1-cinch-2] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +unused[cinch-cable-2-cinch-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[game-console-1-scart-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +unused[scart-cable-1-scart-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +unused[scart-cable-2-scart-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +unused[scart-cable-2-scart-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +unused[scart-cable-3-scart-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +unused[scart-cable-3-scart-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +unused[cinch-cable-1-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +unused[cinch-cable-1-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +unused[cinch-cable-2-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +unused[scart-cable-2-scart-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +unused[scart-cable-2-scart-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +unused[scart-cable-3-scart-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +unused[scart-cable-3-scart-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +unused[cinch-cable-1-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +unused[cinch-cable-1-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +unused[cinch-cable-2-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-1-scart-2], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +unused[scart-cable-2-scart-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +unused[scart-cable-3-scart-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +unused[scart-cable-3-scart-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +unused[cinch-cable-1-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +unused[cinch-cable-1-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +unused[cinch-cable-2-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +unused[scart-cable-3-scart-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +unused[scart-cable-3-scart-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +unused[cinch-cable-1-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +unused[cinch-cable-1-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +unused[cinch-cable-2-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-2-scart-2], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +unused[scart-cable-3-scart-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +unused[cinch-cable-1-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +unused[cinch-cable-1-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +unused[cinch-cable-2-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +unused[cinch-cable-1-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +unused[cinch-cable-1-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +unused[cinch-cable-2-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[scart-cable-3-scart-2], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +unused[cinch-cable-1-cinch-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +unused[cinch-cable-2-cinch-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +unused[cinch-cable-2-cinch-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-1-cinch-2], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +unused[cinch-cable-2-cinch-2] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +unused[active-speaker-1-cinch-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[cinch-cable-2-cinch-2], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +unused[active-speaker-1-cinch-2] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +audio_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+unused[active-speaker-1-cinch-2], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +video_connected[dvd-1,scart-cable-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +audio_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +video_connected[dvd-1,scart-cable-2] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-2], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +audio_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-2], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +video_connected[dvd-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+audio_connected[dvd-1,scart-cable-3], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +audio_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+video_connected[dvd-1,scart-cable-3], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +video_connected[game-console-1,scart-cable-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +audio_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-2], +video_connected[game-console-1,scart-cable-2] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-2], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-2], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-2], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-2], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-2], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-2], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-2], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-2], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-2], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-2], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-2], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-2], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-2], +audio_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-2], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-2], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-2], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-2], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-2], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-2], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-2], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-2], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-2], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-2], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-2], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-3], +video_connected[game-console-1,scart-cable-3] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-3], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-3], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-3], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-3], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-3], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-3], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-3], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-3], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-3], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+audio_connected[game-console-1,scart-cable-3], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-3], +audio_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-3], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-3], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-3], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-3], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-3], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-3], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-3], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-3], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+video_connected[game-console-1,scart-cable-3], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+audio_connected[scart-cable-1,tv1-1], +video_connected[scart-cable-1,tv1-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-1,tv1-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-1,tv1-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-1,tv1-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-1,tv1-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-1,tv1-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-1,tv1-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-1,tv1-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-1,tv1-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+video_connected[scart-cable-1,tv1-1], +audio_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[scart-cable-1,tv1-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+video_connected[scart-cable-1,tv1-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[scart-cable-1,tv1-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[scart-cable-1,tv1-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+video_connected[scart-cable-1,tv1-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+video_connected[scart-cable-1,tv1-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+video_connected[scart-cable-1,tv1-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+audio_connected[scart-cable-2,tv1-1], +video_connected[scart-cable-2,tv1-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-2,tv1-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-2,tv1-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-2,tv1-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-2,tv1-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-2,tv1-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-2,tv1-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+video_connected[scart-cable-2,tv1-1], +audio_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[scart-cable-2,tv1-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+video_connected[scart-cable-2,tv1-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+video_connected[scart-cable-2,tv1-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+video_connected[scart-cable-2,tv1-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+video_connected[scart-cable-2,tv1-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+audio_connected[scart-cable-3,tv1-1], +video_connected[scart-cable-3,tv1-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-3,tv1-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-3,tv1-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-3,tv1-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+audio_connected[scart-cable-3,tv1-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+video_connected[scart-cable-3,tv1-1], +audio_connected[cinch-cable-1,active-speaker-1] Mult size: 1
+Var pair:+video_connected[scart-cable-3,tv1-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+video_connected[scart-cable-3,tv1-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+video_connected[scart-cable-3,tv1-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+audio_connected[cinch-cable-1,active-speaker-1], +audio_connected[cinch-cable-2,active-speaker-1] Mult size: 1
+Var pair:+audio_connected[cinch-cable-1,active-speaker-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+audio_connected[cinch-cable-1,active-speaker-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+audio_connected[cinch-cable-2,active-speaker-1], +audio_connected[tv1-1,cinch-cable-1] Mult size: 1
+Var pair:+audio_connected[cinch-cable-2,active-speaker-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Var pair:+audio_connected[tv1-1,cinch-cable-1], +audio_connected[tv1-1,cinch-cable-2] Mult size: 1
+Number of variables: 39
+Num primitive tasks: 49
+Num non-primitive tasks: 42
+Total tasks: 91
+Number of methods: 108
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 14
+Search Results
+- Search time 0.016 seconds
+- Depth reached: 12.
+- Depth reached expanding abstract methods: 12
+- Visited list time 0.000295 seconds
+- Visited list inserts 65
+- Visited list pruned 0
+- Visited list contains 65
+- Visited list hash collisions 0
+- Visited list used hash buckets 65
+- Generated 229 search nodes
+  Calculated heuristic for 179 nodes
+  One modifications 47
+  Effectless actions 3
+- including 47 one modification actions
+- including 0 one modification methods
+- and       3 progressions of effectless actions
+- Generated 11187 nodes per second
+- Final fringe contains 63 nodes
+- Status: Solved
+- Found solution of length 18
+- Total costs of actions: 6
+==>
+8 plug|instance_4[tv1-1,tv1-1-cinch-3,cinch-cable-1,cinch-cable-1-cinch-1]
+13 plug|instance_7[cinch-cable-1,cinch-cable-1-cinch-2,active-speaker-1,active-speaker-1-cinch-2]
+23 plug|instance_1[dvd-1,dvd-1-scart-1,scart-cable-1,scart-cable-1-scart-1]
+131 plug|instance_1[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-1]
+211 plug|instance_1[game-console-1,game-console-1-scart-1,scart-cable-2,scart-cable-2-scart-1]
+216 plug|instance_1[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-2]
+root 0
+215 direct_av_connect[scart-cable-2,tv1-1] -> <m-dconnect-av;plug[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-2];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 216
+212 av_connect[scart-cable-2,tv1-1] -> m-connect-direct-av 215
+210 direct_av_connect[game-console-1,scart-cable-2] -> <m-dconnect-av;plug[game-console-1,game-console-1-scart-1,scart-cable-2,scart-cable-2-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 211
+132 av_connect[game-console-1,tv1-1] -> m-connect-rec-av-1 210 212
+130 direct_av_connect[scart-cable-1,tv1-1] -> <m-dconnect-av;plug[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 131
+121 av_connect[scart-cable-1,tv1-1] -> m-connect-direct-av 130
+22 direct_av_connect[dvd-1,scart-cable-1] -> <m-dconnect-av;plug[dvd-1,dvd-1-scart-1,scart-cable-1,scart-cable-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 23
+16 av_connect[dvd-1,tv1-1] -> m-connect-rec-av-1 22 121
+12 direct_a_connect[cinch-cable-1,active-speaker-1] -> <m-dconnect-a;plug[cinch-cable-1,cinch-cable-1-cinch-2,active-speaker-1,active-speaker-1-cinch-2];_method_for_multiple_expansions_of_plug|instance_7;0;-1> 13
+7 direct_a_connect[tv1-1,cinch-cable-1] -> <m-dconnect-a;plug[tv1-1,tv1-1-cinch-3,cinch-cable-1,cinch-cable-1-cinch-1];_method_for_multiple_expansions_of_plug|instance_4;0;-1> 8
+2 a_connect[tv1-1,active-speaker-1] -> <m-connect-rec-a;a_connect[tv1-1,cinch-cable-1];m-connect-direct-a;0;-1,1> 7 12
+0 __top[] -> __top_method 2 16 132
+<==

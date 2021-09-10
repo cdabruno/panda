@@ -22,3 +22,88 @@ Search config:
  - type: path cost
  - weight: 1
  - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 7
+Variable :+power_avail[satellite0] Domain size: 1
+Variable :+pointing[satellite0,Phenomenon6] Domain size: 1
+Variable :+power_on[instrument0] Domain size: 1
+Variable :+pointing[satellite0,GroundStation2] Domain size: 1
+Variable :+pointing[satellite0,Phenomenon4] Domain size: 1
+Variable :+pointing[satellite0,Star5] Domain size: 1
+Variable :+calibrated[instrument0] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,Phenomenon6] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument0] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,GroundStation2] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +power_on[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +pointing[satellite0,GroundStation2] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +calibrated[instrument0] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite0,GroundStation2] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+power_on[instrument0], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation2], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation2], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation2], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,Star5], +calibrated[instrument0] Mult size: 1
+Number of variables: 7
+Num primitive tasks: 13
+Num non-primitive tasks: 4
+Total tasks: 17
+Number of methods: 21
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 8
+Search Results
+- Search time 0.002 seconds
+- Depth reached: 6.
+- Depth reached expanding abstract methods: 4
+- Visited list time 6.2e-05 seconds
+- Visited list inserts 17
+- Visited list pruned 0
+- Visited list contains 17
+- Visited list hash collisions 0
+- Visited list used hash buckets 17
+- Generated 127 search nodes
+  Calculated heuristic for 78 nodes
+  One modifications 41
+  Effectless actions 8
+- including 41 one modification actions
+- including 0 one modification methods
+- and       8 progressions of effectless actions
+- Generated 39000 nodes per second
+- Final fringe contains 18 nodes
+- Status: Solved
+- Found solution of length 11
+- Total costs of actions: 7
+==>
+61 switch_on[instrument0,satellite0]
+106 turn_to[satellite0,GroundStation2,Phenomenon6]
+111 calibrate[satellite0,instrument0,GroundStation2]
+112 turn_to[satellite0,Phenomenon4,GroundStation2]
+113 take_image[satellite0,Phenomenon4,instrument0,thermograph0]
+114 turn_to[satellite0,Star5,Phenomenon4]
+115 take_image[satellite0,Star5,instrument0,thermograph0]
+root 0
+105 auto_calibrate[satellite0,instrument0] -> method6 106 111
+60 do_observation[Phenomenon4,thermograph0] -> method1 112 113
+7 do_observation[Star5,thermograph0] -> <method0;activate_instrument[satellite0,instrument0];method5;0;-1,-2,1,2> 61 105 114 115
+0 __top[] -> __top_method 60 7
+<==

@@ -33,41 +33,67 @@ Search Configuration
 - Utilizing heuristics.
 - A* Search
 - Distance G is "modification depth"
-   1s visitime    0.00s generated nodes     25080 nodes/sec   23136 cur h   17 mod.depth    5 inserts       929 dups         0 size       929 hash fail      0 hash buckets    929
-   2s visitime    0.01s generated nodes     40117 nodes/sec   17989 cur h   16 mod.depth    5 inserts      1505 dups         0 size      1505 hash fail      0 hash buckets   1505
-   3s visitime    0.01s generated nodes     55146 nodes/sec   16746 cur h   16 mod.depth    5 inserts      2046 dups         0 size      2046 hash fail      1 hash buckets   2045
-   4s visitime    0.02s generated nodes     70208 nodes/sec   16335 cur h   17 mod.depth    6 inserts      2696 dups         0 size      2696 hash fail      1 hash buckets   2695
-   5s visitime    0.02s generated nodes    105346 nodes/sec   19846 cur h   17 mod.depth    6 inserts      4060 dups         0 size      4060 hash fail      1 hash buckets   4059
-   6s visitime    0.03s generated nodes    125405 nodes/sec   19643 cur h   19 mod.depth    4 inserts      4802 dups         0 size      4802 hash fail      1 hash buckets   4801
-   7s visitime    0.04s generated nodes    145483 nodes/sec   19405 cur h   17 mod.depth    6 inserts      5548 dups         0 size      5548 hash fail      1 hash buckets   5547
-   8s visitime    0.04s generated nodes    165539 nodes/sec   19404 cur h   17 mod.depth    6 inserts      6270 dups         0 size      6270 hash fail      1 hash buckets   6269
-   9s visitime    0.05s generated nodes    205709 nodes/sec   21580 cur h   18 mod.depth    6 inserts      7813 dups         0 size      7813 hash fail      3 hash buckets   7810
-  10s visitime    0.06s generated nodes    225802 nodes/sec   21374 cur h   21 mod.depth    3 inserts      8592 dups         0 size      8592 hash fail      3 hash buckets   8589
-  11s visitime    0.07s generated nodes    250895 nodes/sec   21294 cur h   18 mod.depth    6 inserts      9552 dups         0 size      9552 hash fail      5 hash buckets   9547
-  12s visitime    0.07s generated nodes    271033 nodes/sec   21202 cur h   18 mod.depth    6 inserts     10326 dups         0 size     10326 hash fail      5 hash buckets  10321
-  13s visitime    0.08s generated nodes    316159 nodes/sec   22663 cur h   19 mod.depth    5 inserts     12034 dups         0 size     12034 hash fail      7 hash buckets  12027
-  14s visitime    0.09s generated nodes    336204 nodes/sec   22464 cur h   18 mod.depth    6 inserts     12792 dups         0 size     12792 hash fail      8 hash buckets  12784
-  16s visitime    0.09s generated nodes    356317 nodes/sec   22269 cur h   18 mod.depth    6 inserts     13544 dups         0 size     13544 hash fail      9 hash buckets  13535
-  17s visitime    0.10s generated nodes    376367 nodes/sec   22043 cur h   18 mod.depth    7 inserts     14707 dups         0 size     14707 hash fail     10 hash buckets  14697
-  18s visitime    0.12s generated nodes    406405 nodes/sec   22392 cur h   21 mod.depth    4 inserts     17890 dups         0 size     17890 hash fail     13 hash buckets  17877
-  19s visitime    0.13s generated nodes    421463 nodes/sec   21994 cur h   20 mod.depth    5 inserts     19517 dups         0 size     19517 hash fail     14 hash buckets  19503
-  20s visitime    0.15s generated nodes    441493 nodes/sec   21606 cur h   18 mod.depth    7 inserts     21792 dups         1 size     21791 hash fail     18 hash buckets  21774
-Reached time limit - stopping search.
+- Starting state heuristic value: 16
+   1s visitime    0.00s generated nodes     25080 nodes/sec   24733 cur h   17 mod.depth    5 inserts       929 dups         0 size       929 hash fail      0 hash buckets    929
+   2s visitime    0.01s generated nodes     55146 nodes/sec   26135 cur h   16 mod.depth    5 inserts      2046 dups         0 size      2046 hash fail      1 hash buckets   2045
+   3s visitime    0.02s generated nodes     75259 nodes/sec   22438 cur h   17 mod.depth    6 inserts      2904 dups         0 size      2904 hash fail      1 hash buckets   2903
+   4s visitime    0.02s generated nodes     95332 nodes/sec   20919 cur h   17 mod.depth    6 inserts      3674 dups         0 size      3674 hash fail      1 hash buckets   3673
+   5s visitime    0.03s generated nodes    135457 nodes/sec   24111 cur h   18 mod.depth    5 inserts      5183 dups         0 size      5183 hash fail      1 hash buckets   5182
+   6s visitime    0.04s generated nodes    175577 nodes/sec   26410 cur h   18 mod.depth    6 inserts      6645 dups         0 size      6645 hash fail      2 hash buckets   6643
+   7s visitime    0.04s generated nodes    215762 nodes/sec   28075 cur h   18 mod.depth    6 inserts      8210 dups         0 size      8210 hash fail      3 hash buckets   8207
+   8s visitime    0.05s generated nodes    240825 nodes/sec   27202 cur h   20 mod.depth    4 inserts      9190 dups         0 size      9190 hash fail      4 hash buckets   9186
+  10s visitime    0.06s generated nodes    265997 nodes/sec   26401 cur h   18 mod.depth    6 inserts     10124 dups         0 size     10124 hash fail      5 hash buckets  10119
+  11s visitime    0.07s generated nodes    306147 nodes/sec   27628 cur h   19 mod.depth    5 inserts     11660 dups         0 size     11660 hash fail      7 hash buckets  11653
+  12s visitime    0.07s generated nodes    351280 nodes/sec   28890 cur h   17 mod.depth    7 inserts     13363 dups         0 size     13363 hash fail      9 hash buckets  13354
+  13s visitime    0.08s generated nodes    386375 nodes/sec   29228 cur h   20 mod.depth    5 inserts     15690 dups         0 size     15690 hash fail     12 hash buckets  15678
+  14s visitime    0.10s generated nodes    406405 nodes/sec   28087 cur h   21 mod.depth    4 inserts     17890 dups         0 size     17890 hash fail     13 hash buckets  17877
+  15s visitime    0.12s generated nodes    421463 nodes/sec   27178 cur h   20 mod.depth    5 inserts     19517 dups         0 size     19517 hash fail     14 hash buckets  19503
+  16s visitime    0.14s generated nodes    456509 nodes/sec   27455 cur h   19 mod.depth    6 inserts     23617 dups         5 size     23612 hash fail     24 hash buckets  23593
 Search Results
-- Search time 21.03 seconds
-- Visited list time 0.16 seconds
-- Visited list inserts 23025
-- Visited list pruned 4
-- Visited list contains 23021
-- Visited list hash collisions 23
-- Visited list used hash buckets 23002
-- Generated 451495 search nodes
-  Calculated heuristic for 407318 nodes
-  One modifications 43961
-  Effectless actions 216
-- including 43961 one modification actions
+- Search time 17.11 seconds
+- Visited list time 0.15 seconds
+- Visited list inserts 25861
+- Visited list pruned 10
+- Visited list contains 25851
+- Visited list hash collisions 34
+- Visited list used hash buckets 25827
+- Generated 474713 search nodes
+  Calculated heuristic for 426891 nodes
+  One modifications 47344
+  Effectless actions 478
+- including 47344 one modification actions
 - including 0 one modification methods
-- and       216 progressions of effectless actions
-- Generated 19364 nodes per second
-- Final fringe contains 89037 nodes
-- Status: Timeout
+- and       478 progressions of effectless actions
+- Generated 24948 nodes per second
+- Final fringe contains 93353 nodes
+- Status: Solved
+- Found solution of length 25
+- Total costs of actions: 16
+==>
+381374 switch_on[instrument2,satellite1]
+454393 switch_on[instrument3,satellite2]
+474680 turn_to[satellite1,star1,phenomenon5]
+474685 calibrate[satellite1,instrument2,star1]
+474686 turn_to[satellite2,groundstation0,planet6]
+474689 turn_to[satellite1,planet6,star1]
+474690 take_image[satellite1,planet6,instrument2,spectrograph0]
+474701 calibrate[satellite2,instrument3,groundstation0]
+474702 turn_to[satellite1,phenomenon3,planet6]
+474703 take_image[satellite1,phenomenon3,instrument2,image1]
+474704 turn_to[satellite2,phenomenon5,groundstation0]
+474705 take_image[satellite2,phenomenon5,instrument3,image4]
+474706 turn_to[satellite2,planet4,phenomenon5]
+474707 take_image[satellite2,planet4,instrument3,infrared2]
+474708 turn_to[satellite2,planet2,planet4]
+474709 take_image[satellite2,planet2,instrument3,infrared2]
+root 0
+474672 auto_calibrate[satellite2,instrument3] -> method6 474686 474701
+413657 auto_calibrate[satellite1,instrument2] -> method6 474680 474685
+329341 do_observation[phenomenon5,image4] -> <method0;activate_instrument[satellite2,instrument3];method5;0;-1,-2,1,2> 454393 474672 474704 474705
+281652 do_observation[planet2,infrared2] -> <method1;method1_splitted_1[satellite2,planet2,infrared2];_splitting_method_method1_splitted_1;1;0,-1> 474708 474709
+149749 activate_instrument[satellite1,instrument2] -> method5 381374 413657
+5533 do_observation[planet6,spectrograph0] -> method0 149749 474689 474690
+80 do_observation[planet4,infrared2] -> <method1;method1_splitted_1[satellite2,planet4,infrared2];_splitting_method_method1_splitted_1;1;0,-1> 474706 474707
+16 do_observation[phenomenon3,image1] -> <method1;method1_splitted_1[satellite1,phenomenon3,image1];_splitting_method_method1_splitted_1;1;0,-1> 474702 474703
+0 __top[] -> __top_method 281652 16 80 329341 5533
+<==

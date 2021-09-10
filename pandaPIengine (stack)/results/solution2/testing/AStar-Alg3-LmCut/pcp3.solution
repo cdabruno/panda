@@ -29,15 +29,55 @@ Visited List configured
 - hashs to use: state task task-sequence
 - memory information: topological ordering
 - Visited list allows deletion of search nodes: true
+Variable number: 7
+Variable :+turnA[] Domain size: 1
+Variable :+turnB[] Domain size: 1
+Variable :+lt1[] Domain size: 1
+Variable :+lt2[] Domain size: 1
+Variable :+lt3[] Domain size: 1
+Variable :+la[] Domain size: 1
+Variable :+lb[] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+turnA[], +turnB[] Mult size: 1
+Var pair:+turnA[], +lt1[] Mult size: 1
+Var pair:+turnA[], +lt2[] Mult size: 1
+Var pair:+turnA[], +lt3[] Mult size: 1
+Var pair:+turnA[], +la[] Mult size: 1
+Var pair:+turnA[], +lb[] Mult size: 1
+Var pair:+turnB[], +lt1[] Mult size: 1
+Var pair:+turnB[], +lt2[] Mult size: 1
+Var pair:+turnB[], +lt3[] Mult size: 1
+Var pair:+turnB[], +la[] Mult size: 1
+Var pair:+turnB[], +lb[] Mult size: 1
+Var pair:+lt1[], +lt2[] Mult size: 1
+Var pair:+lt1[], +lt3[] Mult size: 1
+Var pair:+lt1[], +la[] Mult size: 1
+Var pair:+lt1[], +lb[] Mult size: 1
+Var pair:+lt2[], +lt3[] Mult size: 1
+Var pair:+lt2[], +la[] Mult size: 1
+Var pair:+lt2[], +lb[] Mult size: 1
+Var pair:+lt3[], +la[] Mult size: 1
+Var pair:+lt3[], +lb[] Mult size: 1
+Var pair:+la[], +lb[] Mult size: 1
+Number of variables: 7
+Num primitive tasks: 10
+Num non-primitive tasks: 3
+Total tasks: 13
+Number of methods: 13
 Search Configuration
 - Using JAIR 2020 progression algorithm
 - Search is stopped after first solution is found.
 - Utilizing heuristics.
 - A* Search
 - Distance G is "modification depth"
+- Starting state heuristic value: 7
 Search Results
-- Search time 0.04 seconds
-- Visited list time 0.001854 seconds
+- Search time 0.02 seconds
+- Depth reached: 10.
+- Depth reached expanding abstract methods: 10
+- Visited list time 0.000992 seconds
 - Visited list inserts 407
 - Visited list pruned 0
 - Visited list contains 407
@@ -50,7 +90,7 @@ Search Results
 - including 2842 one modification actions
 - including 0 one modification methods
 - and       0 progressions of effectless actions
-- Generated 60800 nodes per second
+- Generated 121600 nodes per second
 - Final fringe contains 297 nodes
 - Status: Solved
 - Found solution of length 35

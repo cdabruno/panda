@@ -29,15 +29,72 @@ Visited List configured
 - hashs to use: state task task-sequence
 - memory information: topological ordering
 - Visited list allows deletion of search nodes: true
+Variable number: 9
+Variable :+power_avail[satellite0] Domain size: 1
+Variable :+pointing[satellite0,Phenomenon6] Domain size: 1
+Variable :+power_on[instrument01] Domain size: 1
+Variable :+power_on[instrument02] Domain size: 1
+Variable :+pointing[satellite0,GroundStation0] Domain size: 1
+Variable :+pointing[satellite0,Phenomenon4] Domain size: 1
+Variable :+pointing[satellite0,Star5] Domain size: 1
+Variable :+calibrated[instrument01] Domain size: 1
+Variable :+calibrated[instrument02] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,Phenomenon6] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument01] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument02] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,GroundStation0] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument01] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument02] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +power_on[instrument01] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +power_on[instrument02] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +pointing[satellite0,GroundStation0] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +calibrated[instrument01] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +calibrated[instrument02] Mult size: 1
+Var pair:+power_on[instrument01], +power_on[instrument02] Mult size: 1
+Var pair:+power_on[instrument01], +pointing[satellite0,GroundStation0] Mult size: 1
+Var pair:+power_on[instrument01], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+power_on[instrument01], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+power_on[instrument01], +calibrated[instrument01] Mult size: 1
+Var pair:+power_on[instrument01], +calibrated[instrument02] Mult size: 1
+Var pair:+power_on[instrument02], +pointing[satellite0,GroundStation0] Mult size: 1
+Var pair:+power_on[instrument02], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+power_on[instrument02], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+power_on[instrument02], +calibrated[instrument01] Mult size: 1
+Var pair:+power_on[instrument02], +calibrated[instrument02] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +calibrated[instrument01] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +calibrated[instrument02] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +calibrated[instrument01] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +calibrated[instrument02] Mult size: 1
+Var pair:+pointing[satellite0,Star5], +calibrated[instrument01] Mult size: 1
+Var pair:+pointing[satellite0,Star5], +calibrated[instrument02] Mult size: 1
+Var pair:+calibrated[instrument01], +calibrated[instrument02] Mult size: 1
+Number of variables: 9
+Num primitive tasks: 21
+Num non-primitive tasks: 8
+Total tasks: 29
+Number of methods: 37
 Search Configuration
 - Using JAIR 2020 progression algorithm
 - Search is stopped after first solution is found.
 - Utilizing heuristics.
 - A* Search
 - Distance G is "modification depth"
+- Starting state heuristic value: 14
 Search Results
-- Search time 0.005 seconds
-- Visited list time 0.000858 seconds
+- Search time 0.009 seconds
+- Depth reached: 13.
+- Depth reached expanding abstract methods: 8
+- Visited list time 0.001457 seconds
 - Visited list inserts 340
 - Visited list pruned 2
 - Visited list contains 338
@@ -50,7 +107,7 @@ Search Results
 - including 505 one modification actions
 - including 0 one modification methods
 - and       12 progressions of effectless actions
-- Generated 208800 nodes per second
+- Generated 116000 nodes per second
 - Final fringe contains 176 nodes
 - Status: Solved
 - Found solution of length 21

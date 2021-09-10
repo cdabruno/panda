@@ -678,6 +678,7 @@ void solve_with_sat_planner_linear_bound_increase(Model * htn, bool block_compre
 struct thread_returns{
 	Model * htn;
 	int depth;
+	int abstractDepth;
 	bool block_compression;
 	bool sat_mutexes;
 	sat_pruning pruningMode;

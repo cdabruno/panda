@@ -29,15 +29,93 @@ Visited List configured
 - hashs to use: state task task-sequence
 - memory information: topological ordering
 - Visited list allows deletion of search nodes: true
+Variable number: 11
+Variable :+power_avail[satellite0] Domain size: 1
+Variable :+pointing[satellite0,star0] Domain size: 1
+Variable :+power_on[instrument0] Domain size: 1
+Variable :+power_on[instrument1] Domain size: 1
+Variable :+pointing[satellite0,groundstation1] Domain size: 1
+Variable :+pointing[satellite0,planet2] Domain size: 1
+Variable :+pointing[satellite0,planet3] Domain size: 1
+Variable :+pointing[satellite0,planet5] Domain size: 1
+Variable :+pointing[satellite0,star4] Domain size: 1
+Variable :+calibrated[instrument0] Domain size: 1
+Variable :+calibrated[instrument1] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,star0] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument0] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument1] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,groundstation1] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,planet3] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,planet5] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,star4] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument0] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite0,star0], +power_on[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,star0], +power_on[instrument1] Mult size: 1
+Var pair:+pointing[satellite0,star0], +pointing[satellite0,groundstation1] Mult size: 1
+Var pair:+pointing[satellite0,star0], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+pointing[satellite0,star0], +pointing[satellite0,planet3] Mult size: 1
+Var pair:+pointing[satellite0,star0], +pointing[satellite0,planet5] Mult size: 1
+Var pair:+pointing[satellite0,star0], +pointing[satellite0,star4] Mult size: 1
+Var pair:+pointing[satellite0,star0], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,star0], +calibrated[instrument1] Mult size: 1
+Var pair:+power_on[instrument0], +power_on[instrument1] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite0,groundstation1] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite0,planet3] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite0,planet5] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite0,star4] Mult size: 1
+Var pair:+power_on[instrument0], +calibrated[instrument0] Mult size: 1
+Var pair:+power_on[instrument0], +calibrated[instrument1] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite0,groundstation1] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite0,planet3] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite0,planet5] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite0,star4] Mult size: 1
+Var pair:+power_on[instrument1], +calibrated[instrument0] Mult size: 1
+Var pair:+power_on[instrument1], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite0,groundstation1], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+pointing[satellite0,groundstation1], +pointing[satellite0,planet3] Mult size: 1
+Var pair:+pointing[satellite0,groundstation1], +pointing[satellite0,planet5] Mult size: 1
+Var pair:+pointing[satellite0,groundstation1], +pointing[satellite0,star4] Mult size: 1
+Var pair:+pointing[satellite0,groundstation1], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,groundstation1], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +pointing[satellite0,planet3] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +pointing[satellite0,planet5] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +pointing[satellite0,star4] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite0,planet3], +pointing[satellite0,planet5] Mult size: 1
+Var pair:+pointing[satellite0,planet3], +pointing[satellite0,star4] Mult size: 1
+Var pair:+pointing[satellite0,planet3], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,planet3], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite0,planet5], +pointing[satellite0,star4] Mult size: 1
+Var pair:+pointing[satellite0,planet5], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,planet5], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite0,star4], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,star4], +calibrated[instrument1] Mult size: 1
+Var pair:+calibrated[instrument0], +calibrated[instrument1] Mult size: 1
+Number of variables: 11
+Num primitive tasks: 43
+Num non-primitive tasks: 12
+Total tasks: 55
+Number of methods: 92
 Search Configuration
 - Using JAIR 2020 progression algorithm
 - Search is stopped after first solution is found.
 - Utilizing heuristics.
 - A* Search
 - Distance G is "modification depth"
+- Starting state heuristic value: 18
 Search Results
-- Search time 0.002 seconds
-- Visited list time 0.000111 seconds
+- Search time 0.004 seconds
+- Depth reached: 11.
+- Depth reached expanding abstract methods: 9
+- Visited list time 0.000179 seconds
 - Visited list inserts 36
 - Visited list pruned 0
 - Visited list contains 36
@@ -50,7 +128,7 @@ Search Results
 - including 59 one modification actions
 - including 0 one modification methods
 - and       9 progressions of effectless actions
-- Generated 218500 nodes per second
+- Generated 109250 nodes per second
 - Final fringe contains 137 nodes
 - Status: Solved
 - Found solution of length 19

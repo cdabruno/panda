@@ -1,3 +1,134 @@
 Random seed: 42
 Time limit: 20 seconds
 Reading input from results/grounded/smartphone1.sas.
+- State has 10 bits divided into 10 mutex groups.
+- Domain contains 8 actions.
+- Domain contains 10 tasks.
+- Domain contains 3 methods.
+- The initial state contains 4 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 1 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 10
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 10
+Variable :+inMode_Home[] Domain size: 1
+Variable :-haveSent[email1] Domain size: 1
+Variable :-inMode_EMail_Inbox[] Domain size: 1
+Variable :-inMode_EMail_NewEMail[] Domain size: 1
+Variable :+inMode_EMail[] Domain size: 1
+Variable :+attached[email1,dateForMeeting] Domain size: 1
+Variable :+inMode_EMail_NewEMail[] Domain size: 1
+Variable :+entered_EMail[headOfDepartment] Domain size: 1
+Variable :+hasReceived[headOfDepartment,email1] Domain size: 1
+Variable :+hasInformation_Regular[headOfDepartment,dateForMeeting] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+inMode_Home[], -haveSent[email1] Mult size: 1
+Var pair:+inMode_Home[], -inMode_EMail_Inbox[] Mult size: 1
+Var pair:+inMode_Home[], -inMode_EMail_NewEMail[] Mult size: 1
+Var pair:+inMode_Home[], +inMode_EMail[] Mult size: 1
+Var pair:+inMode_Home[], +attached[email1,dateForMeeting] Mult size: 1
+Var pair:+inMode_Home[], +inMode_EMail_NewEMail[] Mult size: 1
+Var pair:+inMode_Home[], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:+inMode_Home[], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:+inMode_Home[], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:-haveSent[email1], -inMode_EMail_Inbox[] Mult size: 1
+Var pair:-haveSent[email1], -inMode_EMail_NewEMail[] Mult size: 1
+Var pair:-haveSent[email1], +inMode_EMail[] Mult size: 1
+Var pair:-haveSent[email1], +attached[email1,dateForMeeting] Mult size: 1
+Var pair:-haveSent[email1], +inMode_EMail_NewEMail[] Mult size: 1
+Var pair:-haveSent[email1], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:-haveSent[email1], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:-haveSent[email1], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], -inMode_EMail_NewEMail[] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], +inMode_EMail[] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], +attached[email1,dateForMeeting] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], +inMode_EMail_NewEMail[] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:-inMode_EMail_NewEMail[], +inMode_EMail[] Mult size: 1
+Var pair:-inMode_EMail_NewEMail[], +attached[email1,dateForMeeting] Mult size: 1
+Var pair:-inMode_EMail_NewEMail[], +inMode_EMail_NewEMail[] Mult size: 1
+Var pair:-inMode_EMail_NewEMail[], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:-inMode_EMail_NewEMail[], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:-inMode_EMail_NewEMail[], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:+inMode_EMail[], +attached[email1,dateForMeeting] Mult size: 1
+Var pair:+inMode_EMail[], +inMode_EMail_NewEMail[] Mult size: 1
+Var pair:+inMode_EMail[], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:+inMode_EMail[], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:+inMode_EMail[], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:+attached[email1,dateForMeeting], +inMode_EMail_NewEMail[] Mult size: 1
+Var pair:+attached[email1,dateForMeeting], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:+attached[email1,dateForMeeting], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:+attached[email1,dateForMeeting], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:+inMode_EMail_NewEMail[], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:+inMode_EMail_NewEMail[], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:+inMode_EMail_NewEMail[], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:+entered_EMail[headOfDepartment], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:+entered_EMail[headOfDepartment], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:+hasReceived[headOfDepartment,email1], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Number of variables: 10
+Num primitive tasks: 8
+Num non-primitive tasks: 2
+Total tasks: 10
+Number of methods: 3
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 9
+Search Results
+- Search time 0.001 seconds
+- Depth reached: 3.
+- Depth reached expanding abstract methods: 2
+- Visited list time 1.9e-05 seconds
+- Visited list inserts 4
+- Visited list pruned 0
+- Visited list contains 4
+- Visited list hash collisions 0
+- Visited list used hash buckets 4
+- Generated 13 search nodes
+  Calculated heuristic for 6 nodes
+  One modifications 5
+  Effectless actions 2
+- including 5 one modification actions
+- including 0 one modification methods
+- and       2 progressions of effectless actions
+- Generated 6000 nodes per second
+- Final fringe contains 2 nodes
+- Status: Solved
+- Found solution of length 9
+- Total costs of actions: 7
+==>
+3 attachRegularInformationToEMail[email1,dateForMeeting]
+4 press_Home_EMail[]
+5 select_EMail_EMailAccount_NoOp[account1]
+6 press_EMail_NewEMail[account1]
+7 enter_EMailAddress[headOfDepartment,headOfDepartmentEMailAddress]
+8 press_EMail_NewEMail_Send[headOfDepartment,email1]
+9 extractsInformation_Regular[headOfDepartment,email1,dateForMeeting]
+root 0
+1 enterMode_EMail[] -> do_enterMode_EMail_FromHome 4
+0 __top[] -> <<<<__top_method;extractsInformation[headOfDepartment,email1,dateForMeeting];do_extractsInformation_Regular;2;0,1,-1>;send_EMail[headOfDepartment,email1];do_send_EMail_ViaEMail;1;0,-1,-2,-3,-4,-5,2>;select_EMail_EMailAccount[account1];do_select_EMail_EMailAccount_NoOp;2;0,1,-1,3,4,5,6>;attachInformationToEMail[email1,dateForMeeting];do_attachInformationToEMail_Regular;0;-1,1,2,3,4,5,6> 3 1 5 6 7 8 9
+<==

@@ -24,3 +24,85 @@ Search config:
  - type: path cost
  - weight: 1
  - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 6
+Variable :+turnA[] Domain size: 1
+Variable :+turnB[] Domain size: 1
+Variable :+lt1[] Domain size: 1
+Variable :+lt2[] Domain size: 1
+Variable :+l0[] Domain size: 1
+Variable :+l1[] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+turnA[], +turnB[] Mult size: 1
+Var pair:+turnA[], +lt1[] Mult size: 1
+Var pair:+turnA[], +lt2[] Mult size: 1
+Var pair:+turnA[], +l0[] Mult size: 1
+Var pair:+turnA[], +l1[] Mult size: 1
+Var pair:+turnB[], +lt1[] Mult size: 1
+Var pair:+turnB[], +lt2[] Mult size: 1
+Var pair:+turnB[], +l0[] Mult size: 1
+Var pair:+turnB[], +l1[] Mult size: 1
+Var pair:+lt1[], +lt2[] Mult size: 1
+Var pair:+lt1[], +l0[] Mult size: 1
+Var pair:+lt1[], +l1[] Mult size: 1
+Var pair:+lt2[], +l0[] Mult size: 1
+Var pair:+lt2[], +l1[] Mult size: 1
+Var pair:+l0[], +l1[] Mult size: 1
+Number of variables: 6
+Num primitive tasks: 8
+Num non-primitive tasks: 3
+Total tasks: 11
+Number of methods: 9
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 8
+Search Results
+- Search time 0.001 seconds
+- Depth reached: 5.
+- Depth reached expanding abstract methods: 5
+- Visited list time 7e-05 seconds
+- Visited list inserts 19
+- Visited list pruned 0
+- Visited list contains 19
+- Visited list hash collisions 0
+- Visited list used hash buckets 19
+- Generated 155 search nodes
+  Calculated heuristic for 70 nodes
+  One modifications 85
+  Effectless actions 0
+- including 85 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 70000 nodes per second
+- Final fringe contains 10 nodes
+- Status: Solved
+- Found solution of length 15
+- Total costs of actions: 10
+==>
+32 t1G1[]
+59 t1G2[]
+83 t2G1[]
+84 t2G2[]
+85 p1G1[]
+86 p1G2[]
+87 p0G1[]
+88 p0G2[]
+89 p1G1[]
+90 p1G2[]
+root 0
+82 SG2[] -> G2_S2t2_1_0 84 86 88
+58 SG1[] -> G1_S2t2_1 83 85
+31 SG1[] -> G1_S2t1_S_0_1 32 58 87 89
+3 SG2[] -> G2_S2t1_S_1 59 82 90
+0 __top[] -> __top_method 31 3
+<==
