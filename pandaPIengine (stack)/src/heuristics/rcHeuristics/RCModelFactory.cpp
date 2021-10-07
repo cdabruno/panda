@@ -27,6 +27,13 @@ Model* RCModelFactory::getRCmodelSTRIPS(int costsMethodActions) {
 	rc->numStateBits = htn->numStateBits + htn->numActions + htn->numTasks;
 	rc->numVars = htn->numVars + htn->numActions + htn->numTasks; // first part might be SAS+
 
+	/*
+	for(int i = 0; i < htn->numActions; i++){
+		[htn->numStateBits+i]
+	}
+	return htn->numStateBits + task;
+	*/
+
 	rc->numActions = htn->numActions + htn->numMethods;
 	rc->numTasks = rc->numActions;
 

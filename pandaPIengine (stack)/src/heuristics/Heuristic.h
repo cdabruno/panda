@@ -16,7 +16,7 @@ public:
     
 	// returns textual description of the heuristic for output 
 	virtual string getDescription() = 0;
-
+    //virtual Model* getHeuristicModel() = 0;
     virtual void setHeuristicValue(searchNode *n, searchNode *parent, int action) = 0;
     virtual void setHeuristicValue(searchNode *n, searchNode *parent, int absTask, int method) = 0;
 };

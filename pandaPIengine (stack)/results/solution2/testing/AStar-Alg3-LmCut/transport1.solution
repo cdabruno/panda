@@ -112,42 +112,42 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 12
 Search Results
-- Search time 0.001 seconds
-- Depth reached: 9.
-- Depth reached expanding abstract methods: 7
-- Visited list time 4.7e-05 seconds
-- Visited list inserts 21
-- Visited list pruned 1
-- Visited list contains 20
-- Visited list hash collisions 1
-- Visited list used hash buckets 20
-- Generated 86 search nodes
-  Calculated heuristic for 58 nodes
-  One modifications 26
-  Effectless actions 2
-- including 26 one modification actions
+- Search time 0.549 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 0.20104 seconds
+- Visited list inserts 63527
+- Visited list pruned 30853
+- Visited list contains 32674
+- Visited list hash collisions 30877
+- Visited list used hash buckets 32650
+- Generated 232379 search nodes
+  Calculated heuristic for 156580 nodes
+  One modifications 57000
+  Effectless actions 18799
+- including 57000 one modification actions
 - including 0 one modification methods
-- and       2 progressions of effectless actions
-- Generated 58000 nodes per second
-- Final fringe contains 17 nodes
+- and       18799 progressions of effectless actions
+- Generated 285209 nodes per second
+- Final fringe contains 63914 nodes
 - Status: Solved
 - Found solution of length 15
 - Total costs of actions: 8
 ==>
-20 drive[truck-0,city-loc-2,city-loc-1]
-21 pick-up[truck-0,city-loc-1,package-0,capacity-0,capacity-1]
-73 drive[truck-0,city-loc-1,city-loc-0]
-77 drop[truck-0,city-loc-0,package-0,capacity-0,capacity-1]
-78 drive[truck-0,city-loc-0,city-loc-1]
-79 pick-up[truck-0,city-loc-1,package-1,capacity-0,capacity-1]
-81 drive[truck-0,city-loc-1,city-loc-2]
-82 drop[truck-0,city-loc-2,package-1,capacity-0,capacity-1]
+85 drive[truck-0,city-loc-2,city-loc-1]
+313 pick-up[truck-0,city-loc-1,package-0,capacity-0,capacity-1]
+1721 drive[truck-0,city-loc-1,city-loc-0]
+5109 drop[truck-0,city-loc-0,package-0,capacity-0,capacity-1]
+10208 drive[truck-0,city-loc-0,city-loc-1]
+10209 pick-up[truck-0,city-loc-1,package-1,capacity-0,capacity-1]
+79361 drive[truck-0,city-loc-1,city-loc-2]
+79362 drop[truck-0,city-loc-2,package-1,capacity-0,capacity-1]
 root 0
-80 get-to[truck-0,city-loc-2] -> m-drive-to 81
-72 get-to[truck-0,city-loc-0] -> m-drive-to 73
-19 get-to[truck-0,city-loc-1] -> m-drive-to 20
-6 get-to[truck-0,city-loc-1] -> m-drive-to 78
-3 m-deliver_splitted_1[truck-0,package-0] -> <_splitting_method_m-deliver_splitted_1;load[truck-0,city-loc-1,package-0];m-load;1;0,-1> 19 21
-1 m-deliver_splitted_1[truck-0,package-1] -> <_splitting_method_m-deliver_splitted_1;load[truck-0,city-loc-1,package-1];m-load;1;0,-1> 6 79
-0 __top[] -> <<<<__top_method;deliver[package-1,city-loc-2];m-deliver;1;0,-1,-2,-3>;unload[truck-0,city-loc-2,package-1];m-unload;3;0,1,2,-1>;deliver[package-0,city-loc-0];m-deliver;0;-1,-2,-3,1,2,3>;unload[truck-0,city-loc-0,package-0];m-unload;2;0,1,-1,3,4,5> 3 72 77 1 80 82
+79360 get-to[truck-0,city-loc-2] -> m-drive-to 79361
+10207 get-to[truck-0,city-loc-1] -> m-drive-to 10208
+9910 m-deliver_splitted_1[truck-0,package-1] -> <_splitting_method_m-deliver_splitted_1;load[truck-0,city-loc-1,package-1];m-load;1;0,-1> 10207 10209
+652 get-to[truck-0,city-loc-0] -> m-drive-to 1721
+25 get-to[truck-0,city-loc-1] -> m-drive-to 85
+1 m-deliver_splitted_1[truck-0,package-0] -> <_splitting_method_m-deliver_splitted_1;load[truck-0,city-loc-1,package-0];m-load;1;0,-1> 25 313
+0 __top[] -> <<<<__top_method;deliver[package-1,city-loc-2];m-deliver;1;0,-1,-2,-3>;unload[truck-0,city-loc-2,package-1];m-unload;3;0,1,2,-1>;deliver[package-0,city-loc-0];m-deliver;0;-1,-2,-3,1,2,3>;unload[truck-0,city-loc-0,package-0];m-unload;2;0,1,-1,3,4,5> 1 652 5109 9910 79360 79362
 <==

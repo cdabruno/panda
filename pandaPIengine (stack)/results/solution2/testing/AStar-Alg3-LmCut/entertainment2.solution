@@ -99,10 +99,10 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 7
 Search Results
-- Search time 0.001 seconds
-- Depth reached: 8.
-- Depth reached expanding abstract methods: 8
-- Visited list time 5.3e-05 seconds
+- Search time 0 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 3.6e-05 seconds
 - Visited list inserts 19
 - Visited list pruned 4
 - Visited list contains 15
@@ -115,22 +115,22 @@ Search Results
 - including 9 one modification actions
 - including 0 one modification methods
 - and       2 progressions of effectless actions
-- Generated 29000 nodes per second
+- Generated -2147483648 nodes per second
 - Final fringe contains 1 nodes
 - Status: Solved
 - Found solution of length 11
 - Total costs of actions: 3
 ==>
-6 plug|instance_1[dvd-1,dvd-1-scart-1,scart-to-cinch-cable-1,scart-to-cinch-cable-1-scart-1]
-23 plug|instance_2[scart-to-cinch-cable-1,scart-to-cinch-cable-1-cinch-3,simple-tv-1,simple-tv-1-cinch-1]
+12 plug|instance_1[dvd-1,dvd-1-scart-1,scart-to-cinch-cable-1,scart-to-cinch-cable-1-scart-1]
+27 plug|instance_2[scart-to-cinch-cable-1,scart-to-cinch-cable-1-cinch-3,simple-tv-1,simple-tv-1-cinch-1]
 36 plug|instance_4[scart-to-cinch-cable-1,scart-to-cinch-cable-1-cinch-2,simple-tv-1,simple-tv-1-cinch-2]
 root 0
 35 plug[scart-to-cinch-cable-1,scart-to-cinch-cable-1-cinch-2,simple-tv-1,simple-tv-1-cinch-2] -> _method_for_multiple_expansions_of_plug|instance_4 36
-27 direct_a_connect[scart-to-cinch-cable-1,simple-tv-1] -> m-dconnect-a 35
-22 plug[scart-to-cinch-cable-1,scart-to-cinch-cable-1-cinch-3,simple-tv-1,simple-tv-1-cinch-1] -> _method_for_multiple_expansions_of_plug|instance_2 23
-16 direct_v_connect[scart-to-cinch-cable-1,simple-tv-1] -> m-dconnect-v 22
-8 av_connect[scart-to-cinch-cable-1,simple-tv-1] -> <<m-connect-split-1;a_connect[scart-to-cinch-cable-1,simple-tv-1];m-connect-direct-a;1;0,-1>;v_connect[scart-to-cinch-cable-1,simple-tv-1];m-connect-direct-v;0;-1,1> 16 27
-5 direct_av_connect[dvd-1,scart-to-cinch-cable-1] -> <m-dconnect-av;plug[dvd-1,dvd-1-scart-1,scart-to-cinch-cable-1,scart-to-cinch-cable-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 6
-1 av_connect[dvd-1,simple-tv-1] -> m-connect-rec-av-1 5 8
+34 direct_a_connect[scart-to-cinch-cable-1,simple-tv-1] -> m-dconnect-a 35
+26 plug[scart-to-cinch-cable-1,scart-to-cinch-cable-1-cinch-3,simple-tv-1,simple-tv-1-cinch-1] -> _method_for_multiple_expansions_of_plug|instance_2 27
+25 direct_v_connect[scart-to-cinch-cable-1,simple-tv-1] -> m-dconnect-v 26
+19 av_connect[scart-to-cinch-cable-1,simple-tv-1] -> <<m-connect-split-1;a_connect[scart-to-cinch-cable-1,simple-tv-1];m-connect-direct-a;1;0,-1>;v_connect[scart-to-cinch-cable-1,simple-tv-1];m-connect-direct-v;0;-1,1> 25 34
+11 direct_av_connect[dvd-1,scart-to-cinch-cable-1] -> <m-dconnect-av;plug[dvd-1,dvd-1-scart-1,scart-to-cinch-cable-1,scart-to-cinch-cable-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 12
+1 av_connect[dvd-1,simple-tv-1] -> m-connect-rec-av-1 11 19
 0 __top[] -> __top_method 1
 <==

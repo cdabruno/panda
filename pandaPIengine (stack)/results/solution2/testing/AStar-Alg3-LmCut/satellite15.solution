@@ -394,52 +394,66 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 14
+   1s visitime    0.37s generated nodes    350444 nodes/sec  348353 cur h    1 mod.depth    7 inserts    107032 dups     62385 size     44647 hash fail  62474 hash buckets  44558
+   2s visitime    0.77s generated nodes    630712 nodes/sec  313943 cur h    1 mod.depth    8 inserts    212266 dups    128197 size     84069 hash fail 128493 hash buckets  83773
+   3s visitime    1.23s generated nodes    815842 nodes/sec  270325 cur h    1 mod.depth    9 inserts    323040 dups    210879 size    112161 hash fail 211390 hash buckets 111650
+   4s visitime    1.63s generated nodes   1061057 nodes/sec  260830 cur h    1 mod.depth    9 inserts    411278 dups    262099 size    149179 hash fail 262949 hash buckets 148329
+   5s visitime    2.03s generated nodes   1306274 nodes/sec  257292 cur h    1 mod.depth   10 inserts    499023 dups    313972 size    185051 hash fail 315262 hash buckets 183761
+   6s visitime    2.51s generated nodes   1481425 nodes/sec  242538 cur h    1 mod.depth   10 inserts    608012 dups    398952 size    209060 hash fail 400576 hash buckets 207436
+   7s visitime    2.90s generated nodes   1741607 nodes/sec  244745 cur h    1 mod.depth   11 inserts    690937 dups    441572 size    249365 hash fail 443854 hash buckets 247083
+   8s visitime    3.40s generated nodes   1916721 nodes/sec  233832 cur h    1 mod.depth   11 inserts    801819 dups    526318 size    275501 hash fail 529094 hash buckets 272725
+   9s visitime    3.82s generated nodes   2116834 nodes/sec  229940 cur h    1 mod.depth   12 inserts    887199 dups    577705 size    309494 hash fail 581121 hash buckets 306078
+  10s visitime    4.32s generated nodes   2251928 nodes/sec  220065 cur h    1 mod.depth   12 inserts    991021 dups    660063 size    330958 hash fail 663950 hash buckets 327071
+  11s visitime    4.74s generated nodes   2537144 nodes/sec  225624 cur h    1 mod.depth   13 inserts   1082409 dups    707845 size    374564 hash fail 712722 hash buckets 369687
+  12s visitime    5.24s generated nodes   2662289 nodes/sec  217382 cur h    1 mod.depth   14 inserts   1186183 dups    793234 size    392949 hash fail 798592 hash buckets 387591
+  13s visitime    5.73s generated nodes   2877472 nodes/sec  216253 cur h    1 mod.depth   14 inserts   1292273 dups    866829 size    425444 hash fail 873108 hash buckets 419165
+  14s visitime    6.21s generated nodes   3092675 nodes/sec  216044 cur h    1 mod.depth   16 inserts   1402010 dups    942145 size    459865 hash fail 949381 hash buckets 452629
 Search Results
-- Search time 0.142 seconds
-- Depth reached: 20.
-- Depth reached expanding abstract methods: 9
-- Visited list time 0.00609 seconds
-- Visited list inserts 2213
-- Visited list pruned 216
-- Visited list contains 1997
-- Visited list hash collisions 216
-- Visited list used hash buckets 1997
-- Generated 8469 search nodes
-  Calculated heuristic for 6491 nodes
-  One modifications 1744
-  Effectless actions 234
-- including 1744 one modification actions
+- Search time 15.04 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 6.56 seconds
+- Visited list inserts 1482388
+- Visited list pruned 996848
+- Visited list contains 485540
+- Visited list hash collisions 1004840
+- Visited list used hash buckets 477548
+- Generated 3252993 search nodes
+  Calculated heuristic for 2230567 nodes
+  One modifications 897732
+  Effectless actions 124694
+- including 897732 one modification actions
 - including 0 one modification methods
-- and       234 progressions of effectless actions
-- Generated 45711 nodes per second
-- Final fringe contains 709 nodes
+- and       124694 progressions of effectless actions
+- Generated 148338 nodes per second
+- Final fringe contains 90 nodes
 - Status: Solved
 - Found solution of length 24
 - Total costs of actions: 15
 ==>
-8254 switch_on[instrument2,satellite2]
-8261 switch_on[instrument03,satellite0]
-8272 turn_to[satellite2,GroundStation1,Phenomenon8]
-8374 switch_on[instrument12,satellite1]
-8383 turn_to[satellite1,GroundStation1,Phenomenon7]
-8386 calibrate[satellite1,instrument12,GroundStation1]
-8417 calibrate[satellite2,instrument2,GroundStation1]
-8420 turn_to[satellite0,GroundStation0,Phenomenon6]
-8447 calibrate[satellite0,instrument03,GroundStation0]
-8456 turn_to[satellite2,Phenomenon4,GroundStation1]
-8457 take_image[satellite2,Phenomenon4,instrument2,thermograph]
-8460 turn_to[satellite1,Star5,GroundStation1]
-8461 take_image[satellite1,Star5,instrument12,x_ray]
-8462 turn_to[satellite0,Phenomenon6,GroundStation0]
-8463 take_image[satellite0,Phenomenon6,instrument03,hd_video]
+732 switch_on[instrument2,satellite2]
+410486 switch_on[instrument12,satellite1]
+782634 turn_to[satellite2,GroundStation1,Phenomenon8]
+1780619 switch_on[instrument03,satellite0]
+2521408 turn_to[satellite1,GroundStation1,Phenomenon7]
+2825777 calibrate[satellite1,instrument12,GroundStation1]
+2975643 turn_to[satellite0,GroundStation0,Phenomenon6]
+3096708 turn_to[satellite1,Star5,GroundStation1]
+3096709 take_image[satellite1,Star5,instrument12,x_ray]
+3236661 calibrate[satellite2,instrument2,GroundStation1]
+3239055 calibrate[satellite0,instrument03,GroundStation0]
+3249749 turn_to[satellite2,Phenomenon4,GroundStation1]
+3249750 take_image[satellite2,Phenomenon4,instrument2,thermograph]
+3249751 turn_to[satellite0,Phenomenon6,GroundStation0]
+3249752 take_image[satellite0,Phenomenon6,instrument03,hd_video]
 root 0
-8379 auto_calibrate[satellite1,instrument12] -> method6 8383 8386
-8268 auto_calibrate[satellite0,instrument03] -> method6 8420 8447
-8257 auto_calibrate[satellite2,instrument2] -> method6 8272 8417
-8060 activate_instrument[satellite0,instrument03] -> method5 8261 8268
-5517 activate_instrument[satellite1,instrument12] -> method5 8374 8379
-598 do_observation[Phenomenon6,hd_video] -> method0 8060 8462 8463
-82 do_observation[Star5,x_ray] -> method0 5517 8460 8461
-16 do_observation[Phenomenon4,thermograph] -> <method0;activate_instrument[satellite2,instrument2];method5;0;-1,-2,1,2> 8254 8257 8456 8457
-0 __top[] -> __top_method 16 82 598
+2107888 auto_calibrate[satellite0,instrument03] -> method6 2975643 3239055
+1133142 activate_instrument[satellite0,instrument03] -> method5 1780619 2107888
+767166 auto_calibrate[satellite1,instrument12] -> method6 2521408 2825777
+208352 activate_instrument[satellite1,instrument12] -> method5 410486 767166
+107918 do_observation[Star5,x_ray] -> method0 208352 3096708 3096709
+56643 do_observation[Phenomenon6,hd_video] -> method0 1133142 3249751 3249752
+9467 auto_calibrate[satellite2,instrument2] -> method6 782634 3236661
+16 do_observation[Phenomenon4,thermograph] -> <method0;activate_instrument[satellite2,instrument2];method5;0;-1,-2,1,2> 732 9467 3249749 3249750
+0 __top[] -> __top_method 16 107918 56643
 <==

@@ -109,55 +109,58 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 14
+   1s visitime    0.40s generated nodes    310214 nodes/sec  305930 cur h    1 mod.depth   10 inserts    114475 dups     70115 size     44360 hash fail  70168 hash buckets  44307
+   2s visitime    0.87s generated nodes    570398 nodes/sec  277430 cur h    1 mod.depth   12 inserts    237154 dups    155415 size     81739 hash fail 155592 hash buckets  81562
+   3s visitime    1.33s generated nodes    810607 nodes/sec  264817 cur h    1 mod.depth   16 inserts    351198 dups    233572 size    117626 hash fail 233952 hash buckets 117246
 Search Results
-- Search time 0.275 seconds
-- Depth reached: 16.
-- Depth reached expanding abstract methods: 10
-- Visited list time 0.01302 seconds
-- Visited list inserts 2475
-- Visited list pruned 24
-- Visited list contains 2451
-- Visited list hash collisions 24
-- Visited list used hash buckets 2451
-- Generated 10521 search nodes
-  Calculated heuristic for 6747 nodes
-  One modifications 3640
-  Effectless actions 134
-- including 3640 one modification actions
+- Search time 3.27 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 1.43 seconds
+- Visited list inserts 378134
+- Visited list pruned 251218
+- Visited list contains 126916
+- Visited list hash collisions 251663
+- Visited list used hash buckets 126471
+- Generated 870224 search nodes
+  Calculated heuristic for 596333 nodes
+  One modifications 249124
+  Effectless actions 24767
+- including 249124 one modification actions
 - including 0 one modification methods
-- and       134 progressions of effectless actions
-- Generated 24534 nodes per second
-- Final fringe contains 11 nodes
+- and       24767 progressions of effectless actions
+- Generated 182197 nodes per second
+- Final fringe contains 5 nodes
 - Status: Solved
 - Found solution of length 27
 - Total costs of actions: 17
 ==>
-5149 switch_on[instrument03,satellite0]
-9038 turn_to[satellite0,GroundStation0,Phenomenon6]
-9041 calibrate[satellite0,instrument03,GroundStation0]
-9043 turn_to[satellite0,Phenomenon6,GroundStation0]
-9044 take_image[satellite0,Phenomenon6,instrument03,hd_video]
-9045 switch_off[instrument03,satellite0]
-9046 switch_on[instrument02,satellite0]
-10189 turn_to[satellite0,GroundStation0,Phenomenon6]
-10192 calibrate[satellite0,instrument02,GroundStation0]
-10194 turn_to[satellite0,Star5,GroundStation0]
-10195 take_image[satellite0,Star5,instrument02,x_ray]
-10196 switch_off[instrument02,satellite0]
-10197 switch_on[instrument01,satellite0]
-10505 turn_to[satellite0,GroundStation0,Star5]
-10506 calibrate[satellite0,instrument01,GroundStation0]
-10507 turn_to[satellite0,Phenomenon4,GroundStation0]
-10508 take_image[satellite0,Phenomenon4,instrument01,thermograph]
+8171 switch_on[instrument03,satellite0]
+48427 turn_to[satellite0,GroundStation0,Phenomenon6]
+169862 calibrate[satellite0,instrument03,GroundStation0]
+186306 turn_to[satellite0,Phenomenon6,GroundStation0]
+186307 take_image[satellite0,Phenomenon6,instrument03,hd_video]
+478817 switch_off[instrument03,satellite0]
+524716 switch_on[instrument01,satellite0]
+743661 turn_to[satellite0,GroundStation0,Phenomenon6]
+827378 calibrate[satellite0,instrument01,GroundStation0]
+861846 turn_to[satellite0,Phenomenon4,GroundStation0]
+861847 take_image[satellite0,Phenomenon4,instrument01,thermograph]
+861848 switch_off[instrument01,satellite0]
+861849 switch_on[instrument02,satellite0]
+869945 turn_to[satellite0,GroundStation0,Phenomenon4]
+869946 calibrate[satellite0,instrument02,GroundStation0]
+869947 turn_to[satellite0,Star5,GroundStation0]
+869948 take_image[satellite0,Star5,instrument02,x_ray]
 root 0
-10504 auto_calibrate[satellite0,instrument01] -> method6 10505 10506
-10184 auto_calibrate[satellite0,instrument02] -> method6 10189 10192
-5156 auto_calibrate[satellite0,instrument03] -> method6 9038 9041
-5148 activate_instrument[satellite0,instrument03] -> method5 5149 5156
-2653 activate_instrument[satellite0,instrument01] -> method4 10196 10197 10504
-578 activate_instrument[satellite0,instrument02] -> method4 9045 9046 10184
-69 do_observation[Phenomenon6,hd_video] -> method0 5148 9043 9044
-22 do_observation[Star5,x_ray] -> method0 578 10194 10195
-5 do_observation[Phenomenon4,thermograph] -> method0 2653 10507 10508
-0 __top[] -> __top_method 5 22 69
+869944 auto_calibrate[satellite0,instrument02] -> method6 869945 869946
+846731 activate_instrument[satellite0,instrument02] -> method4 861848 861849 869944
+770447 do_observation[Star5,x_ray] -> method0 846731 869947 869948
+640660 auto_calibrate[satellite0,instrument01] -> method6 743661 827378
+89050 activate_instrument[satellite0,instrument01] -> method4 478817 524716 640660
+13496 auto_calibrate[satellite0,instrument03] -> method6 48427 169862
+2185 activate_instrument[satellite0,instrument03] -> method5 8171 13496
+311 do_observation[Phenomenon4,thermograph] -> method0 89050 861846 861847
+23 do_observation[Phenomenon6,hd_video] -> method0 2185 186306 186307
+0 __top[] -> __top_method 311 770447 23
 <==

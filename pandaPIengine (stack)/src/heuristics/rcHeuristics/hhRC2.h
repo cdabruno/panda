@@ -32,23 +32,28 @@ private:
     IntUtil iu;
     const eEstimate estimate = estDISTANCE;
     const bool correctTaskCount = true;
+    Model *heuristicModel;
+    
 
 public:
     ClassicalHeuristic *sasH;
     list<LMCutLandmark *>* cuts = new list<LMCutLandmark *>();
+    
 	
     hhRC2(Model *htnModel, int index, eEstimate estimate, bool correctTaskCount) : Heuristic(htnModel, index),
                                                                                    estimate(estimate),
                                                                                    correctTaskCount(correctTaskCount) {
 
-        Model *heuristicModel;
+        
         factory = new RCModelFactory(htnModel);
         if (estimate == estCOSTS) {
-            heuristicModel = factory->getRCmodelSTRIPS(0); // costs of methods need to be zero
+            this->heuristicModel = factory->getRCmodelSTRIPS(0); // costs of methods need to be zero
         } else {
-            heuristicModel = factory->getRCmodelSTRIPS(1); // estimate distance -> method costs 1
+            this->heuristicModel = factory->getRCmodelSTRIPS(1); // estimate distance -> method costs 1
             // fixme: this configuration is wired when actions have actual costs
         }
+
+        
 
         this->sasH = new ClassicalHeuristic(heuristicModel);
         this->s0set.init(heuristicModel->numStateBits);
@@ -71,6 +76,8 @@ public:
     virtual ~hhRC2() {
         delete factory;
     }
+
+    
 	
 	string getDescription(){
 		return "hhRC2("	+ sasH->getDescription() + ";" + (estimate == estDISTANCE?"distance":"cost") + ";" + (correctTaskCount?"correct count":"") + ")";
@@ -89,9 +96,8 @@ public:
             n->goalReachable = (n->heuristicValue[index] != UNREACHABLE);
         }
     }
-
-
-    int setHeuristicValue(searchNode *n) {
+/*
+    int setHeuristicValue(searchNode *n, int flagNewHeuristic) {
         int hval = 0;
 
         // get facts holding in s0
@@ -101,6 +107,79 @@ public:
                 s0set.insert(i);
             }
         }
+
+        // add reachability facts and HTN-related goal
+        for (int i = 0; i < n->numAbstract; i++) {
+            // add reachability facts
+            for (int j = 0; j < n->unconstraintAbstract[i]->numReachableT; j++) {
+                int t = n->unconstraintAbstract[i]->reachableT[j];
+                if (t < htn->numActions)
+                    s0set.insert(factory->t2tdr(t));
+            }
+        }
+        for (int i = 0; i < n->numPrimitive; i++) {
+            // add reachability facts
+            for (int j = 0; j < n->unconstraintPrimitive[i]->numReachableT; j++) {
+                int t = n->unconstraintPrimitive[i]->reachableT[j];
+                if (t < htn->numActions)
+                    s0set.insert(factory->t2tdr(t));
+            }
+        }
+
+        // generate goal
+        gset.clear();
+        for (int i = 0; i < htn->gSize; i++) {
+            gset.insert(htn->gList[i]);
+        }
+
+        for (int i = 0; i < n->numContainedTasks; i++) {
+            int t = n->containedTasks[i];
+            gset.insert(factory->t2bur(t));
+        }
+
+        searchNode* initialState = new searchNode();
+        for (int i = 0; i < s0set.getSize(); i++) {
+			tnI->state.push_back(false);
+		}
+		for (int i = 0; i < s0set.getSize(); i++) {
+			tnI->state[s0set.get(i)] = true;
+		}
+
+        //loop
+        while(heuristicModel->isGoal)
+        
+
+        heuristicModel->numActions
+
+        
+
+
+
+        hval = this->sasH->getHeuristicValue(s0set, gset);
+
+        
+
+        
+
+        
+        return hval;
+    }*/
+
+
+    int setHeuristicValue(searchNode *n) {
+        int hval = 0;
+
+        //heuristicModel->writeToPDDL("classic_domain", "classic_problem");
+
+        // get facts holding in s0
+        s0set.clear();
+        for (int i = 0; i < htn->numStateBits; i++) {
+            if (n->state[i]) {
+                s0set.insert(i);
+            }
+        }
+
+        //heuristicModel->writeToPDDL("classic_domain", "classic_problem");
 
         // add reachability facts and HTN-related goal
         for (int i = 0; i < n->numAbstract; i++) {

@@ -164,43 +164,43 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 10
 Search Results
-- Search time 0.007 seconds
-- Depth reached: 12.
-- Depth reached expanding abstract methods: 6
-- Visited list time 0.000341 seconds
-- Visited list inserts 76
-- Visited list pruned 3
-- Visited list contains 73
-- Visited list hash collisions 3
-- Visited list used hash buckets 73
-- Generated 342 search nodes
-  Calculated heuristic for 225 nodes
-  One modifications 99
-  Effectless actions 18
-- including 99 one modification actions
+- Search time 0.016 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 0.005952 seconds
+- Visited list inserts 3449
+- Visited list pruned 1727
+- Visited list contains 1722
+- Visited list hash collisions 1727
+- Visited list used hash buckets 1722
+- Generated 10721 search nodes
+  Calculated heuristic for 6802 nodes
+  One modifications 3486
+  Effectless actions 433
+- including 3486 one modification actions
 - including 0 one modification methods
-- and       18 progressions of effectless actions
-- Generated 32142 nodes per second
-- Final fringe contains 31 nodes
+- and       433 progressions of effectless actions
+- Generated 425125 nodes per second
+- Final fringe contains 9 nodes
 - Status: Solved
 - Found solution of length 16
 - Total costs of actions: 10
 ==>
-86 switch_on[instrument02,satellite0]
-301 switch_on[instrument1,satellite1]
-314 turn_to[satellite0,GroundStation0,Phenomenon6]
-331 turn_to[satellite1,GroundStation1,Phenomenon7]
-333 calibrate[satellite0,instrument02,GroundStation0]
-336 turn_to[satellite0,Star5,GroundStation0]
-337 take_image[satellite0,Star5,instrument02,x_ray]
-338 calibrate[satellite1,instrument1,GroundStation1]
-339 turn_to[satellite1,Phenomenon4,GroundStation1]
-340 take_image[satellite1,Phenomenon4,instrument1,thermograph]
+23 switch_on[instrument1,satellite1]
+1993 turn_to[satellite1,GroundStation1,Phenomenon7]
+4875 switch_on[instrument02,satellite0]
+6190 calibrate[satellite1,instrument1,GroundStation1]
+9663 turn_to[satellite0,GroundStation0,Phenomenon6]
+10182 turn_to[satellite1,Phenomenon4,GroundStation1]
+10183 take_image[satellite1,Phenomenon4,instrument1,thermograph]
+10184 calibrate[satellite0,instrument02,GroundStation0]
+10185 turn_to[satellite0,Star5,GroundStation0]
+10186 take_image[satellite0,Star5,instrument02,x_ray]
 root 0
-303 auto_calibrate[satellite1,instrument1] -> method6 331 338
-96 auto_calibrate[satellite0,instrument02] -> method6 314 333
-84 activate_instrument[satellite0,instrument02] -> method5 86 96
-30 do_observation[Phenomenon4,thermograph] -> <method0;activate_instrument[satellite1,instrument1];method5;0;-1,-2,1,2> 301 303 339 340
-7 do_observation[Star5,x_ray] -> method0 84 336 337
-0 __top[] -> __top_method 30 7
+8931 auto_calibrate[satellite0,instrument02] -> method6 9663 10184
+4203 activate_instrument[satellite0,instrument02] -> method5 4875 8931
+1138 auto_calibrate[satellite1,instrument1] -> method6 1993 6190
+738 do_observation[Star5,x_ray] -> method0 4203 10185 10186
+8 do_observation[Phenomenon4,thermograph] -> <method0;activate_instrument[satellite1,instrument1];method5;0;-1,-2,1,2> 23 1138 10182 10183
+0 __top[] -> __top_method 8 738
 <==

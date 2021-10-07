@@ -164,47 +164,47 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 14
 Search Results
-- Search time 0.002 seconds
-- Depth reached: 11.
-- Depth reached expanding abstract methods: 2
-- Visited list time 9.2e-05 seconds
-- Visited list inserts 23
-- Visited list pruned 0
-- Visited list contains 23
-- Visited list hash collisions 0
-- Visited list used hash buckets 23
-- Generated 79 search nodes
-  Calculated heuristic for 44 nodes
-  One modifications 35
+- Search time 0.001 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 0.000243 seconds
+- Visited list inserts 87
+- Visited list pruned 32
+- Visited list contains 55
+- Visited list hash collisions 32
+- Visited list used hash buckets 55
+- Generated 230 search nodes
+  Calculated heuristic for 117 nodes
+  One modifications 113
   Effectless actions 0
-- including 35 one modification actions
+- including 113 one modification actions
 - including 0 one modification methods
 - and       0 progressions of effectless actions
-- Generated 22000 nodes per second
-- Final fringe contains 15 nodes
+- Generated 117000 nodes per second
+- Final fringe contains 9 nodes
 - Status: Solved
 - Found solution of length 20
 - Total costs of actions: 18
 ==>
 1 collect_fees[Toshiba_Laptops]
-6 open_door[Pferd]
-8 load_package[Toshiba_Laptops,Pferd,O27]
-16 close_door[Pferd]
-21 move_vehicle_no_traincar[Pferd,O27,James_Franck_Ring,O28]
-25 open_door[Pferd]
-33 unload_package[Toshiba_Laptops,Pferd,O28]
-42 close_door[Pferd]
-49 deliver_p[Toshiba_Laptops]
-50 collect_fees[Drucker]
-53 open_door[Pferd]
-54 load_package[Drucker,Pferd,O28]
-55 close_door[Pferd]
-56 move_vehicle_no_traincar[Pferd,O28,Frauen_Strasse,Bibliothek]
-57 open_door[Pferd]
-58 unload_package[Drucker,Pferd,Bibliothek]
-59 close_door[Pferd]
-60 deliver_p[Drucker]
+7 open_door[Pferd]
+14 load_package[Toshiba_Laptops,Pferd,O27]
+32 close_door[Pferd]
+48 move_vehicle_no_traincar[Pferd,O27,James_Franck_Ring,O28]
+50 open_door[Pferd]
+97 unload_package[Toshiba_Laptops,Pferd,O28]
+118 close_door[Pferd]
+129 collect_fees[Drucker]
+136 deliver_p[Toshiba_Laptops]
+145 open_door[Pferd]
+146 load_package[Drucker,Pferd,O28]
+147 close_door[Pferd]
+148 move_vehicle_no_traincar[Pferd,O28,Frauen_Strasse,Bibliothek]
+149 open_door[Pferd]
+150 unload_package[Drucker,Pferd,Bibliothek]
+151 close_door[Pferd]
+152 deliver_p[Drucker]
 root 0
-52 helper_carry_direct[Pferd,Drucker,O28,Bibliothek] -> <<<<<method_helper_carry_direct_noMoveFirst;unload_top[Drucker,Pferd,Bibliothek];method_unload_top_normal;2;0,1,-1>;unload[Drucker,Pferd,Bibliothek];method_unload_regular;2;0,1,-1,-2,-3>;move[Pferd,O28,Bibliothek];method_move_no_traincar;1;0,-1,2,3,4>;load_top[Drucker,Pferd,O28];method_load_top_normal;0;-1,1,2,3,4>;load[Drucker,Pferd,O28];method_load_regular;0;-1,-2,-3,1,2,3,4> 53 54 55 56 57 58 59
-0 __top[] -> <<<<<<<<<<<<<<<__top_method;transport[Drucker,O28,Bibliothek];method_transport_pi_ca_de;1;0,-1,-2,-3>;carry[Drucker,O28,Bibliothek];method_carry_cd;2;0,1,-1,3>;carry_direct[Drucker,O28,Bibliothek];method_carry_direct;2;0,1,-1,3>;deliver[Drucker];method_deliver_dp;3;0,1,2,-1>;pickup[Drucker];method_pickup_normal;1;0,-1,2,3>;transport[Toshiba_Laptops,O27,O28];method_transport_pi_ca_de;0;-1,-2,-3,1,2,3>;carry[Toshiba_Laptops,O27,O28];method_carry_cd;1;0,-1,2,3,4,5>;carry_direct[Toshiba_Laptops,O27,O28];method_carry_direct;1;0,-1,2,3,4,5>;helper_carry_direct[Pferd,Toshiba_Laptops,O27,O28];<method_helper_carry_direct_noMoveFirst;move[Pferd,O27,O28];method_move_no_traincar;1;0,-1,2>;1;0,-1,-2,-3,2,3,4,5>;unload_top[Toshiba_Laptops,Pferd,O28];method_unload_top_normal;3;0,1,2,-1,4,5,6,7>;unload[Toshiba_Laptops,Pferd,O28];method_unload_regular;3;0,1,2,-1,-2,-3,4,5,6,7>;load_top[Toshiba_Laptops,Pferd,O27];method_load_top_normal;1;0,-1,2,3,4,5,6,7,8,9>;load[Toshiba_Laptops,Pferd,O27];method_load_regular;1;0,-1,-2,-3,2,3,4,5,6,7,8,9>;deliver[Toshiba_Laptops];method_deliver_dp;8;0,1,2,3,4,5,6,7,-1,9,10,11>;pickup[Toshiba_Laptops];method_pickup_normal;0;-1,1,2,3,4,5,6,7,8,9,10,11> 1 6 8 16 21 25 33 42 49 50 52 60
+144 helper_carry_direct[Pferd,Drucker,O28,Bibliothek] -> <<<<<method_helper_carry_direct_noMoveFirst;unload_top[Drucker,Pferd,Bibliothek];method_unload_top_normal;2;0,1,-1>;unload[Drucker,Pferd,Bibliothek];method_unload_regular;2;0,1,-1,-2,-3>;move[Pferd,O28,Bibliothek];method_move_no_traincar;1;0,-1,2,3,4>;load_top[Drucker,Pferd,O28];method_load_top_normal;0;-1,1,2,3,4>;load[Drucker,Pferd,O28];method_load_regular;0;-1,-2,-3,1,2,3,4> 145 146 147 148 149 150 151
+0 __top[] -> <<<<<<<<<<<<<<<__top_method;transport[Drucker,O28,Bibliothek];method_transport_pi_ca_de;1;0,-1,-2,-3>;carry[Drucker,O28,Bibliothek];method_carry_cd;2;0,1,-1,3>;carry_direct[Drucker,O28,Bibliothek];method_carry_direct;2;0,1,-1,3>;deliver[Drucker];method_deliver_dp;3;0,1,2,-1>;pickup[Drucker];method_pickup_normal;1;0,-1,2,3>;transport[Toshiba_Laptops,O27,O28];method_transport_pi_ca_de;0;-1,-2,-3,1,2,3>;carry[Toshiba_Laptops,O27,O28];method_carry_cd;1;0,-1,2,3,4,5>;carry_direct[Toshiba_Laptops,O27,O28];method_carry_direct;1;0,-1,2,3,4,5>;helper_carry_direct[Pferd,Toshiba_Laptops,O27,O28];<method_helper_carry_direct_noMoveFirst;move[Pferd,O27,O28];method_move_no_traincar;1;0,-1,2>;1;0,-1,-2,-3,2,3,4,5>;unload_top[Toshiba_Laptops,Pferd,O28];method_unload_top_normal;3;0,1,2,-1,4,5,6,7>;unload[Toshiba_Laptops,Pferd,O28];method_unload_regular;3;0,1,2,-1,-2,-3,4,5,6,7>;load_top[Toshiba_Laptops,Pferd,O27];method_load_top_normal;1;0,-1,2,3,4,5,6,7,8,9>;load[Toshiba_Laptops,Pferd,O27];method_load_regular;1;0,-1,-2,-3,2,3,4,5,6,7,8,9>;deliver[Toshiba_Laptops];method_deliver_dp;8;0,1,2,3,4,5,6,7,-1,9,10,11>;pickup[Toshiba_Laptops];method_pickup_normal;0;-1,1,2,3,4,5,6,7,8,9,10,11> 1 7 14 32 48 50 97 118 136 129 144 152
 <==

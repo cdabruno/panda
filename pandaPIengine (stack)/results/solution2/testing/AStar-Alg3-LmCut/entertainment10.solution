@@ -8691,54 +8691,44 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 18
-   1s visitime    0.01s generated nodes      5003 nodes/sec    3162 cur h    8 mod.depth   14 inserts      1469 dups       288 size      1181 hash fail    288 hash buckets   1181
-   3s visitime    0.02s generated nodes     10005 nodes/sec    3204 cur h    8 mod.depth   14 inserts      2838 dups       335 size      2503 hash fail    335 hash buckets   2503
-   4s visitime    0.03s generated nodes     15013 nodes/sec    3458 cur h   10 mod.depth   12 inserts      4444 dups       407 size      4037 hash fail    407 hash buckets   4037
+   1s visitime    0.30s generated nodes    295123 nodes/sec  290475 cur h    1 mod.depth   14 inserts     67563 dups      2344 size     65219 hash fail   2468 hash buckets  65095
+   2s visitime    0.60s generated nodes    485218 nodes/sec  240564 cur h    1 mod.depth   15 inserts    112849 dups      4470 size    108379 hash fail   4818 hash buckets 108031
+   3s visitime    0.89s generated nodes    635295 nodes/sec  208978 cur h    1 mod.depth   15 inserts    147610 dups      4867 size    142743 hash fail   5487 hash buckets 142123
+   4s visitime    1.19s generated nodes    780368 nodes/sec  193017 cur h    1 mod.depth   15 inserts    181653 dups      5760 size    175893 hash fail   6707 hash buckets 174946
+   5s visitime    1.48s generated nodes    960461 nodes/sec  190190 cur h    1 mod.depth   15 inserts    224210 dups      7454 size    216756 hash fail   8924 hash buckets 215286
+   6s visitime    1.78s generated nodes   1185571 nodes/sec  195413 cur h    1 mod.depth   16 inserts    277812 dups      9476 size    268336 hash fail  11727 hash buckets 266085
+   7s visitime    2.08s generated nodes   1375681 nodes/sec  193785 cur h    1 mod.depth   16 inserts    322396 dups      9730 size    312666 hash fail  12758 hash buckets 309638
+   8s visitime    2.38s generated nodes   1515748 nodes/sec  186438 cur h    1 mod.depth   16 inserts    355429 dups     10131 size    345298 hash fail  13780 hash buckets 341649
+   9s visitime    2.67s generated nodes   1650789 nodes/sec  180809 cur h    1 mod.depth   16 inserts    387570 dups     10646 size    376924 hash fail  14964 hash buckets 372606
+  10s visitime    2.96s generated nodes   1805862 nodes/sec  178092 cur h    1 mod.depth   16 inserts    424514 dups     11401 size    413113 hash fail  16565 hash buckets 407949
+  11s visitime    3.26s generated nodes   2020972 nodes/sec  181042 cur h    1 mod.depth   16 inserts    475821 dups     12636 size    463185 hash fail  19081 hash buckets 456740
+  12s visitime    3.55s generated nodes   2216040 nodes/sec  182120 cur h    1 mod.depth   16 inserts    522684 dups     14083 size    508601 hash fail  21826 hash buckets 500858
+  13s visitime    3.84s generated nodes   2351097 nodes/sec  178248 cur h    1 mod.depth   16 inserts    555019 dups     15182 size    539837 hash fail  23901 hash buckets 531118
+  14s visitime    4.14s generated nodes   2486180 nodes/sec  174886 cur h    1 mod.depth   16 inserts    587679 dups     16366 size    571313 hash fail  26118 hash buckets 561561
+  15s visitime    4.43s generated nodes   2621247 nodes/sec  172133 cur h    1 mod.depth   16 inserts    620238 dups     17660 size    602578 hash fail  28474 hash buckets 591764
+  16s visitime    4.73s generated nodes   2826342 nodes/sec  174078 cur h    1 mod.depth   17 inserts    670341 dups     19648 size    650693 hash fail  32169 hash buckets 638172
+  17s visitime    5.02s generated nodes   3026454 nodes/sec  175589 cur h    1 mod.depth   17 inserts    718047 dups     19761 size    698286 hash fail  34121 hash buckets 683926
+  18s visitime    5.31s generated nodes   3161521 nodes/sec  173215 cur h    1 mod.depth   17 inserts    749905 dups     19918 size    729987 hash fail  35531 hash buckets 714374
+  19s visitime    5.60s generated nodes   3291593 nodes/sec  170805 cur h    1 mod.depth   17 inserts    780875 dups     20077 size    760798 hash fail  36963 hash buckets 743912
+  20s visitime    5.90s generated nodes   3421657 nodes/sec  168479 cur h    1 mod.depth   17 inserts    811879 dups     20264 size    791615 hash fail  38529 hash buckets 773350
+Reached time limit - stopping search.
 Search Results
-- Search time 5.03 seconds
-- Depth reached: 15.
-- Depth reached expanding abstract methods: 15
-- Visited list time 0.03 seconds
-- Visited list inserts 5682
-- Visited list pruned 432
-- Visited list contains 5250
-- Visited list hash collisions 432
-- Visited list used hash buckets 5250
-- Generated 19211 search nodes
-  Calculated heuristic for 16060 nodes
-  One modifications 3149
-  Effectless actions 2
-- including 3149 one modification actions
+- Search time 21.01 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 6.10 seconds
+- Visited list inserts 841674
+- Visited list pruned 20463
+- Visited list contains 821211
+- Visited list hash collisions 40104
+- Visited list used hash buckets 801570
+- Generated 3546737 search nodes
+  Calculated heuristic for 3072091 nodes
+  One modifications 471096
+  Effectless actions 3550
+- including 471096 one modification actions
 - including 0 one modification methods
-- and       2 progressions of effectless actions
-- Generated 3190 nodes per second
-- Final fringe contains 6577 nodes
-- Status: Solved
-- Found solution of length 23
-- Total costs of actions: 8
-==>
-13 plug|instance_4[blu-ray-1,blu-ray-1-cinch-2,cinch-cable-1,cinch-cable-1-cinch-1]
-273 plug|instance_7[cinch-cable-1,cinch-cable-1-cinch-2,amplifier-1,amplifier-1-cinch-3]
-2431 plug|instance_4[sat-receiver-1,sat-receiver-1-cinch-6,cinch-cable-2,cinch-cable-2-cinch-1]
-2539 plug|instance_7[cinch-cable-2,cinch-cable-2-cinch-2,amplifier-1,amplifier-1-cinch-4]
-11311 plug|instance_1[blu-ray-1,blu-ray-1-hdmi-1,hdmi-cable-1,hdmi-cable-1-hdmi-1]
-17565 plug|instance_1[hdmi-cable-1,hdmi-cable-1-hdmi-2,tv-1,tv-1-hdmi-2]
-19204 plug|instance_2[sat-receiver-1,sat-receiver-1-cinch-4,cinch-cable-4,cinch-cable-4-cinch-1]
-19209 plug|instance_3[cinch-cable-4,cinch-cable-4-cinch-2,tv-1,tv-1-cinch-6]
-root 0
-19208 direct_v_connect[cinch-cable-4,tv-1] -> <m-dconnect-v;plug[cinch-cable-4,cinch-cable-4-cinch-2,tv-1,tv-1-cinch-6];_method_for_multiple_expansions_of_plug|instance_3;0;-1> 19209
-19203 direct_v_connect[sat-receiver-1,cinch-cable-4] -> <m-dconnect-v;plug[sat-receiver-1,sat-receiver-1-cinch-4,cinch-cable-4,cinch-cable-4-cinch-1];_method_for_multiple_expansions_of_plug|instance_2;0;-1> 19204
-19200 v_connect[sat-receiver-1,cinch-cable-4] -> m-connect-direct-v 19203
-18029 v_connect[sat-receiver-1,tv-1] -> m-connect-rec-v 19200 19208
-17564 direct_v_connect[hdmi-cable-1,tv-1] -> <m-dconnect-v;plug[hdmi-cable-1,hdmi-cable-1-hdmi-2,tv-1,tv-1-hdmi-2];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 17565
-11310 direct_v_connect[blu-ray-1,hdmi-cable-1] -> <m-dconnect-v;plug[blu-ray-1,blu-ray-1-hdmi-1,hdmi-cable-1,hdmi-cable-1-hdmi-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 11311
-11307 v_connect[blu-ray-1,hdmi-cable-1] -> m-connect-direct-v 11310
-2631 v_connect[blu-ray-1,tv-1] -> m-connect-rec-v 11307 17564
-2538 direct_a_connect[cinch-cable-2,amplifier-1] -> <m-dconnect-a;plug[cinch-cable-2,cinch-cable-2-cinch-2,amplifier-1,amplifier-1-cinch-4];_method_for_multiple_expansions_of_plug|instance_7;0;-1> 2539
-2430 direct_a_connect[sat-receiver-1,cinch-cable-2] -> <m-dconnect-a;plug[sat-receiver-1,sat-receiver-1-cinch-6,cinch-cable-2,cinch-cable-2-cinch-1];_method_for_multiple_expansions_of_plug|instance_4;0;-1> 2431
-285 a_connect[sat-receiver-1,amplifier-1] -> <m-connect-rec-a;a_connect[sat-receiver-1,cinch-cable-2];m-connect-direct-a;0;-1,1> 2430 2538
-272 direct_a_connect[cinch-cable-1,amplifier-1] -> <m-dconnect-a;plug[cinch-cable-1,cinch-cable-1-cinch-2,amplifier-1,amplifier-1-cinch-3];_method_for_multiple_expansions_of_plug|instance_7;0;-1> 273
-12 direct_a_connect[blu-ray-1,cinch-cable-1] -> <m-dconnect-a;plug[blu-ray-1,blu-ray-1-cinch-2,cinch-cable-1,cinch-cable-1-cinch-1];_method_for_multiple_expansions_of_plug|instance_4;0;-1> 13
-2 a_connect[blu-ray-1,amplifier-1] -> <m-connect-rec-a;a_connect[blu-ray-1,cinch-cable-1];m-connect-direct-a;0;-1,1> 12 272
-0 __top[] -> __top_method 2 285 2631 18029
-<==
+- and       3550 progressions of effectless actions
+- Generated 146234 nodes per second
+- Final fringe contains 1783931 nodes
+- Status: Timeout

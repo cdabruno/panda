@@ -343,47 +343,56 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 17
+   1s visitime    0.43s generated nodes    335264 nodes/sec  323613 cur h    1 mod.depth    9 inserts    140097 dups     88250 size     51847 hash fail  88346 hash buckets  51751
+   2s visitime    0.91s generated nodes    590458 nodes/sec  280236 cur h    1 mod.depth   10 inserts    279401 dups    180907 size     98494 hash fail 181223 hash buckets  98178
+   3s visitime    1.37s generated nodes    865647 nodes/sec  272816 cur h    1 mod.depth   10 inserts    408580 dups    253749 size    154831 hash fail 254479 hash buckets 154101
+   4s visitime    1.82s generated nodes   1075731 nodes/sec  257351 cur h    1 mod.depth   11 inserts    529922 dups    328727 size    201195 hash fail 329950 hash buckets 199972
+   5s visitime    2.32s generated nodes   1210788 nodes/sec  233382 cur h    1 mod.depth   12 inserts    658960 dups    428046 size    230914 hash fail 429610 hash buckets 229350
+   6s visitime    2.83s generated nodes   1335864 nodes/sec  215253 cur h    1 mod.depth   13 inserts    787835 dups    529206 size    258629 hash fail 531158 hash buckets 256677
+   7s visitime    3.31s generated nodes   1500964 nodes/sec  208235 cur h    1 mod.depth   14 inserts    910436 dups    617181 size    293255 hash fail 619729 hash buckets 290707
+   8s visitime    3.80s generated nodes   1691071 nodes/sec  205326 cur h    1 mod.depth   15 inserts   1039592 dups    704370 size    335222 hash fail 707694 hash buckets 331898
+   9s visitime    4.13s generated nodes   1756095 nodes/sec  188888 cur h    1 mod.depth   17 inserts   1127919 dups    776553 size    351366 hash fail 780203 hash buckets 347716
 Search Results
-- Search time 0.008 seconds
-- Depth reached: 17.
-- Depth reached expanding abstract methods: 12
-- Visited list time 0.00024 seconds
-- Visited list inserts 95
-- Visited list pruned 16
-- Visited list contains 79
-- Visited list hash collisions 16
-- Visited list used hash buckets 79
-- Generated 263 search nodes
-  Calculated heuristic for 226 nodes
-  One modifications 37
+- Search time 9.55 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 4.23 seconds
+- Visited list inserts 1155296
+- Visited list pruned 796553
+- Visited list contains 358743
+- Visited list hash collisions 800337
+- Visited list used hash buckets 354959
+- Generated 1786816 search nodes
+  Calculated heuristic for 1602570 nodes
+  One modifications 184246
   Effectless actions 0
-- including 37 one modification actions
+- including 184246 one modification actions
 - including 0 one modification methods
 - and       0 progressions of effectless actions
-- Generated 28250 nodes per second
-- Final fringe contains 51 nodes
+- Generated 167878 nodes per second
+- Final fringe contains 18574 nodes
 - Status: Solved
 - Found solution of length 19
 - Total costs of actions: 7
 ==>
-45 do_plane[p0,smooth,red,varnished]
-77 do_glaze[p0,glazer0,red]
-78 do_plane[p2,verysmooth,natural,varnished]
-132 do_saw_medium[b0,p1,pine,rough,s3,s2,s1]
-255 do_glaze[p2,glazer0,red]
-256 do_plane_untreated[p1,planer0,rough,natural]
-259 do_spray_varnish[p1,spray_varnisher0,red,smooth]
+573 do_saw_medium[b0,p1,pine,rough,s3,s2,s1]
+231464 do_plane[p2,verysmooth,natural,varnished]
+536506 do_plane[p1,rough,natural,untreated]
+1601211 do_plane[p0,smooth,red,varnished]
+1713693 do_spray_varnish[p1,spray_varnisher0,red,smooth]
+1765968 do_glaze[p2,glazer0,red]
+1765969 do_glaze[p0,glazer0,red]
 root 0
-258 method14_splitted_4[p1,red] -> <_splitting_method_method14_splitted_4;do_colour[p1,red,spray_varnisher0];method1;0;-1> 259
-236 grindNplane[p1,rough,natural,untreated,smooth,natural,untreated] -> method15 256
-142 method14_splitted_9[p1,rough,smooth,untreated] -> _splitting_method_method14_splitted_9 236
-131 method12_splitted_3[p2,red] -> <_splitting_method_method12_splitted_3;do_colour[p2,red,glazer0];method2;0;-1> 255
-74 method12_splitted_3[p0,red] -> <_splitting_method_method12_splitted_3;do_colour[p0,red,glazer0];method2;0;-1> 77
-44 process[p1,red,rough,smooth] -> <<<method14;method14_splitted_12[b0,p1,rough];_splitting_method_method14_splitted_12;0;-1,1,2>;cut_and_saw[b0,p1,pine,rough];method10;0;-1,1,2>;do_saw[b0,p1,pine,rough];method8;0;-1,1,2> 132 142 258
-42 method12_splitted_8[p2,verysmooth,smooth,untreated] -> <_splitting_method_method12_splitted_8;grindNplane[p2,verysmooth,natural,varnished,smooth,natural,untreated];method7;0;-1> 78
-36 method12_splitted_8[p0,smooth,smooth,untreated] -> <_splitting_method_method12_splitted_8;grindNplane[p0,smooth,red,varnished,smooth,natural,untreated];method7;0;-1> 45
-29 __top_method_splitted_11[p2,red] -> <_splitting_method___top_method_splitted_11;process[p2,red,verysmooth,smooth];method12;0;-1,-2> 42 131
-6 __top_method_splitted_6[p1,red,smooth] -> _splitting_method___top_method_splitted_6 44
-3 __top_method_splitted_1[p0,red] -> <_splitting_method___top_method_splitted_1;process[p0,red,smooth,smooth];method12;0;-1,-2> 36 74
-0 __top[] -> __top_method 3 29 6
+1640201 method12_splitted_3[p0,red] -> <_splitting_method_method12_splitted_3;do_colour[p0,red,glazer0];method2;0;-1> 1765969
+1404876 method12_splitted_8[p0,smooth,smooth,untreated] -> <_splitting_method_method12_splitted_8;grindNplane[p0,smooth,red,varnished,smooth,natural,untreated];method7;0;-1> 1601211
+1316239 __top_method_splitted_1[p0,red] -> <_splitting_method___top_method_splitted_1;process[p0,red,smooth,smooth];method12;0;-1,-2> 1404876 1640201
+1109839 method12_splitted_3[p2,red] -> <_splitting_method_method12_splitted_3;do_colour[p2,red,glazer0];method2;0;-1> 1765968
+625040 method14_splitted_4[p1,red] -> <_splitting_method_method14_splitted_4;do_colour[p1,red,spray_varnisher0];method1;0;-1> 1713693
+108285 method12_splitted_8[p2,verysmooth,smooth,untreated] -> <_splitting_method_method12_splitted_8;grindNplane[p2,verysmooth,natural,varnished,smooth,natural,untreated];method7;0;-1> 231464
+23324 grindNplane[p1,rough,natural,untreated,smooth,natural,untreated] -> method7 536506
+6335 __top_method_splitted_11[p2,red] -> <_splitting_method___top_method_splitted_11;process[p2,red,verysmooth,smooth];method12;0;-1,-2> 108285 1109839
+3003 method14_splitted_9[p1,rough,smooth,untreated] -> _splitting_method_method14_splitted_9 23324
+106 process[p1,red,rough,smooth] -> <<<method14;method14_splitted_12[b0,p1,rough];_splitting_method_method14_splitted_12;0;-1,1,2>;cut_and_saw[b0,p1,pine,rough];method10;0;-1,1,2>;do_saw[b0,p1,pine,rough];method8;0;-1,1,2> 573 3003 625040
+10 __top_method_splitted_6[p1,red,smooth] -> _splitting_method___top_method_splitted_6 106
+0 __top[] -> __top_method 1316239 6335 10
 <==

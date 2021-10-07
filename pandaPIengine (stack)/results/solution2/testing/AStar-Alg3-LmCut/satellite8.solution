@@ -88,49 +88,50 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 13
+   1s visitime    0.44s generated nodes    285236 nodes/sec  282132 cur h    1 mod.depth   12 inserts    128765 dups     83636 size     45129 hash fail  83706 hash buckets  45059
 Search Results
-- Search time 0.074 seconds
-- Depth reached: 12.
-- Depth reached expanding abstract methods: 8
-- Visited list time 0.003802 seconds
-- Visited list inserts 818
-- Visited list pruned 29
-- Visited list contains 789
-- Visited list hash collisions 29
-- Visited list used hash buckets 789
-- Generated 3447 search nodes
-  Calculated heuristic for 2193 nodes
-  One modifications 1219
-  Effectless actions 35
-- including 1219 one modification actions
+- Search time 1.69 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 0.74 seconds
+- Visited list inserts 212851
+- Visited list pruned 140679
+- Visited list contains 72172
+- Visited list hash collisions 140841
+- Visited list used hash buckets 72010
+- Generated 457096 search nodes
+  Calculated heuristic for 318769 nodes
+  One modifications 123328
+  Effectless actions 14999
+- including 123328 one modification actions
 - including 0 one modification methods
-- and       35 progressions of effectless actions
-- Generated 29635 nodes per second
-- Final fringe contains 171 nodes
+- and       14999 progressions of effectless actions
+- Generated 188286 nodes per second
+- Final fringe contains 434 nodes
 - Status: Solved
 - Found solution of length 21
 - Total costs of actions: 13
 ==>
-455 switch_on[instrument01,satellite0]
-1382 turn_to[satellite0,GroundStation0,Phenomenon6]
-2836 calibrate[satellite0,instrument01,GroundStation0]
-2841 turn_to[satellite0,Phenomenon4,GroundStation0]
-2842 take_image[satellite0,Phenomenon4,instrument01,thermograph]
-2843 switch_off[instrument01,satellite0]
-2844 switch_on[instrument02,satellite0]
-3436 turn_to[satellite0,GroundStation0,Phenomenon4]
-3441 calibrate[satellite0,instrument02,GroundStation0]
-3442 turn_to[satellite0,Phenomenon6,GroundStation0]
-3443 take_image[satellite0,Phenomenon6,instrument02,x_ray]
-3444 turn_to[satellite0,Star5,Phenomenon6]
-3445 take_image[satellite0,Star5,instrument02,x_ray]
+519 switch_on[instrument01,satellite0]
+59123 turn_to[satellite0,GroundStation0,Phenomenon6]
+111276 calibrate[satellite0,instrument01,GroundStation0]
+135964 turn_to[satellite0,Phenomenon4,GroundStation0]
+135965 take_image[satellite0,Phenomenon4,instrument01,thermograph]
+214457 switch_off[instrument01,satellite0]
+313724 switch_on[instrument02,satellite0]
+386437 turn_to[satellite0,GroundStation0,Phenomenon4]
+439142 calibrate[satellite0,instrument02,GroundStation0]
+439143 turn_to[satellite0,Phenomenon6,GroundStation0]
+439144 take_image[satellite0,Phenomenon6,instrument02,x_ray]
+439145 turn_to[satellite0,Star5,Phenomenon6]
+439146 take_image[satellite0,Star5,instrument02,x_ray]
 root 0
-3435 auto_calibrate[satellite0,instrument02] -> method6 3436 3441
-1377 auto_calibrate[satellite0,instrument01] -> method6 1382 2836
-454 activate_instrument[satellite0,instrument02] -> method4 2843 2844 3435
-151 do_observation[Phenomenon6,x_ray] -> <method1;method1_splitted_1[satellite0,Phenomenon6,x_ray];_splitting_method_method1_splitted_1;1;0,-1> 3442 3443
-149 activate_instrument[satellite0,instrument01] -> method5 455 1377
-15 do_observation[Star5,x_ray] -> method0 454 3444 3445
-5 do_observation[Phenomenon4,thermograph] -> method0 149 2841 2842
-0 __top[] -> __top_method 5 15 151
+421577 do_observation[Phenomenon6,x_ray] -> <method1;method1_splitted_1[satellite0,Phenomenon6,x_ray];_splitting_method_method1_splitted_1;1;0,-1> 439143 439144
+361108 auto_calibrate[satellite0,instrument02] -> method6 386437 439142
+35882 activate_instrument[satellite0,instrument02] -> method4 214457 313724 361108
+13669 do_observation[Star5,x_ray] -> method0 35882 439145 439146
+2991 auto_calibrate[satellite0,instrument01] -> method6 59123 111276
+334 activate_instrument[satellite0,instrument01] -> method5 519 2991
+5 do_observation[Phenomenon4,thermograph] -> method0 334 135964 135965
+0 __top[] -> __top_method 5 13669 421577
 <==

@@ -79,11 +79,14 @@ namespace progression {
 
         void setHeuristicValue(searchNode *n) {
             // get facts holding in s0
+            
             for (int i = 0; i < m->numStateBits; i++) {
                 if (n->state[i]) {
                     s0set.insert(i);
                 }
             }
+
+            
 
             // generate goal
             for (int i = 0; i < m->gSize; i++) {

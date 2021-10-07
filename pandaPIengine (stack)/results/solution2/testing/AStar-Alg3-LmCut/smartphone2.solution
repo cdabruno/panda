@@ -181,51 +181,35 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 15
+   1s visitime    0.96s generated nodes     30044 nodes/sec   29570 cur h    1 mod.depth   10 inserts     10872 dups      8265 size      2607 hash fail   8265 hash buckets   2607
+   2s visitime    1.95s generated nodes     35049 nodes/sec   17180 cur h    1 mod.depth   11 inserts     17874 dups     14867 size      3007 hash fail  14867 hash buckets   3007
+   3s visitime    3.66s generated nodes     60079 nodes/sec   15690 cur h    1 mod.depth   12 inserts     32494 dups     27611 size      4883 hash fail  27612 hash buckets   4882
+   5s visitime    5.35s generated nodes    100170 nodes/sec   17913 cur h    1 mod.depth   12 inserts     47101 dups     39376 size      7725 hash fail  39377 hash buckets   7724
+   7s visitime    7.32s generated nodes    105177 nodes/sec   13810 cur h    1 mod.depth   13 inserts     58335 dups     50320 size      8015 hash fail  50321 hash buckets   8014
+   9s visitime    9.15s generated nodes    165290 nodes/sec   17316 cur h    1 mod.depth   13 inserts     75490 dups     63483 size     12007 hash fail  63488 hash buckets  12002
+  13s visitime   12.89s generated nodes    170290 nodes/sec   12725 cur h    1 mod.depth   14 inserts     99654 dups     87330 size     12324 hash fail  87335 hash buckets  12319
+  14s visitime   13.82s generated nodes    240419 nodes/sec   16649 cur h    1 mod.depth   14 inserts    107225 dups     90836 size     16389 hash fail  90849 hash buckets  16376
+  15s visitime   14.79s generated nodes    255445 nodes/sec   16528 cur h    1 mod.depth   14 inserts    112553 dups     95130 size     17423 hash fail  95144 hash buckets  17409
+  16s visitime   15.97s generated nodes    265450 nodes/sec   15917 cur h    1 mod.depth   14 inserts    121526 dups    103380 size     18146 hash fail 103396 hash buckets  18130
+  24s visitime   23.70s generated nodes    270452 nodes/sec   11001 cur h    1 mod.depth   14 inserts    163939 dups    145378 size     18561 hash fail 145394 hash buckets  18545
+Reached time limit - stopping search.
 Search Results
-- Search time 0.041 seconds
-- Depth reached: 16.
-- Depth reached expanding abstract methods: 12
-- Visited list time 0.017971 seconds
-- Visited list inserts 337
-- Visited list pruned 156
-- Visited list contains 181
-- Visited list hash collisions 156
-- Visited list used hash buckets 181
-- Generated 938 search nodes
-  Calculated heuristic for 825 nodes
-  One modifications 101
-  Effectless actions 12
-- including 101 one modification actions
+- Search time 24.58 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 23.70 seconds
+- Visited list inserts 163939
+- Visited list pruned 145378
+- Visited list contains 18561
+- Visited list hash collisions 145394
+- Visited list used hash buckets 18545
+- Generated 270452 search nodes
+  Calculated heuristic for 268141 nodes
+  One modifications 1810
+  Effectless actions 501
+- including 1810 one modification actions
 - including 0 one modification methods
-- and       12 progressions of effectless actions
-- Generated 20121 nodes per second
-- Final fringe contains 99 nodes
-- Status: Solved
-- Found solution of length 23
-- Total costs of actions: 11
-==>
-81 attachRegularInformationToEMail[email1,room101]
-86 attachRegularInformationToEMail[email1,dateForMeeting]
-87 attachRegularInformationToEMail[email1,agenda]
-89 press_Home_EMail[]
-90 select_EMail_EMailAccount_NoOp[account1]
-91 press_EMail_NewEMail[account1]
-92 enter_EMailAddress[headOfDepartment,headOfDepartmentEMailAddress]
-93 press_EMail_NewEMail_Send[headOfDepartment,email1]
-931 extractsInformation_Regular[headOfDepartment,email1,room101]
-933 extractsInformation_Regular[headOfDepartment,email1,dateForMeeting]
-934 extractsInformation_Regular[headOfDepartment,email1,agenda]
-root 0
-926 do_extractsMultipleInformation_Multiple_splitted_2[headOfDepartment,email1] -> <_splitting_method_do_extractsMultipleInformation_Multiple_splitted_2;extractsInformation[headOfDepartment,email1,agenda];do_extractsInformation_Regular;0;-1> 934
-924 do_extractsMultipleInformation_Multiple_splitted_2[headOfDepartment,email1] -> <_splitting_method_do_extractsMultipleInformation_Multiple_splitted_2;extractsInformation[headOfDepartment,email1,room101];do_extractsInformation_Regular;0;-1> 931
-884 extractsMultipleInformation[headOfDepartment,email1] -> <do_extractsMultipleInformation_Single;extractsInformation[headOfDepartment,email1,dateForMeeting];do_extractsInformation_Regular;0;-1> 933
-210 extractsMultipleInformation[headOfDepartment,email1] -> do_extractsMultipleInformation_Multiple 884 924
-109 extractsMultipleInformation[headOfDepartment,email1] -> do_extractsMultipleInformation_Multiple 210 926
-88 enterMode_EMail[] -> do_enterMode_EMail_FromHome 89
-79 do_attachMultipleInformation_Multiple_splitted_1[email1] -> <<_splitting_method_do_attachMultipleInformation_Multiple_splitted_1;attachInformation[email1,dateForMeeting];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email1,dateForMeeting];do_attachInformationToEMail_Regular;0;-1> 86
-69 attachMultipleInformation[email1] -> <<do_attachMultipleInformation_Single;attachInformation[email1,agenda];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email1,agenda];do_attachInformationToEMail_Regular;0;-1> 87
-44 do_attachMultipleInformation_Multiple_splitted_1[email1] -> <<_splitting_method_do_attachMultipleInformation_Multiple_splitted_1;attachInformation[email1,room101];do_attachInformation_ToEMail;0;-1>;attachInformationToEMail[email1,room101];do_attachInformationToEMail_Regular;0;-1> 81
-17 attachMultipleInformation[email1] -> do_attachMultipleInformation_Multiple 69 79
-11 attachMultipleInformation[email1] -> do_attachMultipleInformation_Multiple 17 44
-0 __top[] -> <<__top_method;send_EMail[headOfDepartment,email1];do_send_EMail_ViaEMail;1;0,-1,-2,-3,-4,-5,2>;select_EMail_EMailAccount[account1];do_select_EMail_EMailAccount_NoOp;2;0,1,-1,3,4,5,6> 11 88 90 91 92 93 109
-<==
+- and       501 progressions of effectless actions
+- Generated 10907 nodes per second
+- Final fringe contains 102763 nodes
+- Status: Timeout

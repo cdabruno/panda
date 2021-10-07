@@ -180,36 +180,36 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 6
 Search Results
-- Search time 0.001 seconds
-- Depth reached: 4.
-- Depth reached expanding abstract methods: 4
-- Visited list time 4.9e-05 seconds
-- Visited list inserts 14
+- Search time 0 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 5.3e-05 seconds
+- Visited list inserts 29
 - Visited list pruned 0
-- Visited list contains 14
+- Visited list contains 29
 - Visited list hash collisions 0
-- Visited list used hash buckets 14
-- Generated 71 search nodes
-  Calculated heuristic for 49 nodes
-  One modifications 20
-  Effectless actions 2
-- including 20 one modification actions
+- Visited list used hash buckets 29
+- Generated 132 search nodes
+  Calculated heuristic for 86 nodes
+  One modifications 42
+  Effectless actions 4
+- including 42 one modification actions
 - including 0 one modification methods
-- and       2 progressions of effectless actions
-- Generated 49000 nodes per second
-- Final fringe contains 4 nodes
+- and       4 progressions of effectless actions
+- Generated -2147483648 nodes per second
+- Final fringe contains 3 nodes
 - Status: Solved
 - Found solution of length 9
 - Total costs of actions: 5
 ==>
-38 switch_on[instrument0_2,satellite0]
-64 turn_to[satellite0,GroundStation2,Phenomenon6]
-65 calibrate[satellite0,instrument0_2,GroundStation2]
-66 turn_to[satellite0,Phenomenon4,GroundStation2]
-67 take_image[satellite0,Phenomenon4,instrument0_2,thermograph0]
+55 switch_on[instrument1_1,satellite1]
+113 turn_to[satellite1,GroundStation2,Phenomenon6]
+114 calibrate[satellite1,instrument1_1,GroundStation2]
+115 turn_to[satellite1,Phenomenon4,GroundStation2]
+116 take_image[satellite1,Phenomenon4,instrument1_1,thermograph0]
 root 0
-63 auto_calibrate[satellite0,instrument0_2] -> method6 64 65
-37 activate_instrument[satellite0,instrument0_2] -> method5 38 63
-12 do_observation[Phenomenon4,thermograph0] -> method0 37 66 67
-0 __top[] -> __top_method 12
+112 auto_calibrate[satellite1,instrument1_1] -> method6 113 114
+54 activate_instrument[satellite1,instrument1_1] -> method5 55 112
+18 do_observation[Phenomenon4,thermograph0] -> method0 54 115 116
+0 __top[] -> __top_method 18
 <==

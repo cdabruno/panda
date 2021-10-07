@@ -254,40 +254,40 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 9
 Search Results
-- Search time 0.002 seconds
-- Depth reached: 9.
-- Depth reached expanding abstract methods: 9
-- Visited list time 5.5e-05 seconds
-- Visited list inserts 21
-- Visited list pruned 0
-- Visited list contains 21
-- Visited list hash collisions 0
-- Visited list used hash buckets 21
-- Generated 70 search nodes
-  Calculated heuristic for 56 nodes
-  One modifications 14
-  Effectless actions 0
-- including 14 one modification actions
+- Search time 0.001 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 0.000176 seconds
+- Visited list inserts 99
+- Visited list pruned 11
+- Visited list contains 88
+- Visited list hash collisions 11
+- Visited list used hash buckets 88
+- Generated 267 search nodes
+  Calculated heuristic for 211 nodes
+  One modifications 42
+  Effectless actions 14
+- including 42 one modification actions
 - including 0 one modification methods
-- and       0 progressions of effectless actions
-- Generated 28000 nodes per second
-- Final fringe contains 17 nodes
+- and       14 progressions of effectless actions
+- Generated 211000 nodes per second
+- Final fringe contains 14 nodes
 - Status: Solved
 - Found solution of length 13
 - Total costs of actions: 4
 ==>
-8 plug|instance_1[dvd-1,dvd-1-scart-1,scart-cable-2,scart-cable-2-scart-1]
-24 plug|instance_1[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-2]
-62 plug|instance_1[game-console-1,game-console-1-scart-1,scart-cable-1,scart-cable-1-scart-1]
-68 plug|instance_1[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-1]
+14 plug|instance_1[dvd-1,dvd-1-scart-1,scart-cable-1,scart-cable-1-scart-1]
+63 plug|instance_1[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-2]
+132 plug|instance_1[game-console-1,game-console-1-scart-1,scart-cable-2,scart-cable-2-scart-1]
+257 plug|instance_1[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-1]
 root 0
-67 direct_av_connect[scart-cable-1,tv1-1] -> <m-dconnect-av;plug[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 68
-63 av_connect[scart-cable-1,tv1-1] -> m-connect-direct-av 67
-61 direct_av_connect[game-console-1,scart-cable-1] -> <m-dconnect-av;plug[game-console-1,game-console-1-scart-1,scart-cable-1,scart-cable-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 62
-45 av_connect[game-console-1,tv1-1] -> m-connect-rec-av-1 61 63
-23 direct_av_connect[scart-cable-2,tv1-1] -> <m-dconnect-av;plug[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-2];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 24
-20 av_connect[scart-cable-2,tv1-1] -> m-connect-direct-av 23
-7 direct_av_connect[dvd-1,scart-cable-2] -> <m-dconnect-av;plug[dvd-1,dvd-1-scart-1,scart-cable-2,scart-cable-2-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 8
-1 av_connect[dvd-1,tv1-1] -> m-connect-rec-av-1 7 20
-0 __top[] -> __top_method 1 45
+256 direct_av_connect[scart-cable-2,tv1-1] -> <m-dconnect-av;plug[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 257
+216 av_connect[scart-cable-2,tv1-1] -> m-connect-direct-av 256
+131 direct_av_connect[game-console-1,scart-cable-2] -> <m-dconnect-av;plug[game-console-1,game-console-1-scart-1,scart-cable-2,scart-cable-2-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 132
+100 av_connect[game-console-1,tv1-1] -> m-connect-rec-av-1 131 216
+62 direct_av_connect[scart-cable-1,tv1-1] -> <m-dconnect-av;plug[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-2];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 63
+26 av_connect[scart-cable-1,tv1-1] -> m-connect-direct-av 62
+13 direct_av_connect[dvd-1,scart-cable-1] -> <m-dconnect-av;plug[dvd-1,dvd-1-scart-1,scart-cable-1,scart-cable-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 14
+2 av_connect[dvd-1,tv1-1] -> m-connect-rec-av-1 13 26
+0 __top[] -> __top_method 2 100
 <==

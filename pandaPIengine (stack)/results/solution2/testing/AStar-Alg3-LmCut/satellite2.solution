@@ -150,34 +150,34 @@ Search Configuration
 - Starting state heuristic value: 5
 Search Results
 - Search time 0.001 seconds
-- Depth reached: 3.
-- Depth reached expanding abstract methods: 3
-- Visited list time 4e-05 seconds
-- Visited list inserts 12
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 5.1e-05 seconds
+- Visited list inserts 29
 - Visited list pruned 0
-- Visited list contains 12
+- Visited list contains 29
 - Visited list hash collisions 0
-- Visited list used hash buckets 12
-- Generated 130 search nodes
-  Calculated heuristic for 80 nodes
-  One modifications 46
-  Effectless actions 4
-- including 46 one modification actions
+- Visited list used hash buckets 29
+- Generated 236 search nodes
+  Calculated heuristic for 148 nodes
+  One modifications 82
+  Effectless actions 6
+- including 82 one modification actions
 - including 0 one modification methods
-- and       4 progressions of effectless actions
-- Generated 80000 nodes per second
-- Final fringe contains 8 nodes
+- and       6 progressions of effectless actions
+- Generated 148000 nodes per second
+- Final fringe contains 5 nodes
 - Status: Solved
 - Found solution of length 8
 - Total costs of actions: 5
 ==>
-43 switch_on[instrument0,satellite0]
-123 turn_to[satellite0,star0,phenomenon1]
-124 calibrate[satellite0,instrument0,star0]
-125 turn_to[satellite0,phenomenon2,star0]
-126 take_image[satellite0,phenomenon2,instrument0,image1]
-root 1
-122 auto_calibrate[satellite0,instrument0] -> method6 123 124
-42 do_observation[phenomenon2,image1] -> <method0;activate_instrument[satellite0,instrument0];method5;0;-1,-2,1,2> 43 122 125 126
-1 __top[] -> __top_method 42
+21 switch_on[instrument1,satellite1]
+128 turn_to[satellite1,star0,phenomenon2]
+129 calibrate[satellite1,instrument1,star0]
+130 turn_to[satellite1,phenomenon1,star0]
+131 take_image[satellite1,phenomenon1,instrument1,image1]
+root 0
+127 auto_calibrate[satellite1,instrument1] -> method6 128 129
+20 do_observation[phenomenon1,image1] -> <method0;activate_instrument[satellite1,instrument1];method5;0;-1,-2,1,2> 21 127 130 131
+0 __top[] -> __top_method 20
 <==

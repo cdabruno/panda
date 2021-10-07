@@ -319,42 +319,43 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 11
+   1s visitime    0.26s generated nodes    581842 nodes/sec  581842 cur h    1 mod.depth    5 inserts     82400 dups     39507 size     42893 hash fail  39577 hash buckets  42823
+   2s visitime    0.59s generated nodes   1028443 nodes/sec  507371 cur h    1 mod.depth    5 inserts    176858 dups    110559 size     66299 hash fail 110711 hash buckets  66147
+   3s visitime    0.92s generated nodes   1404265 nodes/sec  463606 cur h    1 mod.depth    6 inserts    268601 dups    151092 size    117509 hash fail 151530 hash buckets 117071
+   4s visitime    1.40s generated nodes   1574688 nodes/sec  381465 cur h    1 mod.depth    6 inserts    383759 dups    248815 size    134944 hash fail 249382 hash buckets 134377
+   5s visitime    1.69s generated nodes   2060636 nodes/sec  401761 cur h    1 mod.depth    7 inserts    455028 dups    270118 size    184910 hash fail 271139 hash buckets 183889
+   6s visitime    2.01s generated nodes   2541637 nodes/sec  414217 cur h    1 mod.depth    7 inserts    539752 dups    308690 size    231062 hash fail 310297 hash buckets 229455
+   7s visitime    2.39s generated nodes   2862538 nodes/sec  400579 cur h    1 mod.depth    7 inserts    632977 dups    374576 size    258401 hash fail 376582 hash buckets 256395
+   8s visitime    2.83s generated nodes   3053142 nodes/sec  373564 cur h    1 mod.depth    7 inserts    738754 dups    466964 size    271790 hash fail 469167 hash buckets 269587
+   9s visitime    3.48s generated nodes   3133537 nodes/sec  331380 cur h    1 mod.depth    8 inserts    903917 dups    627980 size    275937 hash fail 630253 hash buckets 273664
+  10s visitime    3.79s generated nodes   3524236 nodes/sec  336699 cur h    1 mod.depth    8 inserts    971175 dups    644875 size    326300 hash fail 648042 hash buckets 323133
+  11s visitime    4.19s generated nodes   3769729 nodes/sec  328059 cur h    1 mod.depth    8 inserts   1055585 dups    700654 size    354931 hash fail 704380 hash buckets 351205
+  12s visitime    4.77s generated nodes   3859984 nodes/sec  304823 cur h    1 mod.depth    9 inserts   1178678 dups    815742 size    362936 hash fail 819623 hash buckets 359055
+  13s visitime    5.10s generated nodes   4315670 nodes/sec  315865 cur h    1 mod.depth    9 inserts   1253873 dups    834049 size    419824 hash fail 839219 hash buckets 414654
+  14s visitime    5.50s generated nodes   4606205 nodes/sec  313816 cur h    1 mod.depth    9 inserts   1338619 dups    885237 size    453382 hash fail 891253 hash buckets 447366
+  15s visitime    5.98s generated nodes   4761524 nodes/sec  302818 cur h    1 mod.depth    9 inserts   1436887 dups    967376 size    469511 hash fail 973854 hash buckets 463033
+  17s visitime    6.71s generated nodes   4816589 nodes/sec  281704 cur h    1 mod.depth   10 inserts   1586847 dups   1112812 size    474035 hash fail 1119427 hash buckets 467420
+  18s visitime    7.09s generated nodes   5121986 nodes/sec  282935 cur h    1 mod.depth   10 inserts   1666274 dups   1145692 size    520582 hash fail 1153695 hash buckets 512579
+  19s visitime    7.57s generated nodes   5287233 nodes/sec  276673 cur h    1 mod.depth   11 inserts   1771498 dups   1228235 size    543263 hash fail 1236911 hash buckets 534587
+  20s visitime    8.03s generated nodes   5532577 nodes/sec  274924 cur h    1 mod.depth   11 inserts   1872625 dups   1296792 size    575833 hash fail 1306566 hash buckets 566059
+Reached time limit - stopping search.
 Search Results
-- Search time 0.087 seconds
-- Depth reached: 7.
-- Depth reached expanding abstract methods: 5
-- Visited list time 0.001044 seconds
-- Visited list inserts 189
-- Visited list pruned 0
-- Visited list contains 189
-- Visited list hash collisions 0
-- Visited list used hash buckets 189
-- Generated 4416 search nodes
-  Calculated heuristic for 3184 nodes
-  One modifications 1210
-  Effectless actions 22
-- including 1210 one modification actions
+- Search time 21.02 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 8.47 seconds
+- Visited list inserts 1962615
+- Visited list pruned 1367031
+- Visited list contains 595584
+- Visited list hash collisions 1377452
+- Visited list used hash buckets 585163
+- Generated 5652712 search nodes
+  Calculated heuristic for 3655797 nodes
+  One modifications 1747779
+  Effectless actions 249136
+- including 1747779 one modification actions
 - including 0 one modification methods
-- and       22 progressions of effectless actions
-- Generated 36597 nodes per second
-- Final fringe contains 775 nodes
-- Status: Solved
-- Found solution of length 14
-- Total costs of actions: 9
-==>
-2941 switch_on[instrument2,satellite2]
-4194 turn_to[satellite2,GroundStation1,Phenomenon8]
-4195 calibrate[satellite2,instrument2,GroundStation1]
-4196 turn_to[satellite2,Phenomenon6,GroundStation1]
-4197 take_image[satellite2,Phenomenon6,instrument2,thermograph]
-4198 turn_to[satellite2,Star5,Phenomenon6]
-4199 take_image[satellite2,Star5,instrument2,thermograph]
-4200 turn_to[satellite2,Phenomenon4,Star5]
-4201 take_image[satellite2,Phenomenon4,instrument2,thermograph]
-root 0
-4193 auto_calibrate[satellite2,instrument2] -> method6 4194 4195
-2940 do_observation[Phenomenon6,thermograph] -> <method0;activate_instrument[satellite2,instrument2];method5;0;-1,-2,1,2> 2941 4193 4196 4197
-689 do_observation[Star5,thermograph] -> <method1;method1_splitted_1[satellite2,Star5,thermograph];_splitting_method_method1_splitted_1;1;0,-1> 4198 4199
-11 do_observation[Phenomenon4,thermograph] -> <method1;method1_splitted_1[satellite2,Phenomenon4,thermograph];_splitting_method_method1_splitted_1;1;0,-1> 4200 4201
-0 __top[] -> __top_method 11 689 2940
-<==
+- and       249136 progressions of effectless actions
+- Generated 173936 nodes per second
+- Final fringe contains 77712 nodes
+- Status: Timeout

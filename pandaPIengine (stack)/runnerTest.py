@@ -39,14 +39,25 @@ paths = [#"testing/AStar-Alg3-FF",
 
 for c in range(len(commands)):
 
+    flag = 0
+
     for domains in list_domains:
+
+        if not domains == "entertainment":
+           continue
+
+
+        
         list_problems = os.listdir("paper-domains/{}/problems".format(domains))
         number_problems = len(list_problems)
         
         print("Number of problems of domain {}: {}".format(domains, number_problems))
         count = 0
         for p in range(1, number_problems + 1):
-            
+
+            if flag == 1:
+                continue
+            flag = 1
             if domains == 'pcp':
                 print("Parsing domain {}, problem {}/{}.".format(domains, p, number_problems))
                 os.system("./pandaPIparser/pandaPIparser paper-domains/{1}/domains/{1}-d{0}.hddl paper-domains/{1}/problems/{1}-p{0}.hddl results/parsed/{1}{0}.parsed".format(p,domains))

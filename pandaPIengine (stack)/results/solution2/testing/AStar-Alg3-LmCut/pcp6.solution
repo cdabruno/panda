@@ -73,63 +73,75 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 7
+   1s visitime    0.21s generated nodes    390516 nodes/sec  384366 cur h    1 mod.depth   26 inserts     60858 dups     28028 size     32830 hash fail  28056 hash buckets  32802
+   2s visitime    0.45s generated nodes    620719 nodes/sec  307591 cur h    1 mod.depth   28 inserts     97644 dups     41002 size     56642 hash fail  41109 hash buckets  56535
+   3s visitime    0.76s generated nodes    780872 nodes/sec  256696 cur h    1 mod.depth   29 inserts    136331 dups     64079 size     72252 hash fail  64256 hash buckets  72075
+   4s visitime    0.88s generated nodes    946122 nodes/sec  233725 cur h    1 mod.depth   30 inserts    150419 dups     67226 size     83193 hash fail  67448 hash buckets  82971
+   5s visitime    1.06s generated nodes   1156457 nodes/sec  228910 cur h    1 mod.depth   30 inserts    179104 dups     81715 size     97389 hash fail  82021 hash buckets  97083
+   6s visitime    1.34s generated nodes   1441799 nodes/sec  237920 cur h    1 mod.depth   32 inserts    229253 dups    104969 size    124284 hash fail 105455 hash buckets 123798
+   7s visitime    1.57s generated nodes   1742120 nodes/sec  246340 cur h    1 mod.depth   32 inserts    270177 dups    113263 size    156914 hash fail 114026 hash buckets 156151
+   8s visitime    1.88s generated nodes   1942297 nodes/sec  239671 cur h    1 mod.depth   32 inserts    312627 dups    133989 size    178638 hash fail 134988 hash buckets 177639
+   9s visitime    2.25s generated nodes   2067404 nodes/sec  226391 cur h    1 mod.depth   32 inserts    353880 dups    161471 size    192409 hash fail 162610 hash buckets 191270
+  10s visitime    2.57s generated nodes   2237565 nodes/sec  220580 cur h    1 mod.depth   33 inserts    393369 dups    185216 size    208153 hash fail 186561 hash buckets 206808
+  11s visitime    2.77s generated nodes   2512984 nodes/sec  225339 cur h    1 mod.depth   34 inserts    425563 dups    197135 size    228428 hash fail 198743 hash buckets 226820
+  12s visitime    2.90s generated nodes   2763348 nodes/sec  226819 cur h    1 mod.depth   34 inserts    444673 dups    199920 size    244753 hash fail 201748 hash buckets 242925
 Search Results
-- Search time 0.021 seconds
-- Depth reached: 11.
-- Depth reached expanding abstract methods: 11
-- Visited list time 0.001013 seconds
-- Visited list inserts 391
-- Visited list pruned 0
-- Visited list contains 391
-- Visited list hash collisions 0
-- Visited list used hash buckets 391
-- Generated 5229 search nodes
-  Calculated heuristic for 2336 nodes
-  One modifications 2893
+- Search time 12.97 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 3.00 seconds
+- Visited list inserts 454579
+- Visited list pruned 202558
+- Visited list contains 252021
+- Visited list hash collisions 204486
+- Visited list used hash buckets 250093
+- Generated 2874512 search nodes
+  Calculated heuristic for 1701024 nodes
+  One modifications 1173488
   Effectless actions 0
-- including 2893 one modification actions
+- including 1173488 one modification actions
 - including 0 one modification methods
 - and       0 progressions of effectless actions
-- Generated 111238 nodes per second
-- Final fringe contains 244 nodes
+- Generated 131170 nodes per second
+- Final fringe contains 314445 nodes
 - Status: Solved
 - Found solution of length 35
 - Total costs of actions: 26
 ==>
-93 t2G1[]
-302 t2G2[]
-430 t1G1[]
-1123 t1G2[]
-1436 t1G1[]
-3373 t1G2[]
-3480 t3G1[]
-3481 t3G2[]
-3482 bG1[]
-3483 bG2[]
-3484 aG1[]
-3485 aG2[]
-3486 aG1[]
-3487 aG2[]
-3488 aG1[]
-3489 aG2[]
-3490 aG1[]
-3491 aG2[]
-3492 aG1[]
-3493 aG2[]
-3494 aG1[]
-3495 aG2[]
-3496 bG1[]
-3497 bG2[]
-3498 aG1[]
-3499 aG2[]
+131 t2G1[]
+281 t2G2[]
+1069 t1G1[]
+1598 t1G2[]
+4133 t1G1[]
+7277 t1G2[]
+10371 t3G1[]
+10372 t3G2[]
+10373 bG1[]
+10374 bG2[]
+10375 aG1[]
+10376 aG2[]
+10377 aG1[]
+10378 aG2[]
+10379 aG1[]
+10380 aG2[]
+10381 aG1[]
+10382 aG2[]
+10383 aG1[]
+10384 aG2[]
+10385 aG1[]
+10386 aG2[]
+10387 bG1[]
+10388 bG2[]
+10389 aG1[]
+10390 aG2[]
 root 0
-3479 SG2[] -> G2_S2t3_b 3481 3483
-3372 SG1[] -> G1_S2t3_b_a 3480 3482 3484
-1435 SG2[] -> G2_S2t1_S_a_a_a 3373 3479 3485 3487 3489
-1122 SG1[] -> G1_S2t1_S_a 1436 3372 3486
-429 SG2[] -> G2_S2t1_S_a_a_a 1123 1435 3491 3493 3495
-301 SG1[] -> G1_S2t1_S_a 430 1122 3488
-92 SG1[] -> G1_S2t2_S_a_a_a_b_a 93 301 3490 3492 3494 3496 3498
-5 SG2[] -> G2_S2t2_S_b_a 302 429 3497 3499
-0 __top[] -> __top_method 92 5
+10370 SG1[] -> G1_S2t3_b_a 10371 10373 10375
+9089 SG2[] -> G2_S2t3_b 10372 10374
+4132 SG1[] -> G1_S2t1_S_a 4133 10370 10377
+2644 SG2[] -> G2_S2t1_S_a_a_a 7277 9089 10376 10378 10380
+1068 SG2[] -> G2_S2t1_S_a_a_a 1598 2644 10382 10384 10386
+280 SG2[] -> G2_S2t2_S_b_a 281 1068 10388 10390
+228 SG1[] -> G1_S2t1_S_a 1069 4132 10379
+5 SG1[] -> G1_S2t2_S_a_a_a_b_a 131 228 10381 10383 10385 10387 10389
+0 __top[] -> __top_method 5 280
 <==

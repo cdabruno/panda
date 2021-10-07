@@ -165,56 +165,44 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 22
+   1s visitime    0.29s generated nodes    490520 nodes/sec  487110 cur h    1 mod.depth    8 inserts     84908 dups     34757 size     50151 hash fail  34830 hash buckets  50078
+   2s visitime    0.69s generated nodes    680698 nodes/sec  338487 cur h    1 mod.depth    8 inserts    158200 dups     87611 size     70589 hash fail  87760 hash buckets  70440
+   3s visitime    0.96s generated nodes    980958 nodes/sec  325683 cur h    1 mod.depth    9 inserts    201574 dups    101443 size    100131 hash fail 101759 hash buckets  99815
+   4s visitime    1.20s generated nodes   1291279 nodes/sec  321533 cur h    1 mod.depth    9 inserts    239746 dups    108965 size    130781 hash fail 109482 hash buckets 130264
+   5s visitime    1.48s generated nodes   1681717 nodes/sec  334470 cur h    1 mod.depth    9 inserts    300873 dups    131000 size    169873 hash fail 131855 hash buckets 169018
+   6s visitime    1.81s generated nodes   2022089 nodes/sec  335171 cur h    1 mod.depth    9 inserts    380603 dups    175751 size    204852 hash fail 176992 hash buckets 203611
+   7s visitime    2.21s generated nodes   2212278 nodes/sec  314199 cur h    1 mod.depth    9 inserts    456532 dups    231517 size    225015 hash fail 233014 hash buckets 223518
+   8s visitime    2.72s generated nodes   2307353 nodes/sec  284156 cur h    1 mod.depth    9 inserts    543447 dups    307613 size    235834 hash fail 309261 hash buckets 234186
+   9s visitime    3.11s generated nodes   2462537 nodes/sec  269719 cur h    1 mod.depth   10 inserts    607298 dups    355995 size    251303 hash fail 357877 hash buckets 249421
+  10s visitime    3.34s generated nodes   2872939 nodes/sec  283607 cur h    1 mod.depth   10 inserts    650002 dups    358727 size    291275 hash fail 361254 hash buckets 288748
+  11s visitime    3.58s generated nodes   3343483 nodes/sec  300160 cur h    1 mod.depth   10 inserts    702051 dups    364966 size    337085 hash fail 368345 hash buckets 333706
+  12s visitime    3.83s generated nodes   3733911 nodes/sec  307216 cur h    1 mod.depth   10 inserts    748153 dups    373099 size    375054 hash fail 377236 hash buckets 370917
+  13s visitime    4.08s generated nodes   4029290 nodes/sec  306037 cur h    1 mod.depth   10 inserts    785360 dups    381367 size    403993 hash fail 386151 hash buckets 399209
+  14s visitime    4.33s generated nodes   4314654 nodes/sec  304578 cur h    1 mod.depth   10 inserts    822917 dups    391062 size    431855 hash fail 396509 hash buckets 426408
+  15s visitime    4.60s generated nodes   4630037 nodes/sec  305250 cur h    1 mod.depth   10 inserts    867484 dups    404555 size    462929 hash fail 410815 hash buckets 456669
+  16s visitime    4.88s generated nodes   5030439 nodes/sec  310904 cur h    1 mod.depth   10 inserts    928525 dups    426238 size    502287 hash fail 433573 hash buckets 494952
+  17s visitime    5.17s generated nodes   5380853 nodes/sec  313022 cur h    1 mod.depth   10 inserts    988130 dups    451002 size    537128 hash fail 459462 hash buckets 528668
+  18s visitime    5.46s generated nodes   5621132 nodes/sec  308938 cur h    1 mod.depth   10 inserts   1032700 dups    471670 size    561030 hash fail 480898 hash buckets 551802
+  19s visitime    5.77s generated nodes   5851387 nodes/sec  304759 cur h    1 mod.depth   10 inserts   1078492 dups    494556 size    583936 hash fail 504615 hash buckets 573877
+  20s visitime    6.09s generated nodes   6071678 nodes/sec  300310 cur h    1 mod.depth   10 inserts   1126601 dups    520569 size    606032 hash fail 531467 hash buckets 595134
+Reached time limit - stopping search.
 Search Results
-- Search time 0.014 seconds
-- Depth reached: 19.
-- Depth reached expanding abstract methods: 16
-- Visited list time 0.000309 seconds
-- Visited list inserts 69
-- Visited list pruned 4
-- Visited list contains 65
-- Visited list hash collisions 4
-- Visited list used hash buckets 65
-- Generated 262 search nodes
-  Calculated heuristic for 213 nodes
-  One modifications 45
-  Effectless actions 4
-- including 45 one modification actions
+- Search time 21.00 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 6.35 seconds
+- Visited list inserts 1182292
+- Visited list pruned 552986
+- Visited list contains 629306
+- Visited list hash collisions 564734
+- Visited list used hash buckets 617558
+- Generated 6301967 search nodes
+  Calculated heuristic for 5713084 nodes
+  One modifications 275715
+  Effectless actions 313168
+- including 275715 one modification actions
 - including 0 one modification methods
-- and       4 progressions of effectless actions
-- Generated 15214 nodes per second
-- Final fringe contains 93 nodes
-- Status: Solved
-- Found solution of length 28
-- Total costs of actions: 12
-==>
-24 drive[truck-0,city-loc-0,city-loc-1]
-210 drive[truck-0,city-loc-1,city-loc-2]
-211 noop[truck-0,city-loc-2]
-216 pick-up[truck-0,city-loc-2,package-1,capacity-1,capacity-2]
-228 pick-up[truck-0,city-loc-2,package-2,capacity-0,capacity-1]
-231 drive[truck-0,city-loc-2,city-loc-1]
-242 drop[truck-0,city-loc-1,package-1,capacity-0,capacity-1]
-243 pick-up[truck-0,city-loc-1,package-0,capacity-0,capacity-1]
-249 drive[truck-0,city-loc-1,city-loc-0]
-250 noop[truck-0,city-loc-0]
-258 drop[truck-0,city-loc-0,package-2,capacity-0,capacity-1]
-259 drop[truck-0,city-loc-0,package-0,capacity-1,capacity-2]
-root 0
-257 unload[truck-0,city-loc-0,package-0] -> m-unload 259
-256 unload[truck-0,city-loc-0,package-2] -> m-unload 258
-248 get-to[truck-0,city-loc-0] -> m-i-am-there 250
-240 unload[truck-0,city-loc-1,package-1] -> m-unload 242
-230 get-to[truck-0,city-loc-0] -> m-drive-to 249
-222 get-to[truck-0,city-loc-1] -> m-drive-to 231
-215 load[truck-0,city-loc-2,package-2] -> m-load 228
-214 load[truck-0,city-loc-2,package-1] -> m-load 216
-209 load[truck-0,city-loc-1,package-0] -> m-load 243
-23 get-to[truck-0,city-loc-2] -> m-i-am-there 211
-12 get-to[truck-0,city-loc-1] -> m-drive-to 24
-7 get-to[truck-0,city-loc-2] -> m-drive-to 210
-6 m-deliver_splitted_1[truck-0,package-1] -> _splitting_method_m-deliver_splitted_1 7 214
-4 m-deliver_splitted_1[truck-0,package-2] -> _splitting_method_m-deliver_splitted_1 23 215
-2 m-deliver_splitted_1[truck-0,package-0] -> _splitting_method_m-deliver_splitted_1 12 209
-0 __top[] -> <<<__top_method;deliver[package-2,city-loc-0];m-deliver;2;0,1,-1,-2,-3>;deliver[package-1,city-loc-1];m-deliver;1;0,-1,-2,-3,2,3,4>;deliver[package-0,city-loc-0];m-deliver;0;-1,-2,-3,1,2,3,4,5,6> 2 248 257 6 222 240 4 230 256
-<==
+- and       313168 progressions of effectless actions
+- Generated 271986 nodes per second
+- Final fringe contains 4340830 nodes
+- Status: Timeout
