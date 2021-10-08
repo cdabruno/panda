@@ -24,6 +24,7 @@
 #include <iomanip>
 #include <sys/time.h>
 #include <Heuristic.h>
+#include <map>
 
 
 namespace progression {
@@ -42,6 +43,7 @@ namespace progression {
             timeval tp;
             gettimeofday(&tp, NULL);
 
+            
         
             // VARIABLE NUMBER
             cout << "Variable number: " << htn->numVars << endl;
@@ -53,6 +55,8 @@ namespace progression {
             int flagAchou = 0;
             int primeiro = 0;
             int segundo = 0;
+
+            std::map<int, std::pair<int, int>> ramificationSet; 
 
             int sumVarDom = 0;
             int currVarDom;
@@ -96,6 +100,8 @@ namespace progression {
                     nonPrimitives++;
                 }
             }
+
+
             cout << "Num primitive tasks: " << primitives << endl;
             cout << "Num non-primitive tasks: " << nonPrimitives << endl;
             cout << "Total tasks: " << htn->numTasks << endl;
@@ -215,7 +221,7 @@ namespace progression {
                 cout << "- Starting state heuristic value: " << *(tnI->heuristicValue) << endl;
             }
 
-            
+            tnI->depth = 0;
             
 
             // add initial search node to queue
@@ -418,6 +424,8 @@ namespace progression {
                 }
                 //assert(!visitedList.insertVisi(n));
 
+                int ramificationDegree = 0;
+
                 if (!suboptimalSearch && htn->isGoal(n)) {
                     // A non-early goal test makes only sense in an optimal planning setting.
                     // -> continuing search makes not really sense here
@@ -435,6 +443,8 @@ namespace progression {
                         continue;
                     searchNode *n2 = htn->apply(n, i);
                     numSearchNodes++;
+
+                    
                     
                     if (!n2->goalReachable) { // progression has detected unsol
                         delete n2;
@@ -456,10 +466,20 @@ namespace progression {
                         n2->heuristicValue[0] = 0;
                     }
                     else{*/
+                    
+                    
+
                     for (int i = 0; i < hLength; i++) {
                         hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
                     }
-                    int isGoalH;
+                    if(n2->heuristicValue[0] > 0){
+                        n2->heuristicValue[0] = 1;
+                    }
+                    
+                    
+
+                    //blind(isGoal) stuff
+                    /*int isGoalH;
                     if(htn->isGoal(n2)){
                         isGoalH = 0;
                     }
@@ -470,10 +490,10 @@ namespace progression {
                         flagAchou = 1;
                         primeiro = isGoalH;
                         segundo = n2->heuristicValue[0] > 0;
-                    }
+                    }*/
                     //n2->heuristicValue[0] = 1;
 
-                    cout << "ESCREVENDO" << endl;
+                    
                     
 
                     
@@ -494,9 +514,9 @@ namespace progression {
                         if (!continueSearch)
                             break;
                     }
-
+                    n2->depth = n->depth + 1;
                     //cout << n2->heuristicValue[0] << endl;
-
+                    ramificationDegree++;
                     fringe.push(n2);
 
                 }
@@ -531,23 +551,28 @@ namespace progression {
                         
                         /*if(htn->isGoal(n2)){
                         n2->heuristicValue[0] = 0;
-                    }
-                    else{*/
+                        }
+                        else{*/
                         for (int i = 0; i < hLength; i++) {
                             hF[i]->setHeuristicValue(n2, n, j, method);
                         }
-                        int isGoalH;
-                    if(htn->isGoal(n2)){
-                        isGoalH = 0;
-                    }
-                    else{
-                        isGoalH = 1;
-                    }
-                    if(isGoalH != (n2->heuristicValue[0] > 0)){
-                        flagAchou = 1;
-                        primeiro = isGoalH;
-                        segundo = n2->heuristicValue[0] > 0;
-                    }
+                        if(n2->heuristicValue[0] > 0){
+                            n2->heuristicValue[0] = 1;
+                        }
+                        
+                            //blind(isGoal) stuff
+                        /*int isGoalH;
+                        if(htn->isGoal(n2)){
+                            isGoalH = 0;
+                        }
+                        else{
+                            isGoalH = 1;
+                        }
+                        if(isGoalH != (n2->heuristicValue[0] > 0)){
+                            flagAchou = 1;
+                            primeiro = isGoalH;
+                            segundo = n2->heuristicValue[0] > 0;
+                        }*/
                         //n2->heuristicValue[0] = 1;
                         
                         
@@ -570,12 +595,27 @@ namespace progression {
                                 break;
 
                         }
-
+                        n2->depth = n->depth + 1;
                         //cout << n2->heuristicValue[0] << endl;
-
+                        ramificationDegree++;
                         fringe.push(n2);
 
                     }
+                }
+
+                if(ramificationSet.count(n->depth) > 0){
+                    std::pair<int,int> auxPair = ramificationSet[n->depth];
+
+                    auxPair.first += ramificationDegree;
+                    auxPair.second += 1;
+                    ramificationSet.erase(n->depth);
+                    ramificationSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
+                }
+                else{
+                    std::pair<int,int> auxPair;
+                    auxPair.first = ramificationDegree;
+                    auxPair.second = 1;
+                    ramificationSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
                 }
 
 
@@ -598,8 +638,7 @@ namespace progression {
                              << " dups " << setw(9) << visitedList.attemptedInsertions - visitedList.uniqueInsertions
                              << " size " << setw(9) << visitedList.uniqueInsertions
                              << " hash fail " << setw(6) << visitedList.subHashCollision
-							 << " hash buckets " << setw(6) << visitedList.attemptedInsertions - visitedList.subHashCollision	
-                             << "ESCREVENDO " << endl;
+							 << " hash buckets " << setw(6) << visitedList.attemptedInsertions - visitedList.subHashCollision << endl;
                         lastOutput = currentT;
                     }
                     if ((timeLimit > 0) && ((currentT - startT) / 1000 > timeLimit)) {
@@ -612,6 +651,7 @@ namespace progression {
                 if (visitedList.canDeleteProcessedNodes)
                     delete n;
                 }
+
             }
 
 
@@ -834,6 +874,16 @@ namespace progression {
             cout << "- Generated " << int(double(numSearchNodes) / (currentT - startT) * 1000) << " nodes per second"
                  << endl;
             cout << "- Final fringe contains " << fringe.size() << " nodes" << endl;
+
+            
+            for(auto& [key, value]: ramificationSet){
+                if(ramificationSet.count(key) > 0){
+                    if(value.second > 0){
+                        cout << "- Avg. ramification degree with depth " << key << ": " << value.first/value.second << endl;
+                    }
+                }  
+            }
+            /*
             if(flagAchou){
                 cout << "ACHOU" << endl;
                 cout << "isGoal = " << primeiro << endl;
@@ -842,6 +892,7 @@ namespace progression {
             else{
                 cout << "NAO ACHOU";
             }
+            */
             if (this->foundSols > 1) {
                 cout << "- Found " << this->foundSols << " solutions." << endl;
                 cout << "  - first solution after " << this->firstSolTime << "ms." << endl;

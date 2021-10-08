@@ -8560,60 +8560,59 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 20
-   1s visitime    0.36s generated nodes    330141 nodes/sec  329811 cur h    1 mod.depth   22 inserts     93548 dups      9897 size     83651 hash fail  10116 hash buckets  83432
-   2s visitime    0.73s generated nodes    570279 nodes/sec  282176 cur h    1 mod.depth   23 inserts    156724 dups     12363 size    144361 hash fail  13026 hash buckets 143698
-   3s visitime    1.11s generated nodes    725364 nodes/sec  238763 cur h    1 mod.depth   23 inserts    210269 dups     23813 size    186456 hash fail  24884 hash buckets 185385
-   4s visitime    1.45s generated nodes    915478 nodes/sec  225598 cur h    1 mod.depth   24 inserts    253224 dups     24707 size    228517 hash fail  26318 hash buckets 226906
-   5s visitime    1.78s generated nodes   1140627 nodes/sec  225108 cur h    1 mod.depth   24 inserts    303278 dups     25493 size    277785 hash fail  27831 hash buckets 275447
-   6s visitime    2.11s generated nodes   1435849 nodes/sec  236042 cur h    1 mod.depth   24 inserts    368509 dups     26700 size    341809 hash fail  30195 hash buckets 338314
+   2s visitime    0.01s generated nodes     10011 nodes/sec    4815 cur h    1 mod.depth   13 inserts      2860 dups       300 size      2560 hash fail    300 hash buckets   2560
+   4s visitime    0.02s generated nodes     15013 nodes/sec    3647 cur h    1 mod.depth   14 inserts      4163 dups       474 size      3689 hash fail    474 hash buckets   3689
+   5s visitime    0.04s generated nodes     25016 nodes/sec    4391 cur h    1 mod.depth   14 inserts      6773 dups       574 size      6199 hash fail    575 hash buckets   6198
+   6s visitime    0.04s generated nodes     30021 nodes/sec    4483 cur h    1 mod.depth   15 inserts      7931 dups       593 size      7338 hash fail    594 hash buckets   7337
+   8s visitime    0.06s generated nodes     35025 nodes/sec    4185 cur h    1 mod.depth   16 inserts      9420 dups       651 size      8769 hash fail    653 hash buckets   8767
+   9s visitime    0.08s generated nodes     45030 nodes/sec    4552 cur h    1 mod.depth   16 inserts     13724 dups      1817 size     11907 hash fail   1820 hash buckets  11904
+  12s visitime    0.10s generated nodes     55037 nodes/sec    4531 cur h    1 mod.depth   17 inserts     17639 dups      3041 size     14598 hash fail   3045 hash buckets  14594
+  13s visitime    0.11s generated nodes     60038 nodes/sec    4449 cur h    1 mod.depth   17 inserts     19521 dups      3732 size     15789 hash fail   3736 hash buckets  15785
+  15s visitime    0.13s generated nodes     70038 nodes/sec    4649 cur h    1 mod.depth   18 inserts     22658 dups      4209 size     18449 hash fail   4216 hash buckets  18442
+  16s visitime    0.14s generated nodes     75038 nodes/sec    4574 cur h    1 mod.depth   18 inserts     24260 dups      4505 size     19755 hash fail   4515 hash buckets  19745
+  17s visitime    0.16s generated nodes     80038 nodes/sec    4469 cur h    1 mod.depth   19 inserts     25904 dups      4753 size     21151 hash fail   4766 hash buckets  21138
+  19s visitime    0.16s generated nodes     85039 nodes/sec    4471 cur h    1 mod.depth   19 inserts     27783 dups      5050 size     22733 hash fail   5063 hash buckets  22720
+  20s visitime    0.18s generated nodes     90040 nodes/sec    4400 cur h    1 mod.depth   19 inserts     30125 dups      5985 size     24140 hash fail   6001 hash buckets  24124
+  22s visitime    0.19s generated nodes     95043 nodes/sec    4251 cur h    1 mod.depth   20 inserts     32017 dups      6736 size     25281 hash fail   6752 hash buckets  25265
+Reached time limit - stopping search.
 Search Results
-- Search time 6.80 seconds
+- Search time 22.36 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 2.35 seconds
-- Visited list inserts 414438
-- Visited list pruned 27587
-- Visited list contains 386851
-- Visited list hash collisions 32046
-- Visited list used hash buckets 382392
-- Generated 1641056 search nodes
-  Calculated heuristic for 1392107 nodes
-  One modifications 226777
-  Effectless actions 22172
-- including 226777 one modification actions
+- Visited list time 0.19 seconds
+- Visited list inserts 32017
+- Visited list pruned 6736
+- Visited list contains 25281
+- Visited list hash collisions 6752
+- Visited list used hash buckets 25265
+- Generated 95043 search nodes
+  Calculated heuristic for 67331 nodes
+  One modifications 26574
+  Effectless actions 1138
+- including 26574 one modification actions
 - including 0 one modification methods
-- and       22172 progressions of effectless actions
-- Generated 204631 nodes per second
-- Final fringe contains 703170 nodes
-- Status: Solved
-- Found solution of length 26
-- Total costs of actions: 8
-==>
-26 plug|instance_4[blu-ray-1,blu-ray-1-cinch-2,cinch-cable-2,cinch-cable-2-cinch-1]
-106 plug|instance_7[cinch-cable-2,cinch-cable-2-cinch-2,amplifier-1,amplifier-1-cinch-2]
-1249 plug|instance_4[amplifier-1,amplifier-1-speakerWire-12,speaker-wire-1,speaker-wire-1-speakerWire-1]
-5435 plug|instance_7[speaker-wire-1,speaker-wire-1-speakerWire-2,box-1,box-1-speakerWire-1]
-35730 plug|instance_7[amplifier-1,amplifier-1-speakerWire-11,speaker-wire-2,speaker-wire-2-speakerWire-1]
-94640 plug|instance_4[speaker-wire-2,speaker-wire-2-speakerWire-2,box-2,box-2-speakerWire-1]
-432648 plug|instance_2[blu-ray-1,blu-ray-1-cinch-3,cinch-cable-4,cinch-cable-4-cinch-1]
-913443 plug|instance_3[cinch-cable-4,cinch-cable-4-cinch-2,tv-1,tv-1-cinch-6]
-root 0
-913442 direct_v_connect[cinch-cable-4,tv-1] -> <m-dconnect-v;plug[cinch-cable-4,cinch-cable-4-cinch-2,tv-1,tv-1-cinch-6];_method_for_multiple_expansions_of_plug|instance_3;0;-1> 913443
-432647 direct_v_connect[blu-ray-1,cinch-cable-4] -> <m-dconnect-v;plug[blu-ray-1,blu-ray-1-cinch-3,cinch-cable-4,cinch-cable-4-cinch-1];_method_for_multiple_expansions_of_plug|instance_2;0;-1> 432648
-280751 v_connect[blu-ray-1,cinch-cable-4] -> m-connect-direct-v 432647
-184391 v_connect[blu-ray-1,tv-1] -> m-connect-rec-v 280751 913442
-94639 plug[speaker-wire-2,speaker-wire-2-speakerWire-2,box-2,box-2-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_4 94640
-64986 direct_a_connect[speaker-wire-2,box-2] -> m-dconnect-a 94639
-35729 plug[amplifier-1,amplifier-1-speakerWire-11,speaker-wire-2,speaker-wire-2-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 35730
-28724 direct_a_connect[amplifier-1,speaker-wire-2] -> m-dconnect-a 35729
-13278 a_connect[amplifier-1,box-2] -> <m-connect-rec-a;a_connect[amplifier-1,speaker-wire-2];m-connect-direct-a;0;-1,1> 28724 64986
-5434 plug[speaker-wire-1,speaker-wire-1-speakerWire-2,box-1,box-1-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 5435
-4421 direct_a_connect[speaker-wire-1,box-1] -> m-dconnect-a 5434
-1248 plug[amplifier-1,amplifier-1-speakerWire-12,speaker-wire-1,speaker-wire-1-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_4 1249
-804 direct_a_connect[amplifier-1,speaker-wire-1] -> m-dconnect-a 1248
-412 a_connect[amplifier-1,box-1] -> <m-connect-rec-a;a_connect[amplifier-1,speaker-wire-1];m-connect-direct-a;0;-1,1> 804 4421
-105 direct_a_connect[cinch-cable-2,amplifier-1] -> <m-dconnect-a;plug[cinch-cable-2,cinch-cable-2-cinch-2,amplifier-1,amplifier-1-cinch-2];_method_for_multiple_expansions_of_plug|instance_7;0;-1> 106
-25 direct_a_connect[blu-ray-1,cinch-cable-2] -> <m-dconnect-a;plug[blu-ray-1,blu-ray-1-cinch-2,cinch-cable-2,cinch-cable-2-cinch-1];_method_for_multiple_expansions_of_plug|instance_4;0;-1> 26
-1 a_connect[blu-ray-1,amplifier-1] -> <m-connect-rec-a;a_connect[blu-ray-1,cinch-cable-2];m-connect-direct-a;0;-1,1> 25 105
-0 __top[] -> __top_method 1 412 13278 184391
-<==
+- and       1138 progressions of effectless actions
+- Generated 3011 nodes per second
+- Final fringe contains 12369 nodes
+- Avg. ramification degree with depth 0: 1
+- Avg. ramification degree with depth 1: 8
+- Avg. ramification degree with depth 2: 1
+- Avg. ramification degree with depth 3: 3
+- Avg. ramification degree with depth 4: 1
+- Avg. ramification degree with depth 5: 3
+- Avg. ramification degree with depth 6: 2
+- Avg. ramification degree with depth 7: 2
+- Avg. ramification degree with depth 8: 1
+- Avg. ramification degree with depth 9: 3
+- Avg. ramification degree with depth 10: 1
+- Avg. ramification degree with depth 11: 1
+- Avg. ramification degree with depth 12: 1
+- Avg. ramification degree with depth 13: 1
+- Avg. ramification degree with depth 14: 1
+- Avg. ramification degree with depth 15: 3
+- Avg. ramification degree with depth 16: 0
+- Avg. ramification degree with depth 17: 3
+- Avg. ramification degree with depth 18: 1
+- Avg. ramification degree with depth 19: 2
+- Avg. ramification degree with depth 20: 1
+- Status: Timeout

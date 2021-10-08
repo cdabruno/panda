@@ -24,6 +24,9 @@ num_primitive_tasks = {}
 num_non_primitive_tasks = {}
 total_tasks = {}
 num_methods = {}
+heuristic_value = {}
+expanded_nodes = {}
+solution_length = {}
 
 domains = [ 'entertainment', 
             'pcp',
@@ -85,6 +88,9 @@ for path in paths:
             num_non_primitive_tasks[p + "/" + path] = "undefined"
             total_tasks[p + "/" + path] = "undefined"
             num_methods[p + "/" + path] = "undefined"
+            heuristic_value[p + "/" + path] = "undefined"
+            solution_length[p + "/" + path] = "undefined"
+            expanded_nodes[p + "/" + path] = "undefined"
             
             #solution_text = handler.read()
             for line in handler:
@@ -94,11 +100,18 @@ for path in paths:
                 pos3 = line.find('Num non-primitive tasks:')
                 pos4 = line.find('Total tasks:')
                 pos5 = line.find('Number of methods:')
+                pos6 = line.find('- Starting state heuristic value: ')
+                pos7 = line.find('- Found solution of length')
+                pos8 = line.find('- Visited list contains')
+
                 variable_number_pos = line[pos : pos + 30]
                 num_primitive_tasks_pos = line[pos2 : pos2 + 35]
                 num_non_primitive_tasks_pos = line[pos3 : pos3 + 40]
                 total_tasks_pos = line[pos4 : pos4 + 45]
                 num_methods_pos = line[pos5 : pos5 + 45]
+                heuristic_value_pos = line[pos : pos + 30]
+                solution_length_pos = line[pos2 : pos2 + 35]
+                expanded_node_pos = line[pos8 : pos8 + 40]
 
                 
             
@@ -128,6 +141,23 @@ for path in paths:
                     num_methods_line = line.split()
                     num_m = num_methods_line[3]
                     num_methods[p + "/" + path] = num_m
+
+                if line.startswith("- Starting state heuristic value: "):
+                    heuristic_value_line = line.split()
+                    heuris_value = heuristic_value_line[5]
+                    heuristic_value[p + "/" + path] = heuris_value
+                    
+                    
+
+                if line.startswith("- Found solution of length"):
+                    solution_length_line = line.split()
+                    sol_length = solution_length_line[5]
+                    solution_length[p + "/" + path] = sol_length
+
+                if expanded_node_pos.startswith("- Visited list contains "):
+                    expanded_node_line = line.split()
+                    exp_nod = expanded_node_line[4]
+                    expanded_nodes[p + "/" + path] = exp_nod
                 
                 
                 
@@ -140,12 +170,12 @@ for path in paths:
                 
 
    
-with open('results/statistics/table.csv', 'w') as csv_file:
+with open('results/statistics/table_lmCut_vs_new_heuristics.csv', 'w') as csv_file:
         
     for domain in range(len(domains)):       
         
         writer = csv.writer(csv_file)
-        writer.writerow([""]+["num_variables", "num_primitive_tasks", "num_non_primitive_tasks", "total_tasks", "num_methods"])
+        writer.writerow([""]+["num_variables", "num_primitive_tasks", "num_non_primitive_tasks", "total_tasks", "num_methods", "initial_heuristic", "expanded_nodes", "solution_length"])
 
         list_problems = os.listdir("paper-domains/{}/problems".format(domains[domain]))
 
@@ -183,6 +213,9 @@ with open('results/statistics/table.csv', 'w') as csv_file:
                 row.append(num_non_primitive_tasks[p+"/"+path])
                 row.append(total_tasks[p+"/"+path])
                 row.append(num_methods[p+"/"+path])
+                row.append(heuristic_value[p+"/"+path])
+                row.append(expanded_nodes[p+"/"+path])
+                row.append(solution_length[p+"/"+path])
             writer.writerow(row)
         writer.writerow([])
     

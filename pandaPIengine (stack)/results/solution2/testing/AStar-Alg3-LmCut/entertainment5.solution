@@ -824,24 +824,36 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 14
 Search Results
-- Search time 0.005 seconds
+- Search time 0.027 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 0.001514 seconds
-- Visited list inserts 795
+- Visited list time 0.001706 seconds
+- Visited list inserts 675
 - Visited list pruned 60
-- Visited list contains 735
+- Visited list contains 615
 - Visited list hash collisions 60
-- Visited list used hash buckets 735
-- Generated 2376 search nodes
-  Calculated heuristic for 1866 nodes
+- Visited list used hash buckets 615
+- Generated 2136 search nodes
+  Calculated heuristic for 1626 nodes
   One modifications 402
   Effectless actions 108
 - including 402 one modification actions
 - including 0 one modification methods
 - and       108 progressions of effectless actions
-- Generated 373200 nodes per second
+- Generated 60222 nodes per second
 - Final fringe contains 191 nodes
+- Avg. ramification degree with depth 0: 1
+- Avg. ramification degree with depth 1: 2
+- Avg. ramification degree with depth 2: 1
+- Avg. ramification degree with depth 3: 2
+- Avg. ramification degree with depth 4: 7
+- Avg. ramification degree with depth 5: 1
+- Avg. ramification degree with depth 6: 1
+- Avg. ramification degree with depth 7: 2
+- Avg. ramification degree with depth 8: 2
+- Avg. ramification degree with depth 9: 1
+- Avg. ramification degree with depth 10: 1
+- Avg. ramification degree with depth 11: 1
 - Status: Solved
 - Found solution of length 18
 - Total costs of actions: 6
@@ -850,13 +862,13 @@ Search Results
 18 plug|instance_7[cinch-cable-2,cinch-cable-2-cinch-2,active-speaker-1,active-speaker-1-cinch-1]
 112 plug|instance_1[dvd-1,dvd-1-scart-1,scart-cable-3,scart-cable-3-scart-1]
 244 plug|instance_1[scart-cable-3,scart-cable-3-scart-2,tv1-1,tv1-1-scart-1]
-845 plug|instance_1[game-console-1,game-console-1-scart-1,scart-cable-1,scart-cable-1-scart-1]
-2149 plug|instance_1[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-2]
+982 plug|instance_1[game-console-1,game-console-1-scart-1,scart-cable-1,scart-cable-1-scart-1]
+1665 plug|instance_1[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-2]
 root 0
-2148 direct_av_connect[scart-cable-1,tv1-1] -> <m-dconnect-av;plug[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-2];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 2149
-1559 av_connect[scart-cable-1,tv1-1] -> m-connect-direct-av 2148
-844 direct_av_connect[game-console-1,scart-cable-1] -> <m-dconnect-av;plug[game-console-1,game-console-1-scart-1,scart-cable-1,scart-cable-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 845
-499 av_connect[game-console-1,tv1-1] -> m-connect-rec-av-1 844 1559
+1664 direct_av_connect[scart-cable-1,tv1-1] -> <m-dconnect-av;plug[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-2];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 1665
+1498 av_connect[scart-cable-1,tv1-1] -> m-connect-direct-av 1664
+981 direct_av_connect[game-console-1,scart-cable-1] -> <m-dconnect-av;plug[game-console-1,game-console-1-scart-1,scart-cable-1,scart-cable-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 982
+499 av_connect[game-console-1,tv1-1] -> m-connect-rec-av-1 981 1498
 243 direct_av_connect[scart-cable-3,tv1-1] -> <m-dconnect-av;plug[scart-cable-3,scart-cable-3-scart-2,tv1-1,tv1-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 244
 173 av_connect[scart-cable-3,tv1-1] -> m-connect-direct-av 243
 111 direct_av_connect[dvd-1,scart-cable-3] -> <m-dconnect-av;plug[dvd-1,dvd-1-scart-1,scart-cable-3,scart-cable-3-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 112

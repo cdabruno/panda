@@ -344,44 +344,56 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 10
 Search Results
-- Search time 0.001 seconds
+- Search time 0.004 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 0.00018 seconds
-- Visited list inserts 90
-- Visited list pruned 11
-- Visited list contains 79
-- Visited list hash collisions 11
-- Visited list used hash buckets 79
-- Generated 219 search nodes
-  Calculated heuristic for 164 nodes
+- Visited list time 0.000171 seconds
+- Visited list inserts 72
+- Visited list pruned 5
+- Visited list contains 67
+- Visited list hash collisions 5
+- Visited list used hash buckets 67
+- Generated 189 search nodes
+  Calculated heuristic for 140 nodes
   One modifications 44
-  Effectless actions 11
+  Effectless actions 5
 - including 44 one modification actions
 - including 0 one modification methods
-- and       11 progressions of effectless actions
-- Generated 164000 nodes per second
+- and       5 progressions of effectless actions
+- Generated 35000 nodes per second
 - Final fringe contains 5 nodes
+- Avg. ramification degree with depth 0: 1
+- Avg. ramification degree with depth 1: 6
+- Avg. ramification degree with depth 2: 1
+- Avg. ramification degree with depth 3: 1
+- Avg. ramification degree with depth 4: 1
+- Avg. ramification degree with depth 5: 1
+- Avg. ramification degree with depth 6: 1
+- Avg. ramification degree with depth 7: 1
+- Avg. ramification degree with depth 8: 1
+- Avg. ramification degree with depth 9: 1
+- Avg. ramification degree with depth 10: 1
+- Avg. ramification degree with depth 11: 1
 - Status: Solved
 - Found solution of length 18
 - Total costs of actions: 6
 ==>
 19 plug|instance_1[dvd-1,dvd-1-scart-1,scart-to-cinch-1,scart-to-cinch-1-scart-1]
-89 plug|instance_2[scart-to-cinch-1,scart-to-cinch-1-cinch-3,cinch-cable-2,cinch-cable-2-cinch-1]
-108 plug|instance_3[cinch-cable-2,cinch-cable-2-cinch-2,cinch-to-scart-1,cinch-to-scart-1-cinch-3]
-163 plug|instance_4[scart-to-cinch-1,scart-to-cinch-1-cinch-2,cinch-cable-1,cinch-cable-1-cinch-1]
-182 plug|instance_7[cinch-cable-1,cinch-cable-1-cinch-2,cinch-to-scart-1,cinch-to-scart-1-cinch-2]
-217 plug|instance_1[cinch-to-scart-1,cinch-to-scart-1-scart-1,simple-tv-1,simple-tv-1-scart-1]
+74 plug|instance_2[scart-to-cinch-1,scart-to-cinch-1-cinch-3,cinch-cable-2,cinch-cable-2-cinch-1]
+107 plug|instance_3[cinch-cable-2,cinch-cable-2-cinch-2,cinch-to-scart-1,cinch-to-scart-1-cinch-3]
+141 plug|instance_4[scart-to-cinch-1,scart-to-cinch-1-cinch-2,cinch-cable-1,cinch-cable-1-cinch-1]
+159 plug|instance_7[cinch-cable-1,cinch-cable-1-cinch-2,cinch-to-scart-1,cinch-to-scart-1-cinch-2]
+178 plug|instance_1[cinch-to-scart-1,cinch-to-scart-1-scart-1,simple-tv-1,simple-tv-1-scart-1]
 root 0
-216 direct_av_connect[cinch-to-scart-1,simple-tv-1] -> <m-dconnect-av;plug[cinch-to-scart-1,cinch-to-scart-1-scart-1,simple-tv-1,simple-tv-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 217
-199 av_connect[cinch-to-scart-1,simple-tv-1] -> m-connect-direct-av 216
-181 direct_a_connect[cinch-cable-1,cinch-to-scart-1] -> <m-dconnect-a;plug[cinch-cable-1,cinch-cable-1-cinch-2,cinch-to-scart-1,cinch-to-scart-1-cinch-2];_method_for_multiple_expansions_of_plug|instance_7;0;-1> 182
-162 direct_a_connect[scart-to-cinch-1,cinch-cable-1] -> <m-dconnect-a;plug[scart-to-cinch-1,scart-to-cinch-1-cinch-2,cinch-cable-1,cinch-cable-1-cinch-1];_method_for_multiple_expansions_of_plug|instance_4;0;-1> 163
-141 a_connect[scart-to-cinch-1,cinch-to-scart-1] -> <m-connect-rec-a;a_connect[scart-to-cinch-1,cinch-cable-1];m-connect-direct-a;0;-1,1> 162 181
-107 direct_v_connect[cinch-cable-2,cinch-to-scart-1] -> <m-dconnect-v;plug[cinch-cable-2,cinch-cable-2-cinch-2,cinch-to-scart-1,cinch-to-scart-1-cinch-3];_method_for_multiple_expansions_of_plug|instance_3;0;-1> 108
-88 direct_v_connect[scart-to-cinch-1,cinch-cable-2] -> <m-dconnect-v;plug[scart-to-cinch-1,scart-to-cinch-1-cinch-3,cinch-cable-2,cinch-cable-2-cinch-1];_method_for_multiple_expansions_of_plug|instance_2;0;-1> 89
-60 v_connect[scart-to-cinch-1,cinch-to-scart-1] -> <m-connect-rec-v;v_connect[scart-to-cinch-1,cinch-cable-2];m-connect-direct-v;0;-1,1> 88 107
-40 av_connect[scart-to-cinch-1,simple-tv-1] -> m-connect-split-2 60 141 199
+177 direct_av_connect[cinch-to-scart-1,simple-tv-1] -> <m-dconnect-av;plug[cinch-to-scart-1,cinch-to-scart-1-scart-1,simple-tv-1,simple-tv-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 178
+169 av_connect[cinch-to-scart-1,simple-tv-1] -> m-connect-direct-av 177
+158 direct_a_connect[cinch-cable-1,cinch-to-scart-1] -> <m-dconnect-a;plug[cinch-cable-1,cinch-cable-1-cinch-2,cinch-to-scart-1,cinch-to-scart-1-cinch-2];_method_for_multiple_expansions_of_plug|instance_7;0;-1> 159
+140 direct_a_connect[scart-to-cinch-1,cinch-cable-1] -> <m-dconnect-a;plug[scart-to-cinch-1,scart-to-cinch-1-cinch-2,cinch-cable-1,cinch-cable-1-cinch-1];_method_for_multiple_expansions_of_plug|instance_4;0;-1> 141
+127 a_connect[scart-to-cinch-1,cinch-to-scart-1] -> <m-connect-rec-a;a_connect[scart-to-cinch-1,cinch-cable-1];m-connect-direct-a;0;-1,1> 140 158
+106 direct_v_connect[cinch-cable-2,cinch-to-scart-1] -> <m-dconnect-v;plug[cinch-cable-2,cinch-cable-2-cinch-2,cinch-to-scart-1,cinch-to-scart-1-cinch-3];_method_for_multiple_expansions_of_plug|instance_3;0;-1> 107
+73 direct_v_connect[scart-to-cinch-1,cinch-cable-2] -> <m-dconnect-v;plug[scart-to-cinch-1,scart-to-cinch-1-cinch-3,cinch-cable-2,cinch-cable-2-cinch-1];_method_for_multiple_expansions_of_plug|instance_2;0;-1> 74
+60 v_connect[scart-to-cinch-1,cinch-to-scart-1] -> <m-connect-rec-v;v_connect[scart-to-cinch-1,cinch-cable-2];m-connect-direct-v;0;-1,1> 73 106
+40 av_connect[scart-to-cinch-1,simple-tv-1] -> m-connect-split-2 60 127 169
 18 direct_av_connect[dvd-1,scart-to-cinch-1] -> <m-dconnect-av;plug[dvd-1,dvd-1-scart-1,scart-to-cinch-1,scart-to-cinch-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 19
 1 av_connect[dvd-1,simple-tv-1] -> m-connect-rec-av-1 18 40
 0 __top[] -> __top_method 1
