@@ -190,14 +190,24 @@ public:
                     s0set.insert(factory->t2tdr(t));
             }
         }
-        for (int i = 0; i < n->numPrimitive; i++) {
+
+        //cout << "legal" << endl;
+        // UNCOMMENT THIS FOR REACHABILITY FACTS
+        /*for (int i = 0; i < n->numPrimitive; i++) {
             // add reachability facts
             for (int j = 0; j < n->unconstraintPrimitive[i]->numReachableT; j++) {
                 int t = n->unconstraintPrimitive[i]->reachableT[j];
                 if (t < htn->numActions)
                     s0set.insert(factory->t2tdr(t));
             }
+        }*/
+
+        //UNCOMMENT THIS TO IGNORE REACHABILITY FACTS
+        for (int i = 0; i < n->numPrimitive; i++) {
+            s0set.insert(factory->t2tdr(i));
         }
+
+
 
         // generate goal
         gset.clear();

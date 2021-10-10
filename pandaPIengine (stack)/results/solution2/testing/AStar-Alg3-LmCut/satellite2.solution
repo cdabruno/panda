@@ -149,35 +149,35 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 5
 Search Results
-- Search time 0.001 seconds
+- Search time 0.002 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 5.1e-05 seconds
-- Visited list inserts 29
+- Visited list time 4.3e-05 seconds
+- Visited list inserts 8
 - Visited list pruned 0
-- Visited list contains 29
+- Visited list contains 8
 - Visited list hash collisions 0
-- Visited list used hash buckets 29
-- Generated 236 search nodes
-  Calculated heuristic for 148 nodes
-  One modifications 82
-  Effectless actions 6
-- including 82 one modification actions
+- Visited list used hash buckets 8
+- Generated 100 search nodes
+  Calculated heuristic for 64 nodes
+  One modifications 35
+  Effectless actions 1
+- including 35 one modification actions
 - including 0 one modification methods
-- and       6 progressions of effectless actions
-- Generated 148000 nodes per second
-- Final fringe contains 5 nodes
+- and       1 progressions of effectless actions
+- Generated 32000 nodes per second
+- Final fringe contains 9 nodes
 - Status: Solved
 - Found solution of length 8
 - Total costs of actions: 5
 ==>
-21 switch_on[instrument1,satellite1]
-128 turn_to[satellite1,star0,phenomenon2]
-129 calibrate[satellite1,instrument1,star0]
-130 turn_to[satellite1,phenomenon1,star0]
-131 take_image[satellite1,phenomenon1,instrument1,image1]
-root 0
-127 auto_calibrate[satellite1,instrument1] -> method6 128 129
-20 do_observation[phenomenon1,image1] -> <method0;activate_instrument[satellite1,instrument1];method5;0;-1,-2,1,2> 21 127 130 131
-0 __top[] -> __top_method 20
+43 switch_on[instrument0,satellite0]
+93 turn_to[satellite0,star0,phenomenon1]
+94 calibrate[satellite0,instrument0,star0]
+95 turn_to[satellite0,star5,star0]
+96 take_image[satellite0,star5,instrument0,image1]
+root 2
+92 auto_calibrate[satellite0,instrument0] -> method6 93 94
+42 do_observation[star5,image1] -> <method0;activate_instrument[satellite0,instrument0];method5;0;-1,-2,1,2> 43 92 95 96
+2 __top[] -> __top_method 42
 <==

@@ -253,65 +253,23 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 14
-   1s visitime    0.39s generated nodes    370414 nodes/sec  365299 cur h    1 mod.depth    7 inserts    120529 dups     72403 size     48126 hash fail  72468 hash buckets  48061
-   2s visitime    0.88s generated nodes    600551 nodes/sec  284082 cur h    1 mod.depth    9 inserts    244960 dups    162173 size     82787 hash fail 162380 hash buckets  82580
-   3s visitime    1.29s generated nodes    835722 nodes/sec  267773 cur h    1 mod.depth   10 inserts    344298 dups    225739 size    118559 hash fail 226175 hash buckets 118123
-   4s visitime    1.69s generated nodes   1131013 nodes/sec  272730 cur h    1 mod.depth   10 inserts    438328 dups    277644 size    160684 hash fail 278437 hash buckets 159891
-   5s visitime    2.12s generated nodes   1351170 nodes/sec  261956 cur h    1 mod.depth   11 inserts    533779 dups    340202 size    193577 hash fail 341307 hash buckets 192472
-   6s visitime    2.64s generated nodes   1521291 nodes/sec  241820 cur h    1 mod.depth   11 inserts    648157 dups    429525 size    218632 hash fail 430928 hash buckets 217229
-   7s visitime    3.06s generated nodes   1751445 nodes/sec  239628 cur h    1 mod.depth   12 inserts    736281 dups    477821 size    258460 hash fail 479748 hash buckets 256533
-   8s visitime    3.51s generated nodes   1981623 nodes/sec  238147 cur h    1 mod.depth   13 inserts    837894 dups    544799 size    293095 hash fail 547278 hash buckets 290616
-   9s visitime    4.00s generated nodes   2131746 nodes/sec  228629 cur h    1 mod.depth   14 inserts    944942 dups    629986 size    314956 hash fail 632887 hash buckets 312055
-  10s visitime    4.47s generated nodes   2351910 nodes/sec  227721 cur h    1 mod.depth   15 inserts   1050668 dups    702429 size    348239 hash fail 706014 hash buckets 344654
-  11s visitime    4.95s generated nodes   2572053 nodes/sec  226552 cur h    1 mod.depth   16 inserts   1159130 dups    775849 size    383281 hash fail 780176 hash buckets 378954
 Search Results
-- Search time 11.76 seconds
+- Search time 0.07 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 5.15 seconds
-- Visited list inserts 1207569
-- Visited list pruned 809756
-- Visited list contains 397813
-- Visited list hash collisions 814425
-- Visited list used hash buckets 393144
-- Generated 2663334 search nodes
-  Calculated heuristic for 1833036 nodes
-  One modifications 735551
-  Effectless actions 94747
-- including 735551 one modification actions
+- Visited list time 0.001553 seconds
+- Visited list inserts 366
+- Visited list pruned 210
+- Visited list contains 156
+- Visited list hash collisions 210
+- Visited list used hash buckets 156
+- Generated 2310 search nodes
+  Calculated heuristic for 2310 nodes
+  One modifications 0
+  Effectless actions 0
+- including 0 one modification actions
 - including 0 one modification methods
-- and       94747 progressions of effectless actions
-- Generated 155857 nodes per second
-- Final fringe contains 53 nodes
-- Status: Solved
-- Found solution of length 26
-- Total costs of actions: 16
-==>
-7315 switch_on[instrument03,satellite0]
-64605 turn_to[satellite0,GroundStation0,Phenomenon6]
-154269 calibrate[satellite0,instrument03,GroundStation0]
-968401 turn_to[satellite0,Phenomenon6,GroundStation0]
-968402 take_image[satellite0,Phenomenon6,instrument03,hd_video]
-2011122 switch_off[instrument03,satellite0]
-2213282 switch_on[instrument02,satellite0]
-2550086 turn_to[satellite0,GroundStation0,Phenomenon6]
-2597479 calibrate[satellite0,instrument02,GroundStation0]
-2639994 turn_to[satellite0,Star5,GroundStation0]
-2639995 take_image[satellite0,Star5,instrument02,x_ray]
-2639996 switch_on[instrument11,satellite1]
-2662355 turn_to[satellite1,GroundStation1,Phenomenon7]
-2662356 calibrate[satellite1,instrument11,GroundStation1]
-2662357 turn_to[satellite1,Phenomenon4,GroundStation1]
-2662358 take_image[satellite1,Phenomenon4,instrument11,thermograph]
-root 0
-2662354 auto_calibrate[satellite1,instrument11] -> method6 2662355 2662356
-2436417 auto_calibrate[satellite0,instrument02] -> method6 2550086 2597479
-1663508 activate_instrument[satellite0,instrument02] -> method4 2011122 2213282 2436417
-685575 activate_instrument[satellite1,instrument11] -> method5 2639996 2662354
-453821 do_observation[Phenomenon4,thermograph] -> method0 685575 2662357 2662358
-359746 do_observation[Star5,x_ray] -> method0 1663508 2639994 2639995
-33979 auto_calibrate[satellite0,instrument03] -> method6 64605 154269
-1007 activate_instrument[satellite0,instrument03] -> method5 7315 33979
-39 do_observation[Phenomenon6,hd_video] -> method0 1007 968401 968402
-0 __top[] -> __top_method 453821 359746 39
-<==
+- and       0 progressions of effectless actions
+- Generated 33000 nodes per second
+- Final fringe contains 0 nodes
+- Status: Proven unsolvable

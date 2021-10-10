@@ -275,40 +275,22 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 13
 Search Results
-- Search time 0.015 seconds
+- Search time 0.002 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 0.007082 seconds
-- Visited list inserts 4228
-- Visited list pruned 2798
-- Visited list contains 1430
-- Visited list hash collisions 2798
-- Visited list used hash buckets 1430
-- Generated 7254 search nodes
-  Calculated heuristic for 5735 nodes
-  One modifications 1519
+- Visited list time 1.4e-05 seconds
+- Visited list inserts 2
+- Visited list pruned 0
+- Visited list contains 2
+- Visited list hash collisions 0
+- Visited list used hash buckets 2
+- Generated 13 search nodes
+  Calculated heuristic for 13 nodes
+  One modifications 0
   Effectless actions 0
-- including 1519 one modification actions
+- including 0 one modification actions
 - including 0 one modification methods
 - and       0 progressions of effectless actions
-- Generated 382333 nodes per second
-- Final fringe contains 122 nodes
-- Status: Solved
-- Found solution of length 13
-- Total costs of actions: 6
-==>
-181 do_saw_medium[b0,p1,walnut,smooth,s6,s5,s4]
-2621 do_grind[p0,verysmooth,natural,glazed,untreated]
-5484 do_spray_varnish[p0,spray_varnisher0,blue,verysmooth]
-5868 do_plane[p5,rough,natural,glazed]
-7045 do_spray_varnish[p5,spray_varnisher0,blue,smooth]
-7046 do_glaze[p1,glazer0,blue]
-root 0
-6667 method12_splitted_5[p5,blue] -> <_splitting_method_method12_splitted_5;do_colour[p5,blue,spray_varnisher0];method1;0;-1> 7045
-3717 method12_splitted_5[p0,blue] -> <_splitting_method_method12_splitted_5;do_colour[p0,blue,spray_varnisher0];method1;0;-1> 5484
-1462 method12_splitted_2[p5,rough,smooth,untreated] -> <_splitting_method_method12_splitted_2;grindNplane[p5,rough,natural,glazed,smooth,natural,untreated];method7;0;-1> 5868
-797 method11_splitted_1[p1,blue] -> <_splitting_method_method11_splitted_1;do_colour[p1,blue,glazer0];method2;0;-1> 7046
-76 process[p1,blue,smooth,smooth] -> <<method11;cut_and_saw[b0,p1,walnut,smooth];method10;0;-1,1>;do_saw[b0,p1,walnut,smooth];method8;0;-1,1> 181 797
-1 method12_splitted_2[p0,verysmooth,verysmooth,untreated] -> <_splitting_method_method12_splitted_2;grindNplane[p0,verysmooth,natural,glazed,verysmooth,natural,untreated];method3;0;-1> 2621
-0 __top[] -> <<__top_method;process[p5,blue,rough,smooth];method12;2;0,1,-1,-2>;process[p0,blue,verysmooth,verysmooth];method12;0;-1,-2,1,2,3> 1 3717 76 1462 6667
-<==
+- Generated 6500 nodes per second
+- Final fringe contains 0 nodes
+- Status: Proven unsolvable

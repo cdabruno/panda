@@ -149,38 +149,22 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 8
 Search Results
-- Search time 0.014 seconds
+- Search time 0.001 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 0.004983 seconds
-- Visited list inserts 2869
-- Visited list pruned 1550
-- Visited list contains 1319
-- Visited list hash collisions 1551
-- Visited list used hash buckets 1318
-- Generated 10946 search nodes
-  Calculated heuristic for 6692 nodes
-  One modifications 3724
-  Effectless actions 530
-- including 3724 one modification actions
+- Visited list time 1.6e-05 seconds
+- Visited list inserts 2
+- Visited list pruned 0
+- Visited list contains 2
+- Visited list hash collisions 0
+- Visited list used hash buckets 2
+- Generated 34 search nodes
+  Calculated heuristic for 34 nodes
+  One modifications 0
+  Effectless actions 0
+- including 0 one modification actions
 - including 0 one modification methods
-- and       530 progressions of effectless actions
-- Generated 478000 nodes per second
-- Final fringe contains 111 nodes
-- Status: Solved
-- Found solution of length 11
-- Total costs of actions: 7
-==>
-740 switch_on[instrument0,satellite0]
-3055 turn_to[satellite0,GroundStation0,Phenomenon6]
-3056 calibrate[satellite0,instrument0,GroundStation0]
-3057 turn_to[satellite0,Star5,GroundStation0]
-3058 take_image[satellite0,Star5,instrument0,thermograph]
-3059 turn_to[satellite0,Phenomenon4,Star5]
-3060 take_image[satellite0,Phenomenon4,instrument0,thermograph]
-root 0
-3054 auto_calibrate[satellite0,instrument0] -> method6 3055 3056
-1284 do_observation[Phenomenon4,thermograph] -> <method1;method1_splitted_1[satellite0,Phenomenon4,thermograph];_splitting_method_method1_splitted_1;1;0,-1> 3059 3060
-31 do_observation[Star5,thermograph] -> <method0;activate_instrument[satellite0,instrument0];method5;0;-1,-2,1,2> 740 3054 3057 3058
-0 __top[] -> __top_method 1284 31
-<==
+- and       0 progressions of effectless actions
+- Generated 34000 nodes per second
+- Final fringe contains 0 nodes
+- Status: Proven unsolvable

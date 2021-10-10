@@ -16,7 +16,7 @@ Calculate SCCs...
 - The problem is acyclic
 Selected Planning Algorithm: progression searchParsing heuristics ...
 Number of specified heuristics: 1
-- Calculating minimal implied costs and distances (1 ms)
+- Calculating minimal implied costs and distances (0 ms)
 Heuristic #0 = hhRC2(lmc;distance;correct count)
 Search config:
  - type: path cost
@@ -257,46 +257,37 @@ Search Results
 - Search time 0.003 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 0.00017 seconds
-- Visited list inserts 82
-- Visited list pruned 10
-- Visited list contains 72
-- Visited list hash collisions 10
-- Visited list used hash buckets 72
-- Generated 235 search nodes
-  Calculated heuristic for 179 nodes
-  One modifications 42
-  Effectless actions 14
-- including 42 one modification actions
+- Visited list time 7.5e-05 seconds
+- Visited list inserts 20
+- Visited list pruned 0
+- Visited list contains 20
+- Visited list hash collisions 0
+- Visited list used hash buckets 20
+- Generated 65 search nodes
+  Calculated heuristic for 51 nodes
+  One modifications 14
+  Effectless actions 0
+- including 14 one modification actions
 - including 0 one modification methods
-- and       14 progressions of effectless actions
-- Generated 59666 nodes per second
+- and       0 progressions of effectless actions
+- Generated 17000 nodes per second
 - Final fringe contains 15 nodes
-- Avg. ramification degree with depth 0: 1
-- Avg. ramification degree with depth 1: 5
-- Avg. ramification degree with depth 2: 1
-- Avg. ramification degree with depth 3: 1
-- Avg. ramification degree with depth 4: 2
-- Avg. ramification degree with depth 5: 1
-- Avg. ramification degree with depth 6: 1
-- Avg. ramification degree with depth 7: 1
-- Avg. ramification degree with depth 8: 1
 - Status: Solved
 - Found solution of length 13
 - Total costs of actions: 4
 ==>
-14 plug|instance_1[dvd-1,dvd-1-scart-1,scart-cable-1,scart-cable-1-scart-1]
-63 plug|instance_1[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-2]
-134 plug|instance_1[game-console-1,game-console-1-scart-1,scart-cable-2,scart-cable-2-scart-1]
-217 plug|instance_1[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-1]
+11 plug|instance_1[dvd-1,dvd-1-scart-1,scart-cable-2,scart-cable-2-scart-1]
+24 plug|instance_1[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-1]
+44 plug|instance_1[game-console-1,game-console-1-scart-1,scart-cable-1,scart-cable-1-scart-1]
+54 plug|instance_1[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-2]
 root 0
-216 direct_av_connect[scart-cable-2,tv1-1] -> <m-dconnect-av;plug[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 217
-176 av_connect[scart-cable-2,tv1-1] -> m-connect-direct-av 216
-133 direct_av_connect[game-console-1,scart-cable-2] -> <m-dconnect-av;plug[game-console-1,game-console-1-scart-1,scart-cable-2,scart-cable-2-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 134
-100 av_connect[game-console-1,tv1-1] -> m-connect-rec-av-1 133 176
-62 direct_av_connect[scart-cable-1,tv1-1] -> <m-dconnect-av;plug[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-2];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 63
-26 av_connect[scart-cable-1,tv1-1] -> m-connect-direct-av 62
-13 direct_av_connect[dvd-1,scart-cable-1] -> <m-dconnect-av;plug[dvd-1,dvd-1-scart-1,scart-cable-1,scart-cable-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 14
-2 av_connect[dvd-1,tv1-1] -> m-connect-rec-av-1 13 26
-0 __top[] -> __top_method 2 100
+53 direct_av_connect[scart-cable-1,tv1-1] -> <m-dconnect-av;plug[scart-cable-1,scart-cable-1-scart-2,tv1-1,tv1-1-scart-2];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 54
+45 av_connect[scart-cable-1,tv1-1] -> m-connect-direct-av 53
+43 direct_av_connect[game-console-1,scart-cable-1] -> <m-dconnect-av;plug[game-console-1,game-console-1-scart-1,scart-cable-1,scart-cable-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 44
+28 av_connect[game-console-1,tv1-1] -> m-connect-rec-av-1 43 45
+23 direct_av_connect[scart-cable-2,tv1-1] -> <m-dconnect-av;plug[scart-cable-2,scart-cable-2-scart-2,tv1-1,tv1-1-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 24
+18 av_connect[scart-cable-2,tv1-1] -> m-connect-direct-av 23
+10 direct_av_connect[dvd-1,scart-cable-2] -> <m-dconnect-av;plug[dvd-1,dvd-1-scart-1,scart-cable-2,scart-cable-2-scart-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 11
+1 av_connect[dvd-1,tv1-1] -> m-connect-rec-av-1 10 18
+0 __top[] -> __top_method 1 28
 <==

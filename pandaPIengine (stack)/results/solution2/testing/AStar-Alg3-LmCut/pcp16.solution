@@ -73,83 +73,23 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 7
-   1s visitime    0.24s generated nodes    285364 nodes/sec  281701 cur h    1 mod.depth   26 inserts     47736 dups     21908 size     25828 hash fail  21933 hash buckets  25803
-   2s visitime    0.51s generated nodes    685845 nodes/sec  339527 cur h    1 mod.depth   28 inserts    117337 dups     53358 size     63979 hash fail  53492 hash buckets  63845
-   3s visitime    0.72s generated nodes   1066311 nodes/sec  352266 cur h    1 mod.depth   30 inserts    164119 dups     72731 size     91388 hash fail  72990 hash buckets  91129
-   4s visitime    0.99s generated nodes   1286586 nodes/sec  318856 cur h    1 mod.depth   31 inserts    203452 dups     93467 size    109985 hash fail  93834 hash buckets 109618
-   5s visitime    1.25s generated nodes   1526812 nodes/sec  302818 cur h    1 mod.depth   32 inserts    239753 dups    105764 size    133989 hash fail 106286 hash buckets 133467
-   6s visitime    1.51s generated nodes   1762068 nodes/sec  290578 cur h    1 mod.depth   32 inserts    274067 dups    114625 size    159442 hash fail 115328 hash buckets 158739
-   7s visitime    1.85s generated nodes   2022299 nodes/sec  285675 cur h    1 mod.depth   32 inserts    338793 dups    150893 size    187900 hash fail 151877 hash buckets 186916
-   8s visitime    2.17s generated nodes   2297601 nodes/sec  284391 cur h    1 mod.depth   33 inserts    401895 dups    188513 size    213382 hash fail 189808 hash buckets 212087
-   9s visitime    2.35s generated nodes   2663061 nodes/sec  293191 cur h    1 mod.depth   34 inserts    437114 dups    198596 size    238518 hash fail 200229 hash buckets 236885
-  10s visitime    2.51s generated nodes   2928458 nodes/sec  289745 cur h    1 mod.depth   34 inserts    460564 dups    204561 size    256003 hash fail 206455 hash buckets 254109
-  11s visitime    2.69s generated nodes   3118786 nodes/sec  280516 cur h    1 mod.depth   34 inserts    481892 dups    213163 size    268729 hash fail 215235 hash buckets 266657
-  12s visitime    2.91s generated nodes   3299082 nodes/sec  271954 cur h    1 mod.depth   34 inserts    507403 dups    226429 size    280974 hash fail 228693 hash buckets 278710
-  13s visitime    3.17s generated nodes   3509334 nodes/sec  266930 cur h    1 mod.depth   34 inserts    548032 dups    252431 size    295601 hash fail 254965 hash buckets 293067
-  14s visitime    3.48s generated nodes   3814660 nodes/sec  269492 cur h    1 mod.depth   35 inserts    603368 dups    278407 size    324961 hash fail 281482 hash buckets 321886
-  15s visitime    3.80s generated nodes   4145069 nodes/sec  273457 cur h    1 mod.depth   35 inserts    661141 dups    304356 size    356785 hash fail 308097 hash buckets 353044
-  16s visitime    4.06s generated nodes   4445362 nodes/sec  274812 cur h    1 mod.depth   36 inserts    702783 dups    315754 size    387029 hash fail 320101 hash buckets 382682
-  17s visitime    4.30s generated nodes   4670599 nodes/sec  271688 cur h    1 mod.depth   36 inserts    730315 dups    318898 size    411417 hash fail 323842 hash buckets 406473
-  18s visitime    4.55s generated nodes   4915909 nodes/sec  270104 cur h    1 mod.depth   36 inserts    763741 dups    325647 size    438094 hash fail 331224 hash buckets 432517
 Search Results
-- Search time 18.62 seconds
+- Search time 0 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 4.67 seconds
-- Visited list inserts 783621
-- Visited list pruned 330937
-- Visited list contains 452684
-- Visited list hash collisions 336888
-- Visited list used hash buckets 446733
-- Generated 5050312 search nodes
-  Calculated heuristic for 3061609 nodes
-  One modifications 1988703
+- Visited list time 1.3e-05 seconds
+- Visited list inserts 2
+- Visited list pruned 0
+- Visited list contains 2
+- Visited list hash collisions 0
+- Visited list used hash buckets 2
+- Generated 14 search nodes
+  Calculated heuristic for 14 nodes
+  One modifications 0
   Effectless actions 0
-- including 1988703 one modification actions
+- including 0 one modification actions
 - including 0 one modification methods
 - and       0 progressions of effectless actions
-- Generated 164434 nodes per second
-- Final fringe contains 580338 nodes
-- Status: Solved
-- Found solution of length 37
-- Total costs of actions: 26
-==>
-131 t2G1[]
-460 t2G2[]
-1008 t2G1[]
-1720 t2G2[]
-2921 t3G1[]
-6132 t3G2[]
-12968 t1G1[]
-22669 t1G2[]
-39059 t1G1[]
-39060 t1G2[]
-39061 p1G1[]
-39062 p1G2[]
-39063 p1G1[]
-39064 p1G2[]
-39065 p1G1[]
-39066 p1G2[]
-39067 p1G1[]
-39068 p1G2[]
-39069 p0G1[]
-39070 p0G2[]
-39071 p0G1[]
-39072 p0G2[]
-39073 p0G1[]
-39074 p0G2[]
-39075 p0G1[]
-39076 p0G2[]
-root 0
-39058 SG1[] -> G1_S2t1_1_1 39059 39061 39063
-28523 SG2[] -> G2_S2t1_1 39060 39062
-12967 SG1[] -> G1_S2t1_S_1_1 12968 39058 39065 39067
-8500 SG2[] -> G2_S2t1_S_1 22669 28523 39064
-2920 SG2[] -> G2_S2t3_S_1_1 6132 8500 39066 39068
-2832 SG1[] -> G1_S2t3_S_0_0 2921 12967 39069 39071
-1007 SG2[] -> G2_S2t2_S_0_0 1720 2920 39070 39072
-459 SG1[] -> G1_S2t2_S_0 1008 2832 39073
-223 SG2[] -> G2_S2t2_S_0_0 460 1007 39074 39076
-5 SG1[] -> G1_S2t2_S_0 131 459 39075
-0 __top[] -> __top_method 5 223
-<==
+- Generated -2147483648 nodes per second
+- Final fringe contains 0 nodes
+- Status: Proven unsolvable

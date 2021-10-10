@@ -164,43 +164,22 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 10
 Search Results
-- Search time 0.016 seconds
+- Search time 0.003 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 0.005952 seconds
-- Visited list inserts 3449
-- Visited list pruned 1727
-- Visited list contains 1722
-- Visited list hash collisions 1727
-- Visited list used hash buckets 1722
-- Generated 10721 search nodes
-  Calculated heuristic for 6802 nodes
-  One modifications 3486
-  Effectless actions 433
-- including 3486 one modification actions
+- Visited list time 8.1e-05 seconds
+- Visited list inserts 24
+- Visited list pruned 8
+- Visited list contains 16
+- Visited list hash collisions 8
+- Visited list used hash buckets 16
+- Generated 134 search nodes
+  Calculated heuristic for 134 nodes
+  One modifications 0
+  Effectless actions 0
+- including 0 one modification actions
 - including 0 one modification methods
-- and       433 progressions of effectless actions
-- Generated 425125 nodes per second
-- Final fringe contains 9 nodes
-- Status: Solved
-- Found solution of length 16
-- Total costs of actions: 10
-==>
-23 switch_on[instrument1,satellite1]
-1993 turn_to[satellite1,GroundStation1,Phenomenon7]
-4875 switch_on[instrument02,satellite0]
-6190 calibrate[satellite1,instrument1,GroundStation1]
-9663 turn_to[satellite0,GroundStation0,Phenomenon6]
-10182 turn_to[satellite1,Phenomenon4,GroundStation1]
-10183 take_image[satellite1,Phenomenon4,instrument1,thermograph]
-10184 calibrate[satellite0,instrument02,GroundStation0]
-10185 turn_to[satellite0,Star5,GroundStation0]
-10186 take_image[satellite0,Star5,instrument02,x_ray]
-root 0
-8931 auto_calibrate[satellite0,instrument02] -> method6 9663 10184
-4203 activate_instrument[satellite0,instrument02] -> method5 4875 8931
-1138 auto_calibrate[satellite1,instrument1] -> method6 1993 6190
-738 do_observation[Star5,x_ray] -> method0 4203 10185 10186
-8 do_observation[Phenomenon4,thermograph] -> <method0;activate_instrument[satellite1,instrument1];method5;0;-1,-2,1,2> 23 1138 10182 10183
-0 __top[] -> __top_method 8 738
-<==
+- and       0 progressions of effectless actions
+- Generated 44666 nodes per second
+- Final fringe contains 0 nodes
+- Status: Proven unsolvable

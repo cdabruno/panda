@@ -180,36 +180,36 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 6
 Search Results
-- Search time 0 seconds
+- Search time 0.001 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 5.3e-05 seconds
-- Visited list inserts 29
+- Visited list time 3.5e-05 seconds
+- Visited list inserts 9
 - Visited list pruned 0
-- Visited list contains 29
+- Visited list contains 9
 - Visited list hash collisions 0
-- Visited list used hash buckets 29
-- Generated 132 search nodes
-  Calculated heuristic for 86 nodes
-  One modifications 42
-  Effectless actions 4
-- including 42 one modification actions
+- Visited list used hash buckets 9
+- Generated 48 search nodes
+  Calculated heuristic for 36 nodes
+  One modifications 11
+  Effectless actions 1
+- including 11 one modification actions
 - including 0 one modification methods
-- and       4 progressions of effectless actions
-- Generated -2147483648 nodes per second
-- Final fringe contains 3 nodes
+- and       1 progressions of effectless actions
+- Generated 36000 nodes per second
+- Final fringe contains 6 nodes
 - Status: Solved
 - Found solution of length 9
 - Total costs of actions: 5
 ==>
-55 switch_on[instrument1_1,satellite1]
-113 turn_to[satellite1,GroundStation2,Phenomenon6]
-114 calibrate[satellite1,instrument1_1,GroundStation2]
-115 turn_to[satellite1,Phenomenon4,GroundStation2]
-116 take_image[satellite1,Phenomenon4,instrument1_1,thermograph0]
+31 switch_on[instrument1_2,satellite1]
+41 turn_to[satellite1,GroundStation2,Phenomenon6]
+42 calibrate[satellite1,instrument1_2,GroundStation2]
+43 turn_to[satellite1,Phenomenon4,GroundStation2]
+44 take_image[satellite1,Phenomenon4,instrument1_2,thermograph0]
 root 0
-112 auto_calibrate[satellite1,instrument1_1] -> method6 113 114
-54 activate_instrument[satellite1,instrument1_1] -> method5 55 112
-18 do_observation[Phenomenon4,thermograph0] -> method0 54 115 116
-0 __top[] -> __top_method 18
+40 auto_calibrate[satellite1,instrument1_2] -> method6 41 42
+30 activate_instrument[satellite1,instrument1_2] -> method5 31 40
+15 do_observation[Phenomenon4,thermograph0] -> method0 30 43 44
+0 __top[] -> __top_method 15
 <==

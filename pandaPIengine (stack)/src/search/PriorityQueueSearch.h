@@ -182,6 +182,8 @@ namespace progression {
             const int checkAfter = CHECKAFTER;
             int lastCheck = 0;
 
+            int ramificationDegree = 0;
+
             searchNode *tnSol = nullptr;
             bool continueSearch = true;
 
@@ -413,6 +415,8 @@ namespace progression {
                 
             }
             else if(flagAlgOne){
+
+                //int ramificationDegree = 0;
                 while (!fringe.isEmpty()) {
                 searchNode *n = fringe.pop();
                 assert(n != nullptr);
@@ -424,7 +428,7 @@ namespace progression {
                 }
                 //assert(!visitedList.insertVisi(n));
 
-                int ramificationDegree = 0;
+                
 
                 if (!suboptimalSearch && htn->isGoal(n)) {
                     // A non-early goal test makes only sense in an optimal planning setting.
@@ -472,9 +476,9 @@ namespace progression {
                     for (int i = 0; i < hLength; i++) {
                         hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
                     }
-                    if(n2->heuristicValue[0] > 0){
+                    /*if(n2->heuristicValue[0] > 0){
                         n2->heuristicValue[0] = 1;
-                    }
+                    }*/
                     
                     
 
@@ -556,9 +560,9 @@ namespace progression {
                         for (int i = 0; i < hLength; i++) {
                             hF[i]->setHeuristicValue(n2, n, j, method);
                         }
-                        if(n2->heuristicValue[0] > 0){
+                        /*if(n2->heuristicValue[0] > 0){
                             n2->heuristicValue[0] = 1;
-                        }
+                        }*/
                         
                             //blind(isGoal) stuff
                         /*int isGoalH;
@@ -875,14 +879,18 @@ namespace progression {
                  << endl;
             cout << "- Final fringe contains " << fringe.size() << " nodes" << endl;
 
-            
-            for(auto& [key, value]: ramificationSet){
+            //ramification details
+            /*for(auto& [key, value]: ramificationSet){
                 if(ramificationSet.count(key) > 0){
                     if(value.second > 0){
                         cout << "- Avg. ramification degree with depth " << key << ": " << value.first/value.second << endl;
                     }
                 }  
             }
+
+            cout << "RAMIFICATION TOTAL " << ramificationDegree / (float)visitedList.uniqueInsertions;*/
+
+            
             /*
             if(flagAchou){
                 cout << "ACHOU" << endl;

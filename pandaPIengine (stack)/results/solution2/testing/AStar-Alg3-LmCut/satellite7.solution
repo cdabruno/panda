@@ -72,41 +72,22 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 10
 Search Results
-- Search time 0.053 seconds
+- Search time 0.001 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 0.019035 seconds
-- Visited list inserts 9342
-- Visited list pruned 5949
-- Visited list contains 3393
-- Visited list hash collisions 5949
-- Visited list used hash buckets 3393
-- Generated 33656 search nodes
-  Calculated heuristic for 22088 nodes
-  One modifications 9640
-  Effectless actions 1928
-- including 9640 one modification actions
+- Visited list time 3.9e-05 seconds
+- Visited list inserts 9
+- Visited list pruned 0
+- Visited list contains 9
+- Visited list hash collisions 0
+- Visited list used hash buckets 9
+- Generated 144 search nodes
+  Calculated heuristic for 144 nodes
+  One modifications 0
+  Effectless actions 0
+- including 0 one modification actions
 - including 0 one modification methods
-- and       1928 progressions of effectless actions
-- Generated 416754 nodes per second
-- Final fringe contains 69 nodes
-- Status: Solved
-- Found solution of length 14
-- Total costs of actions: 9
-==>
-357 switch_on[instrument0,satellite0]
-21407 turn_to[satellite0,GroundStation2,Phenomenon6]
-21408 calibrate[satellite0,instrument0,GroundStation2]
-21409 turn_to[satellite0,Star5,GroundStation2]
-21410 take_image[satellite0,Star5,instrument0,thermograph0]
-21411 turn_to[satellite0,Phenomenon4,Star5]
-21412 take_image[satellite0,Phenomenon4,instrument0,thermograph0]
-21413 turn_to[satellite0,Phenomenon6,Phenomenon4]
-21414 take_image[satellite0,Phenomenon6,instrument0,thermograph0]
-root 0
-21406 do_observation[Phenomenon4,thermograph0] -> method1 21411 21412
-4485 do_observation[Phenomenon6,thermograph0] -> method1 21413 21414
-2783 auto_calibrate[satellite0,instrument0] -> method6 21407 21408
-14 do_observation[Star5,thermograph0] -> <method0;activate_instrument[satellite0,instrument0];method5;0;-1,-2,1,2> 357 2783 21409 21410
-0 __top[] -> __top_method 21406 14 4485
-<==
+- and       0 progressions of effectless actions
+- Generated 144000 nodes per second
+- Final fringe contains 0 nodes
+- Status: Proven unsolvable

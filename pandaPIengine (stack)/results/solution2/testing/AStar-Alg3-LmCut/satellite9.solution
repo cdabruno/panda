@@ -109,58 +109,23 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 14
-   1s visitime    0.40s generated nodes    310214 nodes/sec  305930 cur h    1 mod.depth   10 inserts    114475 dups     70115 size     44360 hash fail  70168 hash buckets  44307
-   2s visitime    0.87s generated nodes    570398 nodes/sec  277430 cur h    1 mod.depth   12 inserts    237154 dups    155415 size     81739 hash fail 155592 hash buckets  81562
-   3s visitime    1.33s generated nodes    810607 nodes/sec  264817 cur h    1 mod.depth   16 inserts    351198 dups    233572 size    117626 hash fail 233952 hash buckets 117246
 Search Results
-- Search time 3.27 seconds
+- Search time 0.026 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 1.43 seconds
-- Visited list inserts 378134
-- Visited list pruned 251218
-- Visited list contains 126916
-- Visited list hash collisions 251663
-- Visited list used hash buckets 126471
-- Generated 870224 search nodes
-  Calculated heuristic for 596333 nodes
-  One modifications 249124
-  Effectless actions 24767
-- including 249124 one modification actions
+- Visited list time 0.000668 seconds
+- Visited list inserts 172
+- Visited list pruned 96
+- Visited list contains 76
+- Visited list hash collisions 96
+- Visited list used hash buckets 76
+- Generated 952 search nodes
+  Calculated heuristic for 952 nodes
+  One modifications 0
+  Effectless actions 0
+- including 0 one modification actions
 - including 0 one modification methods
-- and       24767 progressions of effectless actions
-- Generated 182197 nodes per second
-- Final fringe contains 5 nodes
-- Status: Solved
-- Found solution of length 27
-- Total costs of actions: 17
-==>
-8171 switch_on[instrument03,satellite0]
-48427 turn_to[satellite0,GroundStation0,Phenomenon6]
-169862 calibrate[satellite0,instrument03,GroundStation0]
-186306 turn_to[satellite0,Phenomenon6,GroundStation0]
-186307 take_image[satellite0,Phenomenon6,instrument03,hd_video]
-478817 switch_off[instrument03,satellite0]
-524716 switch_on[instrument01,satellite0]
-743661 turn_to[satellite0,GroundStation0,Phenomenon6]
-827378 calibrate[satellite0,instrument01,GroundStation0]
-861846 turn_to[satellite0,Phenomenon4,GroundStation0]
-861847 take_image[satellite0,Phenomenon4,instrument01,thermograph]
-861848 switch_off[instrument01,satellite0]
-861849 switch_on[instrument02,satellite0]
-869945 turn_to[satellite0,GroundStation0,Phenomenon4]
-869946 calibrate[satellite0,instrument02,GroundStation0]
-869947 turn_to[satellite0,Star5,GroundStation0]
-869948 take_image[satellite0,Star5,instrument02,x_ray]
-root 0
-869944 auto_calibrate[satellite0,instrument02] -> method6 869945 869946
-846731 activate_instrument[satellite0,instrument02] -> method4 861848 861849 869944
-770447 do_observation[Star5,x_ray] -> method0 846731 869947 869948
-640660 auto_calibrate[satellite0,instrument01] -> method6 743661 827378
-89050 activate_instrument[satellite0,instrument01] -> method4 478817 524716 640660
-13496 auto_calibrate[satellite0,instrument03] -> method6 48427 169862
-2185 activate_instrument[satellite0,instrument03] -> method5 8171 13496
-311 do_observation[Phenomenon4,thermograph] -> method0 89050 861846 861847
-23 do_observation[Phenomenon6,hd_video] -> method0 2185 186306 186307
-0 __top[] -> __top_method 311 770447 23
-<==
+- and       0 progressions of effectless actions
+- Generated 36615 nodes per second
+- Final fringe contains 0 nodes
+- Status: Proven unsolvable
