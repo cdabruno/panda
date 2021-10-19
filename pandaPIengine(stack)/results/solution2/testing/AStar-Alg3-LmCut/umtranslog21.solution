@@ -1,0 +1,545 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/umtranslog21.sas.
+- State has 24 bits divided into 24 mutex groups.
+- Domain contains 20 actions.
+- Domain contains 21 tasks.
+- Domain contains 1 methods.
+- The initial state contains 11 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 2 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 21
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 24
+Variable :+At_Vehicle[LKW,Firma] Domain size: 1
+Variable :+At_Package[Toshiba_Laptops,Firma] Domain size: 1
+Variable :+At_Vehicle[Kuehlwagen,Ulm] Domain size: 1
+Variable :+At_Package[Tabletten,Ulm] Domain size: 1
+Variable :-Door_Open[LKW] Domain size: 1
+Variable :-Fees_Collected[Tabletten] Domain size: 1
+Variable :-Fees_Collected[Toshiba_Laptops] Domain size: 1
+Variable :-Have_Permit[Tabletten] Domain size: 1
+Variable :-Hose_Connected[Kuehlwagen,Tabletten] Domain size: 1
+Variable :-Valve_Open[Kuehlwagen] Domain size: 1
+Variable :-Warning_Signs_Affixed[Kuehlwagen] Domain size: 1
+Variable :+At_Vehicle[LKW,Universitaet] Domain size: 1
+Variable :+At_Package[Toshiba_Laptops,LKW] Domain size: 1
+Variable :+At_Vehicle[Kuehlwagen,Heidenheim] Domain size: 1
+Variable :+Door_Open[LKW] Domain size: 1
+Variable :+Fees_Collected[Tabletten] Domain size: 1
+Variable :+Fees_Collected[Toshiba_Laptops] Domain size: 1
+Variable :+Have_Permit[Tabletten] Domain size: 1
+Variable :+Hose_Connected[Kuehlwagen,Tabletten] Domain size: 1
+Variable :+Valve_Open[Kuehlwagen] Domain size: 1
+Variable :+Warning_Signs_Affixed[Kuehlwagen] Domain size: 1
+Variable :+Delivered[Toshiba_Laptops] Domain size: 1
+Variable :+Delivered[Tabletten] Domain size: 1
+Variable :+At_Package[Tabletten,Kuehlwagen] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+At_Vehicle[LKW,Firma], +At_Package[Toshiba_Laptops,Firma] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +At_Vehicle[Kuehlwagen,Ulm] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +At_Package[Tabletten,Ulm] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], -Door_Open[LKW] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], -Fees_Collected[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], -Have_Permit[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], -Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], -Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], -Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +At_Vehicle[LKW,Universitaet] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +At_Package[Toshiba_Laptops,LKW] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +At_Vehicle[Kuehlwagen,Heidenheim] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +Door_Open[LKW] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +Have_Permit[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +Delivered[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[LKW,Firma], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +At_Vehicle[Kuehlwagen,Ulm] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +At_Package[Tabletten,Ulm] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], -Door_Open[LKW] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], -Fees_Collected[Tabletten] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], -Have_Permit[Tabletten] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], -Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], -Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], -Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +At_Vehicle[LKW,Universitaet] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +At_Package[Toshiba_Laptops,LKW] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +At_Vehicle[Kuehlwagen,Heidenheim] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +Door_Open[LKW] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +Have_Permit[Tabletten] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +Delivered[Tabletten] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Firma], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +At_Package[Tabletten,Ulm] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], -Door_Open[LKW] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], -Fees_Collected[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], -Have_Permit[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], -Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], -Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], -Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +At_Vehicle[LKW,Universitaet] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +At_Package[Toshiba_Laptops,LKW] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +At_Vehicle[Kuehlwagen,Heidenheim] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +Door_Open[LKW] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +Have_Permit[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +Delivered[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Ulm], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], -Door_Open[LKW] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], -Fees_Collected[Tabletten] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], -Have_Permit[Tabletten] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], -Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], -Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], -Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], +At_Vehicle[LKW,Universitaet] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], +At_Package[Toshiba_Laptops,LKW] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], +At_Vehicle[Kuehlwagen,Heidenheim] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], +Door_Open[LKW] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], +Have_Permit[Tabletten] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], +Delivered[Tabletten] Mult size: 1
+Var pair:+At_Package[Tabletten,Ulm], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:-Door_Open[LKW], -Fees_Collected[Tabletten] Mult size: 1
+Var pair:-Door_Open[LKW], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Door_Open[LKW], -Have_Permit[Tabletten] Mult size: 1
+Var pair:-Door_Open[LKW], -Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:-Door_Open[LKW], -Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:-Door_Open[LKW], -Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:-Door_Open[LKW], +At_Vehicle[LKW,Universitaet] Mult size: 1
+Var pair:-Door_Open[LKW], +At_Package[Toshiba_Laptops,LKW] Mult size: 1
+Var pair:-Door_Open[LKW], +At_Vehicle[Kuehlwagen,Heidenheim] Mult size: 1
+Var pair:-Door_Open[LKW], +Door_Open[LKW] Mult size: 1
+Var pair:-Door_Open[LKW], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:-Door_Open[LKW], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Door_Open[LKW], +Have_Permit[Tabletten] Mult size: 1
+Var pair:-Door_Open[LKW], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:-Door_Open[LKW], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:-Door_Open[LKW], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:-Door_Open[LKW], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:-Door_Open[LKW], +Delivered[Tabletten] Mult size: 1
+Var pair:-Door_Open[LKW], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], -Have_Permit[Tabletten] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], -Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], -Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], -Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], +At_Vehicle[LKW,Universitaet] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], +At_Package[Toshiba_Laptops,LKW] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], +At_Vehicle[Kuehlwagen,Heidenheim] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], +Door_Open[LKW] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], +Have_Permit[Tabletten] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], +Delivered[Tabletten] Mult size: 1
+Var pair:-Fees_Collected[Tabletten], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], -Have_Permit[Tabletten] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], -Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], -Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], -Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +At_Vehicle[LKW,Universitaet] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +At_Package[Toshiba_Laptops,LKW] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +At_Vehicle[Kuehlwagen,Heidenheim] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Door_Open[LKW] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Have_Permit[Tabletten] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Delivered[Tabletten] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:-Have_Permit[Tabletten], -Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:-Have_Permit[Tabletten], -Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:-Have_Permit[Tabletten], -Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:-Have_Permit[Tabletten], +At_Vehicle[LKW,Universitaet] Mult size: 1
+Var pair:-Have_Permit[Tabletten], +At_Package[Toshiba_Laptops,LKW] Mult size: 1
+Var pair:-Have_Permit[Tabletten], +At_Vehicle[Kuehlwagen,Heidenheim] Mult size: 1
+Var pair:-Have_Permit[Tabletten], +Door_Open[LKW] Mult size: 1
+Var pair:-Have_Permit[Tabletten], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:-Have_Permit[Tabletten], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Have_Permit[Tabletten], +Have_Permit[Tabletten] Mult size: 1
+Var pair:-Have_Permit[Tabletten], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:-Have_Permit[Tabletten], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:-Have_Permit[Tabletten], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:-Have_Permit[Tabletten], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:-Have_Permit[Tabletten], +Delivered[Tabletten] Mult size: 1
+Var pair:-Have_Permit[Tabletten], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], -Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], -Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], +At_Vehicle[LKW,Universitaet] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], +At_Package[Toshiba_Laptops,LKW] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], +At_Vehicle[Kuehlwagen,Heidenheim] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], +Door_Open[LKW] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], +Have_Permit[Tabletten] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], +Delivered[Tabletten] Mult size: 1
+Var pair:-Hose_Connected[Kuehlwagen,Tabletten], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], -Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], +At_Vehicle[LKW,Universitaet] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], +At_Package[Toshiba_Laptops,LKW] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], +At_Vehicle[Kuehlwagen,Heidenheim] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], +Door_Open[LKW] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], +Have_Permit[Tabletten] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], +Delivered[Tabletten] Mult size: 1
+Var pair:-Valve_Open[Kuehlwagen], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:-Warning_Signs_Affixed[Kuehlwagen], +At_Vehicle[LKW,Universitaet] Mult size: 1
+Var pair:-Warning_Signs_Affixed[Kuehlwagen], +At_Package[Toshiba_Laptops,LKW] Mult size: 1
+Var pair:-Warning_Signs_Affixed[Kuehlwagen], +At_Vehicle[Kuehlwagen,Heidenheim] Mult size: 1
+Var pair:-Warning_Signs_Affixed[Kuehlwagen], +Door_Open[LKW] Mult size: 1
+Var pair:-Warning_Signs_Affixed[Kuehlwagen], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:-Warning_Signs_Affixed[Kuehlwagen], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Warning_Signs_Affixed[Kuehlwagen], +Have_Permit[Tabletten] Mult size: 1
+Var pair:-Warning_Signs_Affixed[Kuehlwagen], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:-Warning_Signs_Affixed[Kuehlwagen], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:-Warning_Signs_Affixed[Kuehlwagen], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:-Warning_Signs_Affixed[Kuehlwagen], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:-Warning_Signs_Affixed[Kuehlwagen], +Delivered[Tabletten] Mult size: 1
+Var pair:-Warning_Signs_Affixed[Kuehlwagen], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[LKW,Universitaet], +At_Package[Toshiba_Laptops,LKW] Mult size: 1
+Var pair:+At_Vehicle[LKW,Universitaet], +At_Vehicle[Kuehlwagen,Heidenheim] Mult size: 1
+Var pair:+At_Vehicle[LKW,Universitaet], +Door_Open[LKW] Mult size: 1
+Var pair:+At_Vehicle[LKW,Universitaet], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[LKW,Universitaet], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[LKW,Universitaet], +Have_Permit[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[LKW,Universitaet], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+At_Vehicle[LKW,Universitaet], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[LKW,Universitaet], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[LKW,Universitaet], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[LKW,Universitaet], +Delivered[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[LKW,Universitaet], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,LKW], +At_Vehicle[Kuehlwagen,Heidenheim] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,LKW], +Door_Open[LKW] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,LKW], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,LKW], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,LKW], +Have_Permit[Tabletten] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,LKW], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,LKW], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,LKW], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,LKW], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,LKW], +Delivered[Tabletten] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,LKW], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Heidenheim], +Door_Open[LKW] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Heidenheim], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Heidenheim], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Heidenheim], +Have_Permit[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Heidenheim], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Heidenheim], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Heidenheim], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Heidenheim], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Heidenheim], +Delivered[Tabletten] Mult size: 1
+Var pair:+At_Vehicle[Kuehlwagen,Heidenheim], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+Door_Open[LKW], +Fees_Collected[Tabletten] Mult size: 1
+Var pair:+Door_Open[LKW], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+Door_Open[LKW], +Have_Permit[Tabletten] Mult size: 1
+Var pair:+Door_Open[LKW], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+Door_Open[LKW], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+Door_Open[LKW], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+Door_Open[LKW], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+Door_Open[LKW], +Delivered[Tabletten] Mult size: 1
+Var pair:+Door_Open[LKW], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+Fees_Collected[Tabletten], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+Fees_Collected[Tabletten], +Have_Permit[Tabletten] Mult size: 1
+Var pair:+Fees_Collected[Tabletten], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+Fees_Collected[Tabletten], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+Fees_Collected[Tabletten], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+Fees_Collected[Tabletten], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+Fees_Collected[Tabletten], +Delivered[Tabletten] Mult size: 1
+Var pair:+Fees_Collected[Tabletten], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+Fees_Collected[Toshiba_Laptops], +Have_Permit[Tabletten] Mult size: 1
+Var pair:+Fees_Collected[Toshiba_Laptops], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+Fees_Collected[Toshiba_Laptops], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+Fees_Collected[Toshiba_Laptops], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+Fees_Collected[Toshiba_Laptops], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+Fees_Collected[Toshiba_Laptops], +Delivered[Tabletten] Mult size: 1
+Var pair:+Fees_Collected[Toshiba_Laptops], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+Have_Permit[Tabletten], +Hose_Connected[Kuehlwagen,Tabletten] Mult size: 1
+Var pair:+Have_Permit[Tabletten], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+Have_Permit[Tabletten], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+Have_Permit[Tabletten], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+Have_Permit[Tabletten], +Delivered[Tabletten] Mult size: 1
+Var pair:+Have_Permit[Tabletten], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+Hose_Connected[Kuehlwagen,Tabletten], +Valve_Open[Kuehlwagen] Mult size: 1
+Var pair:+Hose_Connected[Kuehlwagen,Tabletten], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+Hose_Connected[Kuehlwagen,Tabletten], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+Hose_Connected[Kuehlwagen,Tabletten], +Delivered[Tabletten] Mult size: 1
+Var pair:+Hose_Connected[Kuehlwagen,Tabletten], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+Valve_Open[Kuehlwagen], +Warning_Signs_Affixed[Kuehlwagen] Mult size: 1
+Var pair:+Valve_Open[Kuehlwagen], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+Valve_Open[Kuehlwagen], +Delivered[Tabletten] Mult size: 1
+Var pair:+Valve_Open[Kuehlwagen], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+Warning_Signs_Affixed[Kuehlwagen], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+Warning_Signs_Affixed[Kuehlwagen], +Delivered[Tabletten] Mult size: 1
+Var pair:+Warning_Signs_Affixed[Kuehlwagen], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+Delivered[Toshiba_Laptops], +Delivered[Tabletten] Mult size: 1
+Var pair:+Delivered[Toshiba_Laptops], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Var pair:+Delivered[Tabletten], +At_Package[Tabletten,Kuehlwagen] Mult size: 1
+Number of variables: 24
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.010s CPU, 0.001s wall-clock]
+Generated 63 rules.
+Computing model... [0.000s CPU, 0.000s wall-clock]
+87 relevant atoms
+0 auxiliary atoms
+87 final queue length
+94 total queue pushes
+Completing instantiation... [0.000s CPU, 0.001s wall-clock]
+Instantiating: [0.010s CPU, 0.003s wall-clock]
+Computing fact groups...
+Finding invariants...
+45 initial candidates
+Finding invariants: [0.000s CPU, 0.005s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+21 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.005s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.001s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+11 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Reordering and filtering variables...
+32 of 32 variables necessary.
+4 of 17 mutex groups necessary.
+21 of 21 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
+Translator variables: 32
+Translator derived variables: 0
+Translator facts: 66
+Translator goal facts: 3
+Translator mutex groups: 4
+Translator total mutex groups size: 8
+Translator operators: 21
+Translator axioms: 0
+Translator task size: 219
+Translator peak memory: 40008 KB
+Writing output... [0.000s CPU, 0.000s wall-clock]
+Done! [0.010s CPU, 0.014s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
+[t=2.7883e-05s, 9844 KB] reading input...
+[t=0.000310772s, 9844 KB] done reading input!
+[t=0.00121182s, 10100 KB] Initializing landmark cut heuristic...
+[t=0.00127313s, 10100 KB] Building successor generator...done!
+[t=0.00135408s, 10100 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.0013724s, 10100 KB] time for successor generation creation: 1.5895e-05s
+[t=0.00139324s, 10100 KB] Variables: 32
+[t=0.00141212s, 10100 KB] FactPairs: 66
+[t=0.00142983s, 10100 KB] Bytes per state: 8
+[t=0.00149394s, 10100 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00156357s, 10100 KB] New best heuristic value for lmcut: 21
+[t=0.00158519s, 10100 KB] g=0, 1 evaluated, 0 expanded
+[t=0.00160415s, 10100 KB] f = 21, 1 evaluated, 0 expanded
+[t=0.00162438s, 10100 KB] Initial heuristic value for lmcut: 21
+[t=0.00164327s, 10100 KB] pruning method: none
+[t=0.00171967s, 10100 KB] New best heuristic value for lmcut: 20
+[t=0.00174519s, 10100 KB] g=1, 2 evaluated, 1 expanded
+[t=0.00191063s, 10100 KB] New best heuristic value for lmcut: 19
+[t=0.00193273s, 10100 KB] g=2, 14 evaluated, 2 expanded
+[t=0.00206975s, 10100 KB] New best heuristic value for lmcut: 18
+[t=0.00209115s, 10100 KB] g=3, 23 evaluated, 3 expanded
+[t=0.0022224s, 10100 KB] New best heuristic value for lmcut: 17
+[t=0.00224402s, 10100 KB] g=4, 32 evaluated, 4 expanded
+[t=0.00237494s, 10100 KB] New best heuristic value for lmcut: 16
+[t=0.00239627s, 10100 KB] g=5, 42 evaluated, 5 expanded
+[t=0.00250151s, 10100 KB] New best heuristic value for lmcut: 15
+[t=0.00252248s, 10100 KB] g=6, 50 evaluated, 6 expanded
+[t=0.00263807s, 10100 KB] New best heuristic value for lmcut: 14
+[t=0.00265951s, 10100 KB] g=7, 59 evaluated, 7 expanded
+[t=0.00277652s, 10100 KB] New best heuristic value for lmcut: 13
+[t=0.00279768s, 10100 KB] g=8, 68 evaluated, 8 expanded
+[t=0.00287283s, 10100 KB] New best heuristic value for lmcut: 12
+[t=0.00289375s, 10100 KB] g=9, 74 evaluated, 9 expanded
+[t=0.0029961s, 10100 KB] New best heuristic value for lmcut: 11
+[t=0.00301715s, 10100 KB] g=10, 82 evaluated, 10 expanded
+[t=0.00311265s, 10100 KB] New best heuristic value for lmcut: 10
+[t=0.00313332s, 10100 KB] g=11, 90 evaluated, 11 expanded
+[t=0.00323317s, 10100 KB] New best heuristic value for lmcut: 9
+[t=0.00325402s, 10100 KB] g=12, 99 evaluated, 12 expanded
+[t=0.00333633s, 10100 KB] New best heuristic value for lmcut: 8
+[t=0.00335749s, 10100 KB] g=13, 107 evaluated, 13 expanded
+[t=0.00343325s, 10100 KB] New best heuristic value for lmcut: 7
+[t=0.00345453s, 10100 KB] g=14, 115 evaluated, 14 expanded
+[t=0.00352039s, 10100 KB] New best heuristic value for lmcut: 6
+[t=0.0035409s, 10100 KB] g=15, 122 evaluated, 15 expanded
+[t=0.0036182s, 10100 KB] New best heuristic value for lmcut: 5
+[t=0.00363868s, 10100 KB] g=16, 130 evaluated, 16 expanded
+[t=0.00369653s, 10100 KB] New best heuristic value for lmcut: 4
+[t=0.00371717s, 10100 KB] g=17, 137 evaluated, 17 expanded
+[t=0.00376526s, 10100 KB] New best heuristic value for lmcut: 3
+[t=0.00378547s, 10100 KB] g=18, 143 evaluated, 18 expanded
+[t=0.00383582s, 10100 KB] New best heuristic value for lmcut: 2
+[t=0.00385648s, 10100 KB] g=19, 151 evaluated, 19 expanded
+[t=0.00390014s, 10100 KB] New best heuristic value for lmcut: 1
+[t=0.00392067s, 10100 KB] g=20, 158 evaluated, 20 expanded
+[t=0.00396288s, 10100 KB] New best heuristic value for lmcut: 0
+[t=0.00398336s, 10100 KB] g=21, 166 evaluated, 21 expanded
+[t=0.00400308s, 10100 KB] Solution found!
+[t=0.00402317s, 10100 KB] Actual search time: 0.00234741s
+decontaminate_interior_kuehlwagen_  (1)
+load_package_toshiba_laptops_lkw_firma_  (1)
+move_vehicle_no_traincar_lkw_firma_james_franck_ring_universitaet_  (1)
+unload_package_toshiba_laptops_lkw_universitaet_  (1)
+affix_warning_signs_kuehlwagen_  (1)
+remove_warning_signs_kuehlwagen_  (1)
+open_valve_kuehlwagen_  (1)
+connect_hose_kuehlwagen_tabletten_  (1)
+fill_tank_kuehlwagen_tabletten_ulm_  (1)
+move_vehicle_no_traincar_kuehlwagen_ulm_landstrasse10_heidenheim_  (1)
+empty_tank_kuehlwagen_tabletten_heidenheim_  (1)
+close_valve_kuehlwagen_  (1)
+disconnect_hose_kuehlwagen_tabletten_  (1)
+collect_fees_toshiba_laptops_  (1)
+deliver_p_toshiba_laptops_  (1)
+collect_fees_tabletten_  (1)
+obtain_permit_tabletten_  (1)
+deliver_h_tabletten_  (1)
+open_door_lkw_  (1)
+close_door_lkw_  (1)
+x________________________top_method_transport_tabletten_ulm_heidenheim__method_transport_pi_ca_de_1_0_m1_m2_m3__carry_tabletten_ulm_heidenheim__method_carry_cd_2_0_1_m1_3__carry_direct_tabletten_ulm_heidenheim__method_carry_direct_2_0_1_m1_3__helper_carry_direct_kuehlwagen_tabletten_ulm_heidenheim__method_helper_carry_direct_nomovefirst_2_0_1_m1_m2_m3_3__unload_top_tabletten_kuehlwagen_heidenheim__method_unload_top_hazardous_4_0_1_2_3_m1_m2_m3_5__unload_tabletten_kuehlwagen_heidenheim__method_unload_tanker_4_0_1_2_3_m1_m2_m3_m4_m5_5_6_7__move_kuehlwagen_ulm_heidenheim__method_move_no_traincar_3_0_1_2_m1_4_5_6_7_8_9_10_11__load_top_tabletten_kuehlwagen_ulm__method_load_top_hazardous_2_0_1_m1_m2_3_4_5_6_7_8_9_10_11__load_tabletten_kuehlwagen_ulm__method_load_tanker_3_0_1_2_m1_m2_m3_m4_m5_4_5_6_7_8_9_10_11_12__deliver_tabletten__method_deliver_dh_16_0_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_m1__pickup_tabletten__method_pickup_hazardous_1_0_m1_m2_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16__transport_toshiba_laptops_firma_universitaet__method_transport_pi_ca_de_0_m1_m2_m3_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17__carry_toshiba_laptops_firma_universitaet__method_carry_cd_1_0_m1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19__carry_direct_toshiba_laptops_firma_universitaet__method_carry_direct_1_0_m1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19__helper_carry_direct_lkw_toshiba_laptops_firma_universitaet__method_helper_carry_direct_nomovefirst_1_0_m1_m2_m3_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19__unload_top_toshiba_laptops_lkw_universitaet__method_unload_top_normal_3_0_1_2_m1_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21__unload_toshiba_laptops_lkw_universitaet__method_unload_regular_3_0_1_2_m1_m2_m3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21__move_lkw_firma_universitaet__method_move_no_traincar_2_0_1_m1_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21_22_23__load_top_toshiba_laptops_lkw_firma__method_load_top_normal_1_0_m1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21_22_23__load_toshiba_laptops_lkw_firma__method_load_regular_1_0_m1_m2_m3_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21_22_23__deliver_toshiba_laptops__method_deliver_dp_8_0_1_2_3_4_5_6_7_m1_9_10_11_12_13_14_15_16_17_18_19_20_21_22_23_24_25__pickup_toshiba_laptops__method_pickup_normal_0_m1_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21_22_23_24_25_@__top__  (1)
+[t=0.00404287s, 10100 KB] Plan length: 21 step(s).
+[t=0.00404287s, 10100 KB] Plan cost: 21
+[t=0.00404287s, 10100 KB] Expanded 22 state(s).
+[t=0.00404287s, 10100 KB] Reopened 0 state(s).
+[t=0.00404287s, 10100 KB] Evaluated 166 state(s).
+[t=0.00404287s, 10100 KB] Evaluations: 166
+[t=0.00404287s, 10100 KB] Generated 185 state(s).
+[t=0.00404287s, 10100 KB] Dead ends: 11 state(s).
+[t=0.00404287s, 10100 KB] Expanded until last jump: 0 state(s).
+[t=0.00404287s, 10100 KB] Reopened until last jump: 0 state(s).
+[t=0.00404287s, 10100 KB] Evaluated until last jump: 1 state(s).
+[t=0.00404287s, 10100 KB] Generated until last jump: 0 state(s).
+[t=0.00404287s, 10100 KB] Number of registered states: 166
+[t=0.00404287s, 10100 KB] Int hash set load factor: 166/256 = 0.648438
+[t=0.00404287s, 10100 KB] Int hash set resizes: 8
+[t=0.00404287s, 10100 KB] Search time: 0.00254949s
+[t=0.00404287s, 10100 KB] Total time: 0.00404287s
+Solution found.
+Peak memory: 10100 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+Cost of SAS plan on RC model: 21
+Cost SAS: 0
+Num primitive tasks: 20
+Num non-primitive tasks: 1
+Total tasks: 21
+Number of methods: 1
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 21
+Search Results
+- Search time 0.102 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 4e-06 seconds
+- Visited list inserts 1
+- Visited list pruned 0
+- Visited list contains 1
+- Visited list hash collisions 0
+- Visited list used hash buckets 1
+- Generated 2 search nodes
+  Calculated heuristic for 2 nodes
+  One modifications 0
+  Effectless actions 0
+- including 0 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 19 nodes per second
+- Final fringe contains 0 nodes
+- Status: Proven unsolvable

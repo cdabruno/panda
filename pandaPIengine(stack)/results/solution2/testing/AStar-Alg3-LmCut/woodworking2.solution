@@ -1,0 +1,264 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/woodworking2.sas.
+- State has 10 bits divided into 10 mutex groups.
+- Domain contains 8 actions.
+- Domain contains 12 tasks.
+- Domain contains 9 methods.
+- The initial state contains 5 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 2 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 12
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 10
+Variable :+colour[p0,red] Domain size: 1
+Variable :+treatment[p0,varnished] Domain size: 1
+Variable :+colour[p2,natural] Domain size: 1
+Variable :+surface_condition[p2,verysmooth] Domain size: 1
+Variable :+treatment[p2,varnished] Domain size: 1
+Variable :+treatment[p0,untreated] Domain size: 1
+Variable :+colour[p0,natural] Domain size: 1
+Variable :+surface_condition[p2,smooth] Domain size: 1
+Variable :+treatment[p2,untreated] Domain size: 1
+Variable :+colour[p2,red] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+colour[p0,red], +treatment[p0,varnished] Mult size: 1
+Var pair:+colour[p0,red], +colour[p2,natural] Mult size: 1
+Var pair:+colour[p0,red], +surface_condition[p2,verysmooth] Mult size: 1
+Var pair:+colour[p0,red], +treatment[p2,varnished] Mult size: 1
+Var pair:+colour[p0,red], +treatment[p0,untreated] Mult size: 1
+Var pair:+colour[p0,red], +colour[p0,natural] Mult size: 1
+Var pair:+colour[p0,red], +surface_condition[p2,smooth] Mult size: 1
+Var pair:+colour[p0,red], +treatment[p2,untreated] Mult size: 1
+Var pair:+colour[p0,red], +colour[p2,red] Mult size: 1
+Var pair:+treatment[p0,varnished], +colour[p2,natural] Mult size: 1
+Var pair:+treatment[p0,varnished], +surface_condition[p2,verysmooth] Mult size: 1
+Var pair:+treatment[p0,varnished], +treatment[p2,varnished] Mult size: 1
+Var pair:+treatment[p0,varnished], +treatment[p0,untreated] Mult size: 1
+Var pair:+treatment[p0,varnished], +colour[p0,natural] Mult size: 1
+Var pair:+treatment[p0,varnished], +surface_condition[p2,smooth] Mult size: 1
+Var pair:+treatment[p0,varnished], +treatment[p2,untreated] Mult size: 1
+Var pair:+treatment[p0,varnished], +colour[p2,red] Mult size: 1
+Var pair:+colour[p2,natural], +surface_condition[p2,verysmooth] Mult size: 1
+Var pair:+colour[p2,natural], +treatment[p2,varnished] Mult size: 1
+Var pair:+colour[p2,natural], +treatment[p0,untreated] Mult size: 1
+Var pair:+colour[p2,natural], +colour[p0,natural] Mult size: 1
+Var pair:+colour[p2,natural], +surface_condition[p2,smooth] Mult size: 1
+Var pair:+colour[p2,natural], +treatment[p2,untreated] Mult size: 1
+Var pair:+colour[p2,natural], +colour[p2,red] Mult size: 1
+Var pair:+surface_condition[p2,verysmooth], +treatment[p2,varnished] Mult size: 1
+Var pair:+surface_condition[p2,verysmooth], +treatment[p0,untreated] Mult size: 1
+Var pair:+surface_condition[p2,verysmooth], +colour[p0,natural] Mult size: 1
+Var pair:+surface_condition[p2,verysmooth], +surface_condition[p2,smooth] Mult size: 1
+Var pair:+surface_condition[p2,verysmooth], +treatment[p2,untreated] Mult size: 1
+Var pair:+surface_condition[p2,verysmooth], +colour[p2,red] Mult size: 1
+Var pair:+treatment[p2,varnished], +treatment[p0,untreated] Mult size: 1
+Var pair:+treatment[p2,varnished], +colour[p0,natural] Mult size: 1
+Var pair:+treatment[p2,varnished], +surface_condition[p2,smooth] Mult size: 1
+Var pair:+treatment[p2,varnished], +treatment[p2,untreated] Mult size: 1
+Var pair:+treatment[p2,varnished], +colour[p2,red] Mult size: 1
+Var pair:+treatment[p0,untreated], +colour[p0,natural] Mult size: 1
+Var pair:+treatment[p0,untreated], +surface_condition[p2,smooth] Mult size: 1
+Var pair:+treatment[p0,untreated], +treatment[p2,untreated] Mult size: 1
+Var pair:+treatment[p0,untreated], +colour[p2,red] Mult size: 1
+Var pair:+colour[p0,natural], +surface_condition[p2,smooth] Mult size: 1
+Var pair:+colour[p0,natural], +treatment[p2,untreated] Mult size: 1
+Var pair:+colour[p0,natural], +colour[p2,red] Mult size: 1
+Var pair:+surface_condition[p2,smooth], +treatment[p2,untreated] Mult size: 1
+Var pair:+surface_condition[p2,smooth], +colour[p2,red] Mult size: 1
+Var pair:+treatment[p2,untreated], +colour[p2,red] Mult size: 1
+Number of variables: 10
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
+Parsing...
+Parsing: [0.010s CPU, 0.005s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 52 rules.
+Computing model... [0.000s CPU, 0.000s wall-clock]
+48 relevant atoms
+0 auxiliary atoms
+48 final queue length
+65 total queue pushes
+Completing instantiation... [0.000s CPU, 0.001s wall-clock]
+Instantiating: [0.000s CPU, 0.004s wall-clock]
+Computing fact groups...
+Finding invariants...
+22 initial candidates
+Finding invariants: [0.010s CPU, 0.009s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+16 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.010s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.001s wall-clock]
+4 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+2 operators removed
+0 axioms removed
+5 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Reordering and filtering variables...
+16 of 16 variables necessary.
+6 of 12 mutex groups necessary.
+13 of 13 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
+Translator variables: 16
+Translator derived variables: 0
+Translator facts: 35
+Translator goal facts: 3
+Translator mutex groups: 6
+Translator total mutex groups size: 14
+Translator operators: 13
+Translator axioms: 0
+Translator task size: 131
+Translator peak memory: 39752 KB
+Writing output... [0.000s CPU, 0.000s wall-clock]
+Done! [0.020s CPU, 0.023s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
+[t=4.3486e-05s, 9844 KB] reading input...
+[t=0.000402519s, 9844 KB] done reading input!
+[t=0.00202246s, 10100 KB] Initializing landmark cut heuristic...
+[t=0.0021297s, 10100 KB] Building successor generator...done!
+[t=0.00226353s, 10100 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.00230669s, 10100 KB] time for successor generation creation: 1.7955e-05s
+[t=0.00234629s, 10100 KB] Variables: 16
+[t=0.00238062s, 10100 KB] FactPairs: 35
+[t=0.00241324s, 10100 KB] Bytes per state: 4
+[t=0.00252796s, 10100 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00263522s, 10100 KB] New best heuristic value for lmcut: 6
+[t=0.00267522s, 10100 KB] g=0, 1 evaluated, 0 expanded
+[t=0.00270964s, 10100 KB] f = 6, 1 evaluated, 0 expanded
+[t=0.00274712s, 10100 KB] Initial heuristic value for lmcut: 6
+[t=0.00278108s, 10100 KB] pruning method: none
+[t=0.00283612s, 10100 KB] New best heuristic value for lmcut: 4
+[t=0.0028724s, 10100 KB] g=1, 2 evaluated, 1 expanded
+[t=0.00296025s, 10100 KB] New best heuristic value for lmcut: 3
+[t=0.00299724s, 10100 KB] g=3, 7 evaluated, 3 expanded
+[t=0.00305039s, 10100 KB] New best heuristic value for lmcut: 2
+[t=0.00308558s, 10100 KB] g=4, 9 evaluated, 4 expanded
+[t=0.00314705s, 10100 KB] New best heuristic value for lmcut: 1
+[t=0.00318262s, 10100 KB] g=5, 13 evaluated, 5 expanded
+[t=0.00323524s, 10100 KB] New best heuristic value for lmcut: 0
+[t=0.00327113s, 10100 KB] g=6, 16 evaluated, 6 expanded
+[t=0.00330811s, 10100 KB] Solution found!
+[t=0.00334577s, 10100 KB] Actual search time: 0.000559056s
+do_plane_p2_verysmooth_natural_varnished_  (1)
+do_spray_varnish_p2_spray_varnisher0_red_smooth_  (1)
+method1@do_colour_p2_red_spray_varnisher0_  (1)
+do_plane_p0_smooth_red_varnished_  (1)
+x_splitting_method___top_method_splitted_1@__top_method_splitted_1__  (1)
+x____top_method_grindnplane_p2_verysmooth_natural_varnished_smooth_natural_untreated__method7_2_0_1_m1__grindnplane_p0_smooth_red_varnished_smooth_natural_untreated__method7_1_0_m1_2_@__top__  (1)
+[t=0.00338234s, 10100 KB] Plan length: 6 step(s).
+[t=0.00338234s, 10100 KB] Plan cost: 6
+[t=0.00338234s, 10100 KB] Expanded 7 state(s).
+[t=0.00338234s, 10100 KB] Reopened 0 state(s).
+[t=0.00338234s, 10100 KB] Evaluated 16 state(s).
+[t=0.00338234s, 10100 KB] Evaluations: 16
+[t=0.00338234s, 10100 KB] Generated 19 state(s).
+[t=0.00338234s, 10100 KB] Dead ends: 1 state(s).
+[t=0.00338234s, 10100 KB] Expanded until last jump: 0 state(s).
+[t=0.00338234s, 10100 KB] Reopened until last jump: 0 state(s).
+[t=0.00338234s, 10100 KB] Evaluated until last jump: 1 state(s).
+[t=0.00338234s, 10100 KB] Generated until last jump: 0 state(s).
+[t=0.00338234s, 10100 KB] Number of registered states: 16
+[t=0.00338234s, 10100 KB] Int hash set load factor: 16/16 = 1
+[t=0.00338234s, 10100 KB] Int hash set resizes: 4
+[t=0.00338234s, 10100 KB] Search time: 0.000855333s
+[t=0.00338234s, 10100 KB] Total time: 0.00338234s
+Solution found.
+Peak memory: 10100 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+Cost of SAS plan on RC model: 6
+Cost SAS: 0
+Num primitive tasks: 8
+Num non-primitive tasks: 4
+Total tasks: 12
+Number of methods: 9
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 6
+Search Results
+- Search time 0.185 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 2.3e-05 seconds
+- Visited list inserts 6
+- Visited list pruned 0
+- Visited list contains 6
+- Visited list hash collisions 0
+- Visited list used hash buckets 6
+- Generated 21 search nodes
+  Calculated heuristic for 17 nodes
+  One modifications 4
+  Effectless actions 0
+- including 4 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 91 nodes per second
+- Final fringe contains 2 nodes
+- Status: Solved
+- Found solution of length 6
+- Total costs of actions: 3
+==>
+7 do_plane[p0,smooth,red,varnished]
+15 do_plane[p2,verysmooth,natural,varnished]
+16 do_spray_varnish[p2,spray_varnisher0,red,smooth]
+root 0
+14 do_colour[p2,red,spray_varnisher0] -> method1 16
+6 __top_method_splitted_1[] -> _splitting_method___top_method_splitted_1 14
+0 __top[] -> <<__top_method;grindNplane[p2,verysmooth,natural,varnished,smooth,natural,untreated];method7;2;0,1,-1>;grindNplane[p0,smooth,red,varnished,smooth,natural,untreated];method7;1;0,-1,2> 6 7 15
+<==

@@ -1,0 +1,445 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/satellite12.sas.
+- State has 20 bits divided into 20 mutex groups.
+- Domain contains 41 actions.
+- Domain contains 55 tasks.
+- Domain contains 74 methods.
+- The initial state contains 4 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 55
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 20
+Variable :+power_avail[satellite0] Domain size: 1
+Variable :+pointing[satellite0,Phenomenon6] Domain size: 1
+Variable :+power_avail[satellite1] Domain size: 1
+Variable :+pointing[satellite1,Phenomenon7] Domain size: 1
+Variable :+power_on[instrument01] Domain size: 1
+Variable :+power_on[instrument02] Domain size: 1
+Variable :+power_on[instrument03] Domain size: 1
+Variable :+pointing[satellite0,GroundStation0] Domain size: 1
+Variable :+pointing[satellite0,Phenomenon4] Domain size: 1
+Variable :+pointing[satellite0,Star5] Domain size: 1
+Variable :+power_on[instrument11] Domain size: 1
+Variable :+power_on[instrument12] Domain size: 1
+Variable :+pointing[satellite1,GroundStation1] Domain size: 1
+Variable :+pointing[satellite1,Phenomenon4] Domain size: 1
+Variable :+pointing[satellite1,Star5] Domain size: 1
+Variable :+calibrated[instrument01] Domain size: 1
+Variable :+calibrated[instrument02] Domain size: 1
+Variable :+calibrated[instrument03] Domain size: 1
+Variable :+calibrated[instrument11] Domain size: 1
+Variable :+calibrated[instrument12] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,Phenomenon6] Mult size: 1
+Var pair:+power_avail[satellite0], +power_avail[satellite1] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite1,Phenomenon7] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument01] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument02] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument03] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,GroundStation0] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument11] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument12] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite1,GroundStation1] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite1,Phenomenon4] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument01] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument02] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument03] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument11] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument12] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +power_avail[satellite1] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +pointing[satellite1,Phenomenon7] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +power_on[instrument01] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +power_on[instrument02] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +power_on[instrument03] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +pointing[satellite0,GroundStation0] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +power_on[instrument11] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +power_on[instrument12] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +pointing[satellite1,GroundStation1] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +pointing[satellite1,Phenomenon4] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +calibrated[instrument01] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +calibrated[instrument02] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +calibrated[instrument03] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +calibrated[instrument11] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon6], +calibrated[instrument12] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite1,Phenomenon7] Mult size: 1
+Var pair:+power_avail[satellite1], +power_on[instrument01] Mult size: 1
+Var pair:+power_avail[satellite1], +power_on[instrument02] Mult size: 1
+Var pair:+power_avail[satellite1], +power_on[instrument03] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite0,GroundStation0] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+power_avail[satellite1], +power_on[instrument11] Mult size: 1
+Var pair:+power_avail[satellite1], +power_on[instrument12] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite1,GroundStation1] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite1,Phenomenon4] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+power_avail[satellite1], +calibrated[instrument01] Mult size: 1
+Var pair:+power_avail[satellite1], +calibrated[instrument02] Mult size: 1
+Var pair:+power_avail[satellite1], +calibrated[instrument03] Mult size: 1
+Var pair:+power_avail[satellite1], +calibrated[instrument11] Mult size: 1
+Var pair:+power_avail[satellite1], +calibrated[instrument12] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +power_on[instrument01] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +power_on[instrument02] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +power_on[instrument03] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +pointing[satellite0,GroundStation0] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +power_on[instrument11] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +power_on[instrument12] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +pointing[satellite1,GroundStation1] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +pointing[satellite1,Phenomenon4] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +calibrated[instrument01] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +calibrated[instrument02] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +calibrated[instrument03] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +calibrated[instrument11] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon7], +calibrated[instrument12] Mult size: 1
+Var pair:+power_on[instrument01], +power_on[instrument02] Mult size: 1
+Var pair:+power_on[instrument01], +power_on[instrument03] Mult size: 1
+Var pair:+power_on[instrument01], +pointing[satellite0,GroundStation0] Mult size: 1
+Var pair:+power_on[instrument01], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+power_on[instrument01], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+power_on[instrument01], +power_on[instrument11] Mult size: 1
+Var pair:+power_on[instrument01], +power_on[instrument12] Mult size: 1
+Var pair:+power_on[instrument01], +pointing[satellite1,GroundStation1] Mult size: 1
+Var pair:+power_on[instrument01], +pointing[satellite1,Phenomenon4] Mult size: 1
+Var pair:+power_on[instrument01], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+power_on[instrument01], +calibrated[instrument01] Mult size: 1
+Var pair:+power_on[instrument01], +calibrated[instrument02] Mult size: 1
+Var pair:+power_on[instrument01], +calibrated[instrument03] Mult size: 1
+Var pair:+power_on[instrument01], +calibrated[instrument11] Mult size: 1
+Var pair:+power_on[instrument01], +calibrated[instrument12] Mult size: 1
+Var pair:+power_on[instrument02], +power_on[instrument03] Mult size: 1
+Var pair:+power_on[instrument02], +pointing[satellite0,GroundStation0] Mult size: 1
+Var pair:+power_on[instrument02], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+power_on[instrument02], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+power_on[instrument02], +power_on[instrument11] Mult size: 1
+Var pair:+power_on[instrument02], +power_on[instrument12] Mult size: 1
+Var pair:+power_on[instrument02], +pointing[satellite1,GroundStation1] Mult size: 1
+Var pair:+power_on[instrument02], +pointing[satellite1,Phenomenon4] Mult size: 1
+Var pair:+power_on[instrument02], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+power_on[instrument02], +calibrated[instrument01] Mult size: 1
+Var pair:+power_on[instrument02], +calibrated[instrument02] Mult size: 1
+Var pair:+power_on[instrument02], +calibrated[instrument03] Mult size: 1
+Var pair:+power_on[instrument02], +calibrated[instrument11] Mult size: 1
+Var pair:+power_on[instrument02], +calibrated[instrument12] Mult size: 1
+Var pair:+power_on[instrument03], +pointing[satellite0,GroundStation0] Mult size: 1
+Var pair:+power_on[instrument03], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+power_on[instrument03], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+power_on[instrument03], +power_on[instrument11] Mult size: 1
+Var pair:+power_on[instrument03], +power_on[instrument12] Mult size: 1
+Var pair:+power_on[instrument03], +pointing[satellite1,GroundStation1] Mult size: 1
+Var pair:+power_on[instrument03], +pointing[satellite1,Phenomenon4] Mult size: 1
+Var pair:+power_on[instrument03], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+power_on[instrument03], +calibrated[instrument01] Mult size: 1
+Var pair:+power_on[instrument03], +calibrated[instrument02] Mult size: 1
+Var pair:+power_on[instrument03], +calibrated[instrument03] Mult size: 1
+Var pair:+power_on[instrument03], +calibrated[instrument11] Mult size: 1
+Var pair:+power_on[instrument03], +calibrated[instrument12] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +pointing[satellite0,Phenomenon4] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +power_on[instrument11] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +power_on[instrument12] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +pointing[satellite1,GroundStation1] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +pointing[satellite1,Phenomenon4] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +calibrated[instrument01] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +calibrated[instrument02] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +calibrated[instrument03] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +calibrated[instrument11] Mult size: 1
+Var pair:+pointing[satellite0,GroundStation0], +calibrated[instrument12] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +pointing[satellite0,Star5] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +power_on[instrument11] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +power_on[instrument12] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +pointing[satellite1,GroundStation1] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +pointing[satellite1,Phenomenon4] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +calibrated[instrument01] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +calibrated[instrument02] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +calibrated[instrument03] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +calibrated[instrument11] Mult size: 1
+Var pair:+pointing[satellite0,Phenomenon4], +calibrated[instrument12] Mult size: 1
+Var pair:+pointing[satellite0,Star5], +power_on[instrument11] Mult size: 1
+Var pair:+pointing[satellite0,Star5], +power_on[instrument12] Mult size: 1
+Var pair:+pointing[satellite0,Star5], +pointing[satellite1,GroundStation1] Mult size: 1
+Var pair:+pointing[satellite0,Star5], +pointing[satellite1,Phenomenon4] Mult size: 1
+Var pair:+pointing[satellite0,Star5], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+pointing[satellite0,Star5], +calibrated[instrument01] Mult size: 1
+Var pair:+pointing[satellite0,Star5], +calibrated[instrument02] Mult size: 1
+Var pair:+pointing[satellite0,Star5], +calibrated[instrument03] Mult size: 1
+Var pair:+pointing[satellite0,Star5], +calibrated[instrument11] Mult size: 1
+Var pair:+pointing[satellite0,Star5], +calibrated[instrument12] Mult size: 1
+Var pair:+power_on[instrument11], +power_on[instrument12] Mult size: 1
+Var pair:+power_on[instrument11], +pointing[satellite1,GroundStation1] Mult size: 1
+Var pair:+power_on[instrument11], +pointing[satellite1,Phenomenon4] Mult size: 1
+Var pair:+power_on[instrument11], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+power_on[instrument11], +calibrated[instrument01] Mult size: 1
+Var pair:+power_on[instrument11], +calibrated[instrument02] Mult size: 1
+Var pair:+power_on[instrument11], +calibrated[instrument03] Mult size: 1
+Var pair:+power_on[instrument11], +calibrated[instrument11] Mult size: 1
+Var pair:+power_on[instrument11], +calibrated[instrument12] Mult size: 1
+Var pair:+power_on[instrument12], +pointing[satellite1,GroundStation1] Mult size: 1
+Var pair:+power_on[instrument12], +pointing[satellite1,Phenomenon4] Mult size: 1
+Var pair:+power_on[instrument12], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+power_on[instrument12], +calibrated[instrument01] Mult size: 1
+Var pair:+power_on[instrument12], +calibrated[instrument02] Mult size: 1
+Var pair:+power_on[instrument12], +calibrated[instrument03] Mult size: 1
+Var pair:+power_on[instrument12], +calibrated[instrument11] Mult size: 1
+Var pair:+power_on[instrument12], +calibrated[instrument12] Mult size: 1
+Var pair:+pointing[satellite1,GroundStation1], +pointing[satellite1,Phenomenon4] Mult size: 1
+Var pair:+pointing[satellite1,GroundStation1], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+pointing[satellite1,GroundStation1], +calibrated[instrument01] Mult size: 1
+Var pair:+pointing[satellite1,GroundStation1], +calibrated[instrument02] Mult size: 1
+Var pair:+pointing[satellite1,GroundStation1], +calibrated[instrument03] Mult size: 1
+Var pair:+pointing[satellite1,GroundStation1], +calibrated[instrument11] Mult size: 1
+Var pair:+pointing[satellite1,GroundStation1], +calibrated[instrument12] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon4], +pointing[satellite1,Star5] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon4], +calibrated[instrument01] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon4], +calibrated[instrument02] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon4], +calibrated[instrument03] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon4], +calibrated[instrument11] Mult size: 1
+Var pair:+pointing[satellite1,Phenomenon4], +calibrated[instrument12] Mult size: 1
+Var pair:+pointing[satellite1,Star5], +calibrated[instrument01] Mult size: 1
+Var pair:+pointing[satellite1,Star5], +calibrated[instrument02] Mult size: 1
+Var pair:+pointing[satellite1,Star5], +calibrated[instrument03] Mult size: 1
+Var pair:+pointing[satellite1,Star5], +calibrated[instrument11] Mult size: 1
+Var pair:+pointing[satellite1,Star5], +calibrated[instrument12] Mult size: 1
+Var pair:+calibrated[instrument01], +calibrated[instrument02] Mult size: 1
+Var pair:+calibrated[instrument01], +calibrated[instrument03] Mult size: 1
+Var pair:+calibrated[instrument01], +calibrated[instrument11] Mult size: 1
+Var pair:+calibrated[instrument01], +calibrated[instrument12] Mult size: 1
+Var pair:+calibrated[instrument02], +calibrated[instrument03] Mult size: 1
+Var pair:+calibrated[instrument02], +calibrated[instrument11] Mult size: 1
+Var pair:+calibrated[instrument02], +calibrated[instrument12] Mult size: 1
+Var pair:+calibrated[instrument03], +calibrated[instrument11] Mult size: 1
+Var pair:+calibrated[instrument03], +calibrated[instrument12] Mult size: 1
+Var pair:+calibrated[instrument11], +calibrated[instrument12] Mult size: 1
+Number of variables: 20
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
+Parsing...
+Parsing: [0.010s CPU, 0.008s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.002s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 267 rules.
+Computing model... [0.000s CPU, 0.001s wall-clock]
+232 relevant atoms
+0 auxiliary atoms
+232 final queue length
+312 total queue pushes
+Completing instantiation... [0.000s CPU, 0.001s wall-clock]
+Instantiating: [0.010s CPU, 0.008s wall-clock]
+Computing fact groups...
+Finding invariants...
+75 initial candidates
+Finding invariants: [0.010s CPU, 0.012s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+60 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.013s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.002s wall-clock]
+5 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+4 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.001s wall-clock]
+Reordering and filtering variables...
+64 of 64 variables necessary.
+3 of 7 mutex groups necessary.
+115 of 115 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
+Translator variables: 64
+Translator derived variables: 0
+Translator facts: 135
+Translator goal facts: 1
+Translator mutex groups: 3
+Translator total mutex groups size: 6
+Translator operators: 115
+Translator axioms: 0
+Translator task size: 695
+Translator peak memory: 40520 KB
+Writing output... [0.000s CPU, 0.001s wall-clock]
+Done! [0.040s CPU, 0.035s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
+[t=2.9007e-05s, 9844 KB] reading input...
+[t=0.000723232s, 9844 KB] done reading input!
+[t=0.00167099s, 10232 KB] Initializing landmark cut heuristic...
+[t=0.00173352s, 10232 KB] Building successor generator...done!
+[t=0.00184502s, 10232 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.00186332s, 10232 KB] time for successor generation creation: 4.4893e-05s
+[t=0.00188406s, 10232 KB] Variables: 64
+[t=0.0019034s, 10232 KB] FactPairs: 135
+[t=0.00192111s, 10232 KB] Bytes per state: 12
+[t=0.00198518s, 10232 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00208298s, 10232 KB] New best heuristic value for lmcut: 13
+[t=0.00210569s, 10232 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0021247s, 10232 KB] f = 13, 1 evaluated, 0 expanded
+[t=0.0021452s, 10232 KB] Initial heuristic value for lmcut: 13
+[t=0.00216411s, 10232 KB] pruning method: none
+[t=0.00259571s, 10232 KB] f = 14, 12 evaluated, 1 expanded
+[t=0.00463275s, 10232 KB] f = 15, 68 evaluated, 8 expanded
+[t=0.0140381s, 10232 KB] f = 16, 331 evaluated, 44 expanded
+[t=0.0215636s, 10232 KB] New best heuristic value for lmcut: 12
+[t=0.0216167s, 10232 KB] g=4, 518 evaluated, 69 expanded
+[t=0.0218244s, 10232 KB] New best heuristic value for lmcut: 11
+[t=0.0218489s, 10232 KB] g=5, 524 evaluated, 70 expanded
+[t=0.0224429s, 10232 KB] New best heuristic value for lmcut: 10
+[t=0.0224728s, 10232 KB] g=6, 543 evaluated, 71 expanded
+[t=0.0529637s, 10232 KB] f = 17, 1498 evaluated, 221 expanded
+[t=0.194342s, 10496 KB] f = 18, 6162 evaluated, 984 expanded
+[t=0.196559s, 10496 KB] New best heuristic value for lmcut: 9
+[t=0.19659s, 10496 KB] g=9, 6248 evaluated, 997 expanded
+[t=0.730073s, 11164 KB] f = 19, 24095 evaluated, 4155 expanded
+[t=0.730309s, 11164 KB] New best heuristic value for lmcut: 8
+[t=0.730353s, 11164 KB] g=11, 24102 evaluated, 4156 expanded
+[t=0.730524s, 11164 KB] New best heuristic value for lmcut: 7
+[t=0.73056s, 11164 KB] g=12, 24109 evaluated, 4157 expanded
+[t=0.730906s, 11164 KB] New best heuristic value for lmcut: 6
+[t=0.730928s, 11164 KB] g=13, 24126 evaluated, 4158 expanded
+[t=0.743964s, 11300 KB] New best heuristic value for lmcut: 5
+[t=0.744028s, 11300 KB] g=14, 24791 evaluated, 4248 expanded
+[t=2.61336s, 14212 KB] f = 20, 90595 evaluated, 16798 expanded
+[t=2.6139s, 14212 KB] New best heuristic value for lmcut: 4
+[t=2.61395s, 14212 KB] g=16, 90623 evaluated, 16802 expanded
+[t=2.6142s, 14212 KB] New best heuristic value for lmcut: 3
+[t=2.61422s, 14212 KB] g=17, 90634 evaluated, 16803 expanded
+[t=2.61437s, 14212 KB] New best heuristic value for lmcut: 2
+[t=2.61443s, 14212 KB] g=18, 90641 evaluated, 16804 expanded
+[t=2.61467s, 14212 KB] New best heuristic value for lmcut: 1
+[t=2.61471s, 14212 KB] g=19, 90659 evaluated, 16805 expanded
+[t=2.61481s, 14212 KB] New best heuristic value for lmcut: 0
+[t=2.61483s, 14212 KB] g=20, 90671 evaluated, 16806 expanded
+[t=2.61487s, 14212 KB] Solution found!
+[t=2.61491s, 14212 KB] Actual search time: 2.61274s
+switch_on_instrument12_satellite1_  (1)
+turn_to_satellite1_groundstation1_phenomenon7_  (1)
+calibrate_satellite1_instrument12_groundstation1_  (1)
+turn_to_satellite1_star5_groundstation1_  (1)
+take_image_satellite1_star5_instrument12_x_ray_  (1)
+x_method1_method1_splitted_1_satellite1_star5_x_ray___splitting_method_method1_splitted_1_1_0_m1_@do_observation_star5_x_ray_  (1)
+switch_off_instrument12_satellite1_  (1)
+switch_on_instrument11_satellite1_  (1)
+switch_on_instrument03_satellite0_  (1)
+turn_to_satellite1_groundstation1_star5_  (1)
+calibrate_satellite1_instrument11_groundstation1_  (1)
+turn_to_satellite1_phenomenon4_groundstation1_  (1)
+take_image_satellite1_phenomenon4_instrument11_thermograph_  (1)
+x_method1_method1_splitted_1_satellite1_phenomenon4_thermograph___splitting_method_method1_splitted_1_1_0_m1_@do_observation_phenomenon4_thermograph_  (1)
+turn_to_satellite0_groundstation0_phenomenon6_  (1)
+calibrate_satellite0_instrument03_groundstation0_  (1)
+turn_to_satellite0_phenomenon6_groundstation0_  (1)
+take_image_satellite0_phenomenon6_instrument03_hd_video_  (1)
+x_method1_method1_splitted_1_satellite0_phenomenon6_hd_video___splitting_method_method1_splitted_1_1_0_m1_@do_observation_phenomenon6_hd_video_  (1)
+x__top_method@__top__  (1)
+[t=2.61493s, 14212 KB] Plan length: 20 step(s).
+[t=2.61493s, 14212 KB] Plan cost: 20
+[t=2.61493s, 14212 KB] Expanded 16807 state(s).
+[t=2.61493s, 14212 KB] Reopened 0 state(s).
+[t=2.61493s, 14212 KB] Evaluated 90671 state(s).
+[t=2.61493s, 14212 KB] Evaluations: 90671
+[t=2.61493s, 14212 KB] Generated 187561 state(s).
+[t=2.61493s, 14212 KB] Dead ends: 0 state(s).
+[t=2.61493s, 14212 KB] Expanded until last jump: 16798 state(s).
+[t=2.61493s, 14212 KB] Reopened until last jump: 0 state(s).
+[t=2.61493s, 14212 KB] Evaluated until last jump: 90595 state(s).
+[t=2.61493s, 14212 KB] Generated until last jump: 187397 state(s).
+[t=2.61493s, 14212 KB] Number of registered states: 90671
+[t=2.61493s, 14212 KB] Int hash set load factor: 90671/131072 = 0.691765
+[t=2.61493s, 14212 KB] Int hash set resizes: 17
+[t=2.61493s, 14212 KB] Search time: 2.61294s
+[t=2.61493s, 14212 KB] Total time: 2.61493s
+Solution found.
+Peak memory: 14212 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+Cost of SAS plan on RC model: 20
+Cost SAS: 0
+Num primitive tasks: 41
+Num non-primitive tasks: 14
+Total tasks: 55
+Number of methods: 74
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 14
+Search Results
+- Search time 2.766 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 0.000747 seconds
+- Visited list inserts 366
+- Visited list pruned 210
+- Visited list contains 156
+- Visited list hash collisions 210
+- Visited list used hash buckets 156
+- Generated 2310 search nodes
+  Calculated heuristic for 2310 nodes
+  One modifications 0
+  Effectless actions 0
+- including 0 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 835 nodes per second
+- Final fringe contains 0 nodes
+- Status: Proven unsolvable

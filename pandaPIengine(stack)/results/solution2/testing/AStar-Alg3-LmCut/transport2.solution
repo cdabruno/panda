@@ -1,0 +1,409 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/transport2.sas.
+- State has 16 bits divided into 16 mutex groups.
+- Domain contains 28 actions.
+- Domain contains 45 tasks.
+- Domain contains 41 methods.
+- The initial state contains 5 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 42
+- The problem is cyclic
+- Number of cyclic SCCs: 1
+- Number of cyclic SCCs of size 1: 0
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 16
+Variable :+at[package-0,city-loc-3] Domain size: 1
+Variable :+at[package-1,city-loc-2] Domain size: 1
+Variable :+at[package-2,city-loc-2] Domain size: 1
+Variable :+at[truck-0,city-loc-3] Domain size: 1
+Variable :+capacity[truck-0,capacity-2] Domain size: 1
+Variable :+at[truck-0,city-loc-0] Domain size: 1
+Variable :+at[truck-0,city-loc-1] Domain size: 1
+Variable :+in[package-0,truck-0] Domain size: 1
+Variable :+capacity[truck-0,capacity-1] Domain size: 1
+Variable :+at[truck-0,city-loc-2] Domain size: 1
+Variable :+capacity[truck-0,capacity-0] Domain size: 1
+Variable :+at[package-0,city-loc-1] Domain size: 1
+Variable :+in[package-1,truck-0] Domain size: 1
+Variable :+in[package-2,truck-0] Domain size: 1
+Variable :+at[package-1,city-loc-0] Domain size: 1
+Variable :+at[package-2,city-loc-0] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+at[package-0,city-loc-3], +at[package-1,city-loc-2] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +at[package-2,city-loc-2] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +at[truck-0,city-loc-3] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +capacity[truck-0,capacity-2] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +at[truck-0,city-loc-0] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +at[truck-0,city-loc-1] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +in[package-0,truck-0] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +capacity[truck-0,capacity-1] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +at[truck-0,city-loc-2] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +capacity[truck-0,capacity-0] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +at[package-0,city-loc-1] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +in[package-1,truck-0] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +in[package-2,truck-0] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+at[package-0,city-loc-3], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +at[package-2,city-loc-2] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +at[truck-0,city-loc-3] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +capacity[truck-0,capacity-2] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +at[truck-0,city-loc-0] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +at[truck-0,city-loc-1] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +in[package-0,truck-0] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +capacity[truck-0,capacity-1] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +at[truck-0,city-loc-2] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +capacity[truck-0,capacity-0] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +at[package-0,city-loc-1] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +in[package-1,truck-0] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +in[package-2,truck-0] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+at[package-1,city-loc-2], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+at[package-2,city-loc-2], +at[truck-0,city-loc-3] Mult size: 1
+Var pair:+at[package-2,city-loc-2], +capacity[truck-0,capacity-2] Mult size: 1
+Var pair:+at[package-2,city-loc-2], +at[truck-0,city-loc-0] Mult size: 1
+Var pair:+at[package-2,city-loc-2], +at[truck-0,city-loc-1] Mult size: 1
+Var pair:+at[package-2,city-loc-2], +in[package-0,truck-0] Mult size: 1
+Var pair:+at[package-2,city-loc-2], +capacity[truck-0,capacity-1] Mult size: 1
+Var pair:+at[package-2,city-loc-2], +at[truck-0,city-loc-2] Mult size: 1
+Var pair:+at[package-2,city-loc-2], +capacity[truck-0,capacity-0] Mult size: 1
+Var pair:+at[package-2,city-loc-2], +at[package-0,city-loc-1] Mult size: 1
+Var pair:+at[package-2,city-loc-2], +in[package-1,truck-0] Mult size: 1
+Var pair:+at[package-2,city-loc-2], +in[package-2,truck-0] Mult size: 1
+Var pair:+at[package-2,city-loc-2], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+at[package-2,city-loc-2], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-3], +capacity[truck-0,capacity-2] Mult size: 1
+Var pair:+at[truck-0,city-loc-3], +at[truck-0,city-loc-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-3], +at[truck-0,city-loc-1] Mult size: 1
+Var pair:+at[truck-0,city-loc-3], +in[package-0,truck-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-3], +capacity[truck-0,capacity-1] Mult size: 1
+Var pair:+at[truck-0,city-loc-3], +at[truck-0,city-loc-2] Mult size: 1
+Var pair:+at[truck-0,city-loc-3], +capacity[truck-0,capacity-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-3], +at[package-0,city-loc-1] Mult size: 1
+Var pair:+at[truck-0,city-loc-3], +in[package-1,truck-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-3], +in[package-2,truck-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-3], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-3], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-2], +at[truck-0,city-loc-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-2], +at[truck-0,city-loc-1] Mult size: 1
+Var pair:+capacity[truck-0,capacity-2], +in[package-0,truck-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-2], +capacity[truck-0,capacity-1] Mult size: 1
+Var pair:+capacity[truck-0,capacity-2], +at[truck-0,city-loc-2] Mult size: 1
+Var pair:+capacity[truck-0,capacity-2], +capacity[truck-0,capacity-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-2], +at[package-0,city-loc-1] Mult size: 1
+Var pair:+capacity[truck-0,capacity-2], +in[package-1,truck-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-2], +in[package-2,truck-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-2], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-2], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-0], +at[truck-0,city-loc-1] Mult size: 1
+Var pair:+at[truck-0,city-loc-0], +in[package-0,truck-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-0], +capacity[truck-0,capacity-1] Mult size: 1
+Var pair:+at[truck-0,city-loc-0], +at[truck-0,city-loc-2] Mult size: 1
+Var pair:+at[truck-0,city-loc-0], +capacity[truck-0,capacity-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-0], +at[package-0,city-loc-1] Mult size: 1
+Var pair:+at[truck-0,city-loc-0], +in[package-1,truck-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-0], +in[package-2,truck-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-0], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-0], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-1], +in[package-0,truck-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-1], +capacity[truck-0,capacity-1] Mult size: 1
+Var pair:+at[truck-0,city-loc-1], +at[truck-0,city-loc-2] Mult size: 1
+Var pair:+at[truck-0,city-loc-1], +capacity[truck-0,capacity-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-1], +at[package-0,city-loc-1] Mult size: 1
+Var pair:+at[truck-0,city-loc-1], +in[package-1,truck-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-1], +in[package-2,truck-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-1], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-1], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+in[package-0,truck-0], +capacity[truck-0,capacity-1] Mult size: 1
+Var pair:+in[package-0,truck-0], +at[truck-0,city-loc-2] Mult size: 1
+Var pair:+in[package-0,truck-0], +capacity[truck-0,capacity-0] Mult size: 1
+Var pair:+in[package-0,truck-0], +at[package-0,city-loc-1] Mult size: 1
+Var pair:+in[package-0,truck-0], +in[package-1,truck-0] Mult size: 1
+Var pair:+in[package-0,truck-0], +in[package-2,truck-0] Mult size: 1
+Var pair:+in[package-0,truck-0], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+in[package-0,truck-0], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-1], +at[truck-0,city-loc-2] Mult size: 1
+Var pair:+capacity[truck-0,capacity-1], +capacity[truck-0,capacity-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-1], +at[package-0,city-loc-1] Mult size: 1
+Var pair:+capacity[truck-0,capacity-1], +in[package-1,truck-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-1], +in[package-2,truck-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-1], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-1], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-2], +capacity[truck-0,capacity-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-2], +at[package-0,city-loc-1] Mult size: 1
+Var pair:+at[truck-0,city-loc-2], +in[package-1,truck-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-2], +in[package-2,truck-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-2], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+at[truck-0,city-loc-2], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-0], +at[package-0,city-loc-1] Mult size: 1
+Var pair:+capacity[truck-0,capacity-0], +in[package-1,truck-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-0], +in[package-2,truck-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-0], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+capacity[truck-0,capacity-0], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+at[package-0,city-loc-1], +in[package-1,truck-0] Mult size: 1
+Var pair:+at[package-0,city-loc-1], +in[package-2,truck-0] Mult size: 1
+Var pair:+at[package-0,city-loc-1], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+at[package-0,city-loc-1], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+in[package-1,truck-0], +in[package-2,truck-0] Mult size: 1
+Var pair:+in[package-1,truck-0], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+in[package-1,truck-0], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+in[package-2,truck-0], +at[package-1,city-loc-0] Mult size: 1
+Var pair:+in[package-2,truck-0], +at[package-2,city-loc-0] Mult size: 1
+Var pair:+at[package-1,city-loc-0], +at[package-2,city-loc-0] Mult size: 1
+Number of variables: 16
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.006s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 181 rules.
+Computing model... [0.010s CPU, 0.001s wall-clock]
+159 relevant atoms
+0 auxiliary atoms
+159 final queue length
+214 total queue pushes
+Completing instantiation... [0.000s CPU, 0.001s wall-clock]
+Instantiating: [0.010s CPU, 0.006s wall-clock]
+Computing fact groups...
+Finding invariants...
+61 initial candidates
+Finding invariants: [0.060s CPU, 0.061s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+45 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.060s CPU, 0.062s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.002s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+5 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Reordering and filtering variables...
+50 of 50 variables necessary.
+6 of 11 mutex groups necessary.
+69 of 69 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
+Translator variables: 50
+Translator derived variables: 0
+Translator facts: 106
+Translator goal facts: 1
+Translator mutex groups: 6
+Translator total mutex groups size: 12
+Translator operators: 69
+Translator axioms: 0
+Translator task size: 473
+Translator peak memory: 40776 KB
+Writing output... [0.000s CPU, 0.001s wall-clock]
+Done! [0.090s CPU, 0.079s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
+[t=2.6048e-05s, 9844 KB] reading input...
+[t=0.00046633s, 9844 KB] done reading input!
+[t=0.00133495s, 10232 KB] Initializing landmark cut heuristic...
+[t=0.00139914s, 10232 KB] Building successor generator...done!
+[t=0.00148719s, 10232 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.00150469s, 10232 KB] time for successor generation creation: 2.7038e-05s
+[t=0.00152461s, 10232 KB] Variables: 50
+[t=0.00154238s, 10232 KB] FactPairs: 106
+[t=0.00155903s, 10232 KB] Bytes per state: 8
+[t=0.00161894s, 10232 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00170942s, 10232 KB] New best heuristic value for lmcut: 23
+[t=0.0017298s, 10232 KB] g=0, 1 evaluated, 0 expanded
+[t=0.00174782s, 10232 KB] f = 23, 1 evaluated, 0 expanded
+[t=0.00176704s, 10232 KB] Initial heuristic value for lmcut: 23
+[t=0.00178466s, 10232 KB] pruning method: none
+[t=0.00184511s, 10232 KB] New best heuristic value for lmcut: 22
+[t=0.00186473s, 10232 KB] g=1, 2 evaluated, 1 expanded
+[t=0.00191896s, 10232 KB] New best heuristic value for lmcut: 19
+[t=0.00193747s, 10232 KB] g=1, 3 evaluated, 1 expanded
+[t=0.00219693s, 10232 KB] New best heuristic value for lmcut: 18
+[t=0.00222292s, 10232 KB] g=2, 9 evaluated, 2 expanded
+[t=0.00271885s, 10232 KB] New best heuristic value for lmcut: 17
+[t=0.00274187s, 10232 KB] g=3, 24 evaluated, 7 expanded
+[t=0.00298198s, 10232 KB] New best heuristic value for lmcut: 16
+[t=0.00300364s, 10232 KB] g=4, 32 evaluated, 8 expanded
+[t=0.00321198s, 10232 KB] New best heuristic value for lmcut: 15
+[t=0.00323444s, 10232 KB] g=5, 39 evaluated, 9 expanded
+[t=0.00373176s, 10232 KB] New best heuristic value for lmcut: 14
+[t=0.00375348s, 10232 KB] g=7, 58 evaluated, 13 expanded
+[t=0.00389862s, 10232 KB] New best heuristic value for lmcut: 13
+[t=0.0039192s, 10232 KB] g=8, 64 evaluated, 14 expanded
+[t=0.0252407s, 10232 KB] New best heuristic value for lmcut: 12
+[t=0.0252838s, 10232 KB] g=11, 947 evaluated, 267 expanded
+[t=0.0357145s, 10232 KB] f = 24, 1372 evaluated, 373 expanded
+[t=0.0947733s, 10356 KB] f = 25, 3781 evaluated, 1113 expanded
+[t=0.114833s, 10356 KB] New best heuristic value for lmcut: 11
+[t=0.114886s, 10356 KB] g=14, 4638 evaluated, 1405 expanded
+[t=0.159706s, 10356 KB] New best heuristic value for lmcut: 10
+[t=0.159781s, 10356 KB] g=15, 6491 evaluated, 2002 expanded
+[t=0.159953s, 10356 KB] New best heuristic value for lmcut: 9
+[t=0.159982s, 10356 KB] g=16, 6502 evaluated, 2003 expanded
+[t=0.160164s, 10356 KB] New best heuristic value for lmcut: 8
+[t=0.160189s, 10356 KB] g=17, 6512 evaluated, 2004 expanded
+[t=0.160339s, 10356 KB] New best heuristic value for lmcut: 7
+[t=0.160371s, 10356 KB] g=18, 6521 evaluated, 2005 expanded
+[t=0.160491s, 10356 KB] New best heuristic value for lmcut: 6
+[t=0.160514s, 10356 KB] g=19, 6529 evaluated, 2006 expanded
+[t=0.160632s, 10356 KB] New best heuristic value for lmcut: 5
+[t=0.160662s, 10356 KB] g=20, 6536 evaluated, 2007 expanded
+[t=0.160745s, 10356 KB] New best heuristic value for lmcut: 4
+[t=0.16077s, 10356 KB] g=21, 6542 evaluated, 2008 expanded
+[t=0.160849s, 10356 KB] New best heuristic value for lmcut: 3
+[t=0.16087s, 10356 KB] g=22, 6548 evaluated, 2009 expanded
+[t=0.160935s, 10356 KB] New best heuristic value for lmcut: 2
+[t=0.160962s, 10356 KB] g=23, 6553 evaluated, 2010 expanded
+[t=0.161025s, 10356 KB] New best heuristic value for lmcut: 1
+[t=0.161045s, 10356 KB] g=24, 6559 evaluated, 2011 expanded
+[t=0.161103s, 10356 KB] New best heuristic value for lmcut: 0
+[t=0.161137s, 10356 KB] g=25, 6564 evaluated, 2012 expanded
+[t=0.161163s, 10356 KB] Solution found!
+[t=0.161187s, 10356 KB] Actual search time: 0.159399s
+pickmup_truckm0_citymlocm3_packagem0_capacitym1_capacitym2_  (1)
+drive_truckm0_citymlocm3_citymlocm1_  (1)
+drop_truckm0_citymlocm1_packagem0_capacitym1_capacitym2_  (1)
+mmunload@unload_truckm0_citymlocm1_packagem0_  (1)
+mmdrivemto@getmto_truckm0_citymlocm1_  (1)
+mmload@load_truckm0_citymlocm3_packagem0_  (1)
+drive_truckm0_citymlocm1_citymlocm2_  (1)
+pickmup_truckm0_citymlocm2_packagem1_capacitym1_capacitym2_  (1)
+pickmup_truckm0_citymlocm2_packagem2_capacitym0_capacitym1_  (1)
+drive_truckm0_citymlocm2_citymlocm1_  (1)
+drive_truckm0_citymlocm1_citymlocm3_  (1)
+drive_truckm0_citymlocm3_citymlocm0_  (1)
+drop_truckm0_citymlocm0_packagem1_capacitym0_capacitym1_  (1)
+drop_truckm0_citymlocm0_packagem2_capacitym1_capacitym2_  (1)
+mmload@load_truckm0_citymlocm2_packagem2_  (1)
+mmload@load_truckm0_citymlocm2_packagem1_  (1)
+mmunload@unload_truckm0_citymlocm0_packagem2_  (1)
+mmunload@unload_truckm0_citymlocm0_packagem1_  (1)
+mmdrivemto@getmto_truckm0_citymlocm0_  (1)
+mmdrivemto@getmto_truckm0_citymlocm3_  (1)
+x_splitting_method_mmdeliver_splitted_1@mmdeliver_splitted_1_truckm0_packagem0_  (1)
+mmdrivemto@getmto_truckm0_citymlocm2_  (1)
+x_splitting_method_mmdeliver_splitted_1@mmdeliver_splitted_1_truckm0_packagem2_  (1)
+x_splitting_method_mmdeliver_splitted_1@mmdeliver_splitted_1_truckm0_packagem1_  (1)
+x_____top_method_deliver_packagem2_citymlocm0__mmdeliver_2_0_1_m1_m2_m3__deliver_packagem1_citymlocm0__mmdeliver_1_0_m1_m2_m3_2_3_4__deliver_packagem0_citymlocm1__mmdeliver_0_m1_m2_m3_1_2_3_4_5_6_@__top__  (1)
+[t=0.161215s, 10356 KB] Plan length: 25 step(s).
+[t=0.161215s, 10356 KB] Plan cost: 25
+[t=0.161215s, 10356 KB] Expanded 2013 state(s).
+[t=0.161215s, 10356 KB] Reopened 0 state(s).
+[t=0.161215s, 10356 KB] Evaluated 6564 state(s).
+[t=0.161215s, 10356 KB] Evaluations: 6564
+[t=0.161215s, 10356 KB] Generated 22388 state(s).
+[t=0.161215s, 10356 KB] Dead ends: 0 state(s).
+[t=0.161215s, 10356 KB] Expanded until last jump: 1113 state(s).
+[t=0.161215s, 10356 KB] Reopened until last jump: 0 state(s).
+[t=0.161215s, 10356 KB] Evaluated until last jump: 3781 state(s).
+[t=0.161215s, 10356 KB] Generated until last jump: 11246 state(s).
+[t=0.161215s, 10356 KB] Number of registered states: 6564
+[t=0.161215s, 10356 KB] Int hash set load factor: 6564/8192 = 0.80127
+[t=0.161215s, 10356 KB] Int hash set resizes: 13
+[t=0.161215s, 10356 KB] Search time: 0.159596s
+[t=0.161215s, 10356 KB] Total time: 0.161215s
+Solution found.
+Peak memory: 10356 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+Cost of SAS plan on RC model: 25
+Cost SAS: 0
+Num primitive tasks: 28
+Num non-primitive tasks: 17
+Total tasks: 45
+Number of methods: 41
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 23
+   1s visitime    0.02s generated nodes     25021 nodes/sec   22892 cur h   28 mod.depth   11 inserts      5047 dups      2817 size      2230 hash fail   2817 hash buckets   2230
+   2s visitime    0.05s generated nodes     70072 nodes/sec   31764 cur h   30 mod.depth   12 inserts     13478 dups      7414 size      6064 hash fail   7415 hash buckets   6063
+   3s visitime    0.09s generated nodes    110134 nodes/sec   34086 cur h   30 mod.depth   13 inserts     21419 dups     11907 size      9512 hash fail  11908 hash buckets   9511
+   4s visitime    0.14s generated nodes    135147 nodes/sec   30680 cur h   28 mod.depth   16 inserts     27203 dups     15564 size     11639 hash fail  15566 hash buckets  11637
+   5s visitime    0.17s generated nodes    160160 nodes/sec   28754 cur h   30 mod.depth   14 inserts     31315 dups     17651 size     13664 hash fail  17655 hash buckets  13660
+   6s visitime    0.21s generated nodes    200204 nodes/sec   30403 cur h   31 mod.depth   14 inserts     38103 dups     21133 size     16970 hash fail  21140 hash buckets  16963
+   7s visitime    0.26s generated nodes    240254 nodes/sec   31463 cur h   32 mod.depth   14 inserts     49290 dups     28845 size     20445 hash fail  28855 hash buckets  20435
+   8s visitime    0.29s generated nodes    285299 nodes/sec   32631 cur h   31 mod.depth   15 inserts     53876 dups     29700 size     24176 hash fail  29715 hash buckets  24161
+   9s visitime    0.32s generated nodes    310321 nodes/sec   31623 cur h   31 mod.depth   15 inserts     57242 dups     30983 size     26259 hash fail  31001 hash buckets  26241
+  10s visitime    0.35s generated nodes    330330 nodes/sec   30369 cur h   33 mod.depth   13 inserts     60958 dups     32992 size     27966 hash fail  33014 hash buckets  27944
+  11s visitime    0.41s generated nodes    360360 nodes/sec   30282 cur h   32 mod.depth   14 inserts     72925 dups     42272 size     30653 hash fail  42298 hash buckets  30627
+  12s visitime    0.45s generated nodes    405417 nodes/sec   31282 cur h   32 mod.depth   15 inserts     79333 dups     44985 size     34348 hash fail  45018 hash buckets  34315
+  14s visitime    0.49s generated nodes    440451 nodes/sec   31054 cur h   32 mod.depth   15 inserts     85456 dups     48169 size     37287 hash fail  48203 hash buckets  37253
+  15s visitime    0.58s generated nodes    460468 nodes/sec   30082 cur h   33 mod.depth   15 inserts     95824 dups     56790 size     39034 hash fail  56831 hash buckets  38993
+  16s visitime    0.60s generated nodes    485495 nodes/sec   29511 cur h   32 mod.depth   16 inserts     97976 dups     56981 size     40995 hash fail  57027 hash buckets  40949
+  17s visitime    0.63s generated nodes    525544 nodes/sec   29991 cur h   33 mod.depth   15 inserts    102571 dups     58410 size     44161 hash fail  58463 hash buckets  44108
+  18s visitime    0.69s generated nodes    570615 nodes/sec   30674 cur h   32 mod.depth   16 inserts    115449 dups     67702 size     47747 hash fail  67767 hash buckets  47682
+  19s visitime    0.74s generated nodes    600658 nodes/sec   30408 cur h   33 mod.depth   16 inserts    123312 dups     73127 size     50185 hash fail  73201 hash buckets  50111
+  20s visitime    0.77s generated nodes    625689 nodes/sec   29823 cur h   34 mod.depth   15 inserts    125597 dups     73374 size     52223 hash fail  73450 hash buckets  52147
+Reached time limit - stopping search.
+Search Results
+- Search time 21.23 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 0.77 seconds
+- Visited list inserts 126065
+- Visited list pruned 73431
+- Visited list contains 52634
+- Visited list hash collisions 73509
+- Visited list used hash buckets 52556
+- Generated 630702 search nodes
+  Calculated heuristic for 590031 nodes
+  One modifications 0
+  Effectless actions 40671
+- including 0 one modification actions
+- including 0 one modification methods
+- and       40671 progressions of effectless actions
+- Generated 27798 nodes per second
+- Final fringe contains 104839 nodes
+- Status: Timeout

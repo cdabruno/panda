@@ -1,0 +1,266 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/umtranslog17.sas.
+- State has 9 bits divided into 9 mutex groups.
+- Domain contains 7 actions.
+- Domain contains 8 tasks.
+- Domain contains 1 methods.
+- The initial state contains 4 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 1 bits.
+- Instance is totally-ordered: yes
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 8
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: total order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 9
+Variable :+At_Vehicle[Pferd,O27] Domain size: 1
+Variable :+At_Package[Toshiba_Laptops,O27] Domain size: 1
+Variable :-Door_Open[Pferd] Domain size: 1
+Variable :-Fees_Collected[Toshiba_Laptops] Domain size: 1
+Variable :+At_Vehicle[Pferd,O28] Domain size: 1
+Variable :+At_Package[Toshiba_Laptops,Pferd] Domain size: 1
+Variable :+Door_Open[Pferd] Domain size: 1
+Variable :+Fees_Collected[Toshiba_Laptops] Domain size: 1
+Variable :+Delivered[Toshiba_Laptops] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+At_Vehicle[Pferd,O27], +At_Package[Toshiba_Laptops,O27] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], -Door_Open[Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +At_Package[Toshiba_Laptops,Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +Door_Open[Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], -Door_Open[Pferd] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +At_Package[Toshiba_Laptops,Pferd] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +Door_Open[Pferd] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:-Door_Open[Pferd], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Door_Open[Pferd], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:-Door_Open[Pferd], +At_Package[Toshiba_Laptops,Pferd] Mult size: 1
+Var pair:-Door_Open[Pferd], +Door_Open[Pferd] Mult size: 1
+Var pair:-Door_Open[Pferd], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Door_Open[Pferd], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +At_Package[Toshiba_Laptops,Pferd] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Door_Open[Pferd] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +At_Package[Toshiba_Laptops,Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +Door_Open[Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Pferd], +Door_Open[Pferd] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Pferd], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Pferd], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+Door_Open[Pferd], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+Door_Open[Pferd], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+Fees_Collected[Toshiba_Laptops], +Delivered[Toshiba_Laptops] Mult size: 1
+Number of variables: 9
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.002s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.000s wall-clock]
+Generated 24 rules.
+Computing model... [0.000s CPU, 0.000s wall-clock]
+33 relevant atoms
+0 auxiliary atoms
+33 final queue length
+35 total queue pushes
+Completing instantiation... [0.000s CPU, 0.000s wall-clock]
+Instantiating: [0.000s CPU, 0.001s wall-clock]
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+8 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.002s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.010s CPU, 0.001s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+4 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.000s wall-clock]
+Reordering and filtering variables...
+12 of 12 variables necessary.
+2 of 7 mutex groups necessary.
+8 of 8 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
+Translator variables: 12
+Translator derived variables: 0
+Translator facts: 25
+Translator goal facts: 2
+Translator mutex groups: 2
+Translator total mutex groups size: 4
+Translator operators: 8
+Translator axioms: 0
+Translator task size: 82
+Translator peak memory: 39752 KB
+Writing output... [0.000s CPU, 0.000s wall-clock]
+Done! [0.010s CPU, 0.008s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
+[t=2.2858e-05s, 9844 KB] reading input...
+[t=0.000199787s, 9844 KB] done reading input!
+[t=0.001292s, 10100 KB] Initializing landmark cut heuristic...
+[t=0.00136367s, 10100 KB] Building successor generator...done!
+[t=0.0014395s, 10100 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.00145901s, 10100 KB] time for successor generation creation: 9.817e-06s
+[t=0.00148112s, 10100 KB] Variables: 12
+[t=0.00150134s, 10100 KB] FactPairs: 25
+[t=0.00152038s, 10100 KB] Bytes per state: 4
+[t=0.00159045s, 10100 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00165068s, 10100 KB] New best heuristic value for lmcut: 8
+[t=0.00167322s, 10100 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0017069s, 10100 KB] f = 8, 1 evaluated, 0 expanded
+[t=0.00173487s, 10100 KB] Initial heuristic value for lmcut: 8
+[t=0.00176544s, 10100 KB] pruning method: none
+[t=0.00181272s, 10100 KB] New best heuristic value for lmcut: 7
+[t=0.00184314s, 10100 KB] g=1, 3 evaluated, 1 expanded
+[t=0.00188553s, 10100 KB] New best heuristic value for lmcut: 6
+[t=0.00191764s, 10100 KB] g=2, 6 evaluated, 2 expanded
+[t=0.00196319s, 10100 KB] New best heuristic value for lmcut: 5
+[t=0.00199476s, 10100 KB] g=3, 9 evaluated, 3 expanded
+[t=0.00203022s, 10100 KB] New best heuristic value for lmcut: 4
+[t=0.00205086s, 10100 KB] g=4, 12 evaluated, 4 expanded
+[t=0.00208056s, 10100 KB] New best heuristic value for lmcut: 3
+[t=0.00210119s, 10100 KB] g=5, 14 evaluated, 5 expanded
+[t=0.00213513s, 10100 KB] New best heuristic value for lmcut: 2
+[t=0.00215581s, 10100 KB] g=6, 17 evaluated, 6 expanded
+[t=0.00218329s, 10100 KB] New best heuristic value for lmcut: 1
+[t=0.00220428s, 10100 KB] g=7, 19 evaluated, 7 expanded
+[t=0.00223222s, 10100 KB] New best heuristic value for lmcut: 0
+[t=0.00225291s, 10100 KB] g=8, 22 evaluated, 8 expanded
+[t=0.0022737s, 10100 KB] Solution found!
+[t=0.00229494s, 10100 KB] Actual search time: 0.000517029s
+load_package_toshiba_laptops_pferd_o27_  (1)
+move_vehicle_no_traincar_pferd_o27_james_franck_ring_o28_  (1)
+unload_package_toshiba_laptops_pferd_o28_  (1)
+collect_fees_toshiba_laptops_  (1)
+deliver_p_toshiba_laptops_  (1)
+open_door_pferd_  (1)
+close_door_pferd_  (1)
+x_____________top_method_transport_toshiba_laptops_o27_o28__method_transport_pi_ca_de_0_m1_m2_m3__carry_toshiba_laptops_o27_o28__method_carry_cd_1_0_m1_2__carry_direct_toshiba_laptops_o27_o28__method_carry_direct_1_0_m1_2__helper_carry_direct_pferd_toshiba_laptops_o27_o28__method_helper_carry_direct_nomovefirst_1_0_m1_m2_m3_2__unload_top_toshiba_laptops_pferd_o28__method_unload_top_normal_3_0_1_2_m1_4__unload_toshiba_laptops_pferd_o28__method_unload_regular_3_0_1_2_m1_m2_m3_4__move_pferd_o27_o28__method_move_no_traincar_2_0_1_m1_3_4_5_6__load_top_toshiba_laptops_pferd_o27__method_load_top_normal_1_0_m1_2_3_4_5_6__load_toshiba_laptops_pferd_o27__method_load_regular_1_0_m1_m2_m3_2_3_4_5_6__deliver_toshiba_laptops__method_deliver_dp_8_0_1_2_3_4_5_6_7_m1__pickup_toshiba_laptops__method_pickup_normal_0_m1_1_2_3_4_5_6_7_8_@__top__  (1)
+[t=0.00231596s, 10100 KB] Plan length: 8 step(s).
+[t=0.00231596s, 10100 KB] Plan cost: 8
+[t=0.00231596s, 10100 KB] Expanded 9 state(s).
+[t=0.00231596s, 10100 KB] Reopened 0 state(s).
+[t=0.00231596s, 10100 KB] Evaluated 22 state(s).
+[t=0.00231596s, 10100 KB] Evaluations: 22
+[t=0.00231596s, 10100 KB] Generated 21 state(s).
+[t=0.00231596s, 10100 KB] Dead ends: 1 state(s).
+[t=0.00231596s, 10100 KB] Expanded until last jump: 0 state(s).
+[t=0.00231596s, 10100 KB] Reopened until last jump: 0 state(s).
+[t=0.00231596s, 10100 KB] Evaluated until last jump: 1 state(s).
+[t=0.00231596s, 10100 KB] Generated until last jump: 0 state(s).
+[t=0.00231596s, 10100 KB] Number of registered states: 22
+[t=0.00231596s, 10100 KB] Int hash set load factor: 22/32 = 0.6875
+[t=0.00231596s, 10100 KB] Int hash set resizes: 5
+[t=0.00231596s, 10100 KB] Search time: 0.000726184s
+[t=0.00231596s, 10100 KB] Total time: 0.00231596s
+Solution found.
+Peak memory: 10100 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+Cost of SAS plan on RC model: 8
+Cost SAS: 0
+Num primitive tasks: 7
+Num non-primitive tasks: 1
+Total tasks: 8
+Number of methods: 1
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 8
+Search Results
+- Search time 0.104 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 8e-06 seconds
+- Visited list inserts 2
+- Visited list pruned 0
+- Visited list contains 2
+- Visited list hash collisions 0
+- Visited list used hash buckets 2
+- Generated 11 search nodes
+  Calculated heuristic for 2 nodes
+  One modifications 9
+  Effectless actions 0
+- including 9 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 19 nodes per second
+- Final fringe contains 0 nodes
+- Status: Solved
+- Found solution of length 10
+- Total costs of actions: 9
+==>
+1 collect_fees[Toshiba_Laptops]
+2 open_door[Pferd]
+3 load_package[Toshiba_Laptops,Pferd,O27]
+4 close_door[Pferd]
+5 move_vehicle_no_traincar[Pferd,O27,James_Franck_Ring,O28]
+6 open_door[Pferd]
+7 unload_package[Toshiba_Laptops,Pferd,O28]
+8 close_door[Pferd]
+9 deliver_p[Toshiba_Laptops]
+root 0
+0 __top[] -> <<<<<<<<<<<__top_method;transport[Toshiba_Laptops,O27,O28];method_transport_pi_ca_de;0;-1,-2,-3>;carry[Toshiba_Laptops,O27,O28];method_carry_cd;1;0,-1,2>;carry_direct[Toshiba_Laptops,O27,O28];method_carry_direct;1;0,-1,2>;helper_carry_direct[Pferd,Toshiba_Laptops,O27,O28];method_helper_carry_direct_noMoveFirst;1;0,-1,-2,-3,2>;unload_top[Toshiba_Laptops,Pferd,O28];method_unload_top_normal;3;0,1,2,-1,4>;unload[Toshiba_Laptops,Pferd,O28];method_unload_regular;3;0,1,2,-1,-2,-3,4>;move[Pferd,O27,O28];method_move_no_traincar;2;0,1,-1,3,4,5,6>;load_top[Toshiba_Laptops,Pferd,O27];method_load_top_normal;1;0,-1,2,3,4,5,6>;load[Toshiba_Laptops,Pferd,O27];method_load_regular;1;0,-1,-2,-3,2,3,4,5,6>;deliver[Toshiba_Laptops];method_deliver_dp;8;0,1,2,3,4,5,6,7,-1>;pickup[Toshiba_Laptops];method_pickup_normal;0;-1,1,2,3,4,5,6,7,8> 1 2 3 4 5 6 7 8 9
+<==

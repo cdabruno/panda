@@ -1,0 +1,264 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/smartphone1.sas.
+- State has 10 bits divided into 10 mutex groups.
+- Domain contains 8 actions.
+- Domain contains 10 tasks.
+- Domain contains 3 methods.
+- The initial state contains 4 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 1 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 10
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 10
+Variable :+inMode_Home[] Domain size: 1
+Variable :-haveSent[email1] Domain size: 1
+Variable :-inMode_EMail_Inbox[] Domain size: 1
+Variable :-inMode_EMail_NewEMail[] Domain size: 1
+Variable :+inMode_EMail[] Domain size: 1
+Variable :+attached[email1,dateForMeeting] Domain size: 1
+Variable :+inMode_EMail_NewEMail[] Domain size: 1
+Variable :+entered_EMail[headOfDepartment] Domain size: 1
+Variable :+hasReceived[headOfDepartment,email1] Domain size: 1
+Variable :+hasInformation_Regular[headOfDepartment,dateForMeeting] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+inMode_Home[], -haveSent[email1] Mult size: 1
+Var pair:+inMode_Home[], -inMode_EMail_Inbox[] Mult size: 1
+Var pair:+inMode_Home[], -inMode_EMail_NewEMail[] Mult size: 1
+Var pair:+inMode_Home[], +inMode_EMail[] Mult size: 1
+Var pair:+inMode_Home[], +attached[email1,dateForMeeting] Mult size: 1
+Var pair:+inMode_Home[], +inMode_EMail_NewEMail[] Mult size: 1
+Var pair:+inMode_Home[], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:+inMode_Home[], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:+inMode_Home[], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:-haveSent[email1], -inMode_EMail_Inbox[] Mult size: 1
+Var pair:-haveSent[email1], -inMode_EMail_NewEMail[] Mult size: 1
+Var pair:-haveSent[email1], +inMode_EMail[] Mult size: 1
+Var pair:-haveSent[email1], +attached[email1,dateForMeeting] Mult size: 1
+Var pair:-haveSent[email1], +inMode_EMail_NewEMail[] Mult size: 1
+Var pair:-haveSent[email1], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:-haveSent[email1], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:-haveSent[email1], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], -inMode_EMail_NewEMail[] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], +inMode_EMail[] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], +attached[email1,dateForMeeting] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], +inMode_EMail_NewEMail[] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:-inMode_EMail_Inbox[], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:-inMode_EMail_NewEMail[], +inMode_EMail[] Mult size: 1
+Var pair:-inMode_EMail_NewEMail[], +attached[email1,dateForMeeting] Mult size: 1
+Var pair:-inMode_EMail_NewEMail[], +inMode_EMail_NewEMail[] Mult size: 1
+Var pair:-inMode_EMail_NewEMail[], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:-inMode_EMail_NewEMail[], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:-inMode_EMail_NewEMail[], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:+inMode_EMail[], +attached[email1,dateForMeeting] Mult size: 1
+Var pair:+inMode_EMail[], +inMode_EMail_NewEMail[] Mult size: 1
+Var pair:+inMode_EMail[], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:+inMode_EMail[], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:+inMode_EMail[], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:+attached[email1,dateForMeeting], +inMode_EMail_NewEMail[] Mult size: 1
+Var pair:+attached[email1,dateForMeeting], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:+attached[email1,dateForMeeting], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:+attached[email1,dateForMeeting], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:+inMode_EMail_NewEMail[], +entered_EMail[headOfDepartment] Mult size: 1
+Var pair:+inMode_EMail_NewEMail[], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:+inMode_EMail_NewEMail[], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:+entered_EMail[headOfDepartment], +hasReceived[headOfDepartment,email1] Mult size: 1
+Var pair:+entered_EMail[headOfDepartment], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Var pair:+hasReceived[headOfDepartment,email1], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
+Number of variables: 10
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.002s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.000s wall-clock]
+Generated 33 rules.
+Computing model... [0.000s CPU, 0.000s wall-clock]
+40 relevant atoms
+0 auxiliary atoms
+40 final queue length
+45 total queue pushes
+Completing instantiation... [0.000s CPU, 0.000s wall-clock]
+Instantiating: [0.000s CPU, 0.002s wall-clock]
+Computing fact groups...
+Finding invariants...
+20 initial candidates
+Finding invariants: [0.010s CPU, 0.005s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+18 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.006s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.000s wall-clock]
+7 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.000s wall-clock]
+Reordering and filtering variables...
+19 of 19 variables necessary.
+1 of 2 mutex groups necessary.
+11 of 11 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
+Translator variables: 19
+Translator derived variables: 0
+Translator facts: 38
+Translator goal facts: 2
+Translator mutex groups: 1
+Translator total mutex groups size: 2
+Translator operators: 11
+Translator axioms: 0
+Translator task size: 125
+Translator peak memory: 39752 KB
+Writing output... [0.000s CPU, 0.000s wall-clock]
+Done! [0.010s CPU, 0.012s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
+[t=2.3975e-05s, 9844 KB] reading input...
+[t=0.000220502s, 9844 KB] done reading input!
+[t=0.00109284s, 10100 KB] Initializing landmark cut heuristic...
+[t=0.00114604s, 10100 KB] Building successor generator...done!
+[t=0.0012144s, 10100 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.0012311s, 10100 KB] time for successor generation creation: 1.0966e-05s
+[t=0.0012499s, 10100 KB] Variables: 19
+[t=0.00126764s, 10100 KB] FactPairs: 38
+[t=0.00128402s, 10100 KB] Bytes per state: 4
+[t=0.00134187s, 10100 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00139958s, 10100 KB] New best heuristic value for lmcut: 9
+[t=0.00141985s, 10100 KB] g=0, 1 evaluated, 0 expanded
+[t=0.00143752s, 10100 KB] f = 9, 1 evaluated, 0 expanded
+[t=0.00145685s, 10100 KB] Initial heuristic value for lmcut: 9
+[t=0.00147449s, 10100 KB] pruning method: none
+[t=0.00151379s, 10100 KB] New best heuristic value for lmcut: 8
+[t=0.00153214s, 10100 KB] g=1, 3 evaluated, 1 expanded
+[t=0.00157517s, 10100 KB] New best heuristic value for lmcut: 7
+[t=0.00159335s, 10100 KB] g=2, 6 evaluated, 2 expanded
+[t=0.00164475s, 10100 KB] New best heuristic value for lmcut: 6
+[t=0.00166322s, 10100 KB] g=3, 11 evaluated, 3 expanded
+[t=0.00170774s, 10100 KB] New best heuristic value for lmcut: 5
+[t=0.00172599s, 10100 KB] g=4, 15 evaluated, 4 expanded
+[t=0.00177028s, 10100 KB] New best heuristic value for lmcut: 4
+[t=0.00178891s, 10100 KB] g=5, 19 evaluated, 5 expanded
+[t=0.00193596s, 10100 KB] New best heuristic value for lmcut: 3
+[t=0.00195607s, 10100 KB] g=6, 41 evaluated, 14 expanded
+[t=0.0019885s, 10100 KB] New best heuristic value for lmcut: 2
+[t=0.00200725s, 10100 KB] g=7, 44 evaluated, 15 expanded
+[t=0.00203595s, 10100 KB] New best heuristic value for lmcut: 1
+[t=0.00205392s, 10100 KB] g=8, 47 evaluated, 16 expanded
+[t=0.0020781s, 10100 KB] New best heuristic value for lmcut: 0
+[t=0.00209609s, 10100 KB] g=9, 49 evaluated, 17 expanded
+[t=0.00211466s, 10100 KB] Solution found!
+[t=0.00213375s, 10100 KB] Actual search time: 0.000656185s
+press_home_email__  (1)
+select_email_emailaccount_noop_account1_  (1)
+press_email_newemail_account1_  (1)
+attachregularinformationtoemail_email1_dateformeeting_  (1)
+enter_emailaddress_headofdepartment_headofdepartmentemailaddress_  (1)
+press_email_newemail_send_headofdepartment_email1_  (1)
+extractsinformation_regular_headofdepartment_email1_dateformeeting_  (1)
+do_entermode_email_fromhome@entermode_email__  (1)
+x______top_method_extractsinformation_headofdepartment_email1_dateformeeting__do_extractsinformation_regular_2_0_1_m1__send_email_headofdepartment_email1__do_send_email_viaemail_1_0_m1_m2_m3_m4_m5_2__select_email_emailaccount_account1__do_select_email_emailaccount_noop_2_0_1_m1_3_4_5_6__attachinformationtoemail_email1_dateformeeting__do_attachinformationtoemail_regular_0_m1_1_2_3_4_5_6_@__top__  (1)
+[t=0.00215226s, 10100 KB] Plan length: 9 step(s).
+[t=0.00215226s, 10100 KB] Plan cost: 9
+[t=0.00215226s, 10100 KB] Expanded 18 state(s).
+[t=0.00215226s, 10100 KB] Reopened 0 state(s).
+[t=0.00215226s, 10100 KB] Evaluated 49 state(s).
+[t=0.00215226s, 10100 KB] Evaluations: 49
+[t=0.00215226s, 10100 KB] Generated 72 state(s).
+[t=0.00215226s, 10100 KB] Dead ends: 2 state(s).
+[t=0.00215226s, 10100 KB] Expanded until last jump: 0 state(s).
+[t=0.00215226s, 10100 KB] Reopened until last jump: 0 state(s).
+[t=0.00215226s, 10100 KB] Evaluated until last jump: 1 state(s).
+[t=0.00215226s, 10100 KB] Generated until last jump: 0 state(s).
+[t=0.00215226s, 10100 KB] Number of registered states: 49
+[t=0.00215226s, 10100 KB] Int hash set load factor: 49/64 = 0.765625
+[t=0.00215226s, 10100 KB] Int hash set resizes: 6
+[t=0.00215226s, 10100 KB] Search time: 0.000810871s
+[t=0.00215226s, 10100 KB] Total time: 0.00215226s
+Solution found.
+Peak memory: 10100 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+Cost of SAS plan on RC model: 9
+Cost SAS: 0
+Num primitive tasks: 8
+Num non-primitive tasks: 2
+Total tasks: 10
+Number of methods: 3
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 9
+Search Results
+- Search time 0.097 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 4e-06 seconds
+- Visited list inserts 1
+- Visited list pruned 0
+- Visited list contains 1
+- Visited list hash collisions 0
+- Visited list used hash buckets 1
+- Generated 2 search nodes
+  Calculated heuristic for 2 nodes
+  One modifications 0
+  Effectless actions 0
+- including 0 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 20 nodes per second
+- Final fringe contains 0 nodes
+- Status: Proven unsolvable

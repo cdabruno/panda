@@ -1,0 +1,344 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/umtranslog22.sas.
+- State has 15 bits divided into 15 mutex groups.
+- Domain contains 12 actions.
+- Domain contains 14 tasks.
+- Domain contains 3 methods.
+- The initial state contains 6 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 2 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 14
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 15
+Variable :+At_Vehicle[Pferd,O27] Domain size: 1
+Variable :+At_Package[Toshiba_Laptops,O27] Domain size: 1
+Variable :+At_Package[Drucker,O28] Domain size: 1
+Variable :-Door_Open[Pferd] Domain size: 1
+Variable :-Fees_Collected[Drucker] Domain size: 1
+Variable :-Fees_Collected[Toshiba_Laptops] Domain size: 1
+Variable :+At_Vehicle[Pferd,O28] Domain size: 1
+Variable :+At_Package[Toshiba_Laptops,Pferd] Domain size: 1
+Variable :+Door_Open[Pferd] Domain size: 1
+Variable :+Fees_Collected[Drucker] Domain size: 1
+Variable :+Fees_Collected[Toshiba_Laptops] Domain size: 1
+Variable :+At_Package[Drucker,Pferd] Domain size: 1
+Variable :+At_Vehicle[Pferd,Bibliothek] Domain size: 1
+Variable :+Delivered[Drucker] Domain size: 1
+Variable :+Delivered[Toshiba_Laptops] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+At_Vehicle[Pferd,O27], +At_Package[Toshiba_Laptops,O27] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +At_Package[Drucker,O28] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], -Door_Open[Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], -Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +At_Package[Toshiba_Laptops,Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +Door_Open[Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +At_Package[Drucker,Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +At_Vehicle[Pferd,Bibliothek] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +Delivered[Drucker] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O27], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +At_Package[Drucker,O28] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], -Door_Open[Pferd] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], -Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +At_Package[Toshiba_Laptops,Pferd] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +Door_Open[Pferd] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +At_Package[Drucker,Pferd] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +At_Vehicle[Pferd,Bibliothek] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +Delivered[Drucker] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,O27], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Drucker,O28], -Door_Open[Pferd] Mult size: 1
+Var pair:+At_Package[Drucker,O28], -Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Package[Drucker,O28], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Drucker,O28], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:+At_Package[Drucker,O28], +At_Package[Toshiba_Laptops,Pferd] Mult size: 1
+Var pair:+At_Package[Drucker,O28], +Door_Open[Pferd] Mult size: 1
+Var pair:+At_Package[Drucker,O28], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Package[Drucker,O28], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Drucker,O28], +At_Package[Drucker,Pferd] Mult size: 1
+Var pair:+At_Package[Drucker,O28], +At_Vehicle[Pferd,Bibliothek] Mult size: 1
+Var pair:+At_Package[Drucker,O28], +Delivered[Drucker] Mult size: 1
+Var pair:+At_Package[Drucker,O28], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:-Door_Open[Pferd], -Fees_Collected[Drucker] Mult size: 1
+Var pair:-Door_Open[Pferd], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Door_Open[Pferd], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:-Door_Open[Pferd], +At_Package[Toshiba_Laptops,Pferd] Mult size: 1
+Var pair:-Door_Open[Pferd], +Door_Open[Pferd] Mult size: 1
+Var pair:-Door_Open[Pferd], +Fees_Collected[Drucker] Mult size: 1
+Var pair:-Door_Open[Pferd], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Door_Open[Pferd], +At_Package[Drucker,Pferd] Mult size: 1
+Var pair:-Door_Open[Pferd], +At_Vehicle[Pferd,Bibliothek] Mult size: 1
+Var pair:-Door_Open[Pferd], +Delivered[Drucker] Mult size: 1
+Var pair:-Door_Open[Pferd], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:-Fees_Collected[Drucker], -Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +At_Package[Toshiba_Laptops,Pferd] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +Door_Open[Pferd] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +Fees_Collected[Drucker] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +At_Package[Drucker,Pferd] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +At_Vehicle[Pferd,Bibliothek] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +Delivered[Drucker] Mult size: 1
+Var pair:-Fees_Collected[Drucker], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +At_Vehicle[Pferd,O28] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +At_Package[Toshiba_Laptops,Pferd] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Door_Open[Pferd] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Fees_Collected[Drucker] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +At_Package[Drucker,Pferd] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +At_Vehicle[Pferd,Bibliothek] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Delivered[Drucker] Mult size: 1
+Var pair:-Fees_Collected[Toshiba_Laptops], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +At_Package[Toshiba_Laptops,Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +Door_Open[Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +At_Package[Drucker,Pferd] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +At_Vehicle[Pferd,Bibliothek] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +Delivered[Drucker] Mult size: 1
+Var pair:+At_Vehicle[Pferd,O28], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Pferd], +Door_Open[Pferd] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Pferd], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Pferd], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Pferd], +At_Package[Drucker,Pferd] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Pferd], +At_Vehicle[Pferd,Bibliothek] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Pferd], +Delivered[Drucker] Mult size: 1
+Var pair:+At_Package[Toshiba_Laptops,Pferd], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+Door_Open[Pferd], +Fees_Collected[Drucker] Mult size: 1
+Var pair:+Door_Open[Pferd], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+Door_Open[Pferd], +At_Package[Drucker,Pferd] Mult size: 1
+Var pair:+Door_Open[Pferd], +At_Vehicle[Pferd,Bibliothek] Mult size: 1
+Var pair:+Door_Open[Pferd], +Delivered[Drucker] Mult size: 1
+Var pair:+Door_Open[Pferd], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+Fees_Collected[Drucker], +Fees_Collected[Toshiba_Laptops] Mult size: 1
+Var pair:+Fees_Collected[Drucker], +At_Package[Drucker,Pferd] Mult size: 1
+Var pair:+Fees_Collected[Drucker], +At_Vehicle[Pferd,Bibliothek] Mult size: 1
+Var pair:+Fees_Collected[Drucker], +Delivered[Drucker] Mult size: 1
+Var pair:+Fees_Collected[Drucker], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+Fees_Collected[Toshiba_Laptops], +At_Package[Drucker,Pferd] Mult size: 1
+Var pair:+Fees_Collected[Toshiba_Laptops], +At_Vehicle[Pferd,Bibliothek] Mult size: 1
+Var pair:+Fees_Collected[Toshiba_Laptops], +Delivered[Drucker] Mult size: 1
+Var pair:+Fees_Collected[Toshiba_Laptops], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Package[Drucker,Pferd], +At_Vehicle[Pferd,Bibliothek] Mult size: 1
+Var pair:+At_Package[Drucker,Pferd], +Delivered[Drucker] Mult size: 1
+Var pair:+At_Package[Drucker,Pferd], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+At_Vehicle[Pferd,Bibliothek], +Delivered[Drucker] Mult size: 1
+Var pair:+At_Vehicle[Pferd,Bibliothek], +Delivered[Toshiba_Laptops] Mult size: 1
+Var pair:+Delivered[Drucker], +Delivered[Toshiba_Laptops] Mult size: 1
+Number of variables: 15
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.000s wall-clock]
+Generated 43 rules.
+Computing model... [0.000s CPU, 0.000s wall-clock]
+57 relevant atoms
+0 auxiliary atoms
+57 final queue length
+61 total queue pushes
+Completing instantiation... [0.000s CPU, 0.000s wall-clock]
+Instantiating: [0.000s CPU, 0.002s wall-clock]
+Computing fact groups...
+Finding invariants...
+29 initial candidates
+Finding invariants: [0.010s CPU, 0.003s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+14 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.003s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.001s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+6 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Reordering and filtering variables...
+20 of 20 variables necessary.
+4 of 13 mutex groups necessary.
+15 of 15 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
+Translator variables: 20
+Translator derived variables: 0
+Translator facts: 43
+Translator goal facts: 3
+Translator mutex groups: 4
+Translator total mutex groups size: 9
+Translator operators: 15
+Translator axioms: 0
+Translator task size: 154
+Translator peak memory: 39752 KB
+Writing output... [0.000s CPU, 0.000s wall-clock]
+Done! [0.010s CPU, 0.011s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
+[t=3.0107e-05s, 9844 KB] reading input...
+[t=0.000267484s, 9844 KB] done reading input!
+[t=0.00118858s, 10100 KB] Initializing landmark cut heuristic...
+[t=0.00124845s, 10100 KB] Building successor generator...done!
+[t=0.00132359s, 10100 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.00134199s, 10100 KB] time for successor generation creation: 1.3959e-05s
+[t=0.00136369s, 10100 KB] Variables: 20
+[t=0.00139029s, 10100 KB] FactPairs: 43
+[t=0.00141683s, 10100 KB] Bytes per state: 4
+[t=0.00149952s, 10100 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00157951s, 10100 KB] New best heuristic value for lmcut: 14
+[t=0.00160911s, 10100 KB] g=0, 1 evaluated, 0 expanded
+[t=0.00164339s, 10100 KB] f = 14, 1 evaluated, 0 expanded
+[t=0.00167592s, 10100 KB] Initial heuristic value for lmcut: 14
+[t=0.00170065s, 10100 KB] pruning method: none
+[t=0.00176338s, 10100 KB] New best heuristic value for lmcut: 13
+[t=0.00179056s, 10100 KB] g=1, 3 evaluated, 1 expanded
+[t=0.0018738s, 10100 KB] New best heuristic value for lmcut: 12
+[t=0.0018975s, 10100 KB] g=2, 7 evaluated, 2 expanded
+[t=0.00196882s, 10100 KB] New best heuristic value for lmcut: 11
+[t=0.00199357s, 10100 KB] g=3, 12 evaluated, 3 expanded
+[t=0.00205851s, 10100 KB] New best heuristic value for lmcut: 10
+[t=0.00207894s, 10100 KB] g=4, 18 evaluated, 4 expanded
+[t=0.00212879s, 10100 KB] New best heuristic value for lmcut: 9
+[t=0.0021495s, 10100 KB] g=5, 22 evaluated, 5 expanded
+[t=0.00221128s, 10100 KB] New best heuristic value for lmcut: 8
+[t=0.00223269s, 10100 KB] g=6, 26 evaluated, 6 expanded
+[t=0.00227935s, 10100 KB] New best heuristic value for lmcut: 7
+[t=0.00229936s, 10100 KB] g=7, 30 evaluated, 7 expanded
+[t=0.00234208s, 10100 KB] New best heuristic value for lmcut: 6
+[t=0.00236241s, 10100 KB] g=8, 33 evaluated, 8 expanded
+[t=0.00240504s, 10100 KB] New best heuristic value for lmcut: 5
+[t=0.00242507s, 10100 KB] g=9, 37 evaluated, 9 expanded
+[t=0.00245982s, 10100 KB] New best heuristic value for lmcut: 4
+[t=0.00250766s, 10100 KB] g=10, 40 evaluated, 10 expanded
+[t=0.00255882s, 10100 KB] New best heuristic value for lmcut: 3
+[t=0.00258073s, 10100 KB] g=11, 44 evaluated, 11 expanded
+[t=0.00261203s, 10100 KB] New best heuristic value for lmcut: 2
+[t=0.00263224s, 10100 KB] g=12, 47 evaluated, 12 expanded
+[t=0.00266451s, 10100 KB] New best heuristic value for lmcut: 1
+[t=0.002685s, 10100 KB] g=13, 51 evaluated, 13 expanded
+[t=0.00271564s, 10100 KB] New best heuristic value for lmcut: 0
+[t=0.00273587s, 10100 KB] g=14, 55 evaluated, 14 expanded
+[t=0.00275663s, 10100 KB] Solution found!
+[t=0.0027779s, 10100 KB] Actual search time: 0.00106052s
+load_package_toshiba_laptops_pferd_o27_  (1)
+move_vehicle_no_traincar_pferd_o27_james_franck_ring_o28_  (1)
+unload_package_toshiba_laptops_pferd_o28_  (1)
+load_package_drucker_pferd_o28_  (1)
+move_vehicle_no_traincar_pferd_o28_frauen_strasse_bibliothek_  (1)
+unload_package_drucker_pferd_bibliothek_  (1)
+collect_fees_toshiba_laptops_  (1)
+deliver_p_toshiba_laptops_  (1)
+collect_fees_drucker_  (1)
+deliver_p_drucker_  (1)
+open_door_pferd_  (1)
+close_door_pferd_  (1)
+x______method_helper_carry_direct_unload_top_drucker_pferd_bibliothek__method_unload_top_normal_3_0_1_2_m1__unload_drucker_pferd_bibliothek__method_unload_regular_3_0_1_2_m1_m2_m3__move_pferd_o28_bibliothek__method_move_no_traincar_2_0_1_m1_3_4_5__load_top_drucker_pferd_o28__method_load_top_normal_1_0_m1_2_3_4_5__load_drucker_pferd_o28__method_load_regular_1_0_m1_m2_m3_2_3_4_5__move_pferd_o27_o28__method_move_no_traincar_0_m1_1_2_3_4_5_6_7_@helper_carry_direct_pferd_drucker_o28_bibliothek_  (1)
+x_________________top_method_transport_drucker_o28_bibliothek__method_transport_pi_ca_de_1_0_m1_m2_m3__carry_drucker_o28_bibliothek__method_carry_cd_2_0_1_m1_3__carry_direct_drucker_o28_bibliothek__method_carry_direct_2_0_1_m1_3__deliver_drucker__method_deliver_dp_3_0_1_2_m1__pickup_drucker__method_pickup_normal_1_0_m1_2_3__transport_toshiba_laptops_o27_o28__method_transport_pi_ca_de_0_m1_m2_m3_1_2_3__carry_toshiba_laptops_o27_o28__method_carry_cd_1_0_m1_2_3_4_5__carry_direct_toshiba_laptops_o27_o28__method_carry_direct_1_0_m1_2_3_4_5__helper_carry_direct_pferd_toshiba_laptops_o27_o28___method_helper_carry_direct_nomovefirst_move_pferd_o27_o28__method_move_no_traincar_1_0_m1_2__1_0_m1_m2_m3_2_3_4_5__unload_top_toshiba_laptops_pferd_o28__method_unload_top_normal_3_0_1_2_m1_4_5_6_7__unload_toshiba_laptops_pferd_o28__method_unload_regular_3_0_1_2_m1_m2_m3_4_5_6_7__load_top_toshiba_laptops_pferd_o27__method_load_top_normal_1_0_m1_2_3_4_5_6_7_8_9__load_toshiba_laptops_pferd_o27__method_load_regular_1_0_m1_m2_m3_2_3_4_5_6_7_8_9__deliver_toshiba_laptops__method_deliver_dp_8_0_1_2_3_4_5_6_7_m1_9_10_11__pickup_toshiba_laptops__method_pickup_normal_0_m1_1_2_3_4_5_6_7_8_9_10_11_@__top__  (1)
+[t=0.00280793s, 10100 KB] Plan length: 14 step(s).
+[t=0.00280793s, 10100 KB] Plan cost: 14
+[t=0.00280793s, 10100 KB] Expanded 15 state(s).
+[t=0.00280793s, 10100 KB] Reopened 0 state(s).
+[t=0.00280793s, 10100 KB] Evaluated 55 state(s).
+[t=0.00280793s, 10100 KB] Evaluations: 55
+[t=0.00280793s, 10100 KB] Generated 57 state(s).
+[t=0.00280793s, 10100 KB] Dead ends: 3 state(s).
+[t=0.00280793s, 10100 KB] Expanded until last jump: 0 state(s).
+[t=0.00280793s, 10100 KB] Reopened until last jump: 0 state(s).
+[t=0.00280793s, 10100 KB] Evaluated until last jump: 1 state(s).
+[t=0.00280793s, 10100 KB] Generated until last jump: 0 state(s).
+[t=0.00280793s, 10100 KB] Number of registered states: 55
+[t=0.00280793s, 10100 KB] Int hash set load factor: 55/64 = 0.859375
+[t=0.00280793s, 10100 KB] Int hash set resizes: 6
+[t=0.00280793s, 10100 KB] Search time: 0.00130895s
+[t=0.00280793s, 10100 KB] Total time: 0.00280793s
+Solution found.
+Peak memory: 10100 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+Cost of SAS plan on RC model: 14
+Cost SAS: 0
+Num primitive tasks: 12
+Num non-primitive tasks: 2
+Total tasks: 14
+Number of methods: 3
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 14
+Search Results
+- Search time 0.109 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 4e-06 seconds
+- Visited list inserts 1
+- Visited list pruned 0
+- Visited list contains 1
+- Visited list hash collisions 0
+- Visited list used hash buckets 1
+- Generated 2 search nodes
+  Calculated heuristic for 2 nodes
+  One modifications 0
+  Effectless actions 0
+- including 0 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 18 nodes per second
+- Final fringe contains 0 nodes
+- Status: Proven unsolvable

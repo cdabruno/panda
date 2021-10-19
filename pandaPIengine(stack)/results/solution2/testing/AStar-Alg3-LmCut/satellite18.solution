@@ -1,0 +1,730 @@
+Random seed: 42
+Time limit: 20 seconds
+Reading input from results/grounded/satellite18.sas.
+- State has 31 bits divided into 31 mutex groups.
+- Domain contains 78 actions.
+- Domain contains 98 tasks.
+- Domain contains 155 methods.
+- The initial state contains 8 set bits.
+- The initial task is "__top[]".
+- State-based goal contains 0 bits.
+- Instance is totally-ordered: no
+- Instance has unique paths: yes
+- Instance is parallel sequences: yes
+Calculate SCCs...
+- Number of SCCs: 98
+- The problem is acyclic
+Selected Planning Algorithm: progression searchParsing heuristics ...
+Number of specified heuristics: 1
+- Calculating minimal implied costs and distances (0 ms)
+Heuristic #0 = hhRC2(lmc;distance;correct count)
+Search config:
+ - type: path cost
+ - weight: 1
+ - suboptimal: false
+Visited List configured
+- mode: parallel sequences order
+- hashs to use: state task task-sequence
+- memory information: topological ordering
+- Visited list allows deletion of search nodes: true
+Variable number: 31
+Variable :+power_avail[satellite0] Domain size: 1
+Variable :+pointing[satellite0,star1] Domain size: 1
+Variable :+power_avail[satellite1] Domain size: 1
+Variable :+pointing[satellite1,star1] Domain size: 1
+Variable :+power_avail[satellite2] Domain size: 1
+Variable :+pointing[satellite2,planet2] Domain size: 1
+Variable :+power_avail[satellite3] Domain size: 1
+Variable :+pointing[satellite3,star5] Domain size: 1
+Variable :+power_on[instrument0] Domain size: 1
+Variable :+power_on[instrument1] Domain size: 1
+Variable :+pointing[satellite0,planet2] Domain size: 1
+Variable :+power_on[instrument2] Domain size: 1
+Variable :+pointing[satellite1,phenomenon3] Domain size: 1
+Variable :+pointing[satellite1,planet4] Domain size: 1
+Variable :+pointing[satellite1,star5] Domain size: 1
+Variable :+power_on[instrument3] Domain size: 1
+Variable :+power_on[instrument4] Domain size: 1
+Variable :+pointing[satellite2,star0] Domain size: 1
+Variable :+pointing[satellite2,star1] Domain size: 1
+Variable :+pointing[satellite2,phenomenon3] Domain size: 1
+Variable :+pointing[satellite2,planet4] Domain size: 1
+Variable :+pointing[satellite2,star5] Domain size: 1
+Variable :+power_on[instrument5] Domain size: 1
+Variable :+pointing[satellite3,star0] Domain size: 1
+Variable :+pointing[satellite3,planet2] Domain size: 1
+Variable :+calibrated[instrument0] Domain size: 1
+Variable :+calibrated[instrument1] Domain size: 1
+Variable :+calibrated[instrument2] Domain size: 1
+Variable :+calibrated[instrument4] Domain size: 1
+Variable :+calibrated[instrument3] Domain size: 1
+Variable :+calibrated[instrument5] Domain size: 1
+Min domain: 1
+Max domain: 1
+Avg domain: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,star1] Mult size: 1
+Var pair:+power_avail[satellite0], +power_avail[satellite1] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite1,star1] Mult size: 1
+Var pair:+power_avail[satellite0], +power_avail[satellite2] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite2,planet2] Mult size: 1
+Var pair:+power_avail[satellite0], +power_avail[satellite3] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite3,star5] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument0] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument1] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument2] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite1,phenomenon3] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite1,planet4] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite1,star5] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument3] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument4] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite2,star0] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite2,star1] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite2,star5] Mult size: 1
+Var pair:+power_avail[satellite0], +power_on[instrument5] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite3,star0] Mult size: 1
+Var pair:+power_avail[satellite0], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument0] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument1] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument2] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument4] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument3] Mult size: 1
+Var pair:+power_avail[satellite0], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite0,star1], +power_avail[satellite1] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite1,star1] Mult size: 1
+Var pair:+pointing[satellite0,star1], +power_avail[satellite2] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite2,planet2] Mult size: 1
+Var pair:+pointing[satellite0,star1], +power_avail[satellite3] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite3,star5] Mult size: 1
+Var pair:+pointing[satellite0,star1], +power_on[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,star1], +power_on[instrument1] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+pointing[satellite0,star1], +power_on[instrument2] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite1,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite1,planet4] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite1,star5] Mult size: 1
+Var pair:+pointing[satellite0,star1], +power_on[instrument3] Mult size: 1
+Var pair:+pointing[satellite0,star1], +power_on[instrument4] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite2,star0] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite2,star1] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite2,star5] Mult size: 1
+Var pair:+pointing[satellite0,star1], +power_on[instrument5] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite3,star0] Mult size: 1
+Var pair:+pointing[satellite0,star1], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite0,star1], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,star1], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite0,star1], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite0,star1], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite0,star1], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite0,star1], +calibrated[instrument5] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite1,star1] Mult size: 1
+Var pair:+power_avail[satellite1], +power_avail[satellite2] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite2,planet2] Mult size: 1
+Var pair:+power_avail[satellite1], +power_avail[satellite3] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite3,star5] Mult size: 1
+Var pair:+power_avail[satellite1], +power_on[instrument0] Mult size: 1
+Var pair:+power_avail[satellite1], +power_on[instrument1] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+power_avail[satellite1], +power_on[instrument2] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite1,phenomenon3] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite1,planet4] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite1,star5] Mult size: 1
+Var pair:+power_avail[satellite1], +power_on[instrument3] Mult size: 1
+Var pair:+power_avail[satellite1], +power_on[instrument4] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite2,star0] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite2,star1] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite2,star5] Mult size: 1
+Var pair:+power_avail[satellite1], +power_on[instrument5] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite3,star0] Mult size: 1
+Var pair:+power_avail[satellite1], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+power_avail[satellite1], +calibrated[instrument0] Mult size: 1
+Var pair:+power_avail[satellite1], +calibrated[instrument1] Mult size: 1
+Var pair:+power_avail[satellite1], +calibrated[instrument2] Mult size: 1
+Var pair:+power_avail[satellite1], +calibrated[instrument4] Mult size: 1
+Var pair:+power_avail[satellite1], +calibrated[instrument3] Mult size: 1
+Var pair:+power_avail[satellite1], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite1,star1], +power_avail[satellite2] Mult size: 1
+Var pair:+pointing[satellite1,star1], +pointing[satellite2,planet2] Mult size: 1
+Var pair:+pointing[satellite1,star1], +power_avail[satellite3] Mult size: 1
+Var pair:+pointing[satellite1,star1], +pointing[satellite3,star5] Mult size: 1
+Var pair:+pointing[satellite1,star1], +power_on[instrument0] Mult size: 1
+Var pair:+pointing[satellite1,star1], +power_on[instrument1] Mult size: 1
+Var pair:+pointing[satellite1,star1], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+pointing[satellite1,star1], +power_on[instrument2] Mult size: 1
+Var pair:+pointing[satellite1,star1], +pointing[satellite1,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite1,star1], +pointing[satellite1,planet4] Mult size: 1
+Var pair:+pointing[satellite1,star1], +pointing[satellite1,star5] Mult size: 1
+Var pair:+pointing[satellite1,star1], +power_on[instrument3] Mult size: 1
+Var pair:+pointing[satellite1,star1], +power_on[instrument4] Mult size: 1
+Var pair:+pointing[satellite1,star1], +pointing[satellite2,star0] Mult size: 1
+Var pair:+pointing[satellite1,star1], +pointing[satellite2,star1] Mult size: 1
+Var pair:+pointing[satellite1,star1], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite1,star1], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+pointing[satellite1,star1], +pointing[satellite2,star5] Mult size: 1
+Var pair:+pointing[satellite1,star1], +power_on[instrument5] Mult size: 1
+Var pair:+pointing[satellite1,star1], +pointing[satellite3,star0] Mult size: 1
+Var pair:+pointing[satellite1,star1], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite1,star1], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite1,star1], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite1,star1], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite1,star1], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite1,star1], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite1,star1], +calibrated[instrument5] Mult size: 1
+Var pair:+power_avail[satellite2], +pointing[satellite2,planet2] Mult size: 1
+Var pair:+power_avail[satellite2], +power_avail[satellite3] Mult size: 1
+Var pair:+power_avail[satellite2], +pointing[satellite3,star5] Mult size: 1
+Var pair:+power_avail[satellite2], +power_on[instrument0] Mult size: 1
+Var pair:+power_avail[satellite2], +power_on[instrument1] Mult size: 1
+Var pair:+power_avail[satellite2], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+power_avail[satellite2], +power_on[instrument2] Mult size: 1
+Var pair:+power_avail[satellite2], +pointing[satellite1,phenomenon3] Mult size: 1
+Var pair:+power_avail[satellite2], +pointing[satellite1,planet4] Mult size: 1
+Var pair:+power_avail[satellite2], +pointing[satellite1,star5] Mult size: 1
+Var pair:+power_avail[satellite2], +power_on[instrument3] Mult size: 1
+Var pair:+power_avail[satellite2], +power_on[instrument4] Mult size: 1
+Var pair:+power_avail[satellite2], +pointing[satellite2,star0] Mult size: 1
+Var pair:+power_avail[satellite2], +pointing[satellite2,star1] Mult size: 1
+Var pair:+power_avail[satellite2], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+power_avail[satellite2], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+power_avail[satellite2], +pointing[satellite2,star5] Mult size: 1
+Var pair:+power_avail[satellite2], +power_on[instrument5] Mult size: 1
+Var pair:+power_avail[satellite2], +pointing[satellite3,star0] Mult size: 1
+Var pair:+power_avail[satellite2], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+power_avail[satellite2], +calibrated[instrument0] Mult size: 1
+Var pair:+power_avail[satellite2], +calibrated[instrument1] Mult size: 1
+Var pair:+power_avail[satellite2], +calibrated[instrument2] Mult size: 1
+Var pair:+power_avail[satellite2], +calibrated[instrument4] Mult size: 1
+Var pair:+power_avail[satellite2], +calibrated[instrument3] Mult size: 1
+Var pair:+power_avail[satellite2], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +power_avail[satellite3] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +pointing[satellite3,star5] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +power_on[instrument0] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +power_on[instrument1] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +power_on[instrument2] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +pointing[satellite1,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +pointing[satellite1,planet4] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +pointing[satellite1,star5] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +power_on[instrument3] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +power_on[instrument4] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +pointing[satellite2,star0] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +pointing[satellite2,star1] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +pointing[satellite2,star5] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +power_on[instrument5] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +pointing[satellite3,star0] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite2,planet2], +calibrated[instrument5] Mult size: 1
+Var pair:+power_avail[satellite3], +pointing[satellite3,star5] Mult size: 1
+Var pair:+power_avail[satellite3], +power_on[instrument0] Mult size: 1
+Var pair:+power_avail[satellite3], +power_on[instrument1] Mult size: 1
+Var pair:+power_avail[satellite3], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+power_avail[satellite3], +power_on[instrument2] Mult size: 1
+Var pair:+power_avail[satellite3], +pointing[satellite1,phenomenon3] Mult size: 1
+Var pair:+power_avail[satellite3], +pointing[satellite1,planet4] Mult size: 1
+Var pair:+power_avail[satellite3], +pointing[satellite1,star5] Mult size: 1
+Var pair:+power_avail[satellite3], +power_on[instrument3] Mult size: 1
+Var pair:+power_avail[satellite3], +power_on[instrument4] Mult size: 1
+Var pair:+power_avail[satellite3], +pointing[satellite2,star0] Mult size: 1
+Var pair:+power_avail[satellite3], +pointing[satellite2,star1] Mult size: 1
+Var pair:+power_avail[satellite3], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+power_avail[satellite3], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+power_avail[satellite3], +pointing[satellite2,star5] Mult size: 1
+Var pair:+power_avail[satellite3], +power_on[instrument5] Mult size: 1
+Var pair:+power_avail[satellite3], +pointing[satellite3,star0] Mult size: 1
+Var pair:+power_avail[satellite3], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+power_avail[satellite3], +calibrated[instrument0] Mult size: 1
+Var pair:+power_avail[satellite3], +calibrated[instrument1] Mult size: 1
+Var pair:+power_avail[satellite3], +calibrated[instrument2] Mult size: 1
+Var pair:+power_avail[satellite3], +calibrated[instrument4] Mult size: 1
+Var pair:+power_avail[satellite3], +calibrated[instrument3] Mult size: 1
+Var pair:+power_avail[satellite3], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite3,star5], +power_on[instrument0] Mult size: 1
+Var pair:+pointing[satellite3,star5], +power_on[instrument1] Mult size: 1
+Var pair:+pointing[satellite3,star5], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+pointing[satellite3,star5], +power_on[instrument2] Mult size: 1
+Var pair:+pointing[satellite3,star5], +pointing[satellite1,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite3,star5], +pointing[satellite1,planet4] Mult size: 1
+Var pair:+pointing[satellite3,star5], +pointing[satellite1,star5] Mult size: 1
+Var pair:+pointing[satellite3,star5], +power_on[instrument3] Mult size: 1
+Var pair:+pointing[satellite3,star5], +power_on[instrument4] Mult size: 1
+Var pair:+pointing[satellite3,star5], +pointing[satellite2,star0] Mult size: 1
+Var pair:+pointing[satellite3,star5], +pointing[satellite2,star1] Mult size: 1
+Var pair:+pointing[satellite3,star5], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite3,star5], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+pointing[satellite3,star5], +pointing[satellite2,star5] Mult size: 1
+Var pair:+pointing[satellite3,star5], +power_on[instrument5] Mult size: 1
+Var pair:+pointing[satellite3,star5], +pointing[satellite3,star0] Mult size: 1
+Var pair:+pointing[satellite3,star5], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite3,star5], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite3,star5], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite3,star5], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite3,star5], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite3,star5], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite3,star5], +calibrated[instrument5] Mult size: 1
+Var pair:+power_on[instrument0], +power_on[instrument1] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+power_on[instrument0], +power_on[instrument2] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite1,phenomenon3] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite1,planet4] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite1,star5] Mult size: 1
+Var pair:+power_on[instrument0], +power_on[instrument3] Mult size: 1
+Var pair:+power_on[instrument0], +power_on[instrument4] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite2,star0] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite2,star1] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite2,star5] Mult size: 1
+Var pair:+power_on[instrument0], +power_on[instrument5] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite3,star0] Mult size: 1
+Var pair:+power_on[instrument0], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+power_on[instrument0], +calibrated[instrument0] Mult size: 1
+Var pair:+power_on[instrument0], +calibrated[instrument1] Mult size: 1
+Var pair:+power_on[instrument0], +calibrated[instrument2] Mult size: 1
+Var pair:+power_on[instrument0], +calibrated[instrument4] Mult size: 1
+Var pair:+power_on[instrument0], +calibrated[instrument3] Mult size: 1
+Var pair:+power_on[instrument0], +calibrated[instrument5] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite0,planet2] Mult size: 1
+Var pair:+power_on[instrument1], +power_on[instrument2] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite1,phenomenon3] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite1,planet4] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite1,star5] Mult size: 1
+Var pair:+power_on[instrument1], +power_on[instrument3] Mult size: 1
+Var pair:+power_on[instrument1], +power_on[instrument4] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite2,star0] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite2,star1] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite2,star5] Mult size: 1
+Var pair:+power_on[instrument1], +power_on[instrument5] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite3,star0] Mult size: 1
+Var pair:+power_on[instrument1], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+power_on[instrument1], +calibrated[instrument0] Mult size: 1
+Var pair:+power_on[instrument1], +calibrated[instrument1] Mult size: 1
+Var pair:+power_on[instrument1], +calibrated[instrument2] Mult size: 1
+Var pair:+power_on[instrument1], +calibrated[instrument4] Mult size: 1
+Var pair:+power_on[instrument1], +calibrated[instrument3] Mult size: 1
+Var pair:+power_on[instrument1], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +power_on[instrument2] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +pointing[satellite1,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +pointing[satellite1,planet4] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +pointing[satellite1,star5] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +power_on[instrument3] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +power_on[instrument4] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +pointing[satellite2,star0] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +pointing[satellite2,star1] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +pointing[satellite2,star5] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +power_on[instrument5] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +pointing[satellite3,star0] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite0,planet2], +calibrated[instrument5] Mult size: 1
+Var pair:+power_on[instrument2], +pointing[satellite1,phenomenon3] Mult size: 1
+Var pair:+power_on[instrument2], +pointing[satellite1,planet4] Mult size: 1
+Var pair:+power_on[instrument2], +pointing[satellite1,star5] Mult size: 1
+Var pair:+power_on[instrument2], +power_on[instrument3] Mult size: 1
+Var pair:+power_on[instrument2], +power_on[instrument4] Mult size: 1
+Var pair:+power_on[instrument2], +pointing[satellite2,star0] Mult size: 1
+Var pair:+power_on[instrument2], +pointing[satellite2,star1] Mult size: 1
+Var pair:+power_on[instrument2], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+power_on[instrument2], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+power_on[instrument2], +pointing[satellite2,star5] Mult size: 1
+Var pair:+power_on[instrument2], +power_on[instrument5] Mult size: 1
+Var pair:+power_on[instrument2], +pointing[satellite3,star0] Mult size: 1
+Var pair:+power_on[instrument2], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+power_on[instrument2], +calibrated[instrument0] Mult size: 1
+Var pair:+power_on[instrument2], +calibrated[instrument1] Mult size: 1
+Var pair:+power_on[instrument2], +calibrated[instrument2] Mult size: 1
+Var pair:+power_on[instrument2], +calibrated[instrument4] Mult size: 1
+Var pair:+power_on[instrument2], +calibrated[instrument3] Mult size: 1
+Var pair:+power_on[instrument2], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +pointing[satellite1,planet4] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +pointing[satellite1,star5] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +power_on[instrument3] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +power_on[instrument4] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +pointing[satellite2,star0] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +pointing[satellite2,star1] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +pointing[satellite2,star5] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +power_on[instrument5] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +pointing[satellite3,star0] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite1,phenomenon3], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +pointing[satellite1,star5] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +power_on[instrument3] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +power_on[instrument4] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +pointing[satellite2,star0] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +pointing[satellite2,star1] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +pointing[satellite2,star5] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +power_on[instrument5] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +pointing[satellite3,star0] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite1,planet4], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite1,star5], +power_on[instrument3] Mult size: 1
+Var pair:+pointing[satellite1,star5], +power_on[instrument4] Mult size: 1
+Var pair:+pointing[satellite1,star5], +pointing[satellite2,star0] Mult size: 1
+Var pair:+pointing[satellite1,star5], +pointing[satellite2,star1] Mult size: 1
+Var pair:+pointing[satellite1,star5], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite1,star5], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+pointing[satellite1,star5], +pointing[satellite2,star5] Mult size: 1
+Var pair:+pointing[satellite1,star5], +power_on[instrument5] Mult size: 1
+Var pair:+pointing[satellite1,star5], +pointing[satellite3,star0] Mult size: 1
+Var pair:+pointing[satellite1,star5], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite1,star5], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite1,star5], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite1,star5], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite1,star5], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite1,star5], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite1,star5], +calibrated[instrument5] Mult size: 1
+Var pair:+power_on[instrument3], +power_on[instrument4] Mult size: 1
+Var pair:+power_on[instrument3], +pointing[satellite2,star0] Mult size: 1
+Var pair:+power_on[instrument3], +pointing[satellite2,star1] Mult size: 1
+Var pair:+power_on[instrument3], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+power_on[instrument3], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+power_on[instrument3], +pointing[satellite2,star5] Mult size: 1
+Var pair:+power_on[instrument3], +power_on[instrument5] Mult size: 1
+Var pair:+power_on[instrument3], +pointing[satellite3,star0] Mult size: 1
+Var pair:+power_on[instrument3], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+power_on[instrument3], +calibrated[instrument0] Mult size: 1
+Var pair:+power_on[instrument3], +calibrated[instrument1] Mult size: 1
+Var pair:+power_on[instrument3], +calibrated[instrument2] Mult size: 1
+Var pair:+power_on[instrument3], +calibrated[instrument4] Mult size: 1
+Var pair:+power_on[instrument3], +calibrated[instrument3] Mult size: 1
+Var pair:+power_on[instrument3], +calibrated[instrument5] Mult size: 1
+Var pair:+power_on[instrument4], +pointing[satellite2,star0] Mult size: 1
+Var pair:+power_on[instrument4], +pointing[satellite2,star1] Mult size: 1
+Var pair:+power_on[instrument4], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+power_on[instrument4], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+power_on[instrument4], +pointing[satellite2,star5] Mult size: 1
+Var pair:+power_on[instrument4], +power_on[instrument5] Mult size: 1
+Var pair:+power_on[instrument4], +pointing[satellite3,star0] Mult size: 1
+Var pair:+power_on[instrument4], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+power_on[instrument4], +calibrated[instrument0] Mult size: 1
+Var pair:+power_on[instrument4], +calibrated[instrument1] Mult size: 1
+Var pair:+power_on[instrument4], +calibrated[instrument2] Mult size: 1
+Var pair:+power_on[instrument4], +calibrated[instrument4] Mult size: 1
+Var pair:+power_on[instrument4], +calibrated[instrument3] Mult size: 1
+Var pair:+power_on[instrument4], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite2,star0], +pointing[satellite2,star1] Mult size: 1
+Var pair:+pointing[satellite2,star0], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite2,star0], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+pointing[satellite2,star0], +pointing[satellite2,star5] Mult size: 1
+Var pair:+pointing[satellite2,star0], +power_on[instrument5] Mult size: 1
+Var pair:+pointing[satellite2,star0], +pointing[satellite3,star0] Mult size: 1
+Var pair:+pointing[satellite2,star0], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite2,star0], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite2,star0], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite2,star0], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite2,star0], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite2,star0], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite2,star0], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite2,star1], +pointing[satellite2,phenomenon3] Mult size: 1
+Var pair:+pointing[satellite2,star1], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+pointing[satellite2,star1], +pointing[satellite2,star5] Mult size: 1
+Var pair:+pointing[satellite2,star1], +power_on[instrument5] Mult size: 1
+Var pair:+pointing[satellite2,star1], +pointing[satellite3,star0] Mult size: 1
+Var pair:+pointing[satellite2,star1], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite2,star1], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite2,star1], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite2,star1], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite2,star1], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite2,star1], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite2,star1], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite2,phenomenon3], +pointing[satellite2,planet4] Mult size: 1
+Var pair:+pointing[satellite2,phenomenon3], +pointing[satellite2,star5] Mult size: 1
+Var pair:+pointing[satellite2,phenomenon3], +power_on[instrument5] Mult size: 1
+Var pair:+pointing[satellite2,phenomenon3], +pointing[satellite3,star0] Mult size: 1
+Var pair:+pointing[satellite2,phenomenon3], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite2,phenomenon3], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite2,phenomenon3], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite2,phenomenon3], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite2,phenomenon3], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite2,phenomenon3], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite2,phenomenon3], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite2,planet4], +pointing[satellite2,star5] Mult size: 1
+Var pair:+pointing[satellite2,planet4], +power_on[instrument5] Mult size: 1
+Var pair:+pointing[satellite2,planet4], +pointing[satellite3,star0] Mult size: 1
+Var pair:+pointing[satellite2,planet4], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite2,planet4], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite2,planet4], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite2,planet4], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite2,planet4], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite2,planet4], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite2,planet4], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite2,star5], +power_on[instrument5] Mult size: 1
+Var pair:+pointing[satellite2,star5], +pointing[satellite3,star0] Mult size: 1
+Var pair:+pointing[satellite2,star5], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite2,star5], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite2,star5], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite2,star5], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite2,star5], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite2,star5], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite2,star5], +calibrated[instrument5] Mult size: 1
+Var pair:+power_on[instrument5], +pointing[satellite3,star0] Mult size: 1
+Var pair:+power_on[instrument5], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+power_on[instrument5], +calibrated[instrument0] Mult size: 1
+Var pair:+power_on[instrument5], +calibrated[instrument1] Mult size: 1
+Var pair:+power_on[instrument5], +calibrated[instrument2] Mult size: 1
+Var pair:+power_on[instrument5], +calibrated[instrument4] Mult size: 1
+Var pair:+power_on[instrument5], +calibrated[instrument3] Mult size: 1
+Var pair:+power_on[instrument5], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite3,star0], +pointing[satellite3,planet2] Mult size: 1
+Var pair:+pointing[satellite3,star0], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite3,star0], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite3,star0], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite3,star0], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite3,star0], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite3,star0], +calibrated[instrument5] Mult size: 1
+Var pair:+pointing[satellite3,planet2], +calibrated[instrument0] Mult size: 1
+Var pair:+pointing[satellite3,planet2], +calibrated[instrument1] Mult size: 1
+Var pair:+pointing[satellite3,planet2], +calibrated[instrument2] Mult size: 1
+Var pair:+pointing[satellite3,planet2], +calibrated[instrument4] Mult size: 1
+Var pair:+pointing[satellite3,planet2], +calibrated[instrument3] Mult size: 1
+Var pair:+pointing[satellite3,planet2], +calibrated[instrument5] Mult size: 1
+Var pair:+calibrated[instrument0], +calibrated[instrument1] Mult size: 1
+Var pair:+calibrated[instrument0], +calibrated[instrument2] Mult size: 1
+Var pair:+calibrated[instrument0], +calibrated[instrument4] Mult size: 1
+Var pair:+calibrated[instrument0], +calibrated[instrument3] Mult size: 1
+Var pair:+calibrated[instrument0], +calibrated[instrument5] Mult size: 1
+Var pair:+calibrated[instrument1], +calibrated[instrument2] Mult size: 1
+Var pair:+calibrated[instrument1], +calibrated[instrument4] Mult size: 1
+Var pair:+calibrated[instrument1], +calibrated[instrument3] Mult size: 1
+Var pair:+calibrated[instrument1], +calibrated[instrument5] Mult size: 1
+Var pair:+calibrated[instrument2], +calibrated[instrument4] Mult size: 1
+Var pair:+calibrated[instrument2], +calibrated[instrument3] Mult size: 1
+Var pair:+calibrated[instrument2], +calibrated[instrument5] Mult size: 1
+Var pair:+calibrated[instrument4], +calibrated[instrument3] Mult size: 1
+Var pair:+calibrated[instrument4], +calibrated[instrument5] Mult size: 1
+Var pair:+calibrated[instrument3], +calibrated[instrument5] Mult size: 1
+Number of variables: 31
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
+Parsing...
+Parsing: [0.020s CPU, 0.014s wall-clock]
+Normalizing task... [0.000s CPU, 0.002s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.004s wall-clock]
+Preparing model... [0.010s CPU, 0.004s wall-clock]
+Generated 531 rules.
+Computing model... [0.000s CPU, 0.002s wall-clock]
+441 relevant atoms
+0 auxiliary atoms
+441 final queue length
+617 total queue pushes
+Completing instantiation... [0.000s CPU, 0.002s wall-clock]
+Instantiating: [0.010s CPU, 0.014s wall-clock]
+Computing fact groups...
+Finding invariants...
+129 initial candidates
+Finding invariants: [0.040s CPU, 0.039s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+104 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.040s CPU, 0.041s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.010s CPU, 0.005s wall-clock]
+6 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+8 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.003s wall-clock]
+Reordering and filtering variables...
+112 of 112 variables necessary.
+4 of 12 mutex groups necessary.
+233 of 233 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
+Translator variables: 112
+Translator derived variables: 0
+Translator facts: 233
+Translator goal facts: 1
+Translator mutex groups: 4
+Translator total mutex groups size: 8
+Translator operators: 233
+Translator axioms: 0
+Translator task size: 1356
+Translator peak memory: 41420 KB
+Writing output... [0.000s CPU, 0.002s wall-clock]
+Done! [0.080s CPU, 0.083s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
+[t=2.8922e-05s, 9844 KB] reading input...
+[t=0.00137633s, 9844 KB] done reading input!
+[t=0.00242669s, 10232 KB] Initializing landmark cut heuristic...
+[t=0.00248602s, 10232 KB] Building successor generator...done!
+[t=0.00263548s, 10364 KB] peak memory difference for successor generator creation: 132 KB
+[t=0.00265333s, 10364 KB] time for successor generation creation: 8.5022e-05s
+[t=0.00267294s, 10364 KB] Variables: 112
+[t=0.00269043s, 10364 KB] FactPairs: 233
+[t=0.00270712s, 10364 KB] Bytes per state: 16
+[t=0.00276681s, 10364 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00288314s, 10364 KB] New best heuristic value for lmcut: 12
+[t=0.00290424s, 10364 KB] g=0, 1 evaluated, 0 expanded
+[t=0.00292175s, 10364 KB] f = 12, 1 evaluated, 0 expanded
+[t=0.00294125s, 10364 KB] Initial heuristic value for lmcut: 12
+[t=0.00295844s, 10364 KB] pruning method: none
+[t=0.00391344s, 10364 KB] f = 13, 18 evaluated, 1 expanded
+[t=0.0106577s, 10364 KB] New best heuristic value for lmcut: 11
+[t=0.0106884s, 10364 KB] g=2, 128 evaluated, 10 expanded
+[t=0.0113106s, 10364 KB] New best heuristic value for lmcut: 10
+[t=0.0113331s, 10364 KB] g=3, 140 evaluated, 11 expanded
+[t=0.0169349s, 10364 KB] f = 14, 248 evaluated, 20 expanded
+[t=0.0210804s, 10364 KB] New best heuristic value for lmcut: 9
+[t=0.0211164s, 10364 KB] g=5, 336 evaluated, 27 expanded
+[t=0.0223748s, 10364 KB] New best heuristic value for lmcut: 8
+[t=0.0224014s, 10364 KB] g=6, 364 evaluated, 28 expanded
+[t=0.148758s, 10496 KB] f = 15, 2583 evaluated, 257 expanded
+[t=0.153321s, 10496 KB] New best heuristic value for lmcut: 7
+[t=0.153364s, 10496 KB] g=8, 2677 evaluated, 264 expanded
+[t=0.154789s, 10496 KB] New best heuristic value for lmcut: 6
+[t=0.154831s, 10496 KB] g=9, 2706 evaluated, 265 expanded
+[t=1.15205s, 11436 KB] f = 16, 24515 evaluated, 2574 expanded
+[t=1.15559s, 11436 KB] New best heuristic value for lmcut: 5
+[t=1.15563s, 11436 KB] g=11, 24628 evaluated, 2582 expanded
+[t=1.15628s, 11436 KB] New best heuristic value for lmcut: 4
+[t=1.15632s, 11436 KB] g=12, 24652 evaluated, 2583 expanded
+[t=1.15665s, 11436 KB] New best heuristic value for lmcut: 3
+[t=1.15668s, 11436 KB] g=13, 24664 evaluated, 2584 expanded
+[t=1.15745s, 11436 KB] New best heuristic value for lmcut: 2
+[t=1.15748s, 11436 KB] g=14, 24701 evaluated, 2585 expanded
+[t=1.15786s, 11436 KB] New best heuristic value for lmcut: 1
+[t=1.15789s, 11436 KB] g=15, 24725 evaluated, 2586 expanded
+[t=1.15822s, 11436 KB] New best heuristic value for lmcut: 0
+[t=1.15825s, 11436 KB] g=16, 24750 evaluated, 2587 expanded
+[t=1.15828s, 11436 KB] Solution found!
+[t=1.15831s, 11436 KB] Actual search time: 1.15536s
+turn_to_satellite2_star0_planet2_  (1)
+switch_on_instrument4_satellite2_  (1)
+calibrate_satellite2_instrument4_star0_  (1)
+turn_to_satellite2_phenomenon3_star0_  (1)
+take_image_satellite2_phenomenon3_instrument4_thermograph1_  (1)
+method3@do_observation_phenomenon3_thermograph1_  (1)
+turn_to_satellite2_planet2_phenomenon3_  (1)
+take_image_satellite2_planet2_instrument4_image0_  (1)
+method3@do_observation_planet2_image0_  (1)
+turn_to_satellite2_planet4_planet2_  (1)
+take_image_satellite2_planet4_instrument4_thermograph1_  (1)
+turn_to_satellite2_star5_planet4_  (1)
+take_image_satellite2_star5_instrument4_thermograph1_  (1)
+method3@do_observation_star5_thermograph1_  (1)
+method3@do_observation_planet4_thermograph1_  (1)
+x__top_method@__top__  (1)
+[t=1.15834s, 11436 KB] Plan length: 16 step(s).
+[t=1.15834s, 11436 KB] Plan cost: 16
+[t=1.15834s, 11436 KB] Expanded 2588 state(s).
+[t=1.15834s, 11436 KB] Reopened 0 state(s).
+[t=1.15834s, 11436 KB] Evaluated 24750 state(s).
+[t=1.15834s, 11436 KB] Evaluations: 24750
+[t=1.15834s, 11436 KB] Generated 46470 state(s).
+[t=1.15834s, 11436 KB] Dead ends: 0 state(s).
+[t=1.15834s, 11436 KB] Expanded until last jump: 2574 state(s).
+[t=1.15834s, 11436 KB] Reopened until last jump: 0 state(s).
+[t=1.15834s, 11436 KB] Evaluated until last jump: 24515 state(s).
+[t=1.15834s, 11436 KB] Generated until last jump: 46157 state(s).
+[t=1.15834s, 11436 KB] Number of registered states: 24750
+[t=1.15834s, 11436 KB] Int hash set load factor: 24750/32768 = 0.75531
+[t=1.15834s, 11436 KB] Int hash set resizes: 15
+[t=1.15834s, 11436 KB] Search time: 1.15558s
+[t=1.15834s, 11436 KB] Total time: 1.15834s
+Solution found.
+Peak memory: 11436 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+Cost of SAS plan on RC model: 16
+Cost SAS: 0
+Num primitive tasks: 78
+Num non-primitive tasks: 20
+Total tasks: 98
+Number of methods: 155
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+- Starting state heuristic value: 14
+   1s visitime    0.00s generated nodes      5054 nodes/sec    3210 cur h   17 mod.depth    3 inserts        74 dups         9 size        65 hash fail      9 hash buckets     65
+   2s visitime    0.00s generated nodes     30093 nodes/sec   10536 cur h   19 mod.depth    3 inserts       898 dups       420 size       478 hash fail    420 hash buckets    478
+   4s visitime    0.01s generated nodes     45203 nodes/sec   11117 cur h   20 mod.depth    3 inserts      1404 dups       671 size       733 hash fail    671 hash buckets    733
+   5s visitime    0.02s generated nodes     85306 nodes/sec   16471 cur h   22 mod.depth    4 inserts      4557 dups      2648 size      1909 hash fail   2648 hash buckets   1909
+   6s visitime    0.03s generated nodes    130414 nodes/sec   20839 cur h   22 mod.depth    4 inserts      6207 dups      2987 size      3220 hash fail   2987 hash buckets   3220
+   7s visitime    0.05s generated nodes    175580 nodes/sec   23878 cur h   23 mod.depth    4 inserts     12775 dups      8238 size      4537 hash fail   8239 hash buckets   4536
+   8s visitime    0.06s generated nodes    205676 nodes/sec   24348 cur h   23 mod.depth    4 inserts     14235 dups      8786 size      5449 hash fail   8787 hash buckets   5448
+   9s visitime    0.20s generated nodes    290693 nodes/sec   30683 cur h   26 mod.depth    5 inserts     38823 dups     23375 size     15448 hash fail  23382 hash buckets  15441
+Search Results
+- Search time 9.69 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 0.29 seconds
+- Visited list inserts 60422
+- Visited list pruned 43704
+- Visited list contains 16718
+- Visited list hash collisions 43711
+- Visited list used hash buckets 16711
+- Generated 300853 search nodes
+  Calculated heuristic for 300853 nodes
+  One modifications 0
+  Effectless actions 0
+- including 0 one modification actions
+- including 0 one modification methods
+- and       0 progressions of effectless actions
+- Generated 31060 nodes per second
+- Final fringe contains 0 nodes
+- Status: Proven unsolvable
