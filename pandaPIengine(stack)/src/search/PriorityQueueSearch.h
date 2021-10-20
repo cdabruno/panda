@@ -57,7 +57,9 @@ namespace progression {
             int primeiro = 0;
             int segundo = 0;
 
-            std::map<int, std::pair<int, int>> ramificationSet; 
+            std::map<int, std::pair<int, int>> ramificationSet;
+            std::map<int, std::pair<int, int>> ramificationPrimitiveSet;
+            std::map<int, std::pair<int, int>> ramificationAbstractSet; 
 
             int sumVarDom = 0;
             int currVarDom;
@@ -227,6 +229,8 @@ namespace progression {
             int lastCheck = 0;
 
             int ramificationDegree = 0;
+            int ramificationDegreePrimitive = 0;
+            int ramificationDegreeAbstract = 0;
 
             searchNode *tnSol = nullptr;
             bool continueSearch = true;
@@ -460,7 +464,11 @@ namespace progression {
             }
             else if(flagAlgOne){
 
-                //int ramificationDegree = 0;
+                ramificationDegree = 0;
+                ramificationDegreeAbstract = 0;
+                ramificationDegreePrimitive = 0;
+
+
                 while (!fringe.isEmpty()) {
                 searchNode *n = fringe.pop();
                 assert(n != nullptr);
@@ -565,6 +573,7 @@ namespace progression {
                     n2->depth = n->depth + 1;
                     //cout << n2->heuristicValue[0] << endl;
                     ramificationDegree++;
+                    ramificationDegreePrimitive++;
                     fringe.push(n2);
 
                 }
@@ -646,6 +655,7 @@ namespace progression {
                         n2->depth = n->depth + 1;
                         //cout << n2->heuristicValue[0] << endl;
                         ramificationDegree++;
+                        ramificationDegreeAbstract++;
                         fringe.push(n2);
 
                     }
@@ -664,6 +674,36 @@ namespace progression {
                     auxPair.first = ramificationDegree;
                     auxPair.second = 1;
                     ramificationSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
+                }
+
+                if(ramificationPrimitiveSet.count(n->depth) > 0){
+                    std::pair<int,int> auxPair = ramificationPrimitiveSet[n->depth];
+
+                    auxPair.first += ramificationDegreePrimitive;
+                    auxPair.second += 1;
+                    ramificationPrimitiveSet.erase(n->depth);
+                    ramificationPrimitiveSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
+                }
+                else{
+                    std::pair<int,int> auxPair;
+                    auxPair.first = ramificationPrimitiveDegree;
+                    auxPair.second = 1;
+                    ramificationPrimitiveSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
+                }
+
+                if(ramificationAbstractSet.count(n->depth) > 0){
+                    std::pair<int,int> auxPair = ramificationAbstractSet[n->depth];
+
+                    auxPair.first += ramificationDegreeAbstract;
+                    auxPair.second += 1;
+                    ramificationAbstractSet.erase(n->depth);
+                    ramificationAbstractSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
+                }
+                else{
+                    std::pair<int,int> auxPair;
+                    auxPair.first = ramificationAbstractDegree;
+                    auxPair.second = 1;
+                    ramificationAbstractSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
                 }
 
 
@@ -927,10 +967,27 @@ namespace progression {
             /*for(auto& [key, value]: ramificationSet){
                 if(ramificationSet.count(key) > 0){
                     if(value.second > 0){
-                        cout << "- Avg. ramification degree with depth " << key << ": " << value.first/value.second << endl;
+                        cout << "- Avg. ramification degree with depth " << key << ": " << value.first/(float)value.second << endl;
                     }
                 }  
             }
+
+            /*for(auto& [key, value]: ramificationAbstractSet){
+                if(ramificationAbstractSet.count(key) > 0){
+                    if(value.second > 0){
+                        cout << "- Avg. abstract ramification degree with depth " << key << ": " << value.first/(float)value.second << endl;
+                    }
+                }  
+            }
+
+            /*for(auto& [key, value]: ramificationPrimitiveSet){
+                if(ramificationPrimitiveSet.count(key) > 0){
+                    if(value.second > 0){
+                        cout << "- Avg. primitive ramification degree with depth " << key << ": " << value.first/(float)value.second << endl;
+                    }
+                }  
+            }
+
 
             cout << "RAMIFICATION TOTAL " << ramificationDegree / (float)visitedList.uniqueInsertions;*/
 
