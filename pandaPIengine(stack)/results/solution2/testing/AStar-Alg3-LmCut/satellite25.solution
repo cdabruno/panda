@@ -60,151 +60,6 @@ Var pair:+pointing[satellite0,Phenomenon4], +pointing[satellite0,Star5] Mult siz
 Var pair:+pointing[satellite0,Phenomenon4], +calibrated[instrument0] Mult size: 1
 Var pair:+pointing[satellite0,Star5], +calibrated[instrument0] Mult size: 1
 Number of variables: 7
-INFO     Running translator.
-INFO     translator stdin: None
-INFO     translator time limit: None
-INFO     translator memory limit: None
-INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
-Parsing...
-Parsing: [0.010s CPU, 0.003s wall-clock]
-Normalizing task... [0.000s CPU, 0.000s wall-clock]
-Instantiating...
-Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
-Normalizing Datalog program...
-Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
-Preparing model... [0.000s CPU, 0.001s wall-clock]
-Generated 80 rules.
-Computing model... [0.000s CPU, 0.000s wall-clock]
-72 relevant atoms
-0 auxiliary atoms
-72 final queue length
-95 total queue pushes
-Completing instantiation... [0.000s CPU, 0.001s wall-clock]
-Instantiating: [0.000s CPU, 0.003s wall-clock]
-Computing fact groups...
-Finding invariants...
-24 initial candidates
-Finding invariants: [0.000s CPU, 0.003s wall-clock]
-Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
-Instantiating groups... [0.000s CPU, 0.000s wall-clock]
-Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
-Choosing groups...
-18 uncovered facts
-Choosing groups: [0.000s CPU, 0.000s wall-clock]
-Building translation key... [0.000s CPU, 0.000s wall-clock]
-Computing fact groups: [0.000s CPU, 0.003s wall-clock]
-Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
-Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
-Building mutex information...
-Building mutex information: [0.000s CPU, 0.000s wall-clock]
-Translating task...
-Processing axioms...
-Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
-Translator axioms removed by simplifying: 0
-Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
-Processing axioms: [0.000s CPU, 0.000s wall-clock]
-Translating task: [0.000s CPU, 0.001s wall-clock]
-1 effect conditions simplified
-0 implied preconditions added
-Detecting unreachable propositions...
-0 operators removed
-0 axioms removed
-2 propositions removed
-Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
-Reordering and filtering variables...
-20 of 20 variables necessary.
-4 of 6 mutex groups necessary.
-34 of 34 operators necessary.
-0 of 0 axiom rules necessary.
-Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
-Translator variables: 20
-Translator derived variables: 0
-Translator facts: 42
-Translator goal facts: 1
-Translator mutex groups: 4
-Translator total mutex groups size: 8
-Translator operators: 34
-Translator axioms: 0
-Translator task size: 222
-Translator peak memory: 40008 KB
-Writing output... [0.000s CPU, 0.000s wall-clock]
-Done! [0.010s CPU, 0.013s wall-clock]
-translate exit code: 0
-
-INFO     Running search (release).
-INFO     search stdin: output.sas
-INFO     search time limit: None
-INFO     search memory limit: None
-INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
-[t=2.9189e-05s, 9844 KB] reading input...
-[t=0.000287581s, 9844 KB] done reading input!
-[t=0.00112485s, 10100 KB] Initializing landmark cut heuristic...
-[t=0.00118205s, 10100 KB] Building successor generator...done!
-[t=0.00125472s, 10100 KB] peak memory difference for successor generator creation: 0 KB
-[t=0.00127121s, 10100 KB] time for successor generation creation: 1.7055e-05s
-[t=0.00128989s, 10100 KB] Variables: 20
-[t=0.00130713s, 10100 KB] FactPairs: 42
-[t=0.00132309s, 10100 KB] Bytes per state: 4
-[t=0.0013812s, 10100 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[t=0.00144203s, 10100 KB] New best heuristic value for lmcut: 8
-[t=0.0014621s, 10100 KB] g=0, 1 evaluated, 0 expanded
-[t=0.00147983s, 10100 KB] f = 8, 1 evaluated, 0 expanded
-[t=0.00149877s, 10100 KB] Initial heuristic value for lmcut: 8
-[t=0.00152745s, 10100 KB] pruning method: none
-[t=0.00164808s, 10100 KB] f = 9, 5 evaluated, 1 expanded
-[t=0.00169462s, 10100 KB] New best heuristic value for lmcut: 7
-[t=0.001719s, 10100 KB] g=2, 6 evaluated, 2 expanded
-[t=0.00176917s, 10100 KB] New best heuristic value for lmcut: 6
-[t=0.00178809s, 10100 KB] g=3, 9 evaluated, 3 expanded
-[t=0.00190841s, 10100 KB] f = 10, 20 evaluated, 7 expanded
-[t=0.00193688s, 10100 KB] New best heuristic value for lmcut: 5
-[t=0.00195542s, 10100 KB] g=5, 21 evaluated, 8 expanded
-[t=0.00201024s, 10100 KB] New best heuristic value for lmcut: 4
-[t=0.00202898s, 10100 KB] g=6, 26 evaluated, 9 expanded
-[t=0.00206412s, 10100 KB] New best heuristic value for lmcut: 3
-[t=0.00208236s, 10100 KB] g=7, 29 evaluated, 10 expanded
-[t=0.00214016s, 10100 KB] New best heuristic value for lmcut: 2
-[t=0.00215897s, 10100 KB] g=8, 36 evaluated, 11 expanded
-[t=0.00219694s, 10100 KB] New best heuristic value for lmcut: 1
-[t=0.00221575s, 10100 KB] g=9, 41 evaluated, 12 expanded
-[t=0.00225941s, 10100 KB] New best heuristic value for lmcut: 0
-[t=0.00227921s, 10100 KB] g=10, 46 evaluated, 13 expanded
-[t=0.00229786s, 10100 KB] Solution found!
-[t=0.00232659s, 10100 KB] Actual search time: 0.000769093s
-switch_on_instrument0_satellite0_  (1)
-turn_to_satellite0_groundstation2_phenomenon6_  (1)
-calibrate_satellite0_instrument0_groundstation2_  (1)
-turn_to_satellite0_phenomenon4_groundstation2_  (1)
-take_image_satellite0_phenomenon4_instrument0_thermograph0_  (1)
-turn_to_satellite0_star5_phenomenon4_  (1)
-take_image_satellite0_star5_instrument0_thermograph0_  (1)
-method1@do_observation_star5_thermograph0_  (1)
-method1@do_observation_phenomenon4_thermograph0_  (1)
-x__top_method@__top__  (1)
-[t=0.00235207s, 10100 KB] Plan length: 10 step(s).
-[t=0.00235207s, 10100 KB] Plan cost: 10
-[t=0.00235207s, 10100 KB] Expanded 14 state(s).
-[t=0.00235207s, 10100 KB] Reopened 0 state(s).
-[t=0.00235207s, 10100 KB] Evaluated 46 state(s).
-[t=0.00235207s, 10100 KB] Evaluations: 46
-[t=0.00235207s, 10100 KB] Generated 71 state(s).
-[t=0.00235207s, 10100 KB] Dead ends: 0 state(s).
-[t=0.00235207s, 10100 KB] Expanded until last jump: 7 state(s).
-[t=0.00235207s, 10100 KB] Reopened until last jump: 0 state(s).
-[t=0.00235207s, 10100 KB] Evaluated until last jump: 20 state(s).
-[t=0.00235207s, 10100 KB] Generated until last jump: 24 state(s).
-[t=0.00235207s, 10100 KB] Number of registered states: 46
-[t=0.00235207s, 10100 KB] Int hash set load factor: 46/64 = 0.71875
-[t=0.00235207s, 10100 KB] Int hash set resizes: 6
-[t=0.00235207s, 10100 KB] Search time: 0.000971358s
-[t=0.00235207s, 10100 KB] Total time: 0.00235207s
-Solution found.
-Peak memory: 10100 KB
-Remove intermediate file output.sas
-search exit code: 0
-
-Cost of SAS plan on RC model: 10
-Cost SAS: 0
 Num primitive tasks: 13
 Num non-primitive tasks: 4
 Total tasks: 17
@@ -217,22 +72,56 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 8
 Search Results
-- Search time 0.098 seconds
+- Search time 0.003 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 9e-06 seconds
-- Visited list inserts 2
+- Visited list time 0.000108 seconds
+- Visited list inserts 26
 - Visited list pruned 0
-- Visited list contains 2
+- Visited list contains 26
 - Visited list hash collisions 0
-- Visited list used hash buckets 2
-- Generated 18 search nodes
-  Calculated heuristic for 18 nodes
-  One modifications 0
-  Effectless actions 0
-- including 0 one modification actions
+- Visited list used hash buckets 26
+- Generated 284 search nodes
+  Calculated heuristic for 190 nodes
+  One modifications 85
+  Effectless actions 9
+- including 85 one modification actions
 - including 0 one modification methods
-- and       0 progressions of effectless actions
-- Generated 183 nodes per second
-- Final fringe contains 0 nodes
-- Status: Proven unsolvable
+- and       9 progressions of effectless actions
+- Generated 63333 nodes per second
+- Final fringe contains 63 nodes
+- Avg. ramification degree with depth 0: 1
+- Avg. ramification degree with depth 1: 13
+- Avg. ramification degree with depth 2: 43.7273
+- Avg. ramification degree with depth 3: 71
+- Avg. ramification degree with depth 4: 79.3333
+- Avg. ramification degree with depth 5: 87
+- Avg. abstract ramification degree with depth 0: 1
+- Avg. abstract ramification degree with depth 1: 13
+- Avg. abstract ramification degree with depth 2: 40.5455
+- Avg. abstract ramification degree with depth 3: 64.625
+- Avg. abstract ramification degree with depth 4: 72.3333
+- Avg. abstract ramification degree with depth 5: 77
+- Avg. primitive ramification degree with depth 0: 0
+- Avg. primitive ramification degree with depth 1: 0
+- Avg. primitive ramification degree with depth 2: 3.18182
+- Avg. primitive ramification degree with depth 3: 6.375
+- Avg. primitive ramification degree with depth 4: 7
+- Avg. primitive ramification degree with depth 5: 10
+RAMIFICATION TOTAL 3.38462- Status: Solved
+- Found solution of length 11
+- Total costs of actions: 7
+==>
+140 switch_on[instrument0,satellite0]
+274 turn_to[satellite0,GroundStation2,Phenomenon6]
+275 calibrate[satellite0,instrument0,GroundStation2]
+276 turn_to[satellite0,Phenomenon4,GroundStation2]
+277 take_image[satellite0,Phenomenon4,instrument0,thermograph0]
+278 turn_to[satellite0,Star5,Phenomenon4]
+279 take_image[satellite0,Star5,instrument0,thermograph0]
+root 0
+273 auto_calibrate[satellite0,instrument0] -> method6 274 275
+139 do_observation[Phenomenon4,thermograph0] -> <method0;activate_instrument[satellite0,instrument0];method5;0;-1,-2,1,2> 140 273 276 277
+11 do_observation[Star5,thermograph0] -> method1 278 279
+0 __top[] -> __top_method 139 11
+<==

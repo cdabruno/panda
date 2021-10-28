@@ -53,141 +53,6 @@ Var pair:+pointing[satellite0,GroundStation2], +pointing[satellite0,Phenomenon4]
 Var pair:+pointing[satellite0,GroundStation2], +calibrated[instrument0] Mult size: 1
 Var pair:+pointing[satellite0,Phenomenon4], +calibrated[instrument0] Mult size: 1
 Number of variables: 6
-INFO     Running translator.
-INFO     translator stdin: None
-INFO     translator time limit: None
-INFO     translator memory limit: None
-INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
-Parsing...
-Parsing: [0.000s CPU, 0.002s wall-clock]
-Normalizing task... [0.000s CPU, 0.000s wall-clock]
-Instantiating...
-Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
-Normalizing Datalog program...
-Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
-Preparing model... [0.000s CPU, 0.000s wall-clock]
-Generated 41 rules.
-Computing model... [0.000s CPU, 0.000s wall-clock]
-41 relevant atoms
-0 auxiliary atoms
-41 final queue length
-50 total queue pushes
-Completing instantiation... [0.000s CPU, 0.000s wall-clock]
-Instantiating: [0.000s CPU, 0.002s wall-clock]
-Computing fact groups...
-Finding invariants...
-16 initial candidates
-Finding invariants: [0.000s CPU, 0.002s wall-clock]
-Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
-Instantiating groups... [0.000s CPU, 0.000s wall-clock]
-Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
-Choosing groups...
-11 uncovered facts
-Choosing groups: [0.000s CPU, 0.000s wall-clock]
-Building translation key... [0.000s CPU, 0.000s wall-clock]
-Computing fact groups: [0.000s CPU, 0.002s wall-clock]
-Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
-Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
-Building mutex information...
-Building mutex information: [0.000s CPU, 0.000s wall-clock]
-Translating task...
-Processing axioms...
-Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
-Translator axioms removed by simplifying: 0
-Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
-Processing axioms: [0.000s CPU, 0.000s wall-clock]
-Translating task: [0.000s CPU, 0.001s wall-clock]
-1 effect conditions simplified
-0 implied preconditions added
-Detecting unreachable propositions...
-0 operators removed
-0 axioms removed
-2 propositions removed
-Detecting unreachable propositions: [0.000s CPU, 0.000s wall-clock]
-Reordering and filtering variables...
-13 of 13 variables necessary.
-3 of 5 mutex groups necessary.
-17 of 17 operators necessary.
-0 of 0 axiom rules necessary.
-Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
-Translator variables: 13
-Translator derived variables: 0
-Translator facts: 27
-Translator goal facts: 1
-Translator mutex groups: 3
-Translator total mutex groups size: 6
-Translator operators: 17
-Translator axioms: 0
-Translator task size: 120
-Translator peak memory: 39752 KB
-Writing output... [0.000s CPU, 0.000s wall-clock]
-Done! [0.000s CPU, 0.008s wall-clock]
-translate exit code: 0
-
-INFO     Running search (release).
-INFO     search stdin: output.sas
-INFO     search time limit: None
-INFO     search memory limit: None
-INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
-[t=2.7792e-05s, 9844 KB] reading input...
-[t=0.000257436s, 9844 KB] done reading input!
-[t=0.00120343s, 10100 KB] Initializing landmark cut heuristic...
-[t=0.00125754s, 10100 KB] Building successor generator...done!
-[t=0.00132536s, 10100 KB] peak memory difference for successor generator creation: 0 KB
-[t=0.00134164s, 10100 KB] time for successor generation creation: 1.4069e-05s
-[t=0.00136055s, 10100 KB] Variables: 13
-[t=0.00137799s, 10100 KB] FactPairs: 27
-[t=0.00139439s, 10100 KB] Bytes per state: 4
-[t=0.00145158s, 10100 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[t=0.00150539s, 10100 KB] New best heuristic value for lmcut: 6
-[t=0.00152551s, 10100 KB] g=0, 1 evaluated, 0 expanded
-[t=0.00154274s, 10100 KB] f = 6, 1 evaluated, 0 expanded
-[t=0.00156155s, 10100 KB] Initial heuristic value for lmcut: 6
-[t=0.00157926s, 10100 KB] pruning method: none
-[t=0.00162252s, 10100 KB] f = 7, 4 evaluated, 1 expanded
-[t=0.00164869s, 10100 KB] New best heuristic value for lmcut: 4
-[t=0.0016678s, 10100 KB] g=2, 5 evaluated, 2 expanded
-[t=0.00170779s, 10100 KB] New best heuristic value for lmcut: 3
-[t=0.00172669s, 10100 KB] g=4, 9 evaluated, 4 expanded
-[t=0.0017531s, 10100 KB] New best heuristic value for lmcut: 2
-[t=0.00177133s, 10100 KB] g=5, 11 evaluated, 5 expanded
-[t=0.00180386s, 10100 KB] New best heuristic value for lmcut: 1
-[t=0.00182262s, 10100 KB] g=6, 15 evaluated, 6 expanded
-[t=0.00185349s, 10100 KB] New best heuristic value for lmcut: 0
-[t=0.00187245s, 10100 KB] g=7, 19 evaluated, 7 expanded
-[t=0.00189074s, 10100 KB] Solution found!
-[t=0.00190886s, 10100 KB] Actual search time: 0.000326225s
-switch_on_instrument0_satellite0_  (1)
-turn_to_satellite0_groundstation2_phenomenon6_  (1)
-calibrate_satellite0_instrument0_groundstation2_  (1)
-turn_to_satellite0_phenomenon4_groundstation2_  (1)
-take_image_satellite0_phenomenon4_instrument0_thermograph0_  (1)
-method1@do_observation_phenomenon4_thermograph0_  (1)
-x__top_method@__top__  (1)
-[t=0.00192704s, 10100 KB] Plan length: 7 step(s).
-[t=0.00192704s, 10100 KB] Plan cost: 7
-[t=0.00192704s, 10100 KB] Expanded 8 state(s).
-[t=0.00192704s, 10100 KB] Reopened 0 state(s).
-[t=0.00192704s, 10100 KB] Evaluated 19 state(s).
-[t=0.00192704s, 10100 KB] Evaluations: 19
-[t=0.00192704s, 10100 KB] Generated 28 state(s).
-[t=0.00192704s, 10100 KB] Dead ends: 0 state(s).
-[t=0.00192704s, 10100 KB] Expanded until last jump: 1 state(s).
-[t=0.00192704s, 10100 KB] Reopened until last jump: 0 state(s).
-[t=0.00192704s, 10100 KB] Evaluated until last jump: 4 state(s).
-[t=0.00192704s, 10100 KB] Generated until last jump: 3 state(s).
-[t=0.00192704s, 10100 KB] Number of registered states: 19
-[t=0.00192704s, 10100 KB] Int hash set load factor: 19/32 = 0.59375
-[t=0.00192704s, 10100 KB] Int hash set resizes: 5
-[t=0.00192704s, 10100 KB] Search time: 0.00047599s
-[t=0.00192704s, 10100 KB] Total time: 0.00192704s
-Solution found.
-Peak memory: 10100 KB
-Remove intermediate file output.sas
-search exit code: 0
-
-Cost of SAS plan on RC model: 7
-Cost SAS: 0
 Num primitive tasks: 7
 Num non-primitive tasks: 3
 Total tasks: 10
@@ -200,10 +65,10 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 5
 Search Results
-- Search time 0.089 seconds
+- Search time 0 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 8e-06 seconds
+- Visited list time 1.8e-05 seconds
 - Visited list inserts 4
 - Visited list pruned 0
 - Visited list contains 4
@@ -216,9 +81,18 @@ Search Results
 - including 7 one modification actions
 - including 0 one modification methods
 - and       1 progressions of effectless actions
-- Generated 123 nodes per second
+- Generated -2147483648 nodes per second
 - Final fringe contains 1 nodes
-- Status: Solved
+- Avg. ramification degree with depth 0: 1
+- Avg. ramification degree with depth 1: 3
+- Avg. ramification degree with depth 2: 4
+- Avg. abstract ramification degree with depth 0: 1
+- Avg. abstract ramification degree with depth 1: 3
+- Avg. abstract ramification degree with depth 2: 4
+- Avg. primitive ramification degree with depth 0: 0
+- Avg. primitive ramification degree with depth 1: 0
+- Avg. primitive ramification degree with depth 2: 0
+RAMIFICATION TOTAL 1- Status: Solved
 - Found solution of length 8
 - Total costs of actions: 5
 ==>

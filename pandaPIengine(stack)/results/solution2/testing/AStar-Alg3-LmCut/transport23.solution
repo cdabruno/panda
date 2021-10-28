@@ -5812,145 +5812,6 @@ Var pair:+in[package-5,truck-0], +at[package-5,city-loc-7] Mult size: 1
 Var pair:+in[package-5,truck-0], +at[package-1,city-loc-8] Mult size: 1
 Var pair:+at[package-5,city-loc-7], +at[package-1,city-loc-8] Mult size: 1
 Number of variables: 107
-INFO     Running translator.
-INFO     translator stdin: None
-INFO     translator time limit: None
-INFO     translator memory limit: None
-INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
-Parsing...
-Parsing: [0.070s CPU, 0.077s wall-clock]
-Normalizing task... [0.010s CPU, 0.010s wall-clock]
-Instantiating...
-Generating Datalog program... [0.010s CPU, 0.008s wall-clock]
-Normalizing Datalog program...
-Normalizing Datalog program: [0.020s CPU, 0.023s wall-clock]
-Preparing model... [0.020s CPU, 0.016s wall-clock]
-Generated 2781 rules.
-Computing model... [0.010s CPU, 0.009s wall-clock]
-2205 relevant atoms
-0 auxiliary atoms
-2205 final queue length
-3226 total queue pushes
-Completing instantiation... [0.010s CPU, 0.014s wall-clock]
-Instantiating: [0.070s CPU, 0.072s wall-clock]
-Computing fact groups...
-Finding invariants...
-712 initial candidates
-Finding invariants: [32.260s CPU, 32.268s wall-clock]
-Checking invariant weight... [0.020s CPU, 0.001s wall-clock]
-Instantiating groups... [0.000s CPU, 0.000s wall-clock]
-Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
-Choosing groups...
-650 uncovered facts
-Choosing groups: [0.000s CPU, 0.001s wall-clock]
-Building translation key... [0.000s CPU, 0.003s wall-clock]
-Computing fact groups: [32.280s CPU, 32.283s wall-clock]
-Building STRIPS to SAS dictionary... [0.010s CPU, 0.001s wall-clock]
-Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
-Building mutex information...
-Building mutex information: [0.000s CPU, 0.001s wall-clock]
-Translating task...
-Processing axioms...
-Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
-Translator axioms removed by simplifying: 0
-Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
-Processing axioms: [0.000s CPU, 0.002s wall-clock]
-Translating task: [0.050s CPU, 0.054s wall-clock]
-108 effect conditions simplified
-0 implied preconditions added
-Detecting unreachable propositions...
-0 operators removed
-0 axioms removed
-13 propositions removed
-Detecting unreachable propositions: [0.030s CPU, 0.028s wall-clock]
-Reordering and filtering variables...
-663 of 663 variables necessary.
-90 of 103 mutex groups necessary.
-1057 of 1057 operators necessary.
-0 of 0 axiom rules necessary.
-Reordering and filtering variables: [0.020s CPU, 0.016s wall-clock]
-Translator variables: 663
-Translator derived variables: 0
-Translator facts: 1362
-Translator goal facts: 1
-Translator mutex groups: 90
-Translator total mutex groups size: 180
-Translator operators: 1057
-Translator axioms: 0
-Translator task size: 6910
-Translator peak memory: 277012 KB
-Writing output... [0.010s CPU, 0.014s wall-clock]
-Done! [32.550s CPU, 32.560s wall-clock]
-translate exit code: 0
-
-INFO     Running search (release).
-INFO     search stdin: output.sas
-INFO     search time limit: None
-INFO     search memory limit: None
-INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
-[t=4.6613e-05s, 9844 KB] reading input...
-[t=0.0103644s, 10404 KB] done reading input!
-[t=0.0128121s, 11136 KB] Initializing landmark cut heuristic...
-[t=0.0129512s, 11136 KB] Building successor generator...done!
-[t=0.0136845s, 11252 KB] peak memory difference for successor generator creation: 116 KB
-[t=0.013721s, 11252 KB] time for successor generation creation: 0.000595707s
-[t=0.0137677s, 11252 KB] Variables: 663
-[t=0.0138061s, 11252 KB] FactPairs: 1362
-[t=0.01384s, 11252 KB] Bytes per state: 88
-[t=0.0139579s, 11252 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[t=0.0171906s, 11252 KB] New best heuristic value for lmcut: 73
-[t=0.017247s, 11252 KB] g=0, 1 evaluated, 0 expanded
-[t=0.0172865s, 11252 KB] f = 73, 1 evaluated, 0 expanded
-[t=0.0173258s, 11252 KB] Initial heuristic value for lmcut: 73
-[t=0.0173615s, 11252 KB] pruning method: none
-[t=0.0236183s, 11252 KB] New best heuristic value for lmcut: 67
-[t=0.0236859s, 11252 KB] g=1, 3 evaluated, 1 expanded
-[t=0.175048s, 11252 KB] New best heuristic value for lmcut: 66
-[t=0.175141s, 11252 KB] g=3, 53 evaluated, 5 expanded
-[t=0.251436s, 11252 KB] New best heuristic value for lmcut: 65
-[t=0.251501s, 11252 KB] g=4, 82 evaluated, 8 expanded
-[t=0.26195s, 11252 KB] New best heuristic value for lmcut: 64
-[t=0.261996s, 11252 KB] g=5, 89 evaluated, 9 expanded
-[t=0.271234s, 11252 KB] New best heuristic value for lmcut: 63
-[t=0.271323s, 11252 KB] g=5, 95 evaluated, 9 expanded
-[t=0.382778s, 11252 KB] New best heuristic value for lmcut: 62
-[t=0.382856s, 11252 KB] g=7, 162 evaluated, 13 expanded
-[t=0.480652s, 11252 KB] New best heuristic value for lmcut: 61
-[t=0.48075s, 11252 KB] g=8, 226 evaluated, 17 expanded
-[t=0.663515s, 11252 KB] New best heuristic value for lmcut: 60
-[t=0.663588s, 11252 KB] g=8, 343 evaluated, 27 expanded
-[t=0.698075s, 11252 KB] New best heuristic value for lmcut: 59
-[t=0.698156s, 11252 KB] g=9, 366 evaluated, 28 expanded
-[t=0.738471s, 11252 KB] New best heuristic value for lmcut: 58
-[t=0.73855s, 11252 KB] g=10, 395 evaluated, 29 expanded
-[t=0.769104s, 11252 KB] New best heuristic value for lmcut: 57
-[t=0.76918s, 11252 KB] g=11, 416 evaluated, 30 expanded
-[t=17.8831s, 12436 KB] New best heuristic value for lmcut: 56
-[t=17.8832s, 12436 KB] g=11, 10589 evaluated, 752 expanded
-[t=20.021s, 12564 KB] Time limit reached. Abort search.
-[t=20.0211s, 12564 KB] Actual search time: 20.0037s
-[t=20.0211s, 12564 KB] Expanded 818 state(s).
-[t=20.0211s, 12564 KB] Reopened 0 state(s).
-[t=20.0211s, 12564 KB] Evaluated 11688 state(s).
-[t=20.0211s, 12564 KB] Evaluations: 11688
-[t=20.0211s, 12564 KB] Generated 17546 state(s).
-[t=20.0211s, 12564 KB] Dead ends: 0 state(s).
-[t=20.0211s, 12564 KB] Expanded until last jump: 0 state(s).
-[t=20.0211s, 12564 KB] Reopened until last jump: 0 state(s).
-[t=20.0211s, 12564 KB] Evaluated until last jump: 1 state(s).
-[t=20.0211s, 12564 KB] Generated until last jump: 0 state(s).
-[t=20.0211s, 12564 KB] Number of registered states: 11688
-[t=20.0211s, 12564 KB] Int hash set load factor: 11688/16384 = 0.713379
-[t=20.0211s, 12564 KB] Int hash set resizes: 14
-[t=20.0211s, 12564 KB] Search time: 20.0071s
-[t=20.0211s, 12564 KB] Total time: 20.0211s
-Search stopped without finding a solution.
-Peak memory: 12564 KB
-Remove intermediate file output.sas
-search exit code: 12
-
-Driver aborting after search
-Cost SAS: 0
 Num primitive tasks: 429
 Num non-primitive tasks: 176
 Total tasks: 605
@@ -5962,25 +5823,52 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 66
-  70s visitime    0.00s generated nodes      5028 nodes/sec      70 cur h   63 mod.depth    5 inserts       210 dups        45 size       165 hash fail     45 hash buckets    165
+  31s visitime    0.00s generated nodes      5005 nodes/sec     161 cur h   62 mod.depth    6 inserts       215 dups        50 size       165 hash fail     50 hash buckets    165
 Reached time limit - stopping search.
 Search Results
-- Search time 70.98 seconds
+- Search time 31.08 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
 - Visited list time 0.00 seconds
-- Visited list inserts 210
-- Visited list pruned 45
+- Visited list inserts 215
+- Visited list pruned 50
 - Visited list contains 165
-- Visited list hash collisions 45
+- Visited list hash collisions 50
 - Visited list used hash buckets 165
-- Generated 5028 search nodes
-  Calculated heuristic for 5016 nodes
+- Generated 5005 search nodes
+  Calculated heuristic for 4993 nodes
   One modifications 0
   Effectless actions 12
 - including 0 one modification actions
 - including 0 one modification methods
 - and       12 progressions of effectless actions
-- Generated 70 nodes per second
-- Final fringe contains 3997 nodes
-- Status: Timeout
+- Generated 160 nodes per second
+- Final fringe contains 4485 nodes
+- Avg. ramification degree with depth 0: 1.00
+- Avg. ramification degree with depth 1: 31.00
+- Avg. ramification degree with depth 2: 1256.25
+- Avg. ramification degree with depth 3: 1958.75
+- Avg. ramification degree with depth 4: 2074.50
+- Avg. ramification degree with depth 5: 2414.78
+- Avg. ramification degree with depth 6: 2954.82
+- Avg. ramification degree with depth 7: 3148.67
+- Avg. ramification degree with depth 8: 3472.50
+- Avg. abstract ramification degree with depth 0: 1.00
+- Avg. abstract ramification degree with depth 1: 31.00
+- Avg. abstract ramification degree with depth 2: 1254.25
+- Avg. abstract ramification degree with depth 3: 1955.80
+- Avg. abstract ramification degree with depth 4: 2071.44
+- Avg. abstract ramification degree with depth 5: 2411.22
+- Avg. abstract ramification degree with depth 6: 2950.71
+- Avg. abstract ramification degree with depth 7: 3144.33
+- Avg. abstract ramification degree with depth 8: 3467.50
+- Avg. primitive ramification degree with depth 0: 0.00
+- Avg. primitive ramification degree with depth 1: 0.00
+- Avg. primitive ramification degree with depth 2: 2.00
+- Avg. primitive ramification degree with depth 3: 2.95
+- Avg. primitive ramification degree with depth 4: 3.06
+- Avg. primitive ramification degree with depth 5: 3.57
+- Avg. primitive ramification degree with depth 6: 4.12
+- Avg. primitive ramification degree with depth 7: 4.33
+- Avg. primitive ramification degree with depth 8: 5.00
+RAMIFICATION TOTAL 28.48- Status: Timeout

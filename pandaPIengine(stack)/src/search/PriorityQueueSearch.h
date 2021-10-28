@@ -53,10 +53,6 @@ namespace progression {
             int minVarDom = INT_MAX;
             int maxVarDom = INT_MIN;
 
-            int flagAchou = 0;
-            int primeiro = 0;
-            int segundo = 0;
-
             std::map<int, std::pair<int, int>> ramificationSet;
             std::map<int, std::pair<int, int>> ramificationPrimitiveSet;
             std::map<int, std::pair<int, int>> ramificationAbstractSet; 
@@ -473,6 +469,8 @@ namespace progression {
                 searchNode *n = fringe.pop();
                 assert(n != nullptr);
 
+                //cout << "Estado: " << n->state;
+
                 // check whether we have seen this search node
                 if (!suboptimalSearch && !visitedList.insertVisi(n)) {
                     delete n;
@@ -521,37 +519,19 @@ namespace progression {
                     /*if(htn->isGoal(n2)){
                         n2->heuristicValue[0] = 0;
                     }
-                    else{*/
-                    
-                    
+                    else{
+                        n2->heuristicValue[0] = 1;
+                    }*/
 
                     for (int i = 0; i < hLength; i++) {
                         hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
+
                     }
                     /*if(n2->heuristicValue[0] > 0){
                         n2->heuristicValue[0] = 1;
                     }*/
+                                        
                     
-                    
-
-                    //blind(isGoal) stuff
-                    /*int isGoalH;
-                    if(htn->isGoal(n2)){
-                        isGoalH = 0;
-                    }
-                    else{
-                        isGoalH = 1;
-                    }
-                    if(isGoalH != (n2->heuristicValue[0] > 0)){
-                        flagAchou = 1;
-                        primeiro = isGoalH;
-                        segundo = n2->heuristicValue[0] > 0;
-                    }*/
-                    //n2->heuristicValue[0] = 1;
-
-                    
-                    
-
                     
                     
                     
@@ -609,28 +589,15 @@ namespace progression {
                         /*if(htn->isGoal(n2)){
                         n2->heuristicValue[0] = 0;
                         }
-                        else{*/
+                        else{
+                            n2->heuristicValue[0] = 1;
+                        }*/
                         for (int i = 0; i < hLength; i++) {
                             hF[i]->setHeuristicValue(n2, n, j, method);
                         }
                         /*if(n2->heuristicValue[0] > 0){
                             n2->heuristicValue[0] = 1;
                         }*/
-                        
-                            //blind(isGoal) stuff
-                        /*int isGoalH;
-                        if(htn->isGoal(n2)){
-                            isGoalH = 0;
-                        }
-                        else{
-                            isGoalH = 1;
-                        }
-                        if(isGoalH != (n2->heuristicValue[0] > 0)){
-                            flagAchou = 1;
-                            primeiro = isGoalH;
-                            segundo = n2->heuristicValue[0] > 0;
-                        }*/
-                        //n2->heuristicValue[0] = 1;
                         
                         
                         

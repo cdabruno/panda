@@ -170,192 +170,6 @@ Var pair:+in[package-2,truck-0], +at[package-1,city-loc-0] Mult size: 1
 Var pair:+in[package-2,truck-0], +at[package-2,city-loc-0] Mult size: 1
 Var pair:+at[package-1,city-loc-0], +at[package-2,city-loc-0] Mult size: 1
 Number of variables: 16
-INFO     Running translator.
-INFO     translator stdin: None
-INFO     translator time limit: None
-INFO     translator memory limit: None
-INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
-Parsing...
-Parsing: [0.000s CPU, 0.006s wall-clock]
-Normalizing task... [0.000s CPU, 0.001s wall-clock]
-Instantiating...
-Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
-Normalizing Datalog program...
-Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
-Preparing model... [0.000s CPU, 0.001s wall-clock]
-Generated 181 rules.
-Computing model... [0.010s CPU, 0.001s wall-clock]
-159 relevant atoms
-0 auxiliary atoms
-159 final queue length
-214 total queue pushes
-Completing instantiation... [0.000s CPU, 0.001s wall-clock]
-Instantiating: [0.010s CPU, 0.006s wall-clock]
-Computing fact groups...
-Finding invariants...
-61 initial candidates
-Finding invariants: [0.060s CPU, 0.061s wall-clock]
-Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
-Instantiating groups... [0.000s CPU, 0.000s wall-clock]
-Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
-Choosing groups...
-45 uncovered facts
-Choosing groups: [0.000s CPU, 0.000s wall-clock]
-Building translation key... [0.000s CPU, 0.000s wall-clock]
-Computing fact groups: [0.060s CPU, 0.062s wall-clock]
-Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
-Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
-Building mutex information...
-Building mutex information: [0.000s CPU, 0.000s wall-clock]
-Translating task...
-Processing axioms...
-Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
-Translator axioms removed by simplifying: 0
-Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
-Processing axioms: [0.000s CPU, 0.000s wall-clock]
-Translating task: [0.000s CPU, 0.002s wall-clock]
-0 effect conditions simplified
-0 implied preconditions added
-Detecting unreachable propositions...
-0 operators removed
-0 axioms removed
-5 propositions removed
-Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
-Reordering and filtering variables...
-50 of 50 variables necessary.
-6 of 11 mutex groups necessary.
-69 of 69 operators necessary.
-0 of 0 axiom rules necessary.
-Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
-Translator variables: 50
-Translator derived variables: 0
-Translator facts: 106
-Translator goal facts: 1
-Translator mutex groups: 6
-Translator total mutex groups size: 12
-Translator operators: 69
-Translator axioms: 0
-Translator task size: 473
-Translator peak memory: 40776 KB
-Writing output... [0.000s CPU, 0.001s wall-clock]
-Done! [0.090s CPU, 0.079s wall-clock]
-translate exit code: 0
-
-INFO     Running search (release).
-INFO     search stdin: output.sas
-INFO     search time limit: None
-INFO     search memory limit: None
-INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
-[t=2.6048e-05s, 9844 KB] reading input...
-[t=0.00046633s, 9844 KB] done reading input!
-[t=0.00133495s, 10232 KB] Initializing landmark cut heuristic...
-[t=0.00139914s, 10232 KB] Building successor generator...done!
-[t=0.00148719s, 10232 KB] peak memory difference for successor generator creation: 0 KB
-[t=0.00150469s, 10232 KB] time for successor generation creation: 2.7038e-05s
-[t=0.00152461s, 10232 KB] Variables: 50
-[t=0.00154238s, 10232 KB] FactPairs: 106
-[t=0.00155903s, 10232 KB] Bytes per state: 8
-[t=0.00161894s, 10232 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[t=0.00170942s, 10232 KB] New best heuristic value for lmcut: 23
-[t=0.0017298s, 10232 KB] g=0, 1 evaluated, 0 expanded
-[t=0.00174782s, 10232 KB] f = 23, 1 evaluated, 0 expanded
-[t=0.00176704s, 10232 KB] Initial heuristic value for lmcut: 23
-[t=0.00178466s, 10232 KB] pruning method: none
-[t=0.00184511s, 10232 KB] New best heuristic value for lmcut: 22
-[t=0.00186473s, 10232 KB] g=1, 2 evaluated, 1 expanded
-[t=0.00191896s, 10232 KB] New best heuristic value for lmcut: 19
-[t=0.00193747s, 10232 KB] g=1, 3 evaluated, 1 expanded
-[t=0.00219693s, 10232 KB] New best heuristic value for lmcut: 18
-[t=0.00222292s, 10232 KB] g=2, 9 evaluated, 2 expanded
-[t=0.00271885s, 10232 KB] New best heuristic value for lmcut: 17
-[t=0.00274187s, 10232 KB] g=3, 24 evaluated, 7 expanded
-[t=0.00298198s, 10232 KB] New best heuristic value for lmcut: 16
-[t=0.00300364s, 10232 KB] g=4, 32 evaluated, 8 expanded
-[t=0.00321198s, 10232 KB] New best heuristic value for lmcut: 15
-[t=0.00323444s, 10232 KB] g=5, 39 evaluated, 9 expanded
-[t=0.00373176s, 10232 KB] New best heuristic value for lmcut: 14
-[t=0.00375348s, 10232 KB] g=7, 58 evaluated, 13 expanded
-[t=0.00389862s, 10232 KB] New best heuristic value for lmcut: 13
-[t=0.0039192s, 10232 KB] g=8, 64 evaluated, 14 expanded
-[t=0.0252407s, 10232 KB] New best heuristic value for lmcut: 12
-[t=0.0252838s, 10232 KB] g=11, 947 evaluated, 267 expanded
-[t=0.0357145s, 10232 KB] f = 24, 1372 evaluated, 373 expanded
-[t=0.0947733s, 10356 KB] f = 25, 3781 evaluated, 1113 expanded
-[t=0.114833s, 10356 KB] New best heuristic value for lmcut: 11
-[t=0.114886s, 10356 KB] g=14, 4638 evaluated, 1405 expanded
-[t=0.159706s, 10356 KB] New best heuristic value for lmcut: 10
-[t=0.159781s, 10356 KB] g=15, 6491 evaluated, 2002 expanded
-[t=0.159953s, 10356 KB] New best heuristic value for lmcut: 9
-[t=0.159982s, 10356 KB] g=16, 6502 evaluated, 2003 expanded
-[t=0.160164s, 10356 KB] New best heuristic value for lmcut: 8
-[t=0.160189s, 10356 KB] g=17, 6512 evaluated, 2004 expanded
-[t=0.160339s, 10356 KB] New best heuristic value for lmcut: 7
-[t=0.160371s, 10356 KB] g=18, 6521 evaluated, 2005 expanded
-[t=0.160491s, 10356 KB] New best heuristic value for lmcut: 6
-[t=0.160514s, 10356 KB] g=19, 6529 evaluated, 2006 expanded
-[t=0.160632s, 10356 KB] New best heuristic value for lmcut: 5
-[t=0.160662s, 10356 KB] g=20, 6536 evaluated, 2007 expanded
-[t=0.160745s, 10356 KB] New best heuristic value for lmcut: 4
-[t=0.16077s, 10356 KB] g=21, 6542 evaluated, 2008 expanded
-[t=0.160849s, 10356 KB] New best heuristic value for lmcut: 3
-[t=0.16087s, 10356 KB] g=22, 6548 evaluated, 2009 expanded
-[t=0.160935s, 10356 KB] New best heuristic value for lmcut: 2
-[t=0.160962s, 10356 KB] g=23, 6553 evaluated, 2010 expanded
-[t=0.161025s, 10356 KB] New best heuristic value for lmcut: 1
-[t=0.161045s, 10356 KB] g=24, 6559 evaluated, 2011 expanded
-[t=0.161103s, 10356 KB] New best heuristic value for lmcut: 0
-[t=0.161137s, 10356 KB] g=25, 6564 evaluated, 2012 expanded
-[t=0.161163s, 10356 KB] Solution found!
-[t=0.161187s, 10356 KB] Actual search time: 0.159399s
-pickmup_truckm0_citymlocm3_packagem0_capacitym1_capacitym2_  (1)
-drive_truckm0_citymlocm3_citymlocm1_  (1)
-drop_truckm0_citymlocm1_packagem0_capacitym1_capacitym2_  (1)
-mmunload@unload_truckm0_citymlocm1_packagem0_  (1)
-mmdrivemto@getmto_truckm0_citymlocm1_  (1)
-mmload@load_truckm0_citymlocm3_packagem0_  (1)
-drive_truckm0_citymlocm1_citymlocm2_  (1)
-pickmup_truckm0_citymlocm2_packagem1_capacitym1_capacitym2_  (1)
-pickmup_truckm0_citymlocm2_packagem2_capacitym0_capacitym1_  (1)
-drive_truckm0_citymlocm2_citymlocm1_  (1)
-drive_truckm0_citymlocm1_citymlocm3_  (1)
-drive_truckm0_citymlocm3_citymlocm0_  (1)
-drop_truckm0_citymlocm0_packagem1_capacitym0_capacitym1_  (1)
-drop_truckm0_citymlocm0_packagem2_capacitym1_capacitym2_  (1)
-mmload@load_truckm0_citymlocm2_packagem2_  (1)
-mmload@load_truckm0_citymlocm2_packagem1_  (1)
-mmunload@unload_truckm0_citymlocm0_packagem2_  (1)
-mmunload@unload_truckm0_citymlocm0_packagem1_  (1)
-mmdrivemto@getmto_truckm0_citymlocm0_  (1)
-mmdrivemto@getmto_truckm0_citymlocm3_  (1)
-x_splitting_method_mmdeliver_splitted_1@mmdeliver_splitted_1_truckm0_packagem0_  (1)
-mmdrivemto@getmto_truckm0_citymlocm2_  (1)
-x_splitting_method_mmdeliver_splitted_1@mmdeliver_splitted_1_truckm0_packagem2_  (1)
-x_splitting_method_mmdeliver_splitted_1@mmdeliver_splitted_1_truckm0_packagem1_  (1)
-x_____top_method_deliver_packagem2_citymlocm0__mmdeliver_2_0_1_m1_m2_m3__deliver_packagem1_citymlocm0__mmdeliver_1_0_m1_m2_m3_2_3_4__deliver_packagem0_citymlocm1__mmdeliver_0_m1_m2_m3_1_2_3_4_5_6_@__top__  (1)
-[t=0.161215s, 10356 KB] Plan length: 25 step(s).
-[t=0.161215s, 10356 KB] Plan cost: 25
-[t=0.161215s, 10356 KB] Expanded 2013 state(s).
-[t=0.161215s, 10356 KB] Reopened 0 state(s).
-[t=0.161215s, 10356 KB] Evaluated 6564 state(s).
-[t=0.161215s, 10356 KB] Evaluations: 6564
-[t=0.161215s, 10356 KB] Generated 22388 state(s).
-[t=0.161215s, 10356 KB] Dead ends: 0 state(s).
-[t=0.161215s, 10356 KB] Expanded until last jump: 1113 state(s).
-[t=0.161215s, 10356 KB] Reopened until last jump: 0 state(s).
-[t=0.161215s, 10356 KB] Evaluated until last jump: 3781 state(s).
-[t=0.161215s, 10356 KB] Generated until last jump: 11246 state(s).
-[t=0.161215s, 10356 KB] Number of registered states: 6564
-[t=0.161215s, 10356 KB] Int hash set load factor: 6564/8192 = 0.80127
-[t=0.161215s, 10356 KB] Int hash set resizes: 13
-[t=0.161215s, 10356 KB] Search time: 0.159596s
-[t=0.161215s, 10356 KB] Total time: 0.161215s
-Solution found.
-Peak memory: 10356 KB
-Remove intermediate file output.sas
-search exit code: 0
-
-Cost of SAS plan on RC model: 25
-Cost SAS: 0
 Num primitive tasks: 28
 Num non-primitive tasks: 17
 Total tasks: 45
@@ -367,43 +181,139 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 23
-   1s visitime    0.02s generated nodes     25021 nodes/sec   22892 cur h   28 mod.depth   11 inserts      5047 dups      2817 size      2230 hash fail   2817 hash buckets   2230
-   2s visitime    0.05s generated nodes     70072 nodes/sec   31764 cur h   30 mod.depth   12 inserts     13478 dups      7414 size      6064 hash fail   7415 hash buckets   6063
-   3s visitime    0.09s generated nodes    110134 nodes/sec   34086 cur h   30 mod.depth   13 inserts     21419 dups     11907 size      9512 hash fail  11908 hash buckets   9511
-   4s visitime    0.14s generated nodes    135147 nodes/sec   30680 cur h   28 mod.depth   16 inserts     27203 dups     15564 size     11639 hash fail  15566 hash buckets  11637
-   5s visitime    0.17s generated nodes    160160 nodes/sec   28754 cur h   30 mod.depth   14 inserts     31315 dups     17651 size     13664 hash fail  17655 hash buckets  13660
-   6s visitime    0.21s generated nodes    200204 nodes/sec   30403 cur h   31 mod.depth   14 inserts     38103 dups     21133 size     16970 hash fail  21140 hash buckets  16963
-   7s visitime    0.26s generated nodes    240254 nodes/sec   31463 cur h   32 mod.depth   14 inserts     49290 dups     28845 size     20445 hash fail  28855 hash buckets  20435
-   8s visitime    0.29s generated nodes    285299 nodes/sec   32631 cur h   31 mod.depth   15 inserts     53876 dups     29700 size     24176 hash fail  29715 hash buckets  24161
-   9s visitime    0.32s generated nodes    310321 nodes/sec   31623 cur h   31 mod.depth   15 inserts     57242 dups     30983 size     26259 hash fail  31001 hash buckets  26241
-  10s visitime    0.35s generated nodes    330330 nodes/sec   30369 cur h   33 mod.depth   13 inserts     60958 dups     32992 size     27966 hash fail  33014 hash buckets  27944
-  11s visitime    0.41s generated nodes    360360 nodes/sec   30282 cur h   32 mod.depth   14 inserts     72925 dups     42272 size     30653 hash fail  42298 hash buckets  30627
-  12s visitime    0.45s generated nodes    405417 nodes/sec   31282 cur h   32 mod.depth   15 inserts     79333 dups     44985 size     34348 hash fail  45018 hash buckets  34315
-  14s visitime    0.49s generated nodes    440451 nodes/sec   31054 cur h   32 mod.depth   15 inserts     85456 dups     48169 size     37287 hash fail  48203 hash buckets  37253
-  15s visitime    0.58s generated nodes    460468 nodes/sec   30082 cur h   33 mod.depth   15 inserts     95824 dups     56790 size     39034 hash fail  56831 hash buckets  38993
-  16s visitime    0.60s generated nodes    485495 nodes/sec   29511 cur h   32 mod.depth   16 inserts     97976 dups     56981 size     40995 hash fail  57027 hash buckets  40949
-  17s visitime    0.63s generated nodes    525544 nodes/sec   29991 cur h   33 mod.depth   15 inserts    102571 dups     58410 size     44161 hash fail  58463 hash buckets  44108
-  18s visitime    0.69s generated nodes    570615 nodes/sec   30674 cur h   32 mod.depth   16 inserts    115449 dups     67702 size     47747 hash fail  67767 hash buckets  47682
-  19s visitime    0.74s generated nodes    600658 nodes/sec   30408 cur h   33 mod.depth   16 inserts    123312 dups     73127 size     50185 hash fail  73201 hash buckets  50111
-  20s visitime    0.77s generated nodes    625689 nodes/sec   29823 cur h   34 mod.depth   15 inserts    125597 dups     73374 size     52223 hash fail  73450 hash buckets  52147
-Reached time limit - stopping search.
+   1s visitime    0.03s generated nodes     15001 nodes/sec   13124 cur h   19 mod.depth   12 inserts      6022 dups      3266 size      2756 hash fail   3266 hash buckets   2756
 Search Results
-- Search time 21.23 seconds
+- Search time 1.88 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 0.77 seconds
-- Visited list inserts 126065
-- Visited list pruned 73431
-- Visited list contains 52634
-- Visited list hash collisions 73509
-- Visited list used hash buckets 52556
-- Generated 630702 search nodes
-  Calculated heuristic for 590031 nodes
-  One modifications 0
-  Effectless actions 40671
-- including 0 one modification actions
+- Visited list time 0.06 seconds
+- Visited list inserts 13973
+- Visited list pruned 7849
+- Visited list contains 6124
+- Visited list hash collisions 7849
+- Visited list used hash buckets 6124
+- Generated 34925 search nodes
+  Calculated heuristic for 30661 nodes
+  One modifications 2606
+  Effectless actions 1658
+- including 2606 one modification actions
 - including 0 one modification methods
-- and       40671 progressions of effectless actions
-- Generated 27798 nodes per second
-- Final fringe contains 104839 nodes
-- Status: Timeout
+- and       1658 progressions of effectless actions
+- Generated 16326 nodes per second
+- Final fringe contains 11735 nodes
+- Avg. ramification degree with depth 0: 1.00
+- Avg. ramification degree with depth 1: 4.00
+- Avg. ramification degree with depth 2: 24.67
+- Avg. ramification degree with depth 3: 320.79
+- Avg. ramification degree with depth 4: 919.84
+- Avg. ramification degree with depth 5: 4005.80
+- Avg. ramification degree with depth 6: 7779.42
+- Avg. ramification degree with depth 7: 10669.38
+- Avg. ramification degree with depth 8: 11273.21
+- Avg. ramification degree with depth 9: 11316.84
+- Avg. ramification degree with depth 10: 13456.69
+- Avg. ramification degree with depth 11: 13743.49
+- Avg. ramification degree with depth 12: 12727.76
+- Avg. ramification degree with depth 13: 13256.26
+- Avg. ramification degree with depth 14: 14204.62
+- Avg. ramification degree with depth 15: 14645.46
+- Avg. ramification degree with depth 16: 15002.86
+- Avg. ramification degree with depth 17: 16255.13
+- Avg. ramification degree with depth 18: 16851.12
+- Avg. ramification degree with depth 19: 18322.89
+- Avg. ramification degree with depth 20: 20768.82
+- Avg. ramification degree with depth 21: 16800.50
+- Avg. ramification degree with depth 22: 20869.00
+- Avg. ramification degree with depth 23: 23176.67
+- Avg. ramification degree with depth 24: 25706.00
+- Avg. ramification degree with depth 25: 25707.00
+- Avg. abstract ramification degree with depth 0: 1.00
+- Avg. abstract ramification degree with depth 1: 4.00
+- Avg. abstract ramification degree with depth 2: 24.67
+- Avg. abstract ramification degree with depth 3: 299.00
+- Avg. abstract ramification degree with depth 4: 833.47
+- Avg. abstract ramification degree with depth 5: 3610.46
+- Avg. abstract ramification degree with depth 6: 6996.91
+- Avg. abstract ramification degree with depth 7: 9589.25
+- Avg. abstract ramification degree with depth 8: 10118.30
+- Avg. abstract ramification degree with depth 9: 10161.95
+- Avg. abstract ramification degree with depth 10: 12077.66
+- Avg. abstract ramification degree with depth 11: 12335.14
+- Avg. abstract ramification degree with depth 12: 11431.60
+- Avg. abstract ramification degree with depth 13: 11904.23
+- Avg. abstract ramification degree with depth 14: 12752.38
+- Avg. abstract ramification degree with depth 15: 13143.76
+- Avg. abstract ramification degree with depth 16: 13465.66
+- Avg. abstract ramification degree with depth 17: 14582.37
+- Avg. abstract ramification degree with depth 18: 15112.38
+- Avg. abstract ramification degree with depth 19: 16415.25
+- Avg. abstract ramification degree with depth 20: 18584.18
+- Avg. abstract ramification degree with depth 21: 15085.50
+- Avg. abstract ramification degree with depth 22: 18652.50
+- Avg. abstract ramification degree with depth 23: 20711.67
+- Avg. abstract ramification degree with depth 24: 22990.00
+- Avg. abstract ramification degree with depth 25: 22991.00
+- Avg. primitive ramification degree with depth 0: 0.00
+- Avg. primitive ramification degree with depth 1: 0.00
+- Avg. primitive ramification degree with depth 2: 0.00
+- Avg. primitive ramification degree with depth 3: 21.79
+- Avg. primitive ramification degree with depth 4: 86.37
+- Avg. primitive ramification degree with depth 5: 395.34
+- Avg. primitive ramification degree with depth 6: 782.51
+- Avg. primitive ramification degree with depth 7: 1080.14
+- Avg. primitive ramification degree with depth 8: 1154.91
+- Avg. primitive ramification degree with depth 9: 1154.89
+- Avg. primitive ramification degree with depth 10: 1379.03
+- Avg. primitive ramification degree with depth 11: 1408.36
+- Avg. primitive ramification degree with depth 12: 1296.16
+- Avg. primitive ramification degree with depth 13: 1352.03
+- Avg. primitive ramification degree with depth 14: 1452.24
+- Avg. primitive ramification degree with depth 15: 1501.70
+- Avg. primitive ramification degree with depth 16: 1537.20
+- Avg. primitive ramification degree with depth 17: 1672.76
+- Avg. primitive ramification degree with depth 18: 1738.75
+- Avg. primitive ramification degree with depth 19: 1907.64
+- Avg. primitive ramification degree with depth 20: 2184.64
+- Avg. primitive ramification degree with depth 21: 1715.00
+- Avg. primitive ramification degree with depth 22: 2216.50
+- Avg. primitive ramification degree with depth 23: 2465.00
+- Avg. primitive ramification degree with depth 24: 2716.00
+- Avg. primitive ramification degree with depth 25: 2716.00
+RAMIFICATION TOTAL 4.20- Status: Solved
+- Found solution of length 32
+- Total costs of actions: 14
+==>
+64 noop[truck-0,city-loc-3]
+87 pick-up[truck-0,city-loc-3,package-0,capacity-1,capacity-2]
+142 drive[truck-0,city-loc-3,city-loc-1]
+221 drop[truck-0,city-loc-1,package-0,capacity-1,capacity-2]
+316 drive[truck-0,city-loc-1,city-loc-2]
+3039 noop[truck-0,city-loc-2]
+10742 pick-up[truck-0,city-loc-2,package-2,capacity-1,capacity-2]
+12121 pick-up[truck-0,city-loc-2,package-1,capacity-0,capacity-1]
+20216 drive[truck-0,city-loc-2,city-loc-1]
+23551 drive[truck-0,city-loc-1,city-loc-3]
+28149 drive[truck-0,city-loc-3,city-loc-0]
+34918 noop[truck-0,city-loc-0]
+34922 drop[truck-0,city-loc-0,package-1,capacity-0,capacity-1]
+34923 drop[truck-0,city-loc-0,package-2,capacity-1,capacity-2]
+root 0
+34921 unload[truck-0,city-loc-0,package-1] -> m-unload 34922
+34917 get-to[truck-0,city-loc-0] -> m-i-am-there 34918
+34914 unload[truck-0,city-loc-0,package-2] -> m-unload 34923
+17667 get-to[truck-0,city-loc-1] -> m-drive-to 20216
+12962 get-to[truck-0,city-loc-3] -> m-drive-to-via 17667 23551
+11933 get-to[truck-0,city-loc-0] -> m-drive-to-via 12962 28149
+10741 load[truck-0,city-loc-2,package-2] -> m-load 10742
+3038 get-to[truck-0,city-loc-2] -> m-i-am-there 3039
+1665 m-deliver_splitted_1[truck-0,package-2] -> _splitting_method_m-deliver_splitted_1 3038 10741
+472 load[truck-0,city-loc-2,package-1] -> m-load 12121
+229 get-to[truck-0,city-loc-2] -> m-drive-to 316
+183 unload[truck-0,city-loc-1,package-0] -> m-unload 221
+148 m-deliver_splitted_1[truck-0,package-1] -> _splitting_method_m-deliver_splitted_1 229 472
+127 get-to[truck-0,city-loc-1] -> m-drive-to 142
+72 load[truck-0,city-loc-3,package-0] -> m-load 87
+63 get-to[truck-0,city-loc-3] -> m-i-am-there 64
+2 m-deliver_splitted_1[truck-0,package-0] -> _splitting_method_m-deliver_splitted_1 63 72
+0 __top[] -> <<<__top_method;deliver[package-2,city-loc-0];m-deliver;2;0,1,-1,-2,-3>;deliver[package-1,city-loc-0];m-deliver;1;0,-1,-2,-3,2,3,4>;deliver[package-0,city-loc-1];m-deliver;0;-1,-2,-3,1,2,3,4,5,6> 2 127 183 148 34917 34921 1665 11933 34914
+<==

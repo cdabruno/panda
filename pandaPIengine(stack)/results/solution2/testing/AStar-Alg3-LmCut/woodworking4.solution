@@ -87,144 +87,6 @@ Var pair:+treatment[p1,untreated], +treatment[p0,varnished] Mult size: 1
 Var pair:+treatment[p1,untreated], +treatment[p1,varnished] Mult size: 1
 Var pair:+treatment[p0,varnished], +treatment[p1,varnished] Mult size: 1
 Number of variables: 10
-INFO     Running translator.
-INFO     translator stdin: None
-INFO     translator time limit: None
-INFO     translator memory limit: None
-INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
-Parsing...
-Parsing: [0.010s CPU, 0.004s wall-clock]
-Normalizing task... [0.000s CPU, 0.000s wall-clock]
-Instantiating...
-Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
-Normalizing Datalog program...
-Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
-Preparing model... [0.000s CPU, 0.001s wall-clock]
-Generated 51 rules.
-Computing model... [0.000s CPU, 0.000s wall-clock]
-47 relevant atoms
-0 auxiliary atoms
-47 final queue length
-60 total queue pushes
-Completing instantiation... [0.000s CPU, 0.000s wall-clock]
-Instantiating: [0.000s CPU, 0.003s wall-clock]
-Computing fact groups...
-Finding invariants...
-22 initial candidates
-Finding invariants: [0.000s CPU, 0.004s wall-clock]
-Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
-Instantiating groups... [0.000s CPU, 0.000s wall-clock]
-Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
-Choosing groups...
-18 uncovered facts
-Choosing groups: [0.000s CPU, 0.000s wall-clock]
-Building translation key... [0.000s CPU, 0.000s wall-clock]
-Computing fact groups: [0.000s CPU, 0.005s wall-clock]
-Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
-Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
-Building mutex information...
-Building mutex information: [0.000s CPU, 0.000s wall-clock]
-Translating task...
-Processing axioms...
-Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
-Translator axioms removed by simplifying: 0
-Computing negative axioms... [0.010s CPU, 0.000s wall-clock]
-Processing axioms: [0.010s CPU, 0.000s wall-clock]
-Translating task: [0.010s CPU, 0.001s wall-clock]
-3 effect conditions simplified
-0 implied preconditions added
-Detecting unreachable propositions...
-0 operators removed
-0 axioms removed
-2 propositions removed
-Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
-Reordering and filtering variables...
-20 of 20 variables necessary.
-2 of 4 mutex groups necessary.
-17 of 17 operators necessary.
-0 of 0 axiom rules necessary.
-Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
-Translator variables: 20
-Translator derived variables: 0
-Translator facts: 40
-Translator goal facts: 6
-Translator mutex groups: 2
-Translator total mutex groups size: 4
-Translator operators: 17
-Translator axioms: 0
-Translator task size: 148
-Translator peak memory: 39752 KB
-Writing output... [0.000s CPU, 0.000s wall-clock]
-Done! [0.020s CPU, 0.016s wall-clock]
-translate exit code: 0
-
-INFO     Running search (release).
-INFO     search stdin: output.sas
-INFO     search time limit: None
-INFO     search memory limit: None
-INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
-[t=4.5361e-05s, 9844 KB] reading input...
-[t=0.000467177s, 9844 KB] done reading input!
-[t=0.00211316s, 10100 KB] Initializing landmark cut heuristic...
-[t=0.00222684s, 10100 KB] Building successor generator...done!
-[t=0.00236172s, 10100 KB] peak memory difference for successor generator creation: 0 KB
-[t=0.00240444s, 10100 KB] time for successor generation creation: 2.1968e-05s
-[t=0.0024657s, 10100 KB] Variables: 20
-[t=0.00251752s, 10100 KB] FactPairs: 40
-[t=0.00256646s, 10100 KB] Bytes per state: 4
-[t=0.00272516s, 10100 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[t=0.00284408s, 10100 KB] New best heuristic value for lmcut: 7
-[t=0.00288467s, 10100 KB] g=0, 1 evaluated, 0 expanded
-[t=0.00292076s, 10100 KB] f = 7, 1 evaluated, 0 expanded
-[t=0.00295816s, 10100 KB] Initial heuristic value for lmcut: 7
-[t=0.00299349s, 10100 KB] pruning method: none
-[t=0.00305124s, 10100 KB] New best heuristic value for lmcut: 6
-[t=0.00308961s, 10100 KB] g=1, 2 evaluated, 1 expanded
-[t=0.00316886s, 10100 KB] New best heuristic value for lmcut: 5
-[t=0.00320611s, 10100 KB] g=2, 5 evaluated, 2 expanded
-[t=0.00327517s, 10100 KB] New best heuristic value for lmcut: 4
-[t=0.00331243s, 10100 KB] g=3, 8 evaluated, 3 expanded
-[t=0.00337959s, 10100 KB] New best heuristic value for lmcut: 3
-[t=0.00341629s, 10100 KB] g=4, 11 evaluated, 4 expanded
-[t=0.00347057s, 10100 KB] New best heuristic value for lmcut: 2
-[t=0.00350714s, 10100 KB] g=5, 13 evaluated, 5 expanded
-[t=0.00359851s, 10100 KB] New best heuristic value for lmcut: 1
-[t=0.00366329s, 10100 KB] g=6, 18 evaluated, 6 expanded
-[t=0.00373948s, 10100 KB] New best heuristic value for lmcut: 0
-[t=0.00379014s, 10100 KB] g=7, 20 evaluated, 7 expanded
-[t=0.00384266s, 10100 KB] Solution found!
-[t=0.00390231s, 10100 KB] Actual search time: 0.000916256s
-do_saw_medium_b0_p1_walnut_smooth_s6_s5_s4_  (1)
-do_spray_varnish_p1_spray_varnisher0_natural_smooth_  (1)
-x___method11_cut_and_saw_b0_p1_walnut_smooth__method10_0_m1_1__do_saw_b0_p1_walnut_smooth__method8_0_m1_1__method11_splitted_2_p1_natural____splitting_method_method11_splitted_2_do_colour_p1_natural_spray_varnisher0__method1_0_m1__1_0_m1_@process_p1_natural_smooth_smooth_  (1)
-do_grind_p0_verysmooth_natural_glazed_untreated_  (1)
-x__splitting_method_method12_splitted_3_grindnplane_p0_verysmooth_natural_glazed_verysmooth_natural_untreated__method3_0_m1_@method12_splitted_3_p0_verysmooth_natural_verysmooth_natural_untreated_  (1)
-do_spray_varnish_p0_spray_varnisher0_natural_verysmooth_  (1)
-x______top_method_process_p0_natural_verysmooth_verysmooth__method12_1_0_m1_m2__method12_splitted_6_p0_natural___splitting_method_method12_splitted_6_2_0_1_m1__do_colour_p0_natural_spray_varnisher0__method1_2_0_1_m1____top_method_splitted_1_p1_natural_smooth___splitting_method___top_method_splitted_1_0_m1_1_2_@__top__  (1)
-[t=0.00395429s, 10100 KB] Plan length: 7 step(s).
-[t=0.00395429s, 10100 KB] Plan cost: 7
-[t=0.00395429s, 10100 KB] Expanded 8 state(s).
-[t=0.00395429s, 10100 KB] Reopened 0 state(s).
-[t=0.00395429s, 10100 KB] Evaluated 20 state(s).
-[t=0.00395429s, 10100 KB] Evaluations: 20
-[t=0.00395429s, 10100 KB] Generated 25 state(s).
-[t=0.00395429s, 10100 KB] Dead ends: 0 state(s).
-[t=0.00395429s, 10100 KB] Expanded until last jump: 0 state(s).
-[t=0.00395429s, 10100 KB] Reopened until last jump: 0 state(s).
-[t=0.00395429s, 10100 KB] Evaluated until last jump: 1 state(s).
-[t=0.00395429s, 10100 KB] Generated until last jump: 0 state(s).
-[t=0.00395429s, 10100 KB] Number of registered states: 20
-[t=0.00395429s, 10100 KB] Int hash set load factor: 20/32 = 0.625
-[t=0.00395429s, 10100 KB] Int hash set resizes: 5
-[t=0.00395429s, 10100 KB] Search time: 0.00123058s
-[t=0.00395429s, 10100 KB] Total time: 0.00395429s
-Solution found.
-Peak memory: 10100 KB
-Remove intermediate file output.sas
-search exit code: 0
-
-Cost of SAS plan on RC model: 7
-Cost SAS: 0
 Num primitive tasks: 7
 Num non-primitive tasks: 5
 Total tasks: 12
@@ -237,22 +99,49 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 7
 Search Results
-- Search time 0.174 seconds
+- Search time 0.001 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 1.3e-05 seconds
-- Visited list inserts 2
+- Visited list time 1.6e-05 seconds
+- Visited list inserts 7
 - Visited list pruned 0
-- Visited list contains 2
+- Visited list contains 7
 - Visited list hash collisions 0
-- Visited list used hash buckets 2
-- Generated 7 search nodes
-  Calculated heuristic for 7 nodes
-  One modifications 0
+- Visited list used hash buckets 7
+- Generated 25 search nodes
+  Calculated heuristic for 20 nodes
+  One modifications 5
   Effectless actions 0
-- including 0 one modification actions
+- including 5 one modification actions
 - including 0 one modification methods
 - and       0 progressions of effectless actions
-- Generated 40 nodes per second
-- Final fringe contains 0 nodes
-- Status: Proven unsolvable
+- Generated 20000 nodes per second
+- Final fringe contains 8 nodes
+- Avg. ramification degree with depth 0: 1
+- Avg. ramification degree with depth 1: 4
+- Avg. ramification degree with depth 2: 7
+- Avg. ramification degree with depth 3: 10
+- Avg. ramification degree with depth 4: 13
+- Avg. abstract ramification degree with depth 0: 1
+- Avg. abstract ramification degree with depth 1: 4
+- Avg. abstract ramification degree with depth 2: 6
+- Avg. abstract ramification degree with depth 3: 8
+- Avg. abstract ramification degree with depth 4: 9
+- Avg. primitive ramification degree with depth 0: 0
+- Avg. primitive ramification degree with depth 1: 0
+- Avg. primitive ramification degree with depth 2: 1
+- Avg. primitive ramification degree with depth 3: 2
+- Avg. primitive ramification degree with depth 4: 4
+RAMIFICATION TOTAL 2- Status: Solved
+- Found solution of length 7
+- Total costs of actions: 4
+==>
+6 do_grind[p0,verysmooth,natural,glazed,untreated]
+10 do_spray_varnish[p0,spray_varnisher0,natural,verysmooth]
+20 do_saw_medium[b0,p1,walnut,smooth,s6,s5,s4]
+21 do_spray_varnish[p1,spray_varnisher0,natural,smooth]
+root 0
+19 process[p1,natural,smooth,smooth] -> <<<method11;cut_and_saw[b0,p1,walnut,smooth];method10;0;-1,1>;do_saw[b0,p1,walnut,smooth];method8;0;-1,1>;method11_splitted_2[p1,natural];<_splitting_method_method11_splitted_2;do_colour[p1,natural,spray_varnisher0];method1;0;-1>;1;0,-1> 20 21
+4 method12_splitted_3[p0,verysmooth,natural,verysmooth,natural,untreated] -> <_splitting_method_method12_splitted_3;grindNplane[p0,verysmooth,natural,glazed,verysmooth,natural,untreated];method3;0;-1> 6
+0 __top[] -> <<<<__top_method;process[p0,natural,verysmooth,verysmooth];method12;1;0,-1,-2>;method12_splitted_6[p0,natural];_splitting_method_method12_splitted_6;2;0,1,-1>;do_colour[p0,natural,spray_varnisher0];method1;2;0,1,-1>;__top_method_splitted_1[p1,natural,smooth];_splitting_method___top_method_splitted_1;0;-1,1,2> 19 4 10
+<==

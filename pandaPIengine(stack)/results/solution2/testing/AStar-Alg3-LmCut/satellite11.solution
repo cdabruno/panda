@@ -222,167 +222,6 @@ Var pair:+calibrated[instrument02], +calibrated[instrument11] Mult size: 1
 Var pair:+calibrated[instrument02], +calibrated[instrument12] Mult size: 1
 Var pair:+calibrated[instrument11], +calibrated[instrument12] Mult size: 1
 Number of variables: 19
-INFO     Running translator.
-INFO     translator stdin: None
-INFO     translator time limit: None
-INFO     translator memory limit: None
-INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
-Parsing...
-Parsing: [0.010s CPU, 0.009s wall-clock]
-Normalizing task... [0.000s CPU, 0.001s wall-clock]
-Instantiating...
-Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
-Normalizing Datalog program...
-Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
-Preparing model... [0.000s CPU, 0.002s wall-clock]
-Generated 295 rules.
-Computing model... [0.000s CPU, 0.001s wall-clock]
-251 relevant atoms
-0 auxiliary atoms
-251 final queue length
-345 total queue pushes
-Completing instantiation... [0.010s CPU, 0.002s wall-clock]
-Instantiating: [0.010s CPU, 0.009s wall-clock]
-Computing fact groups...
-Finding invariants...
-77 initial candidates
-Finding invariants: [0.020s CPU, 0.019s wall-clock]
-Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
-Instantiating groups... [0.000s CPU, 0.000s wall-clock]
-Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
-Choosing groups...
-62 uncovered facts
-Choosing groups: [0.000s CPU, 0.000s wall-clock]
-Building translation key... [0.000s CPU, 0.000s wall-clock]
-Computing fact groups: [0.020s CPU, 0.020s wall-clock]
-Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
-Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
-Building mutex information...
-Building mutex information: [0.000s CPU, 0.000s wall-clock]
-Translating task...
-Processing axioms...
-Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
-Translator axioms removed by simplifying: 0
-Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
-Processing axioms: [0.000s CPU, 0.000s wall-clock]
-Translating task: [0.000s CPU, 0.003s wall-clock]
-4 effect conditions simplified
-0 implied preconditions added
-Detecting unreachable propositions...
-0 operators removed
-0 axioms removed
-4 propositions removed
-Detecting unreachable propositions: [0.000s CPU, 0.002s wall-clock]
-Reordering and filtering variables...
-66 of 66 variables necessary.
-4 of 8 mutex groups necessary.
-127 of 127 operators necessary.
-0 of 0 axiom rules necessary.
-Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
-Translator variables: 66
-Translator derived variables: 0
-Translator facts: 139
-Translator goal facts: 1
-Translator mutex groups: 4
-Translator total mutex groups size: 8
-Translator operators: 127
-Translator axioms: 0
-Translator task size: 752
-Translator peak memory: 40520 KB
-Writing output... [0.000s CPU, 0.001s wall-clock]
-Done! [0.040s CPU, 0.046s wall-clock]
-translate exit code: 0
-
-INFO     Running search (release).
-INFO     search stdin: output.sas
-INFO     search time limit: None
-INFO     search memory limit: None
-INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
-[t=2.294e-05s, 9844 KB] reading input...
-[t=0.000723807s, 9844 KB] done reading input!
-[t=0.0016796s, 10232 KB] Initializing landmark cut heuristic...
-[t=0.00174458s, 10232 KB] Building successor generator...done!
-[t=0.00185444s, 10232 KB] peak memory difference for successor generator creation: 0 KB
-[t=0.00187282s, 10232 KB] time for successor generation creation: 4.7658e-05s
-[t=0.00189439s, 10232 KB] Variables: 66
-[t=0.00191327s, 10232 KB] FactPairs: 139
-[t=0.00193083s, 10232 KB] Bytes per state: 12
-[t=0.00199415s, 10232 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[t=0.00208993s, 10232 KB] New best heuristic value for lmcut: 12
-[t=0.00211186s, 10232 KB] g=0, 1 evaluated, 0 expanded
-[t=0.00213073s, 10232 KB] f = 12, 1 evaluated, 0 expanded
-[t=0.00215103s, 10232 KB] Initial heuristic value for lmcut: 12
-[t=0.00217832s, 10232 KB] pruning method: none
-[t=0.00267803s, 10232 KB] f = 13, 12 evaluated, 1 expanded
-[t=0.00288083s, 10232 KB] New best heuristic value for lmcut: 11
-[t=0.00292066s, 10232 KB] g=2, 16 evaluated, 2 expanded
-[t=0.0076526s, 10232 KB] f = 14, 142 evaluated, 18 expanded
-[t=0.00781635s, 10232 KB] New best heuristic value for lmcut: 10
-[t=0.00785201s, 10232 KB] g=4, 145 evaluated, 19 expanded
-[t=0.00826314s, 10232 KB] New best heuristic value for lmcut: 9
-[t=0.00830085s, 10232 KB] g=5, 155 evaluated, 20 expanded
-[t=0.00859793s, 10232 KB] New best heuristic value for lmcut: 8
-[t=0.0086331s, 10232 KB] g=6, 163 evaluated, 21 expanded
-[t=0.00905442s, 10232 KB] New best heuristic value for lmcut: 7
-[t=0.00908185s, 10232 KB] g=7, 177 evaluated, 22 expanded
-[t=0.00941962s, 10232 KB] New best heuristic value for lmcut: 6
-[t=0.00944388s, 10232 KB] g=8, 191 evaluated, 23 expanded
-[t=0.0362634s, 10232 KB] f = 15, 1062 evaluated, 153 expanded
-[t=0.190032s, 10504 KB] f = 16, 6801 evaluated, 1012 expanded
-[t=0.192387s, 10504 KB] New best heuristic value for lmcut: 5
-[t=0.192445s, 10504 KB] g=11, 6894 evaluated, 1024 expanded
-[t=0.19266s, 10504 KB] New best heuristic value for lmcut: 4
-[t=0.192683s, 10504 KB] g=12, 6907 evaluated, 1025 expanded
-[t=0.192781s, 10504 KB] New best heuristic value for lmcut: 3
-[t=0.192802s, 10504 KB] g=13, 6913 evaluated, 1026 expanded
-[t=0.193019s, 10504 KB] New best heuristic value for lmcut: 2
-[t=0.19304s, 10504 KB] g=14, 6932 evaluated, 1027 expanded
-[t=0.193151s, 10504 KB] New best heuristic value for lmcut: 1
-[t=0.193171s, 10504 KB] g=15, 6944 evaluated, 1028 expanded
-[t=0.193261s, 10504 KB] New best heuristic value for lmcut: 0
-[t=0.193281s, 10504 KB] g=16, 6956 evaluated, 1029 expanded
-[t=0.1933s, 10504 KB] Solution found!
-[t=0.193319s, 10504 KB] Actual search time: 0.191126s
-switch_on_instrument11_satellite1_  (1)
-turn_to_satellite1_groundstation1_phenomenon7_  (1)
-calibrate_satellite1_instrument11_groundstation1_  (1)
-switch_on_instrument02_satellite0_  (1)
-turn_to_satellite1_phenomenon4_groundstation1_  (1)
-take_image_satellite1_phenomenon4_instrument11_thermograph_  (1)
-turn_to_satellite0_groundstation0_phenomenon6_  (1)
-x_method1_method1_splitted_1_satellite1_phenomenon4_thermograph___splitting_method_method1_splitted_1_1_0_m1_@do_observation_phenomenon4_thermograph_  (1)
-calibrate_satellite0_instrument02_groundstation0_  (1)
-turn_to_satellite0_phenomenon6_groundstation0_  (1)
-take_image_satellite0_phenomenon6_instrument02_x_ray_  (1)
-turn_to_satellite0_star5_phenomenon6_  (1)
-take_image_satellite0_star5_instrument02_x_ray_  (1)
-x_method1_method1_splitted_1_satellite0_star5_x_ray___splitting_method_method1_splitted_1_1_0_m1_@do_observation_star5_x_ray_  (1)
-x_method1_method1_splitted_1_satellite0_phenomenon6_x_ray___splitting_method_method1_splitted_1_1_0_m1_@do_observation_phenomenon6_x_ray_  (1)
-x__top_method@__top__  (1)
-[t=0.193338s, 10504 KB] Plan length: 16 step(s).
-[t=0.193338s, 10504 KB] Plan cost: 16
-[t=0.193338s, 10504 KB] Expanded 1030 state(s).
-[t=0.193338s, 10504 KB] Reopened 0 state(s).
-[t=0.193338s, 10504 KB] Evaluated 6956 state(s).
-[t=0.193338s, 10504 KB] Evaluations: 6956
-[t=0.193338s, 10504 KB] Generated 11421 state(s).
-[t=0.193338s, 10504 KB] Dead ends: 0 state(s).
-[t=0.193338s, 10504 KB] Expanded until last jump: 1012 state(s).
-[t=0.193338s, 10504 KB] Reopened until last jump: 0 state(s).
-[t=0.193338s, 10504 KB] Evaluated until last jump: 6801 state(s).
-[t=0.193338s, 10504 KB] Generated until last jump: 11146 state(s).
-[t=0.193338s, 10504 KB] Number of registered states: 6956
-[t=0.193338s, 10504 KB] Int hash set load factor: 6956/8192 = 0.849121
-[t=0.193338s, 10504 KB] Int hash set resizes: 13
-[t=0.193338s, 10504 KB] Search time: 0.191344s
-[t=0.193338s, 10504 KB] Total time: 0.193338s
-Solution found.
-Peak memory: 10504 KB
-Remove intermediate file output.sas
-search exit code: 0
-
-Cost of SAS plan on RC model: 16
-Cost SAS: 0
 Num primitive tasks: 46
 Num non-primitive tasks: 12
 Total tasks: 58
@@ -394,23 +233,97 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 11
+   1s visitime    0.02s generated nodes     60156 nodes/sec   51903 cur h    9 mod.depth   10 inserts      4809 dups      1914 size      2895 hash fail   1915 hash buckets   2894
 Search Results
-- Search time 0.423 seconds
+- Search time 2.12 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 0.003207 seconds
-- Visited list inserts 1167
-- Visited list pruned 687
-- Visited list contains 480
-- Visited list hash collisions 687
-- Visited list used hash buckets 480
-- Generated 6838 search nodes
-  Calculated heuristic for 6838 nodes
-  One modifications 0
-  Effectless actions 0
-- including 0 one modification actions
+- Visited list time 0.05 seconds
+- Visited list inserts 10734
+- Visited list pruned 5307
+- Visited list contains 5427
+- Visited list hash collisions 5308
+- Visited list used hash buckets 5426
+- Generated 94530 search nodes
+  Calculated heuristic for 79558 nodes
+  One modifications 13307
+  Effectless actions 1665
+- including 13307 one modification actions
 - including 0 one modification methods
-- and       0 progressions of effectless actions
-- Generated 16165 nodes per second
-- Final fringe contains 0 nodes
-- Status: Proven unsolvable
+- and       1665 progressions of effectless actions
+- Generated 37527 nodes per second
+- Final fringe contains 17329 nodes
+- Avg. ramification degree with depth 0: 1.00
+- Avg. ramification degree with depth 1: 38.00
+- Avg. ramification degree with depth 2: 980.86
+- Avg. ramification degree with depth 3: 6934.55
+- Avg. ramification degree with depth 4: 11253.95
+- Avg. ramification degree with depth 5: 15474.66
+- Avg. ramification degree with depth 6: 15450.95
+- Avg. ramification degree with depth 7: 19731.97
+- Avg. ramification degree with depth 8: 20169.16
+- Avg. ramification degree with depth 9: 20349.77
+- Avg. ramification degree with depth 10: 21450.73
+- Avg. ramification degree with depth 11: 22983.45
+- Avg. ramification degree with depth 12: 22843.16
+- Avg. ramification degree with depth 13: 26150.43
+- Avg. ramification degree with depth 14: 27602.00
+- Avg. ramification degree with depth 15: 27779.00
+- Avg. abstract ramification degree with depth 0: 1.00
+- Avg. abstract ramification degree with depth 1: 38.00
+- Avg. abstract ramification degree with depth 2: 936.89
+- Avg. abstract ramification degree with depth 3: 6466.52
+- Avg. abstract ramification degree with depth 4: 10447.43
+- Avg. abstract ramification degree with depth 5: 14281.34
+- Avg. abstract ramification degree with depth 6: 14260.14
+- Avg. abstract ramification degree with depth 7: 18113.60
+- Avg. abstract ramification degree with depth 8: 18501.64
+- Avg. abstract ramification degree with depth 9: 18676.88
+- Avg. abstract ramification degree with depth 10: 19663.47
+- Avg. abstract ramification degree with depth 11: 21040.02
+- Avg. abstract ramification degree with depth 12: 20918.08
+- Avg. abstract ramification degree with depth 13: 23804.29
+- Avg. abstract ramification degree with depth 14: 25071.50
+- Avg. abstract ramification degree with depth 15: 25213.00
+- Avg. primitive ramification degree with depth 0: 0.00
+- Avg. primitive ramification degree with depth 1: 0.00
+- Avg. primitive ramification degree with depth 2: 43.97
+- Avg. primitive ramification degree with depth 3: 468.03
+- Avg. primitive ramification degree with depth 4: 806.53
+- Avg. primitive ramification degree with depth 5: 1193.32
+- Avg. primitive ramification degree with depth 6: 1190.81
+- Avg. primitive ramification degree with depth 7: 1618.37
+- Avg. primitive ramification degree with depth 8: 1667.51
+- Avg. primitive ramification degree with depth 9: 1672.88
+- Avg. primitive ramification degree with depth 10: 1787.27
+- Avg. primitive ramification degree with depth 11: 1943.43
+- Avg. primitive ramification degree with depth 12: 1925.08
+- Avg. primitive ramification degree with depth 13: 2346.14
+- Avg. primitive ramification degree with depth 14: 2530.50
+- Avg. primitive ramification degree with depth 15: 2566.00
+RAMIFICATION TOTAL 5.17- Status: Solved
+- Found solution of length 20
+- Total costs of actions: 12
+==>
+5454 switch_on[instrument11,satellite1]
+5568 turn_to[satellite1,GroundStation1,Phenomenon7]
+5605 calibrate[satellite1,instrument11,GroundStation1]
+25838 turn_to[satellite1,Phenomenon4,GroundStation1]
+25839 take_image[satellite1,Phenomenon4,instrument11,thermograph]
+61467 switch_on[instrument02,satellite0]
+79555 turn_to[satellite0,GroundStation0,Phenomenon6]
+94501 calibrate[satellite0,instrument02,GroundStation0]
+94502 turn_to[satellite0,Star5,GroundStation0]
+94503 take_image[satellite0,Star5,instrument02,x_ray]
+94504 turn_to[satellite0,Phenomenon6,Star5]
+94505 take_image[satellite0,Phenomenon6,instrument02,x_ray]
+root 0
+94500 do_observation[Phenomenon6,x_ray] -> <method1;method1_splitted_1[satellite0,Phenomenon6,x_ray];_splitting_method_method1_splitted_1;1;0,-1> 94504 94505
+61522 auto_calibrate[satellite0,instrument02] -> method6 79555 94501
+61466 activate_instrument[satellite0,instrument02] -> method5 61467 61522
+25887 do_observation[Star5,x_ray] -> method0 61466 94502 94503
+5529 auto_calibrate[satellite1,instrument11] -> method6 5568 5605
+5453 activate_instrument[satellite1,instrument11] -> method5 5454 5529
+10 do_observation[Phenomenon4,thermograph] -> method0 5453 25838 25839
+0 __top[] -> __top_method 10 25887 94500
+<==

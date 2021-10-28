@@ -18,7 +18,7 @@ Calculate SCCs...
 - Number of cyclic SCCs of size 1: 0
 Selected Planning Algorithm: progression searchParsing heuristics ...
 Number of specified heuristics: 1
-- Calculating minimal implied costs and distances (1 ms)
+- Calculating minimal implied costs and distances (0 ms)
 Heuristic #0 = hhRC2(lmc;distance;correct count)
 Search config:
  - type: path cost
@@ -8549,149 +8549,6 @@ Var pair:+audio_connected[speaker-wire-2,box-1], +audio_connected[speaker-wire-1
 Var pair:+audio_connected[speaker-wire-2,box-1], +audio_connected[speaker-wire-2,box-2] Mult size: 1
 Var pair:+audio_connected[speaker-wire-1,box-2], +audio_connected[speaker-wire-2,box-2] Mult size: 1
 Number of variables: 130
-INFO     Running translator.
-INFO     translator stdin: None
-INFO     translator time limit: None
-INFO     translator memory limit: None
-INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
-Parsing...
-Parsing: [0.040s CPU, 0.035s wall-clock]
-Normalizing task... [0.000s CPU, 0.004s wall-clock]
-Instantiating...
-Generating Datalog program... [0.000s CPU, 0.004s wall-clock]
-Normalizing Datalog program...
-Normalizing Datalog program: [0.010s CPU, 0.009s wall-clock]
-Preparing model... [0.010s CPU, 0.008s wall-clock]
-Generated 1419 rules.
-Computing model... [0.010s CPU, 0.006s wall-clock]
-1361 relevant atoms
-0 auxiliary atoms
-1361 final queue length
-1721 total queue pushes
-Completing instantiation... [0.000s CPU, 0.007s wall-clock]
-Instantiating: [0.040s CPU, 0.035s wall-clock]
-Computing fact groups...
-Finding invariants...
-504 initial candidates
-Finding invariants: [0.060s CPU, 0.065s wall-clock]
-Checking invariant weight... [0.000s CPU, 0.003s wall-clock]
-Instantiating groups... [0.000s CPU, 0.001s wall-clock]
-Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
-Choosing groups...
-392 uncovered facts
-Choosing groups: [0.000s CPU, 0.001s wall-clock]
-Building translation key... [0.000s CPU, 0.001s wall-clock]
-Computing fact groups: [0.070s CPU, 0.077s wall-clock]
-Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
-Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
-Building mutex information...
-Building mutex information: [0.000s CPU, 0.001s wall-clock]
-Translating task...
-Processing axioms...
-Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
-Translator axioms removed by simplifying: 0
-Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
-Processing axioms: [0.010s CPU, 0.001s wall-clock]
-Translating task: [0.020s CPU, 0.014s wall-clock]
-0 effect conditions simplified
-0 implied preconditions added
-Detecting unreachable propositions...
-0 operators removed
-0 axioms removed
-2 propositions removed
-Detecting unreachable propositions: [0.010s CPU, 0.009s wall-clock]
-Reordering and filtering variables...
-446 of 448 variables necessary.
-411 of 469 mutex groups necessary.
-610 of 610 operators necessary.
-0 of 0 axiom rules necessary.
-Reordering and filtering variables: [0.010s CPU, 0.006s wall-clock]
-Translator variables: 446
-Translator derived variables: 0
-Translator facts: 946
-Translator goal facts: 1
-Translator mutex groups: 411
-Translator total mutex groups size: 822
-Translator operators: 610
-Translator axioms: 0
-Translator task size: 4694
-Translator peak memory: 44744 KB
-Writing output... [0.000s CPU, 0.005s wall-clock]
-Done! [0.190s CPU, 0.189s wall-clock]
-translate exit code: 0
-
-INFO     Running search (release).
-INFO     search stdin: output.sas
-INFO     search time limit: None
-INFO     search memory limit: None
-INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
-[t=2.7972e-05s, 9844 KB] reading input...
-[t=0.00454409s, 10232 KB] done reading input!
-[t=0.00573745s, 10764 KB] Initializing landmark cut heuristic...
-[t=0.00582043s, 10896 KB] Building successor generator...done!
-[t=0.00612718s, 10896 KB] peak memory difference for successor generator creation: 0 KB
-[t=0.00615577s, 10896 KB] time for successor generation creation: 0.000225751s
-[t=0.00619408s, 10896 KB] Variables: 446
-[t=0.00621984s, 10896 KB] FactPairs: 946
-[t=0.00624709s, 10896 KB] Bytes per state: 64
-[t=0.00634855s, 10896 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[t=0.00678543s, 10896 KB] New best heuristic value for lmcut: 23
-[t=0.00681569s, 10896 KB] g=0, 1 evaluated, 0 expanded
-[t=0.00684104s, 10896 KB] f = 23, 1 evaluated, 0 expanded
-[t=0.00686896s, 10896 KB] Initial heuristic value for lmcut: 23
-[t=0.00689237s, 10896 KB] pruning method: none
-[t=0.0145728s, 10896 KB] New best heuristic value for lmcut: 22
-[t=0.0146159s, 10896 KB] g=1, 26 evaluated, 1 expanded
-[t=0.0601619s, 10896 KB] New best heuristic value for lmcut: 21
-[t=0.0602223s, 10896 KB] g=2, 206 evaluated, 2 expanded
-[t=0.100423s, 10896 KB] New best heuristic value for lmcut: 20
-[t=0.100479s, 10896 KB] g=3, 374 evaluated, 3 expanded
-[t=0.138672s, 10896 KB] New best heuristic value for lmcut: 19
-[t=0.138741s, 10896 KB] g=4, 539 evaluated, 4 expanded
-[t=0.176463s, 11024 KB] New best heuristic value for lmcut: 18
-[t=0.176545s, 11024 KB] g=5, 714 evaluated, 5 expanded
-[t=0.205217s, 11024 KB] New best heuristic value for lmcut: 17
-[t=0.205274s, 11024 KB] g=6, 863 evaluated, 6 expanded
-[t=0.23169s, 11024 KB] New best heuristic value for lmcut: 16
-[t=0.231739s, 11024 KB] g=7, 1022 evaluated, 7 expanded
-[t=0.252894s, 11024 KB] New best heuristic value for lmcut: 15
-[t=0.252958s, 11024 KB] g=8, 1155 evaluated, 8 expanded
-[t=0.272889s, 11024 KB] New best heuristic value for lmcut: 14
-[t=0.272974s, 11024 KB] g=9, 1286 evaluated, 9 expanded
-[t=0.299469s, 11024 KB] New best heuristic value for lmcut: 13
-[t=0.299521s, 11024 KB] g=10, 1477 evaluated, 10 expanded
-[t=0.316306s, 11024 KB] New best heuristic value for lmcut: 12
-[t=0.316362s, 11024 KB] g=11, 1607 evaluated, 11 expanded
-[t=0.332184s, 11024 KB] New best heuristic value for lmcut: 11
-[t=0.332263s, 11024 KB] g=12, 1737 evaluated, 12 expanded
-[t=0.347229s, 11024 KB] New best heuristic value for lmcut: 10
-[t=0.34731s, 11024 KB] g=13, 1867 evaluated, 13 expanded
-[t=0.362677s, 11152 KB] New best heuristic value for lmcut: 9
-[t=0.362765s, 11152 KB] g=14, 1996 evaluated, 14 expanded
-[t=20.0499s, 23700 KB] Time limit reached. Abort search.
-[t=20.05s, 23700 KB] Actual search time: 20.0431s
-[t=20.05s, 23700 KB] Expanded 886 state(s).
-[t=20.05s, 23700 KB] Reopened 0 state(s).
-[t=20.05s, 23700 KB] Evaluated 116313 state(s).
-[t=20.05s, 23700 KB] Evaluations: 116313
-[t=20.05s, 23700 KB] Generated 122070 state(s).
-[t=20.05s, 23700 KB] Dead ends: 0 state(s).
-[t=20.05s, 23700 KB] Expanded until last jump: 0 state(s).
-[t=20.05s, 23700 KB] Reopened until last jump: 0 state(s).
-[t=20.05s, 23700 KB] Evaluated until last jump: 1 state(s).
-[t=20.05s, 23700 KB] Generated until last jump: 0 state(s).
-[t=20.05s, 23700 KB] Number of registered states: 116313
-[t=20.05s, 23700 KB] Int hash set load factor: 116313/262144 = 0.443699
-[t=20.05s, 23700 KB] Int hash set resizes: 18
-[t=20.05s, 23700 KB] Search time: 20.0437s
-[t=20.05s, 23700 KB] Total time: 20.05s
-Search stopped without finding a solution.
-Peak memory: 23700 KB
-Remove intermediate file output.sas
-search exit code: 12
-
-Driver aborting after search
-Cost SAS: 0
 Num primitive tasks: 246
 Num non-primitive tasks: 128
 Total tasks: 374
@@ -8703,25 +8560,109 @@ Search Configuration
 - A* Search
 - Distance G is "modification depth"
 - Starting state heuristic value: 20
-  21s visitime    0.01s generated nodes      5004 nodes/sec     231 cur h   10 mod.depth   15 inserts      1831 dups       444 size      1387 hash fail    444 hash buckets   1387
-Reached time limit - stopping search.
+   1s visitime    0.02s generated nodes     10008 nodes/sec    5644 cur h    6 mod.depth   20 inserts      4329 dups      1534 size      2795 hash fail   1534 hash buckets   2795
 Search Results
-- Search time 21.58 seconds
+- Search time 1.88 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 0.01 seconds
-- Visited list inserts 1831
-- Visited list pruned 444
-- Visited list contains 1387
-- Visited list hash collisions 444
-- Visited list used hash buckets 1387
-- Generated 5004 search nodes
-  Calculated heuristic for 3690 nodes
-  One modifications 1314
+- Visited list time 0.02 seconds
+- Visited list inserts 4509
+- Visited list pruned 1552
+- Visited list contains 2957
+- Visited list hash collisions 1552
+- Visited list used hash buckets 2957
+- Generated 10633 search nodes
+  Calculated heuristic for 7605 nodes
+  One modifications 3028
   Effectless actions 0
-- including 1314 one modification actions
+- including 3028 one modification actions
 - including 0 one modification methods
 - and       0 progressions of effectless actions
-- Generated 170 nodes per second
-- Final fringe contains 979 nodes
-- Status: Timeout
+- Generated 4051 nodes per second
+- Final fringe contains 1452 nodes
+- Avg. ramification degree with depth 0: 1.00
+- Avg. ramification degree with depth 1: 9.00
+- Avg. ramification degree with depth 2: 49.00
+- Avg. ramification degree with depth 3: 562.30
+- Avg. ramification degree with depth 4: 1388.29
+- Avg. ramification degree with depth 5: 186.89
+- Avg. ramification degree with depth 6: 576.27
+- Avg. ramification degree with depth 7: 880.72
+- Avg. ramification degree with depth 8: 1223.19
+- Avg. ramification degree with depth 9: 1907.80
+- Avg. ramification degree with depth 10: 2699.60
+- Avg. ramification degree with depth 11: 3791.15
+- Avg. ramification degree with depth 12: 4045.52
+- Avg. ramification degree with depth 13: 5365.66
+- Avg. ramification degree with depth 14: 5587.03
+- Avg. ramification degree with depth 15: 5638.64
+- Avg. ramification degree with depth 16: 5797.20
+- Avg. ramification degree with depth 17: 5934.00
+- Avg. abstract ramification degree with depth 0: 1.00
+- Avg. abstract ramification degree with depth 1: 9.00
+- Avg. abstract ramification degree with depth 2: 49.00
+- Avg. abstract ramification degree with depth 3: 562.30
+- Avg. abstract ramification degree with depth 4: 1388.29
+- Avg. abstract ramification degree with depth 5: 186.89
+- Avg. abstract ramification degree with depth 6: 576.27
+- Avg. abstract ramification degree with depth 7: 880.72
+- Avg. abstract ramification degree with depth 8: 1223.19
+- Avg. abstract ramification degree with depth 9: 1907.80
+- Avg. abstract ramification degree with depth 10: 2699.60
+- Avg. abstract ramification degree with depth 11: 3791.15
+- Avg. abstract ramification degree with depth 12: 4045.52
+- Avg. abstract ramification degree with depth 13: 5365.66
+- Avg. abstract ramification degree with depth 14: 5587.03
+- Avg. abstract ramification degree with depth 15: 5638.64
+- Avg. abstract ramification degree with depth 16: 5797.20
+- Avg. abstract ramification degree with depth 17: 5934.00
+- Avg. primitive ramification degree with depth 0: 0.00
+- Avg. primitive ramification degree with depth 1: 0.00
+- Avg. primitive ramification degree with depth 2: 0.00
+- Avg. primitive ramification degree with depth 3: 0.00
+- Avg. primitive ramification degree with depth 4: 0.00
+- Avg. primitive ramification degree with depth 5: 0.00
+- Avg. primitive ramification degree with depth 6: 0.00
+- Avg. primitive ramification degree with depth 7: 0.00
+- Avg. primitive ramification degree with depth 8: 0.00
+- Avg. primitive ramification degree with depth 9: 0.00
+- Avg. primitive ramification degree with depth 10: 0.00
+- Avg. primitive ramification degree with depth 11: 0.00
+- Avg. primitive ramification degree with depth 12: 0.00
+- Avg. primitive ramification degree with depth 13: 0.00
+- Avg. primitive ramification degree with depth 14: 0.00
+- Avg. primitive ramification degree with depth 15: 0.00
+- Avg. primitive ramification degree with depth 16: 0.00
+- Avg. primitive ramification degree with depth 17: 0.00
+RAMIFICATION TOTAL 2.02- Status: Solved
+- Found solution of length 26
+- Total costs of actions: 8
+==>
+48 plug|instance_4[blu-ray-1,blu-ray-1-cinch-2,cinch-cable-3,cinch-cable-3-cinch-1]
+188 plug|instance_7[cinch-cable-3,cinch-cable-3-cinch-2,amplifier-1,amplifier-1-cinch-2]
+518 plug|instance_7[amplifier-1,amplifier-1-speakerWire-8,speaker-wire-1,speaker-wire-1-speakerWire-1]
+1644 plug|instance_4[speaker-wire-1,speaker-wire-1-speakerWire-2,box-1,box-1-speakerWire-1]
+8376 plug|instance_7[amplifier-1,amplifier-1-speakerWire-12,speaker-wire-2,speaker-wire-2-speakerWire-1]
+10355 plug|instance_4[speaker-wire-2,speaker-wire-2-speakerWire-2,box-2,box-2-speakerWire-1]
+10622 plug|instance_1[blu-ray-1,blu-ray-1-hdmi-1,hdmi-cable-1,hdmi-cable-1-hdmi-1]
+10631 plug|instance_1[hdmi-cable-1,hdmi-cable-1-hdmi-2,tv-1,tv-1-hdmi-1]
+root 0
+10630 direct_v_connect[hdmi-cable-1,tv-1] -> <m-dconnect-v;plug[hdmi-cable-1,hdmi-cable-1-hdmi-2,tv-1,tv-1-hdmi-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 10631
+10621 direct_v_connect[blu-ray-1,hdmi-cable-1] -> <m-dconnect-v;plug[blu-ray-1,blu-ray-1-hdmi-1,hdmi-cable-1,hdmi-cable-1-hdmi-1];_method_for_multiple_expansions_of_plug|instance_1;0;-1> 10622
+10618 v_connect[blu-ray-1,hdmi-cable-1] -> m-connect-direct-v 10621
+10605 v_connect[blu-ray-1,tv-1] -> m-connect-rec-v 10618 10630
+10354 plug[speaker-wire-2,speaker-wire-2-speakerWire-2,box-2,box-2-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_4 10355
+8378 direct_a_connect[speaker-wire-2,box-2] -> m-dconnect-a 10354
+8375 plug[amplifier-1,amplifier-1-speakerWire-12,speaker-wire-2,speaker-wire-2-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 8376
+4488 direct_a_connect[amplifier-1,speaker-wire-2] -> m-dconnect-a 8375
+3025 a_connect[amplifier-1,box-2] -> <m-connect-rec-a;a_connect[amplifier-1,speaker-wire-2];m-connect-direct-a;0;-1,1> 4488 8378
+1643 plug[speaker-wire-1,speaker-wire-1-speakerWire-2,box-1,box-1-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_4 1644
+802 direct_a_connect[speaker-wire-1,box-1] -> m-dconnect-a 1643
+517 plug[amplifier-1,amplifier-1-speakerWire-8,speaker-wire-1,speaker-wire-1-speakerWire-1] -> _method_for_multiple_expansions_of_plug|instance_7 518
+198 direct_a_connect[amplifier-1,speaker-wire-1] -> m-dconnect-a 517
+192 a_connect[amplifier-1,box-1] -> <m-connect-rec-a;a_connect[amplifier-1,speaker-wire-1];m-connect-direct-a;0;-1,1> 198 802
+187 direct_a_connect[cinch-cable-3,amplifier-1] -> <m-dconnect-a;plug[cinch-cable-3,cinch-cable-3-cinch-2,amplifier-1,amplifier-1-cinch-2];_method_for_multiple_expansions_of_plug|instance_7;0;-1> 188
+47 direct_a_connect[blu-ray-1,cinch-cable-3] -> <m-dconnect-a;plug[blu-ray-1,blu-ray-1-cinch-2,cinch-cable-3,cinch-cable-3-cinch-1];_method_for_multiple_expansions_of_plug|instance_4;0;-1> 48
+2 a_connect[blu-ray-1,amplifier-1] -> <m-connect-rec-a;a_connect[blu-ray-1,cinch-cable-3];m-connect-direct-a;0;-1,1> 47 187
+0 __top[] -> __top_method 2 192 3025 10605
+<==

@@ -87,150 +87,6 @@ Var pair:+entered_EMail[headOfDepartment], +hasReceived[headOfDepartment,email1]
 Var pair:+entered_EMail[headOfDepartment], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
 Var pair:+hasReceived[headOfDepartment,email1], +hasInformation_Regular[headOfDepartment,dateForMeeting] Mult size: 1
 Number of variables: 10
-INFO     Running translator.
-INFO     translator stdin: None
-INFO     translator time limit: None
-INFO     translator memory limit: None
-INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
-Parsing...
-Parsing: [0.000s CPU, 0.002s wall-clock]
-Normalizing task... [0.000s CPU, 0.000s wall-clock]
-Instantiating...
-Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
-Normalizing Datalog program...
-Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
-Preparing model... [0.000s CPU, 0.000s wall-clock]
-Generated 33 rules.
-Computing model... [0.000s CPU, 0.000s wall-clock]
-40 relevant atoms
-0 auxiliary atoms
-40 final queue length
-45 total queue pushes
-Completing instantiation... [0.000s CPU, 0.000s wall-clock]
-Instantiating: [0.000s CPU, 0.002s wall-clock]
-Computing fact groups...
-Finding invariants...
-20 initial candidates
-Finding invariants: [0.010s CPU, 0.005s wall-clock]
-Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
-Instantiating groups... [0.000s CPU, 0.000s wall-clock]
-Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
-Choosing groups...
-18 uncovered facts
-Choosing groups: [0.000s CPU, 0.000s wall-clock]
-Building translation key... [0.000s CPU, 0.000s wall-clock]
-Computing fact groups: [0.010s CPU, 0.006s wall-clock]
-Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
-Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
-Building mutex information...
-Building mutex information: [0.000s CPU, 0.000s wall-clock]
-Translating task...
-Processing axioms...
-Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
-Translator axioms removed by simplifying: 0
-Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
-Processing axioms: [0.000s CPU, 0.000s wall-clock]
-Translating task: [0.000s CPU, 0.000s wall-clock]
-7 effect conditions simplified
-0 implied preconditions added
-Detecting unreachable propositions...
-0 operators removed
-0 axioms removed
-1 propositions removed
-Detecting unreachable propositions: [0.000s CPU, 0.000s wall-clock]
-Reordering and filtering variables...
-19 of 19 variables necessary.
-1 of 2 mutex groups necessary.
-11 of 11 operators necessary.
-0 of 0 axiom rules necessary.
-Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
-Translator variables: 19
-Translator derived variables: 0
-Translator facts: 38
-Translator goal facts: 2
-Translator mutex groups: 1
-Translator total mutex groups size: 2
-Translator operators: 11
-Translator axioms: 0
-Translator task size: 125
-Translator peak memory: 39752 KB
-Writing output... [0.000s CPU, 0.000s wall-clock]
-Done! [0.010s CPU, 0.012s wall-clock]
-translate exit code: 0
-
-INFO     Running search (release).
-INFO     search stdin: output.sas
-INFO     search time limit: None
-INFO     search memory limit: None
-INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
-[t=2.3975e-05s, 9844 KB] reading input...
-[t=0.000220502s, 9844 KB] done reading input!
-[t=0.00109284s, 10100 KB] Initializing landmark cut heuristic...
-[t=0.00114604s, 10100 KB] Building successor generator...done!
-[t=0.0012144s, 10100 KB] peak memory difference for successor generator creation: 0 KB
-[t=0.0012311s, 10100 KB] time for successor generation creation: 1.0966e-05s
-[t=0.0012499s, 10100 KB] Variables: 19
-[t=0.00126764s, 10100 KB] FactPairs: 38
-[t=0.00128402s, 10100 KB] Bytes per state: 4
-[t=0.00134187s, 10100 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[t=0.00139958s, 10100 KB] New best heuristic value for lmcut: 9
-[t=0.00141985s, 10100 KB] g=0, 1 evaluated, 0 expanded
-[t=0.00143752s, 10100 KB] f = 9, 1 evaluated, 0 expanded
-[t=0.00145685s, 10100 KB] Initial heuristic value for lmcut: 9
-[t=0.00147449s, 10100 KB] pruning method: none
-[t=0.00151379s, 10100 KB] New best heuristic value for lmcut: 8
-[t=0.00153214s, 10100 KB] g=1, 3 evaluated, 1 expanded
-[t=0.00157517s, 10100 KB] New best heuristic value for lmcut: 7
-[t=0.00159335s, 10100 KB] g=2, 6 evaluated, 2 expanded
-[t=0.00164475s, 10100 KB] New best heuristic value for lmcut: 6
-[t=0.00166322s, 10100 KB] g=3, 11 evaluated, 3 expanded
-[t=0.00170774s, 10100 KB] New best heuristic value for lmcut: 5
-[t=0.00172599s, 10100 KB] g=4, 15 evaluated, 4 expanded
-[t=0.00177028s, 10100 KB] New best heuristic value for lmcut: 4
-[t=0.00178891s, 10100 KB] g=5, 19 evaluated, 5 expanded
-[t=0.00193596s, 10100 KB] New best heuristic value for lmcut: 3
-[t=0.00195607s, 10100 KB] g=6, 41 evaluated, 14 expanded
-[t=0.0019885s, 10100 KB] New best heuristic value for lmcut: 2
-[t=0.00200725s, 10100 KB] g=7, 44 evaluated, 15 expanded
-[t=0.00203595s, 10100 KB] New best heuristic value for lmcut: 1
-[t=0.00205392s, 10100 KB] g=8, 47 evaluated, 16 expanded
-[t=0.0020781s, 10100 KB] New best heuristic value for lmcut: 0
-[t=0.00209609s, 10100 KB] g=9, 49 evaluated, 17 expanded
-[t=0.00211466s, 10100 KB] Solution found!
-[t=0.00213375s, 10100 KB] Actual search time: 0.000656185s
-press_home_email__  (1)
-select_email_emailaccount_noop_account1_  (1)
-press_email_newemail_account1_  (1)
-attachregularinformationtoemail_email1_dateformeeting_  (1)
-enter_emailaddress_headofdepartment_headofdepartmentemailaddress_  (1)
-press_email_newemail_send_headofdepartment_email1_  (1)
-extractsinformation_regular_headofdepartment_email1_dateformeeting_  (1)
-do_entermode_email_fromhome@entermode_email__  (1)
-x______top_method_extractsinformation_headofdepartment_email1_dateformeeting__do_extractsinformation_regular_2_0_1_m1__send_email_headofdepartment_email1__do_send_email_viaemail_1_0_m1_m2_m3_m4_m5_2__select_email_emailaccount_account1__do_select_email_emailaccount_noop_2_0_1_m1_3_4_5_6__attachinformationtoemail_email1_dateformeeting__do_attachinformationtoemail_regular_0_m1_1_2_3_4_5_6_@__top__  (1)
-[t=0.00215226s, 10100 KB] Plan length: 9 step(s).
-[t=0.00215226s, 10100 KB] Plan cost: 9
-[t=0.00215226s, 10100 KB] Expanded 18 state(s).
-[t=0.00215226s, 10100 KB] Reopened 0 state(s).
-[t=0.00215226s, 10100 KB] Evaluated 49 state(s).
-[t=0.00215226s, 10100 KB] Evaluations: 49
-[t=0.00215226s, 10100 KB] Generated 72 state(s).
-[t=0.00215226s, 10100 KB] Dead ends: 2 state(s).
-[t=0.00215226s, 10100 KB] Expanded until last jump: 0 state(s).
-[t=0.00215226s, 10100 KB] Reopened until last jump: 0 state(s).
-[t=0.00215226s, 10100 KB] Evaluated until last jump: 1 state(s).
-[t=0.00215226s, 10100 KB] Generated until last jump: 0 state(s).
-[t=0.00215226s, 10100 KB] Number of registered states: 49
-[t=0.00215226s, 10100 KB] Int hash set load factor: 49/64 = 0.765625
-[t=0.00215226s, 10100 KB] Int hash set resizes: 6
-[t=0.00215226s, 10100 KB] Search time: 0.000810871s
-[t=0.00215226s, 10100 KB] Total time: 0.00215226s
-Solution found.
-Peak memory: 10100 KB
-Remove intermediate file output.sas
-search exit code: 0
-
-Cost of SAS plan on RC model: 9
-Cost SAS: 0
 Num primitive tasks: 8
 Num non-primitive tasks: 2
 Total tasks: 10
@@ -243,22 +99,45 @@ Search Configuration
 - Distance G is "modification depth"
 - Starting state heuristic value: 9
 Search Results
-- Search time 0.097 seconds
+- Search time 0.001 seconds
 - Depth reached: 0.
 - Depth reached expanding abstract methods: 0
-- Visited list time 4e-06 seconds
-- Visited list inserts 1
+- Visited list time 2.1e-05 seconds
+- Visited list inserts 4
 - Visited list pruned 0
-- Visited list contains 1
+- Visited list contains 4
 - Visited list hash collisions 0
-- Visited list used hash buckets 1
-- Generated 2 search nodes
-  Calculated heuristic for 2 nodes
-  One modifications 0
-  Effectless actions 0
-- including 0 one modification actions
+- Visited list used hash buckets 4
+- Generated 14 search nodes
+  Calculated heuristic for 7 nodes
+  One modifications 5
+  Effectless actions 2
+- including 5 one modification actions
 - including 0 one modification methods
-- and       0 progressions of effectless actions
-- Generated 20 nodes per second
-- Final fringe contains 0 nodes
-- Status: Proven unsolvable
+- and       2 progressions of effectless actions
+- Generated 7000 nodes per second
+- Final fringe contains 3 nodes
+- Avg. ramification degree with depth 0: 1
+- Avg. ramification degree with depth 1: 4
+- Avg. ramification degree with depth 2: 6
+- Avg. abstract ramification degree with depth 0: 1
+- Avg. abstract ramification degree with depth 1: 3
+- Avg. abstract ramification degree with depth 2: 3
+- Avg. primitive ramification degree with depth 0: 0
+- Avg. primitive ramification degree with depth 1: 1
+- Avg. primitive ramification degree with depth 2: 3
+RAMIFICATION TOTAL 1.5- Status: Solved
+- Found solution of length 9
+- Total costs of actions: 7
+==>
+4 attachRegularInformationToEMail[email1,dateForMeeting]
+5 press_Home_EMail[]
+6 select_EMail_EMailAccount_NoOp[account1]
+7 press_EMail_NewEMail[account1]
+8 enter_EMailAddress[headOfDepartment,headOfDepartmentEMailAddress]
+9 press_EMail_NewEMail_Send[headOfDepartment,email1]
+10 extractsInformation_Regular[headOfDepartment,email1,dateForMeeting]
+root 0
+2 enterMode_EMail[] -> do_enterMode_EMail_FromHome 5
+0 __top[] -> <<<<__top_method;extractsInformation[headOfDepartment,email1,dateForMeeting];do_extractsInformation_Regular;2;0,1,-1>;send_EMail[headOfDepartment,email1];do_send_EMail_ViaEMail;1;0,-1,-2,-3,-4,-5,2>;select_EMail_EMailAccount[account1];do_select_EMail_EMailAccount_NoOp;2;0,1,-1,3,4,5,6>;attachInformationToEMail[email1,dateForMeeting];do_attachInformationToEMail_Regular;0;-1,1,2,3,4,5,6> 4 2 6 7 8 9 10
+<==
