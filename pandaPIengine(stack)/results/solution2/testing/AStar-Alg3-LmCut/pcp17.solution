@@ -16,8 +16,10 @@ Calculate SCCs...
 - The problem is cyclic
 - Number of cyclic SCCs: 2
 - Number of cyclic SCCs of size 1: 2
-Selected Planning Algorithm: progression searchParsing heuristics ...
+Selected Planning Algorithm: progression search
+Parsing heuristics ...
 Number of specified heuristics: 1
+teste
 - Calculating minimal implied costs and distances (0 ms)
 Heuristic #0 = hhRC2(lmc;distance;correct count)
 Search config:
@@ -29,190 +31,145 @@ Visited List configured
 - hashs to use: state task task-sequence
 - memory information: topological ordering
 - Visited list allows deletion of search nodes: true
-Variable number: 7
-Variable :+turnA[] Domain size: 1
-Variable :+turnB[] Domain size: 1
-Variable :+lt1[] Domain size: 1
-Variable :+lt2[] Domain size: 1
-Variable :+lt3[] Domain size: 1
-Variable :+l0[] Domain size: 1
-Variable :+l1[] Domain size: 1
-Min domain: 1
-Max domain: 1
-Avg domain: 1
-Var pair:+turnA[], +turnB[] Mult size: 1
-Var pair:+turnA[], +lt1[] Mult size: 1
-Var pair:+turnA[], +lt2[] Mult size: 1
-Var pair:+turnA[], +lt3[] Mult size: 1
-Var pair:+turnA[], +l0[] Mult size: 1
-Var pair:+turnA[], +l1[] Mult size: 1
-Var pair:+turnB[], +lt1[] Mult size: 1
-Var pair:+turnB[], +lt2[] Mult size: 1
-Var pair:+turnB[], +lt3[] Mult size: 1
-Var pair:+turnB[], +l0[] Mult size: 1
-Var pair:+turnB[], +l1[] Mult size: 1
-Var pair:+lt1[], +lt2[] Mult size: 1
-Var pair:+lt1[], +lt3[] Mult size: 1
-Var pair:+lt1[], +l0[] Mult size: 1
-Var pair:+lt1[], +l1[] Mult size: 1
-Var pair:+lt2[], +lt3[] Mult size: 1
-Var pair:+lt2[], +l0[] Mult size: 1
-Var pair:+lt2[], +l1[] Mult size: 1
-Var pair:+lt3[], +l0[] Mult size: 1
-Var pair:+lt3[], +l1[] Mult size: 1
-Var pair:+l0[], +l1[] Mult size: 1
-Number of variables: 7
-Num primitive tasks: 10
-Num non-primitive tasks: 3
-Total tasks: 13
-Number of methods: 13
-Search Configuration
-- Using JAIR 2020 progression algorithm
-- Search is stopped after first solution is found.
-- Utilizing heuristics.
-- A* Search
-- Distance G is "modification depth"
-- Starting state heuristic value: 7
-   1s visitime    0.09s generated nodes    130155 nodes/sec  127979 cur h   21 mod.depth   24 inserts     17581 dups      6823 size     10758 hash fail   6823 hash buckets  10758
-   2s visitime    0.19s generated nodes    305408 nodes/sec  151042 cur h   26 mod.depth   24 inserts     41617 dups     16440 size     25177 hash fail  16455 hash buckets  25162
-   3s visitime    0.31s generated nodes    490607 nodes/sec  161118 cur h   26 mod.depth   28 inserts     68152 dups     27389 size     40763 hash fail  27429 hash buckets  40723
-   4s visitime    0.40s generated nodes    605748 nodes/sec  149456 cur h   26 mod.depth   29 inserts     81730 dups     31552 size     50178 hash fail  31621 hash buckets  50109
-   5s visitime    0.51s generated nodes    720869 nodes/sec  142323 cur h   29 mod.depth   27 inserts     97792 dups     38280 size     59512 hash fail  38384 hash buckets  59408
-   6s visitime    0.62s generated nodes    836004 nodes/sec  137027 cur h   25 mod.depth   32 inserts    113167 dups     43921 size     69246 hash fail  44062 hash buckets  69105
-   7s visitime    0.74s generated nodes    946159 nodes/sec  132775 cur h   30 mod.depth   28 inserts    129615 dups     51373 size     78242 hash fail  51548 hash buckets  78067
-   8s visitime    0.84s generated nodes   1076347 nodes/sec  132375 cur h   25 mod.depth   34 inserts    145691 dups     56780 size     88911 hash fail  57019 hash buckets  88672
-   9s visitime    0.97s generated nodes   1276560 nodes/sec  139392 cur h   26 mod.depth   34 inserts    174523 dups     68963 size    105560 hash fail  69297 hash buckets 105226
-  10s visitime    1.07s generated nodes   1381674 nodes/sec  135978 cur h   28 mod.depth   32 inserts    188233 dups     74250 size    113983 hash fail  74639 hash buckets 113594
-  11s visitime    1.17s generated nodes   1491786 nodes/sec  133612 cur h   28 mod.depth   33 inserts    201200 dups     77722 size    123478 hash fail  78167 hash buckets 123033
-  12s visitime    1.31s generated nodes   1601927 nodes/sec  131327 cur h   29 mod.depth   32 inserts    220020 dups     86971 size    133049 hash fail  87501 hash buckets 132519
-  13s visitime    1.42s generated nodes   1712054 nodes/sec  129348 cur h   27 mod.depth   35 inserts    234604 dups     92793 size    141811 hash fail  93396 hash buckets 141208
-  14s visitime    1.51s generated nodes   1822161 nodes/sec  127996 cur h   30 mod.depth   32 inserts    246530 dups     96315 size    150215 hash fail  96992 hash buckets 149538
-  15s visitime    1.64s generated nodes   1927326 nodes/sec  126324 cur h   31 mod.depth   32 inserts    262177 dups    102921 size    159256 hash fail 103686 hash buckets 158491
-  16s visitime    1.74s generated nodes   2037455 nodes/sec  125235 cur h   33 mod.depth   30 inserts    275036 dups    106309 size    168727 hash fail 107176 hash buckets 167860
-  17s visitime    1.87s generated nodes   2142569 nodes/sec  124012 cur h   28 mod.depth   34 inserts    292366 dups    114523 size    177843 hash fail 115506 hash buckets 176860
-  18s visitime    2.02s generated nodes   2242668 nodes/sec  122650 cur h   30 mod.depth   34 inserts    312316 dups    125924 size    186392 hash fail 127004 hash buckets 185312
-  19s visitime    2.12s generated nodes   2432934 nodes/sec  126156 cur h   30 mod.depth   34 inserts    330059 dups    129376 size    200683 hash fail 130641 hash buckets 199418
-  20s visitime    2.26s generated nodes   2568093 nodes/sec  126413 cur h   29 mod.depth   35 inserts    350848 dups    139049 size    211799 hash fail 140458 hash buckets 210390
-Reached time limit - stopping search.
-Search Results
-- Search time 21.04 seconds
-- Depth reached: 0.
-- Depth reached expanding abstract methods: 0
-- Visited list time 2.33 seconds
-- Visited list inserts 358883
-- Visited list pruned 140594
-- Visited list contains 218289
-- Visited list hash collisions 142100
-- Visited list used hash buckets 216783
-- Generated 2643157 search nodes
-  Calculated heuristic for 1495622 nodes
-  One modifications 1147535
-  Effectless actions 0
-- including 1147535 one modification actions
-- including 0 one modification methods
-- and       0 progressions of effectless actions
-- Generated 71101 nodes per second
-- Final fringe contains 163537 nodes
-- Avg. ramification degree with depth 0: 1.00
-- Avg. ramification degree with depth 1: 11.00
-- Avg. ramification degree with depth 2: 26.80
-- Avg. ramification degree with depth 3: 84.83
-- Avg. ramification degree with depth 4: 112.92
-- Avg. ramification degree with depth 5: 192.45
-- Avg. ramification degree with depth 6: 319.06
-- Avg. ramification degree with depth 7: 447.39
-- Avg. ramification degree with depth 8: 696.96
-- Avg. ramification degree with depth 9: 1104.94
-- Avg. ramification degree with depth 10: 1546.45
-- Avg. ramification degree with depth 11: 2352.28
-- Avg. ramification degree with depth 12: 3652.50
-- Avg. ramification degree with depth 13: 4878.27
-- Avg. ramification degree with depth 14: 7425.23
-- Avg. ramification degree with depth 15: 11443.64
-- Avg. ramification degree with depth 16: 15766.60
-- Avg. ramification degree with depth 17: 24354.38
-- Avg. ramification degree with depth 18: 37050.30
-- Avg. ramification degree with depth 19: 51720.86
-- Avg. ramification degree with depth 20: 79690.58
-- Avg. ramification degree with depth 21: 116522.53
-- Avg. ramification degree with depth 22: -93264.52
-- Avg. ramification degree with depth 23: 28389.79
-- Avg. ramification degree with depth 24: -20335.00
-- Avg. ramification degree with depth 25: 45141.71
-- Avg. ramification degree with depth 26: 54242.88
-- Avg. ramification degree with depth 27: -10321.23
-- Avg. ramification degree with depth 28: 92647.20
-- Avg. ramification degree with depth 29: -185673.11
-- Avg. ramification degree with depth 30: 430306.28
-- Avg. ramification degree with depth 31: 446029.78
-- Avg. ramification degree with depth 32: 462237.47
-- Avg. ramification degree with depth 33: 481512.28
-- Avg. abstract ramification degree with depth 0: 1.00
-- Avg. abstract ramification degree with depth 1: 11.00
-- Avg. abstract ramification degree with depth 2: 24.70
-- Avg. abstract ramification degree with depth 3: 75.75
-- Avg. abstract ramification degree with depth 4: 100.77
-- Avg. abstract ramification degree with depth 5: 171.32
-- Avg. abstract ramification degree with depth 6: 283.92
-- Avg. abstract ramification degree with depth 7: 397.92
-- Avg. abstract ramification degree with depth 8: 618.97
-- Avg. abstract ramification degree with depth 9: 980.25
-- Avg. abstract ramification degree with depth 10: 1370.81
-- Avg. abstract ramification degree with depth 11: 2084.48
-- Avg. abstract ramification degree with depth 12: 3236.25
-- Avg. abstract ramification degree with depth 13: 4321.29
-- Avg. abstract ramification degree with depth 14: 6577.92
-- Avg. abstract ramification degree with depth 15: 10133.22
-- Avg. abstract ramification degree with depth 16: 13961.53
-- Avg. abstract ramification degree with depth 17: 21566.22
-- Avg. abstract ramification degree with depth 18: 32804.87
-- Avg. abstract ramification degree with depth 19: 45789.70
-- Avg. abstract ramification degree with depth 20: 70548.46
-- Avg. abstract ramification degree with depth 21: 103150.34
-- Avg. abstract ramification degree with depth 22: -111330.15
-- Avg. abstract ramification degree with depth 23: 3620.37
-- Avg. abstract ramification degree with depth 24: -51452.52
-- Avg. abstract ramification degree with depth 25: 9338.88
-- Avg. abstract ramification degree with depth 26: 14866.79
-- Avg. abstract ramification degree with depth 27: -52587.10
-- Avg. abstract ramification degree with depth 28: 47608.83
-- Avg. abstract ramification degree with depth 29: -233002.30
-- Avg. abstract ramification degree with depth 30: 380871.31
-- Avg. abstract ramification degree with depth 31: 394753.94
-- Avg. abstract ramification degree with depth 32: 409168.09
-- Avg. abstract ramification degree with depth 33: 426210.47
-- Avg. primitive ramification degree with depth 0: 0.00
-- Avg. primitive ramification degree with depth 1: 0.00
-- Avg. primitive ramification degree with depth 2: 2.10
-- Avg. primitive ramification degree with depth 3: 9.08
-- Avg. primitive ramification degree with depth 4: 12.15
-- Avg. primitive ramification degree with depth 5: 21.14
-- Avg. primitive ramification degree with depth 6: 35.14
-- Avg. primitive ramification degree with depth 7: 49.47
-- Avg. primitive ramification degree with depth 8: 77.99
-- Avg. primitive ramification degree with depth 9: 124.68
-- Avg. primitive ramification degree with depth 10: 175.63
-- Avg. primitive ramification degree with depth 11: 267.80
-- Avg. primitive ramification degree with depth 12: 416.25
-- Avg. primitive ramification degree with depth 13: 556.97
-- Avg. primitive ramification degree with depth 14: 847.31
-- Avg. primitive ramification degree with depth 15: 1310.41
-- Avg. primitive ramification degree with depth 16: 1805.08
-- Avg. primitive ramification degree with depth 17: 2788.16
-- Avg. primitive ramification degree with depth 18: 4245.43
-- Avg. primitive ramification degree with depth 19: 5931.16
-- Avg. primitive ramification degree with depth 20: 9142.11
-- Avg. primitive ramification degree with depth 21: 13372.20
-- Avg. primitive ramification degree with depth 22: 18065.63
-- Avg. primitive ramification degree with depth 23: 24769.43
-- Avg. primitive ramification degree with depth 24: 31117.52
-- Avg. primitive ramification degree with depth 25: 35802.82
-- Avg. primitive ramification degree with depth 26: 39376.10
-- Avg. primitive ramification degree with depth 27: 42265.87
-- Avg. primitive ramification degree with depth 28: 45038.37
-- Avg. primitive ramification degree with depth 29: 47329.21
-- Avg. primitive ramification degree with depth 30: 49435.01
-- Avg. primitive ramification degree with depth 31: 51275.84
-- Avg. primitive ramification degree with depth 32: 53069.38
-- Avg. primitive ramification degree with depth 33: 55301.80
-RAMIFICATION TOTAL 2.39- Status: Timeout
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
+Parsing...
+Parsing: [0.010s CPU, 0.005s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 62 rules.
+Computing model... [0.000s CPU, 0.001s wall-clock]
+54 relevant atoms
+0 auxiliary atoms
+54 final queue length
+73 total queue pushes
+Completing instantiation... [0.000s CPU, 0.001s wall-clock]
+Instantiating: [0.000s CPU, 0.004s wall-clock]
+Computing fact groups...
+Finding invariants...
+20 initial candidates
+Finding invariants: [0.030s CPU, 0.027s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+14 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.030s CPU, 0.028s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.001s wall-clock]
+5 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Reordering and filtering variables...
+15 of 15 variables necessary.
+1 of 2 mutex groups necessary.
+17 of 17 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
+Translator variables: 15
+Translator derived variables: 0
+Translator facts: 34
+Translator goal facts: 2
+Translator mutex groups: 1
+Translator total mutex groups size: 2
+Translator operators: 17
+Translator axioms: 0
+Translator task size: 138
+Translator peak memory: 40008 KB
+Writing output... [0.000s CPU, 0.000s wall-clock]
+Done! [0.040s CPU, 0.042s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
+[t=3.8144e-05s, 9844 KB] reading input...
+[t=0.000375797s, 9844 KB] done reading input!
+[t=0.00199262s, 10100 KB] Initializing landmark cut heuristic...
+[t=0.0021008s, 10100 KB] Building successor generator...done!
+[t=0.00223479s, 10100 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.0022702s, 10100 KB] time for successor generation creation: 2.1687e-05s
+[t=0.00231019s, 10100 KB] Variables: 15
+[t=0.00234618s, 10100 KB] FactPairs: 34
+[t=0.00238034s, 10100 KB] Bytes per state: 4
+[t=0.00249779s, 10100 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00260879s, 10100 KB] New best heuristic value for lmcut: 7
+[t=0.00265053s, 10100 KB] g=0, 1 evaluated, 0 expanded
+[t=0.00268695s, 10100 KB] f = 7, 1 evaluated, 0 expanded
+[t=0.00272551s, 10100 KB] Initial heuristic value for lmcut: 7
+[t=0.00276172s, 10100 KB] pruning method: none
+[t=0.0028547s, 10100 KB] New best heuristic value for lmcut: 6
+[t=0.00289367s, 10100 KB] g=1, 4 evaluated, 1 expanded
+[t=0.00297464s, 10100 KB] New best heuristic value for lmcut: 5
+[t=0.00301223s, 10100 KB] g=2, 7 evaluated, 2 expanded
+[t=0.00319467s, 10100 KB] f = 8, 18 evaluated, 5 expanded
+[t=0.00324836s, 10100 KB] New best heuristic value for lmcut: 4
+[t=0.00328602s, 10100 KB] g=4, 19 evaluated, 6 expanded
+[t=0.00338538s, 10100 KB] New best heuristic value for lmcut: 3
+[t=0.00342403s, 10100 KB] g=5, 25 evaluated, 7 expanded
+[t=0.00385716s, 10100 KB] f = 9, 60 evaluated, 19 expanded
+[t=0.00391279s, 10100 KB] New best heuristic value for lmcut: 2
+[t=0.00395234s, 10100 KB] g=7, 61 evaluated, 20 expanded
+[t=0.00405316s, 10100 KB] New best heuristic value for lmcut: 1
+[t=0.00409235s, 10100 KB] g=8, 68 evaluated, 21 expanded
+[t=0.00416526s, 10100 KB] New best heuristic value for lmcut: 0
+[t=0.00420312s, 10100 KB] g=9, 74 evaluated, 22 expanded
+[t=0.00424096s, 10100 KB] Solution found!
+[t=0.00427884s, 10100 KB] Actual search time: 0.00150952s
+t1g1__  (1)
+t1g2__  (1)
+p1g1__  (1)
+p1g2__  (1)
+g2_s2t1_1@sg2__  (1)
+p0g1__  (1)
+p0g2__  (1)
+g1_s2t1_0_0_1@sg1__  (1)
+x__top_method@__top__  (1)
+[t=0.00431657s, 10100 KB] Plan length: 9 step(s).
+[t=0.00431657s, 10100 KB] Plan cost: 9
+[t=0.00431657s, 10100 KB] Expanded 23 state(s).
+[t=0.00431657s, 10100 KB] Reopened 0 state(s).
+[t=0.00431657s, 10100 KB] Evaluated 74 state(s).
+[t=0.00431657s, 10100 KB] Evaluations: 74
+[t=0.00431657s, 10100 KB] Generated 81 state(s).
+[t=0.00431657s, 10100 KB] Dead ends: 0 state(s).
+[t=0.00431657s, 10100 KB] Expanded until last jump: 19 state(s).
+[t=0.00431657s, 10100 KB] Reopened until last jump: 0 state(s).
+[t=0.00431657s, 10100 KB] Evaluated until last jump: 60 state(s).
+[t=0.00431657s, 10100 KB] Generated until last jump: 63 state(s).
+[t=0.00431657s, 10100 KB] Number of registered states: 74
+[t=0.00431657s, 10100 KB] Int hash set load factor: 74/128 = 0.578125
+[t=0.00431657s, 10100 KB] Int hash set resizes: 7
+[t=0.00431657s, 10100 KB] Search time: 0.00181978s
+[t=0.00431657s, 10100 KB] Total time: 0.00431657s
+Solution found.
+Peak memory: 10100 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+Cost of SAS plan on RC model: 9
+Time Sas:0.2s

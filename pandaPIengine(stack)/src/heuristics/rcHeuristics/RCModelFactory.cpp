@@ -45,14 +45,17 @@ Model* RCModelFactory::getRCmodelSTRIPS(int costsMethodActions) {
 	rc->numAdds = new int[rc->numActions];
 	rc->numDels = new int[rc->numActions];
 
+
 	// add new prec and add effect to actions
 	for(int i = 0; i < htn->numActions; i++) {
 		rc->numPrecs[i] = htn->numPrecs[i] + 1;
+		//rc->numPrecs[i] = htn->numPrecs[i];
 		rc->precLists[i] = new int[rc->numPrecs[i]];
-		for(int j = 0; j < rc->numPrecs[i] - 1; j++) {
+		for(int j = 0; j < rc->numPrecs[i]-1; j++) {
 			rc->precLists[i][j] = htn->precLists[i][j];
 		}
 		rc->precLists[i][rc->numPrecs[i] - 1] = t2tdr(i);
+		//cout << "t2tdr: " << t2tdr(i) << endl;
 
 		rc->numAdds[i] = htn->numAdds[i] + 1;
 		rc->addLists[i] = new int[rc->numAdds[i]];

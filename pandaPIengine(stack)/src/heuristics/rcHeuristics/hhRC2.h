@@ -88,6 +88,7 @@ public:
         if (n->goalReachable) {
             n->goalReachable = (n->heuristicValue[index] != UNREACHABLE);
         }
+
     }
 
     void setHeuristicValue(searchNode *n, searchNode *parent, int absTask, int method) override {
@@ -96,81 +97,11 @@ public:
             n->goalReachable = (n->heuristicValue[index] != UNREACHABLE);
         }
     }
-/*
-    int setHeuristicValue(searchNode *n, int flagNewHeuristic) {
-        int hval = 0;
-
-        // get facts holding in s0
-        s0set.clear();
-        for (int i = 0; i < htn->numStateBits; i++) {
-            if (n->state[i]) {
-                s0set.insert(i);
-            }
-        }
-
-        // add reachability facts and HTN-related goal
-        for (int i = 0; i < n->numAbstract; i++) {
-            // add reachability facts
-            for (int j = 0; j < n->unconstraintAbstract[i]->numReachableT; j++) {
-                int t = n->unconstraintAbstract[i]->reachableT[j];
-                if (t < htn->numActions)
-                    s0set.insert(factory->t2tdr(t));
-            }
-        }
-        for (int i = 0; i < n->numPrimitive; i++) {
-            // add reachability facts
-            for (int j = 0; j < n->unconstraintPrimitive[i]->numReachableT; j++) {
-                int t = n->unconstraintPrimitive[i]->reachableT[j];
-                if (t < htn->numActions)
-                    s0set.insert(factory->t2tdr(t));
-            }
-        }
-
-        // generate goal
-        gset.clear();
-        for (int i = 0; i < htn->gSize; i++) {
-            gset.insert(htn->gList[i]);
-        }
-
-        for (int i = 0; i < n->numContainedTasks; i++) {
-            int t = n->containedTasks[i];
-            gset.insert(factory->t2bur(t));
-        }
-
-        searchNode* initialState = new searchNode();
-        for (int i = 0; i < s0set.getSize(); i++) {
-			tnI->state.push_back(false);
-		}
-		for (int i = 0; i < s0set.getSize(); i++) {
-			tnI->state[s0set.get(i)] = true;
-		}
-
-        //loop
-        while(heuristicModel->isGoal)
-        
-
-        heuristicModel->numActions
-
-        
-
-
-
-        hval = this->sasH->getHeuristicValue(s0set, gset);
-
-        
-
-        
-
-        
-        return hval;
-    }*/
 
 
     int setHeuristicValue(searchNode *n) {
         int hval = 0;
 
-        //heuristicModel->writeToPDDL("classic_domain", "classic_problem");
-
         // get facts holding in s0
         s0set.clear();
         for (int i = 0; i < htn->numStateBits; i++) {
@@ -178,8 +109,6 @@ public:
                 s0set.insert(i);
             }
         }
-
-        //heuristicModel->writeToPDDL("classic_domain", "classic_problem");
 
         // add reachability facts and HTN-related goal
         for (int i = 0; i < n->numAbstract; i++) {
@@ -191,24 +120,18 @@ public:
             }
         }
 
-        //cout << "legal" << endl;
-        // UNCOMMENT THIS FOR REACHABILITY FACTS
+        
+
         for (int i = 0; i < n->numPrimitive; i++) {
             // add reachability facts
             for (int j = 0; j < n->unconstraintPrimitive[i]->numReachableT; j++) {
                 int t = n->unconstraintPrimitive[i]->reachableT[j];
                 if (t < htn->numActions)
                     s0set.insert(factory->t2tdr(t));
+                    
             }
         }
-
-        //UNCOMMENT THIS TO IGNORE REACHABILITY FACTS
-        /*for (int i = 0; i < n->numPrimitive; i++) {
-            s0set.insert(factory->t2tdr(i));
-        }*/
-
-
-
+        
         // generate goal
         gset.clear();
         for (int i = 0; i < htn->gSize; i++) {
@@ -219,8 +142,9 @@ public:
             int t = n->containedTasks[i];
             gset.insert(factory->t2bur(t));
         }
-
+       
         hval = this->sasH->getHeuristicValue(s0set, gset);
+        cout << "hval sem mudar: " << hval << endl;
 
         // the indices of the methods need to be transformed to fit the scheme of the HTN model (as opposed to the rc model)
         if ((storeCuts) && (hval != UNREACHABLE)) {

@@ -79,6 +79,8 @@ namespace progression {
 
         void setHeuristicValue(searchNode *n) {
             // get facts holding in s0
+
+            cout << "uses hhrc" << endl;
             
             for (int i = 0; i < m->numStateBits; i++) {
                 if (n->state[i]) {
@@ -116,6 +118,7 @@ namespace progression {
 
                 // add reachability facts
                 for (int j = 0; j < n->unconstraintPrimitive[i]->numReachableT; j++) {
+                    //s0set.insert(j);
                     s0set.insert(t2tdr(n->unconstraintPrimitive[i]->reachableT[j]));
                 }
 

@@ -45,7 +45,7 @@ namespace progression {
             gettimeofday(&tp, NULL);
 
             
-        
+            /*
             // VARIABLE NUMBER
             cout << "Variable number: " << htn->numVars << endl;
 
@@ -71,16 +71,18 @@ namespace progression {
                 }
             }
             int avgVarDom = sumVarDom / htn->numVars;
+            
+            
 
             cout << "Min domain: " << minVarDom << endl;
             cout << "Max domain: " << maxVarDom << endl;
             cout << "Avg domain: " << avgVarDom << endl;
-
+*/
             int heuristicDownward = 0;
             
 
             // MULT DOMAIN
-            for(int i = 0; i < htn->numVars-1; i++){
+            /*for(int i = 0; i < htn->numVars-1; i++){
                 for(int j = i+1; j < htn->numVars; j++){
                     currVarDom = (htn->lastIndex[i] - htn->firstIndex[i] + 1) * (htn->lastIndex[j] - htn->firstIndex[j] + 1);
                     
@@ -101,20 +103,22 @@ namespace progression {
                 else{
                     nonPrimitives++;
                 }
-            }
+            }*/
 
             // FAST DOWNWARD SOLVING THE RC MODEL
-            /*
+            
+            long startT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+            long currentT;
             RCModelFactory rcModelF = RCModelFactory(htn);
+            
             Model* rcModel = rcModelF.getRCmodelSTRIPS(1);
             rcModel->writeToPDDL("domain-downward.pddl", "problem-downward.pddl");
-            system("/home/bruno/Desktop/downward/fast-downward.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --search 'astar(lmcut(), max_time=20)'");
+            system("/home/bruno/Desktop/downward/fast-downward.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --search 'astar(lmcut(), max_time=300)'");
             ifstream file;
             file.open("sas_plan");
 
             string line;
             char* stringCostSAS;
-            int costSAS;
             int counter = 0;
             int foundSAS = 0;
 
@@ -139,17 +143,29 @@ namespace progression {
                         
                     }
                 }
+
+                gettimeofday(&tp, NULL);
+
+                currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+
+                cout << "Time Sas:" << double(currentT - startT) / 1000 << "s" << endl;
             }
+            else{
+                cout << "Couldnt find SAS file." << endl;
+            }
+            
 
-            cout << "Cost SAS: " << costSAS << endl;
-            */
+            
 
+            return;
+
+/*
             cout << "Num primitive tasks: " << primitives << endl;
             cout << "Num non-primitive tasks: " << nonPrimitives << endl;
             cout << "Total tasks: " << htn->numTasks << endl;
 
             cout << "Number of methods: " << htn->numMethods << endl;
-
+*/
             /*
             // METHOD NAMES
             string *differentNames;
@@ -217,8 +233,7 @@ namespace progression {
             int maxDepth = 0;
             int maxNonPrimitive = 0;
             
-            long startT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
-            long currentT;
+            
             long lastOutput = startT;
             bool reachedTimeLimit = false;
             const int checkAfter = CHECKAFTER;
@@ -262,7 +277,9 @@ namespace progression {
                     for (int i = 0; i < hLength; i++) {
                             hF[i]->setHeuristicValue(tnI, NULL, 0, 0);
                         }
-                    
+                    /*if(tnI->heuristicValue[0] > 0){
+                        tnI->heuristicValue[0] = 1;
+                    }*/
                 }
                 cout << "- Starting state heuristic value: " << *(tnI->heuristicValue) << endl;
             }
@@ -527,9 +544,19 @@ namespace progression {
                         hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
 
                     }
-                    /*if(n2->heuristicValue[0] > 0){
+                    if(n2->heuristicValue[0] > 0){
                         n2->heuristicValue[0] = 1;
+                    }
+                    /*if(htn->isGoal(n2)){
+                        
+                        //n2->heuristicValue[0] = 0;
                     }*/
+                    else{
+                        
+                        n2->heuristicValue[0] = 0;
+                    }
+
+                   
                                         
                     
                     
@@ -552,8 +579,8 @@ namespace progression {
                     }
                     n2->depth = n->depth + 1;
                     //cout << n2->heuristicValue[0] << endl;
-                    ramificationDegree++;
-                    ramificationDegreePrimitive++;
+                    //ramificationDegree++;
+                    //ramificationDegreePrimitive++;
                     fringe.push(n2);
 
                 }
@@ -584,21 +611,26 @@ namespace progression {
                         //assert(!visitedList.insertVisi(n2));
 
                         // compute the heuristic
-                        n2->heuristicValue = new int[hLength];
-                        
-                        /*if(htn->isGoal(n2)){
+                    n2->heuristicValue = new int[hLength];
+
+
+                    for (int k = 0; k < hLength; k++) {
+                        hF[k]->setHeuristicValue(n2, n, j, method);
+
+                    }
+                    /*if(n2->heuristicValue[0] > 0){
+                        n2->heuristicValue[0] = 1;
+                    }
+                    if(htn->isGoal(n2)){
+                   
                         n2->heuristicValue[0] = 0;
-                        }
-                        else{
-                            n2->heuristicValue[0] = 1;
-                        }*/
-                        for (int i = 0; i < hLength; i++) {
-                            hF[i]->setHeuristicValue(n2, n, j, method);
-                        }
-                        /*if(n2->heuristicValue[0] > 0){
-                            n2->heuristicValue[0] = 1;
-                        }*/
+                    }
+                    else{
                         
+                        n2->heuristicValue[0] = 1;
+                    }*/
+
+               
                         
                         
                         
@@ -621,13 +653,13 @@ namespace progression {
                         }
                         n2->depth = n->depth + 1;
                         //cout << n2->heuristicValue[0] << endl;
-                        ramificationDegree++;
-                        ramificationDegreeAbstract++;
+                        //ramificationDegree++;
+                        //ramificationDegreeAbstract++;
                         fringe.push(n2);
 
                     }
                 }
-
+/*
                 if(ramificationSet.count(n->depth) > 0){
                     std::pair<int,int> auxPair = ramificationSet[n->depth];
 
@@ -672,7 +704,7 @@ namespace progression {
                     auxPair.second = 1;
                     ramificationAbstractSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
                 }
-
+*/
 
                 int allnodes = numSearchNodes + htn->numOneModActions + htn->numOneModMethods + htn->numEffLessProg;
 
@@ -931,7 +963,7 @@ namespace progression {
             cout << "- Final fringe contains " << fringe.size() << " nodes" << endl;
 
             //ramification details
-            for(auto& [key, value]: ramificationSet){
+            /*for(auto& [key, value]: ramificationSet){
                 if(ramificationSet.count(key) > 0){
                     if(value.second > 0){
                         cout << "- Avg. ramification degree with depth " << key << ": " << value.first/(float)value.second << endl;
@@ -957,18 +989,9 @@ namespace progression {
 
 
             cout << "RAMIFICATION TOTAL " << ramificationDegree / (float)visitedList.uniqueInsertions;
-
+*/
             
-            /*
-            if(flagAchou){
-                cout << "ACHOU" << endl;
-                cout << "isGoal = " << primeiro << endl;
-                cout << "lmcut = " << segundo << endl;
-            }
-            else{
-                cout << "NAO ACHOU";
-            }
-            */
+            
             if (this->foundSols > 1) {
                 cout << "- Found " << this->foundSols << " solutions." << endl;
                 cout << "  - first solution after " << this->firstSolTime << "ms." << endl;

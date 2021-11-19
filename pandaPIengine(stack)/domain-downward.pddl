@@ -2029,7 +2029,6 @@
          (pavailable_p0_)
          (pcolour_p0_red_)
          (ptreatment_p0_glazed_)
-         (tdrmdo_grind_p0_smooth_red_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2049,7 +2048,6 @@
          (pavailable_p0_)
          (pcolour_p0_white_)
          (ptreatment_p0_glazed_)
-         (tdrmdo_grind_p0_smooth_white_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2069,7 +2067,6 @@
          (pavailable_p0_)
          (pcolour_p0_white_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_p0_smooth_white_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2088,7 +2085,6 @@
          (pavailable_p0_)
          (pcolour_p0_white_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_smooth_white_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2107,7 +2103,6 @@
          (pavailable_p0_)
          (pcolour_p0_natural_)
          (ptreatment_p0_glazed_)
-         (tdrmdo_grind_p0_smooth_natural_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2126,7 +2121,6 @@
          (pavailable_p0_)
          (pcolour_p0_red_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_p0_smooth_red_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2145,7 +2139,6 @@
          (pavailable_p0_)
          (pcolour_p0_red_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_smooth_red_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2164,7 +2157,6 @@
          (pavailable_p0_)
          (pcolour_p0_natural_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_p0_smooth_natural_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2182,7 +2174,6 @@
          (pavailable_p0_)
          (pcolour_p0_natural_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_smooth_natural_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2200,7 +2191,6 @@
          (pavailable_p0_)
          (pcolour_p0_mauve_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_p0_smooth_mauve_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2219,7 +2209,6 @@
          (pavailable_p0_)
          (pcolour_p0_mauve_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_smooth_mauve_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2238,7 +2227,6 @@
          (pavailable_p0_)
          (pcolour_p0_black_)
          (ptreatment_p0_glazed_)
-         (tdrmdo_grind_p0_smooth_black_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2258,7 +2246,6 @@
          (pavailable_p0_)
          (pcolour_p0_black_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_p0_smooth_black_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2277,7 +2264,6 @@
          (pavailable_p0_)
          (pcolour_p0_black_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_smooth_black_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2296,7 +2282,6 @@
          (pavailable_p0_)
          (pcolour_p0_mauve_)
          (ptreatment_p0_glazed_)
-         (tdrmdo_grind_p0_smooth_mauve_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2315,7 +2300,6 @@
          (psurface_condition_p0_verysmooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_immersion_varnish_p0_immersion_varnisher0_red_verysmooth_)
      )
      :effect (and 
          (pcolour_p0_red_)
@@ -2332,7 +2316,6 @@
          (psurface_condition_p0_smooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_immersion_varnish_p0_immersion_varnisher0_red_smooth_)
      )
      :effect (and 
          (pcolour_p0_red_)
@@ -2349,7 +2332,6 @@
          (psurface_condition_p0_verysmooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_spray_varnish_p0_spray_varnisher0_red_verysmooth_)
      )
      :effect (and 
          (pcolour_p0_red_)
@@ -2366,7 +2348,6 @@
          (psurface_condition_p0_smooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_spray_varnish_p0_spray_varnisher0_red_smooth_)
      )
      :effect (and 
          (pcolour_p0_red_)
@@ -2382,7 +2363,6 @@
      :precondition (and 
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_glaze_p0_glazer0_red_)
      )
      :effect (and 
          (pcolour_p0_red_)
@@ -2400,7 +2380,6 @@
          (pavailable_p0_)
          (pcolour_p0_natural_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_rough_natural_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2418,7 +2397,6 @@
          (pavailable_p0_)
          (pcolour_p0_natural_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_verysmooth_natural_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2435,7 +2413,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_black_)
-         (tdrmdo_plane_p0_smooth_black_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2453,7 +2430,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_black_)
-         (tdrmdo_plane_untreated_p0_planer0_smooth_black_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2471,7 +2447,6 @@
          (ptreatment_p0_varnished_)
          (pavailable_p0_)
          (pcolour_p0_mauve_)
-         (tdrmdo_plane_p0_smooth_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2490,7 +2465,6 @@
          (pavailable_p0_)
          (ptreatment_p0_glazed_)
          (pcolour_p0_black_)
-         (tdrmdo_plane_p0_smooth_black_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2509,7 +2483,6 @@
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
          (pcolour_p0_mauve_)
-         (tdrmdo_plane_p0_smooth_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2527,7 +2500,6 @@
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
          (pcolour_p0_mauve_)
-         (tdrmdo_plane_untreated_p0_planer0_smooth_mauve_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2545,7 +2517,6 @@
          (pavailable_p0_)
          (ptreatment_p0_varnished_)
          (pcolour_p0_black_)
-         (tdrmdo_plane_p0_smooth_black_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2564,7 +2535,6 @@
          (ptreatment_p0_varnished_)
          (pavailable_p0_)
          (pcolour_p0_red_)
-         (tdrmdo_plane_p0_smooth_red_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2583,7 +2553,6 @@
          (pavailable_p0_)
          (ptreatment_p0_varnished_)
          (pcolour_p0_white_)
-         (tdrmdo_plane_p0_smooth_white_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2602,7 +2571,6 @@
          (pavailable_p0_)
          (ptreatment_p0_varnished_)
          (pcolour_p0_natural_)
-         (tdrmdo_plane_p0_smooth_natural_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2620,7 +2588,6 @@
          (ptreatment_p0_glazed_)
          (pavailable_p0_)
          (pcolour_p0_mauve_)
-         (tdrmdo_plane_p0_smooth_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2639,7 +2606,6 @@
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
          (pcolour_p0_red_)
-         (tdrmdo_plane_p0_smooth_red_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2657,7 +2623,6 @@
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
          (pcolour_p0_red_)
-         (tdrmdo_plane_untreated_p0_planer0_smooth_red_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2675,7 +2640,6 @@
          (ptreatment_p0_glazed_)
          (pavailable_p0_)
          (pcolour_p0_red_)
-         (tdrmdo_plane_p0_smooth_red_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2694,7 +2658,6 @@
          (pavailable_p0_)
          (ptreatment_p0_glazed_)
          (pcolour_p0_white_)
-         (tdrmdo_plane_p0_smooth_white_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2713,7 +2676,6 @@
          (pavailable_p0_)
          (ptreatment_p0_glazed_)
          (pcolour_p0_natural_)
-         (tdrmdo_plane_p0_smooth_natural_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2731,7 +2693,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_white_)
-         (tdrmdo_plane_p0_smooth_white_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2749,7 +2710,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_white_)
-         (tdrmdo_plane_untreated_p0_planer0_smooth_white_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2767,7 +2727,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_natural_)
-         (tdrmdo_plane_p0_smooth_natural_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2784,7 +2743,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_natural_)
-         (tdrmdo_plane_untreated_p0_planer0_smooth_natural_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -2800,7 +2758,6 @@
          (ptreatment_p4_untreated_)
          (psurface_condition_p4_smooth_)
          (pavailable_p4_)
-         (tdrmdo_immersion_varnish_p4_immersion_varnisher0_red_smooth_)
      )
      :effect (and 
          (pcolour_p4_red_)
@@ -2817,7 +2774,6 @@
          (psurface_condition_p4_verysmooth_)
          (ptreatment_p4_untreated_)
          (pavailable_p4_)
-         (tdrmdo_immersion_varnish_p4_immersion_varnisher0_red_verysmooth_)
      )
      :effect (and 
          (pcolour_p4_red_)
@@ -2834,7 +2790,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_immersion_varnish_p2_immersion_varnisher0_red_smooth_)
      )
      :effect (and 
          (pcolour_p2_red_)
@@ -2851,7 +2806,6 @@
          (psurface_condition_p2_verysmooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_immersion_varnish_p2_immersion_varnisher0_red_verysmooth_)
      )
      :effect (and 
          (pcolour_p2_red_)
@@ -2868,7 +2822,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_immersion_varnish_p1_immersion_varnisher0_red_smooth_)
      )
      :effect (and 
          (pcolour_p1_red_)
@@ -2885,7 +2838,6 @@
          (psurface_condition_p1_verysmooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_immersion_varnish_p1_immersion_varnisher0_red_verysmooth_)
      )
      :effect (and 
          (pcolour_p1_red_)
@@ -2902,7 +2854,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pavailable_p3_)
-         (tdrmdo_immersion_varnish_p3_immersion_varnisher0_red_verysmooth_)
      )
      :effect (and 
          (pcolour_p3_red_)
@@ -2919,7 +2870,6 @@
          (ptreatment_p3_untreated_)
          (psurface_condition_p3_smooth_)
          (pavailable_p3_)
-         (tdrmdo_immersion_varnish_p3_immersion_varnisher0_red_smooth_)
      )
      :effect (and 
          (pcolour_p3_red_)
@@ -2936,7 +2886,6 @@
          (ptreatment_p4_untreated_)
          (psurface_condition_p4_smooth_)
          (pavailable_p4_)
-         (tdrmdo_spray_varnish_p4_spray_varnisher0_red_smooth_)
      )
      :effect (and 
          (pcolour_p4_red_)
@@ -2953,7 +2902,6 @@
          (psurface_condition_p4_verysmooth_)
          (ptreatment_p4_untreated_)
          (pavailable_p4_)
-         (tdrmdo_spray_varnish_p4_spray_varnisher0_red_verysmooth_)
      )
      :effect (and 
          (pcolour_p4_red_)
@@ -2970,7 +2918,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_spray_varnish_p1_spray_varnisher0_red_smooth_)
      )
      :effect (and 
          (pcolour_p1_red_)
@@ -2987,7 +2934,6 @@
          (psurface_condition_p1_verysmooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_spray_varnish_p1_spray_varnisher0_red_verysmooth_)
      )
      :effect (and 
          (pcolour_p1_red_)
@@ -3004,7 +2950,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_spray_varnish_p2_spray_varnisher0_red_smooth_)
      )
      :effect (and 
          (pcolour_p2_red_)
@@ -3021,7 +2966,6 @@
          (psurface_condition_p2_verysmooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_spray_varnish_p2_spray_varnisher0_red_verysmooth_)
      )
      :effect (and 
          (pcolour_p2_red_)
@@ -3038,7 +2982,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pavailable_p3_)
-         (tdrmdo_spray_varnish_p3_spray_varnisher0_red_verysmooth_)
      )
      :effect (and 
          (pcolour_p3_red_)
@@ -3055,7 +2998,6 @@
          (ptreatment_p3_untreated_)
          (psurface_condition_p3_smooth_)
          (pavailable_p3_)
-         (tdrmdo_spray_varnish_p3_spray_varnisher0_red_smooth_)
      )
      :effect (and 
          (pcolour_p3_red_)
@@ -3071,7 +3013,6 @@
      :precondition (and 
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_glaze_p3_glazer0_red_)
      )
      :effect (and 
          (pcolour_p3_red_)
@@ -3087,7 +3028,6 @@
      :precondition (and 
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_glaze_p4_glazer0_red_)
      )
      :effect (and 
          (pcolour_p4_red_)
@@ -3103,7 +3043,6 @@
      :precondition (and 
          (pavailable_p1_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_glaze_p1_glazer0_red_)
      )
      :effect (and 
          (pcolour_p1_red_)
@@ -3119,7 +3058,6 @@
      :precondition (and 
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_glaze_p2_glazer0_red_)
      )
      :effect (and 
          (pcolour_p2_red_)
@@ -3137,7 +3075,6 @@
          (pavailable_p0_)
          (pcolour_p0_natural_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_p0_verysmooth_natural_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3154,7 +3091,6 @@
          (pavailable_p0_)
          (pcolour_p0_white_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_p0_verysmooth_white_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3172,7 +3108,6 @@
          (pavailable_p0_)
          (pcolour_p0_white_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_verysmooth_white_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3190,7 +3125,6 @@
          (pavailable_p0_)
          (pcolour_p0_white_)
          (ptreatment_p0_glazed_)
-         (tdrmdo_grind_p0_verysmooth_white_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3209,7 +3143,6 @@
          (pavailable_p0_)
          (pcolour_p0_red_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_p0_verysmooth_red_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3227,7 +3160,6 @@
          (pavailable_p0_)
          (pcolour_p0_red_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_verysmooth_red_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3245,7 +3177,6 @@
          (pavailable_p0_)
          (pcolour_p0_red_)
          (ptreatment_p0_glazed_)
-         (tdrmdo_grind_p0_verysmooth_red_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3264,7 +3195,6 @@
          (pavailable_p0_)
          (pcolour_p0_natural_)
          (ptreatment_p0_glazed_)
-         (tdrmdo_grind_p0_verysmooth_natural_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3282,7 +3212,6 @@
          (pavailable_p0_)
          (pcolour_p0_black_)
          (ptreatment_p0_glazed_)
-         (tdrmdo_grind_p0_verysmooth_black_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3301,7 +3230,6 @@
          (pavailable_p0_)
          (pcolour_p0_black_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_p0_verysmooth_black_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3319,7 +3247,6 @@
          (pavailable_p0_)
          (pcolour_p0_black_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_verysmooth_black_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3337,7 +3264,6 @@
          (pavailable_p0_)
          (pcolour_p0_mauve_)
          (ptreatment_p0_glazed_)
-         (tdrmdo_grind_p0_verysmooth_mauve_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3356,7 +3282,6 @@
          (pavailable_p0_)
          (pcolour_p0_mauve_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_p0_verysmooth_mauve_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3374,7 +3299,6 @@
          (pavailable_p0_)
          (pcolour_p0_mauve_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_verysmooth_mauve_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3392,7 +3316,6 @@
          (pavailable_p0_)
          (ptreatment_p0_glazed_)
          (pcolour_p0_black_)
-         (tdrmdo_plane_p0_verysmooth_black_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3412,7 +3335,6 @@
          (pavailable_p0_)
          (ptreatment_p0_varnished_)
          (pcolour_p0_black_)
-         (tdrmdo_plane_p0_verysmooth_black_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3432,7 +3354,6 @@
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
          (pcolour_p0_mauve_)
-         (tdrmdo_plane_p0_verysmooth_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3451,7 +3372,6 @@
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
          (pcolour_p0_mauve_)
-         (tdrmdo_plane_untreated_p0_planer0_verysmooth_mauve_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3470,7 +3390,6 @@
          (ptreatment_p0_varnished_)
          (pavailable_p0_)
          (pcolour_p0_red_)
-         (tdrmdo_plane_p0_verysmooth_red_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3490,7 +3409,6 @@
          (pavailable_p0_)
          (ptreatment_p0_varnished_)
          (pcolour_p0_white_)
-         (tdrmdo_plane_p0_verysmooth_white_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3510,7 +3428,6 @@
          (pavailable_p0_)
          (ptreatment_p0_varnished_)
          (pcolour_p0_natural_)
-         (tdrmdo_plane_p0_verysmooth_natural_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3529,7 +3446,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_black_)
-         (tdrmdo_plane_p0_verysmooth_black_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3548,7 +3464,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_black_)
-         (tdrmdo_plane_untreated_p0_planer0_verysmooth_black_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3567,7 +3482,6 @@
          (ptreatment_p0_glazed_)
          (pavailable_p0_)
          (pcolour_p0_mauve_)
-         (tdrmdo_plane_p0_verysmooth_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3587,7 +3501,6 @@
          (ptreatment_p0_varnished_)
          (pavailable_p0_)
          (pcolour_p0_mauve_)
-         (tdrmdo_plane_p0_verysmooth_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3607,7 +3520,6 @@
          (ptreatment_p0_glazed_)
          (pavailable_p0_)
          (pcolour_p0_red_)
-         (tdrmdo_plane_p0_verysmooth_red_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3627,7 +3539,6 @@
          (pavailable_p0_)
          (ptreatment_p0_glazed_)
          (pcolour_p0_white_)
-         (tdrmdo_plane_p0_verysmooth_white_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3647,7 +3558,6 @@
          (pavailable_p0_)
          (ptreatment_p0_glazed_)
          (pcolour_p0_natural_)
-         (tdrmdo_plane_p0_verysmooth_natural_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3666,7 +3576,6 @@
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
          (pcolour_p0_red_)
-         (tdrmdo_plane_p0_verysmooth_red_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3685,7 +3594,6 @@
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
          (pcolour_p0_red_)
-         (tdrmdo_plane_untreated_p0_planer0_verysmooth_red_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3704,7 +3612,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_white_)
-         (tdrmdo_plane_p0_verysmooth_white_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3723,7 +3630,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_white_)
-         (tdrmdo_plane_untreated_p0_planer0_verysmooth_white_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3742,7 +3648,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_natural_)
-         (tdrmdo_plane_p0_verysmooth_natural_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3760,7 +3665,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_natural_)
-         (tdrmdo_plane_untreated_p0_planer0_verysmooth_natural_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3778,7 +3682,6 @@
          (pavailable_p0_)
          (pcolour_p0_mauve_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_rough_mauve_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3797,7 +3700,6 @@
          (pavailable_p0_)
          (pcolour_p0_black_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_rough_black_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3816,7 +3718,6 @@
          (pavailable_p0_)
          (pcolour_p0_red_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_rough_red_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3835,7 +3736,6 @@
          (pavailable_p0_)
          (pcolour_p0_white_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_grind_untreated_p0_grinder0_rough_white_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3854,7 +3754,6 @@
          (pavailable_p0_)
          (ptreatment_p0_glazed_)
          (pcolour_p0_black_)
-         (tdrmdo_plane_p0_rough_black_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3874,7 +3773,6 @@
          (pavailable_p0_)
          (ptreatment_p0_varnished_)
          (pcolour_p0_black_)
-         (tdrmdo_plane_p0_rough_black_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3894,7 +3792,6 @@
          (ptreatment_p0_varnished_)
          (pavailable_p0_)
          (pcolour_p0_mauve_)
-         (tdrmdo_plane_p0_rough_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3914,7 +3811,6 @@
          (ptreatment_p0_varnished_)
          (pavailable_p0_)
          (pcolour_p0_red_)
-         (tdrmdo_plane_p0_rough_red_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3934,7 +3830,6 @@
          (pavailable_p0_)
          (ptreatment_p0_varnished_)
          (pcolour_p0_white_)
-         (tdrmdo_plane_p0_rough_white_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3954,7 +3849,6 @@
          (pavailable_p0_)
          (ptreatment_p0_varnished_)
          (pcolour_p0_natural_)
-         (tdrmdo_plane_p0_rough_natural_varnished_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3973,7 +3867,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_black_)
-         (tdrmdo_plane_p0_rough_black_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -3992,7 +3885,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_black_)
-         (tdrmdo_plane_untreated_p0_planer0_rough_black_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -4011,7 +3903,6 @@
          (ptreatment_p0_glazed_)
          (pavailable_p0_)
          (pcolour_p0_mauve_)
-         (tdrmdo_plane_p0_rough_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -4031,7 +3922,6 @@
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
          (pcolour_p0_mauve_)
-         (tdrmdo_plane_p0_rough_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -4050,7 +3940,6 @@
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
          (pcolour_p0_mauve_)
-         (tdrmdo_plane_untreated_p0_planer0_rough_mauve_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -4069,7 +3958,6 @@
          (pavailable_p0_)
          (ptreatment_p0_glazed_)
          (pcolour_p0_white_)
-         (tdrmdo_plane_p0_rough_white_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -4089,7 +3977,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_white_)
-         (tdrmdo_plane_p0_rough_white_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -4108,7 +3995,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_white_)
-         (tdrmdo_plane_untreated_p0_planer0_rough_white_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -4127,7 +4013,6 @@
          (pavailable_p0_)
          (ptreatment_p0_glazed_)
          (pcolour_p0_natural_)
-         (tdrmdo_plane_p0_rough_natural_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -4146,7 +4031,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_natural_)
-         (tdrmdo_plane_p0_rough_natural_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -4164,7 +4048,6 @@
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
          (pcolour_p0_natural_)
-         (tdrmdo_plane_untreated_p0_planer0_rough_natural_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -4182,7 +4065,6 @@
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
          (pcolour_p0_red_)
-         (tdrmdo_plane_p0_rough_red_untreated_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -4201,7 +4083,6 @@
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
          (pcolour_p0_red_)
-         (tdrmdo_plane_untreated_p0_planer0_rough_red_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -4220,7 +4101,6 @@
          (ptreatment_p0_glazed_)
          (pavailable_p0_)
          (pcolour_p0_red_)
-         (tdrmdo_plane_p0_rough_red_glazed_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -4239,7 +4119,6 @@
          (punused_p0_)
          (pavailable_b0_)
          (pboardsize_b0_s3_)
-         (tdrmdo_saw_medium_b0_p0_beech_rough_s3_s2_s1_)
      )
      :effect (and 
          (pwood_p0_beech_)
@@ -4259,7 +4138,6 @@
          (pavailable_b0_)
          (punused_p0_)
          (pboardsize_b0_s4_)
-         (tdrmdo_saw_medium_b0_p0_beech_rough_s4_s3_s2_)
      )
      :effect (and 
          (pboardsize_b0_s2_)
@@ -4278,7 +4156,6 @@
      :precondition (and 
          (punused_p0_)
          (pavailable_b0_)
-         (tdrmdo_saw_medium_b0_p0_beech_rough_s6_s5_s4_)
      )
      :effect (and 
          (pboardsize_b0_s4_)
@@ -4298,7 +4175,6 @@
          (punused_p0_)
          (pavailable_b0_)
          (pboardsize_b0_s2_)
-         (tdrmdo_saw_medium_b0_p0_beech_rough_s2_s1_s0_)
      )
      :effect (and 
          (ptreatment_p0_untreated_)
@@ -4317,7 +4193,6 @@
          (punused_p0_)
          (pavailable_b0_)
          (pboardsize_b0_s5_)
-         (tdrmdo_saw_medium_b0_p0_beech_rough_s5_s4_s3_)
      )
      :effect (and 
          (pboardsize_b0_s3_)
@@ -4337,7 +4212,6 @@
          (punused_p0_)
          (pavailable_b1_)
          (pboardsize_b1_s6_)
-         (tdrmdo_saw_medium_b1_p0_beech_rough_s6_s5_s4_)
      )
      :effect (and 
          (pwood_p0_beech_)
@@ -4357,7 +4231,6 @@
          (punused_p0_)
          (pavailable_b1_)
          (pboardsize_b1_s2_)
-         (tdrmdo_saw_medium_b1_p0_beech_rough_s2_s1_s0_)
      )
      :effect (and 
          (ptreatment_p0_untreated_)
@@ -4375,7 +4248,6 @@
      :precondition (and 
          (punused_p0_)
          (pavailable_b1_)
-         (tdrmdo_saw_medium_b1_p0_beech_rough_s7_s6_s5_)
      )
      :effect (and 
          (pboardsize_b1_s5_)
@@ -4395,7 +4267,6 @@
          (pavailable_b1_)
          (punused_p0_)
          (pboardsize_b1_s4_)
-         (tdrmdo_saw_medium_b1_p0_beech_rough_s4_s3_s2_)
      )
      :effect (and 
          (pwood_p0_beech_)
@@ -4415,7 +4286,6 @@
          (pavailable_b1_)
          (punused_p0_)
          (pboardsize_b1_s3_)
-         (tdrmdo_saw_medium_b1_p0_beech_rough_s3_s2_s1_)
      )
      :effect (and 
          (pboardsize_b1_s1_)
@@ -4435,7 +4305,6 @@
          (punused_p0_)
          (pavailable_b1_)
          (pboardsize_b1_s5_)
-         (tdrmdo_saw_medium_b1_p0_beech_rough_s5_s4_s3_)
      )
      :effect (and 
          (pboardsize_b1_s3_)
@@ -4455,7 +4324,6 @@
          (punused_p0_)
          (pavailable_b2_)
          (pboardsize_b2_s2_)
-         (tdrmdo_saw_medium_b2_p0_oak_rough_s2_s1_s0_)
      )
      :effect (and 
          (ptreatment_p0_untreated_)
@@ -4473,7 +4341,6 @@
          (punused_p0_)
          (pavailable_b2_)
          (pboardsize_b2_s5_)
-         (tdrmdo_saw_medium_b2_p0_oak_rough_s5_s4_s3_)
      )
      :effect (and 
          (pboardsize_b2_s3_)
@@ -4491,7 +4358,6 @@
      :precondition (and 
          (punused_p0_)
          (pavailable_b2_)
-         (tdrmdo_saw_medium_b2_p0_oak_rough_s6_s5_s4_)
      )
      :effect (and 
          (pboardsize_b2_s4_)
@@ -4510,7 +4376,6 @@
          (punused_p0_)
          (pavailable_b2_)
          (pboardsize_b2_s3_)
-         (tdrmdo_saw_medium_b2_p0_oak_rough_s3_s2_s1_)
      )
      :effect (and 
          (ptreatment_p0_untreated_)
@@ -4529,7 +4394,6 @@
          (punused_p0_)
          (pavailable_b2_)
          (pboardsize_b2_s4_)
-         (tdrmdo_saw_medium_b2_p0_oak_rough_s4_s3_s2_)
      )
      :effect (and 
          (ptreatment_p0_untreated_)
@@ -4548,7 +4412,6 @@
          (punused_p0_)
          (pavailable_b3_)
          (pboardsize_b3_s3_)
-         (tdrmdo_saw_medium_b3_p0_pine_rough_s3_s2_s1_)
      )
      :effect (and 
          (ptreatment_p0_untreated_)
@@ -4567,7 +4430,6 @@
          (pavailable_b3_)
          (punused_p0_)
          (pboardsize_b3_s2_)
-         (tdrmdo_saw_medium_b3_p0_pine_rough_s2_s1_s0_)
      )
      :effect (and 
          (ptreatment_p0_untreated_)
@@ -4584,7 +4446,6 @@
      :precondition (and 
          (punused_p0_)
          (pavailable_b3_)
-         (tdrmdo_saw_medium_b3_p0_pine_rough_s7_s6_s5_)
      )
      :effect (and 
          (pboardsize_b3_s5_)
@@ -4603,7 +4464,6 @@
          (punused_p0_)
          (pavailable_b3_)
          (pboardsize_b3_s6_)
-         (tdrmdo_saw_medium_b3_p0_pine_rough_s6_s5_s4_)
      )
      :effect (and 
          (ptreatment_p0_untreated_)
@@ -4622,7 +4482,6 @@
          (punused_p0_)
          (pavailable_b3_)
          (pboardsize_b3_s5_)
-         (tdrmdo_saw_medium_b3_p0_pine_rough_s5_s4_s3_)
      )
      :effect (and 
          (pboardsize_b3_s3_)
@@ -4641,7 +4500,6 @@
          (punused_p0_)
          (pavailable_b3_)
          (pboardsize_b3_s4_)
-         (tdrmdo_saw_medium_b3_p0_pine_rough_s4_s3_s2_)
      )
      :effect (and 
          (ptreatment_p0_untreated_)
@@ -4661,7 +4519,6 @@
          (pavailable_p3_)
          (pcolour_p3_natural_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_p3_smooth_natural_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4679,7 +4536,6 @@
          (pavailable_p3_)
          (pcolour_p3_natural_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_smooth_natural_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4697,7 +4553,6 @@
          (pavailable_p3_)
          (pcolour_p3_natural_)
          (ptreatment_p3_glazed_)
-         (tdrmdo_grind_p3_smooth_natural_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4716,7 +4571,6 @@
          (pavailable_p3_)
          (pcolour_p3_white_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_p3_smooth_white_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4735,7 +4589,6 @@
          (pavailable_p3_)
          (pcolour_p3_white_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_smooth_white_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4754,7 +4607,6 @@
          (pavailable_p3_)
          (pcolour_p3_white_)
          (ptreatment_p3_glazed_)
-         (tdrmdo_grind_p3_smooth_white_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4774,7 +4626,6 @@
          (pavailable_p3_)
          (pcolour_p3_red_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_p3_smooth_red_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4793,7 +4644,6 @@
          (pavailable_p3_)
          (pcolour_p3_red_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_smooth_red_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4812,7 +4662,6 @@
          (pavailable_p3_)
          (pcolour_p3_red_)
          (ptreatment_p3_glazed_)
-         (tdrmdo_grind_p3_smooth_red_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4832,7 +4681,6 @@
          (pavailable_p3_)
          (pcolour_p3_mauve_)
          (ptreatment_p3_glazed_)
-         (tdrmdo_grind_p3_smooth_mauve_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4852,7 +4700,6 @@
          (pavailable_p3_)
          (pcolour_p3_mauve_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_p3_smooth_mauve_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4871,7 +4718,6 @@
          (pavailable_p3_)
          (pcolour_p3_mauve_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_smooth_mauve_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4890,7 +4736,6 @@
          (pavailable_p3_)
          (pcolour_p3_black_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_p3_smooth_black_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4909,7 +4754,6 @@
          (pavailable_p3_)
          (pcolour_p3_black_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_smooth_black_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4928,7 +4772,6 @@
          (pavailable_p3_)
          (pcolour_p3_black_)
          (ptreatment_p3_glazed_)
-         (tdrmdo_grind_p3_smooth_black_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4947,7 +4790,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pavailable_p3_)
-         (tdrmdo_immersion_varnish_p3_immersion_varnisher0_black_verysmooth_)
      )
      :effect (and 
          (pcolour_p3_black_)
@@ -4964,7 +4806,6 @@
          (ptreatment_p3_untreated_)
          (psurface_condition_p3_smooth_)
          (pavailable_p3_)
-         (tdrmdo_immersion_varnish_p3_immersion_varnisher0_black_smooth_)
      )
      :effect (and 
          (pcolour_p3_black_)
@@ -4982,7 +4823,6 @@
          (pcolour_p3_natural_)
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_verysmooth_natural_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -4999,7 +4839,6 @@
          (pavailable_p3_)
          (pcolour_p3_natural_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_rough_natural_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5017,7 +4856,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_red_)
-         (tdrmdo_plane_p3_smooth_red_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5035,7 +4873,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_red_)
-         (tdrmdo_plane_untreated_p3_planer0_smooth_red_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5053,7 +4890,6 @@
          (pavailable_p3_)
          (ptreatment_p3_glazed_)
          (pcolour_p3_red_)
-         (tdrmdo_plane_p3_smooth_red_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5072,7 +4908,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_natural_)
-         (tdrmdo_plane_p3_smooth_natural_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5089,7 +4924,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_natural_)
-         (tdrmdo_plane_untreated_p3_planer0_smooth_natural_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5106,7 +4940,6 @@
          (pavailable_p3_)
          (ptreatment_p3_glazed_)
          (pcolour_p3_natural_)
-         (tdrmdo_plane_p3_smooth_natural_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5124,7 +4957,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_white_)
-         (tdrmdo_plane_p3_smooth_white_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5142,7 +4974,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_white_)
-         (tdrmdo_plane_untreated_p3_planer0_smooth_white_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5160,7 +4991,6 @@
          (pavailable_p3_)
          (ptreatment_p3_glazed_)
          (pcolour_p3_white_)
-         (tdrmdo_plane_p3_smooth_white_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5179,7 +5009,6 @@
          (pavailable_p3_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_natural_)
-         (tdrmdo_plane_p3_smooth_natural_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5197,7 +5026,6 @@
          (pavailable_p3_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_white_)
-         (tdrmdo_plane_p3_smooth_white_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5216,7 +5044,6 @@
          (pavailable_p3_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_red_)
-         (tdrmdo_plane_p3_smooth_red_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5235,7 +5062,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_black_)
-         (tdrmdo_plane_p3_smooth_black_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5253,7 +5079,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_black_)
-         (tdrmdo_plane_untreated_p3_planer0_smooth_black_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5271,7 +5096,6 @@
          (pavailable_p3_)
          (ptreatment_p3_glazed_)
          (pcolour_p3_black_)
-         (tdrmdo_plane_p3_smooth_black_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5290,7 +5114,6 @@
          (pavailable_p3_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_black_)
-         (tdrmdo_plane_p3_smooth_black_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5309,7 +5132,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_mauve_)
-         (tdrmdo_plane_p3_smooth_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5327,7 +5149,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_mauve_)
-         (tdrmdo_plane_untreated_p3_planer0_smooth_mauve_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5345,7 +5166,6 @@
          (pavailable_p3_)
          (ptreatment_p3_glazed_)
          (pcolour_p3_mauve_)
-         (tdrmdo_plane_p3_smooth_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5364,7 +5184,6 @@
          (pavailable_p3_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_mauve_)
-         (tdrmdo_plane_p3_smooth_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5382,7 +5201,6 @@
          (psurface_condition_p2_verysmooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_immersion_varnish_p2_immersion_varnisher0_black_verysmooth_)
      )
      :effect (and 
          (pcolour_p2_black_)
@@ -5399,7 +5217,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_immersion_varnish_p2_immersion_varnisher0_black_smooth_)
      )
      :effect (and 
          (pcolour_p2_black_)
@@ -5416,7 +5233,6 @@
          (psurface_condition_p0_verysmooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_immersion_varnish_p0_immersion_varnisher0_black_verysmooth_)
      )
      :effect (and 
          (pcolour_p0_black_)
@@ -5433,7 +5249,6 @@
          (psurface_condition_p0_smooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_immersion_varnish_p0_immersion_varnisher0_black_smooth_)
      )
      :effect (and 
          (pcolour_p0_black_)
@@ -5450,7 +5265,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_immersion_varnish_p1_immersion_varnisher0_black_smooth_)
      )
      :effect (and 
          (pcolour_p1_black_)
@@ -5467,7 +5281,6 @@
          (psurface_condition_p1_verysmooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_immersion_varnish_p1_immersion_varnisher0_black_verysmooth_)
      )
      :effect (and 
          (pcolour_p1_black_)
@@ -5484,7 +5297,6 @@
          (ptreatment_p4_untreated_)
          (psurface_condition_p4_smooth_)
          (pavailable_p4_)
-         (tdrmdo_immersion_varnish_p4_immersion_varnisher0_black_smooth_)
      )
      :effect (and 
          (pcolour_p4_black_)
@@ -5501,7 +5313,6 @@
          (psurface_condition_p4_verysmooth_)
          (ptreatment_p4_untreated_)
          (pavailable_p4_)
-         (tdrmdo_immersion_varnish_p4_immersion_varnisher0_black_verysmooth_)
      )
      :effect (and 
          (pcolour_p4_black_)
@@ -5518,7 +5329,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pavailable_p3_)
-         (tdrmdo_immersion_varnish_p3_immersion_varnisher0_mauve_verysmooth_)
      )
      :effect (and 
          (pcolour_p3_mauve_)
@@ -5535,7 +5345,6 @@
          (ptreatment_p3_untreated_)
          (psurface_condition_p3_smooth_)
          (pavailable_p3_)
-         (tdrmdo_immersion_varnish_p3_immersion_varnisher0_mauve_smooth_)
      )
      :effect (and 
          (pcolour_p3_mauve_)
@@ -5552,7 +5361,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pavailable_p3_)
-         (tdrmdo_spray_varnish_p3_spray_varnisher0_mauve_verysmooth_)
      )
      :effect (and 
          (pcolour_p3_mauve_)
@@ -5569,7 +5377,6 @@
          (ptreatment_p3_untreated_)
          (psurface_condition_p3_smooth_)
          (pavailable_p3_)
-         (tdrmdo_spray_varnish_p3_spray_varnisher0_mauve_smooth_)
      )
      :effect (and 
          (pcolour_p3_mauve_)
@@ -5586,7 +5393,6 @@
          (psurface_condition_p2_verysmooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_immersion_varnish_p2_immersion_varnisher0_mauve_verysmooth_)
      )
      :effect (and 
          (pcolour_p2_mauve_)
@@ -5603,7 +5409,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_immersion_varnish_p2_immersion_varnisher0_mauve_smooth_)
      )
      :effect (and 
          (pcolour_p2_mauve_)
@@ -5620,7 +5425,6 @@
          (psurface_condition_p0_verysmooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_immersion_varnish_p0_immersion_varnisher0_mauve_verysmooth_)
      )
      :effect (and 
          (pcolour_p0_mauve_)
@@ -5637,7 +5441,6 @@
          (psurface_condition_p0_smooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_immersion_varnish_p0_immersion_varnisher0_mauve_smooth_)
      )
      :effect (and 
          (pcolour_p0_mauve_)
@@ -5654,7 +5457,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_immersion_varnish_p1_immersion_varnisher0_mauve_smooth_)
      )
      :effect (and 
          (pcolour_p1_mauve_)
@@ -5671,7 +5473,6 @@
          (psurface_condition_p1_verysmooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_immersion_varnish_p1_immersion_varnisher0_mauve_verysmooth_)
      )
      :effect (and 
          (pcolour_p1_mauve_)
@@ -5688,7 +5489,6 @@
          (ptreatment_p4_untreated_)
          (psurface_condition_p4_smooth_)
          (pavailable_p4_)
-         (tdrmdo_immersion_varnish_p4_immersion_varnisher0_mauve_smooth_)
      )
      :effect (and 
          (pcolour_p4_mauve_)
@@ -5705,7 +5505,6 @@
          (psurface_condition_p4_verysmooth_)
          (ptreatment_p4_untreated_)
          (pavailable_p4_)
-         (tdrmdo_immersion_varnish_p4_immersion_varnisher0_mauve_verysmooth_)
      )
      :effect (and 
          (pcolour_p4_mauve_)
@@ -5722,7 +5521,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_spray_varnish_p1_spray_varnisher0_mauve_smooth_)
      )
      :effect (and 
          (pcolour_p1_mauve_)
@@ -5739,7 +5537,6 @@
          (psurface_condition_p1_verysmooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_spray_varnish_p1_spray_varnisher0_mauve_verysmooth_)
      )
      :effect (and 
          (pcolour_p1_mauve_)
@@ -5756,7 +5553,6 @@
          (ptreatment_p4_untreated_)
          (psurface_condition_p4_smooth_)
          (pavailable_p4_)
-         (tdrmdo_spray_varnish_p4_spray_varnisher0_mauve_smooth_)
      )
      :effect (and 
          (pcolour_p4_mauve_)
@@ -5773,7 +5569,6 @@
          (psurface_condition_p4_verysmooth_)
          (ptreatment_p4_untreated_)
          (pavailable_p4_)
-         (tdrmdo_spray_varnish_p4_spray_varnisher0_mauve_verysmooth_)
      )
      :effect (and 
          (pcolour_p4_mauve_)
@@ -5790,7 +5585,6 @@
          (psurface_condition_p0_verysmooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_spray_varnish_p0_spray_varnisher0_mauve_verysmooth_)
      )
      :effect (and 
          (pcolour_p0_mauve_)
@@ -5807,7 +5601,6 @@
          (psurface_condition_p0_smooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_spray_varnish_p0_spray_varnisher0_mauve_smooth_)
      )
      :effect (and 
          (pcolour_p0_mauve_)
@@ -5824,7 +5617,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_spray_varnish_p2_spray_varnisher0_mauve_smooth_)
      )
      :effect (and 
          (pcolour_p2_mauve_)
@@ -5841,7 +5633,6 @@
          (psurface_condition_p2_verysmooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_spray_varnish_p2_spray_varnisher0_mauve_verysmooth_)
      )
      :effect (and 
          (pcolour_p2_mauve_)
@@ -5858,7 +5649,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pavailable_p3_)
-         (tdrmdo_immersion_varnish_p3_immersion_varnisher0_natural_verysmooth_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5874,7 +5664,6 @@
          (ptreatment_p3_untreated_)
          (psurface_condition_p3_smooth_)
          (pavailable_p3_)
-         (tdrmdo_immersion_varnish_p3_immersion_varnisher0_natural_smooth_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5890,7 +5679,6 @@
          (ptreatment_p3_untreated_)
          (psurface_condition_p3_smooth_)
          (pavailable_p3_)
-         (tdrmdo_spray_varnish_p3_spray_varnisher0_natural_smooth_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5906,7 +5694,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pavailable_p3_)
-         (tdrmdo_spray_varnish_p3_spray_varnisher0_natural_verysmooth_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -5922,7 +5709,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_immersion_varnish_p2_immersion_varnisher0_natural_smooth_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -5938,7 +5724,6 @@
          (psurface_condition_p2_verysmooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_immersion_varnish_p2_immersion_varnisher0_natural_verysmooth_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -5954,7 +5739,6 @@
          (psurface_condition_p0_verysmooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_immersion_varnish_p0_immersion_varnisher0_natural_verysmooth_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -5970,7 +5754,6 @@
          (psurface_condition_p0_smooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_immersion_varnish_p0_immersion_varnisher0_natural_smooth_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -5986,7 +5769,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_immersion_varnish_p1_immersion_varnisher0_natural_smooth_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -6002,7 +5784,6 @@
          (psurface_condition_p1_verysmooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_immersion_varnish_p1_immersion_varnisher0_natural_verysmooth_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -6018,7 +5799,6 @@
          (ptreatment_p4_untreated_)
          (psurface_condition_p4_smooth_)
          (pavailable_p4_)
-         (tdrmdo_immersion_varnish_p4_immersion_varnisher0_natural_smooth_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -6034,7 +5814,6 @@
          (psurface_condition_p4_verysmooth_)
          (ptreatment_p4_untreated_)
          (pavailable_p4_)
-         (tdrmdo_immersion_varnish_p4_immersion_varnisher0_natural_verysmooth_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -6050,7 +5829,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_spray_varnish_p1_spray_varnisher0_natural_smooth_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -6066,7 +5844,6 @@
          (psurface_condition_p1_verysmooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_spray_varnish_p1_spray_varnisher0_natural_verysmooth_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -6082,7 +5859,6 @@
          (psurface_condition_p0_verysmooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_spray_varnish_p0_spray_varnisher0_natural_verysmooth_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -6098,7 +5874,6 @@
          (psurface_condition_p0_smooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_spray_varnish_p0_spray_varnisher0_natural_smooth_)
      )
      :effect (and 
          (pcolour_p0_natural_)
@@ -6114,7 +5889,6 @@
          (psurface_condition_p4_verysmooth_)
          (ptreatment_p4_untreated_)
          (pavailable_p4_)
-         (tdrmdo_spray_varnish_p4_spray_varnisher0_natural_verysmooth_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -6130,7 +5904,6 @@
          (ptreatment_p4_untreated_)
          (psurface_condition_p4_smooth_)
          (pavailable_p4_)
-         (tdrmdo_spray_varnish_p4_spray_varnisher0_natural_smooth_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -6146,7 +5919,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_spray_varnish_p2_spray_varnisher0_natural_smooth_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -6162,7 +5934,6 @@
          (psurface_condition_p2_verysmooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_spray_varnish_p2_spray_varnisher0_natural_verysmooth_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -6178,7 +5949,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pavailable_p3_)
-         (tdrmdo_spray_varnish_p3_spray_varnisher0_white_verysmooth_)
      )
      :effect (and 
          (pcolour_p3_white_)
@@ -6195,7 +5965,6 @@
          (ptreatment_p3_untreated_)
          (psurface_condition_p3_smooth_)
          (pavailable_p3_)
-         (tdrmdo_spray_varnish_p3_spray_varnisher0_white_smooth_)
      )
      :effect (and 
          (pcolour_p3_white_)
@@ -6211,7 +5980,6 @@
      :precondition (and 
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_glaze_p3_glazer0_white_)
      )
      :effect (and 
          (pcolour_p3_white_)
@@ -6228,7 +5996,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_spray_varnish_p1_spray_varnisher0_white_smooth_)
      )
      :effect (and 
          (pcolour_p1_white_)
@@ -6245,7 +6012,6 @@
          (psurface_condition_p1_verysmooth_)
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
-         (tdrmdo_spray_varnish_p1_spray_varnisher0_white_verysmooth_)
      )
      :effect (and 
          (pcolour_p1_white_)
@@ -6262,7 +6028,6 @@
          (ptreatment_p4_untreated_)
          (psurface_condition_p4_smooth_)
          (pavailable_p4_)
-         (tdrmdo_spray_varnish_p4_spray_varnisher0_white_smooth_)
      )
      :effect (and 
          (pcolour_p4_white_)
@@ -6279,7 +6044,6 @@
          (psurface_condition_p4_verysmooth_)
          (ptreatment_p4_untreated_)
          (pavailable_p4_)
-         (tdrmdo_spray_varnish_p4_spray_varnisher0_white_verysmooth_)
      )
      :effect (and 
          (pcolour_p4_white_)
@@ -6296,7 +6060,6 @@
          (psurface_condition_p0_verysmooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_spray_varnish_p0_spray_varnisher0_white_verysmooth_)
      )
      :effect (and 
          (pcolour_p0_white_)
@@ -6313,7 +6076,6 @@
          (psurface_condition_p0_smooth_)
          (ptreatment_p0_untreated_)
          (pavailable_p0_)
-         (tdrmdo_spray_varnish_p0_spray_varnisher0_white_smooth_)
      )
      :effect (and 
          (pcolour_p0_white_)
@@ -6330,7 +6092,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_spray_varnish_p2_spray_varnisher0_white_smooth_)
      )
      :effect (and 
          (pcolour_p2_white_)
@@ -6347,7 +6108,6 @@
          (psurface_condition_p2_verysmooth_)
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
-         (tdrmdo_spray_varnish_p2_spray_varnisher0_white_verysmooth_)
      )
      :effect (and 
          (pcolour_p2_white_)
@@ -6363,7 +6123,6 @@
      :precondition (and 
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_glaze_p4_glazer0_white_)
      )
      :effect (and 
          (pcolour_p4_white_)
@@ -6379,7 +6138,6 @@
      :precondition (and 
          (pavailable_p0_)
          (ptreatment_p0_untreated_)
-         (tdrmdo_glaze_p0_glazer0_white_)
      )
      :effect (and 
          (pcolour_p0_white_)
@@ -6395,7 +6153,6 @@
      :precondition (and 
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_glaze_p2_glazer0_white_)
      )
      :effect (and 
          (pcolour_p2_white_)
@@ -6411,7 +6168,6 @@
      :precondition (and 
          (pavailable_p1_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_glaze_p1_glazer0_white_)
      )
      :effect (and 
          (pcolour_p1_white_)
@@ -6429,7 +6185,6 @@
          (pavailable_p3_)
          (pcolour_p3_red_)
          (ptreatment_p3_glazed_)
-         (tdrmdo_grind_p3_verysmooth_red_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6448,7 +6203,6 @@
          (pcolour_p3_natural_)
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_p3_verysmooth_natural_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6465,7 +6219,6 @@
          (pavailable_p3_)
          (pcolour_p3_natural_)
          (ptreatment_p3_glazed_)
-         (tdrmdo_grind_p3_verysmooth_natural_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6483,7 +6236,6 @@
          (pcolour_p3_white_)
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_p3_verysmooth_white_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6501,7 +6253,6 @@
          (pcolour_p3_white_)
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_verysmooth_white_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6519,7 +6270,6 @@
          (pavailable_p3_)
          (pcolour_p3_white_)
          (ptreatment_p3_glazed_)
-         (tdrmdo_grind_p3_verysmooth_white_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6538,7 +6288,6 @@
          (pcolour_p3_red_)
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_p3_verysmooth_red_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6556,7 +6305,6 @@
          (pcolour_p3_red_)
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_verysmooth_red_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6574,7 +6322,6 @@
          (psurface_condition_p3_verysmooth_)
          (pcolour_p3_mauve_)
          (ptreatment_p3_glazed_)
-         (tdrmdo_grind_p3_verysmooth_mauve_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6593,7 +6340,6 @@
          (psurface_condition_p3_verysmooth_)
          (pcolour_p3_mauve_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_p3_verysmooth_mauve_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6611,7 +6357,6 @@
          (psurface_condition_p3_verysmooth_)
          (pcolour_p3_mauve_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_verysmooth_mauve_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6629,7 +6374,6 @@
          (pavailable_p3_)
          (pcolour_p3_black_)
          (ptreatment_p3_glazed_)
-         (tdrmdo_grind_p3_verysmooth_black_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6648,7 +6392,6 @@
          (pcolour_p3_black_)
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_p3_verysmooth_black_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6666,7 +6409,6 @@
          (pcolour_p3_black_)
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_verysmooth_black_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6684,7 +6426,6 @@
          (pavailable_p3_)
          (ptreatment_p3_glazed_)
          (pcolour_p3_white_)
-         (tdrmdo_plane_p3_verysmooth_white_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6704,7 +6445,6 @@
          (pavailable_p3_)
          (ptreatment_p3_glazed_)
          (pcolour_p3_red_)
-         (tdrmdo_plane_p3_verysmooth_red_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6724,7 +6464,6 @@
          (pavailable_p3_)
          (ptreatment_p3_glazed_)
          (pcolour_p3_natural_)
-         (tdrmdo_plane_p3_verysmooth_natural_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6743,7 +6482,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_natural_)
-         (tdrmdo_plane_p3_verysmooth_natural_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6761,7 +6499,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_natural_)
-         (tdrmdo_plane_untreated_p3_planer0_verysmooth_natural_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6779,7 +6516,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_white_)
-         (tdrmdo_plane_p3_verysmooth_white_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6798,7 +6534,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_white_)
-         (tdrmdo_plane_untreated_p3_planer0_verysmooth_white_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6817,7 +6552,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_red_)
-         (tdrmdo_plane_p3_verysmooth_red_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6836,7 +6570,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_red_)
-         (tdrmdo_plane_untreated_p3_planer0_verysmooth_red_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6855,7 +6588,6 @@
          (pavailable_p3_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_red_)
-         (tdrmdo_plane_p3_verysmooth_red_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6875,7 +6607,6 @@
          (pavailable_p3_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_natural_)
-         (tdrmdo_plane_p3_verysmooth_natural_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6894,7 +6625,6 @@
          (pavailable_p3_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_white_)
-         (tdrmdo_plane_p3_verysmooth_white_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6914,7 +6644,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_black_)
-         (tdrmdo_plane_p3_verysmooth_black_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6933,7 +6662,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_black_)
-         (tdrmdo_plane_untreated_p3_planer0_verysmooth_black_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6952,7 +6680,6 @@
          (pavailable_p3_)
          (ptreatment_p3_glazed_)
          (pcolour_p3_black_)
-         (tdrmdo_plane_p3_verysmooth_black_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6972,7 +6699,6 @@
          (pavailable_p3_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_black_)
-         (tdrmdo_plane_p3_verysmooth_black_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -6992,7 +6718,6 @@
          (ptreatment_p3_varnished_)
          (psurface_condition_p3_verysmooth_)
          (pcolour_p3_mauve_)
-         (tdrmdo_plane_p3_verysmooth_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7012,7 +6737,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_mauve_)
-         (tdrmdo_plane_p3_verysmooth_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7031,7 +6755,6 @@
          (psurface_condition_p3_verysmooth_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_mauve_)
-         (tdrmdo_plane_untreated_p3_planer0_verysmooth_mauve_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7050,7 +6773,6 @@
          (ptreatment_p3_glazed_)
          (psurface_condition_p3_verysmooth_)
          (pcolour_p3_mauve_)
-         (tdrmdo_plane_p3_verysmooth_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7070,7 +6792,6 @@
          (psurface_condition_p3_rough_)
          (pcolour_p3_white_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_rough_white_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7089,7 +6810,6 @@
          (pavailable_p3_)
          (pcolour_p3_red_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_rough_red_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7108,7 +6828,6 @@
          (pavailable_p3_)
          (pcolour_p3_black_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_rough_black_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7127,7 +6846,6 @@
          (pavailable_p3_)
          (pcolour_p3_mauve_)
          (ptreatment_p3_untreated_)
-         (tdrmdo_grind_untreated_p3_grinder0_rough_mauve_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7146,7 +6864,6 @@
          (pavailable_p3_)
          (ptreatment_p3_glazed_)
          (pcolour_p3_red_)
-         (tdrmdo_plane_p3_rough_red_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7166,7 +6883,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_red_)
-         (tdrmdo_plane_p3_rough_red_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7185,7 +6901,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_red_)
-         (tdrmdo_plane_untreated_p3_planer0_rough_red_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7204,7 +6919,6 @@
          (ptreatment_p3_glazed_)
          (psurface_condition_p3_rough_)
          (pcolour_p3_white_)
-         (tdrmdo_plane_p3_rough_white_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7224,7 +6938,6 @@
          (ptreatment_p3_untreated_)
          (psurface_condition_p3_rough_)
          (pcolour_p3_white_)
-         (tdrmdo_plane_p3_rough_white_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7243,7 +6956,6 @@
          (ptreatment_p3_untreated_)
          (psurface_condition_p3_rough_)
          (pcolour_p3_white_)
-         (tdrmdo_plane_untreated_p3_planer0_rough_white_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7262,7 +6974,6 @@
          (pavailable_p3_)
          (ptreatment_p3_glazed_)
          (pcolour_p3_natural_)
-         (tdrmdo_plane_p3_rough_natural_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7281,7 +6992,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_natural_)
-         (tdrmdo_plane_p3_rough_natural_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7299,7 +7009,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_natural_)
-         (tdrmdo_plane_untreated_p3_planer0_rough_natural_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7317,7 +7026,6 @@
          (psurface_condition_p3_rough_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_natural_)
-         (tdrmdo_plane_p3_rough_natural_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7336,7 +7044,6 @@
          (psurface_condition_p3_rough_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_white_)
-         (tdrmdo_plane_p3_rough_white_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7356,7 +7063,6 @@
          (psurface_condition_p3_rough_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_red_)
-         (tdrmdo_plane_p3_rough_red_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7376,7 +7082,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_black_)
-         (tdrmdo_plane_p3_rough_black_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7395,7 +7100,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_black_)
-         (tdrmdo_plane_untreated_p3_planer0_rough_black_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7414,7 +7118,6 @@
          (pavailable_p3_)
          (ptreatment_p3_glazed_)
          (pcolour_p3_black_)
-         (tdrmdo_plane_p3_rough_black_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7434,7 +7137,6 @@
          (psurface_condition_p3_rough_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_black_)
-         (tdrmdo_plane_p3_rough_black_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7454,7 +7156,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_mauve_)
-         (tdrmdo_plane_p3_rough_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7473,7 +7174,6 @@
          (pavailable_p3_)
          (ptreatment_p3_untreated_)
          (pcolour_p3_mauve_)
-         (tdrmdo_plane_untreated_p3_planer0_rough_mauve_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7492,7 +7192,6 @@
          (pavailable_p3_)
          (ptreatment_p3_glazed_)
          (pcolour_p3_mauve_)
-         (tdrmdo_plane_p3_rough_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7512,7 +7211,6 @@
          (psurface_condition_p3_rough_)
          (ptreatment_p3_varnished_)
          (pcolour_p3_mauve_)
-         (tdrmdo_plane_p3_rough_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p3_natural_)
@@ -7531,7 +7229,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b3_highspeed_saw0_)
          (pboardsize_b3_s6_)
-         (tdrmcut_board_small_b3_p3_highspeed_saw0_pine_rough_s6_s5_)
      )
      :effect (and 
          (pboardsize_b3_s5_)
@@ -7549,7 +7246,6 @@
      :precondition (and 
          (punused_p3_)
          (pin_highspeed_saw_b3_highspeed_saw0_)
-         (tdrmcut_board_small_b3_p3_highspeed_saw0_pine_rough_s7_s6_)
      )
      :effect (and 
          (pboardsize_b3_s6_)
@@ -7568,7 +7264,6 @@
          (pin_highspeed_saw_b3_highspeed_saw0_)
          (punused_p3_)
          (pboardsize_b3_s4_)
-         (tdrmcut_board_small_b3_p3_highspeed_saw0_pine_rough_s4_s3_)
      )
      :effect (and 
          (pboardsize_b3_s3_)
@@ -7587,7 +7282,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b3_highspeed_saw0_)
          (pboardsize_b3_s5_)
-         (tdrmcut_board_small_b3_p3_highspeed_saw0_pine_rough_s5_s4_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -7606,7 +7300,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b3_highspeed_saw0_)
          (pboardsize_b3_s2_)
-         (tdrmcut_board_small_b3_p3_highspeed_saw0_pine_rough_s2_s1_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -7625,7 +7318,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b3_highspeed_saw0_)
          (pboardsize_b3_s3_)
-         (tdrmcut_board_small_b3_p3_highspeed_saw0_pine_rough_s3_s2_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -7644,7 +7336,6 @@
          (pin_highspeed_saw_b3_highspeed_saw0_)
          (punused_p3_)
          (pboardsize_b3_s1_)
-         (tdrmcut_board_small_b3_p3_highspeed_saw0_pine_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -7660,7 +7351,6 @@
      :parameters ()
      :precondition (and 
          (pin_highspeed_saw_b3_highspeed_saw0_)
-         (tdrmunload_highspeed_saw_b3_highspeed_saw0_)
      )
      :effect (and 
          (pempty_highspeed_saw0_)
@@ -7675,7 +7365,6 @@
      :precondition (and 
          (pavailable_b3_)
          (pempty_highspeed_saw0_)
-         (tdrmload_highspeed_saw_b3_highspeed_saw0_)
      )
      :effect (and 
          (pin_highspeed_saw_b3_highspeed_saw0_)
@@ -7690,7 +7379,6 @@
      :precondition (and 
          (punused_p3_)
          (pavailable_b3_)
-         (tdrmdo_saw_small_b3_p3_pine_rough_s7_s6_)
      )
      :effect (and 
          (pboardsize_b3_s6_)
@@ -7709,7 +7397,6 @@
          (punused_p3_)
          (pavailable_b3_)
          (pboardsize_b3_s5_)
-         (tdrmdo_saw_small_b3_p3_pine_rough_s5_s4_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -7728,7 +7415,6 @@
          (pavailable_b3_)
          (punused_p3_)
          (pboardsize_b3_s4_)
-         (tdrmdo_saw_small_b3_p3_pine_rough_s4_s3_)
      )
      :effect (and 
          (pboardsize_b3_s3_)
@@ -7747,7 +7433,6 @@
          (punused_p3_)
          (pavailable_b3_)
          (pboardsize_b3_s3_)
-         (tdrmdo_saw_small_b3_p3_pine_rough_s3_s2_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -7766,7 +7451,6 @@
          (punused_p3_)
          (pavailable_b3_)
          (pboardsize_b3_s2_)
-         (tdrmdo_saw_small_b3_p3_pine_rough_s2_s1_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -7785,7 +7469,6 @@
          (pavailable_b3_)
          (punused_p3_)
          (pboardsize_b3_s1_)
-         (tdrmdo_saw_small_b3_p3_pine_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -7803,7 +7486,6 @@
          (punused_p3_)
          (pavailable_b3_)
          (pboardsize_b3_s6_)
-         (tdrmdo_saw_small_b3_p3_pine_rough_s6_s5_)
      )
      :effect (and 
          (pboardsize_b3_s5_)
@@ -7822,7 +7504,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b0_highspeed_saw0_)
          (pboardsize_b0_s3_)
-         (tdrmcut_board_small_b0_p3_highspeed_saw0_beech_rough_s3_s2_)
      )
      :effect (and 
          (pboardsize_b0_s2_)
@@ -7842,7 +7523,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b0_highspeed_saw0_)
          (pboardsize_b0_s2_)
-         (tdrmcut_board_small_b0_p3_highspeed_saw0_beech_rough_s2_s1_)
      )
      :effect (and 
          (pboardsize_b0_s1_)
@@ -7862,7 +7542,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b0_highspeed_saw0_)
          (pboardsize_b0_s5_)
-         (tdrmcut_board_small_b0_p3_highspeed_saw0_beech_rough_s5_s4_)
      )
      :effect (and 
          (pwood_p3_beech_)
@@ -7881,7 +7560,6 @@
      :precondition (and 
          (punused_p3_)
          (pin_highspeed_saw_b0_highspeed_saw0_)
-         (tdrmcut_board_small_b0_p3_highspeed_saw0_beech_rough_s6_s5_)
      )
      :effect (and 
          (pboardsize_b0_s5_)
@@ -7901,7 +7579,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b0_highspeed_saw0_)
          (pboardsize_b0_s4_)
-         (tdrmcut_board_small_b0_p3_highspeed_saw0_beech_rough_s4_s3_)
      )
      :effect (and 
          (pboardsize_b0_s3_)
@@ -7921,7 +7598,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b0_highspeed_saw0_)
          (pboardsize_b0_s1_)
-         (tdrmcut_board_small_b0_p3_highspeed_saw0_beech_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -7938,7 +7614,6 @@
      :parameters ()
      :precondition (and 
          (pin_highspeed_saw_b0_highspeed_saw0_)
-         (tdrmunload_highspeed_saw_b0_highspeed_saw0_)
      )
      :effect (and 
          (pempty_highspeed_saw0_)
@@ -7953,7 +7628,6 @@
      :precondition (and 
          (pavailable_b0_)
          (pempty_highspeed_saw0_)
-         (tdrmload_highspeed_saw_b0_highspeed_saw0_)
      )
      :effect (and 
          (pin_highspeed_saw_b0_highspeed_saw0_)
@@ -7968,7 +7642,6 @@
      :precondition (and 
          (punused_p3_)
          (pavailable_b0_)
-         (tdrmdo_saw_small_b0_p3_beech_rough_s6_s5_)
      )
      :effect (and 
          (pboardsize_b0_s5_)
@@ -7988,7 +7661,6 @@
          (punused_p3_)
          (pavailable_b0_)
          (pboardsize_b0_s5_)
-         (tdrmdo_saw_small_b0_p3_beech_rough_s5_s4_)
      )
      :effect (and 
          (pwood_p3_beech_)
@@ -8008,7 +7680,6 @@
          (punused_p3_)
          (pavailable_b0_)
          (pboardsize_b0_s4_)
-         (tdrmdo_saw_small_b0_p3_beech_rough_s4_s3_)
      )
      :effect (and 
          (pboardsize_b0_s3_)
@@ -8028,7 +7699,6 @@
          (punused_p3_)
          (pavailable_b0_)
          (pboardsize_b0_s2_)
-         (tdrmdo_saw_small_b0_p3_beech_rough_s2_s1_)
      )
      :effect (and 
          (pboardsize_b0_s1_)
@@ -8048,7 +7718,6 @@
          (punused_p3_)
          (pavailable_b0_)
          (pboardsize_b0_s1_)
-         (tdrmdo_saw_small_b0_p3_beech_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -8067,7 +7736,6 @@
          (punused_p3_)
          (pavailable_b0_)
          (pboardsize_b0_s3_)
-         (tdrmdo_saw_small_b0_p3_beech_rough_s3_s2_)
      )
      :effect (and 
          (pboardsize_b0_s2_)
@@ -8087,7 +7755,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b2_highspeed_saw0_)
          (pboardsize_b2_s4_)
-         (tdrmcut_board_small_b2_p3_highspeed_saw0_oak_rough_s4_s3_)
      )
      :effect (and 
          (pboardsize_b2_s3_)
@@ -8105,7 +7772,6 @@
      :precondition (and 
          (punused_p3_)
          (pin_highspeed_saw_b2_highspeed_saw0_)
-         (tdrmcut_board_small_b2_p3_highspeed_saw0_oak_rough_s6_s5_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -8124,7 +7790,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b2_highspeed_saw0_)
          (pboardsize_b2_s5_)
-         (tdrmcut_board_small_b2_p3_highspeed_saw0_oak_rough_s5_s4_)
      )
      :effect (and 
          (pboardsize_b2_s4_)
@@ -8143,7 +7808,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b2_highspeed_saw0_)
          (pboardsize_b2_s3_)
-         (tdrmcut_board_small_b2_p3_highspeed_saw0_oak_rough_s3_s2_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -8162,7 +7826,6 @@
          (pin_highspeed_saw_b2_highspeed_saw0_)
          (punused_p3_)
          (pboardsize_b2_s2_)
-         (tdrmcut_board_small_b2_p3_highspeed_saw0_oak_rough_s2_s1_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -8181,7 +7844,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b2_highspeed_saw0_)
          (pboardsize_b2_s1_)
-         (tdrmcut_board_small_b2_p3_highspeed_saw0_oak_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -8197,7 +7859,6 @@
      :parameters ()
      :precondition (and 
          (pin_highspeed_saw_b2_highspeed_saw0_)
-         (tdrmunload_highspeed_saw_b2_highspeed_saw0_)
      )
      :effect (and 
          (pempty_highspeed_saw0_)
@@ -8212,7 +7873,6 @@
      :precondition (and 
          (pavailable_b2_)
          (pempty_highspeed_saw0_)
-         (tdrmload_highspeed_saw_b2_highspeed_saw0_)
      )
      :effect (and 
          (pin_highspeed_saw_b2_highspeed_saw0_)
@@ -8228,7 +7888,6 @@
          (punused_p3_)
          (pavailable_b2_)
          (pboardsize_b2_s5_)
-         (tdrmdo_saw_small_b2_p3_oak_rough_s5_s4_)
      )
      :effect (and 
          (pboardsize_b2_s4_)
@@ -8246,7 +7905,6 @@
      :precondition (and 
          (punused_p3_)
          (pavailable_b2_)
-         (tdrmdo_saw_small_b2_p3_oak_rough_s6_s5_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -8265,7 +7923,6 @@
          (punused_p3_)
          (pavailable_b2_)
          (pboardsize_b2_s4_)
-         (tdrmdo_saw_small_b2_p3_oak_rough_s4_s3_)
      )
      :effect (and 
          (pboardsize_b2_s3_)
@@ -8284,7 +7941,6 @@
          (punused_p3_)
          (pavailable_b2_)
          (pboardsize_b2_s3_)
-         (tdrmdo_saw_small_b2_p3_oak_rough_s3_s2_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -8303,7 +7959,6 @@
          (pavailable_b2_)
          (punused_p3_)
          (pboardsize_b2_s2_)
-         (tdrmdo_saw_small_b2_p3_oak_rough_s2_s1_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -8322,7 +7977,6 @@
          (punused_p3_)
          (pavailable_b2_)
          (pboardsize_b2_s1_)
-         (tdrmdo_saw_small_b2_p3_oak_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -8340,7 +7994,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b1_highspeed_saw0_)
          (pboardsize_b1_s4_)
-         (tdrmcut_board_small_b1_p3_highspeed_saw0_beech_rough_s4_s3_)
      )
      :effect (and 
          (pboardsize_b1_s3_)
@@ -8360,7 +8013,6 @@
          (pin_highspeed_saw_b1_highspeed_saw0_)
          (punused_p3_)
          (pboardsize_b1_s6_)
-         (tdrmcut_board_small_b1_p3_highspeed_saw0_beech_rough_s6_s5_)
      )
      :effect (and 
          (pwood_p3_beech_)
@@ -8380,7 +8032,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b1_highspeed_saw0_)
          (pboardsize_b1_s1_)
-         (tdrmcut_board_small_b1_p3_highspeed_saw0_beech_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -8399,7 +8050,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b1_highspeed_saw0_)
          (pboardsize_b1_s2_)
-         (tdrmcut_board_small_b1_p3_highspeed_saw0_beech_rough_s2_s1_)
      )
      :effect (and 
          (pwood_p3_beech_)
@@ -8418,7 +8068,6 @@
      :precondition (and 
          (punused_p3_)
          (pin_highspeed_saw_b1_highspeed_saw0_)
-         (tdrmcut_board_small_b1_p3_highspeed_saw0_beech_rough_s7_s6_)
      )
      :effect (and 
          (pboardsize_b1_s6_)
@@ -8438,7 +8087,6 @@
          (pin_highspeed_saw_b1_highspeed_saw0_)
          (punused_p3_)
          (pboardsize_b1_s5_)
-         (tdrmcut_board_small_b1_p3_highspeed_saw0_beech_rough_s5_s4_)
      )
      :effect (and 
          (pboardsize_b1_s4_)
@@ -8458,7 +8106,6 @@
          (punused_p3_)
          (pin_highspeed_saw_b1_highspeed_saw0_)
          (pboardsize_b1_s3_)
-         (tdrmcut_board_small_b1_p3_highspeed_saw0_beech_rough_s3_s2_)
      )
      :effect (and 
          (pboardsize_b1_s2_)
@@ -8476,7 +8123,6 @@
      :parameters ()
      :precondition (and 
          (pin_highspeed_saw_b1_highspeed_saw0_)
-         (tdrmunload_highspeed_saw_b1_highspeed_saw0_)
      )
      :effect (and 
          (pempty_highspeed_saw0_)
@@ -8491,7 +8137,6 @@
      :precondition (and 
          (pavailable_b1_)
          (pempty_highspeed_saw0_)
-         (tdrmload_highspeed_saw_b1_highspeed_saw0_)
      )
      :effect (and 
          (pin_highspeed_saw_b1_highspeed_saw0_)
@@ -8507,7 +8152,6 @@
          (punused_p3_)
          (pavailable_b1_)
          (pboardsize_b1_s6_)
-         (tdrmdo_saw_small_b1_p3_beech_rough_s6_s5_)
      )
      :effect (and 
          (pwood_p3_beech_)
@@ -8526,7 +8170,6 @@
      :precondition (and 
          (punused_p3_)
          (pavailable_b1_)
-         (tdrmdo_saw_small_b1_p3_beech_rough_s7_s6_)
      )
      :effect (and 
          (pboardsize_b1_s6_)
@@ -8546,7 +8189,6 @@
          (punused_p3_)
          (pavailable_b1_)
          (pboardsize_b1_s5_)
-         (tdrmdo_saw_small_b1_p3_beech_rough_s5_s4_)
      )
      :effect (and 
          (pboardsize_b1_s4_)
@@ -8566,7 +8208,6 @@
          (punused_p3_)
          (pavailable_b1_)
          (pboardsize_b1_s2_)
-         (tdrmdo_saw_small_b1_p3_beech_rough_s2_s1_)
      )
      :effect (and 
          (pwood_p3_beech_)
@@ -8586,7 +8227,6 @@
          (punused_p3_)
          (pavailable_b1_)
          (pboardsize_b1_s3_)
-         (tdrmdo_saw_small_b1_p3_beech_rough_s3_s2_)
      )
      :effect (and 
          (pboardsize_b1_s2_)
@@ -8606,7 +8246,6 @@
          (punused_p3_)
          (pavailable_b1_)
          (pboardsize_b1_s1_)
-         (tdrmdo_saw_small_b1_p3_beech_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p3_untreated_)
@@ -8625,7 +8264,6 @@
          (punused_p3_)
          (pavailable_b1_)
          (pboardsize_b1_s4_)
-         (tdrmdo_saw_small_b1_p3_beech_rough_s4_s3_)
      )
      :effect (and 
          (pboardsize_b1_s3_)
@@ -8646,7 +8284,6 @@
          (pavailable_p2_)
          (pcolour_p2_black_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_p2_verysmooth_black_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -8664,7 +8301,6 @@
          (pavailable_p2_)
          (pcolour_p2_black_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_verysmooth_black_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -8682,7 +8318,6 @@
          (pavailable_p2_)
          (pcolour_p2_mauve_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_p2_verysmooth_mauve_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -8700,7 +8335,6 @@
          (pavailable_p2_)
          (pcolour_p2_mauve_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_verysmooth_mauve_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -8718,7 +8352,6 @@
          (pavailable_p2_)
          (pcolour_p2_black_)
          (ptreatment_p2_glazed_)
-         (tdrmdo_grind_p2_verysmooth_black_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -8737,7 +8370,6 @@
          (psurface_condition_p2_verysmooth_)
          (pcolour_p2_natural_)
          (ptreatment_p2_glazed_)
-         (tdrmdo_grind_p2_verysmooth_natural_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -8755,7 +8387,6 @@
          (pavailable_p2_)
          (pcolour_p2_red_)
          (ptreatment_p2_glazed_)
-         (tdrmdo_grind_p2_verysmooth_red_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -8774,7 +8405,6 @@
          (pavailable_p2_)
          (pcolour_p2_red_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_p2_verysmooth_red_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -8792,7 +8422,6 @@
          (pavailable_p2_)
          (pcolour_p2_red_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_verysmooth_red_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -8810,7 +8439,6 @@
          (pavailable_p2_)
          (pcolour_p2_white_)
          (ptreatment_p2_glazed_)
-         (tdrmdo_grind_p2_verysmooth_white_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -8829,7 +8457,6 @@
          (pavailable_p2_)
          (pcolour_p2_white_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_p2_verysmooth_white_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -8847,7 +8474,6 @@
          (pavailable_p2_)
          (pcolour_p2_white_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_verysmooth_white_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -8865,7 +8491,6 @@
          (psurface_condition_p2_verysmooth_)
          (pcolour_p2_natural_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_p2_verysmooth_natural_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -8882,7 +8507,6 @@
          (psurface_condition_p2_verysmooth_)
          (pcolour_p2_natural_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_verysmooth_natural_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -8899,7 +8523,6 @@
          (pavailable_p2_)
          (pcolour_p2_mauve_)
          (ptreatment_p2_glazed_)
-         (tdrmdo_grind_p2_verysmooth_mauve_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -8918,7 +8541,6 @@
          (pcolour_p2_natural_)
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_smooth_natural_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -8936,7 +8558,6 @@
          (pavailable_p2_)
          (pcolour_p2_natural_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_rough_natural_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -8954,7 +8575,6 @@
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_red_)
-         (tdrmdo_plane_p2_verysmooth_red_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -8973,7 +8593,6 @@
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_red_)
-         (tdrmdo_plane_untreated_p2_planer0_verysmooth_red_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -8992,7 +8611,6 @@
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
          (pcolour_p2_white_)
-         (tdrmdo_plane_p2_verysmooth_white_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9011,7 +8629,6 @@
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
          (pcolour_p2_white_)
-         (tdrmdo_plane_untreated_p2_planer0_verysmooth_white_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9030,7 +8647,6 @@
          (ptreatment_p2_glazed_)
          (psurface_condition_p2_verysmooth_)
          (pcolour_p2_natural_)
-         (tdrmdo_plane_p2_verysmooth_natural_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9049,7 +8665,6 @@
          (ptreatment_p2_glazed_)
          (pavailable_p2_)
          (pcolour_p2_white_)
-         (tdrmdo_plane_p2_verysmooth_white_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9069,7 +8684,6 @@
          (pavailable_p2_)
          (ptreatment_p2_glazed_)
          (pcolour_p2_red_)
-         (tdrmdo_plane_p2_verysmooth_red_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9089,7 +8703,6 @@
          (ptreatment_p2_untreated_)
          (psurface_condition_p2_verysmooth_)
          (pcolour_p2_natural_)
-         (tdrmdo_plane_p2_verysmooth_natural_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9107,7 +8720,6 @@
          (ptreatment_p2_untreated_)
          (psurface_condition_p2_verysmooth_)
          (pcolour_p2_natural_)
-         (tdrmdo_plane_untreated_p2_planer0_verysmooth_natural_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9125,7 +8737,6 @@
          (psurface_condition_p2_verysmooth_)
          (ptreatment_p2_varnished_)
          (pcolour_p2_mauve_)
-         (tdrmdo_plane_p2_verysmooth_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9145,7 +8756,6 @@
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_black_)
-         (tdrmdo_plane_p2_verysmooth_black_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9164,7 +8774,6 @@
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_black_)
-         (tdrmdo_plane_untreated_p2_planer0_verysmooth_black_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9183,7 +8792,6 @@
          (pavailable_p2_)
          (ptreatment_p2_glazed_)
          (pcolour_p2_black_)
-         (tdrmdo_plane_p2_verysmooth_black_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9203,7 +8811,6 @@
          (psurface_condition_p2_verysmooth_)
          (ptreatment_p2_varnished_)
          (pcolour_p2_black_)
-         (tdrmdo_plane_p2_verysmooth_black_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9223,7 +8830,6 @@
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_mauve_)
-         (tdrmdo_plane_p2_verysmooth_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9242,7 +8848,6 @@
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_mauve_)
-         (tdrmdo_plane_untreated_p2_planer0_verysmooth_mauve_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9261,7 +8866,6 @@
          (pavailable_p2_)
          (ptreatment_p2_glazed_)
          (pcolour_p2_mauve_)
-         (tdrmdo_plane_p2_verysmooth_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9281,7 +8885,6 @@
          (psurface_condition_p2_verysmooth_)
          (ptreatment_p2_varnished_)
          (pcolour_p2_red_)
-         (tdrmdo_plane_p2_verysmooth_red_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9301,7 +8904,6 @@
          (ptreatment_p2_varnished_)
          (pavailable_p2_)
          (pcolour_p2_white_)
-         (tdrmdo_plane_p2_verysmooth_white_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9321,7 +8923,6 @@
          (psurface_condition_p2_verysmooth_)
          (ptreatment_p2_varnished_)
          (pcolour_p2_natural_)
-         (tdrmdo_plane_p2_verysmooth_natural_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9340,7 +8941,6 @@
          (psurface_condition_p2_smooth_)
          (pcolour_p2_black_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_p2_smooth_black_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9359,7 +8959,6 @@
          (psurface_condition_p2_smooth_)
          (pcolour_p2_black_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_smooth_black_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -9378,7 +8977,6 @@
          (psurface_condition_p2_smooth_)
          (pcolour_p2_black_)
          (ptreatment_p2_glazed_)
-         (tdrmdo_grind_p2_smooth_black_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9398,7 +8996,6 @@
          (pcolour_p2_mauve_)
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_p2_smooth_mauve_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9417,7 +9014,6 @@
          (pcolour_p2_mauve_)
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_smooth_mauve_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -9436,7 +9032,6 @@
          (pavailable_p2_)
          (pcolour_p2_mauve_)
          (ptreatment_p2_glazed_)
-         (tdrmdo_grind_p2_smooth_mauve_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9456,7 +9051,6 @@
          (pcolour_p2_natural_)
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_p2_smooth_natural_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9474,7 +9068,6 @@
          (pavailable_p2_)
          (pcolour_p2_natural_)
          (ptreatment_p2_glazed_)
-         (tdrmdo_grind_p2_smooth_natural_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9493,7 +9086,6 @@
          (pavailable_p2_)
          (pcolour_p2_red_)
          (ptreatment_p2_glazed_)
-         (tdrmdo_grind_p2_smooth_red_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9513,7 +9105,6 @@
          (pcolour_p2_red_)
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_p2_smooth_red_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9532,7 +9123,6 @@
          (pcolour_p2_red_)
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_smooth_red_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -9551,7 +9141,6 @@
          (pavailable_p2_)
          (pcolour_p2_white_)
          (ptreatment_p2_glazed_)
-         (tdrmdo_grind_p2_smooth_white_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9571,7 +9160,6 @@
          (pcolour_p2_white_)
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_p2_smooth_white_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9590,7 +9178,6 @@
          (pcolour_p2_white_)
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_smooth_white_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -9609,7 +9196,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_red_)
-         (tdrmdo_plane_p2_smooth_red_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9627,7 +9213,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_red_)
-         (tdrmdo_plane_untreated_p2_planer0_smooth_red_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9645,7 +9230,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_natural_)
-         (tdrmdo_plane_p2_smooth_natural_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9662,7 +9246,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_natural_)
-         (tdrmdo_plane_untreated_p2_planer0_smooth_natural_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9679,7 +9262,6 @@
          (pavailable_p2_)
          (ptreatment_p2_glazed_)
          (pcolour_p2_natural_)
-         (tdrmdo_plane_p2_smooth_natural_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9697,7 +9279,6 @@
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
          (pcolour_p2_white_)
-         (tdrmdo_plane_p2_smooth_white_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9715,7 +9296,6 @@
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
          (pcolour_p2_white_)
-         (tdrmdo_plane_untreated_p2_planer0_smooth_white_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9733,7 +9313,6 @@
          (ptreatment_p2_glazed_)
          (pavailable_p2_)
          (pcolour_p2_white_)
-         (tdrmdo_plane_p2_smooth_white_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9752,7 +9331,6 @@
          (pavailable_p2_)
          (ptreatment_p2_glazed_)
          (pcolour_p2_red_)
-         (tdrmdo_plane_p2_smooth_red_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9771,7 +9349,6 @@
          (pavailable_p2_)
          (ptreatment_p2_varnished_)
          (pcolour_p2_mauve_)
-         (tdrmdo_plane_p2_smooth_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9790,7 +9367,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_black_)
-         (tdrmdo_plane_p2_smooth_black_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9808,7 +9384,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_black_)
-         (tdrmdo_plane_untreated_p2_planer0_smooth_black_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9826,7 +9401,6 @@
          (ptreatment_p2_glazed_)
          (psurface_condition_p2_smooth_)
          (pcolour_p2_black_)
-         (tdrmdo_plane_p2_smooth_black_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9845,7 +9419,6 @@
          (ptreatment_p2_varnished_)
          (psurface_condition_p2_smooth_)
          (pcolour_p2_black_)
-         (tdrmdo_plane_p2_smooth_black_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9864,7 +9437,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_mauve_)
-         (tdrmdo_plane_p2_smooth_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9882,7 +9454,6 @@
          (psurface_condition_p2_smooth_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_mauve_)
-         (tdrmdo_plane_untreated_p2_planer0_smooth_mauve_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9900,7 +9471,6 @@
          (pavailable_p2_)
          (ptreatment_p2_glazed_)
          (pcolour_p2_mauve_)
-         (tdrmdo_plane_p2_smooth_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9919,7 +9489,6 @@
          (ptreatment_p2_varnished_)
          (pavailable_p2_)
          (pcolour_p2_white_)
-         (tdrmdo_plane_p2_smooth_white_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9938,7 +9507,6 @@
          (pavailable_p2_)
          (ptreatment_p2_varnished_)
          (pcolour_p2_red_)
-         (tdrmdo_plane_p2_smooth_red_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9957,7 +9525,6 @@
          (pavailable_p2_)
          (ptreatment_p2_varnished_)
          (pcolour_p2_natural_)
-         (tdrmdo_plane_p2_smooth_natural_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -9975,7 +9542,6 @@
          (psurface_condition_p2_rough_)
          (pcolour_p2_red_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_rough_red_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -9994,7 +9560,6 @@
          (pavailable_p2_)
          (pcolour_p2_white_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_rough_white_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10013,7 +9578,6 @@
          (pavailable_p2_)
          (pcolour_p2_mauve_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_rough_mauve_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10032,7 +9596,6 @@
          (pavailable_p2_)
          (pcolour_p2_black_)
          (ptreatment_p2_untreated_)
-         (tdrmdo_grind_untreated_p2_grinder0_rough_black_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10051,7 +9614,6 @@
          (pavailable_p2_)
          (ptreatment_p2_varnished_)
          (pcolour_p2_black_)
-         (tdrmdo_plane_p2_rough_black_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10071,7 +9633,6 @@
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_black_)
-         (tdrmdo_plane_p2_rough_black_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10090,7 +9651,6 @@
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_black_)
-         (tdrmdo_plane_untreated_p2_planer0_rough_black_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10109,7 +9669,6 @@
          (pavailable_p2_)
          (ptreatment_p2_glazed_)
          (pcolour_p2_black_)
-         (tdrmdo_plane_p2_rough_black_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10129,7 +9688,6 @@
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_mauve_)
-         (tdrmdo_plane_p2_rough_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10148,7 +9706,6 @@
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_mauve_)
-         (tdrmdo_plane_untreated_p2_planer0_rough_mauve_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10167,7 +9724,6 @@
          (pavailable_p2_)
          (ptreatment_p2_glazed_)
          (pcolour_p2_mauve_)
-         (tdrmdo_plane_p2_rough_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10187,7 +9743,6 @@
          (pavailable_p2_)
          (ptreatment_p2_varnished_)
          (pcolour_p2_mauve_)
-         (tdrmdo_plane_p2_rough_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10207,7 +9762,6 @@
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_natural_)
-         (tdrmdo_plane_p2_rough_natural_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10225,7 +9779,6 @@
          (pavailable_p2_)
          (ptreatment_p2_untreated_)
          (pcolour_p2_natural_)
-         (tdrmdo_plane_untreated_p2_planer0_rough_natural_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10243,7 +9796,6 @@
          (ptreatment_p2_glazed_)
          (psurface_condition_p2_rough_)
          (pcolour_p2_red_)
-         (tdrmdo_plane_p2_rough_red_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10263,7 +9815,6 @@
          (pavailable_p2_)
          (ptreatment_p2_glazed_)
          (pcolour_p2_natural_)
-         (tdrmdo_plane_p2_rough_natural_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10282,7 +9833,6 @@
          (ptreatment_p2_varnished_)
          (psurface_condition_p2_rough_)
          (pcolour_p2_red_)
-         (tdrmdo_plane_p2_rough_red_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10302,7 +9852,6 @@
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
          (pcolour_p2_white_)
-         (tdrmdo_plane_p2_rough_white_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10321,7 +9870,6 @@
          (ptreatment_p2_untreated_)
          (pavailable_p2_)
          (pcolour_p2_white_)
-         (tdrmdo_plane_untreated_p2_planer0_rough_white_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10340,7 +9888,6 @@
          (ptreatment_p2_glazed_)
          (pavailable_p2_)
          (pcolour_p2_white_)
-         (tdrmdo_plane_p2_rough_white_glazed_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10360,7 +9907,6 @@
          (pavailable_p2_)
          (ptreatment_p2_varnished_)
          (pcolour_p2_natural_)
-         (tdrmdo_plane_p2_rough_natural_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10379,7 +9925,6 @@
          (ptreatment_p2_untreated_)
          (psurface_condition_p2_rough_)
          (pcolour_p2_red_)
-         (tdrmdo_plane_p2_rough_red_untreated_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10398,7 +9943,6 @@
          (ptreatment_p2_untreated_)
          (psurface_condition_p2_rough_)
          (pcolour_p2_red_)
-         (tdrmdo_plane_untreated_p2_planer0_rough_red_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10417,7 +9961,6 @@
          (ptreatment_p2_varnished_)
          (pavailable_p2_)
          (pcolour_p2_white_)
-         (tdrmdo_plane_p2_rough_white_varnished_)
      )
      :effect (and 
          (pcolour_p2_natural_)
@@ -10436,7 +9979,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b0_highspeed_saw0_)
          (pboardsize_b0_s3_)
-         (tdrmcut_board_small_b0_p2_highspeed_saw0_beech_rough_s3_s2_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10455,7 +9997,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b0_highspeed_saw0_)
          (pboardsize_b0_s1_)
-         (tdrmcut_board_small_b0_p2_highspeed_saw0_beech_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10473,7 +10014,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b0_highspeed_saw0_)
          (pboardsize_b0_s2_)
-         (tdrmcut_board_small_b0_p2_highspeed_saw0_beech_rough_s2_s1_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10492,7 +10032,6 @@
          (pin_highspeed_saw_b0_highspeed_saw0_)
          (punused_p2_)
          (pboardsize_b0_s5_)
-         (tdrmcut_board_small_b0_p2_highspeed_saw0_beech_rough_s5_s4_)
      )
      :effect (and 
          (pboardsize_b0_s4_)
@@ -10510,7 +10049,6 @@
      :precondition (and 
          (punused_p2_)
          (pin_highspeed_saw_b0_highspeed_saw0_)
-         (tdrmcut_board_small_b0_p2_highspeed_saw0_beech_rough_s6_s5_)
      )
      :effect (and 
          (pboardsize_b0_s5_)
@@ -10529,7 +10067,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b0_highspeed_saw0_)
          (pboardsize_b0_s4_)
-         (tdrmcut_board_small_b0_p2_highspeed_saw0_beech_rough_s4_s3_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10547,7 +10084,6 @@
      :precondition (and 
          (punused_p2_)
          (pavailable_b0_)
-         (tdrmdo_saw_small_b0_p2_beech_rough_s6_s5_)
      )
      :effect (and 
          (pboardsize_b0_s5_)
@@ -10566,7 +10102,6 @@
          (punused_p2_)
          (pavailable_b0_)
          (pboardsize_b0_s5_)
-         (tdrmdo_saw_small_b0_p2_beech_rough_s5_s4_)
      )
      :effect (and 
          (pboardsize_b0_s4_)
@@ -10585,7 +10120,6 @@
          (punused_p2_)
          (pavailable_b0_)
          (pboardsize_b0_s4_)
-         (tdrmdo_saw_small_b0_p2_beech_rough_s4_s3_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10604,7 +10138,6 @@
          (punused_p2_)
          (pavailable_b0_)
          (pboardsize_b0_s2_)
-         (tdrmdo_saw_small_b0_p2_beech_rough_s2_s1_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10623,7 +10156,6 @@
          (punused_p2_)
          (pavailable_b0_)
          (pboardsize_b0_s1_)
-         (tdrmdo_saw_small_b0_p2_beech_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10641,7 +10173,6 @@
          (punused_p2_)
          (pavailable_b0_)
          (pboardsize_b0_s3_)
-         (tdrmdo_saw_small_b0_p2_beech_rough_s3_s2_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10660,7 +10191,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b3_highspeed_saw0_)
          (pboardsize_b3_s6_)
-         (tdrmcut_board_small_b3_p2_highspeed_saw0_pine_rough_s6_s5_)
      )
      :effect (and 
          (pboardsize_b3_s5_)
@@ -10678,7 +10208,6 @@
      :precondition (and 
          (punused_p2_)
          (pin_highspeed_saw_b3_highspeed_saw0_)
-         (tdrmcut_board_small_b3_p2_highspeed_saw0_pine_rough_s7_s6_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10697,7 +10226,6 @@
          (pin_highspeed_saw_b3_highspeed_saw0_)
          (punused_p2_)
          (pboardsize_b3_s5_)
-         (tdrmcut_board_small_b3_p2_highspeed_saw0_pine_rough_s5_s4_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10716,7 +10244,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b3_highspeed_saw0_)
          (pboardsize_b3_s4_)
-         (tdrmcut_board_small_b3_p2_highspeed_saw0_pine_rough_s4_s3_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10735,7 +10262,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b3_highspeed_saw0_)
          (pboardsize_b3_s2_)
-         (tdrmcut_board_small_b3_p2_highspeed_saw0_pine_rough_s2_s1_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10754,7 +10280,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b3_highspeed_saw0_)
          (pboardsize_b3_s3_)
-         (tdrmcut_board_small_b3_p2_highspeed_saw0_pine_rough_s3_s2_)
      )
      :effect (and 
          (pboardsize_b3_s2_)
@@ -10773,7 +10298,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b3_highspeed_saw0_)
          (pboardsize_b3_s1_)
-         (tdrmcut_board_small_b3_p2_highspeed_saw0_pine_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10791,7 +10315,6 @@
          (punused_p2_)
          (pavailable_b3_)
          (pboardsize_b3_s1_)
-         (tdrmdo_saw_small_b3_p2_pine_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10808,7 +10331,6 @@
      :precondition (and 
          (punused_p2_)
          (pavailable_b3_)
-         (tdrmdo_saw_small_b3_p2_pine_rough_s7_s6_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10827,7 +10349,6 @@
          (pavailable_b3_)
          (punused_p2_)
          (pboardsize_b3_s5_)
-         (tdrmdo_saw_small_b3_p2_pine_rough_s5_s4_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10846,7 +10367,6 @@
          (punused_p2_)
          (pavailable_b3_)
          (pboardsize_b3_s4_)
-         (tdrmdo_saw_small_b3_p2_pine_rough_s4_s3_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10865,7 +10385,6 @@
          (punused_p2_)
          (pavailable_b3_)
          (pboardsize_b3_s6_)
-         (tdrmdo_saw_small_b3_p2_pine_rough_s6_s5_)
      )
      :effect (and 
          (pboardsize_b3_s5_)
@@ -10884,7 +10403,6 @@
          (punused_p2_)
          (pavailable_b3_)
          (pboardsize_b3_s3_)
-         (tdrmdo_saw_small_b3_p2_pine_rough_s3_s2_)
      )
      :effect (and 
          (pboardsize_b3_s2_)
@@ -10903,7 +10421,6 @@
          (punused_p2_)
          (pavailable_b3_)
          (pboardsize_b3_s2_)
-         (tdrmdo_saw_small_b3_p2_pine_rough_s2_s1_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10922,7 +10439,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b2_highspeed_saw0_)
          (pboardsize_b2_s4_)
-         (tdrmcut_board_small_b2_p2_highspeed_saw0_oak_rough_s4_s3_)
      )
      :effect (and 
          (pboardsize_b2_s3_)
@@ -10941,7 +10457,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b2_highspeed_saw0_)
          (pboardsize_b2_s5_)
-         (tdrmcut_board_small_b2_p2_highspeed_saw0_oak_rough_s5_s4_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10960,7 +10475,6 @@
          (pin_highspeed_saw_b2_highspeed_saw0_)
          (punused_p2_)
          (pboardsize_b2_s3_)
-         (tdrmcut_board_small_b2_p2_highspeed_saw0_oak_rough_s3_s2_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10979,7 +10493,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b2_highspeed_saw0_)
          (pboardsize_b2_s1_)
-         (tdrmcut_board_small_b2_p2_highspeed_saw0_oak_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -10997,7 +10510,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b2_highspeed_saw0_)
          (pboardsize_b2_s2_)
-         (tdrmcut_board_small_b2_p2_highspeed_saw0_oak_rough_s2_s1_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -11015,7 +10527,6 @@
      :precondition (and 
          (punused_p2_)
          (pin_highspeed_saw_b2_highspeed_saw0_)
-         (tdrmcut_board_small_b2_p2_highspeed_saw0_oak_rough_s6_s5_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -11033,7 +10544,6 @@
      :precondition (and 
          (punused_p2_)
          (pavailable_b2_)
-         (tdrmdo_saw_small_b2_p2_oak_rough_s6_s5_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -11052,7 +10562,6 @@
          (punused_p2_)
          (pavailable_b2_)
          (pboardsize_b2_s5_)
-         (tdrmdo_saw_small_b2_p2_oak_rough_s5_s4_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -11071,7 +10580,6 @@
          (punused_p2_)
          (pavailable_b2_)
          (pboardsize_b2_s4_)
-         (tdrmdo_saw_small_b2_p2_oak_rough_s4_s3_)
      )
      :effect (and 
          (pboardsize_b2_s3_)
@@ -11090,7 +10598,6 @@
          (pavailable_b2_)
          (punused_p2_)
          (pboardsize_b2_s3_)
-         (tdrmdo_saw_small_b2_p2_oak_rough_s3_s2_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -11109,7 +10616,6 @@
          (punused_p2_)
          (pavailable_b2_)
          (pboardsize_b2_s2_)
-         (tdrmdo_saw_small_b2_p2_oak_rough_s2_s1_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -11128,7 +10634,6 @@
          (punused_p2_)
          (pavailable_b2_)
          (pboardsize_b2_s1_)
-         (tdrmdo_saw_small_b2_p2_oak_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -11146,7 +10651,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b1_highspeed_saw0_)
          (pboardsize_b1_s4_)
-         (tdrmcut_board_small_b1_p2_highspeed_saw0_beech_rough_s4_s3_)
      )
      :effect (and 
          (pboardsize_b1_s3_)
@@ -11165,7 +10669,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b1_highspeed_saw0_)
          (pboardsize_b1_s6_)
-         (tdrmcut_board_small_b1_p2_highspeed_saw0_beech_rough_s6_s5_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -11184,7 +10687,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b1_highspeed_saw0_)
          (pboardsize_b1_s1_)
-         (tdrmcut_board_small_b1_p2_highspeed_saw0_beech_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -11201,7 +10703,6 @@
      :precondition (and 
          (punused_p2_)
          (pin_highspeed_saw_b1_highspeed_saw0_)
-         (tdrmcut_board_small_b1_p2_highspeed_saw0_beech_rough_s7_s6_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -11220,7 +10721,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b1_highspeed_saw0_)
          (pboardsize_b1_s3_)
-         (tdrmcut_board_small_b1_p2_highspeed_saw0_beech_rough_s3_s2_)
      )
      :effect (and 
          (pboardsize_b1_s2_)
@@ -11239,7 +10739,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b1_highspeed_saw0_)
          (pboardsize_b1_s2_)
-         (tdrmcut_board_small_b1_p2_highspeed_saw0_beech_rough_s2_s1_)
      )
      :effect (and 
          (pboardsize_b1_s1_)
@@ -11258,7 +10757,6 @@
          (punused_p2_)
          (pin_highspeed_saw_b1_highspeed_saw0_)
          (pboardsize_b1_s5_)
-         (tdrmcut_board_small_b1_p2_highspeed_saw0_beech_rough_s5_s4_)
      )
      :effect (and 
          (pboardsize_b1_s4_)
@@ -11277,7 +10775,6 @@
          (punused_p2_)
          (pavailable_b1_)
          (pboardsize_b1_s6_)
-         (tdrmdo_saw_small_b1_p2_beech_rough_s6_s5_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -11295,7 +10792,6 @@
      :precondition (and 
          (punused_p2_)
          (pavailable_b1_)
-         (tdrmdo_saw_small_b1_p2_beech_rough_s7_s6_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -11314,7 +10810,6 @@
          (punused_p2_)
          (pavailable_b1_)
          (pboardsize_b1_s5_)
-         (tdrmdo_saw_small_b1_p2_beech_rough_s5_s4_)
      )
      :effect (and 
          (pboardsize_b1_s4_)
@@ -11333,7 +10828,6 @@
          (punused_p2_)
          (pavailable_b1_)
          (pboardsize_b1_s3_)
-         (tdrmdo_saw_small_b1_p2_beech_rough_s3_s2_)
      )
      :effect (and 
          (pboardsize_b1_s2_)
@@ -11352,7 +10846,6 @@
          (pavailable_b1_)
          (punused_p2_)
          (pboardsize_b1_s2_)
-         (tdrmdo_saw_small_b1_p2_beech_rough_s2_s1_)
      )
      :effect (and 
          (pboardsize_b1_s1_)
@@ -11371,7 +10864,6 @@
          (pavailable_b1_)
          (punused_p2_)
          (pboardsize_b1_s1_)
-         (tdrmdo_saw_small_b1_p2_beech_rough_s1_s0_)
      )
      :effect (and 
          (ptreatment_p2_untreated_)
@@ -11389,7 +10881,6 @@
          (punused_p2_)
          (pavailable_b1_)
          (pboardsize_b1_s4_)
-         (tdrmdo_saw_small_b1_p2_beech_rough_s4_s3_)
      )
      :effect (and 
          (pboardsize_b1_s3_)
@@ -11409,7 +10900,6 @@
          (pavailable_p1_)
          (pcolour_p1_black_)
          (ptreatment_p1_glazed_)
-         (tdrmdo_grind_p1_smooth_black_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11429,7 +10919,6 @@
          (pcolour_p1_mauve_)
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_p1_smooth_mauve_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11448,7 +10937,6 @@
          (pcolour_p1_mauve_)
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_smooth_mauve_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -11467,7 +10955,6 @@
          (pcolour_p1_black_)
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_p1_smooth_black_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11486,7 +10973,6 @@
          (pcolour_p1_black_)
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_smooth_black_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -11505,7 +10991,6 @@
          (pavailable_p1_)
          (pcolour_p1_mauve_)
          (ptreatment_p1_glazed_)
-         (tdrmdo_grind_p1_smooth_mauve_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11525,7 +11010,6 @@
          (pavailable_p1_)
          (pcolour_p1_red_)
          (ptreatment_p1_glazed_)
-         (tdrmdo_grind_p1_smooth_red_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11545,7 +11029,6 @@
          (pcolour_p1_red_)
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_p1_smooth_red_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11564,7 +11047,6 @@
          (pcolour_p1_red_)
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_smooth_red_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -11583,7 +11065,6 @@
          (pavailable_p1_)
          (pcolour_p1_white_)
          (ptreatment_p1_glazed_)
-         (tdrmdo_grind_p1_smooth_white_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11603,7 +11084,6 @@
          (pcolour_p1_white_)
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_p1_smooth_white_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11622,7 +11102,6 @@
          (pcolour_p1_white_)
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_smooth_white_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -11641,7 +11120,6 @@
          (pavailable_p1_)
          (pcolour_p1_natural_)
          (ptreatment_p1_glazed_)
-         (tdrmdo_grind_p1_smooth_natural_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11660,7 +11138,6 @@
          (pcolour_p1_natural_)
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_p1_smooth_natural_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11678,7 +11155,6 @@
          (pcolour_p1_natural_)
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_smooth_natural_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -11696,7 +11172,6 @@
          (psurface_condition_p1_verysmooth_)
          (pcolour_p1_natural_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_verysmooth_natural_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -11713,7 +11188,6 @@
          (pavailable_p1_)
          (pcolour_p1_natural_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_rough_natural_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -11731,7 +11205,6 @@
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
          (pcolour_p1_black_)
-         (tdrmdo_plane_p1_smooth_black_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11749,7 +11222,6 @@
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
          (pcolour_p1_black_)
-         (tdrmdo_plane_untreated_p1_planer0_smooth_black_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11767,7 +11239,6 @@
          (ptreatment_p1_glazed_)
          (pavailable_p1_)
          (pcolour_p1_black_)
-         (tdrmdo_plane_p1_smooth_black_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11786,7 +11257,6 @@
          (pavailable_p1_)
          (ptreatment_p1_varnished_)
          (pcolour_p1_red_)
-         (tdrmdo_plane_p1_smooth_red_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11805,7 +11275,6 @@
          (pavailable_p1_)
          (ptreatment_p1_varnished_)
          (pcolour_p1_natural_)
-         (tdrmdo_plane_p1_smooth_natural_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11823,7 +11292,6 @@
          (ptreatment_p1_varnished_)
          (pavailable_p1_)
          (pcolour_p1_black_)
-         (tdrmdo_plane_p1_smooth_black_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11842,7 +11310,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pcolour_p1_mauve_)
-         (tdrmdo_plane_p1_smooth_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11860,7 +11327,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pcolour_p1_mauve_)
-         (tdrmdo_plane_untreated_p1_planer0_smooth_mauve_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11878,7 +11344,6 @@
          (ptreatment_p1_varnished_)
          (pavailable_p1_)
          (pcolour_p1_white_)
-         (tdrmdo_plane_p1_smooth_white_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11897,7 +11362,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pcolour_p1_natural_)
-         (tdrmdo_plane_p1_smooth_natural_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11914,7 +11378,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pcolour_p1_natural_)
-         (tdrmdo_plane_untreated_p1_planer0_smooth_natural_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11931,7 +11394,6 @@
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
          (pcolour_p1_white_)
-         (tdrmdo_plane_p1_smooth_white_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11949,7 +11411,6 @@
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
          (pcolour_p1_white_)
-         (tdrmdo_plane_untreated_p1_planer0_smooth_white_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11967,7 +11428,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pcolour_p1_red_)
-         (tdrmdo_plane_p1_smooth_red_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -11985,7 +11445,6 @@
          (psurface_condition_p1_smooth_)
          (ptreatment_p1_untreated_)
          (pcolour_p1_red_)
-         (tdrmdo_plane_untreated_p1_planer0_smooth_red_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12003,7 +11462,6 @@
          (pavailable_p1_)
          (ptreatment_p1_glazed_)
          (pcolour_p1_natural_)
-         (tdrmdo_plane_p1_smooth_natural_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12021,7 +11479,6 @@
          (ptreatment_p1_glazed_)
          (pavailable_p1_)
          (pcolour_p1_white_)
-         (tdrmdo_plane_p1_smooth_white_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12040,7 +11497,6 @@
          (pavailable_p1_)
          (ptreatment_p1_glazed_)
          (pcolour_p1_red_)
-         (tdrmdo_plane_p1_smooth_red_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12059,7 +11515,6 @@
          (pavailable_p1_)
          (ptreatment_p1_glazed_)
          (pcolour_p1_mauve_)
-         (tdrmdo_plane_p1_smooth_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12078,7 +11533,6 @@
          (pavailable_p1_)
          (ptreatment_p1_varnished_)
          (pcolour_p1_mauve_)
-         (tdrmdo_plane_p1_smooth_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12097,7 +11551,6 @@
          (pavailable_p1_)
          (pcolour_p1_black_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_p1_verysmooth_black_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12115,7 +11568,6 @@
          (pavailable_p1_)
          (pcolour_p1_black_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_verysmooth_black_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -12133,7 +11585,6 @@
          (pavailable_p1_)
          (pcolour_p1_mauve_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_p1_verysmooth_mauve_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12151,7 +11602,6 @@
          (pavailable_p1_)
          (pcolour_p1_mauve_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_verysmooth_mauve_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -12169,7 +11619,6 @@
          (pavailable_p1_)
          (pcolour_p1_black_)
          (ptreatment_p1_glazed_)
-         (tdrmdo_grind_p1_verysmooth_black_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12188,7 +11637,6 @@
          (pavailable_p1_)
          (pcolour_p1_mauve_)
          (ptreatment_p1_glazed_)
-         (tdrmdo_grind_p1_verysmooth_mauve_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12207,7 +11655,6 @@
          (psurface_condition_p1_verysmooth_)
          (pcolour_p1_natural_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_p1_verysmooth_natural_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12224,7 +11671,6 @@
          (psurface_condition_p1_verysmooth_)
          (pcolour_p1_natural_)
          (ptreatment_p1_glazed_)
-         (tdrmdo_grind_p1_verysmooth_natural_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12242,7 +11688,6 @@
          (pavailable_p1_)
          (pcolour_p1_white_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_p1_verysmooth_white_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12260,7 +11705,6 @@
          (pavailable_p1_)
          (pcolour_p1_white_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_verysmooth_white_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -12278,7 +11722,6 @@
          (pavailable_p1_)
          (pcolour_p1_white_)
          (ptreatment_p1_glazed_)
-         (tdrmdo_grind_p1_verysmooth_white_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12297,7 +11740,6 @@
          (pavailable_p1_)
          (pcolour_p1_red_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_p1_verysmooth_red_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12315,7 +11757,6 @@
          (pavailable_p1_)
          (pcolour_p1_red_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_verysmooth_red_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -12333,7 +11774,6 @@
          (pavailable_p1_)
          (pcolour_p1_red_)
          (ptreatment_p1_glazed_)
-         (tdrmdo_grind_p1_verysmooth_red_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12352,7 +11792,6 @@
          (pavailable_p1_)
          (ptreatment_p1_varnished_)
          (pcolour_p1_red_)
-         (tdrmdo_plane_p1_verysmooth_red_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12372,7 +11811,6 @@
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
          (pcolour_p1_black_)
-         (tdrmdo_plane_p1_verysmooth_black_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12391,7 +11829,6 @@
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
          (pcolour_p1_black_)
-         (tdrmdo_plane_untreated_p1_planer0_verysmooth_black_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12410,7 +11847,6 @@
          (ptreatment_p1_glazed_)
          (pavailable_p1_)
          (pcolour_p1_black_)
-         (tdrmdo_plane_p1_verysmooth_black_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12430,7 +11866,6 @@
          (ptreatment_p1_varnished_)
          (pavailable_p1_)
          (pcolour_p1_black_)
-         (tdrmdo_plane_p1_verysmooth_black_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12450,7 +11885,6 @@
          (ptreatment_p1_varnished_)
          (psurface_condition_p1_verysmooth_)
          (pcolour_p1_natural_)
-         (tdrmdo_plane_p1_verysmooth_natural_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12469,7 +11903,6 @@
          (pavailable_p1_)
          (ptreatment_p1_untreated_)
          (pcolour_p1_red_)
-         (tdrmdo_plane_p1_verysmooth_red_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12488,7 +11921,6 @@
          (pavailable_p1_)
          (ptreatment_p1_untreated_)
          (pcolour_p1_red_)
-         (tdrmdo_plane_untreated_p1_planer0_verysmooth_red_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12507,7 +11939,6 @@
          (ptreatment_p1_varnished_)
          (pavailable_p1_)
          (pcolour_p1_white_)
-         (tdrmdo_plane_p1_verysmooth_white_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12527,7 +11958,6 @@
          (pavailable_p1_)
          (ptreatment_p1_glazed_)
          (pcolour_p1_red_)
-         (tdrmdo_plane_p1_verysmooth_red_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12547,7 +11977,6 @@
          (ptreatment_p1_glazed_)
          (pavailable_p1_)
          (pcolour_p1_white_)
-         (tdrmdo_plane_p1_verysmooth_white_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12567,7 +11996,6 @@
          (ptreatment_p1_glazed_)
          (psurface_condition_p1_verysmooth_)
          (pcolour_p1_natural_)
-         (tdrmdo_plane_p1_verysmooth_natural_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12586,7 +12014,6 @@
          (pavailable_p1_)
          (ptreatment_p1_untreated_)
          (pcolour_p1_mauve_)
-         (tdrmdo_plane_p1_verysmooth_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12605,7 +12032,6 @@
          (pavailable_p1_)
          (ptreatment_p1_untreated_)
          (pcolour_p1_mauve_)
-         (tdrmdo_plane_untreated_p1_planer0_verysmooth_mauve_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12624,7 +12050,6 @@
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
          (pcolour_p1_white_)
-         (tdrmdo_plane_p1_verysmooth_white_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12643,7 +12068,6 @@
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
          (pcolour_p1_white_)
-         (tdrmdo_plane_untreated_p1_planer0_verysmooth_white_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12662,7 +12086,6 @@
          (ptreatment_p1_untreated_)
          (psurface_condition_p1_verysmooth_)
          (pcolour_p1_natural_)
-         (tdrmdo_plane_p1_verysmooth_natural_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12680,7 +12103,6 @@
          (ptreatment_p1_untreated_)
          (psurface_condition_p1_verysmooth_)
          (pcolour_p1_natural_)
-         (tdrmdo_plane_untreated_p1_planer0_verysmooth_natural_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12698,7 +12120,6 @@
          (pavailable_p1_)
          (ptreatment_p1_glazed_)
          (pcolour_p1_mauve_)
-         (tdrmdo_plane_p1_verysmooth_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12718,7 +12139,6 @@
          (pavailable_p1_)
          (ptreatment_p1_varnished_)
          (pcolour_p1_mauve_)
-         (tdrmdo_plane_p1_verysmooth_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12738,7 +12158,6 @@
          (psurface_condition_p1_rough_)
          (pcolour_p1_red_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_rough_red_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -12757,7 +12176,6 @@
          (pavailable_p1_)
          (pcolour_p1_white_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_rough_white_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -12776,7 +12194,6 @@
          (psurface_condition_p1_rough_)
          (pcolour_p1_mauve_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_rough_mauve_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -12795,7 +12212,6 @@
          (pavailable_p1_)
          (pcolour_p1_black_)
          (ptreatment_p1_untreated_)
-         (tdrmdo_grind_untreated_p1_grinder0_rough_black_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -12814,7 +12230,6 @@
          (pavailable_p1_)
          (ptreatment_p1_untreated_)
          (pcolour_p1_natural_)
-         (tdrmdo_plane_p1_rough_natural_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12832,7 +12247,6 @@
          (pavailable_p1_)
          (ptreatment_p1_untreated_)
          (pcolour_p1_natural_)
-         (tdrmdo_plane_untreated_p1_planer0_rough_natural_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12850,7 +12264,6 @@
          (ptreatment_p1_varnished_)
          (pavailable_p1_)
          (pcolour_p1_white_)
-         (tdrmdo_plane_p1_rough_white_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12870,7 +12283,6 @@
          (ptreatment_p1_glazed_)
          (pavailable_p1_)
          (pcolour_p1_white_)
-         (tdrmdo_plane_p1_rough_white_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12890,7 +12302,6 @@
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
          (pcolour_p1_white_)
-         (tdrmdo_plane_p1_rough_white_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12909,7 +12320,6 @@
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
          (pcolour_p1_white_)
-         (tdrmdo_plane_untreated_p1_planer0_rough_white_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12928,7 +12338,6 @@
          (pavailable_p1_)
          (ptreatment_p1_glazed_)
          (pcolour_p1_natural_)
-         (tdrmdo_plane_p1_rough_natural_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12947,7 +12356,6 @@
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
          (pcolour_p1_black_)
-         (tdrmdo_plane_p1_rough_black_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12966,7 +12374,6 @@
          (ptreatment_p1_untreated_)
          (pavailable_p1_)
          (pcolour_p1_black_)
-         (tdrmdo_plane_untreated_p1_planer0_rough_black_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -12985,7 +12392,6 @@
          (ptreatment_p1_glazed_)
          (pavailable_p1_)
          (pcolour_p1_black_)
-         (tdrmdo_plane_p1_rough_black_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -13005,7 +12411,6 @@
          (ptreatment_p1_varnished_)
          (pavailable_p1_)
          (pcolour_p1_black_)
-         (tdrmdo_plane_p1_rough_black_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -13025,7 +12430,6 @@
          (ptreatment_p1_untreated_)
          (psurface_condition_p1_rough_)
          (pcolour_p1_mauve_)
-         (tdrmdo_plane_p1_rough_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -13044,7 +12448,6 @@
          (ptreatment_p1_untreated_)
          (psurface_condition_p1_rough_)
          (pcolour_p1_mauve_)
-         (tdrmdo_plane_untreated_p1_planer0_rough_mauve_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -13063,7 +12466,6 @@
          (ptreatment_p1_varnished_)
          (psurface_condition_p1_rough_)
          (pcolour_p1_red_)
-         (tdrmdo_plane_p1_rough_red_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -13083,7 +12485,6 @@
          (ptreatment_p1_glazed_)
          (psurface_condition_p1_rough_)
          (pcolour_p1_red_)
-         (tdrmdo_plane_p1_rough_red_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -13103,7 +12504,6 @@
          (ptreatment_p1_untreated_)
          (psurface_condition_p1_rough_)
          (pcolour_p1_red_)
-         (tdrmdo_plane_p1_rough_red_untreated_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -13122,7 +12522,6 @@
          (ptreatment_p1_untreated_)
          (psurface_condition_p1_rough_)
          (pcolour_p1_red_)
-         (tdrmdo_plane_untreated_p1_planer0_rough_red_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -13141,7 +12540,6 @@
          (ptreatment_p1_glazed_)
          (psurface_condition_p1_rough_)
          (pcolour_p1_mauve_)
-         (tdrmdo_plane_p1_rough_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -13161,7 +12559,6 @@
          (ptreatment_p1_varnished_)
          (psurface_condition_p1_rough_)
          (pcolour_p1_mauve_)
-         (tdrmdo_plane_p1_rough_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -13181,7 +12578,6 @@
          (pavailable_p1_)
          (ptreatment_p1_varnished_)
          (pcolour_p1_natural_)
-         (tdrmdo_plane_p1_rough_natural_varnished_)
      )
      :effect (and 
          (pcolour_p1_natural_)
@@ -13199,7 +12595,6 @@
          (pavailable_b0_)
          (punused_p1_)
          (pboardsize_b0_s4_)
-         (tdrmdo_saw_medium_b0_p1_beech_rough_s4_s3_s2_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -13217,7 +12612,6 @@
      :precondition (and 
          (punused_p1_)
          (pavailable_b0_)
-         (tdrmdo_saw_medium_b0_p1_beech_rough_s6_s5_s4_)
      )
      :effect (and 
          (pboardsize_b0_s4_)
@@ -13236,7 +12630,6 @@
          (punused_p1_)
          (pavailable_b0_)
          (pboardsize_b0_s5_)
-         (tdrmdo_saw_medium_b0_p1_beech_rough_s5_s4_s3_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -13255,7 +12648,6 @@
          (punused_p1_)
          (pavailable_b0_)
          (pboardsize_b0_s2_)
-         (tdrmdo_saw_medium_b0_p1_beech_rough_s2_s1_s0_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -13273,7 +12665,6 @@
          (punused_p1_)
          (pavailable_b0_)
          (pboardsize_b0_s3_)
-         (tdrmdo_saw_medium_b0_p1_beech_rough_s3_s2_s1_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -13292,7 +12683,6 @@
          (punused_p1_)
          (pavailable_b1_)
          (pboardsize_b1_s2_)
-         (tdrmdo_saw_medium_b1_p1_beech_rough_s2_s1_s0_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -13310,7 +12700,6 @@
          (punused_p1_)
          (pavailable_b1_)
          (pboardsize_b1_s6_)
-         (tdrmdo_saw_medium_b1_p1_beech_rough_s6_s5_s4_)
      )
      :effect (and 
          (pboardsize_b1_s4_)
@@ -13328,7 +12717,6 @@
      :precondition (and 
          (punused_p1_)
          (pavailable_b1_)
-         (tdrmdo_saw_medium_b1_p1_beech_rough_s7_s6_s5_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -13347,7 +12735,6 @@
          (pavailable_b1_)
          (punused_p1_)
          (pboardsize_b1_s4_)
-         (tdrmdo_saw_medium_b1_p1_beech_rough_s4_s3_s2_)
      )
      :effect (and 
          (pboardsize_b1_s2_)
@@ -13366,7 +12753,6 @@
          (pavailable_b1_)
          (punused_p1_)
          (pboardsize_b1_s3_)
-         (tdrmdo_saw_medium_b1_p1_beech_rough_s3_s2_s1_)
      )
      :effect (and 
          (pboardsize_b1_s1_)
@@ -13385,7 +12771,6 @@
          (punused_p1_)
          (pavailable_b1_)
          (pboardsize_b1_s5_)
-         (tdrmdo_saw_medium_b1_p1_beech_rough_s5_s4_s3_)
      )
      :effect (and 
          (pboardsize_b1_s3_)
@@ -13404,7 +12789,6 @@
          (punused_p1_)
          (pavailable_b2_)
          (pboardsize_b2_s2_)
-         (tdrmdo_saw_medium_b2_p1_oak_rough_s2_s1_s0_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -13422,7 +12806,6 @@
          (punused_p1_)
          (pavailable_b2_)
          (pboardsize_b2_s5_)
-         (tdrmdo_saw_medium_b2_p1_oak_rough_s5_s4_s3_)
      )
      :effect (and 
          (pboardsize_b2_s3_)
@@ -13440,7 +12823,6 @@
      :precondition (and 
          (punused_p1_)
          (pavailable_b2_)
-         (tdrmdo_saw_medium_b2_p1_oak_rough_s6_s5_s4_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -13459,7 +12841,6 @@
          (punused_p1_)
          (pavailable_b2_)
          (pboardsize_b2_s3_)
-         (tdrmdo_saw_medium_b2_p1_oak_rough_s3_s2_s1_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -13478,7 +12859,6 @@
          (punused_p1_)
          (pavailable_b2_)
          (pboardsize_b2_s4_)
-         (tdrmdo_saw_medium_b2_p1_oak_rough_s4_s3_s2_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -13497,7 +12877,6 @@
          (punused_p1_)
          (pavailable_b3_)
          (pboardsize_b3_s6_)
-         (tdrmdo_saw_medium_b3_p1_pine_rough_s6_s5_s4_)
      )
      :effect (and 
          (pwood_p1_pine_)
@@ -13517,7 +12896,6 @@
          (punused_p1_)
          (pavailable_b3_)
          (pboardsize_b3_s3_)
-         (tdrmdo_saw_medium_b3_p1_pine_rough_s3_s2_s1_)
      )
      :effect (and 
          (pboardsize_b3_s1_)
@@ -13536,7 +12914,6 @@
      :precondition (and 
          (punused_p1_)
          (pavailable_b3_)
-         (tdrmdo_saw_medium_b3_p1_pine_rough_s7_s6_s5_)
      )
      :effect (and 
          (pboardsize_b3_s5_)
@@ -13556,7 +12933,6 @@
          (pavailable_b3_)
          (punused_p1_)
          (pboardsize_b3_s2_)
-         (tdrmdo_saw_medium_b3_p1_pine_rough_s2_s1_s0_)
      )
      :effect (and 
          (ptreatment_p1_untreated_)
@@ -13575,7 +12951,6 @@
          (punused_p1_)
          (pavailable_b3_)
          (pboardsize_b3_s5_)
-         (tdrmdo_saw_medium_b3_p1_pine_rough_s5_s4_s3_)
      )
      :effect (and 
          (pboardsize_b3_s3_)
@@ -13595,7 +12970,6 @@
          (punused_p1_)
          (pavailable_b3_)
          (pboardsize_b3_s4_)
-         (tdrmdo_saw_medium_b3_p1_pine_rough_s4_s3_s2_)
      )
      :effect (and 
          (pboardsize_b3_s2_)
@@ -13616,7 +12990,6 @@
          (pavailable_p4_)
          (pcolour_p4_white_)
          (ptreatment_p4_glazed_)
-         (tdrmdo_grind_p4_smooth_white_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13636,7 +13009,6 @@
          (pavailable_p4_)
          (pcolour_p4_red_)
          (ptreatment_p4_glazed_)
-         (tdrmdo_grind_p4_smooth_red_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13656,7 +13028,6 @@
          (pavailable_p4_)
          (pcolour_p4_red_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_p4_smooth_red_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13675,7 +13046,6 @@
          (pavailable_p4_)
          (pcolour_p4_red_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_smooth_red_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13694,7 +13064,6 @@
          (pavailable_p4_)
          (pcolour_p4_black_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_p4_smooth_black_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13713,7 +13082,6 @@
          (pavailable_p4_)
          (pcolour_p4_black_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_smooth_black_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13732,7 +13100,6 @@
          (pavailable_p4_)
          (pcolour_p4_white_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_p4_smooth_white_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13751,7 +13118,6 @@
          (pavailable_p4_)
          (pcolour_p4_white_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_smooth_white_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13770,7 +13136,6 @@
          (pavailable_p4_)
          (pcolour_p4_natural_)
          (ptreatment_p4_glazed_)
-         (tdrmdo_grind_p4_smooth_natural_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13789,7 +13154,6 @@
          (pavailable_p4_)
          (pcolour_p4_natural_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_p4_smooth_natural_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13807,7 +13171,6 @@
          (pavailable_p4_)
          (pcolour_p4_natural_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_smooth_natural_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13825,7 +13188,6 @@
          (pavailable_p4_)
          (pcolour_p4_mauve_)
          (ptreatment_p4_glazed_)
-         (tdrmdo_grind_p4_smooth_mauve_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13845,7 +13207,6 @@
          (pavailable_p4_)
          (pcolour_p4_mauve_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_p4_smooth_mauve_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13864,7 +13225,6 @@
          (pavailable_p4_)
          (pcolour_p4_mauve_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_smooth_mauve_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13883,7 +13243,6 @@
          (pavailable_p4_)
          (pcolour_p4_black_)
          (ptreatment_p4_glazed_)
-         (tdrmdo_grind_p4_smooth_black_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13903,7 +13262,6 @@
          (pavailable_p4_)
          (pcolour_p4_natural_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_rough_natural_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13921,7 +13279,6 @@
          (pavailable_p4_)
          (pcolour_p4_natural_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_verysmooth_natural_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13938,7 +13295,6 @@
          (pavailable_p4_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_red_)
-         (tdrmdo_plane_p4_smooth_red_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13957,7 +13313,6 @@
          (pavailable_p4_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_natural_)
-         (tdrmdo_plane_p4_smooth_natural_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13975,7 +13330,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_red_)
-         (tdrmdo_plane_p4_smooth_red_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -13993,7 +13347,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_red_)
-         (tdrmdo_plane_untreated_p4_planer0_smooth_red_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14011,7 +13364,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_white_)
-         (tdrmdo_plane_p4_smooth_white_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14029,7 +13381,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_white_)
-         (tdrmdo_plane_untreated_p4_planer0_smooth_white_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14047,7 +13398,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_natural_)
-         (tdrmdo_plane_p4_smooth_natural_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14064,7 +13414,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_natural_)
-         (tdrmdo_plane_untreated_p4_planer0_smooth_natural_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14081,7 +13430,6 @@
          (pavailable_p4_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_white_)
-         (tdrmdo_plane_p4_smooth_white_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14100,7 +13448,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_black_)
-         (tdrmdo_plane_p4_smooth_black_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14119,7 +13466,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_black_)
-         (tdrmdo_plane_p4_smooth_black_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14137,7 +13483,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_black_)
-         (tdrmdo_plane_untreated_p4_planer0_smooth_black_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14155,7 +13500,6 @@
          (pavailable_p4_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_black_)
-         (tdrmdo_plane_p4_smooth_black_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14174,7 +13518,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_red_)
-         (tdrmdo_plane_p4_smooth_red_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14193,7 +13536,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_mauve_)
-         (tdrmdo_plane_p4_smooth_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14211,7 +13553,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_mauve_)
-         (tdrmdo_plane_untreated_p4_planer0_smooth_mauve_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14229,7 +13570,6 @@
          (pavailable_p4_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_mauve_)
-         (tdrmdo_plane_p4_smooth_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14248,7 +13588,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_mauve_)
-         (tdrmdo_plane_p4_smooth_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14267,7 +13606,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_natural_)
-         (tdrmdo_plane_p4_smooth_natural_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14285,7 +13623,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_white_)
-         (tdrmdo_plane_p4_smooth_white_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14304,7 +13641,6 @@
          (pavailable_p4_)
          (pcolour_p4_mauve_)
          (ptreatment_p4_glazed_)
-         (tdrmdo_grind_p4_verysmooth_mauve_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14323,7 +13659,6 @@
          (pavailable_p4_)
          (pcolour_p4_mauve_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_p4_verysmooth_mauve_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14341,7 +13676,6 @@
          (pavailable_p4_)
          (pcolour_p4_mauve_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_verysmooth_mauve_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14359,7 +13693,6 @@
          (pavailable_p4_)
          (pcolour_p4_black_)
          (ptreatment_p4_glazed_)
-         (tdrmdo_grind_p4_verysmooth_black_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14378,7 +13711,6 @@
          (pavailable_p4_)
          (pcolour_p4_black_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_p4_verysmooth_black_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14396,7 +13728,6 @@
          (pavailable_p4_)
          (pcolour_p4_black_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_verysmooth_black_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14414,7 +13745,6 @@
          (pavailable_p4_)
          (pcolour_p4_natural_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_p4_verysmooth_natural_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14431,7 +13761,6 @@
          (pavailable_p4_)
          (pcolour_p4_natural_)
          (ptreatment_p4_glazed_)
-         (tdrmdo_grind_p4_verysmooth_natural_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14449,7 +13778,6 @@
          (pavailable_p4_)
          (pcolour_p4_white_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_p4_verysmooth_white_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14467,7 +13795,6 @@
          (pavailable_p4_)
          (pcolour_p4_white_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_verysmooth_white_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14485,7 +13812,6 @@
          (pavailable_p4_)
          (pcolour_p4_white_)
          (ptreatment_p4_glazed_)
-         (tdrmdo_grind_p4_verysmooth_white_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14504,7 +13830,6 @@
          (pavailable_p4_)
          (pcolour_p4_red_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_p4_verysmooth_red_untreated_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14522,7 +13847,6 @@
          (pavailable_p4_)
          (pcolour_p4_red_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_verysmooth_red_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14540,7 +13864,6 @@
          (pavailable_p4_)
          (pcolour_p4_red_)
          (ptreatment_p4_glazed_)
-         (tdrmdo_grind_p4_verysmooth_red_glazed_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14559,7 +13882,6 @@
          (pavailable_p4_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_red_)
-         (tdrmdo_plane_p4_verysmooth_red_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14579,7 +13901,6 @@
          (pavailable_p4_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_white_)
-         (tdrmdo_plane_p4_verysmooth_white_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14599,7 +13920,6 @@
          (pavailable_p4_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_natural_)
-         (tdrmdo_plane_p4_verysmooth_natural_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14618,7 +13938,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_red_)
-         (tdrmdo_plane_p4_verysmooth_red_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14637,7 +13956,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_red_)
-         (tdrmdo_plane_untreated_p4_planer0_verysmooth_red_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14656,7 +13974,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_white_)
-         (tdrmdo_plane_p4_verysmooth_white_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14675,7 +13992,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_white_)
-         (tdrmdo_plane_untreated_p4_planer0_verysmooth_white_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14694,7 +14010,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_natural_)
-         (tdrmdo_plane_p4_verysmooth_natural_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14712,7 +14027,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_natural_)
-         (tdrmdo_plane_untreated_p4_planer0_verysmooth_natural_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14730,7 +14044,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_black_)
-         (tdrmdo_plane_p4_verysmooth_black_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14749,7 +14062,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_black_)
-         (tdrmdo_plane_untreated_p4_planer0_verysmooth_black_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14768,7 +14080,6 @@
          (pavailable_p4_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_black_)
-         (tdrmdo_plane_p4_verysmooth_black_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14788,7 +14099,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_black_)
-         (tdrmdo_plane_p4_verysmooth_black_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14808,7 +14118,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_mauve_)
-         (tdrmdo_plane_p4_verysmooth_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14827,7 +14136,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_mauve_)
-         (tdrmdo_plane_untreated_p4_planer0_verysmooth_mauve_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14846,7 +14154,6 @@
          (pavailable_p4_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_mauve_)
-         (tdrmdo_plane_p4_verysmooth_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14866,7 +14173,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_mauve_)
-         (tdrmdo_plane_p4_verysmooth_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14886,7 +14192,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_natural_)
-         (tdrmdo_plane_p4_verysmooth_natural_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14905,7 +14210,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_white_)
-         (tdrmdo_plane_p4_verysmooth_white_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14925,7 +14229,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_red_)
-         (tdrmdo_plane_p4_verysmooth_red_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14945,7 +14248,6 @@
          (pavailable_p4_)
          (pcolour_p4_red_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_rough_red_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14964,7 +14266,6 @@
          (pavailable_p4_)
          (pcolour_p4_white_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_rough_white_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -14983,7 +14284,6 @@
          (pavailable_p4_)
          (pcolour_p4_mauve_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_rough_mauve_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15002,7 +14302,6 @@
          (psurface_condition_p4_rough_)
          (pcolour_p4_black_)
          (ptreatment_p4_untreated_)
-         (tdrmdo_grind_untreated_p4_grinder0_rough_black_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15021,7 +14320,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_red_)
-         (tdrmdo_plane_p4_rough_red_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15040,7 +14338,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_red_)
-         (tdrmdo_plane_untreated_p4_planer0_rough_red_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15059,7 +14356,6 @@
          (psurface_condition_p4_rough_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_red_)
-         (tdrmdo_plane_p4_rough_red_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15079,7 +14375,6 @@
          (psurface_condition_p4_rough_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_white_)
-         (tdrmdo_plane_p4_rough_white_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15099,7 +14394,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_white_)
-         (tdrmdo_plane_p4_rough_white_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15118,7 +14412,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_white_)
-         (tdrmdo_plane_untreated_p4_planer0_rough_white_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15137,7 +14430,6 @@
          (psurface_condition_p4_rough_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_natural_)
-         (tdrmdo_plane_p4_rough_natural_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15156,7 +14448,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_natural_)
-         (tdrmdo_plane_p4_rough_natural_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15174,7 +14465,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_natural_)
-         (tdrmdo_plane_untreated_p4_planer0_rough_natural_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15192,7 +14482,6 @@
          (ptreatment_p4_untreated_)
          (psurface_condition_p4_rough_)
          (pcolour_p4_black_)
-         (tdrmdo_plane_p4_rough_black_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15211,7 +14500,6 @@
          (ptreatment_p4_untreated_)
          (psurface_condition_p4_rough_)
          (pcolour_p4_black_)
-         (tdrmdo_plane_untreated_p4_planer0_rough_black_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15230,7 +14518,6 @@
          (psurface_condition_p4_rough_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_black_)
-         (tdrmdo_plane_p4_rough_black_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15250,7 +14537,6 @@
          (ptreatment_p4_varnished_)
          (psurface_condition_p4_rough_)
          (pcolour_p4_black_)
-         (tdrmdo_plane_p4_rough_black_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15270,7 +14556,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_mauve_)
-         (tdrmdo_plane_p4_rough_mauve_untreated_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15289,7 +14574,6 @@
          (pavailable_p4_)
          (ptreatment_p4_untreated_)
          (pcolour_p4_mauve_)
-         (tdrmdo_plane_untreated_p4_planer0_rough_mauve_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15308,7 +14592,6 @@
          (psurface_condition_p4_rough_)
          (ptreatment_p4_glazed_)
          (pcolour_p4_mauve_)
-         (tdrmdo_plane_p4_rough_mauve_glazed_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15328,7 +14611,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_mauve_)
-         (tdrmdo_plane_p4_rough_mauve_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15348,7 +14630,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_natural_)
-         (tdrmdo_plane_p4_rough_natural_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15367,7 +14648,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_white_)
-         (tdrmdo_plane_p4_rough_white_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15387,7 +14667,6 @@
          (pavailable_p4_)
          (ptreatment_p4_varnished_)
          (pcolour_p4_red_)
-         (tdrmdo_plane_p4_rough_red_varnished_)
      )
      :effect (and 
          (pcolour_p4_natural_)
@@ -15406,7 +14685,6 @@
          (punused_p4_)
          (pavailable_b2_)
          (pboardsize_b2_s4_)
-         (tdrmdo_saw_large_b2_p4_oak_rough_s4_s2_s3_s1_)
      )
      :effect (and 
          (pboardsize_b2_s1_)
@@ -15425,7 +14703,6 @@
          (punused_p4_)
          (pavailable_b2_)
          (pboardsize_b2_s5_)
-         (tdrmdo_saw_large_b2_p4_oak_rough_s5_s3_s4_s2_)
      )
      :effect (and 
          (ptreatment_p4_untreated_)
@@ -15444,7 +14721,6 @@
          (punused_p4_)
          (pavailable_b2_)
          (pboardsize_b2_s3_)
-         (tdrmdo_saw_large_b2_p4_oak_rough_s3_s1_s2_s0_)
      )
      :effect (and 
          (ptreatment_p4_untreated_)
@@ -15461,7 +14737,6 @@
      :precondition (and 
          (punused_p4_)
          (pavailable_b2_)
-         (tdrmdo_saw_large_b2_p4_oak_rough_s6_s4_s5_s3_)
      )
      :effect (and 
          (ptreatment_p4_untreated_)
@@ -15480,7 +14755,6 @@
          (punused_p4_)
          (pavailable_b3_)
          (pboardsize_b3_s5_)
-         (tdrmdo_saw_large_b3_p4_pine_rough_s5_s3_s4_s2_)
      )
      :effect (and 
          (ptreatment_p4_untreated_)
@@ -15498,7 +14772,6 @@
      :precondition (and 
          (punused_p4_)
          (pavailable_b3_)
-         (tdrmdo_saw_large_b3_p4_pine_rough_s7_s5_s6_s4_)
      )
      :effect (and 
          (ptreatment_p4_untreated_)
@@ -15517,7 +14790,6 @@
          (punused_p4_)
          (pavailable_b3_)
          (pboardsize_b3_s4_)
-         (tdrmdo_saw_large_b3_p4_pine_rough_s4_s2_s3_s1_)
      )
      :effect (and 
          (ptreatment_p4_untreated_)
@@ -15536,7 +14808,6 @@
          (punused_p4_)
          (pavailable_b3_)
          (pboardsize_b3_s3_)
-         (tdrmdo_saw_large_b3_p4_pine_rough_s3_s1_s2_s0_)
      )
      :effect (and 
          (ptreatment_p4_untreated_)
@@ -15554,7 +14825,6 @@
          (punused_p4_)
          (pavailable_b3_)
          (pboardsize_b3_s6_)
-         (tdrmdo_saw_large_b3_p4_pine_rough_s6_s4_s5_s3_)
      )
      :effect (and 
          (pboardsize_b3_s3_)
@@ -15573,7 +14843,6 @@
          (punused_p4_)
          (pavailable_b0_)
          (pboardsize_b0_s4_)
-         (tdrmdo_saw_large_b0_p4_beech_rough_s4_s2_s3_s1_)
      )
      :effect (and 
          (pboardsize_b0_s1_)
@@ -15592,7 +14861,6 @@
          (punused_p4_)
          (pavailable_b0_)
          (pboardsize_b0_s3_)
-         (tdrmdo_saw_large_b0_p4_beech_rough_s3_s1_s2_s0_)
      )
      :effect (and 
          (ptreatment_p4_untreated_)
@@ -15610,7 +14878,6 @@
          (punused_p4_)
          (pavailable_b0_)
          (pboardsize_b0_s5_)
-         (tdrmdo_saw_large_b0_p4_beech_rough_s5_s3_s4_s2_)
      )
      :effect (and 
          (pboardsize_b0_s2_)
@@ -15628,7 +14895,6 @@
      :precondition (and 
          (punused_p4_)
          (pavailable_b0_)
-         (tdrmdo_saw_large_b0_p4_beech_rough_s6_s4_s5_s3_)
      )
      :effect (and 
          (pboardsize_b0_s3_)
@@ -15647,7 +14913,6 @@
          (punused_p4_)
          (pavailable_b1_)
          (pboardsize_b1_s4_)
-         (tdrmdo_saw_large_b1_p4_beech_rough_s4_s2_s3_s1_)
      )
      :effect (and 
          (ptreatment_p4_untreated_)
@@ -15666,7 +14931,6 @@
          (punused_p4_)
          (pavailable_b1_)
          (pboardsize_b1_s6_)
-         (tdrmdo_saw_large_b1_p4_beech_rough_s6_s4_s5_s3_)
      )
      :effect (and 
          (ptreatment_p4_untreated_)
@@ -15685,7 +14949,6 @@
          (punused_p4_)
          (pavailable_b1_)
          (pboardsize_b1_s5_)
-         (tdrmdo_saw_large_b1_p4_beech_rough_s5_s3_s4_s2_)
      )
      :effect (and 
          (ptreatment_p4_untreated_)
@@ -15704,7 +14967,6 @@
          (punused_p4_)
          (pavailable_b1_)
          (pboardsize_b1_s3_)
-         (tdrmdo_saw_large_b1_p4_beech_rough_s3_s1_s2_s0_)
      )
      :effect (and 
          (ptreatment_p4_untreated_)
@@ -15721,7 +14983,6 @@
      :precondition (and 
          (punused_p4_)
          (pavailable_b1_)
-         (tdrmdo_saw_large_b1_p4_beech_rough_s7_s5_s6_s4_)
      )
      :effect (and 
          (ptreatment_p4_untreated_)

@@ -180,6 +180,96 @@ int hsLmCut::getHeuristicValue(bucketSet& s, noDelIntSet& g) {
 	return hLmCut;
 }
 
+int hsLmCut::getHeuristicValue2(bucketSet& s, noDelIntSet& g) {
+	int hLmCut = 0;
+
+	// clean up stored cuts
+
+	if(storeCuts) {
+		for(LMCutLandmark* cut : *cuts) {
+			delete cut;
+		}
+		cuts->clear();
+	}
+
+	memcpy(costs, m->actionCosts, sizeof(int) * m->numActions);
+
+	int hMax = getHMax(s, g);
+	if ((hMax == 0) || (hMax == UNREACHABLE))
+		return hMax;
+	//cout << endl << "start" << endl;
+
+	// Ausgabe
+	/*
+	bool factsUsed[m->numStateBits];
+	for (int i = 0; i < m->numStateBits; i++) {
+	    factsUsed[i] = s.get(i);
+	}
+	for (int i = 0; i < this->m->numActions; i++) {
+        if (maxPrec[i] != UNREACHABLE) {
+            factsUsed[i] = true;
+            for(int j =0 ; j < m->numAdds[i]; j++) {
+                int f = m->addLists[i][j];
+                factsUsed[f] = true;
+            }
+        }
+	}
+    for (int i = 0; i < m->numStateBits; i++) {
+        if(factsUsed[i]) {
+            cout << "node" << i << " "
+        }
+    }
+*/
+
+	while (hMax > 0) {
+		goalZone->clear();
+		cut->clear();
+		precsOfCutNodes->clear();
+
+		calcGoalZone(goalZone, cut, precsOfCutNodes);
+		assert(cut->getSize() > 0);
+
+		// check forward-reachability
+		forwardReachabilityDFS(s, cut, goalZone, precsOfCutNodes);
+		assert(cut->getSize() > 0);
+
+		// calculate costs
+		int minCosts = INT_MAX;
+
+		LMCutLandmark* currendCut = nullptr;
+		int ci = 0;
+		if (storeCuts) {
+            currendCut = new LMCutLandmark(cut->getSize());
+			cuts->push_back(currendCut);
+		}
+		for (int cutted = cut->getFirst(); cutted >= 0; cutted =
+				cut->getNext()) {
+			if (minCosts > costs[cutted])
+				minCosts = costs[cutted];
+			if (storeCuts)
+                currendCut->lm[ci++] = cutted;
+		}
+		assert(minCosts > 0);
+		hLmCut += minCosts;
+
+		// update costs
+		//cout << "cut" << endl;
+		for (int op = cut->getFirst(); op >= 0; op = cut->getNext()) {
+			//cout << "- [" << op << "] " << m->taskNames[op] << endl;
+			costs[op] -= minCosts;
+			assert(costs[op] >= 0);
+			//assert(allPrecsTrue(op));
+		}
+#ifdef LMCINCHMAX
+		hMax = updateHMax(g, cut);
+#else
+		hMax = getHMax(s, g);
+#endif
+	}
+	//cout << "final lmc " << hLmCut << endl;
+	return hLmCut;
+}
+
 void hsLmCut::calcGoalZone(noDelIntSet* goalZone, bucketSet* cut,
 		bucketSet* precsOfCutNodes) {
 	stack.clear();

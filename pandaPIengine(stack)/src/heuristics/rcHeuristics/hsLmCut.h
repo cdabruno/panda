@@ -32,6 +32,7 @@ public:
 	virtual ~hsLmCut();
 
 	int getHeuristicValue(bucketSet& s, noDelIntSet& g);
+	int getHeuristicValue2(bucketSet& s, noDelIntSet& g);
 	Model* m;
 	
 	string getDescription(){ return "lmc";}

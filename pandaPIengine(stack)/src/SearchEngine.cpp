@@ -201,7 +201,7 @@ int main(int argc, char *argv[]) {
 		cout << "Selected Planning Algorihtm: interactive";
 		interactivePlanner(htn,tnI);
 	} else if (algo == PROGRESSION){
-		cout << "Selected Planning Algorithm: progression search";
+		cout << "Selected Planning Algorithm: progression search" << endl;
 	
 		int hLength = args_info.heuristic_given;
 		cout << "Parsing heuristics ..." << endl;
@@ -210,6 +210,7 @@ int main(int argc, char *argv[]) {
 			cout << "No heuristics given, setting default ... " << endl;
 			hLength = 1;
 		}
+		
     	Heuristic **heuristics = new Heuristic *[hLength];
 		for (int i = 0; i < hLength; i++){
 			auto [hName, args] = parse_heuristic_with_arguments_from_braced_expression(args_info.heuristic_arg[i]);
@@ -229,8 +230,10 @@ int main(int argc, char *argv[]) {
 				if (correct_task_count_string == "no")
 					correctTaskCount = false;
 
-				if (subName == "lmc")
+				if (subName == "lmc"){
+					cout << "teste" << endl;
 		    		heuristics[i] = new hhRC2<hsLmCut>(htn, i, estimate, correctTaskCount);
+				}
 				else if (subName == "add"){
 		    		heuristics[i] = new hhRC2<hsAddFF>(htn, i, estimate, correctTaskCount);
 					((hhRC2<hsAddFF>*)heuristics[i])->sasH->heuristic = sasAdd;

@@ -14,8 +14,10 @@ Reading input from results/grounded/satellite16.sas.
 Calculate SCCs...
 - Number of SCCs: 55
 - The problem is acyclic
-Selected Planning Algorithm: progression searchParsing heuristics ...
+Selected Planning Algorithm: progression search
+Parsing heuristics ...
 Number of specified heuristics: 1
+teste
 - Calculating minimal implied costs and distances (0 ms)
 Heuristic #0 = hhRC2(lmc;distance;correct count)
 Search config:
@@ -27,185 +29,162 @@ Visited List configured
 - hashs to use: state task task-sequence
 - memory information: topological ordering
 - Visited list allows deletion of search nodes: true
-Variable number: 11
-Variable :+power_avail[satellite0] Domain size: 1
-Variable :+pointing[satellite0,star0] Domain size: 1
-Variable :+power_on[instrument0] Domain size: 1
-Variable :+power_on[instrument1] Domain size: 1
-Variable :+pointing[satellite0,groundstation1] Domain size: 1
-Variable :+pointing[satellite0,planet2] Domain size: 1
-Variable :+pointing[satellite0,planet3] Domain size: 1
-Variable :+pointing[satellite0,planet5] Domain size: 1
-Variable :+pointing[satellite0,star4] Domain size: 1
-Variable :+calibrated[instrument0] Domain size: 1
-Variable :+calibrated[instrument1] Domain size: 1
-Min domain: 1
-Max domain: 1
-Avg domain: 1
-Var pair:+power_avail[satellite0], +pointing[satellite0,star0] Mult size: 1
-Var pair:+power_avail[satellite0], +power_on[instrument0] Mult size: 1
-Var pair:+power_avail[satellite0], +power_on[instrument1] Mult size: 1
-Var pair:+power_avail[satellite0], +pointing[satellite0,groundstation1] Mult size: 1
-Var pair:+power_avail[satellite0], +pointing[satellite0,planet2] Mult size: 1
-Var pair:+power_avail[satellite0], +pointing[satellite0,planet3] Mult size: 1
-Var pair:+power_avail[satellite0], +pointing[satellite0,planet5] Mult size: 1
-Var pair:+power_avail[satellite0], +pointing[satellite0,star4] Mult size: 1
-Var pair:+power_avail[satellite0], +calibrated[instrument0] Mult size: 1
-Var pair:+power_avail[satellite0], +calibrated[instrument1] Mult size: 1
-Var pair:+pointing[satellite0,star0], +power_on[instrument0] Mult size: 1
-Var pair:+pointing[satellite0,star0], +power_on[instrument1] Mult size: 1
-Var pair:+pointing[satellite0,star0], +pointing[satellite0,groundstation1] Mult size: 1
-Var pair:+pointing[satellite0,star0], +pointing[satellite0,planet2] Mult size: 1
-Var pair:+pointing[satellite0,star0], +pointing[satellite0,planet3] Mult size: 1
-Var pair:+pointing[satellite0,star0], +pointing[satellite0,planet5] Mult size: 1
-Var pair:+pointing[satellite0,star0], +pointing[satellite0,star4] Mult size: 1
-Var pair:+pointing[satellite0,star0], +calibrated[instrument0] Mult size: 1
-Var pair:+pointing[satellite0,star0], +calibrated[instrument1] Mult size: 1
-Var pair:+power_on[instrument0], +power_on[instrument1] Mult size: 1
-Var pair:+power_on[instrument0], +pointing[satellite0,groundstation1] Mult size: 1
-Var pair:+power_on[instrument0], +pointing[satellite0,planet2] Mult size: 1
-Var pair:+power_on[instrument0], +pointing[satellite0,planet3] Mult size: 1
-Var pair:+power_on[instrument0], +pointing[satellite0,planet5] Mult size: 1
-Var pair:+power_on[instrument0], +pointing[satellite0,star4] Mult size: 1
-Var pair:+power_on[instrument0], +calibrated[instrument0] Mult size: 1
-Var pair:+power_on[instrument0], +calibrated[instrument1] Mult size: 1
-Var pair:+power_on[instrument1], +pointing[satellite0,groundstation1] Mult size: 1
-Var pair:+power_on[instrument1], +pointing[satellite0,planet2] Mult size: 1
-Var pair:+power_on[instrument1], +pointing[satellite0,planet3] Mult size: 1
-Var pair:+power_on[instrument1], +pointing[satellite0,planet5] Mult size: 1
-Var pair:+power_on[instrument1], +pointing[satellite0,star4] Mult size: 1
-Var pair:+power_on[instrument1], +calibrated[instrument0] Mult size: 1
-Var pair:+power_on[instrument1], +calibrated[instrument1] Mult size: 1
-Var pair:+pointing[satellite0,groundstation1], +pointing[satellite0,planet2] Mult size: 1
-Var pair:+pointing[satellite0,groundstation1], +pointing[satellite0,planet3] Mult size: 1
-Var pair:+pointing[satellite0,groundstation1], +pointing[satellite0,planet5] Mult size: 1
-Var pair:+pointing[satellite0,groundstation1], +pointing[satellite0,star4] Mult size: 1
-Var pair:+pointing[satellite0,groundstation1], +calibrated[instrument0] Mult size: 1
-Var pair:+pointing[satellite0,groundstation1], +calibrated[instrument1] Mult size: 1
-Var pair:+pointing[satellite0,planet2], +pointing[satellite0,planet3] Mult size: 1
-Var pair:+pointing[satellite0,planet2], +pointing[satellite0,planet5] Mult size: 1
-Var pair:+pointing[satellite0,planet2], +pointing[satellite0,star4] Mult size: 1
-Var pair:+pointing[satellite0,planet2], +calibrated[instrument0] Mult size: 1
-Var pair:+pointing[satellite0,planet2], +calibrated[instrument1] Mult size: 1
-Var pair:+pointing[satellite0,planet3], +pointing[satellite0,planet5] Mult size: 1
-Var pair:+pointing[satellite0,planet3], +pointing[satellite0,star4] Mult size: 1
-Var pair:+pointing[satellite0,planet3], +calibrated[instrument0] Mult size: 1
-Var pair:+pointing[satellite0,planet3], +calibrated[instrument1] Mult size: 1
-Var pair:+pointing[satellite0,planet5], +pointing[satellite0,star4] Mult size: 1
-Var pair:+pointing[satellite0,planet5], +calibrated[instrument0] Mult size: 1
-Var pair:+pointing[satellite0,planet5], +calibrated[instrument1] Mult size: 1
-Var pair:+pointing[satellite0,star4], +calibrated[instrument0] Mult size: 1
-Var pair:+pointing[satellite0,star4], +calibrated[instrument1] Mult size: 1
-Var pair:+calibrated[instrument0], +calibrated[instrument1] Mult size: 1
-Number of variables: 11
-Num primitive tasks: 43
-Num non-primitive tasks: 12
-Total tasks: 55
-Number of methods: 92
-Search Configuration
-- Using JAIR 2020 progression algorithm
-- Search is stopped after first solution is found.
-- Utilizing heuristics.
-- A* Search
-- Distance G is "modification depth"
-- Starting state heuristic value: 13
-   1s visitime    0.00s generated nodes     20088 nodes/sec   14277 cur h   14 mod.depth    3 inserts       693 dups       196 size       497 hash fail    196 hash buckets    497
-   2s visitime    0.01s generated nodes     35110 nodes/sec   13204 cur h   12 mod.depth    5 inserts      1249 dups       295 size       954 hash fail    295 hash buckets    954
-   3s visitime    0.01s generated nodes     50211 nodes/sec   12907 cur h   13 mod.depth    4 inserts      1866 dups       484 size      1382 hash fail    484 hash buckets   1382
-   5s visitime    0.02s generated nodes     75288 nodes/sec   14788 cur h   12 mod.depth    5 inserts      3578 dups      1478 size      2100 hash fail   1478 hash buckets   2100
-   6s visitime    0.02s generated nodes     95347 nodes/sec   15003 cur h   14 mod.depth    4 inserts      4621 dups      1795 size      2826 hash fail   1795 hash buckets   2826
-   7s visitime    0.03s generated nodes    115424 nodes/sec   15336 cur h   12 mod.depth    6 inserts      5525 dups      1942 size      3583 hash fail   1942 hash buckets   3583
-   8s visitime    0.03s generated nodes    145525 nodes/sec   16850 cur h   13 mod.depth    5 inserts      7062 dups      2364 size      4698 hash fail   2366 hash buckets   4696
-   9s visitime    0.04s generated nodes    170590 nodes/sec   17564 cur h   13 mod.depth    5 inserts      8704 dups      3067 size      5637 hash fail   3069 hash buckets   5635
-  10s visitime    0.05s generated nodes    190632 nodes/sec   17420 cur h   13 mod.depth    5 inserts     10362 dups      3987 size      6375 hash fail   3989 hash buckets   6373
-  11s visitime    0.06s generated nodes    205693 nodes/sec   17209 cur h    8 mod.depth   10 inserts     12044 dups      5127 size      6917 hash fail   5129 hash buckets   6915
-  12s visitime    0.08s generated nodes    230777 nodes/sec   17754 cur h   14 mod.depth    5 inserts     17334 dups      9538 size      7796 hash fail   9540 hash buckets   7794
-  14s visitime    0.09s generated nodes    260834 nodes/sec   18382 cur h   13 mod.depth    6 inserts     19039 dups      9692 size      9347 hash fail   9694 hash buckets   9345
-  15s visitime    0.10s generated nodes    285879 nodes/sec   18575 cur h    6 mod.depth   13 inserts     20566 dups      9933 size     10633 hash fail   9935 hash buckets  10631
-  16s visitime    0.11s generated nodes    305939 nodes/sec   18665 cur h   13 mod.depth    6 inserts     21911 dups     10268 size     11643 hash fail  10271 hash buckets  11640
-Search Results
-- Search time 16.53 seconds
-- Depth reached: 0.
-- Depth reached expanding abstract methods: 0
-- Visited list time 0.11 seconds
-- Visited list inserts 22210
-- Visited list pruned 10334
-- Visited list contains 11876
-- Visited list hash collisions 10337
-- Visited list used hash buckets 11873
-- Generated 310242 search nodes
-  Calculated heuristic for 293103 nodes
-  One modifications 13718
-  Effectless actions 3421
-- including 13718 one modification actions
-- including 0 one modification methods
-- and       3421 progressions of effectless actions
-- Generated 17733 nodes per second
-- Final fringe contains 133415 nodes
-- Avg. ramification degree with depth 0: 1.00
-- Avg. ramification degree with depth 1: 56.00
-- Avg. ramification degree with depth 2: 22534.17
-- Avg. ramification degree with depth 3: 46752.21
-- Avg. ramification degree with depth 4: 73077.73
-- Avg. ramification degree with depth 5: 93965.34
-- Avg. ramification degree with depth 6: 96485.61
-- Avg. ramification degree with depth 7: 109050.65
-- Avg. ramification degree with depth 8: 110822.16
-- Avg. ramification degree with depth 9: 116954.81
-- Avg. ramification degree with depth 10: 110243.12
-- Avg. ramification degree with depth 11: 119497.00
-- Avg. ramification degree with depth 12: 121384.28
-- Avg. ramification degree with depth 13: 126834.00
-- Avg. abstract ramification degree with depth 0: 1.00
-- Avg. abstract ramification degree with depth 1: 56.00
-- Avg. abstract ramification degree with depth 2: 21783.98
-- Avg. abstract ramification degree with depth 3: 45036.20
-- Avg. abstract ramification degree with depth 4: 70257.27
-- Avg. abstract ramification degree with depth 5: 90051.30
-- Avg. abstract ramification degree with depth 6: 92430.66
-- Avg. abstract ramification degree with depth 7: 104260.12
-- Avg. abstract ramification degree with depth 8: 105974.98
-- Avg. abstract ramification degree with depth 9: 111764.42
-- Avg. abstract ramification degree with depth 10: 105508.45
-- Avg. abstract ramification degree with depth 11: 114270.12
-- Avg. abstract ramification degree with depth 12: 116032.61
-- Avg. abstract ramification degree with depth 13: 121488.00
-- Avg. primitive ramification degree with depth 0: 0.00
-- Avg. primitive ramification degree with depth 1: 0.00
-- Avg. primitive ramification degree with depth 2: 750.19
-- Avg. primitive ramification degree with depth 3: 1716.01
-- Avg. primitive ramification degree with depth 4: 2820.46
-- Avg. primitive ramification degree with depth 5: 3914.04
-- Avg. primitive ramification degree with depth 6: 4054.94
-- Avg. primitive ramification degree with depth 7: 4790.54
-- Avg. primitive ramification degree with depth 8: 4847.18
-- Avg. primitive ramification degree with depth 9: 5190.39
-- Avg. primitive ramification degree with depth 10: 4734.65
-- Avg. primitive ramification degree with depth 11: 5226.88
-- Avg. primitive ramification degree with depth 12: 5351.67
-- Avg. primitive ramification degree with depth 13: 5346.00
-RAMIFICATION TOTAL 13.10- Status: Solved
-- Found solution of length 19
-- Total costs of actions: 10
-==>
-54204 switch_on[instrument0,satellite0]
-54461 calibrate[satellite0,instrument0,star0]
-55340 turn_to[satellite0,star4,star0]
-55341 take_image[satellite0,star4,instrument0,infrared0]
-112921 turn_to[satellite0,planet5,star4]
-310228 take_image[satellite0,planet5,instrument0,infrared2]
-310229 turn_to[satellite0,planet3,planet5]
-310235 take_image[satellite0,planet3,instrument0,infrared2]
-310236 turn_to[satellite0,planet2,planet3]
-310237 take_image[satellite0,planet2,instrument0,infrared2]
-root 0
-310234 method1_splitted_1[satellite0,planet3,infrared2] -> _splitting_method_method1_splitted_1 310235
-310227 method1_splitted_1[satellite0,planet5,infrared2] -> _splitting_method_method1_splitted_1 310228
-112920 do_observation[planet3,infrared2] -> method1 310229 310234
-58243 do_observation[planet5,infrared2] -> method1 112921 310227
-54536 do_observation[star4,infrared0] -> <method1;method1_splitted_1[satellite0,star4,infrared0];_splitting_method_method1_splitted_1;1;0,-1> 55340 55341
-54310 auto_calibrate[satellite0,instrument0] -> method7 54461
-37555 activate_instrument[satellite0,instrument0] -> method5 54204 54310
-14 do_observation[planet2,infrared2] -> method0 37555 310236 310237
-0 __top[] -> __top_method 14 112920 54536 58243
-<==
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
+Parsing...
+Parsing: [0.010s CPU, 0.015s wall-clock]
+Normalizing task... [0.010s CPU, 0.002s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.003s wall-clock]
+Generated 307 rules.
+Computing model... [0.010s CPU, 0.002s wall-clock]
+245 relevant atoms
+0 auxiliary atoms
+245 final queue length
+352 total queue pushes
+Completing instantiation... [0.000s CPU, 0.003s wall-clock]
+Instantiating: [0.020s CPU, 0.015s wall-clock]
+Computing fact groups...
+Finding invariants...
+66 initial candidates
+Finding invariants: [0.050s CPU, 0.056s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+57 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.050s CPU, 0.057s wall-clock]
+Building STRIPS to SAS dictionary... [0.010s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.005s wall-clock]
+2 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+2 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.003s wall-clock]
+Reordering and filtering variables...
+59 of 59 variables necessary.
+0 of 2 mutex groups necessary.
+135 of 135 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
+Translator variables: 59
+Translator derived variables: 0
+Translator facts: 123
+Translator goal facts: 1
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 135
+Translator axioms: 0
+Translator task size: 758
+Translator peak memory: 40520 KB
+Writing output... [0.000s CPU, 0.002s wall-clock]
+Done! [0.110s CPU, 0.101s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
+[t=4.8255e-05s, 9844 KB] reading input...
+[t=0.00126247s, 9844 KB] done reading input!
+[t=0.00294888s, 10232 KB] Initializing landmark cut heuristic...
+[t=0.00306112s, 10232 KB] Building successor generator...done!
+[t=0.00327127s, 10232 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.00330546s, 10232 KB] time for successor generation creation: 9.4249e-05s
+[t=0.00334463s, 10232 KB] Variables: 59
+[t=0.00338054s, 10232 KB] FactPairs: 123
+[t=0.00341396s, 10232 KB] Bytes per state: 8
+[t=0.00353177s, 10232 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00370153s, 10232 KB] New best heuristic value for lmcut: 12
+[t=0.00374382s, 10232 KB] g=0, 1 evaluated, 0 expanded
+[t=0.00378014s, 10232 KB] f = 12, 1 evaluated, 0 expanded
+[t=0.00381864s, 10232 KB] Initial heuristic value for lmcut: 12
+[t=0.00387225s, 10232 KB] pruning method: none
+[t=0.00398838s, 10232 KB] New best heuristic value for lmcut: 11
+[t=0.00402884s, 10232 KB] g=1, 2 evaluated, 1 expanded
+[t=0.00456219s, 10232 KB] New best heuristic value for lmcut: 10
+[t=0.00460908s, 10232 KB] g=2, 10 evaluated, 2 expanded
+[t=0.0053443s, 10232 KB] f = 13, 22 evaluated, 3 expanded
+[t=0.00586944s, 10232 KB] New best heuristic value for lmcut: 9
+[t=0.00591616s, 10232 KB] g=4, 31 evaluated, 5 expanded
+[t=0.00661572s, 10232 KB] New best heuristic value for lmcut: 8
+[t=0.00666195s, 10232 KB] g=5, 44 evaluated, 6 expanded
+[t=0.0124741s, 10232 KB] f = 14, 159 evaluated, 22 expanded
+[t=0.0130103s, 10232 KB] New best heuristic value for lmcut: 7
+[t=0.0130614s, 10232 KB] g=7, 169 evaluated, 24 expanded
+[t=0.0136868s, 10232 KB] New best heuristic value for lmcut: 6
+[t=0.0137331s, 10232 KB] g=8, 183 evaluated, 25 expanded
+[t=0.0829272s, 10232 KB] f = 15, 1667 evaluated, 229 expanded
+[t=0.0837129s, 10232 KB] New best heuristic value for lmcut: 5
+[t=0.0837661s, 10232 KB] g=10, 1687 evaluated, 232 expanded
+[t=0.084249s, 10232 KB] New best heuristic value for lmcut: 4
+[t=0.0843013s, 10232 KB] g=11, 1701 evaluated, 233 expanded
+[t=0.0845164s, 10232 KB] New best heuristic value for lmcut: 3
+[t=0.08456s, 10232 KB] g=12, 1708 evaluated, 234 expanded
+[t=0.0849734s, 10232 KB] New best heuristic value for lmcut: 2
+[t=0.0850169s, 10232 KB] g=13, 1725 evaluated, 235 expanded
+[t=0.0852472s, 10232 KB] New best heuristic value for lmcut: 1
+[t=0.0852896s, 10232 KB] g=14, 1737 evaluated, 236 expanded
+[t=0.0855043s, 10232 KB] New best heuristic value for lmcut: 0
+[t=0.0855446s, 10232 KB] g=15, 1752 evaluated, 237 expanded
+[t=0.0855833s, 10232 KB] Solution found!
+[t=0.0856217s, 10232 KB] Actual search time: 0.0817407s
+switch_on_instrument0_satellite0_  (1)
+calibrate_satellite0_instrument0_star0_  (1)
+turn_to_satellite0_planet2_star0_  (1)
+take_image_satellite0_planet2_instrument0_infrared2_  (1)
+method3@do_observation_planet2_infrared2_  (1)
+turn_to_satellite0_planet3_planet2_  (1)
+take_image_satellite0_planet3_instrument0_infrared2_  (1)
+method3@do_observation_planet3_infrared2_  (1)
+turn_to_satellite0_planet5_planet3_  (1)
+take_image_satellite0_planet5_instrument0_infrared2_  (1)
+turn_to_satellite0_star4_planet5_  (1)
+take_image_satellite0_star4_instrument0_infrared0_  (1)
+x_method1_method1_splitted_1_satellite0_star4_infrared0___splitting_method_method1_splitted_1_1_0_m1_@do_observation_star4_infrared0_  (1)
+method3@do_observation_planet5_infrared2_  (1)
+x__top_method@__top__  (1)
+[t=0.0856586s, 10232 KB] Plan length: 15 step(s).
+[t=0.0856586s, 10232 KB] Plan cost: 15
+[t=0.0856586s, 10232 KB] Expanded 238 state(s).
+[t=0.0856586s, 10232 KB] Reopened 0 state(s).
+[t=0.0856586s, 10232 KB] Evaluated 1752 state(s).
+[t=0.0856586s, 10232 KB] Evaluations: 1752
+[t=0.0856586s, 10232 KB] Generated 2293 state(s).
+[t=0.0856586s, 10232 KB] Dead ends: 0 state(s).
+[t=0.0856586s, 10232 KB] Expanded until last jump: 229 state(s).
+[t=0.0856586s, 10232 KB] Reopened until last jump: 0 state(s).
+[t=0.0856586s, 10232 KB] Evaluated until last jump: 1667 state(s).
+[t=0.0856586s, 10232 KB] Generated until last jump: 2181 state(s).
+[t=0.0856586s, 10232 KB] Number of registered states: 1752
+[t=0.0856586s, 10232 KB] Int hash set load factor: 1752/2048 = 0.855469
+[t=0.0856586s, 10232 KB] Int hash set resizes: 11
+[t=0.0856586s, 10232 KB] Search time: 0.0821278s
+[t=0.0856586s, 10232 KB] Total time: 0.0856586s
+Solution found.
+Peak memory: 10232 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+Cost of SAS plan on RC model: 15
+Time Sas:0.354s

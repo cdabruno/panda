@@ -14,8 +14,10 @@ Reading input from results/grounded/rover3.sas.
 Calculate SCCs...
 - Number of SCCs: 89
 - The problem is acyclic
-Selected Planning Algorithm: progression searchParsing heuristics ...
+Selected Planning Algorithm: progression search
+Parsing heuristics ...
 Number of specified heuristics: 1
+teste
 - Calculating minimal implied costs and distances (0 ms)
 Heuristic #0 = hhRC2(lmc;distance;correct count)
 Search config:
@@ -27,621 +29,188 @@ Visited List configured
 - hashs to use: state task task-sequence
 - memory information: topological ordering
 - Visited list allows deletion of search nodes: true
-Variable number: 31
-Variable :+at_rock_sample[waypoint0] Domain size: 1
-Variable :+at_soil_sample[waypoint2] Domain size: 1
-Variable :+at[rover0,waypoint1] Domain size: 1
-Variable :+empty[rover0store] Domain size: 1
-Variable :+at[rover1,waypoint3] Domain size: 1
-Variable :+empty[rover1store] Domain size: 1
-Variable :-at[rover0,waypoint0] Domain size: 1
-Variable :-at[rover0,waypoint3] Domain size: 1
-Variable :-at[rover1,waypoint0] Domain size: 1
-Variable :-at[rover1,waypoint1] Domain size: 1
-Variable :-at[rover1,waypoint2] Domain size: 1
-Variable :-visited[waypoint0] Domain size: 1
-Variable :-visited[waypoint1] Domain size: 1
-Variable :-visited[waypoint2] Domain size: 1
-Variable :-visited[waypoint3] Domain size: 1
-Variable :-empty[rover0store] Domain size: 1
-Variable :+full[rover0store] Domain size: 1
-Variable :+have_rock_analysis[rover0,waypoint0] Domain size: 1
-Variable :-at[rover0,waypoint1] Domain size: 1
-Variable :+at[rover0,waypoint0] Domain size: 1
-Variable :+at[rover0,waypoint3] Domain size: 1
-Variable :-empty[rover1store] Domain size: 1
-Variable :+full[rover1store] Domain size: 1
-Variable :+have_rock_analysis[rover1,waypoint0] Domain size: 1
-Variable :-at[rover1,waypoint3] Domain size: 1
-Variable :+at[rover1,waypoint0] Domain size: 1
-Variable :+at[rover1,waypoint2] Domain size: 1
-Variable :+at[rover1,waypoint1] Domain size: 1
-Variable :+calibrated[camera1,rover1] Domain size: 1
-Variable :+have_soil_analysis[rover1,waypoint2] Domain size: 1
-Variable :+have_image[rover1,objective0,colour] Domain size: 1
-Min domain: 1
-Max domain: 1
-Avg domain: 1
-Var pair:+at_rock_sample[waypoint0], +at_soil_sample[waypoint2] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +at[rover0,waypoint1] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +empty[rover0store] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +at[rover1,waypoint3] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +empty[rover1store] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], -at[rover0,waypoint0] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], -at[rover0,waypoint3] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], -at[rover1,waypoint0] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], -at[rover1,waypoint1] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], -at[rover1,waypoint2] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], -visited[waypoint0] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], -visited[waypoint1] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], -visited[waypoint2] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], -visited[waypoint3] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], -empty[rover0store] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +full[rover0store] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], -at[rover0,waypoint1] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +at[rover0,waypoint0] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +at[rover0,waypoint3] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], -empty[rover1store] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +full[rover1store] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], -at[rover1,waypoint3] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +at[rover1,waypoint0] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +at[rover1,waypoint2] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +at[rover1,waypoint1] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+at_rock_sample[waypoint0], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +at[rover0,waypoint1] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +empty[rover0store] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +at[rover1,waypoint3] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +empty[rover1store] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], -at[rover0,waypoint0] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], -at[rover0,waypoint3] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], -at[rover1,waypoint0] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], -at[rover1,waypoint1] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], -at[rover1,waypoint2] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], -visited[waypoint0] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], -visited[waypoint1] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], -visited[waypoint2] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], -visited[waypoint3] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], -empty[rover0store] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +full[rover0store] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], -at[rover0,waypoint1] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +at[rover0,waypoint0] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +at[rover0,waypoint3] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], -empty[rover1store] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +full[rover1store] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], -at[rover1,waypoint3] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +at[rover1,waypoint0] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +at[rover1,waypoint2] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +at[rover1,waypoint1] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+at_soil_sample[waypoint2], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+at[rover0,waypoint1], +empty[rover0store] Mult size: 1
-Var pair:+at[rover0,waypoint1], +at[rover1,waypoint3] Mult size: 1
-Var pair:+at[rover0,waypoint1], +empty[rover1store] Mult size: 1
-Var pair:+at[rover0,waypoint1], -at[rover0,waypoint0] Mult size: 1
-Var pair:+at[rover0,waypoint1], -at[rover0,waypoint3] Mult size: 1
-Var pair:+at[rover0,waypoint1], -at[rover1,waypoint0] Mult size: 1
-Var pair:+at[rover0,waypoint1], -at[rover1,waypoint1] Mult size: 1
-Var pair:+at[rover0,waypoint1], -at[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover0,waypoint1], -visited[waypoint0] Mult size: 1
-Var pair:+at[rover0,waypoint1], -visited[waypoint1] Mult size: 1
-Var pair:+at[rover0,waypoint1], -visited[waypoint2] Mult size: 1
-Var pair:+at[rover0,waypoint1], -visited[waypoint3] Mult size: 1
-Var pair:+at[rover0,waypoint1], -empty[rover0store] Mult size: 1
-Var pair:+at[rover0,waypoint1], +full[rover0store] Mult size: 1
-Var pair:+at[rover0,waypoint1], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:+at[rover0,waypoint1], -at[rover0,waypoint1] Mult size: 1
-Var pair:+at[rover0,waypoint1], +at[rover0,waypoint0] Mult size: 1
-Var pair:+at[rover0,waypoint1], +at[rover0,waypoint3] Mult size: 1
-Var pair:+at[rover0,waypoint1], -empty[rover1store] Mult size: 1
-Var pair:+at[rover0,waypoint1], +full[rover1store] Mult size: 1
-Var pair:+at[rover0,waypoint1], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:+at[rover0,waypoint1], -at[rover1,waypoint3] Mult size: 1
-Var pair:+at[rover0,waypoint1], +at[rover1,waypoint0] Mult size: 1
-Var pair:+at[rover0,waypoint1], +at[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover0,waypoint1], +at[rover1,waypoint1] Mult size: 1
-Var pair:+at[rover0,waypoint1], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+at[rover0,waypoint1], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover0,waypoint1], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+empty[rover0store], +at[rover1,waypoint3] Mult size: 1
-Var pair:+empty[rover0store], +empty[rover1store] Mult size: 1
-Var pair:+empty[rover0store], -at[rover0,waypoint0] Mult size: 1
-Var pair:+empty[rover0store], -at[rover0,waypoint3] Mult size: 1
-Var pair:+empty[rover0store], -at[rover1,waypoint0] Mult size: 1
-Var pair:+empty[rover0store], -at[rover1,waypoint1] Mult size: 1
-Var pair:+empty[rover0store], -at[rover1,waypoint2] Mult size: 1
-Var pair:+empty[rover0store], -visited[waypoint0] Mult size: 1
-Var pair:+empty[rover0store], -visited[waypoint1] Mult size: 1
-Var pair:+empty[rover0store], -visited[waypoint2] Mult size: 1
-Var pair:+empty[rover0store], -visited[waypoint3] Mult size: 1
-Var pair:+empty[rover0store], -empty[rover0store] Mult size: 1
-Var pair:+empty[rover0store], +full[rover0store] Mult size: 1
-Var pair:+empty[rover0store], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:+empty[rover0store], -at[rover0,waypoint1] Mult size: 1
-Var pair:+empty[rover0store], +at[rover0,waypoint0] Mult size: 1
-Var pair:+empty[rover0store], +at[rover0,waypoint3] Mult size: 1
-Var pair:+empty[rover0store], -empty[rover1store] Mult size: 1
-Var pair:+empty[rover0store], +full[rover1store] Mult size: 1
-Var pair:+empty[rover0store], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:+empty[rover0store], -at[rover1,waypoint3] Mult size: 1
-Var pair:+empty[rover0store], +at[rover1,waypoint0] Mult size: 1
-Var pair:+empty[rover0store], +at[rover1,waypoint2] Mult size: 1
-Var pair:+empty[rover0store], +at[rover1,waypoint1] Mult size: 1
-Var pair:+empty[rover0store], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+empty[rover0store], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+empty[rover0store], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+at[rover1,waypoint3], +empty[rover1store] Mult size: 1
-Var pair:+at[rover1,waypoint3], -at[rover0,waypoint0] Mult size: 1
-Var pair:+at[rover1,waypoint3], -at[rover0,waypoint3] Mult size: 1
-Var pair:+at[rover1,waypoint3], -at[rover1,waypoint0] Mult size: 1
-Var pair:+at[rover1,waypoint3], -at[rover1,waypoint1] Mult size: 1
-Var pair:+at[rover1,waypoint3], -at[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover1,waypoint3], -visited[waypoint0] Mult size: 1
-Var pair:+at[rover1,waypoint3], -visited[waypoint1] Mult size: 1
-Var pair:+at[rover1,waypoint3], -visited[waypoint2] Mult size: 1
-Var pair:+at[rover1,waypoint3], -visited[waypoint3] Mult size: 1
-Var pair:+at[rover1,waypoint3], -empty[rover0store] Mult size: 1
-Var pair:+at[rover1,waypoint3], +full[rover0store] Mult size: 1
-Var pair:+at[rover1,waypoint3], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:+at[rover1,waypoint3], -at[rover0,waypoint1] Mult size: 1
-Var pair:+at[rover1,waypoint3], +at[rover0,waypoint0] Mult size: 1
-Var pair:+at[rover1,waypoint3], +at[rover0,waypoint3] Mult size: 1
-Var pair:+at[rover1,waypoint3], -empty[rover1store] Mult size: 1
-Var pair:+at[rover1,waypoint3], +full[rover1store] Mult size: 1
-Var pair:+at[rover1,waypoint3], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:+at[rover1,waypoint3], -at[rover1,waypoint3] Mult size: 1
-Var pair:+at[rover1,waypoint3], +at[rover1,waypoint0] Mult size: 1
-Var pair:+at[rover1,waypoint3], +at[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover1,waypoint3], +at[rover1,waypoint1] Mult size: 1
-Var pair:+at[rover1,waypoint3], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+at[rover1,waypoint3], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover1,waypoint3], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+empty[rover1store], -at[rover0,waypoint0] Mult size: 1
-Var pair:+empty[rover1store], -at[rover0,waypoint3] Mult size: 1
-Var pair:+empty[rover1store], -at[rover1,waypoint0] Mult size: 1
-Var pair:+empty[rover1store], -at[rover1,waypoint1] Mult size: 1
-Var pair:+empty[rover1store], -at[rover1,waypoint2] Mult size: 1
-Var pair:+empty[rover1store], -visited[waypoint0] Mult size: 1
-Var pair:+empty[rover1store], -visited[waypoint1] Mult size: 1
-Var pair:+empty[rover1store], -visited[waypoint2] Mult size: 1
-Var pair:+empty[rover1store], -visited[waypoint3] Mult size: 1
-Var pair:+empty[rover1store], -empty[rover0store] Mult size: 1
-Var pair:+empty[rover1store], +full[rover0store] Mult size: 1
-Var pair:+empty[rover1store], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:+empty[rover1store], -at[rover0,waypoint1] Mult size: 1
-Var pair:+empty[rover1store], +at[rover0,waypoint0] Mult size: 1
-Var pair:+empty[rover1store], +at[rover0,waypoint3] Mult size: 1
-Var pair:+empty[rover1store], -empty[rover1store] Mult size: 1
-Var pair:+empty[rover1store], +full[rover1store] Mult size: 1
-Var pair:+empty[rover1store], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:+empty[rover1store], -at[rover1,waypoint3] Mult size: 1
-Var pair:+empty[rover1store], +at[rover1,waypoint0] Mult size: 1
-Var pair:+empty[rover1store], +at[rover1,waypoint2] Mult size: 1
-Var pair:+empty[rover1store], +at[rover1,waypoint1] Mult size: 1
-Var pair:+empty[rover1store], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+empty[rover1store], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+empty[rover1store], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:-at[rover0,waypoint0], -at[rover0,waypoint3] Mult size: 1
-Var pair:-at[rover0,waypoint0], -at[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint0], -at[rover1,waypoint1] Mult size: 1
-Var pair:-at[rover0,waypoint0], -at[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover0,waypoint0], -visited[waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint0], -visited[waypoint1] Mult size: 1
-Var pair:-at[rover0,waypoint0], -visited[waypoint2] Mult size: 1
-Var pair:-at[rover0,waypoint0], -visited[waypoint3] Mult size: 1
-Var pair:-at[rover0,waypoint0], -empty[rover0store] Mult size: 1
-Var pair:-at[rover0,waypoint0], +full[rover0store] Mult size: 1
-Var pair:-at[rover0,waypoint0], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint0], -at[rover0,waypoint1] Mult size: 1
-Var pair:-at[rover0,waypoint0], +at[rover0,waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint0], +at[rover0,waypoint3] Mult size: 1
-Var pair:-at[rover0,waypoint0], -empty[rover1store] Mult size: 1
-Var pair:-at[rover0,waypoint0], +full[rover1store] Mult size: 1
-Var pair:-at[rover0,waypoint0], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint0], -at[rover1,waypoint3] Mult size: 1
-Var pair:-at[rover0,waypoint0], +at[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint0], +at[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover0,waypoint0], +at[rover1,waypoint1] Mult size: 1
-Var pair:-at[rover0,waypoint0], +calibrated[camera1,rover1] Mult size: 1
-Var pair:-at[rover0,waypoint0], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover0,waypoint0], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:-at[rover0,waypoint3], -at[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint3], -at[rover1,waypoint1] Mult size: 1
-Var pair:-at[rover0,waypoint3], -at[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover0,waypoint3], -visited[waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint3], -visited[waypoint1] Mult size: 1
-Var pair:-at[rover0,waypoint3], -visited[waypoint2] Mult size: 1
-Var pair:-at[rover0,waypoint3], -visited[waypoint3] Mult size: 1
-Var pair:-at[rover0,waypoint3], -empty[rover0store] Mult size: 1
-Var pair:-at[rover0,waypoint3], +full[rover0store] Mult size: 1
-Var pair:-at[rover0,waypoint3], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint3], -at[rover0,waypoint1] Mult size: 1
-Var pair:-at[rover0,waypoint3], +at[rover0,waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint3], +at[rover0,waypoint3] Mult size: 1
-Var pair:-at[rover0,waypoint3], -empty[rover1store] Mult size: 1
-Var pair:-at[rover0,waypoint3], +full[rover1store] Mult size: 1
-Var pair:-at[rover0,waypoint3], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint3], -at[rover1,waypoint3] Mult size: 1
-Var pair:-at[rover0,waypoint3], +at[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint3], +at[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover0,waypoint3], +at[rover1,waypoint1] Mult size: 1
-Var pair:-at[rover0,waypoint3], +calibrated[camera1,rover1] Mult size: 1
-Var pair:-at[rover0,waypoint3], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover0,waypoint3], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:-at[rover1,waypoint0], -at[rover1,waypoint1] Mult size: 1
-Var pair:-at[rover1,waypoint0], -at[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover1,waypoint0], -visited[waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint0], -visited[waypoint1] Mult size: 1
-Var pair:-at[rover1,waypoint0], -visited[waypoint2] Mult size: 1
-Var pair:-at[rover1,waypoint0], -visited[waypoint3] Mult size: 1
-Var pair:-at[rover1,waypoint0], -empty[rover0store] Mult size: 1
-Var pair:-at[rover1,waypoint0], +full[rover0store] Mult size: 1
-Var pair:-at[rover1,waypoint0], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint0], -at[rover0,waypoint1] Mult size: 1
-Var pair:-at[rover1,waypoint0], +at[rover0,waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint0], +at[rover0,waypoint3] Mult size: 1
-Var pair:-at[rover1,waypoint0], -empty[rover1store] Mult size: 1
-Var pair:-at[rover1,waypoint0], +full[rover1store] Mult size: 1
-Var pair:-at[rover1,waypoint0], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint0], -at[rover1,waypoint3] Mult size: 1
-Var pair:-at[rover1,waypoint0], +at[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint0], +at[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover1,waypoint0], +at[rover1,waypoint1] Mult size: 1
-Var pair:-at[rover1,waypoint0], +calibrated[camera1,rover1] Mult size: 1
-Var pair:-at[rover1,waypoint0], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover1,waypoint0], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:-at[rover1,waypoint1], -at[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover1,waypoint1], -visited[waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint1], -visited[waypoint1] Mult size: 1
-Var pair:-at[rover1,waypoint1], -visited[waypoint2] Mult size: 1
-Var pair:-at[rover1,waypoint1], -visited[waypoint3] Mult size: 1
-Var pair:-at[rover1,waypoint1], -empty[rover0store] Mult size: 1
-Var pair:-at[rover1,waypoint1], +full[rover0store] Mult size: 1
-Var pair:-at[rover1,waypoint1], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint1], -at[rover0,waypoint1] Mult size: 1
-Var pair:-at[rover1,waypoint1], +at[rover0,waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint1], +at[rover0,waypoint3] Mult size: 1
-Var pair:-at[rover1,waypoint1], -empty[rover1store] Mult size: 1
-Var pair:-at[rover1,waypoint1], +full[rover1store] Mult size: 1
-Var pair:-at[rover1,waypoint1], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint1], -at[rover1,waypoint3] Mult size: 1
-Var pair:-at[rover1,waypoint1], +at[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint1], +at[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover1,waypoint1], +at[rover1,waypoint1] Mult size: 1
-Var pair:-at[rover1,waypoint1], +calibrated[camera1,rover1] Mult size: 1
-Var pair:-at[rover1,waypoint1], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover1,waypoint1], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:-at[rover1,waypoint2], -visited[waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint2], -visited[waypoint1] Mult size: 1
-Var pair:-at[rover1,waypoint2], -visited[waypoint2] Mult size: 1
-Var pair:-at[rover1,waypoint2], -visited[waypoint3] Mult size: 1
-Var pair:-at[rover1,waypoint2], -empty[rover0store] Mult size: 1
-Var pair:-at[rover1,waypoint2], +full[rover0store] Mult size: 1
-Var pair:-at[rover1,waypoint2], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint2], -at[rover0,waypoint1] Mult size: 1
-Var pair:-at[rover1,waypoint2], +at[rover0,waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint2], +at[rover0,waypoint3] Mult size: 1
-Var pair:-at[rover1,waypoint2], -empty[rover1store] Mult size: 1
-Var pair:-at[rover1,waypoint2], +full[rover1store] Mult size: 1
-Var pair:-at[rover1,waypoint2], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint2], -at[rover1,waypoint3] Mult size: 1
-Var pair:-at[rover1,waypoint2], +at[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint2], +at[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover1,waypoint2], +at[rover1,waypoint1] Mult size: 1
-Var pair:-at[rover1,waypoint2], +calibrated[camera1,rover1] Mult size: 1
-Var pair:-at[rover1,waypoint2], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover1,waypoint2], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:-visited[waypoint0], -visited[waypoint1] Mult size: 1
-Var pair:-visited[waypoint0], -visited[waypoint2] Mult size: 1
-Var pair:-visited[waypoint0], -visited[waypoint3] Mult size: 1
-Var pair:-visited[waypoint0], -empty[rover0store] Mult size: 1
-Var pair:-visited[waypoint0], +full[rover0store] Mult size: 1
-Var pair:-visited[waypoint0], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:-visited[waypoint0], -at[rover0,waypoint1] Mult size: 1
-Var pair:-visited[waypoint0], +at[rover0,waypoint0] Mult size: 1
-Var pair:-visited[waypoint0], +at[rover0,waypoint3] Mult size: 1
-Var pair:-visited[waypoint0], -empty[rover1store] Mult size: 1
-Var pair:-visited[waypoint0], +full[rover1store] Mult size: 1
-Var pair:-visited[waypoint0], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:-visited[waypoint0], -at[rover1,waypoint3] Mult size: 1
-Var pair:-visited[waypoint0], +at[rover1,waypoint0] Mult size: 1
-Var pair:-visited[waypoint0], +at[rover1,waypoint2] Mult size: 1
-Var pair:-visited[waypoint0], +at[rover1,waypoint1] Mult size: 1
-Var pair:-visited[waypoint0], +calibrated[camera1,rover1] Mult size: 1
-Var pair:-visited[waypoint0], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:-visited[waypoint0], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:-visited[waypoint1], -visited[waypoint2] Mult size: 1
-Var pair:-visited[waypoint1], -visited[waypoint3] Mult size: 1
-Var pair:-visited[waypoint1], -empty[rover0store] Mult size: 1
-Var pair:-visited[waypoint1], +full[rover0store] Mult size: 1
-Var pair:-visited[waypoint1], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:-visited[waypoint1], -at[rover0,waypoint1] Mult size: 1
-Var pair:-visited[waypoint1], +at[rover0,waypoint0] Mult size: 1
-Var pair:-visited[waypoint1], +at[rover0,waypoint3] Mult size: 1
-Var pair:-visited[waypoint1], -empty[rover1store] Mult size: 1
-Var pair:-visited[waypoint1], +full[rover1store] Mult size: 1
-Var pair:-visited[waypoint1], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:-visited[waypoint1], -at[rover1,waypoint3] Mult size: 1
-Var pair:-visited[waypoint1], +at[rover1,waypoint0] Mult size: 1
-Var pair:-visited[waypoint1], +at[rover1,waypoint2] Mult size: 1
-Var pair:-visited[waypoint1], +at[rover1,waypoint1] Mult size: 1
-Var pair:-visited[waypoint1], +calibrated[camera1,rover1] Mult size: 1
-Var pair:-visited[waypoint1], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:-visited[waypoint1], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:-visited[waypoint2], -visited[waypoint3] Mult size: 1
-Var pair:-visited[waypoint2], -empty[rover0store] Mult size: 1
-Var pair:-visited[waypoint2], +full[rover0store] Mult size: 1
-Var pair:-visited[waypoint2], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:-visited[waypoint2], -at[rover0,waypoint1] Mult size: 1
-Var pair:-visited[waypoint2], +at[rover0,waypoint0] Mult size: 1
-Var pair:-visited[waypoint2], +at[rover0,waypoint3] Mult size: 1
-Var pair:-visited[waypoint2], -empty[rover1store] Mult size: 1
-Var pair:-visited[waypoint2], +full[rover1store] Mult size: 1
-Var pair:-visited[waypoint2], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:-visited[waypoint2], -at[rover1,waypoint3] Mult size: 1
-Var pair:-visited[waypoint2], +at[rover1,waypoint0] Mult size: 1
-Var pair:-visited[waypoint2], +at[rover1,waypoint2] Mult size: 1
-Var pair:-visited[waypoint2], +at[rover1,waypoint1] Mult size: 1
-Var pair:-visited[waypoint2], +calibrated[camera1,rover1] Mult size: 1
-Var pair:-visited[waypoint2], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:-visited[waypoint2], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:-visited[waypoint3], -empty[rover0store] Mult size: 1
-Var pair:-visited[waypoint3], +full[rover0store] Mult size: 1
-Var pair:-visited[waypoint3], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:-visited[waypoint3], -at[rover0,waypoint1] Mult size: 1
-Var pair:-visited[waypoint3], +at[rover0,waypoint0] Mult size: 1
-Var pair:-visited[waypoint3], +at[rover0,waypoint3] Mult size: 1
-Var pair:-visited[waypoint3], -empty[rover1store] Mult size: 1
-Var pair:-visited[waypoint3], +full[rover1store] Mult size: 1
-Var pair:-visited[waypoint3], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:-visited[waypoint3], -at[rover1,waypoint3] Mult size: 1
-Var pair:-visited[waypoint3], +at[rover1,waypoint0] Mult size: 1
-Var pair:-visited[waypoint3], +at[rover1,waypoint2] Mult size: 1
-Var pair:-visited[waypoint3], +at[rover1,waypoint1] Mult size: 1
-Var pair:-visited[waypoint3], +calibrated[camera1,rover1] Mult size: 1
-Var pair:-visited[waypoint3], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:-visited[waypoint3], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:-empty[rover0store], +full[rover0store] Mult size: 1
-Var pair:-empty[rover0store], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:-empty[rover0store], -at[rover0,waypoint1] Mult size: 1
-Var pair:-empty[rover0store], +at[rover0,waypoint0] Mult size: 1
-Var pair:-empty[rover0store], +at[rover0,waypoint3] Mult size: 1
-Var pair:-empty[rover0store], -empty[rover1store] Mult size: 1
-Var pair:-empty[rover0store], +full[rover1store] Mult size: 1
-Var pair:-empty[rover0store], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:-empty[rover0store], -at[rover1,waypoint3] Mult size: 1
-Var pair:-empty[rover0store], +at[rover1,waypoint0] Mult size: 1
-Var pair:-empty[rover0store], +at[rover1,waypoint2] Mult size: 1
-Var pair:-empty[rover0store], +at[rover1,waypoint1] Mult size: 1
-Var pair:-empty[rover0store], +calibrated[camera1,rover1] Mult size: 1
-Var pair:-empty[rover0store], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:-empty[rover0store], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+full[rover0store], +have_rock_analysis[rover0,waypoint0] Mult size: 1
-Var pair:+full[rover0store], -at[rover0,waypoint1] Mult size: 1
-Var pair:+full[rover0store], +at[rover0,waypoint0] Mult size: 1
-Var pair:+full[rover0store], +at[rover0,waypoint3] Mult size: 1
-Var pair:+full[rover0store], -empty[rover1store] Mult size: 1
-Var pair:+full[rover0store], +full[rover1store] Mult size: 1
-Var pair:+full[rover0store], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:+full[rover0store], -at[rover1,waypoint3] Mult size: 1
-Var pair:+full[rover0store], +at[rover1,waypoint0] Mult size: 1
-Var pair:+full[rover0store], +at[rover1,waypoint2] Mult size: 1
-Var pair:+full[rover0store], +at[rover1,waypoint1] Mult size: 1
-Var pair:+full[rover0store], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+full[rover0store], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+full[rover0store], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+have_rock_analysis[rover0,waypoint0], -at[rover0,waypoint1] Mult size: 1
-Var pair:+have_rock_analysis[rover0,waypoint0], +at[rover0,waypoint0] Mult size: 1
-Var pair:+have_rock_analysis[rover0,waypoint0], +at[rover0,waypoint3] Mult size: 1
-Var pair:+have_rock_analysis[rover0,waypoint0], -empty[rover1store] Mult size: 1
-Var pair:+have_rock_analysis[rover0,waypoint0], +full[rover1store] Mult size: 1
-Var pair:+have_rock_analysis[rover0,waypoint0], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:+have_rock_analysis[rover0,waypoint0], -at[rover1,waypoint3] Mult size: 1
-Var pair:+have_rock_analysis[rover0,waypoint0], +at[rover1,waypoint0] Mult size: 1
-Var pair:+have_rock_analysis[rover0,waypoint0], +at[rover1,waypoint2] Mult size: 1
-Var pair:+have_rock_analysis[rover0,waypoint0], +at[rover1,waypoint1] Mult size: 1
-Var pair:+have_rock_analysis[rover0,waypoint0], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+have_rock_analysis[rover0,waypoint0], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+have_rock_analysis[rover0,waypoint0], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:-at[rover0,waypoint1], +at[rover0,waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint1], +at[rover0,waypoint3] Mult size: 1
-Var pair:-at[rover0,waypoint1], -empty[rover1store] Mult size: 1
-Var pair:-at[rover0,waypoint1], +full[rover1store] Mult size: 1
-Var pair:-at[rover0,waypoint1], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint1], -at[rover1,waypoint3] Mult size: 1
-Var pair:-at[rover0,waypoint1], +at[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover0,waypoint1], +at[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover0,waypoint1], +at[rover1,waypoint1] Mult size: 1
-Var pair:-at[rover0,waypoint1], +calibrated[camera1,rover1] Mult size: 1
-Var pair:-at[rover0,waypoint1], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover0,waypoint1], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+at[rover0,waypoint0], +at[rover0,waypoint3] Mult size: 1
-Var pair:+at[rover0,waypoint0], -empty[rover1store] Mult size: 1
-Var pair:+at[rover0,waypoint0], +full[rover1store] Mult size: 1
-Var pair:+at[rover0,waypoint0], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:+at[rover0,waypoint0], -at[rover1,waypoint3] Mult size: 1
-Var pair:+at[rover0,waypoint0], +at[rover1,waypoint0] Mult size: 1
-Var pair:+at[rover0,waypoint0], +at[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover0,waypoint0], +at[rover1,waypoint1] Mult size: 1
-Var pair:+at[rover0,waypoint0], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+at[rover0,waypoint0], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover0,waypoint0], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+at[rover0,waypoint3], -empty[rover1store] Mult size: 1
-Var pair:+at[rover0,waypoint3], +full[rover1store] Mult size: 1
-Var pair:+at[rover0,waypoint3], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:+at[rover0,waypoint3], -at[rover1,waypoint3] Mult size: 1
-Var pair:+at[rover0,waypoint3], +at[rover1,waypoint0] Mult size: 1
-Var pair:+at[rover0,waypoint3], +at[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover0,waypoint3], +at[rover1,waypoint1] Mult size: 1
-Var pair:+at[rover0,waypoint3], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+at[rover0,waypoint3], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover0,waypoint3], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:-empty[rover1store], +full[rover1store] Mult size: 1
-Var pair:-empty[rover1store], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:-empty[rover1store], -at[rover1,waypoint3] Mult size: 1
-Var pair:-empty[rover1store], +at[rover1,waypoint0] Mult size: 1
-Var pair:-empty[rover1store], +at[rover1,waypoint2] Mult size: 1
-Var pair:-empty[rover1store], +at[rover1,waypoint1] Mult size: 1
-Var pair:-empty[rover1store], +calibrated[camera1,rover1] Mult size: 1
-Var pair:-empty[rover1store], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:-empty[rover1store], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+full[rover1store], +have_rock_analysis[rover1,waypoint0] Mult size: 1
-Var pair:+full[rover1store], -at[rover1,waypoint3] Mult size: 1
-Var pair:+full[rover1store], +at[rover1,waypoint0] Mult size: 1
-Var pair:+full[rover1store], +at[rover1,waypoint2] Mult size: 1
-Var pair:+full[rover1store], +at[rover1,waypoint1] Mult size: 1
-Var pair:+full[rover1store], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+full[rover1store], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+full[rover1store], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+have_rock_analysis[rover1,waypoint0], -at[rover1,waypoint3] Mult size: 1
-Var pair:+have_rock_analysis[rover1,waypoint0], +at[rover1,waypoint0] Mult size: 1
-Var pair:+have_rock_analysis[rover1,waypoint0], +at[rover1,waypoint2] Mult size: 1
-Var pair:+have_rock_analysis[rover1,waypoint0], +at[rover1,waypoint1] Mult size: 1
-Var pair:+have_rock_analysis[rover1,waypoint0], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+have_rock_analysis[rover1,waypoint0], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+have_rock_analysis[rover1,waypoint0], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:-at[rover1,waypoint3], +at[rover1,waypoint0] Mult size: 1
-Var pair:-at[rover1,waypoint3], +at[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover1,waypoint3], +at[rover1,waypoint1] Mult size: 1
-Var pair:-at[rover1,waypoint3], +calibrated[camera1,rover1] Mult size: 1
-Var pair:-at[rover1,waypoint3], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:-at[rover1,waypoint3], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+at[rover1,waypoint0], +at[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover1,waypoint0], +at[rover1,waypoint1] Mult size: 1
-Var pair:+at[rover1,waypoint0], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+at[rover1,waypoint0], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover1,waypoint0], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+at[rover1,waypoint2], +at[rover1,waypoint1] Mult size: 1
-Var pair:+at[rover1,waypoint2], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+at[rover1,waypoint2], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover1,waypoint2], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+at[rover1,waypoint1], +calibrated[camera1,rover1] Mult size: 1
-Var pair:+at[rover1,waypoint1], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+at[rover1,waypoint1], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+calibrated[camera1,rover1], +have_soil_analysis[rover1,waypoint2] Mult size: 1
-Var pair:+calibrated[camera1,rover1], +have_image[rover1,objective0,colour] Mult size: 1
-Var pair:+have_soil_analysis[rover1,waypoint2], +have_image[rover1,objective0,colour] Mult size: 1
-Number of variables: 31
-Num primitive tasks: 66
-Num non-primitive tasks: 23
-Total tasks: 89
-Number of methods: 71
-Search Configuration
-- Using JAIR 2020 progression algorithm
-- Search is stopped after first solution is found.
-- Utilizing heuristics.
-- A* Search
-- Distance G is "modification depth"
-- Starting state heuristic value: 19
-   1s visitime    0.01s generated nodes     15024 nodes/sec   14544 cur h   18 mod.depth   10 inserts      2894 dups      1426 size      1468 hash fail   1427 hash buckets   1467
-   2s visitime    0.03s generated nodes     30053 nodes/sec   11474 cur h   14 mod.depth   15 inserts      6217 dups      3242 size      2975 hash fail   3243 hash buckets   2974
-   3s visitime    0.05s generated nodes     40086 nodes/sec   10706 cur h   17 mod.depth   13 inserts      8793 dups      4777 size      4016 hash fail   4778 hash buckets   4015
-   4s visitime    0.07s generated nodes     55104 nodes/sec   11359 cur h   17 mod.depth   14 inserts     13443 dups      7947 size      5496 hash fail   7949 hash buckets   5494
-   6s visitime    0.09s generated nodes     75141 nodes/sec   12018 cur h   13 mod.depth   18 inserts     16535 dups      9067 size      7468 hash fail   9070 hash buckets   7465
-   7s visitime    0.12s generated nodes     85144 nodes/sec   11655 cur h   16 mod.depth   16 inserts     21479 dups     12997 size      8482 hash fail  13001 hash buckets   8478
-   8s visitime    0.13s generated nodes    100154 nodes/sec   11525 cur h   20 mod.depth   12 inserts     23486 dups     13438 size     10048 hash fail  13443 hash buckets  10043
-  10s visitime    0.17s generated nodes    125184 nodes/sec   12437 cur h   22 mod.depth   10 inserts     30450 dups     17871 size     12579 hash fail  17877 hash buckets  12573
-  11s visitime    0.20s generated nodes    140218 nodes/sec   12180 cur h   11 mod.depth   22 inserts     35046 dups     20812 size     14234 hash fail  20818 hash buckets  14228
-  12s visitime    0.22s generated nodes    155225 nodes/sec   12046 cur h   19 mod.depth   14 inserts     37518 dups     21705 size     15813 hash fail  21713 hash buckets  15805
-  14s visitime    0.25s generated nodes    180262 nodes/sec   12796 cur h   15 mod.depth   18 inserts     44792 dups     26417 size     18375 hash fail  26427 hash buckets  18365
-  15s visitime    0.29s generated nodes    195278 nodes/sec   12570 cur h   18 mod.depth   16 inserts     51567 dups     31482 size     20085 hash fail  31495 hash buckets  20072
-  16s visitime    0.31s generated nodes    210288 nodes/sec   12474 cur h   12 mod.depth   22 inserts     53998 dups     32245 size     21753 hash fail  32261 hash buckets  21737
-  18s visitime    0.33s generated nodes    235314 nodes/sec   13022 cur h   18 mod.depth   16 inserts     59277 dups     34854 size     24423 hash fail  34875 hash buckets  24402
-  19s visitime    0.37s generated nodes    250336 nodes/sec   12935 cur h   10 mod.depth   24 inserts     64469 dups     38488 size     25981 hash fail  38512 hash buckets  25957
-  20s visitime    0.43s generated nodes    265359 nodes/sec   12760 cur h   21 mod.depth   14 inserts     73806 dups     46130 size     27676 hash fail  46154 hash buckets  27652
-Reached time limit - stopping search.
-Search Results
-- Search time 21.24 seconds
-- Depth reached: 0.
-- Depth reached expanding abstract methods: 0
-- Visited list time 0.44 seconds
-- Visited list inserts 74529
-- Visited list pruned 46252
-- Visited list contains 28277
-- Visited list hash collisions 46277
-- Visited list used hash buckets 28252
-- Generated 270366 search nodes
-  Calculated heuristic for 157616 nodes
-  One modifications 39573
-  Effectless actions 73177
-- including 39573 one modification actions
-- including 0 one modification methods
-- and       73177 progressions of effectless actions
-- Generated 7420 nodes per second
-- Final fringe contains 60023 nodes
-- Avg. ramification degree with depth 0: 1.00
-- Avg. ramification degree with depth 1: 9.00
-- Avg. ramification degree with depth 2: 248.62
-- Avg. ramification degree with depth 3: 1616.61
-- Avg. ramification degree with depth 4: 6355.36
-- Avg. ramification degree with depth 5: 16645.88
-- Avg. ramification degree with depth 6: 32807.41
-- Avg. ramification degree with depth 7: 41669.54
-- Avg. ramification degree with depth 8: 47566.04
-- Avg. ramification degree with depth 9: 49753.17
-- Avg. ramification degree with depth 10: 61175.34
-- Avg. ramification degree with depth 11: 70915.37
-- Avg. ramification degree with depth 12: 73267.81
-- Avg. ramification degree with depth 13: 79872.61
-- Avg. ramification degree with depth 14: 88158.66
-- Avg. ramification degree with depth 15: 92702.62
-- Avg. ramification degree with depth 16: 95880.44
-- Avg. ramification degree with depth 17: 102272.79
-- Avg. ramification degree with depth 18: 107786.41
-- Avg. ramification degree with depth 19: 111429.24
-- Avg. ramification degree with depth 20: 115743.15
-- Avg. ramification degree with depth 21: 118291.00
-- Avg. ramification degree with depth 22: 118846.43
-- Avg. abstract ramification degree with depth 0: 1.00
-- Avg. abstract ramification degree with depth 1: 9.00
-- Avg. abstract ramification degree with depth 2: 236.00
-- Avg. abstract ramification degree with depth 3: 1500.83
-- Avg. abstract ramification degree with depth 4: 5778.52
-- Avg. abstract ramification degree with depth 5: 14919.58
-- Avg. abstract ramification degree with depth 6: 29035.37
-- Avg. abstract ramification degree with depth 7: 36698.45
-- Avg. abstract ramification degree with depth 8: 41799.65
-- Avg. abstract ramification degree with depth 9: 43728.52
-- Avg. abstract ramification degree with depth 10: 53519.48
-- Avg. abstract ramification degree with depth 11: 61835.83
-- Avg. abstract ramification degree with depth 12: 63853.27
-- Avg. abstract ramification degree with depth 13: 69475.54
-- Avg. abstract ramification degree with depth 14: 76482.93
-- Avg. abstract ramification degree with depth 15: 80314.78
-- Avg. abstract ramification degree with depth 16: 82994.98
-- Avg. abstract ramification degree with depth 17: 88365.25
-- Avg. abstract ramification degree with depth 18: 92978.56
-- Avg. abstract ramification degree with depth 19: 96021.02
-- Avg. abstract ramification degree with depth 20: 99615.34
-- Avg. abstract ramification degree with depth 21: 101740.97
-- Avg. abstract ramification degree with depth 22: 102190.71
-- Avg. primitive ramification degree with depth 0: 0.00
-- Avg. primitive ramification degree with depth 1: 0.00
-- Avg. primitive ramification degree with depth 2: 12.62
-- Avg. primitive ramification degree with depth 3: 115.78
-- Avg. primitive ramification degree with depth 4: 576.83
-- Avg. primitive ramification degree with depth 5: 1726.31
-- Avg. primitive ramification degree with depth 6: 3772.04
-- Avg. primitive ramification degree with depth 7: 4971.10
-- Avg. primitive ramification degree with depth 8: 5766.40
-- Avg. primitive ramification degree with depth 9: 6024.65
-- Avg. primitive ramification degree with depth 10: 7655.86
-- Avg. primitive ramification degree with depth 11: 9079.54
-- Avg. primitive ramification degree with depth 12: 9414.54
-- Avg. primitive ramification degree with depth 13: 10397.07
-- Avg. primitive ramification degree with depth 14: 11675.74
-- Avg. primitive ramification degree with depth 15: 12387.83
-- Avg. primitive ramification degree with depth 16: 12885.45
-- Avg. primitive ramification degree with depth 17: 13907.54
-- Avg. primitive ramification degree with depth 18: 14807.85
-- Avg. primitive ramification degree with depth 19: 15408.23
-- Avg. primitive ramification degree with depth 20: 16127.81
-- Avg. primitive ramification degree with depth 21: 16550.04
-- Avg. primitive ramification degree with depth 22: 16655.71
-RAMIFICATION TOTAL 4.76- Status: Timeout
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
+Parsing...
+Parsing: [0.010s CPU, 0.016s wall-clock]
+Normalizing task... [0.000s CPU, 0.002s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.010s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.004s wall-clock]
+Generated 306 rules.
+Computing model... [0.010s CPU, 0.002s wall-clock]
+324 relevant atoms
+0 auxiliary atoms
+324 final queue length
+395 total queue pushes
+Completing instantiation... [0.000s CPU, 0.003s wall-clock]
+Instantiating: [0.020s CPU, 0.015s wall-clock]
+Computing fact groups...
+Finding invariants...
+120 initial candidates
+Finding invariants: [0.040s CPU, 0.037s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+106 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.040s CPU, 0.039s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.006s wall-clock]
+19 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+4 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.004s wall-clock]
+Reordering and filtering variables...
+111 of 111 variables necessary.
+7 of 13 mutex groups necessary.
+137 of 137 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.002s wall-clock]
+Translator variables: 111
+Translator derived variables: 0
+Translator facts: 227
+Translator goal facts: 1
+Translator mutex groups: 7
+Translator total mutex groups size: 14
+Translator operators: 137
+Translator axioms: 0
+Translator task size: 952
+Translator peak memory: 40908 KB
+Writing output... [0.000s CPU, 0.002s wall-clock]
+Done! [0.080s CPU, 0.087s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
+[t=6.0433e-05s, 9844 KB] reading input...
+[t=0.00186244s, 9844 KB] done reading input!
+[t=0.00372255s, 10232 KB] Initializing landmark cut heuristic...
+[t=0.00386666s, 10232 KB] Building successor generator...done!
+[t=0.00414195s, 10232 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.00419007s, 10232 KB] time for successor generation creation: 0.000124777s
+[t=0.0042322s, 10232 KB] Variables: 111
+[t=0.00427811s, 10232 KB] FactPairs: 227
+[t=0.00431695s, 10232 KB] Bytes per state: 16
+[t=0.00445594s, 10232 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00472987s, 10232 KB] New best heuristic value for lmcut: 21
+[t=0.00478246s, 10232 KB] g=0, 1 evaluated, 0 expanded
+[t=0.00482217s, 10232 KB] f = 21, 1 evaluated, 0 expanded
+[t=0.00487221s, 10232 KB] Initial heuristic value for lmcut: 21
+[t=0.00491015s, 10232 KB] pruning method: none
+[t=0.00631418s, 10232 KB] New best heuristic value for lmcut: 19
+[t=0.00637477s, 10232 KB] g=1, 11 evaluated, 1 expanded
+[t=0.0120911s, 10232 KB] New best heuristic value for lmcut: 18
+[t=0.0121853s, 10232 KB] g=2, 57 evaluated, 2 expanded
+[t=0.0161056s, 10232 KB] New best heuristic value for lmcut: 17
+[t=0.0161677s, 10232 KB] g=3, 90 evaluated, 3 expanded
+[t=0.178281s, 10372 KB] f = 22, 1507 evaluated, 79 expanded
+[t=0.585115s, 10556 KB] New best heuristic value for lmcut: 16
+[t=0.585286s, 10556 KB] g=6, 5153 evaluated, 336 expanded
+[t=1.99757s, 11224 KB] f = 23, 17719 evaluated, 1188 expanded
+[t=2.02221s, 11224 KB] New best heuristic value for lmcut: 15
+[t=2.02231s, 11224 KB] g=8, 17932 evaluated, 1197 expanded
+[t=2.02634s, 11224 KB] New best heuristic value for lmcut: 14
+[t=2.02643s, 11224 KB] g=9, 17960 evaluated, 1198 expanded
+[t=8.74357s, 14812 KB] New best heuristic value for lmcut: 13
+[t=8.74365s, 14812 KB] g=10, 93624 evaluated, 7454 expanded
+[t=8.74702s, 14812 KB] New best heuristic value for lmcut: 12
+[t=8.74707s, 14812 KB] g=11, 93674 evaluated, 7455 expanded
+[t=8.74917s, 14812 KB] New best heuristic value for lmcut: 11
+[t=8.74921s, 14812 KB] g=12, 93710 evaluated, 7456 expanded
+[t=8.75094s, 14812 KB] New best heuristic value for lmcut: 10
+[t=8.75099s, 14812 KB] g=13, 93742 evaluated, 7457 expanded
+[t=8.75309s, 14812 KB] New best heuristic value for lmcut: 9
+[t=8.75313s, 14812 KB] g=14, 93784 evaluated, 7458 expanded
+[t=8.7547s, 14812 KB] New best heuristic value for lmcut: 8
+[t=8.75474s, 14812 KB] g=15, 93818 evaluated, 7459 expanded
+[t=17.565s, 20108 KB] f = 24, 202148 evaluated, 14363 expanded
+[t=17.5832s, 20108 KB] New best heuristic value for lmcut: 7
+[t=17.5833s, 20108 KB] g=17, 202390 evaluated, 14373 expanded
+[t=17.5873s, 20108 KB] New best heuristic value for lmcut: 6
+[t=17.5874s, 20108 KB] g=18, 202441 evaluated, 14374 expanded
+[t=17.5897s, 20108 KB] New best heuristic value for lmcut: 5
+[t=17.5898s, 20108 KB] g=19, 202474 evaluated, 14375 expanded
+[t=17.5907s, 20108 KB] New best heuristic value for lmcut: 4
+[t=17.5908s, 20108 KB] g=20, 202488 evaluated, 14376 expanded
+[t=17.5933s, 20108 KB] New best heuristic value for lmcut: 3
+[t=17.5934s, 20108 KB] g=21, 202542 evaluated, 14377 expanded
+[t=17.5941s, 20108 KB] New best heuristic value for lmcut: 2
+[t=17.5942s, 20108 KB] g=22, 202575 evaluated, 14378 expanded
+[t=17.5948s, 20108 KB] New best heuristic value for lmcut: 1
+[t=17.5948s, 20108 KB] g=23, 202607 evaluated, 14379 expanded
+[t=17.5953s, 20108 KB] New best heuristic value for lmcut: 0
+[t=17.5954s, 20108 KB] g=24, 202638 evaluated, 14380 expanded
+[t=17.5954s, 20108 KB] Solution found!
+[t=17.5955s, 20108 KB] Actual search time: 17.5905s
+x__method_precondition_mmemptymstorem1_rover1store_  (1)
+mmemptymstorem1@emptymstore_rover1store_rover1_  (1)
+x__method_precondition_mmnavigate_absm3_rover1_waypoint3_waypoint2_  (1)
+x__method_precondition_mmnavigate_absm3_rover1_waypoint1_waypoint0_  (1)
+navigate_rover1_waypoint3_waypoint0_  (1)
+calibrate_rover1_camera1_objective0_waypoint0_  (1)
+take_image_rover1_waypoint0_objective0_camera1_colour_  (1)
+navigate_rover1_waypoint0_waypoint3_  (1)
+navigate_rover1_waypoint3_waypoint2_  (1)
+communicate_image_data_rover1_general_objective0_colour_waypoint2_waypoint0_  (1)
+mmnavigate_absm3@navigate_abs_rover1_waypoint2_  (1)
+mmnavigate_absm3@navigate_abs_rover1_waypoint0_  (1)
+x_splitting_method_mmget_image_data_splitted_2@mmget_image_data_splitted_2_rover1_objective0_camera1_colour_  (1)
+x__splitting_method_mmsend_image_data_splitted_11_mmsend_image_data_splitted_6_rover1_general_objective0_colour_waypoint2___splitting_method_mmsend_image_data_splitted_6_1_0_m1_@mmsend_image_data_splitted_11_rover1_general_objective0_colour_  (1)
+x__splitting_method_mmcalibrate_abs_splitted_9_mmcalibrate_abs_splitted_1_rover1_camera1_waypoint0___splitting_method_mmcalibrate_abs_splitted_1_1_0_m1_@mmcalibrate_abs_splitted_9_rover1_camera1_  (1)
+sample_soil_rover1_rover1store_waypoint2_  (1)
+communicate_soil_data_rover1_general_waypoint2_waypoint2_waypoint0_  (1)
+drop_rover1_rover1store_  (1)
+sample_rock_rover1_rover1store_waypoint0_  (1)
+communicate_rock_data_rover1_general_waypoint0_waypoint2_waypoint0_  (1)
+x__splitting_method_mmsend_soil_data_splitted_13_mmsend_soil_data_splitted_8_rover1_general_waypoint2_waypoint2___splitting_method_mmsend_soil_data_splitted_8_1_0_m1_@mmsend_soil_data_splitted_13_rover1_general_waypoint2_  (1)
+x__splitting_method_mmsend_rock_data_splitted_12_mmsend_rock_data_splitted_7_rover1_general_waypoint0_waypoint2___splitting_method_mmsend_rock_data_splitted_7_1_0_m1_@mmsend_rock_data_splitted_12_rover1_general_waypoint0_  (1)
+x__mmget_rock_data_mmget_rock_data_splitted_3_rover1_waypoint0___splitting_method_mmget_rock_data_splitted_3_1_0_m1_m2_2__send_rock_data_rover1_waypoint0__mmsend_rock_data_3_0_1_2_m1_@get_rock_data_waypoint0_  (1)
+x_________top_method_get_image_data_objective0_colour__mmget_image_data_2_0_1_m1_m2__mmget_image_data_splitted_10_rover1_colour_objective0___splitting_method_mmget_image_data_splitted_10_2_0_1_m1_m2_3__calibrate_abs_rover1_camera1__mmcalibrate_abs_2_0_1_m1_3_4__send_image_data_rover1_objective0_colour__mmsend_image_data_4_0_1_2_3_m1__get_soil_data_waypoint2__mmget_soil_data_0_m1_m2_m3_1_2_3_4__mmget_soil_data_splitted_4_rover1_waypoint2___splitting_method_mmget_soil_data_splitted_4_1_0_m1_m2_2_3_4_5_6__send_soil_data_rover1_waypoint2__mmsend_soil_data_3_0_1_2_m1_4_5_6_7_@__top__  (1)
+[t=17.5955s, 20108 KB] Plan length: 24 step(s).
+[t=17.5955s, 20108 KB] Plan cost: 24
+[t=17.5955s, 20108 KB] Expanded 14381 state(s).
+[t=17.5955s, 20108 KB] Reopened 0 state(s).
+[t=17.5955s, 20108 KB] Evaluated 202639 state(s).
+[t=17.5955s, 20108 KB] Evaluations: 202639
+[t=17.5955s, 20108 KB] Generated 440972 state(s).
+[t=17.5955s, 20108 KB] Dead ends: 0 state(s).
+[t=17.5955s, 20108 KB] Expanded until last jump: 14363 state(s).
+[t=17.5955s, 20108 KB] Reopened until last jump: 0 state(s).
+[t=17.5955s, 20108 KB] Evaluated until last jump: 202148 state(s).
+[t=17.5955s, 20108 KB] Generated until last jump: 440267 state(s).
+[t=17.5955s, 20108 KB] Number of registered states: 202639
+[t=17.5955s, 20108 KB] Int hash set load factor: 202639/262144 = 0.773006
+[t=17.5955s, 20108 KB] Int hash set resizes: 18
+[t=17.5955s, 20108 KB] Search time: 17.591s
+[t=17.5955s, 20108 KB] Total time: 17.5955s
+Solution found.
+Peak memory: 20108 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+Cost of SAS plan on RC model: 24
+Time Sas:17.852s
