@@ -1754,7 +1754,12 @@ newlyReachedMLMs = new noDelIntSet();
 		getline(domainFile, line);
 		getline(domainFile, line);
 		getline(domainFile, line);
-		s0List = readIntList(line, s0Size);
+		s0List = readIntList(line, s0Size); 
+		cout << "lendo o estado inicial: " << endl;
+		for (int j = 0; j < s0Size; j++) {
+			cout << s0List[j] << endl;
+		}
+		
 		// goal
 		getline(domainFile, line);
 		getline(domainFile, line);
@@ -1819,8 +1824,11 @@ newlyReachedMLMs = new noDelIntSet();
     }
 
     void Model::readHierarchical(istream &domainFile) {
+
+		//cout << "chama esse" << endl;
 		stringstream *sStream;
 		string line;
+
 		// tasks
 		for (int i = 0; i < 3; i++) {
 			getline(domainFile, line);
@@ -1833,6 +1841,7 @@ newlyReachedMLMs = new noDelIntSet();
 				return;
 			}
 		}
+		
 		isHtnModel = true;
 		sStream = new stringstream(line);
 		*sStream >> initialTask;
@@ -2671,6 +2680,48 @@ newlyReachedMLMs = new noDelIntSet();
 		return tnI;
 	}
 
+	/*Model* Model::changeInitialState(Model* htn, searchNode *node) {
+		// prepare initial node
+		
+		int newS0Size = 0;
+
+		//cout << "initial state s0 size: " << sizeof(htn->s0List)/sizeof(htn->s0List[0]) << endl;
+		
+
+		for (int i = 0; i < htn->numStateBits; i++) {
+			if(node->state[i]){
+				newS0Size++;
+			}
+		}
+		int* newS0List = new int[newS0Size];
+
+	
+
+		//cout << "new initial state s0 size: " << sizeof(newS0List)/sizeof(newS0List[0]) << endl;
+		
+		int j = 0;
+		for (int i = 0; i < htn->numStateBits; i++) {
+			
+			if(node->state[i]){
+				newS0List[j] = i;
+				j++;
+			}
+		}
+
+		Model* newHtn = htn;
+
+		newHtn->s0Size = newS0Size;
+		newHtn->s0List = newS0List;
+
+
+		return newHtn;
+	}
+
+	
+
+*/
+
+
 	struct tOrMnode {
 		bool isMethod = false;
 		int id;
@@ -2860,7 +2911,9 @@ newlyReachedMLMs = new noDelIntSet();
 			pfile << "      )" << endl;
 			pfile << "   )" << endl;
 		}
+		
 		pfile << "   (:init" << endl;
+		//cout << this->factStrs[s0List[27]] << endl;
 		for (int i = 0; i < this->s0Size; i++) {
 			pfile << "      (" << su.cleanStr(this->factStrs[this->s0List[i]]) << ")" << endl;
 		}
@@ -2870,6 +2923,11 @@ newlyReachedMLMs = new noDelIntSet();
 			for (int i = 0; i < this->gSize; i++) {
 				pfile << "      (" << su.cleanStr(this->factStrs[this->gList[i]]) << ")" << endl;
 			}
+			pfile << "   ))" << endl;
+		}
+		else{
+			pfile << "   (:goal (and" << endl;
+			pfile << "      (" << su.cleanStr(this->factStrs[this->s0List[0]]) << ")" << endl;
 			pfile << "   ))" << endl;
 		}
 		pfile << ")" << endl;

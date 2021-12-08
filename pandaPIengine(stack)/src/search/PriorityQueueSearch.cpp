@@ -61,5 +61,69 @@ searchNode* PriorityQueueSearch::handleNewSolution(searchNode* newSol, searchNod
 	return res;
 }
 
+int PriorityQueueSearch::heuristicSAS(Model* htn, searchNode *node){
+
+    /*if(htn->isGoal(node)){
+        return 0;
+    }*/
+    
+   
+
+	//cout << "original htn size: " << htn->s0List << endl;
+
+    //Model* newHtn = htn->changeInitialState(htn, node);
+
+	//cout << newHtn->s0Size << endl;
+    
+    RCModelFactory rcModelF = RCModelFactory(htn);	
+    
+    Model* rcModel = rcModelF.getRCmodelSTRIPS(0, node);
+    
+
+	//cout << "new htn s0 size: " << htn->s0List << endl;
+	
+    rcModel->writeToPDDL("domain-downward.pddl", "problem-downward.pddl");
+
+    //cout << "chego aqui  depois write" << endl;
+	
+    system("/home/bruno/Desktop/downward/fast-downward.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --search 'astar(lmcut(), max_time=20)' >nul 2>nul");
+    //cout << "chego aqui  depois fast" << endl;
+    ifstream file;
+    file.open("sas_plan");
+
+
+    string line;
+    char* stringCostSAS;
+    int counter = 0;
+    int foundSAS = 0;
+
+    
+
+    if(file.is_open()){
+        while(getline(file, line)){
+            
+            if(line.find("cost = ") != line.npos){
+
+                foundSAS = 1;
+                stringCostSAS = strtok(line.data(), " ");
+                
+                while (stringCostSAS != NULL && counter < 3){
+                    stringCostSAS = strtok(NULL, " ");
+                    counter++;
+                }
+                if(foundSAS){
+                    return stoi(stringCostSAS);
+                }
+                else{
+                    return UNREACHABLE;
+                }
+                
+            }
+        }
+        
+
+    }
+    
+}
 /// closing namespace
 }

@@ -122,6 +122,7 @@ int main(int argc, char *argv[]) {
 
 	int seed = args_info.seed_arg; // has default value
 	cout << "Random seed: " << seed << endl;
+	
 	srand(seed);
     
 	int timeL = args_info.timelimit_arg;
@@ -166,7 +167,7 @@ int main(int argc, char *argv[]) {
 
 
     /* Read model */
-    // todo: the correct value of maintainTaskRechability depends on the heuristic
+    // todo: the correct value of maintain TaskRechability depends on the heuristic
     eMaintainTaskReachability reachability = mtrALL;
 	bool trackContainedTasks = useTaskHash;
     Model* htn = new Model(trackContainedTasks, reachability, true, true);
@@ -175,6 +176,9 @@ int main(int argc, char *argv[]) {
 	htn->read(inputStream);
 	assert(htn->isHtnModel);
 	searchNode* tnI = htn->prepareTNi(htn);
+
+	
+
 			
 	if (inputFilename != "-") ((ifstream*) inputStream)->close();
 
@@ -231,7 +235,6 @@ int main(int argc, char *argv[]) {
 					correctTaskCount = false;
 
 				if (subName == "lmc"){
-					cout << "teste" << endl;
 		    		heuristics[i] = new hhRC2<hsLmCut>(htn, i, estimate, correctTaskCount);
 				}
 				else if (subName == "add"){

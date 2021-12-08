@@ -31,160 +31,409 @@ Visited List configured
 - hashs to use: state task task-sequence
 - memory information: topological ordering
 - Visited list allows deletion of search nodes: true
-INFO     Running translator.
-INFO     translator stdin: None
-INFO     translator time limit: None
-INFO     translator memory limit: None
-INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
-Parsing...
-Parsing: [0.010s CPU, 0.008s wall-clock]
-Normalizing task... [0.000s CPU, 0.001s wall-clock]
-Instantiating...
-Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
-Normalizing Datalog program...
-Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
-Preparing model... [0.000s CPU, 0.001s wall-clock]
-Generated 75 rules.
-Computing model... [0.000s CPU, 0.000s wall-clock]
-73 relevant atoms
-0 auxiliary atoms
-73 final queue length
-92 total queue pushes
-Completing instantiation... [0.000s CPU, 0.001s wall-clock]
-Instantiating: [0.000s CPU, 0.005s wall-clock]
-Computing fact groups...
-Finding invariants...
-30 initial candidates
-Finding invariants: [0.020s CPU, 0.023s wall-clock]
-Checking invariant weight... [0.010s CPU, 0.000s wall-clock]
-Instantiating groups... [0.000s CPU, 0.000s wall-clock]
-Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
-Choosing groups...
-20 uncovered facts
-Choosing groups: [0.000s CPU, 0.000s wall-clock]
-Building translation key... [0.000s CPU, 0.000s wall-clock]
-Computing fact groups: [0.030s CPU, 0.024s wall-clock]
-Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
-Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
-Building mutex information...
-Building mutex information: [0.000s CPU, 0.000s wall-clock]
-Translating task...
-Processing axioms...
-Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
-Translator axioms removed by simplifying: 0
-Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
-Processing axioms: [0.000s CPU, 0.000s wall-clock]
-Translating task: [0.000s CPU, 0.002s wall-clock]
-2 effect conditions simplified
-0 implied preconditions added
-Detecting unreachable propositions...
-0 operators removed
-0 axioms removed
-2 propositions removed
-Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
-Reordering and filtering variables...
-24 of 24 variables necessary.
-5 of 7 mutex groups necessary.
-29 of 29 operators necessary.
-0 of 0 axiom rules necessary.
-Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
-Translator variables: 24
-Translator derived variables: 0
-Translator facts: 52
-Translator goal facts: 1
-Translator mutex groups: 5
-Translator total mutex groups size: 12
-Translator operators: 29
-Translator axioms: 0
-Translator task size: 223
-Translator peak memory: 40008 KB
-Writing output... [0.000s CPU, 0.001s wall-clock]
-Done! [0.040s CPU, 0.042s wall-clock]
-translate exit code: 0
-
-INFO     Running search (release).
-INFO     search stdin: output.sas
-INFO     search time limit: None
-INFO     search memory limit: None
-INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
-[t=4.9108e-05s, 9844 KB] reading input...
-[t=0.000535439s, 9844 KB] done reading input!
-[t=0.00229243s, 10100 KB] Initializing landmark cut heuristic...
-[t=0.00240936s, 10100 KB] Building successor generator...done!
-[t=0.00256026s, 10100 KB] peak memory difference for successor generator creation: 0 KB
-[t=0.00259399s, 10100 KB] time for successor generation creation: 2.9421e-05s
-[t=0.00263312s, 10100 KB] Variables: 24
-[t=0.00266912s, 10100 KB] FactPairs: 52
-[t=0.00270268s, 10100 KB] Bytes per state: 4
-[t=0.00282263s, 10100 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[t=0.00295006s, 10100 KB] New best heuristic value for lmcut: 12
-[t=0.00299271s, 10100 KB] g=0, 1 evaluated, 0 expanded
-[t=0.00302886s, 10100 KB] f = 12, 1 evaluated, 0 expanded
-[t=0.00306695s, 10100 KB] Initial heuristic value for lmcut: 12
-[t=0.00310294s, 10100 KB] pruning method: none
-[t=0.00317659s, 10100 KB] New best heuristic value for lmcut: 11
-[t=0.00321526s, 10100 KB] g=1, 2 evaluated, 1 expanded
-[t=0.00348675s, 10100 KB] New best heuristic value for lmcut: 10
-[t=0.0035282s, 10100 KB] g=2, 11 evaluated, 3 expanded
-[t=0.00359343s, 10100 KB] f = 13, 12 evaluated, 4 expanded
-[t=0.00403094s, 10100 KB] New best heuristic value for lmcut: 9
-[t=0.00407585s, 10100 KB] g=4, 30 evaluated, 8 expanded
-[t=0.00453881s, 10100 KB] f = 14, 51 evaluated, 14 expanded
-[t=0.00464172s, 10100 KB] New best heuristic value for lmcut: 8
-[t=0.00468267s, 10100 KB] g=6, 54 evaluated, 15 expanded
-[t=0.00475813s, 10100 KB] New best heuristic value for lmcut: 7
-[t=0.00479641s, 10100 KB] g=7, 56 evaluated, 16 expanded
-[t=0.00494409s, 10100 KB] New best heuristic value for lmcut: 6
-[t=0.00498421s, 10100 KB] g=8, 63 evaluated, 17 expanded
-[t=0.00507899s, 10100 KB] New best heuristic value for lmcut: 5
-[t=0.00511911s, 10100 KB] g=9, 66 evaluated, 18 expanded
-[t=0.0052301s, 10100 KB] New best heuristic value for lmcut: 4
-[t=0.00526898s, 10100 KB] g=10, 72 evaluated, 19 expanded
-[t=0.00538872s, 10100 KB] New best heuristic value for lmcut: 3
-[t=0.00543569s, 10100 KB] g=11, 79 evaluated, 20 expanded
-[t=0.00552591s, 10100 KB] New best heuristic value for lmcut: 2
-[t=0.00556424s, 10100 KB] g=12, 85 evaluated, 21 expanded
-[t=0.00563734s, 10100 KB] New best heuristic value for lmcut: 1
-[t=0.00567593s, 10100 KB] g=13, 90 evaluated, 22 expanded
-[t=0.00573786s, 10100 KB] New best heuristic value for lmcut: 0
-[t=0.00577625s, 10100 KB] g=14, 94 evaluated, 23 expanded
-[t=0.00581658s, 10100 KB] Solution found!
-[t=0.00585514s, 10100 KB] Actual search time: 0.0027461s
-drive_truckm0_citymlocm2_citymlocm1_  (1)
-pickmup_truckm0_citymlocm1_packagem0_capacitym0_capacitym1_  (1)
-mmdrivemto@getmto_truckm0_citymlocm1_  (1)
-x__splitting_method_mmdeliver_splitted_1_load_truckm0_citymlocm1_packagem0__mmload_1_0_m1_@mmdeliver_splitted_1_truckm0_packagem0_  (1)
-drive_truckm0_citymlocm1_citymlocm0_  (1)
-drop_truckm0_citymlocm0_packagem0_capacitym0_capacitym1_  (1)
-drive_truckm0_citymlocm0_citymlocm1_  (1)
-pickmup_truckm0_citymlocm1_packagem1_capacitym0_capacitym1_  (1)
-drive_truckm0_citymlocm1_citymlocm2_  (1)
-drop_truckm0_citymlocm2_packagem1_capacitym0_capacitym1_  (1)
-x__splitting_method_mmdeliver_splitted_1_load_truckm0_citymlocm1_packagem1__mmload_1_0_m1_@mmdeliver_splitted_1_truckm0_packagem1_  (1)
-mmdrivemto@getmto_truckm0_citymlocm2_  (1)
-mmdrivemto@getmto_truckm0_citymlocm0_  (1)
-x______top_method_deliver_packagem1_citymlocm2__mmdeliver_1_0_m1_m2_m3__unload_truckm0_citymlocm2_packagem1__mmunload_3_0_1_2_m1__deliver_packagem0_citymlocm0__mmdeliver_0_m1_m2_m3_1_2_3__unload_truckm0_citymlocm0_packagem0__mmunload_2_0_1_m1_3_4_5_@__top__  (1)
-[t=0.0058943s, 10100 KB] Plan length: 14 step(s).
-[t=0.0058943s, 10100 KB] Plan cost: 14
-[t=0.0058943s, 10100 KB] Expanded 24 state(s).
-[t=0.0058943s, 10100 KB] Reopened 0 state(s).
-[t=0.0058943s, 10100 KB] Evaluated 94 state(s).
-[t=0.0058943s, 10100 KB] Evaluations: 94
-[t=0.0058943s, 10100 KB] Generated 161 state(s).
-[t=0.0058943s, 10100 KB] Dead ends: 0 state(s).
-[t=0.0058943s, 10100 KB] Expanded until last jump: 14 state(s).
-[t=0.0058943s, 10100 KB] Reopened until last jump: 0 state(s).
-[t=0.0058943s, 10100 KB] Evaluated until last jump: 51 state(s).
-[t=0.0058943s, 10100 KB] Generated until last jump: 70 state(s).
-[t=0.0058943s, 10100 KB] Number of registered states: 94
-[t=0.0058943s, 10100 KB] Int hash set load factor: 94/128 = 0.734375
-[t=0.0058943s, 10100 KB] Int hash set resizes: 7
-[t=0.0058943s, 10100 KB] Search time: 0.00307259s
-[t=0.0058943s, 10100 KB] Total time: 0.0058943s
-Solution found.
-Peak memory: 10100 KB
-Remove intermediate file output.sas
-search exit code: 0
-
-Cost of SAS plan on RC model: 14
-Time Sas:0.203s
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 13
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 13
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 14
+valor da heuristica: 13

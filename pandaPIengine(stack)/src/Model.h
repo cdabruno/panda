@@ -42,6 +42,9 @@ namespace progression {
 			// create a search node that contains the initial task -- alternatively used initialTask
 			searchNode *prepareTNi(const Model *htn);
 
+			// SAS new initial state
+			Model* changeInitialState(Model* htn, searchNode *node);
+
 			// true if this is an HTN, false is this is a classical model
 			bool isHtnModel;
 			// name of the file from which this model was loaded

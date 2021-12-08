@@ -17,7 +17,6 @@ Calculate SCCs...
 Selected Planning Algorithm: progression search
 Parsing heuristics ...
 Number of specified heuristics: 1
-teste
 - Calculating minimal implied costs and distances (0 ms)
 Heuristic #0 = hhRC2(lmc;distance;correct count)
 Search config:
@@ -29,140 +28,100 @@ Visited List configured
 - hashs to use: state task task-sequence
 - memory information: topological ordering
 - Visited list allows deletion of search nodes: true
-INFO     Running translator.
-INFO     translator stdin: None
-INFO     translator time limit: None
-INFO     translator memory limit: None
-INFO     translator command line string: /usr/bin/python3 /home/bruno/Desktop/downward/builds/release/bin/translate/translate.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --sas-file output.sas
-Parsing...
-Parsing: [0.010s CPU, 0.011s wall-clock]
-Normalizing task... [0.000s CPU, 0.001s wall-clock]
-Instantiating...
-Generating Datalog program... [0.010s CPU, 0.001s wall-clock]
-Normalizing Datalog program...
-Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
-Preparing model... [0.000s CPU, 0.002s wall-clock]
-Generated 215 rules.
-Computing model... [0.000s CPU, 0.001s wall-clock]
-182 relevant atoms
-0 auxiliary atoms
-182 final queue length
-253 total queue pushes
-Completing instantiation... [0.000s CPU, 0.002s wall-clock]
-Instantiating: [0.010s CPU, 0.010s wall-clock]
-Computing fact groups...
-Finding invariants...
-54 initial candidates
-Finding invariants: [0.030s CPU, 0.021s wall-clock]
-Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
-Instantiating groups... [0.000s CPU, 0.000s wall-clock]
-Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
-Choosing groups...
-42 uncovered facts
-Choosing groups: [0.000s CPU, 0.000s wall-clock]
-Building translation key... [0.000s CPU, 0.000s wall-clock]
-Computing fact groups: [0.030s CPU, 0.022s wall-clock]
-Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
-Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
-Building mutex information...
-Building mutex information: [0.000s CPU, 0.000s wall-clock]
-Translating task...
-Processing axioms...
-Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
-Translator axioms removed by simplifying: 0
-Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
-Processing axioms: [0.000s CPU, 0.000s wall-clock]
-Translating task: [0.000s CPU, 0.004s wall-clock]
-2 effect conditions simplified
-0 implied preconditions added
-Detecting unreachable propositions...
-0 operators removed
-0 axioms removed
-4 propositions removed
-Detecting unreachable propositions: [0.000s CPU, 0.003s wall-clock]
-Reordering and filtering variables...
-46 of 46 variables necessary.
-2 of 6 mutex groups necessary.
-93 of 93 operators necessary.
-0 of 0 axiom rules necessary.
-Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
-Translator variables: 46
-Translator derived variables: 0
-Translator facts: 96
-Translator goal facts: 1
-Translator mutex groups: 2
-Translator total mutex groups size: 4
-Translator operators: 93
-Translator axioms: 0
-Translator task size: 560
-Translator peak memory: 40264 KB
-Writing output... [0.000s CPU, 0.001s wall-clock]
-Done! [0.060s CPU, 0.055s wall-clock]
-translate exit code: 0
-
-INFO     Running search (release).
-INFO     search stdin: output.sas
-INFO     search time limit: None
-INFO     search memory limit: None
-INFO     search command line string: /home/bruno/Desktop/downward/builds/release/bin/downward --search 'astar(lmcut(), max_time=20)' --internal-plan-file sas_plan < output.sas
-[t=5.8348e-05s, 9844 KB] reading input...
-[t=0.00171989s, 9844 KB] done reading input!
-[t=0.00411509s, 10232 KB] Initializing landmark cut heuristic...
-[t=0.00430131s, 10232 KB] Building successor generator...done!
-[t=0.00460593s, 10232 KB] peak memory difference for successor generator creation: 0 KB
-[t=0.00466958s, 10232 KB] time for successor generation creation: 0.000114413s
-[t=0.0047379s, 10232 KB] Variables: 46
-[t=0.00480256s, 10232 KB] FactPairs: 96
-[t=0.00485751s, 10232 KB] Bytes per state: 8
-[t=0.00505654s, 10232 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[t=0.00525759s, 10232 KB] New best heuristic value for lmcut: 6
-[t=0.00532916s, 10232 KB] g=0, 1 evaluated, 0 expanded
-[t=0.00538508s, 10232 KB] f = 6, 1 evaluated, 0 expanded
-[t=0.00544861s, 10232 KB] Initial heuristic value for lmcut: 6
-[t=0.00550554s, 10232 KB] pruning method: none
-[t=0.00561982s, 10232 KB] New best heuristic value for lmcut: 5
-[t=0.00568433s, 10232 KB] g=1, 2 evaluated, 1 expanded
-[t=0.00602323s, 10232 KB] New best heuristic value for lmcut: 4
-[t=0.00606703s, 10232 KB] g=2, 12 evaluated, 2 expanded
-[t=0.00669989s, 10232 KB] f = 7, 38 evaluated, 5 expanded
-[t=0.0067997s, 10232 KB] New best heuristic value for lmcut: 3
-[t=0.00684279s, 10232 KB] g=4, 40 evaluated, 6 expanded
-[t=0.00702767s, 10232 KB] New best heuristic value for lmcut: 2
-[t=0.00707031s, 10232 KB] g=5, 47 evaluated, 7 expanded
-[t=0.00737051s, 10232 KB] New best heuristic value for lmcut: 1
-[t=0.00741488s, 10232 KB] g=6, 64 evaluated, 8 expanded
-[t=0.00757205s, 10232 KB] New best heuristic value for lmcut: 0
-[t=0.00761703s, 10232 KB] g=7, 73 evaluated, 9 expanded
-[t=0.00765703s, 10232 KB] Solution found!
-[t=0.00769567s, 10232 KB] Actual search time: 0.00216643s
-switch_on_instrument1_satellite1_  (1)
-turn_to_satellite1_star0_phenomenon2_  (1)
-calibrate_satellite1_instrument1_star0_  (1)
-turn_to_satellite1_phenomenon1_star0_  (1)
-take_image_satellite1_phenomenon1_instrument1_image1_  (1)
-x_method1_method1_splitted_1_satellite1_phenomenon1_image1___splitting_method_method1_splitted_1_1_0_m1_@do_observation_phenomenon1_image1_  (1)
-x__top_method@__top__  (1)
-[t=0.00773554s, 10232 KB] Plan length: 7 step(s).
-[t=0.00773554s, 10232 KB] Plan cost: 7
-[t=0.00773554s, 10232 KB] Expanded 10 state(s).
-[t=0.00773554s, 10232 KB] Reopened 0 state(s).
-[t=0.00773554s, 10232 KB] Evaluated 73 state(s).
-[t=0.00773554s, 10232 KB] Evaluations: 73
-[t=0.00773554s, 10232 KB] Generated 83 state(s).
-[t=0.00773554s, 10232 KB] Dead ends: 0 state(s).
-[t=0.00773554s, 10232 KB] Expanded until last jump: 5 state(s).
-[t=0.00773554s, 10232 KB] Reopened until last jump: 0 state(s).
-[t=0.00773554s, 10232 KB] Evaluated until last jump: 38 state(s).
-[t=0.00773554s, 10232 KB] Generated until last jump: 38 state(s).
-[t=0.00773554s, 10232 KB] Number of registered states: 73
-[t=0.00773554s, 10232 KB] Int hash set load factor: 73/128 = 0.570312
-[t=0.00773554s, 10232 KB] Int hash set resizes: 7
-[t=0.00773554s, 10232 KB] Search time: 0.00268116s
-[t=0.00773554s, 10232 KB] Total time: 0.00773554s
-Solution found.
-Peak memory: 10232 KB
-Remove intermediate file output.sas
-search exit code: 0
-
-Cost of SAS plan on RC model: 7
-Time Sas:0.231s
+Search Configuration
+- Using JAIR 2020 progression algorithm
+- Search is stopped after first solution is found.
+- Utilizing heuristics.
+- A* Search
+- Distance G is "modification depth"
+profundidade: 0
+valor da heuristica: 7
+profundidade: 1
+valor da heuristica: 7
+profundidade: 1
+valor da heuristica: 7
+profundidade: 1
+valor da heuristica: 7
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 2
+valor da heuristica: 6
+profundidade: 3
+valor da heuristica: 3
+Search Results
+- Search time 6.486 seconds
+- Depth reached: 0.
+- Depth reached expanding abstract methods: 0
+- Visited list time 0.00014 seconds
+- Visited list inserts 29
+- Visited list pruned 0
+- Visited list contains 29
+- Visited list hash collisions 0
+- Visited list used hash buckets 29
+- Generated 236 search nodes
+  Calculated heuristic for 148 nodes
+  One modifications 82
+  Effectless actions 6
+- including 82 one modification actions
+- including 0 one modification methods
+- and       6 progressions of effectless actions
+- Generated 22 nodes per second
+- Final fringe contains 5 nodes
+- Status: Solved
+- Found solution of length 8
+- Total costs of actions: 5
+==>
+21 switch_on[instrument1,satellite1]
+128 turn_to[satellite1,star0,phenomenon2]
+129 calibrate[satellite1,instrument1,star0]
+130 turn_to[satellite1,phenomenon1,star0]
+131 take_image[satellite1,phenomenon1,instrument1,image1]
+root 0
+127 auto_calibrate[satellite1,instrument1] -> method6 128 129
+20 do_observation[phenomenon1,image1] -> <method0;activate_instrument[satellite1,instrument1];method5;0;-1,-2,1,2> 21 127 130 131
+0 __top[] -> __top_method 20
+<==

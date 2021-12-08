@@ -180,7 +180,10 @@ Model* RCModelFactory::getRCmodelSTRIPS(int costsMethodActions) {
 	int i = 0;
 	for (int f : s) {
 		rc->s0List[i++] = f;
+		//cout << f << endl;
 	}
+	//cout << "tamanho no padrao: " << rc->s0Size << endl;
+	
 	rc->gSize = 1 + htn->gSize;
 	rc->gList = new int[rc->gSize];
 	for(int i = 0; i < htn->gSize; i++) {
@@ -243,6 +246,287 @@ Model* RCModelFactory::getRCmodelSTRIPS(int costsMethodActions) {
 	    }
 	}
 #endif
+	return rc;
+}
+
+
+Model* RCModelFactory::getRCmodelSTRIPS(int costsMethodActions, searchNode* node) {
+	Model* rc = new Model();
+	rc->isHtnModel = false;
+	rc->numStateBits = htn->numStateBits + htn->numActions + htn->numTasks;
+	rc->numVars = htn->numVars + htn->numActions + htn->numTasks; // first part might be SAS+
+
+	/*
+	for(int i = 0; i < htn->numActions; i++){
+		[htn->numStateBits+i]
+	}
+	return htn->numStateBits + task;
+	*/
+
+	rc->numActions = htn->numActions + htn->numMethods;
+	rc->numTasks = rc->numActions;
+
+	rc->precLists = new int*[rc->numActions];
+	rc->addLists = new int*[rc->numActions];
+	rc->delLists = new int*[rc->numActions];
+
+	rc->numPrecs = new int[rc->numActions];
+	rc->numAdds = new int[rc->numActions];
+	rc->numDels = new int[rc->numActions];
+
+	
+
+	// add new prec and add effect to actions
+	for(int i = 0; i < htn->numActions; i++) {
+		rc->numPrecs[i] = htn->numPrecs[i] + 1;
+		//rc->numPrecs[i] = htn->numPrecs[i];
+		rc->precLists[i] = new int[rc->numPrecs[i]];
+		for(int j = 0; j < rc->numPrecs[i]-1; j++) {
+			rc->precLists[i][j] = htn->precLists[i][j];
+		}
+		rc->precLists[i][rc->numPrecs[i] - 1] = t2tdr(i);
+		//cout << "t2tdr: " << t2tdr(i) << endl;
+
+		rc->numAdds[i] = htn->numAdds[i] + 1;
+		rc->addLists[i] = new int[rc->numAdds[i]];
+		for(int j = 0; j < rc->numAdds[i] - 1; j++) {
+			rc->addLists[i][j] = htn->addLists[i][j];
+		}
+		rc->addLists[i][rc->numAdds[i] - 1] = t2bur(i);
+
+		rc->numDels[i] = htn->numDels[i];
+		rc->delLists[i] = new int[rc->numDels[i]];
+		for(int j = 0; j < rc->numDels[i]; j++) {
+			rc->delLists[i][j] = htn->delLists[i][j];
+		}
+	}
+
+	// create actions for methods
+	for(int im = 0; im < htn->numMethods; im++) {
+		int ia = htn->numActions + im;
+
+		rc->numPrecs[ia] = htn->numDistinctSTs[im];
+		rc->precLists[ia] = new int[rc->numPrecs[ia]];
+		for(int ist = 0; ist < htn->numDistinctSTs[im]; ist++) {
+		    int st = htn->sortedDistinctSubtasks[im][ist];
+			rc->precLists[ia][ist] = t2bur(st);
+		}
+
+		rc->numAdds[ia] = 1;
+		rc->addLists[ia] = new int[1];
+		rc->addLists[ia][0] = t2bur(htn->decomposedTask[im]);
+		rc->numDels[ia] = 0;
+		rc->delLists[ia] = nullptr;
+	}
+
+	// set names of state features
+	rc->factStrs = new string[rc->numStateBits];
+	for(int i = 0; i < htn->numStateBits; i++) {
+		rc->factStrs[i] = htn->factStrs[i];
+	}
+	for(int i = 0; i < htn->numActions; i++) {
+		rc->factStrs[t2tdr(i)] = "tdr-" + htn->taskNames[i];
+	}
+	for(int i = 0; i < htn->numTasks; i++) {
+		rc->factStrs[t2bur(i)] = "bur-" + htn->taskNames[i];
+	}
+
+	// set action names
+	rc->taskNames = new string[rc->numTasks];
+	//cout << "task names:" << endl;
+	for(int i = 0; i < htn->numActions; i++) {
+		rc->taskNames[i] = htn->taskNames[i];
+		//cout << htn->taskNames[i] << endl;
+	}
+	for(int im = 0; im < htn->numMethods; im++) {
+		int ia = htn->numActions + im;
+		rc->taskNames[ia] = htn->methodNames[im] + "@" + htn->taskNames[htn->decomposedTask[im]];
+		//cout << htn->methodNames[im] + "@" + htn->taskNames[htn->decomposedTask[im]] << endl;
+	}
+
+	// set variable names
+	rc->varNames = new string[rc->numVars];
+	for(int i = 0; i < htn->numVars; i++) {
+		rc->varNames[i] = htn->varNames[i];
+	}
+	for(int i = 0; i < htn->numActions; i++) {
+		// todo: the index transformation does not use the functions
+		// defined above and needs to be redone when changing them
+		int inew = htn->numVars + i;
+		rc->varNames[inew] = "tdr-" + htn->taskNames[i];
+	}
+	for(int i = 0; i < htn->numTasks; i++) {
+		// todo: transformation needs to be redone when changing them
+		int inew = htn->numVars + htn->numActions + i;
+		rc->varNames[inew] = "bur-" + htn->taskNames[i];
+	}
+
+	// set indices of first and last bit
+	rc->firstIndex = new int[rc->numVars];
+	rc->lastIndex = new int[rc->numVars];
+	for(int i = 0; i < htn->numVars; i++) {
+		rc->firstIndex[i] = htn->firstIndex[i];
+		rc->lastIndex[i] = htn->lastIndex[i];
+	}
+	for(int i = htn->numVars; i < rc->numVars; i++) {
+		rc->firstIndex[i] = rc->lastIndex[i - 1] + 1;
+		rc->lastIndex[i] = rc->firstIndex[i];
+	}
+
+	// set action costs
+	rc->actionCosts = new int[rc->numActions];
+	for(int i = 0; i < htn->numActions; i++) {
+		rc->actionCosts[i] = htn->actionCosts[i];
+	}
+	for(int i = htn->numActions; i < rc->numActions; i++) {
+		rc->actionCosts[i] = costsMethodActions;
+	}
+
+	set<int> precless;
+	for(int i = 0; i < rc->numActions; i++) {
+        if (rc->numPrecs[i] == 0) {
+            precless.insert(i);
+        }
+    }
+    rc->numPrecLessActions = precless.size();
+	rc->precLessActions = new int[rc->numPrecLessActions];
+	int j = 0;
+	for(int pl : precless) {
+		rc->precLessActions[j++] = pl;
+	}
+
+	rc->isPrimitive = new bool[rc->numActions];
+	for(int i = 0; i < rc->numActions; i++)
+		rc->isPrimitive[i] = true;
+
+	createInverseMappings(rc);
+
+	
+
+	int newS0Size = 0;
+		
+	for (int i = 0; i < htn->numStateBits; i++) {
+		if(node->state[i]){
+			newS0Size++;
+		}
+	}
+	
+	newS0Size += htn->numActions;
+
+	int* newS0List = new int[newS0Size];
+	
+	int counterJ = 0;
+	//cout << "adicionando" << endl;
+	for (int i = 0; i < htn->numStateBits; i++) {
+		 
+		if(node->state[i]){
+			newS0List[counterJ] = i;
+			//cout << i << endl;
+			counterJ++;
+		}
+	}
+	//cout << "adiciono" << endl;
+
+	int actionsIndex = counterJ;
+	
+	for(int i = counterJ; i < newS0Size; i++) {
+		newS0List[counterJ] = t2tdr(i-actionsIndex);
+		counterJ++;
+	}
+	
+	
+	/*for (int i = 0; i < newS0Size; i++){
+		cout << newS0List[i] << endl;
+	}*/
+	//cout << "tamanho: " << newS0Size << endl;
+	
+	rc->s0Size = newS0Size;
+	rc->s0List = newS0List;
+
+	
+	
+	rc->gSize = node->numPrimitive + node->numAbstract + htn->gSize;
+	//cout << "gSize: " << rc->gSize << endl;
+	//cout << "primitive: " << node->numPrimitive << endl;
+	//cout << "abstract: " << node->numAbstract << endl;
+
+	int abstractsTasks = htn->gSize;
+	int primitiveTasks = abstractsTasks + node->numAbstract;
+	rc->gList = new int[rc->gSize];
+	for(int i = 0; i < htn->gSize; i++) {
+		rc->gList[i] = htn->gList[i];
+	}
+	int counter = 0;
+	for(int i = abstractsTasks; i < primitiveTasks; i++){
+		rc->gList[i] = t2bur(node->unconstraintAbstract[counter]->task);
+		//cout << node->unconstraintAbstract[counter]->task << endl;
+		counter++;
+	}
+	counter = 0;
+	for(int i = primitiveTasks; i < primitiveTasks + node->numPrimitive; i++){
+		rc->gList[i] = t2bur(node->unconstraintPrimitive[counter]->task);
+		//node->unconstraintPrimitive[counter]->task;
+		counter++;
+	}
+	
+
+#ifndef NDEBUG
+	for(int i = 0; i < rc->numActions; i++) {
+        set<int> prec;
+        for(int j = 0; j < rc->numPrecs[i]; j++) {
+            prec.insert(rc->precLists[i][j]);
+        }
+        assert(prec.size() == rc->numPrecs[i]); // precondition contained twice?
+
+        set<int> add;
+        for(int j = 0; j < rc->numAdds[i]; j++) {
+            add.insert(rc->addLists[i][j]);
+        }
+        assert(add.size() == rc->numAdds[i]); // add contained twice?
+
+        set<int> del;
+        for(int j = 0; j < rc->numDels[i]; j++) {
+            del.insert(rc->delLists[i][j]);
+        }
+        assert(del.size() == rc->numDels[i]); // del contained twice?
+	}
+	
+
+	// are subtasks represented in preconditions?
+	for(int i = 0; i < htn->numMethods; i++) {
+	    for(int j = 0; j < htn->numSubTasks[i]; j++) {
+	        int f = t2bur(htn->subTasks[i][j]);
+	        bool contained = false;
+	        int mAction = htn->numActions + i;
+	        for(int k = 0; k < rc->numPrecs[mAction]; k++) {
+	            if(rc->precLists[mAction][k] == f) {
+	                contained = true;
+                    break;
+	            }
+	        }
+	        assert(contained); // is subtask contained in the respective action's preconditions?
+	    }
+	}
+
+	// are preconditions represented in subtasks?
+	for(int i = htn->numActions; i < rc->numActions; i++) {
+	    int m = i - htn->numActions;
+	    for(int j = 0; j < rc->numPrecs[i]; j++) {
+	        int f = rc->precLists[i][j];
+	        int task = f - (htn->numStateBits + htn->numActions);
+	        bool contained = false;
+	        for(int k = 0; k < htn->numSubTasks[m]; k++) {
+	            int subtask = htn->subTasks[m][k];
+	            if(subtask == task) {
+	                contained = true;
+                    break;
+	            }
+	        }
+            assert(contained);
+	    }
+	}
+#endif
+
 	return rc;
 }
 

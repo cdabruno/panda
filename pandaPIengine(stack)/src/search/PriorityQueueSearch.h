@@ -28,6 +28,8 @@
 #include <map>
 
 
+
+
 namespace progression {
 
 
@@ -109,55 +111,9 @@ namespace progression {
             
             long startT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
             long currentT;
-            RCModelFactory rcModelF = RCModelFactory(htn);
             
-            Model* rcModel = rcModelF.getRCmodelSTRIPS(1);
-            rcModel->writeToPDDL("domain-downward.pddl", "problem-downward.pddl");
-            system("/home/bruno/Desktop/downward/fast-downward.py '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/domain-downward.pddl' '/home/bruno/Desktop/newPanda/panda/pandaPIengine(stack)/problem-downward.pddl' --search 'astar(lmcut(), max_time=300)'");
-            ifstream file;
-            file.open("sas_plan");
-
-            string line;
-            char* stringCostSAS;
-            int counter = 0;
-            int foundSAS = 0;
-
-            if(file.is_open()){
-                while(getline(file, line)){
-                    
-                    if(line.find("cost = ") != line.npos){
-
-                        foundSAS = 1;
-                        stringCostSAS = strtok(line.data(), " ");
-                        
-                        while (stringCostSAS != NULL && counter < 3){
-                            stringCostSAS = strtok(NULL, " ");
-                            counter++;
-                        }
-                        if(foundSAS){
-                            cout << "Cost of SAS plan on RC model: " << stringCostSAS << endl;
-                        }
-                        else{
-                            cout << "Cost of SAS plan on RC model: undefined" << endl; 
-                        }
-                        
-                    }
-                }
-
-                gettimeofday(&tp, NULL);
-
-                currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
-
-                cout << "Time Sas:" << double(currentT - startT) / 1000 << "s" << endl;
-            }
-            else{
-                cout << "Couldnt find SAS file." << endl;
-            }
             
-
             
-
-            return;
 
 /*
             cout << "Num primitive tasks: " << primitives << endl;
@@ -273,18 +229,27 @@ namespace progression {
             // compute the heuristic
             if(flagHeuristic){
                 tnI->heuristicValue = new int[hLength];
-                for (int i = 0; i < hLength; i++) {
+                /*for (int i = 0; i < hLength; i++) {
                     for (int i = 0; i < hLength; i++) {
                             hF[i]->setHeuristicValue(tnI, NULL, 0, 0);
                         }
-                    /*if(tnI->heuristicValue[0] > 0){
+                    if(tnI->heuristicValue[0] > 0){
                         tnI->heuristicValue[0] = 1;
-                    }*/
-                }
-                cout << "- Starting state heuristic value: " << *(tnI->heuristicValue) << endl;
+                    }
+
+                }*/
+                //cout << "chego aqui antes tni" << endl;
+                tnI->heuristicValue[0] = heuristicSAS(htn, tnI);
+                //cout << "chego aqui dps tni" << endl;
             }
 
+            //cout << tnI->numContainedTasks << endl;
+
+            
+            
             tnI->depth = 0;
+
+            //return;
             
 
             // add initial search node to queue
@@ -298,6 +263,8 @@ namespace progression {
                 while (!fringe.isEmpty()) {
                     searchNode *n = fringe.pop();
             
+                    
+
                     assert(n != nullptr);
 
                     // check whether we have seen this search node
@@ -481,128 +448,75 @@ namespace progression {
                 ramificationDegreeAbstract = 0;
                 ramificationDegreePrimitive = 0;
 
-
+                
+            
                 while (!fringe.isEmpty()) {
-                searchNode *n = fringe.pop();
-                assert(n != nullptr);
+                    searchNode *n = fringe.pop();
 
-                //cout << "Estado: " << n->state;
-
-                // check whether we have seen this search node
-                if (!suboptimalSearch && !visitedList.insertVisi(n)) {
-                    delete n;
-                    continue;
-                }
-                //assert(!visitedList.insertVisi(n));
-
-                
-
-                if (!suboptimalSearch && htn->isGoal(n)) {
-                    // A non-early goal test makes only sense in an optimal planning setting.
-                    // -> continuing search makes not really sense here
-                    gettimeofday(&tp, NULL);
-                    currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
-                    tnSol = handleNewSolution(n, tnSol, currentT - startT);
-                    continueSearch = this->optimzeSol;
-                    if (!continueSearch)
-                        break;
-                }
-
-                
-                for (int i = 0; i < n->numPrimitive; i++) {
-                    if (!htn->isApplicable(n, n->unconstraintPrimitive[i]->task))
-                        continue;
-                    searchNode *n2 = htn->apply(n, i);
-                    numSearchNodes++;
-
-                    
-                    
-                    if (!n2->goalReachable) { // progression has detected unsol
-                        delete n2;
-                        continue;
-                    }
-                    
-                    // check whether we have seen this one already
-                    if (suboptimalSearch && !visitedList.insertVisi(n2)) {
-                        delete n2;
-                        continue;
-                    }
-                    //assert(!visitedList.insertVisi(n2));
-
-
-                    // compute the heuristic
-                    n2->heuristicValue = new int[hLength];
-
-                    /*if(htn->isGoal(n2)){
-                        n2->heuristicValue[0] = 0;
-                    }
-                    else{
-                        n2->heuristicValue[0] = 1;
-                    }*/
-
-                    for (int i = 0; i < hLength; i++) {
-                        hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
-
-                    }
-                    if(n2->heuristicValue[0] > 0){
-                        n2->heuristicValue[0] = 1;
-                    }
-                    /*if(htn->isGoal(n2)){
-                        
-                        //n2->heuristicValue[0] = 0;
-                    }*/
-                    else{
-                        
-                        n2->heuristicValue[0] = 0;
-                    }
+                 
 
                    
-                                        
-                    
-                    
-                    
-                    
-                    if (!n2->goalReachable) { // heuristic has detected unsol
-                        delete n2;
+                    assert(n != nullptr);
+
+                    //cout << "Estado: " << n->state;
+
+                    // check whether we have seen this search node
+                    if (!visitedList.insertVisi(n)) {
+                        delete n;
                         continue;
                     }
+                    //assert(!visitedList.insertVisi(n));
 
-                    assert(n2->goalReachable || (!htn->isGoal(n2))); // otherwise the heuristic is not save
+                    
 
-                    if (suboptimalSearch && htn->isGoal(n2)) {
+                    if (htn->isGoal(n)) {
+                        // A non-early goal test makes only sense in an optimal planning setting.
+                        // -> continuing search makes not really sense here
                         gettimeofday(&tp, NULL);
                         currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
-                        tnSol = handleNewSolution(n2, tnSol, currentT - startT);
+                        tnSol = handleNewSolution(n, tnSol, currentT - startT);
                         continueSearch = this->optimzeSol;
                         if (!continueSearch)
                             break;
                     }
-                    n2->depth = n->depth + 1;
-                    //cout << n2->heuristicValue[0] << endl;
-                    //ramificationDegree++;
-                    //ramificationDegreePrimitive++;
-                    fringe.push(n2);
 
-                }
-                
-
-                if (!continueSearch)
-                    break;
-
-                for(int j = 0; j < n->numAbstract; j++){
                     
-                    int task = n->unconstraintAbstract[j]->task;
-
-                    for (int i = 0; i < htn->numMethodsForTask[task]; i++) {
-                        int method = htn->taskToMethods[task][i];
-                        searchNode *n2 = htn->decompose(n, j, method);
+                    for (int i = 0; i < n->numPrimitive; i++) {
+                        if (!htn->isApplicable(n, n->unconstraintPrimitive[i]->task))
+                            continue;
+                        searchNode *n2 = htn->apply(n, i);
                         numSearchNodes++;
-						
-						if (!n2->goalReachable) { // decomposition has detected unsol
-                            delete n2;
-                            continue; // with next method
-                        }
 
+                        if(htn->isGoal(n2)){
+                            cout << "nodo anterior ao goal" << endl;
+                                cout << "tarefas abstratas: " << n->numAbstract << endl;
+                                cout << "tarefas primitivas: " << n->numPrimitive << endl;
+                                for(int i = 0; i < n->numAbstract; i++){
+                                    cout << htn->taskNames[n->unconstraintAbstract[i]->task] << endl;
+                                }
+                                for(int i = 0; i < n->numPrimitive; i++){
+                                    cout << htn->taskNames[n->unconstraintPrimitive[i]->task] << endl;
+                                }
+                                cout << "heuristica " << heuristicSAS(htn, n) << endl;
+                                cout << "resolve com " << htn->taskNames[n->unconstraintPrimitive[i]->task] << endl;
+                                cout << "nodo solucao" << endl;
+                                for(int i = 0; i < n2->numAbstract; i++){
+                                    cout << htn->taskNames[n2->unconstraintAbstract[i]->task] << endl;
+                                }
+                                for(int i = 0; i < n->numPrimitive; i++){
+                                    cout << htn->taskNames[n2->unconstraintPrimitive[i]->task] << endl;
+                                }
+                                cout << "tarefas abstratas: " << n2->numAbstract << endl;
+                                cout << "tarefas primitivas: " << n2->numPrimitive << endl;
+                            
+                            return;
+                        }
+                        
+                        if (!n2->goalReachable) { // progression has detected unsol
+                            delete n2;
+                            continue;
+                        }
+                        
                         // check whether we have seen this one already
                         if (suboptimalSearch && !visitedList.insertVisi(n2)) {
                             delete n2;
@@ -610,35 +524,45 @@ namespace progression {
                         }
                         //assert(!visitedList.insertVisi(n2));
 
+
                         // compute the heuristic
-                    n2->heuristicValue = new int[hLength];
-
-
-                    for (int k = 0; k < hLength; k++) {
-                        hF[k]->setHeuristicValue(n2, n, j, method);
-
-                    }
-                    /*if(n2->heuristicValue[0] > 0){
-                        n2->heuristicValue[0] = 1;
-                    }
-                    if(htn->isGoal(n2)){
-                   
-                        n2->heuristicValue[0] = 0;
-                    }
-                    else{
+                        n2->heuristicValue = new int[hLength];
+                        n2->heuristicValue[0] = heuristicSAS(htn, n2);
                         
-                        n2->heuristicValue[0] = 1;
-                    }*/
 
-               
-                        
-                        
-                        
-						if (!n2->goalReachable) { // heuristic has detected unsol
-                            delete n2;
-                            continue; // with next method
+                        /*if(htn->isGoal(n2)){
+                            n2->heuristicValue[0] = 0;
                         }
+                        else{
+                            n2->heuristicValue[0] = 1;
+                        }*/
 
+                        /*for (int i = 0; i < hLength; i++) {
+                            hF[i]->setHeuristicValue(n2, n, n->unconstraintPrimitive[i]->task);
+
+                        }
+                        if(n2->heuristicValue[0] > 0){
+                            n2->heuristicValue[0] = 1;
+                        }*/
+                        /*if(htn->isGoal(n2)){
+                            
+                            //n2->heuristicValue[0] = 0;
+                        }*/
+                        /*else{
+                            
+                            n2->heuristicValue[0] = 0;
+                        }*/
+
+                    
+                                            
+                        
+                        
+                        
+                        
+                        if (!n2->goalReachable) { // heuristic has detected unsol
+                            delete n2;
+                            continue;
+                        }
 
                         assert(n2->goalReachable || (!htn->isGoal(n2))); // otherwise the heuristic is not save
 
@@ -649,94 +573,196 @@ namespace progression {
                             continueSearch = this->optimzeSol;
                             if (!continueSearch)
                                 break;
-
                         }
                         n2->depth = n->depth + 1;
                         //cout << n2->heuristicValue[0] << endl;
                         //ramificationDegree++;
-                        //ramificationDegreeAbstract++;
+                        //ramificationDegreePrimitive++;
                         fringe.push(n2);
 
                     }
-                }
-/*
-                if(ramificationSet.count(n->depth) > 0){
-                    std::pair<int,int> auxPair = ramificationSet[n->depth];
+                    
 
-                    auxPair.first += ramificationDegree;
-                    auxPair.second += 1;
-                    ramificationSet.erase(n->depth);
-                    ramificationSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
-                }
-                else{
-                    std::pair<int,int> auxPair;
-                    auxPair.first = ramificationDegree;
-                    auxPair.second = 1;
-                    ramificationSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
-                }
-
-                if(ramificationPrimitiveSet.count(n->depth) > 0){
-                    std::pair<int,int> auxPair = ramificationPrimitiveSet[n->depth];
-
-                    auxPair.first += ramificationDegreePrimitive;
-                    auxPair.second += 1;
-                    ramificationPrimitiveSet.erase(n->depth);
-                    ramificationPrimitiveSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
-                }
-                else{
-                    std::pair<int,int> auxPair;
-                    auxPair.first = ramificationDegreePrimitive;
-                    auxPair.second = 1;
-                    ramificationPrimitiveSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
-                }
-
-                if(ramificationAbstractSet.count(n->depth) > 0){
-                    std::pair<int,int> auxPair = ramificationAbstractSet[n->depth];
-
-                    auxPair.first += ramificationDegreeAbstract;
-                    auxPair.second += 1;
-                    ramificationAbstractSet.erase(n->depth);
-                    ramificationAbstractSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
-                }
-                else{
-                    std::pair<int,int> auxPair;
-                    auxPair.first = ramificationDegreeAbstract;
-                    auxPair.second = 1;
-                    ramificationAbstractSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
-                }
-*/
-
-                int allnodes = numSearchNodes + htn->numOneModActions + htn->numOneModMethods + htn->numEffLessProg;
-
-                if (allnodes - lastCheck >= checkAfter) {
-                    lastCheck = allnodes;
-
-                    gettimeofday(&tp, NULL);
-                    currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
-
-                    if (((currentT - lastOutput) / 1000) > 0) {
-                        cout << setw(4) << int((currentT - startT) / 1000) << "s "
-                             << "visitime " << setw(7) << fixed << setprecision(2) << visitedList.time / 1000 << "s"
-                             << " generated nodes " << setw(9) << allnodes
-                             << " nodes/sec " << setw(7) << int(double(allnodes) / (currentT - startT) * 1000)
-                             << " cur h " << setw(4) << n->heuristicValue[0]
-                             << " mod.depth " << setw(4) << n->modificationDepth
-                             << " inserts " << setw(9) << visitedList.attemptedInsertions
-                             << " dups " << setw(9) << visitedList.attemptedInsertions - visitedList.uniqueInsertions
-                             << " size " << setw(9) << visitedList.uniqueInsertions
-                             << " hash fail " << setw(6) << visitedList.subHashCollision
-							 << " hash buckets " << setw(6) << visitedList.attemptedInsertions - visitedList.subHashCollision << endl;
-                        lastOutput = currentT;
-                    }
-                    if ((timeLimit > 0) && ((currentT - startT) / 1000 > timeLimit)) {
-                        reachedTimeLimit = true;
-                        cout << "Reached time limit - stopping search." << endl;
+                    if (!continueSearch)
                         break;
-                    }
-                }
 
-                if (visitedList.canDeleteProcessedNodes)
-                    delete n;
+                    for(int j = 0; j < n->numAbstract; j++){
+                        
+                        int task = n->unconstraintAbstract[j]->task;
+
+                        for (int i = 0; i < htn->numMethodsForTask[task]; i++) {
+                            int method = htn->taskToMethods[task][i];
+                            searchNode *n2 = htn->decompose(n, j, method);
+
+                            if(htn->isGoal(n2)){
+                                
+                                cout << "nodo anterior ao goal" << endl;
+                                cout << "tarefas abstratas: " << n->numAbstract << endl;
+                                cout << "tarefas primitivas: " << n->numPrimitive << endl;
+                                for(int i = 0; i < n->numAbstract; i++){
+                                    cout << htn->taskNames[n->unconstraintAbstract[i]->task] << endl;
+                                }
+                                for(int i = 0; i < n->numPrimitive; i++){
+                                    cout << htn->taskNames[n->unconstraintPrimitive[i]->task] << endl;
+                                }
+                                cout << "heuristica " << heuristicSAS(htn, n) << endl;
+                                cout << "resolve com " << htn->taskNames[task] << htn->methodNames[method] << endl;
+                                cout << "nodo solucao" << endl;
+                                for(int i = 0; i < n2->numAbstract; i++){
+                                    cout << htn->taskNames[n2->unconstraintAbstract[i]->task] << endl;
+                                }
+                                for(int i = 0; i < n->numPrimitive; i++){
+                                    cout << htn->taskNames[n2->unconstraintPrimitive[i]->task] << endl;
+                                }
+                                cout << "tarefas abstratas: " << n2->numAbstract << endl;
+                                cout << "tarefas primitivas: " << n2->numPrimitive << endl;
+                            
+                            return;
+                                
+                                
+                               
+                            }
+                            numSearchNodes++;
+                            
+                            if (!n2->goalReachable) { // decomposition has detected unsol
+                                delete n2;
+                                continue; // with next method
+                            }
+
+                            // check whether we have seen this one already
+                            if (suboptimalSearch && !visitedList.insertVisi(n2)) {
+                                delete n2;
+                                continue;
+                            }
+                            //assert(!visitedList.insertVisi(n2));
+
+                            // compute the heuristic
+                        n2->heuristicValue = new int[hLength];
+                        n2->heuristicValue[0] = heuristicSAS(htn, n2);
+                        
+                        /*for (int k = 0; k < hLength; k++) {
+                            hF[k]->setHeuristicValue(n2, n, j, method);
+
+                        }*/
+                        /*if(n2->heuristicValue[0] > 0){
+                            n2->heuristicValue[0] = 1;
+                        }
+                        if(htn->isGoal(n2)){
+                    
+                            n2->heuristicValue[0] = 0;
+                        }
+                        else{
+                            
+                            n2->heuristicValue[0] = 1;
+                        }*/
+
+                
+                            
+                            
+                            
+                            if (!n2->goalReachable) { // heuristic has detected unsol
+                                delete n2;
+                                continue; // with next method
+                            }
+
+
+                            assert(n2->goalReachable || (!htn->isGoal(n2))); // otherwise the heuristic is not save
+
+                            if (suboptimalSearch && htn->isGoal(n2)) {
+                                gettimeofday(&tp, NULL);
+                                currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+                                tnSol = handleNewSolution(n2, tnSol, currentT - startT);
+                                continueSearch = this->optimzeSol;
+                                if (!continueSearch)
+                                    break;
+
+                            }
+                            n2->depth = n->depth + 1;
+                            //cout << n2->heuristicValue[0] << endl;
+                            //ramificationDegree++;
+                            //ramificationDegreeAbstract++;
+                            fringe.push(n2);
+
+                        }
+                    }
+    /*
+                    if(ramificationSet.count(n->depth) > 0){
+                        std::pair<int,int> auxPair = ramificationSet[n->depth];
+
+                        auxPair.first += ramificationDegree;
+                        auxPair.second += 1;
+                        ramificationSet.erase(n->depth);
+                        ramificationSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
+                    }
+                    else{
+                        std::pair<int,int> auxPair;
+                        auxPair.first = ramificationDegree;
+                        auxPair.second = 1;
+                        ramificationSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
+                    }
+
+                    if(ramificationPrimitiveSet.count(n->depth) > 0){
+                        std::pair<int,int> auxPair = ramificationPrimitiveSet[n->depth];
+
+                        auxPair.first += ramificationDegreePrimitive;
+                        auxPair.second += 1;
+                        ramificationPrimitiveSet.erase(n->depth);
+                        ramificationPrimitiveSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
+                    }
+                    else{
+                        std::pair<int,int> auxPair;
+                        auxPair.first = ramificationDegreePrimitive;
+                        auxPair.second = 1;
+                        ramificationPrimitiveSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
+                    }
+
+                    if(ramificationAbstractSet.count(n->depth) > 0){
+                        std::pair<int,int> auxPair = ramificationAbstractSet[n->depth];
+
+                        auxPair.first += ramificationDegreeAbstract;
+                        auxPair.second += 1;
+                        ramificationAbstractSet.erase(n->depth);
+                        ramificationAbstractSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
+                    }
+                    else{
+                        std::pair<int,int> auxPair;
+                        auxPair.first = ramificationDegreeAbstract;
+                        auxPair.second = 1;
+                        ramificationAbstractSet.insert(std::make_pair(n->depth, std::make_pair(auxPair.first, auxPair.second)));
+                    }
+    */
+
+                    int allnodes = numSearchNodes + htn->numOneModActions + htn->numOneModMethods + htn->numEffLessProg;
+
+                    if (allnodes - lastCheck >= checkAfter) {
+                        lastCheck = allnodes;
+
+                        gettimeofday(&tp, NULL);
+                        currentT = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+
+                        if (((currentT - lastOutput) / 1000) > 0) {
+                            cout << setw(4) << int((currentT - startT) / 1000) << "s "
+                                << "visitime " << setw(7) << fixed << setprecision(2) << visitedList.time / 1000 << "s"
+                                << " generated nodes " << setw(9) << allnodes
+                                << " nodes/sec " << setw(7) << int(double(allnodes) / (currentT - startT) * 1000)
+                                << " cur h " << setw(4) << n->heuristicValue[0]
+                                << " mod.depth " << setw(4) << n->modificationDepth
+                                << " inserts " << setw(9) << visitedList.attemptedInsertions
+                                << " dups " << setw(9) << visitedList.attemptedInsertions - visitedList.uniqueInsertions
+                                << " size " << setw(9) << visitedList.uniqueInsertions
+                                << " hash fail " << setw(6) << visitedList.subHashCollision
+                                << " hash buckets " << setw(6) << visitedList.attemptedInsertions - visitedList.subHashCollision << endl;
+                            lastOutput = currentT;
+                        }
+                        if ((timeLimit > 0) && ((currentT - startT) / 1000 > timeLimit)) {
+                            reachedTimeLimit = true;
+                            cout << "Reached time limit - stopping search." << endl;
+                            break;
+                        }
+                    }
+
+                    if (visitedList.canDeleteProcessedNodes)
+                        delete n;
                 }
 
             }
@@ -1031,6 +1057,7 @@ namespace progression {
 
     private:
         searchNode *handleNewSolution(searchNode *newSol, searchNode *globalSolPointer, long time);
+        int heuristicSAS(Model* htn, searchNode *node);
 
         const bool optimzeSol = OPTIMIZEUNTILTIMELIMIT;
         int foundSols = 0;
